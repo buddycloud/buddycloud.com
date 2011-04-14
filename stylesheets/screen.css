@@ -157,6 +157,10 @@ body{
   margin-bottom: 0;
 }
 
+.person{
+  margin-bottom: 30px;
+}
+
 .person small{
   display: block;
   margin-bottom: 1em;
