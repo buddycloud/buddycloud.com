@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <link rel="stylesheet" href="/stylesheets/blueprint.css">
+    <link rel="stylesheet" href="/stylesheets/screen.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM feed" href="http://buddycloud.org/feed.atom">
+    <link rel="alternate" type="application/atom+xml" title="github feed" href="http://github.com/buddycloud/organisation/commits/master.atom">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  <body>
+    <div id="monster">
+      <h1><b>buddy</b>cloud</h1>
+    </div>
+
+    <div id="nav">
+      <ul>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/team.html">Team</a></li>
+        <li><a href="/technology.html">Technology</a></li>
+        <li><a class="active" href="/">About</a></li>
+      </ul>
+    </div>
+  
+    <div id="main" class="container">
+      <div id="content" class="span-22 prepend-1">
+        {{ content }}
+      </div>
+      <!--div id="sidebar" class="prepend-1 span-6 last">
+      </div-->
+    </div>
+    <script>
+
+    </script>
+  </body>
+</html>
