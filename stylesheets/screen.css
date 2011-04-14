@@ -131,7 +131,7 @@ h3{
   display: block;
   padding: 0;
   float: right;
-  width: 150px;
+  width: 120px;
   list-style: none;
   line-height: 30px;
   font-size: 1.2em;
@@ -226,3 +226,46 @@ dl.vcard{
 
 
 
+
+
+.plans{
+  width: 100%;
+  border-spacing: 20px 0;
+}
+
+.plans td+td{
+  background: white;
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.plans .names td+td{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #777;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.plans .order td+td{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #777;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.plans .order button{
+  background: #3093D3;
+  border: 1px solid rgba(255,255,255,0.5);
+  -webkit-box-shadow: 0 0 3px black;
+  font: inherit;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  border-radius: 4px;
+  padding: 5px 10px;
+}
