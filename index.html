@@ -2,24 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>buddycloud</title>
+  <title>buddycloud.com</title>
+  <style type="text/css">
+    html {
+      background: hsl(195,5%,93%);
+      background: -webkit-radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
+      background-attachment: fixed;
+      font: 21px/1.5 sans-serif;
+      color: #333;
+      text-shadow: 0 1px rgba(255,255,255,.21);
+    }
+    body {
+      max-width: 960px;
+      padding: 0 34px;
+      margin: 0 auto;
+    }
+    h1, h2, h3 {
+      line-height: 1;
+      color: black;
+      display: inline-block;
+      border-bottom: 13px solid hsl(81, 53%, 44%);
+    }
+    h1 {
+      margin: 55px 0;
+      font-size: 89px;
+    }
+    h2 {
+      margin: 55px 0;
+      font-size: 55px;
+      border-width: 8px;
+    }
+    h3 {
+      margin: 34px 0;
+      font-size: 34px;
+      border-width: 5px;
+    }
+    p {
+      margin: 0 0 34px;
+    }
+      strong { color: black; }
+    a {
+      color: #83ac35;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      margin-bottom: 55px;
+    }
+      nav a {
+        padding: 8px 13px;
+        font-size: 18px;
+        color: white;
+        float: left;
+        background: hsl(195,5%,18%);
+      }
+        nav a:hover { background: hsl(195,5%,21%); }
+        nav a:active { 
+          border-top: 1px solid black;
+          background: hsl(195,5%,13%);
+          padding-bottom: 7px;
+        }
+      nav a:first-child { padding-left: 21px; border-radius: 0 0 0 8px; }
+      nav a:last-child { padding-right: 21px; border-radius: 0 0 8px 0; }
+      
+    .callForAction {
+      padding: 21px 55px;
+      font-size: 21px;
+      color: white;
+      background: hsl(81, 53%, 44%);
+      border-radius: 13px;
+    }
+      .callForAction:hover {
+        background: hsl(81, 63%, 44%);
+      }
+      .callForAction:active {
+        top: 1px;
+        position: relative;
+      }
+    
+    .hero {
+      margin: 144px 0 ;
+      clear: right;
+    }
+      .description {
+        margin-bottom: 55px;
+        font-size: 34px;
+        max-width: 100%;
+      }
+  </style>
 </head>
 <body>
-<p>menu text:   [about] [join buddylcoud] [buddycloud pro] [developer resouces]</p>
-
-<h1>buddycloud</h1>
-
-
-<p>
-buddycloud is an amazing new kind of social network.
-Realtime updates bring you closer to the thinkers and makers. 
-Ask questions, explore ideas, in your own way, in the space you create.
-</p><p class=take-action>How to get started.</p>
-
+<nav>
+  <a href="#about">about</a>
+  <a href="#join">join buddylcoud</a>
+  <a href="#pro">buddycloud pro</a>
+  <a href="#resources">developer resources</a>
+</nav>
+<div class="hero">
+  <h1>buddycloud</h1>
+  <p class="description">
+    buddycloud is an amazing new kind of social network.
+    Realtime updates bring you closer to the thinkers and makers. 
+    Ask questions, explore ideas, in your own way, in the space you create. <a href="#getStarted">Become a part of it</a>.
+  </p>
+</div>
 
 <!--everything below the fold/on the next screen -->
 
-<h2>even less like any other social network</h2>
+<h2>not like any other social network</h2>
 
 <p>buddycloud is designed as a completely new way to share online: your buddycloud channel connects you to the world's realtime conversation. Follow topic channels and plug into a community of experts. Create your own topic channels, and share them with the world - or make it private and choose who can view it.</p>
 
@@ -49,11 +139,11 @@ Ask questions, explore ideas, in your own way, in the space you create.
 
 <p>buddycloud is built by and for thinkers and makers who care about openness.</p>
 
-<p>buddycloud is built on opensource software. Developers add free components for you to use in your own project. buddycloud uses a suite of modern open technologies like HTML5, CoffeeScript, node.js, Δt and backbone.js.</p><p class=take-action>▶Learn more about developing on the buddycloud wiki</p>
+<p>buddycloud is built on opensource software. Developers add free components for you to use in your own project. buddycloud uses a suite of modern open technologies like HTML5, CoffeeScript, node.js, Δt and backbone.js. <a href="#join">Learn more about developing on the buddycloud wiki</a>.</p>
 
 <h3>buddycloud: easy to set up</h3>
 
-<p>Simple to set up packages for major operating systems. A great guide to setup and run your own buddycloud server in 60 minutes. Your users simply log on to <a href="https://pro.buddycloud.com/">https://buddycloud.your-domain.com</a>.</p><p class=take-action>▶ setup your server now.</p>
+<p>Simple to set up packages for major operating systems. A great guide to setup and run your own buddycloud server in 60 minutes. Your users simply log on to <a href="https://pro.buddycloud.com/">https://buddycloud.your-domain.com</a>. <a href="pro">setup your server now</a>.</p>
 
 <h3>plays well with others</h3>
 
@@ -83,7 +173,7 @@ Ask questions, explore ideas, in your own way, in the space you create.
 
 <h3>buddycloud media server</h3>
 
-<p>We know media sharing must be drag-n-drop easy and just work. We’re building some great media integration so you can share easily in your channel. </p><p class=take-action>How to get started.</p>
+<p>We know media sharing must be drag-n-drop easy and just work. We’re building some great media integration so you can share easily in your channel. <a href="#getStarted">How to get started</a>.</p>
 
 </body>
 </html>
