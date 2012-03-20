@@ -2,69 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>buddycloud.com</title>
+  <title>buddycloud</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <style type="text/css">
     html {
       background: hsl(195,5%,93%);
-      background: -webkit-radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
-      background: -moz-radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
-      background: -o-radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
-      background: -ms-radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
-      background: radial-gradient(hsl(195,5%,93%), hsl(195,5%,73%));
+      background: -webkit-radial-gradient(rgba(255,255,255,.21), rgba(0,0,0,.21)), url(pattern.jpg);
+      background:    -moz-radial-gradient(rgba(255,255,255,.21), rgba(0,0,0,.21)), url(pattern.jpg);
+      background:      -o-radial-gradient(rgba(255,255,255,.21), rgba(0,0,0,.21)), url(pattern.jpg);
+      background:     -ms-radial-gradient(rgba(255,255,255,.21), rgba(0,0,0,.21)), url(pattern.jpg);
+      background:         radial-gradient(rgba(255,255,255,.21), rgba(0,0,0,.21)), url(pattern.jpg);
       background-attachment: fixed;
-      font: 21px/1.5 sans-serif;
-      color: #333;
-      text-shadow: 0 1px rgba(255,255,255,.21);
+      font: 21px/1.5 "Helvetica Neue", Helvetica,Arial, sans-serif;
+      font-weight: 300;
+      color: rgba(0,0,0,.55);
     }
-    body {
+    body { margin: 0; }
+    .container {
       max-width: 960px;
       padding: 0 34px;
       margin: 0 auto;
     }
     h1, h2, h3 {
-      line-height: 1;
-      color: black;
+      font-family: 'Nunito';
+      font-weight: 300;
+      font-style: normal;
+      font-variant: normal;
+      letter-spacing: -0.1;
+      color: rgba(0,0,0,.73);
       display: inline-block;
-      border-bottom: 13px solid hsl(81, 53%, 44%);
     }
     h1 {
-      margin: 55px 0;
+      margin: 55px 0 21px;
       font-size: 89px;
     }
     h2 {
-      margin: 55px 0;
+      margin: 55px 0 0;
       font-size: 55px;
       border-width: 8px;
     }
     h3 {
-      margin: 34px 0;
-      font-size: 34px;
+      margin: 21px 0 13px;
+      font-size: 21px;
       border-width: 5px;
     }
     p {
       margin: 0 0 34px;
     }
-      strong { color: black; }
+      strong { color: rgba(0,0,0,.73); }
     a {
-      color: #83ac35;
+      padding: 3px;
+      color: rgba(0,0,0,.73);
+      background: #7cb01c;
       text-decoration: none;
+      border-bottom: 2px solid rgba(0,0,0,.21);
+      box-shadow: 0 -1px rgba(255,255,255,.13) inset;
     }
+      a:active {
+        border-bottom-width: 0px;
+        box-shadow: none;
+        position: relative;
+        top: 2px;
+      }
     nav {
       float: right;
       margin-bottom: 55px;
+      border: 1px solid rgba(0,0,0,.13);
+      border-bottom-color: rgba(0,0,0,.34);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 
+        0 1px rgba(0,0,0,.05),
+        0 2px rgba(0,0,0,.05);
     }
       nav a {
         padding: 8px 13px;
         font-size: 18px;
-        color: white;
+        color: rgba(0,0,0,.55);
         float: left;
-        background: hsl(195,5%,18%);
       }
-        nav a:hover { background: hsl(195,5%,21%); }
         nav a:active { 
-          border-top: 1px solid black;
-          background: hsl(195,5%,13%);
-          padding-bottom: 7px;
+          padding-top: 10px;
+          position: static;
+          box-shadow: 
+            -1px 0 rgba(0,0,0,.55) inset,
+            1px 0 rgba(0,0,0,.21) inset;
+        }
+        nav a:first-child:active {
+          box-shadow: -1px 0 rgba(0,0,0,.21) inset;
+        }
+        nav a:last-child:active {
+          box-shadow: 1px 0 rgba(0,0,0,.21) inset;
         }
       nav a:first-child { padding-left: 21px; border-radius: 0 0 0 8px; }
       nav a:last-child { padding-right: 21px; border-radius: 0 0 8px 0; }
@@ -85,7 +114,7 @@
       }
     
     .hero {
-      margin: 144px 0 ;
+      margin: 144px 0;
       clear: right;
     }
       .description {
@@ -93,91 +122,168 @@
         font-size: 34px;
         max-width: 100%;
       }
+        .description a { padding: 8px; }
+    
+    .future {
+      overflow: hidden;
+    }
+    .grid-2 .grid-1 { width: 452px; }
+    .grid-4 .grid-1 { width: 283px; }
+    .grid-1 {
+      float: left;
+      margin-right: 55px;
+    }
+      .grid-1 p { font-size: 16px; margin-bottom: 21px; }
+      .grid-1.last { margin-right: 0; }
+      
+    footer {
+      margin: 21px 0 0;
+      color: gray;
+      background: black;
+    }
+    footer nav {
+      margin: 0;
+      float: none;
+      border: none;
+      box-shadow: none;
+    }    
+      footer nav a,
+      footer nav a:first-child,
+      footer nav a:last-child,
+      footer nav a:active,
+      footer nav a:hover,
+      footer nav a:last-child:active,
+      footer nav a:first-child:active {
+        padding: 13px 21px;
+        font-size: 13px;
+        color: gray;
+        background: none;
+        border: none;
+        display: block;
+        box-shadow: none;
+        top: 0;
+        position: relative;
+      }
+      footer nav a:hover { color: white; }
+      footer nav a:after {
+        content: "";
+        width: 1px;
+        right: 0;
+        height: 50%;
+        top: 25%;
+        position: absolute;
+        background: gray;
+      }
+      footer nav a:last-child:after { display: none; }
+    
+    .clearfix:after {
+    	content: '';
+    	display: block;
+    	height: 0;
+    	clear: both;
+    	visibility: hidden;
+    }
   </style>
 </head>
 <body>
-<nav>
-  <a href="#about">about</a>
-  <a href="#join">join buddylcoud</a>
-  <a href="#pro">buddycloud pro</a>
-  <a href="#resources">developer resources</a>
-</nav>
-<div class="hero">
-  <h1>buddycloud</h1>
-  <p class="description">
-    buddycloud is an amazing new kind of social network.
-    Realtime updates bring you closer to the thinkers and makers. 
-    Ask questions, explore ideas, in your own way, in the space you create. <a href="#getStarted">Become a part of it</a>.
-  </p>
+<div class="container">
+  <nav>
+    <a href="#about">about</a>
+    <a href="#join">join buddylcoud</a>
+    <a href="#pro">buddycloud pro</a>
+    <a href="#resources">developer resources</a>
+  </nav>
+  <div class="hero">
+    <h1>buddycloud</h1>
+    <p class="description">
+      buddycloud is an amazing new kind of social network.
+      Realtime updates bring you closer to the thinkers and makers. 
+      Ask questions, explore ideas, in your own way, in the space you create. <a href="#getStarted">Become a part of it</a>.
+    </p>
+  </div>
+
+  <!--everything below the fold/on the next screen -->
+
+  <h2>not like any other social network</h2>
+
+  <p>buddycloud is designed as a completely new way to share online: your buddycloud channel connects you to the world's realtime conversation. Follow topic channels and plug into a community of experts. Create your own topic channels, and share them with the world - or make it private and choose who can view it.</p>
+
+  <p>buddycloud channels - for you, for your team, for everyone</p>
+
+  <p>buddycloud's <strong>easy to understand privacy</strong> model and strong encryption keep you safe online.</p>
+
+  <p>buddycloud is distributed by design: your data lives with you on your network. Simple.</p>
+
+
+  <h2>buddycloud for your company</h2>
+
+  <p>buddycloud helps your team take an idea, explore it and make things happen.</p>
+
+  <p>Keep information belonging to you or your company secure by running your own buddycloud inside your firewall. You control your company’s social network and links to other companies.</p>
+
+
+  <div class="devs grid-2 clearfix">
+  
+    <h2>buddycloud for developers</h2>
+    <p>buddycloud for developers: tools to make your own social network</p>
+  
+    <div class="grid-1">
+      <h3>easy to set up</h3>
+
+      <p>Simple to set up packages for major operating systems. A great guide to setup and run your own buddycloud server in 60 minutes. Your users simply log on to <a href="https://pro.buddycloud.com/">https://buddycloud.your-domain.com</a>. <a href="pro">setup your server now</a>.</p>
+    </div>
+    <div class="grid-1 last">
+      <h3>plays well with others</h3>
+
+      <p>buddycloud is simple to integrate with your existing network, your user database and your own products. Just drop the code into your project and add imagination.</p>
+    </div>
+    <div class="grid-1">
+      <h3>open ecosystem</h3>
+
+      <p>buddycloud is built by and for thinkers and makers who care about openness.</p>
+
+      <p>buddycloud is built on opensource software. Developers add free components for you to use in your own project. buddycloud uses a suite of modern open technologies like HTML5, CoffeeScript, node.js, Δt and backbone.js. <a href="#join">Learn more about developing on the buddycloud wiki</a>.</p>
+    </div>
+    <div class="grid-1 last">
+      <h3>driving open standards</h3>
+
+      <p>buddycloud is built on open standards. buddycloud and the W3C, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and XSF are working together to be the the strong foundation for an open social ecosystem.</p>
+
+      <p>Using standards compliant software means that your project will connect with other open social networks and you are free to choose what works for you.</p>
+    </div>
+  </div>
+
+  <div class="future grid-4 clearfix">
+    <h2>where buddycloud is going</h2>
+    <div class="grid-1">
+      <h3>Android and iPhone clients</h3>
+    
+      <p>buddycloud knows how important mobile is. We have created a substantial framework for buddycloud on mobile devices. Now we are refining the Android and iPhone apps that bring you trusted location sharing and realtime updates with your channels.</p>
+    </div>
+    <div class="grid-1">  
+      <h3>buddycloud library</h3>
+    
+      <p>To add social features quickly to your next project, lib-buddycloud, a growing javascript library, will help you make your own buddycloud client easily.  Drop in, dead simple.</p>
+    </div>
+    <div class="grid-1 last">
+      <h3>media server</h3>
+
+      <p>We know media sharing must be drag-n-drop easy and just work. We’re building some great media integration so you can share easily in your channel. <a href="#getStarted">How to get started</a>.</p>
+    </div>
+  </div>
 </div>
-
-<!--everything below the fold/on the next screen -->
-
-<h2>not like any other social network</h2>
-
-<p>buddycloud is designed as a completely new way to share online: your buddycloud channel connects you to the world's realtime conversation. Follow topic channels and plug into a community of experts. Create your own topic channels, and share them with the world - or make it private and choose who can view it.</p>
-
-<p>buddycloud channels - for you, for your team, for everyone</p>
-
-<p>buddycloud's <strong>easy to understand privacy</strong> model and strong encryption keep you safe online.</p>
-
-<p>buddycloud is distributed by design: your data lives with you on your network. Simple.</p>
-
-
-<h2>buddycloud for your company</h2>
-
-<p>buddycloud helps your team take an idea, explore it and make things happen.</p>
-
-<p>Keep information belonging to you or your company secure by running your own buddycloud inside your firewall. You control your company’s social network and links to other companies.</p>
-
-
-
-
-
-
-<h2>buddycloud for developers</h2>
-
-<p>buddycloud for developers: tools to make your own social network</p>
-
-<h3>buddycloud: an open ecosystem</h3>
-
-<p>buddycloud is built by and for thinkers and makers who care about openness.</p>
-
-<p>buddycloud is built on opensource software. Developers add free components for you to use in your own project. buddycloud uses a suite of modern open technologies like HTML5, CoffeeScript, node.js, Δt and backbone.js. <a href="#join">Learn more about developing on the buddycloud wiki</a>.</p>
-
-<h3>buddycloud: easy to set up</h3>
-
-<p>Simple to set up packages for major operating systems. A great guide to setup and run your own buddycloud server in 60 minutes. Your users simply log on to <a href="https://pro.buddycloud.com/">https://buddycloud.your-domain.com</a>. <a href="pro">setup your server now</a>.</p>
-
-<h3>plays well with others</h3>
-
-<p>buddycloud is simple to integrate with your existing network, your user database and your own products. Just drop the code into your project and add imagination.</p>
-
-<h3>driving open standards for social networks</h3>
-
-<p>buddycloud is built on open standards. buddycloud and the W3C, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and XSF are working together to be the the strong foundation for an open social ecosystem.</p>
-
-<p>Using standards compliant software means that your project will connect with other open social networks and you are free to choose what works for you.</p>
-
-
-
-
-
-
-
-<h2>where buddycloud is going</h2>
-
-<h3>buddycloud for Android and iPhone</h3>
-
-<p>buddycloud knows how important mobile is. We have created a substantial framework for buddycloud on mobile devices. Now we are refining the Android and iPhone apps that bring you trusted location sharing and realtime updates with your channels.</p>
-
-<h3>lib-buddycloud for your next social project</h3>
-
-<p>To add social features quickly to your next project, lib-buddycloud, a growing javascript library, will help you make your own buddycloud client easily.  Drop in, dead simple.</p>
-
-<h3>buddycloud media server</h3>
-
-<p>We know media sharing must be drag-n-drop easy and just work. We’re building some great media integration so you can share easily in your channel. <a href="#getStarted">How to get started</a>.</p>
-
+<footer>
+  <div class="container">
+    <nav class="clearfix">
+      <a href="#about">about</a>
+      <a href="#join">join buddylcoud</a>
+      <a href="#pro">buddycloud pro</a>
+      <a href="#resources">developer resources</a>
+    </nav>
+  </div>
+</footer>
+<script>
+  document.title = "uddycloud";
+</script>
 </body>
 </html>
