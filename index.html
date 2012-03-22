@@ -83,6 +83,7 @@
         padding: 13px 21px;
         font-size: 13px;
         line-height: 1;
+        font-weight: normal;
         color: rgba(0,0,0,.55);
         float: left;
         position: relative;
@@ -100,9 +101,21 @@
         nav a:last-child:after { display: none; }
     
     header {
-      background: -webkit-radial-gradient(white, rgba(255,255,255,.0)), #f2f2f2;
       padding: 0;
+      box-shadow: 0 1px rgba(255,255,255,.89);
     }
+      header .container {
+        position: relative;
+      }
+      header .soup {
+        width: 448px;
+        height: 525px;
+        right: 0;
+        top: 167px;
+        position: absolute;
+        z-index: -1;
+        background: url(orange_red_brown.png) no-repeat;
+      }
     .hero {
       margin: 144px 0 34px;
       clear: right;
@@ -113,11 +126,18 @@
         line-height: 1.5;
         max-width: 100%;
       }
+        .description span {
+          background: white;
+        }
     
     header,
     .socialNetwork,  
     .forYourCompany {
       border-bottom: 1px solid rgba(0,0,0,.21);
+    }
+    
+    .socialNetwork {
+      background: #eee;
     }
     
     .developers {
@@ -181,18 +201,17 @@
       color: white;
       text-transform: uppercase;
       letter-spacing: 1px;
-      text-shadow: 0 -1px #ff9c00;
-      background: #ffdc00;
-      background: -webkit-linear-gradient(#ffdc00, #ff9c00);
-      background:    -moz-linear-gradient(#ffdc00, #ff9c00);
-      background:     -ms-linear-gradient(#ffdc00, #ff9c00);
-      background:      -o-linear-gradient(#ffdc00, #ff9c00);
-      background:         linear-gradient(#ffdc00, #ff9c00);
+      text-shadow: 0 -1px #B60C22;
+      background: #F01936;
+      background: -webkit-linear-gradient(#F01936, #FF2441, #F01431);
+      background:    -moz-linear-gradient(#F01936, #FF2441, #F01431);
+      background:     -ms-linear-gradient(#F01936, #FF2441, #F01431);
+      background:      -o-linear-gradient(#F01936, #FF2441, #F01431);
+      background:         linear-gradient(#F01936, #FF2441, #F01431);
       border: 3px solid #f2304a;
       border-bottom-width: 1px;
       border-radius: 13px;
-      box-shadow: 
-        0 0 0 2px #ffea00 inset,
+      box-shadow:
         0 1px rgba(0,0,0,.13),
         0 3px 0 -1px #c9283e,
         0 4px 0 -1px rgba(0,0,0,.21),
@@ -205,12 +224,12 @@
               transition: background 500ms;
     }
       .callForAction:hover {
-      background: #ffdc00;
-      background: -webkit-linear-gradient(#ffea00, #fa0);
-      background:    -moz-linear-gradient(#ffea00, #fa0);
-      background:     -ms-linear-gradient(#ffea00, #fa0);
-      background:      -o-linear-gradient(#ffea00, #fa0);
-      background:         linear-gradient(#ffea00, #fa0);
+      background: #FF2441;
+      background: -webkit-linear-gradient(#FF2441, #FF2441);
+      background:    -moz-linear-gradient(#FF2441, #FF2441);
+      background:     -ms-linear-gradient(#FF2441, #FF2441);
+      background:      -o-linear-gradient(#FF2441, #FF2441);
+      background:         linear-gradient(#FF2441, #FF2441);
       }
       .callForAction:active {
         top: 1px;
@@ -241,6 +260,7 @@
 <body>
 <header>
     <div class="container">
+    <div class="soup"></div>
     <nav>
       <a href="#about">about</a>
       <a href="#join">join buddycloud</a>
@@ -250,9 +270,9 @@
     <div class="hero">
       <h1>buddycloud</h1>
       <p class="description">
-        buddycloud is an amazing new kind of social network.<br>
-        Realtime updates bring you closer to the thinkers and makers.<br>
-        Ask questions, explore ideas, in your own way, in the space you create.<br>
+        <span>buddycloud is an amazing new kind of social network.<br></span>
+        <span>Realtime updates bring you closer to the thinkers and makers.<br></span>
+        <span>Ask questions, explore ideas, in your own way, in the space you create.<br></span>
         <a href="#getStarted" class="callForAction">Become a part of it</a>
       </p>
     </div>
