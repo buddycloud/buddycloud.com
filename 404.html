@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>buddycloud</title>
+  <link rel="shortcut icon" href="favicon.ico?v=1.1" type="image/x-icon" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Nunito:400" />
+  <style type="text/css">
+    html {
+      background: hsl(195,5%,93%);
+      background: -webkit-radial-gradient(rgba(255,255,255,.21), rgba(255,255,255,.0)), url(icon_soup.png);
+      background:    -moz-radial-gradient(rgba(255,255,255,.21), rgba(255,255,255,.0)), url(icon_soup.png);
+      background:      -o-radial-gradient(rgba(255,255,255,.21), rgba(255,255,255,.0)), url(icon_soup.png);
+      background:     -ms-radial-gradient(rgba(255,255,255,.21), rgba(255,255,255,.0)), url(icon_soup.png);
+      background:         radial-gradient(rgba(255,255,255,.21), rgba(255,255,255,.0)), url(icon_soup.png);
+      background: none;
+      background-attachment: fixed;
+      font: 21px/27px "Helvetica Neue", Helvetica,Arial, sans-serif;
+      font-weight: 300;
+      color: rgba(0,0,0,.73);
+    }
+    body { 
+      margin: 0;
+    }
+    h1, h2, h3 {
+      font-family: 'Nunito';
+      font-weight: 300;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 1;
+      letter-spacing: -0.1;
+      color: black;
+      display: inline-block;
+    }
+    h1 {
+      margin: 55px 0 34px;
+      font-size: 89px;
+    }
+    h2 {
+      margin: 21px 0 34px;
+      font-size: 55px;
+      border-width: 8px;
+    }
+      h2 + p { margin-top: -21px; }
+    h3 {
+      margin: 0 0 13px;
+      font-size: 21px;
+      border-width: 5px;
+    }
+    p {
+      margin: 0 0 34px;
+    }
+      strong { color: rgba(0,0,0,.73); }
+    a {
+      color: #86be29;
+      text-decoration: none;
+    }
+    .developer a {
+      padding: 1px 2px;
+      color: rgba(0,0,0,.73);
+      background: #86be29;
+      border-bottom: 2px solid #165d3d;
+      box-shadow: 0 -1px rgba(255,255,255,.13) inset;
+    }
+      .developer a:hover { color: black; }
+      .developer a:active {
+        border-bottom-width: 0px;
+        box-shadow: none;
+        position: relative;
+        top: 2px;
+      }    
+    body > div { padding: 89px 0; }
+    .container {
+      max-width: 960px;
+      padding: 0 34px;
+      margin: 0 auto;
+    }
+    nav {
+      float: right;
+    }
+      nav a {
+        padding: 34px 21px;
+        font-size: 13px;
+        line-height: 1;
+        font-weight: normal;
+        color: rgba(0,0,0,.55);
+        float: left;
+        position: relative;
+      }
+        nav a:hover, nav a.active { color: black; }
+      nav a:after {
+        content: "";
+        width: 1px;
+        right: 0;
+        height: 20%;
+        top: 41%;
+        position: absolute;
+        background: rgba(0,0,0,.13);
+      }
+        nav a:last-child:after { display: none; }
+    
+    header {
+      padding: 0;
+      box-shadow: 0 1px rgba(255,255,255,.89);
+    }
+      header .container {
+        position: relative;
+      }
+      header .soup {
+        width: 448px;
+        height: 525px;
+        right: 0;
+        top: 167px;
+        position: absolute;
+        z-index: -1;
+        background: url(orange_red_brown.png) no-repeat;
+      }
+    .hero {
+      margin: 144px 0 34px;
+      clear: right;
+    }
+      .description {
+        margin-bottom: 55px;
+        font-size: 27px;
+        line-height: 1.5;
+        max-width: 100%;
+      }
+        .description span {
+          padding: 3px 0;
+          background: white;
+        }
+    
+    header,
+    .socialNetwork,  
+    .forYourCompany {
+      border-bottom: 1px solid rgba(0,0,0,.21);
+    }
+    
+    .socialNetwork {
+      background: #eee;
+    }
+    
+    .developers {
+      color: white;
+      background: url(blue_noise.png);
+      position: relative;
+      overflow: hidden;
+    }
+      .developers:after {
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        margin: 0 -34px;
+        padding-left: 34px;
+        padding-right: 34px;
+        box-shadow: 0 0 21px rgba(0,0,0,.73) inset;
+        position: absolute;
+        z-index: -1;
+      }
+    
+    .future { background: white; }
+    
+    .grid-2 .grid-1 { width: 452px; }
+    .grid-4 .grid-1 { width: 283px; }
+    .grid-1 {
+      float: left;
+      margin: 21px 55px 21px 0;
+    }
+      .grid-1 p { font-size: 16px; margin-bottom: 21px; }
+      .grid-1.last { margin-right: 0; }
+      
+    footer {
+      background: #86be29;
+      border-top: 1px solid rgba(0,0,0,.34);
+      box-shadow: 0 1px rgba(255,255,255,.34) inset, 0 0 5px rgba(0,0,0,.34);
+    }
+    footer .design {
+      font-size: 13px;
+      line-height: 39px;
+      color: rgba(255,255,255,.55);
+      float: right;
+    }
+    footer nav {
+      margin: 0;
+      float: left;
+    }
+    
+    .clearfix:after {
+    	content: '';
+    	display: block;
+    	height: 0;
+    	clear: both;
+    	visibility: hidden;
+    }
+    
+    .callForAction {
+      margin: 34px 0;
+      padding: 21px 34px;
+      font-size: 21px;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 -1px #B60C22;
+      background: #F01936;
+      background: -webkit-linear-gradient(#F01936, #FF2441, #F01431);
+      background:    -moz-linear-gradient(#F01936, #FF2441, #F01431);
+      background:     -ms-linear-gradient(#F01936, #FF2441, #F01431);
+      background:      -o-linear-gradient(#F01936, #FF2441, #F01431);
+      background:         linear-gradient(#F01936, #FF2441, #F01431);
+      border: 3px solid #f2304a;
+      border-bottom-width: 1px;
+      border-radius: 13px;
+      box-shadow:
+        0 1px rgba(0,0,0,.13),
+        0 3px 0 -1px #c9283e,
+        0 4px 0 -1px rgba(0,0,0,.21),
+        0 5px 5px -2px rgba(0,0,0,.08);
+      display: inline-block;
+      -webkit-transition: background 500ms;
+         -moz-transition: background 500ms;
+          -ms-transition: background 500ms;
+           -o-transition: background 500ms;
+              transition: background 500ms;
+    }
+      .callForAction:hover {
+      background: #FF2441;
+      background: -webkit-linear-gradient(#FF2441, #FF2441);
+      background:    -moz-linear-gradient(#FF2441, #FF2441);
+      background:     -ms-linear-gradient(#FF2441, #FF2441);
+      background:      -o-linear-gradient(#FF2441, #FF2441);
+      background:         linear-gradient(#FF2441, #FF2441);
+      }
+      .callForAction:active {
+        top: 1px;
+        position: relative;
+      }
+      
+      @media only screen and (max-width: 960px) {
+        .grid-2 .grid-1,
+        .grid-4 .grid-1 {
+          width: 100%;
+        }
+      }
+      
+      .howItWorks .container {
+        position: relative;
+      }
+      .controls {
+        position: absolute;
+        right: 21px;
+      }
+        .title {
+          margin: 5px 0 0;
+          font-size: 13px;
+        }
+          .title span {
+            margin: 0 21px;
+            position: relative;
+          }
+          .title span:before {
+            content: "";
+            top: -21px;
+            height: 13px;
+            left: 50%;
+            width: 1px;
+            background: rgba(0,0,0,.34);
+            position: absolute;
+            z-index: -1;
+          }
+      .slider {
+          padding: 4px 0 2px 1px;
+          position: relative;
+          display: block;
+      }
+          .slider .bar {
+              margin-top: 3px;
+              height: 3px;
+              background: -moz-linear-gradient(top, #adadad, #b2b2b2);
+              background: -webkit-gradient(linear, left top, left bottom, from(#adadad), to(#b2b2b2));
+              -moz-box-shadow: inset 0 1px 0 #929292;
+              -webkit-box-shadow: inset 0 1px 0 #929292;
+              box-shadow: inset 0 1px 0 #929292;
+              border: 1px solid #686868;
+              border-bottom-color: #aaa;
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              border-radius: 3px;
+          }
+          .inactive .slider .bar {
+              background: -moz-linear-gradient(top, #bfbfbf, #d0d0d0);
+              background: -webkit-linear-gradient(top, #bfbfbf, #d0d0d0);
+              background: linear-gradient(top, #bfbfbf, #d0d0d0);
+              -moz-box-shadow: inset 0 1px 0 #bfbfbf;
+              -webkit-box-shadow: inset 0 1px 0 #bfbfbf;
+              box-shadow: inset 0 1px 0 #bfbfbf;
+              border-color: #aaa #aaa #cacaca;
+          }
+          .slider .arrow {
+              left: 0;
+              top: 0;
+              position: absolute;
+          }
+              .slider .rear {
+                  left: -6px;
+                  top: 8px;
+                  height: 10px;
+                  width: 14px;
+                  background: -moz-linear-gradient(top, #a7d4f6, #73bbf2, #b0e9fd);
+                  background: -webkit-gradient(linear, left top, left bottom, from(#a7d4f6), color-stop(50%,#73bbf2), to(#b0e9fd));
+                  border: 1px solid #787a96;
+                  border-top-width: 0;
+                  border-radius: 2px;
+                  box-shadow: 0 1px 0 rgba(0,0,0,.05);
+                  position: relative;
+              }
+              .slider .spike {
+                  left: -11px;
+                  height: 9px;
+                  width: 8px;
+                  background: -moz-linear-gradient(-45deg, #e4f1fc, #88c4f2);
+                  background: -webkit-gradient(linear, left top, right bottom, from(#e4f1fc), to(#88c4f2));
+                  border: 1px solid #8d84ae;
+                  position: absolute;
+                     -moz-transform-origin: 6px 16px;
+                  -webkit-transform-origin: 6px 16px;
+                          transform-origin: 6px 16px;
+                     -moz-transform: rotate(45deg);
+                  -webkit-transform: rotate(45deg);
+                          transform: rotate(45deg);
+              }
+              .inactive .slider .rear {
+                  background: -moz-linear-gradient(#ECEDED, #DBDBDB, #EBEBEB);
+                  background: -webkit-linear-gradient(#ECEDED, #DBDBDB, #EBEBEB);
+                  background: linear-gradient(#ECEDED, #DBDBDB, #EBEBEB);
+                  border-color: #7F7D7D;
+              }
+              .inactive .slider .spike {
+                  background: -moz-linear-gradient(-45deg, #E1E1E1, white);
+                  background: -webkit-linear-gradient(-45deg, #E1E1E1, white);
+                  background: linear-gradient(-45deg, #E1E1E1, white);
+                  border-color: #9E9E9E;
+              }
+  </style>
+ <script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1075750-2']);
+  _gaq.push(['_setDomainName', 'buddycloud.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+  </script>
+</head>
+<body>
+<script type="text/javascript">
+  var GOOG_FIXURL_LANG = 'en';
+  var GOOG_FIXURL_SITE = 'http://www.example.com'
+</script>
+<script type="text/javascript"
+  src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
+</script>
+
+</body>
+</html>
