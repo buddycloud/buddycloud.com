@@ -116,11 +116,10 @@
         <h3>buddycloud library and API</h3>
         <p>Quickly build your own buddycloud client with a drop in Javascript library. buddycloud also includes an API server that makes developing apps in any language easy. Naturally <a href="https://buddycloud.org">great documentation</a> is included.</p>
         <div class="prettyprint-wrapper">
-          <pre class="prettyprint">// request
+          <pre class="prettyprint">// get subscribers from bccc@topics.pouet.im
 $ curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts
 buddycloud.Channel('bccc@topics.pouet.im').subscribers();
 
-// response
 {
   "schnouki@pouet.im": "owner",
   "lancestout@buddycloud.org": "publisher",
@@ -128,11 +127,10 @@ buddycloud.Channel('bccc@topics.pouet.im').subscribers();
   "simon@buddycloud.org": "publisher"
 }
 
-// request
+// get channels similar to team@topics.buddycloud.org
 $ curl https://api.buddycloud.org/team@topics.buddycloud.org/similar
 buddycloud.Channel('bccc@topics.pouet.im').similar();
 
-// response
 {
   "items": [
     {
