@@ -1,4 +1,4 @@
-
-.404.html.swp
-
+*.swp
+*.log
 .DS_Store
+node_modules
