@@ -67,7 +67,6 @@
         <img src="http://placehold.it/200x200" width="200" height="200" alt="" />
 
         <p>buddycloud and the <a href="http://w3c.org">W3C</a>, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and <a href="http://xmpp.org/">XSF</a> are working together to buile the strong foundation for an open social ecosystem.</p>
-
         <p>Using open standards means that you don't have to depend on anyone else and can quickly finish your project using a wide range of free libraries.</p>
         <p>buddycloud is built by and for thinkers and makers who care about openness.</p>
         <p>All buddycloud software is licensed under the liberal Apache 2.0 license: reference software for a webclient and Android gets you running fast.</p>
@@ -89,7 +88,7 @@
       <div class="main feature image-left">
         <h3>Distributed by design</h3>
         <img src="http://placehold.it/200x200" width="200" height="200" alt="" />
-        <p>How would it be if Gmail couldn't send email to a Hotmail account?      Today social networks are designed like that.</p>
+        <p>How would it be if Gmail couldn't send email to a Hotmail account? Today social networks are designed like that.</p>
         <p>buddycloud has designed a new way to share: each buddycloud instance can connect and share information with other buddycloud websites. Or run it behind your firewall for just your team.</p>
         <p>Also, we have designed tools that tap into Facebook and Twitter to help connect with users on "legacy" social networks.</p>
         <p>When you start your own buddycloud, your small website joins a much larger ecosystem of other domains also running buddycloud and users don't need to register again and again.</p>
@@ -110,21 +109,59 @@
         <h3>media sharing</h3>
         <img src="http://placehold.it/200x200" width="200" height="200" alt="" />
         <p>Media can be shared within just one channel or with the entire world.</p>
-        <p>The buddycloud media server is like DropBox enhanced to work on every domain: now users and developers can manage their own media sharing. Files, films, photos are seamlessly synchronised and it just works.
-<a href="https://github.com/buddycloud/buddycloud-media-server">Learn more</a>.</p>
+        <p>The buddycloud media server is like DropBox enhanced to work on every domain: now users and developers can manage their own media sharing. Files, films, photos are seamlessly synchronised and it just works. <a href="https://github.com/buddycloud/buddycloud-media-server" target="_blank">Learn more</a>.</p>
       </div>
 
       <div class="main feature image-right">
         <h3>buddycloud library and API</h3>
-        <img src="http://placehold.it/200x200" width="200" height="200" alt="" />
         <p>Quickly build your own buddycloud client with a drop in Javascript library. buddycloud also includes an API server that makes developing apps in any language easy. Naturally <a href="https://buddycloud.org">great documentation</a> is included.</p>
-        <code>
-        curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts
-{"schnouki@pouet.im":"owner","lancestout@buddycloud.org":"publisher","james@buddycloud.org":"publisher",,"simon@buddycloud.org":"publisher"}
+        <div class="prettyprint-wrapper">
+          <pre class="prettyprint">// request
+$ curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts
+buddycloud.Channel('bccc@topics.pouet.im').subscribers();
 
-curl https://api.buddycloud.org/team@topics.buddycloud.org/similar          
-{"items":[{"jid":"simon@buddycloud.org","description":"Flipping you the channel bits. Night and day, the distributed way","creationDate":"2011-10-06T12:02:58+0000","title":"Simon's channel","channelType":"personal","defaultAffiliation":"publisher"},{"jid":"bbc_news_-_world@topics.buddycloud.org","description":"This is an RSS feed from the BBC News - World website.  Original: http://feeds.bbci.co.uk/news/world/rss.xml","creationDate":"2012-08-05T14:57:26+0000","title":"BBC News - World","channelType":"topic","defaultAffiliation":"publisher"},{"jid":"help@topics.buddycloud.org","description":"Ask here for help with any of the buddycloud clients (e.g. the web client) ","creationDate":"2012-08-04T15:02:09+0000","title":"client help channel","channelType":"topic","defaultAffiliation":"publisher"}
-        </code>
+// response
+{
+  "schnouki@pouet.im": "owner",
+  "lancestout@buddycloud.org": "publisher",
+  "james@buddycloud.org": "publisher",
+  "simon@buddycloud.org": "publisher"
+}
+
+// request
+$ curl https://api.buddycloud.org/team@topics.buddycloud.org/similar
+buddycloud.Channel('bccc@topics.pouet.im').similar();
+
+// response
+{
+  "items": [
+    {
+      "jid": "simon@buddycloud.org",
+      "description": "Flipping you the channel bits. Night and day, the distributed way",
+      "creationDate": "2011-10-06T12:02:58+0000",
+      "title": "Simon's channel",
+      "channelType": "personal",
+      "defaultAffiliation": "publisher"
+    },
+    {
+      "jid": "bbc_news_-_world@topics.buddycloud.org",
+      "description": "This is an RSS feed from the BBC News - World website.  Original: http:\/\/feeds.bbci.co.uk\/news\/world\/rss.xml",
+      "creationDate": "2012-08-05T14:57:26+0000",
+      "title": "BBC News - World",
+      "channelType": "topic",
+      "defaultAffiliation": "publisher"
+    },
+    {
+      "jid": "help@topics.buddycloud.org",
+      "description": "Ask here for help with any of the buddycloud clients (e.g. the web client)\u00a0",
+      "creationDate": "2012-08-04T15:02:09+0000",
+      "title": "client help channel",
+      "channelType": "topic",
+      "defaultAffiliation": "publisher"
+    }
+  ]
+}</pre>
+        </div>
       </div>
 
       <div class="main feature image-left">
@@ -281,6 +318,7 @@ curl https://api.buddycloud.org/team@topics.buddycloud.org/similar
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js&skin=sunburst"></script>
   <script src="js/vendor/jquery.waypoints.min.js"></script>
   <script src="js/scripts.js"></script>
   <script>
