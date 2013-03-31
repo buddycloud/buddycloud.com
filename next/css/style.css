@@ -157,6 +157,19 @@ nav {
     left: 35px;
   }
 
+.blur {
+  background: url(img/bg.jpg) center -250px repeat-x;
+  background-size: auto 1032px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: blur(3px);
+  position: absolute;
+  top: 0;
+  z-index: -2;
+  width: 100%;
+  height: 732px;
+}
+
 .hero {
   padding: 35px 0 75px;
   overflow: hidden;
