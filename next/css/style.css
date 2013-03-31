@@ -158,16 +158,16 @@ nav {
   }
 
 .blur {
+  width: 100%;
+  height: 732px;
+  position: absolute;
+  top: 0;
+  z-index: -2;
   background: url(img/bg.jpg) center -250px repeat-x;
   background-size: auto 1032px;
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   filter: blur(3px);
-  position: absolute;
-  top: 0;
-  z-index: -2;
-  width: 100%;
-  height: 732px;
 }
 
 .hero {
@@ -232,15 +232,30 @@ nav {
   padding: 25px 0 0;
 }
 
-  .feature.image-left img {
+  .feature.image-left [class^="icon-"]:before,
+  .feature.image-left [class*=" icon-"]:before {
+    min-width: 200px;
+    margin: 0 25px 0 5px;
     float: left;
-    margin: 0 25px 25px 0;
+    font-size: 200px;
   }
 
-  .feature.image-right img {
+  .feature.image-right [class^="icon-"]:before,
+  .feature.image-right [class*=" icon-"]:before {
+    min-width: 200px;
+    /*margin: 0 0 25px 25px;*/
     float: right;
-    margin: 0 0 25px 25px;
+    font-size: 200px;
   }
+
+  .feature.open i { color: #3093D3; }
+  .feature.fork i { color: #83AC35; }
+  .feature.distributed i { color: #E28C35; }
+  .feature.privacy i { color: #AC1D21; }
+  .feature.media i { color: #83AC35; }
+  .feature.run i { color: #856228; }
+  .feature.community i { color: #E28C35; }
+  .feature.commercial i { color: #3093D3; }
 
 /*.forYourCompany .container {
   position: relative;
