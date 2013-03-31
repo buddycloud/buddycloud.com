@@ -163,7 +163,7 @@ nav {
   position: absolute;
   top: 0;
   z-index: -2;
-  background: url(img/bg.jpg) center -250px repeat-x;
+  background: url(img/bg.jpg) center -226px repeat-x;
   background-size: auto 1032px;
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
@@ -171,18 +171,18 @@ nav {
 }
 
 .hero {
-  padding: 35px 0 75px;
+  padding: 35px 0 70px;
   overflow: hidden;
   clear: right;
 }
   .hero h2 {
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 55px;
     text-align: center;
     font-size: 80px;
   }
   .description {
-    margin: 60px 0 0;
+    /*margin: 60px 0 0;*/
     width: 370px;
     max-width: 100%;
     font-size: 24px;
@@ -192,7 +192,8 @@ nav {
   }
     .description span {
       padding: 3px 0;
-      background: white;
+      text-shadow: 1px 1px 3px white,
+                  -1px -1px 3px white;
     }
 
 .primarySection,
@@ -223,7 +224,7 @@ nav {
 }
 
 .feature.main li {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
 }
 
 .feature.image-left,
@@ -376,6 +377,10 @@ footer a {
     height: 0;
     clear: both;
     visibility: hidden;
+}
+
+.primarySection .callForAction {
+  margin: 102px 0 34px;
 }
 
 .callForAction {
