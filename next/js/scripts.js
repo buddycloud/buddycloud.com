@@ -26,7 +26,6 @@ $(function() {
       $fixedHeader.find('.selected').removeClass('selected');
       $fixedHeader.find('.' + section)
                   .addClass('selected');
-      console.log(section);
     }, {offset: 35});
 
     // scrollTo animation when clicking on top and fixed bars
@@ -79,4 +78,5 @@ $(function() {
     start();
   }());
 
+  prettyPrint();
 });
