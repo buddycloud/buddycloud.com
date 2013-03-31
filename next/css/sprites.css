@@ -1,0 +1,47 @@
+/* buddycloud partners section */
+.partners {
+    background: url(img/partners/sprite.png) no-repeat;
+    display: block;
+}
+
+.partners-bmw {
+    width: 100px;
+    height: 100px;
+    background-position: -3px -3px;
+}
+
+.partners-brightroll {
+    width: 170px;
+    height: 41px;
+    background-position: -109px -3px;
+}
+
+.partners-gi {
+    width: 108px;
+    height: 100px;
+    background-position: -109px -50px;
+}
+
+.partners-hillert {
+    width: 100px;
+    height: 100px;
+    background-position: -3px -156px;
+}
+
+.partners-surevine {
+    width: 286px;
+    height: 40px;
+    background-position: -285px -3px;
+}
+
+.partners-webfwd {
+    width: 206px;
+    height: 75px;
+    background-position: -285px -49px;
+}
+
+.partners-wikimedia {
+    width: 100px;
+    height: 100px;
+    background-position: -223px -130px;
+}
