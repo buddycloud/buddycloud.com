@@ -36,7 +36,7 @@
       <div class="hero">
         <h2>build amazing social apps</h2>
         <p class="description">
-          <span>distributed by design, buddycloud has pioneered a set of tools, open source software and protocols to build a completely new kind of social network.<br /></span>
+          <span>distributed by design, buddycloud has pioneered a set of tools, open source software and protocols to help you build a completely new kind of social network.<br /></span>
           <!-- disabling launchrock
           <div rel="8UL8PJ0O" class="lrdiscoverwidget" data-logo="off" data-background="off" data-share-url="buddycloud.com" data-css=""></div><script type="text/javascript" src="http://launchrock-ignition.s3.amazonaws.com/ignition.1.1.js"></script>
           -->
@@ -64,21 +64,19 @@
     <div class="container">
       <h2>How buddycloud works</h2>
       <div class="main feature open image-left">
-        <h3>Celebrating protocol: open protocols, open source, open ecosystem</h3>
+        <h3>Celebrating open protocols, open source, open ecosystems</h3>
         <i class="icon-open"></i>
-        <p>distributed by design, buddycloud has pioneered a set of tools, open source software and protocols to build a completely new kind of social network.</p>
         <p>We have rethought the architecture of social networks. Instead of traditional <a href="http://facebook.com">centralised</a> <a href="http://twitter.com">models</a>. Our design principle is to distribute control: Each site runs its own buddycloud server. Users connect and share information with other users on other sites.</p>
         <p>This radical design gives you strong privacy controls and gives you access to friends anywhere on the buddycloud universe. [and connect to other social networks].</p>
         <p>buddycloud and the <a href="http://w3c.org">W3C</a>, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and <a href="http://xmpp.org/">XSF</a> are working together to buile the strong foundation for an open social ecosystem.</p>
         <p>We want to change how the world builds social networks. Soon all products will have a social layer integrated into them and we think that this should be buddycloud. So we have designed the buddycloud software to be easy to integrate and based on open protocols so that no one company can control the system.</p>
         <p>All buddycloud software is open souce and reusable under the Apache 2.0 license. The reference server, web and android software is to help you quickly get your project benefiting from buddycloud's social tools.</p>
-        <p>We believe in the open web and have tried to reuse existing standards for example <a href="http://activitystrea.ms">ActivityStrea.ms</a> and the <a href="https://en.wikipedia.org/wiki/Atom_%28standard%29">ATOM syndication format</a>. This approach means that you benefit from existing libraries and gives you enough karma to buy a stable of unicorns. <i>#GreatToBeOpen</i></p>
+        <p>We believe in the open web and have tried to reuse existing standards for example <a href="http://activitystrea.ms">ActivityStrea.ms</a> and the <a href="https://en.wikipedia.org/wiki/Atom_%28standard%29">ATOM syndication format</a>. This approach means that you benefit from existing libraries and gives you enough karma to buy a stable of unicorns. #GreatToBeOpen</p>
       </div>
 
       <div class="main feature fork image-right">
         <h3>Fork the buddycloud software and kickstart your project</h3>
         <i class="icon-fork"></i>
-
         <ul>
           <li>Avoid re-implementing a social stack on every single new project: buddycloud ships with working, Apache 2.0 licensed code, that will help get you started quickly.</li>
           <li>The server is written in node.js, the webclient is a single-page backbone.js app, and and we have developed a native Android client.</li>
@@ -120,19 +118,17 @@
         <h3>buddycloud Library and API</h3>
         <p>Quickly build your own buddycloud client with a drop in Javascript library. buddycloud also includes an API server that makes developing apps in any language easy. Naturally <a href="https://buddycloud.org">great documentation</a> is included.</p>
         <div class="prettyprint-wrapper">
-          <pre class="prettyprint">// get subscribers from bccc@topics.pouet.im
-$ curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts
+          <pre class="prettyprint">// get subscribers from bccc@topics.pouet.im (curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts)
 buddycloud.Channel('bccc@topics.pouet.im').subscribers();
 
 {
   "schnouki@pouet.im": "owner",
   "lancestout@buddycloud.org": "publisher",
   "james@buddycloud.org": "publisher",
-  "simon@buddycloud.org": "publisher"
+  "simon@imaginator.com": "publisher"
 }
 
-// get channels similar to team@topics.buddycloud.org
-$ curl https://api.buddycloud.org/team@topics.buddycloud.org/similar
+// get channels similar to team@topics.buddycloud.org (curl https://api.buddycloud.org/team@topics.buddycloud.org/similar)
 buddycloud.Channel('team@topics.buddycloud.org').similar();
 
 {
@@ -143,14 +139,6 @@ buddycloud.Channel('team@topics.buddycloud.org').similar();
       "creationDate": "2011-10-06T12:02:58+0000",
       "title": "Simon's channel",
       "channelType": "personal",
-      "defaultAffiliation": "publisher"
-    },
-    {
-      "jid": "bbc_news_-_world@topics.buddycloud.org",
-      "description": "This is an RSS feed from the BBC News - World website.  Original: http:\/\/feeds.bbci.co.uk\/news\/world\/rss.xml",
-      "creationDate": "2012-08-05T14:57:26+0000",
-      "title": "BBC News - World",
-      "channelType": "topic",
       "defaultAffiliation": "publisher"
     },
     {
