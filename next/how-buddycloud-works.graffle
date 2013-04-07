@@ -419,256 +419,419 @@
 	<key>GraphicsList</key>
 	<array>
 		<dict>
+			<key>Bounds</key>
+			<string>{{378, 513}, {225, 110}}</string>
 			<key>Class</key>
-			<string>Group</string>
-			<key>Graphics</key>
-			<array>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>Vertical</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Color</key>
 				<dict>
-					<key>Class</key>
-					<string>Group</string>
-					<key>Graphics</key>
-					<array>
-						<dict>
-							<key>Bounds</key>
-							<string>{{438.74997, 395.74994}, {112, 30.608736}}</string>
-							<key>Class</key>
-							<string>ShapedGraphic</string>
-							<key>FontInfo</key>
-							<dict>
-								<key>Font</key>
-								<string>HelveticaNeue</string>
-								<key>Size</key>
-								<real>13</real>
-							</dict>
-							<key>ID</key>
-							<integer>87713</integer>
-							<key>Shape</key>
-							<string>Bezier</string>
-							<key>ShapeData</key>
-							<dict>
-								<key>UnitPoints</key>
-								<array>
-									<string>{0.43671399, -0.5}</string>
-									<string>{0.43671399, -0.5}</string>
-									<string>{0.45705199, -0.0468712}</string>
-									<string>{0.45705199, -0.0468712}</string>
-									<string>{0.45705199, -0.0468712}</string>
-									<string>{0.5, 0.45705399}</string>
-									<string>{0.5, 0.45705399}</string>
-									<string>{0.5, 0.45705399}</string>
-									<string>{-0.46698999, 0.49999601}</string>
-									<string>{-0.466988, 0.5}</string>
-									<string>{-0.466988, 0.5}</string>
-									<string>{-0.5, -0.46578601}</string>
-									<string>{-0.5, -0.46578601}</string>
-									<string>{-0.5, -0.46578601}</string>
-									<string>{0.43671399, -0.5}</string>
-								</array>
-							</dict>
-							<key>Style</key>
-							<dict>
-								<key>fill</key>
-								<dict>
-									<key>Color</key>
-									<dict>
-										<key>a</key>
-										<string>0.51</string>
-										<key>b</key>
-										<string>1</string>
-										<key>g</key>
-										<string>1</string>
-										<key>r</key>
-										<string>1</string>
-									</dict>
-								</dict>
-								<key>shadow</key>
-								<dict>
-									<key>Fuzziness</key>
-									<real>2.9887564182281494</real>
-									<key>ShadowVector</key>
-									<string>{0, 3}</string>
-								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Color</key>
-									<dict>
-										<key>b</key>
-										<string>0.933333</string>
-										<key>g</key>
-										<string>0.933333</string>
-										<key>r</key>
-										<string>0.933333</string>
-									</dict>
-								</dict>
-							</dict>
-							<key>TextRelativeArea</key>
-							<string>{{0.1, 0}, {0.80000001, 1}}</string>
-						</dict>
-						<dict>
-							<key>Bounds</key>
-							<string>{{438.74896, 398.16498}, {107.347, 15.018158}}</string>
-							<key>Class</key>
-							<string>ShapedGraphic</string>
-							<key>FontInfo</key>
-							<dict>
-								<key>Font</key>
-								<string>HelveticaNeue</string>
-								<key>Size</key>
-								<real>13</real>
-							</dict>
-							<key>ID</key>
-							<integer>87714</integer>
-							<key>Shape</key>
-							<string>Bezier</string>
-							<key>ShapeData</key>
-							<dict>
-								<key>UnitPoints</key>
-								<array>
-									<string>{0.477312, -0.5}</string>
-									<string>{0.477312, -0.5}</string>
-									<string>{0.49999899, 0.49999201}</string>
-									<string>{0.5, 0.5}</string>
-									<string>{0.5, 0.49999201}</string>
-									<string>{-0.47266999, 0.46524799}</string>
-									<string>{-0.47267801, 0.46531701}</string>
-									<string>{-0.47267801, 0.465233}</string>
-									<string>{-0.5, -0.430336}</string>
-									<string>{-0.5, -0.430336}</string>
-									<string>{-0.5, -0.430336}</string>
-									<string>{0.477312, -0.5}</string>
-								</array>
-							</dict>
-							<key>Style</key>
-							<dict>
-								<key>shadow</key>
-								<dict>
-									<key>Draws</key>
-									<string>NO</string>
-								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Color</key>
-									<dict>
-										<key>b</key>
-										<string>1</string>
-										<key>g</key>
-										<string>1</string>
-										<key>r</key>
-										<string>1</string>
-									</dict>
-								</dict>
-							</dict>
-							<key>TextRelativeArea</key>
-							<string>{{0.1, 0}, {0.80000001, 1}}</string>
-						</dict>
-					</array>
-					<key>ID</key>
-					<integer>87712</integer>
+					<key>b</key>
+					<string>0.361095</string>
+					<key>g</key>
+					<string>0.350018</string>
+					<key>r</key>
+					<string>0.302332</string>
 				</dict>
+				<key>Font</key>
+				<string>Chalkduster</string>
+				<key>Size</key>
+				<real>13</real>
+			</dict>
+			<key>ID</key>
+			<integer>88949</integer>
+			<key>Magnets</key>
+			<array>
+				<string>{1, 0}</string>
+				<string>{-1, 0}</string>
+			</array>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
 				<dict>
-					<key>Bounds</key>
-					<string>{{405, 416.2467}, {179.508, 154.36853}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Color</key>
-						<dict>
-							<key>w</key>
-							<string>0</string>
-						</dict>
-						<key>Font</key>
-						<string>HelveticaNeue</string>
-						<key>NSKern</key>
-						<real>0.0</real>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>87715</integer>
-					<key>Shape</key>
-					<string>Bezier</string>
-					<key>ShapeData</key>
-					<dict>
-						<key>UnitPoints</key>
-						<array>
-							<string>{-0.45769101, 0.48891899}</string>
-							<string>{-0.37784299, 0.48520899}</string>
-							<string>{0.463875, 0.52174801}</string>
-							<string>{0.48034501, 0.479222}</string>
-							<string>{0.49681601, 0.436692}</string>
-							<string>{0.51735002, -0.42345801}</string>
-							<string>{0.47453201, -0.465985}</string>
-							<string>{0.43171, -0.50850999}</string>
-							<string>{-0.43208599, -0.51567101}</string>
-							<string>{-0.45836601, -0.461418}</string>
-							<string>{-0.48464701, -0.40716401}</string>
-							<string>{-0.53754002, 0.492636}</string>
-						</array>
-					</dict>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.513149</string>
-								<key>g</key>
-								<string>1</string>
-								<key>r</key>
-								<string>0.959566</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Beneath</key>
-							<string>YES</string>
-							<key>Fuzziness</key>
-							<real>0.45850202441215515</real>
-							<key>ShadowVector</key>
-							<string>{0, 2}</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.436788</string>
-								<key>g</key>
-								<string>0.836735</string>
-								<key>r</key>
-								<string>0.806831</string>
-							</dict>
-							<key>Width</key>
-							<real>2</real>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 ChalkboardSE-Light;}
-{\colortbl;\red255\green255\blue255;}
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Chalkduster;}
+{\colortbl;\red255\green255\blue255;\red77\green89\blue92;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf0 Invisible-Pink2 receives realtime updates from all the channels he follows.\
-\
-When his phone is offline, updates are stored in his buddycloud inbox.}</string>
+\f0\fs26 \cf2 To enable quick resynchronisation, updates from other buddycloud sites, are stored in each user's buddycloud inbox}</string>
+			</dict>
+			<key>TextPlacement</key>
+			<integer>0</integer>
+			<key>VFlip</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{-4.5, -36.000015}</string>
+				<string>{66, 0}</string>
+			</array>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>88946</integer>
+			</dict>
+			<key>ID</key>
+			<integer>88948</integer>
+			<key>Points</key>
+			<array>
+				<string>{868.5, 72.000015}</string>
+				<string>{783, 31}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Bezier</key>
+					<true/>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.736791</string>
+						<key>g</key>
+						<string>0.736791</string>
+						<key>r</key>
+						<string>0.736791</string>
 					</dict>
-					<key>TextRelativeArea</key>
-					<string>{{0.025, 0}, {0.94999999, 1}}</string>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>Arrow</string>
+					<key>Width</key>
+					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>88902</integer>
+				<key>Info</key>
+				<integer>3</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{4.5, -36}</string>
+				<string>{-80, 2}</string>
+			</array>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>88946</integer>
+			</dict>
+			<key>ID</key>
+			<integer>88947</integer>
+			<key>Points</key>
+			<array>
+				<string>{490.5, 72}</string>
+				<string>{594, 31}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Bezier</key>
+					<true/>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.736791</string>
+						<key>g</key>
+						<string>0.736791</string>
+						<key>r</key>
+						<string>0.736791</string>
+					</dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>Arrow</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>88924</integer>
+				<key>Info</key>
+				<integer>3</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{594, 6}, {189, 50}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>Vertical</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Color</key>
+				<dict>
+					<key>b</key>
+					<string>0.361095</string>
+					<key>g</key>
+					<string>0.350018</string>
+					<key>r</key>
+					<string>0.302332</string>
+				</dict>
+				<key>Font</key>
+				<string>Chalkduster</string>
+				<key>Size</key>
+				<real>13</real>
+			</dict>
+			<key>ID</key>
+			<integer>88946</integer>
+			<key>Magnets</key>
+			<array>
+				<string>{1, 0}</string>
+				<string>{-1, 0}</string>
+			</array>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Chalkduster;}
+{\colortbl;\red255\green255\blue255;\red77\green89\blue92;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf2 anyone can run their own buddycloud server}</string>
+			</dict>
+			<key>TextPlacement</key>
+			<integer>0</integer>
+			<key>VFlip</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{-0.5, 45}</string>
+				<string>{0, -54}</string>
 			</array>
 			<key>ID</key>
-			<integer>87711</integer>
+			<integer>88945</integer>
+			<key>Points</key>
+			<array>
+				<string>{486.5, 432}</string>
+				<string>{450, 513}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Bezier</key>
+					<true/>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.736791</string>
+						<key>g</key>
+						<string>0.736791</string>
+						<key>r</key>
+						<string>0.736791</string>
+					</dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>Arrow</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>88929</integer>
+				<key>Info</key>
+				<integer>13</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{63, 477}, {162, 110}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>Vertical</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Color</key>
+				<dict>
+					<key>b</key>
+					<string>0.361095</string>
+					<key>g</key>
+					<string>0.350018</string>
+					<key>r</key>
+					<string>0.302332</string>
+				</dict>
+				<key>Font</key>
+				<string>Chalkduster</string>
+				<key>Size</key>
+				<real>13</real>
+			</dict>
+			<key>ID</key>
+			<integer>88944</integer>
 			<key>Magnets</key>
 			<array>
 				<string>{0, 1}</string>
 				<string>{0, -1}</string>
+				<string>{1, 0}</string>
+				<string>{-1, 0}</string>
 			</array>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Chalkduster;}
+{\colortbl;\red255\green255\blue255;\red77\green89\blue92;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf2 Invisible-Pink2 receives realtime updates from all the channels he follows.}</string>
+			</dict>
+			<key>TextPlacement</key>
+			<integer>0</integer>
+			<key>VFlip</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{6, 63}</string>
+				<string>{-0.5, -72}</string>
+			</array>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>88944</integer>
+			</dict>
+			<key>ID</key>
+			<integer>88943</integer>
+			<key>Points</key>
+			<array>
+				<string>{273, 405}</string>
+				<string>{144, 477}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Bezier</key>
+					<true/>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.736791</string>
+						<key>g</key>
+						<string>0.736791</string>
+						<key>r</key>
+						<string>0.736791</string>
+					</dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>Arrow</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -677,7 +840,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{450, 306}, {89, 90.000008}}</string>
+					<string>{{442, 342}, {89, 90.000008}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -780,7 +943,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{468, 317.68689}, {50, 50}}</string>
+					<string>{{460, 353.68689}, {50, 50}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -889,11 +1052,11 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>69.5</real>
+			<real>67.5</real>
 			<key>Points</key>
 			<array>
-				<string>{747, 605.75}</string>
-				<string>{518, 357.68686}</string>
+				<string>{747, 650.75}</string>
+				<string>{510, 393.68686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -955,8 +1118,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>52.5</real>
 			<key>Points</key>
 			<array>
-				<string>{747, 461.61523}</string>
-				<string>{518, 347.68683}</string>
+				<string>{747, 506.61523}</string>
+				<string>{510, 383.68683}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -998,7 +1161,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{747, 361.75}, {95, 34}}</string>
+					<string>{{747, 406.75}, {95, 34}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1071,7 +1234,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 589.75}, {244, 32}}</string>
+									<string>{{747, 634.75}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1152,7 +1315,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 553.75}, {244, 32}}</string>
+									<string>{{747, 598.75}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1228,7 +1391,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 517.75}, {244, 32}}</string>
+									<string>{{747, 562.75}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1357,7 +1520,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 481.75}, {244, 32}}</string>
+									<string>{{747, 526.75}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1486,7 +1649,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 445.61523}, {244, 32}}</string>
+									<string>{{747, 490.61523}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1567,7 +1730,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747.00012, 409.04785}, {244, 32}}</string>
+									<string>{{747.00012, 454.04785}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -1701,7 +1864,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{738, 359.75}, {261, 270}}</string>
+							<string>{{738, 404.75}, {261, 270}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -1825,11 +1988,11 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>50.5</real>
+			<real>43.5</real>
 			<key>Points</key>
 			<array>
-				<string>{747, 128.86523}</string>
-				<string>{518, 337.68686}</string>
+				<string>{747, 173.86523}</string>
+				<string>{510, 373.68686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1871,7 +2034,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{747, 29}, {157, 34}}</string>
+					<string>{{747, 74}, {157, 34}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1944,7 +2107,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 257}, {244, 32}}</string>
+									<string>{{747, 302}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2075,7 +2238,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 221}, {244, 32}}</string>
+									<string>{{747, 266}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2151,7 +2314,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 185}, {244, 32}}</string>
+									<string>{{747, 230}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2282,7 +2445,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 149}, {244, 32}}</string>
+									<string>{{747, 194}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2412,7 +2575,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747, 112.86523}, {244, 32}}</string>
+									<string>{{747, 157.86523}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2493,7 +2656,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{747.00012, 76.297852}, {244, 32}}</string>
+									<string>{{747.00012, 121.29785}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2627,7 +2790,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{738, 27}, {261, 270}}</string>
+							<string>{{738, 72}, {261, 270}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -2739,7 +2902,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{126.21472, 219.12592}, {59.029583, 9.3203106}}</string>
+							<string>{{126.21472, 264.12592}, {59.029583, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -2806,7 +2969,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{126.21472, 206.10632}, {59.029583, 9.3203106}}</string>
+							<string>{{126.21472, 251.10632}, {59.029583, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -2875,7 +3038,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{115.55103, 193.08679}, {69.694733, 9.3203106}}</string>
+							<string>{{115.55103, 238.08679}, {69.694733, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -2946,7 +3109,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{153.23706, 110.80649}, {32.008553, 32.045109}}</string>
+					<string>{{153.23706, 155.80649}, {32.008553, 32.045109}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2988,7 +3151,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{128.03128, 178.47226}, {57.213737, 9.3203106}}</string>
+							<string>{{128.03128, 223.47226}, {57.213737, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3057,7 +3220,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{128.03128, 165.45139}, {57.213737, 9.3203106}}</string>
+							<string>{{128.03128, 210.45139}, {57.213737, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3124,7 +3287,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{117.69525, 152.4332}, {67.550697, 9.3203106}}</string>
+							<string>{{117.69525, 197.4332}, {67.550697, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3195,7 +3358,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{115.55103, 111.15012}, {32.008553, 32.045109}}</string>
+					<string>{{115.55103, 156.15012}, {32.008553, 32.045109}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -3269,7 +3432,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{139.73705, 92.06633}, {21.474077, 2.9376037}}</string>
+							<string>{{139.73705, 137.06631}, {21.474077, 2.9376037}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3308,7 +3471,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{140.76729, 244.36736}, {19.412897, 19.227943}}</string>
+							<string>{{140.76729, 289.36737}, {19.412897, 19.227943}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3350,7 +3513,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{109.76567, 104.96352}, {81.414436, 132.19186}}</string>
+							<string>{{109.76567, 149.96352}, {81.414436, 132.19186}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3387,7 +3550,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{53.933083, 125.93311}, {193.07957, 95.054169}}</string>
+							<string>{{53.933083, 170.93311}, {193.07957, 95.054169}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3493,8 +3656,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{166.00006, 248}</string>
-				<string>{468, 327.68686}</string>
+				<string>{166.00006, 293}</string>
+				<string>{460, 363.68686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3560,8 +3723,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{156.00002, 248}</string>
-				<string>{468, 337.68686}</string>
+				<string>{156.00002, 293}</string>
+				<string>{460, 373.68686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3627,8 +3790,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{146.00008, 248}</string>
-				<string>{468, 347.68683}</string>
+				<string>{146.00008, 293}</string>
+				<string>{460, 383.68683}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3669,7 +3832,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{126, 198}, {50, 50}}</string>
+			<string>{{126, 243}, {50, 50}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3779,8 +3942,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{136.00003, 248}</string>
-				<string>{468.00003, 357.68674}</string>
+				<string>{136.00003, 293}</string>
+				<string>{460.00003, 393.68674}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3846,9 +4009,9 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{613, 201}</string>
-				<string>{666, 269.75}</string>
-				<string>{518, 327.68686}</string>
+				<string>{613, 246}</string>
+				<string>{675, 315}</string>
+				<string>{510, 363.68686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3887,7 +4050,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{31, 45}, {230, 27}}</string>
+			<string>{{40, 81}, {233, 27}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -3934,14 +4097,28 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<dict>
 				<key>Align</key>
 				<integer>0</integer>
+				<key>RTFD</key>
+				<data>
+				BAtzdHJlYW10eXBlZIHoA4QBQISEhBJOU0F0dHJpYnV0
+				ZWRTdHJpbmcAhIQITlNPYmplY3QAhZKEhIQITlNTdHJp
+				bmcBlIQBKyBJbnZpc2libGUtUGlua0BVbmljb3JuTG91
+				bmdlLmNvbYaEAmlJASCShISEDE5TRGljdGlvbmFyeQCU
+				hAFpA5KElpYHTlNDb2xvcoaShISEB05TQ29sb3IAlIQB
+				YwKEBGZmZmaDgYCAPYPm5GQ+g4+Ojj4BhpKElpYGTlNG
+				b250hpKEhIQGTlNGb250HpSZJIQFWzM2Y10GAAAAHAAA
+				AP/+SABlAGwAdgBlAHQAaQBjAGEATgBlAHUAZQCEAWYO
+				mwCbAZsAmwCGkoSWlhBOU1BhcmFncmFwaFN0eWxlhpKE
+				hIQQTlNQYXJhZ3JhcGhTdHlsZQCUhARDQ0BTAACEhIQH
+				TlNBcnJheQCUmQCGgQAChARbMWZdJIaGhg==
+				</data>
 				<key>Text</key>
 				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
 \cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red222\green0\blue107;}
+{\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \deftab720
 \pard\pardeftab720
 
-\f0\fs28 \cf2 Invisible-Pink@unicornLounge.com}</string>
+\f0\fs28 \cf2 Invisible-Pink@UnicornLounge.com}</string>
 			</dict>
 			<key>TextPlacement</key>
 			<integer>0</integer>
@@ -3955,7 +4132,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{369, 29}, {174, 34}}</string>
+					<string>{{369, 74}, {184, 34}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -4007,7 +4184,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 \deftab720
 \pard\pardeftab720
 
-\f0\fs38 \cf2 unicornlounge.com}</string>
+\f0\fs38 \cf2 UnicornLounge.com}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
@@ -4028,7 +4205,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 257}, {244, 32}}</string>
+									<string>{{369, 302}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4102,8 +4279,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
 								KxtKdXN0SG9y
-								bnNAdW5pY29y
-								bmxvdW5nZS5j
+								bnNAVW5pY29y
+								bkxvdW5nZS5j
 								b22GhAJpSQEb
 								koSEhAxOU0Rp
 								Y3Rpb25hcnkA
@@ -4151,14 +4328,14 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 JustHorns@unicornlounge.com}</string>
+\f0\fs26 \cf2 JustHorns@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 221}, {244, 32}}</string>
+									<string>{{369, 266}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4227,14 +4404,14 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf0 bareback@unicornlounge.com}</string>
+\f0\fs26 \cf0 bareback@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 185}, {244, 32}}</string>
+									<string>{{369, 230}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4308,14 +4485,14 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 oneHornOr2@unicornlounge.com}</string>
+\f0\fs26 \cf1 oneHornOr2@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 149}, {244, 32}}</string>
+									<string>{{369, 194}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4389,7 +4566,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
 								KxlwcmFuY2Vy
-								QHVuaWNvcm5s
+								QFVuaWNvcm5M
 								b3VuZ2UuY29t
 								hoQCaUkBGZKE
 								hIQMTlNEaWN0
@@ -4438,14 +4615,14 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 prancer@unicornlounge.com}</string>
+\f0\fs26 \cf2 prancer@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 112.86523}, {244, 32}}</string>
+									<string>{{369, 157.86523}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4523,8 +4700,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								TlNPYmplY3QA
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
-								Kxd1bmljb0B1
-								bmljb3JubG91
+								Kxd1bmljb0BV
+								bmljb3JuTG91
 								bmdlLmNvbYaE
 								AmlJAReShISE
 								DE5TRGljdGlv
@@ -4573,14 +4750,14 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 unico@unicornlounge.com}</string>
+\f0\fs26 \cf2 unico@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369.00012, 76.297852}, {244, 32}}</string>
+									<string>{{369.00012, 121.29785}, {244, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4654,8 +4831,8 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
 								KyBJbnZpc2li
-								bGUtUGlua0B1
-								bmljb3JubG91
+								bGUtUGlua0BV
+								bmljb3JuTG91
 								bmdlLmNvbYaE
 								AmlJASCShISE
 								DE5TRGljdGlv
@@ -4704,7 +4881,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 Invisible-Pink@unicornlounge.com}</string>
+\f0\fs26 \cf2 Invisible-Pink@UnicornLounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
@@ -4715,7 +4892,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{360, 27}, {261, 369}}</string>
+							<string>{{360, 72}, {261, 369}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -4815,97 +4992,6 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			<key>ID</key>
 			<integer>88914</integer>
 		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{9, 5.75}, {1026, 660}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>FontInfo</key>
-			<dict>
-				<key>Color</key>
-				<dict>
-					<key>b</key>
-					<string>0.216392</string>
-					<key>g</key>
-					<string>0.170971</string>
-					<key>r</key>
-					<string>0.0430964</string>
-				</dict>
-				<key>Font</key>
-				<string>Corbel-Bold</string>
-				<key>Size</key>
-				<real>17</real>
-			</dict>
-			<key>HFlip</key>
-			<string>YES</string>
-			<key>ID</key>
-			<integer>88747</integer>
-			<key>Magnets</key>
-			<array>
-				<string>{-0.73960102, -1.1094}</string>
-				<string>{-0.42163801, -1.26491}</string>
-				<string>{0, -1.33333}</string>
-				<string>{0.42163801, -1.26491}</string>
-				<string>{0.73960102, -1.1094}</string>
-				<string>{1.1094, -0.7396}</string>
-				<string>{1.26491, -0.421637}</string>
-				<string>{1.33333, 1.27157e-06}</string>
-				<string>{1.26491, 0.42163801}</string>
-				<string>{1.1094, 0.7396}</string>
-				<string>{0.73959899, 1.1094}</string>
-				<string>{0.421637, 1.26491}</string>
-				<string>{0, 1.33333}</string>
-				<string>{-0.421637, 1.26491}</string>
-				<string>{-0.7396, 1.1094}</string>
-				<string>{-1.1094, 0.73960102}</string>
-				<string>{-1.26491, 0.421637}</string>
-				<string>{-1.33333, 1.27157e-06}</string>
-				<string>{-1.26491, -0.421637}</string>
-				<string>{-1.1094, -0.7396}</string>
-			</array>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Color</key>
-					<dict>
-						<key>b</key>
-						<string>0.916637</string>
-						<key>g</key>
-						<string>0.916622</string>
-						<key>r</key>
-						<string>0.916649</string>
-					</dict>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Beneath</key>
-					<string>YES</string>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Color</key>
-					<dict>
-						<key>b</key>
-						<string>0.534623</string>
-						<key>g</key>
-						<string>0.518222</string>
-						<key>r</key>
-						<string>0.448227</string>
-					</dict>
-					<key>CornerRadius</key>
-					<real>4</real>
-					<key>Draws</key>
-					<string>NO</string>
-					<key>Width</key>
-					<real>0.5</real>
-				</dict>
-			</dict>
-		</dict>
 	</array>
 	<key>GridInfo</key>
 	<dict>
@@ -4922,7 +5008,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 	<integer>2</integer>
 	<key>HorizontalGuides</key>
 	<array>
-		<real>27</real>
+		<real>36</real>
 		<real>72</real>
 	</array>
 	<key>ImageCounter</key>
@@ -4964,7 +5050,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-04-07 11:32:06 +0000</string>
+	<string>2013-04-07 12:25:22 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -5045,7 +5131,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{249, 102}, {1639, 1045}}</string>
+		<string>{{242, 133}, {1441, 1045}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -5059,7 +5145,7 @@ When his phone is offline, updates are stored in his buddycloud inbox.}</string>
 		<key>SidebarWidth</key>
 		<integer>179</integer>
 		<key>VisibleRegion</key>
-		<string>{{-164, -62}, {1445, 908}}</string>
+		<string>{{-65, -61}, {1247, 906}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
