@@ -423,7 +423,130 @@
 			<string>LineGraphic</string>
 			<key>ControlPoints</key>
 			<array>
-				<string>{4.5, 18}</string>
+				<string>{-45, 0}</string>
+				<string>{-18.46862, -47.961578}</string>
+			</array>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>88952</integer>
+				<key>Info</key>
+				<integer>4</integer>
+			</dict>
+			<key>ID</key>
+			<integer>88953</integer>
+			<key>Points</key>
+			<array>
+				<string>{108, 287.75}</string>
+				<string>{54.866657, 353.38678}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>stroke</key>
+				<dict>
+					<key>Bezier</key>
+					<true/>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.736791</string>
+						<key>g</key>
+						<string>0.736791</string>
+						<key>r</key>
+						<string>0.736791</string>
+					</dict>
+					<key>HeadArrow</key>
+					<string>0</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>Pattern</key>
+					<integer>24</integer>
+					<key>TailArrow</key>
+					<string>Arrow</string>
+					<key>Width</key>
+					<real>2</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{24.74115, 346.72818}, {280.12421, 70}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FitText</key>
+			<string>Vertical</string>
+			<key>Flow</key>
+			<string>Resize</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Color</key>
+				<dict>
+					<key>b</key>
+					<string>0.361095</string>
+					<key>g</key>
+					<string>0.350018</string>
+					<key>r</key>
+					<string>0.302332</string>
+				</dict>
+				<key>Font</key>
+				<string>Chalkduster</string>
+				<key>Size</key>
+				<real>13</real>
+			</dict>
+			<key>ID</key>
+			<integer>88952</integer>
+			<key>Magnets</key>
+			<array>
+				<string>{0, 1}</string>
+				<string>{0, -1}</string>
+				<string>{1, 0}</string>
+				<string>{-1, 0}</string>
+			</array>
+			<key>Rotation</key>
+			<real>356.5</real>
+			<key>Shape</key>
+			<string>Rectangle</string>
+			<key>Style</key>
+			<dict>
+				<key>fill</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Chalkduster;}
+{\colortbl;\red255\green255\blue255;\red77\green89\blue92;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf2 invisible-pink@unicornlounge.com receives realtime updates from all the channels he follows.}</string>
+			</dict>
+			<key>TextPlacement</key>
+			<integer>0</integer>
+			<key>VFlip</key>
+			<string>YES</string>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>ControlPoints</key>
+			<array>
+				<string>{4.5, 54}</string>
 				<string>{0, -54}</string>
 			</array>
 			<key>Head</key>
@@ -435,8 +558,8 @@
 			<integer>88945</integer>
 			<key>Points</key>
 			<array>
-				<string>{499.5, 360}</string>
-				<string>{489.53012, 417.20816}</string>
+				<string>{481.5, 360}</string>
+				<string>{451.19644, 417.20816}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -485,7 +608,7 @@
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{207.21481, 255.12592}, {59.029583, 9.3203106}}</string>
+							<string>{{140.26901, 282.12595}, {59.029583, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -552,7 +675,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{207.21481, 242.10632}, {59.029583, 9.3203106}}</string>
+							<string>{{140.26901, 269.10638}, {59.029583, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -621,7 +744,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{196.55112, 229.08679}, {69.694733, 9.3203106}}</string>
+							<string>{{129.60532, 256.08685}, {69.694733, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -692,7 +815,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{234.23706, 146.80649}, {32.008553, 32.045109}}</string>
+					<string>{{167.29126, 173.80653}, {32.008553, 32.045109}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -734,7 +857,7 @@
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{209.03137, 214.47226}, {57.213737, 9.3203106}}</string>
+							<string>{{142.08557, 241.47231}, {57.213737, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -801,7 +924,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{209.03137, 201.45139}, {57.213737, 9.3203106}}</string>
+							<string>{{142.08557, 228.45143}, {57.213737, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -868,7 +991,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{198.69534, 188.4332}, {67.550697, 9.3203106}}</string>
+							<string>{{131.74954, 215.43324}, {67.550697, 9.3203106}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -939,7 +1062,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{196.5511, 147.15012}, {32.008553, 32.045109}}</string>
+					<string>{{129.6053, 174.15016}, {32.008553, 32.045109}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -1013,7 +1136,7 @@
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{220.73706, 128.06628}, {21.474077, 2.9376037}}</string>
+							<string>{{153.79126, 155.06633}, {21.474077, 2.9376037}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -1052,7 +1175,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{221.7673, 280.36737}, {19.412897, 19.227943}}</string>
+							<string>{{154.8215, 307.3674}, {19.412897, 19.227943}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -1094,7 +1217,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{190.76569, 140.96352}, {81.414436, 132.19186}}</string>
+							<string>{{123.81989, 167.96356}, {81.414436, 132.19186}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -1131,7 +1254,7 @@
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{134.93311, 161.93311}, {193.07957, 95.054169}}</string>
+							<string>{{67.987305, 188.93315}, {193.07957, 95.054169}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -1217,7 +1340,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{441, 279}, {116.99999, 81.000008}}</string>
+					<string>{{423, 279}, {116.99999, 81.000008}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -1430,10 +1553,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>85.331497192382812</real>
+			<real>123.59501647949219</real>
 			<key>Points</key>
 			<array>
-				<string>{269.99997, 276.40582}</string>
+				<string>{193.47293, 260.80118}</string>
 				<string>{464.66296, 313.51816}</string>
 			</array>
 			<key>Style</key>
@@ -1494,8 +1617,8 @@ inbox}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{613.00012, 137.29785}</string>
-				<string>{675, 261}</string>
+				<string>{585, 137.29785}</string>
+				<string>{693, 261}</string>
 				<string>{530.39331, 313.51816}</string>
 			</array>
 			<key>Style</key>
@@ -1533,7 +1656,7 @@ inbox}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{361.89465, 417.14288}, {259.54437, 70}}</string>
+			<string>{{323.56097, 417.14288}, {259.54437, 70}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1621,8 +1744,8 @@ inbox}</string>
 			<integer>88948</integer>
 			<key>Points</key>
 			<array>
-				<string>{859.5, 72}</string>
-				<string>{782.82373, 24.953375}</string>
+				<string>{891, 63}</string>
+				<string>{784.17377, 26.508455}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1676,8 +1799,8 @@ inbox}</string>
 			<integer>88947</integer>
 			<key>Points</key>
 			<array>
-				<string>{490.5, 72.000015}</string>
-				<string>{594.17627, 36.491539}</string>
+				<string>{477, 72.000015}</string>
+				<string>{595.52618, 38.046631}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1716,7 +1839,7 @@ inbox}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{594, 5.7224579}, {189, 50}}</string>
+			<string>{{595.34998, 7.2775421}, {189, 50}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1785,7 +1908,7 @@ inbox}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{107.28477, 408.03589}, {198.1384, 90}}</string>
+			<string>{{80.716377, 50.912437}, {144.44911, 70}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FitText</key>
@@ -1812,8 +1935,6 @@ inbox}</string>
 			<integer>88944</integer>
 			<key>Magnets</key>
 			<array>
-				<string>{0, 1}</string>
-				<string>{0, -1}</string>
 				<string>{1, 0}</string>
 				<string>{-1, 0}</string>
 			</array>
@@ -1849,7 +1970,7 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;\red77\green89\blue92;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 Invisible-Pink2 receives realtime updates from all the channels he follows.}</string>
+\f0\fs26 \cf2 push notifications keep clients up to date}</string>
 			</dict>
 			<key>TextPlacement</key>
 			<integer>0</integer>
@@ -1861,8 +1982,8 @@ inbox}</string>
 			<string>LineGraphic</string>
 			<key>ControlPoints</key>
 			<array>
-				<string>{18, 54}</string>
-				<string>{-5.642334, -54.1026}</string>
+				<string>{11, -89.801178}</string>
+				<string>{81.814331, 5.9371033}</string>
 			</array>
 			<key>Head</key>
 			<dict>
@@ -1873,8 +1994,8 @@ inbox}</string>
 			<integer>88943</integer>
 			<key>Points</key>
 			<array>
-				<string>{315, 287.75}</string>
-				<string>{203.60684, 408.11981}</string>
+				<string>{259, 260.80118}</string>
+				<string>{225.03079, 81.503235}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1902,6 +2023,13 @@ inbox}</string>
 					<key>Width</key>
 					<real>2</real>
 				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>88951</integer>
+				<key>Position</key>
+				<real>0.2157420814037323</real>
 			</dict>
 		</dict>
 		<dict>
@@ -1931,7 +2059,7 @@ inbox}</string>
 			<real>60.5</real>
 			<key>Points</key>
 			<array>
-				<string>{738, 461}</string>
+				<string>{783, 461}</string>
 				<string>{530.39337, 336.01819}</string>
 			</array>
 			<key>Style</key>
@@ -1994,7 +2122,7 @@ inbox}</string>
 			<real>52.5</real>
 			<key>Points</key>
 			<array>
-				<string>{738, 425}</string>
+				<string>{783, 425}</string>
 				<string>{530.39331, 328.51822}</string>
 			</array>
 			<key>Style</key>
@@ -2037,7 +2165,7 @@ inbox}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{738, 289.75}, {95, 34}}</string>
+					<string>{{783, 289.75}, {95, 34}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2129,7 +2257,7 @@ inbox}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 445}, {244, 32}}</string>
+									<string>{{783, 445}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2203,14 +2331,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 Bronies@pony.com}</string>
+\f0\fs26 \cf1 bronies@pony.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 373}, {244, 32}}</string>
+									<string>{{783, 373}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2279,14 +2407,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf0 RainbowDash@pony.com}</string>
+\f0\fs26 \cf0 rainbow-dash@pony.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 409}, {244, 32}}</string>
+									<string>{{783, 409}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2367,7 +2495,7 @@ inbox}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738.00012, 337.04785}, {244, 32}}</string>
+									<string>{{783.00012, 337.04785}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2440,49 +2568,49 @@ inbox}</string>
 								TlNPYmplY3QA
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
-								KxdUd2lua2xl
-								U3BhcmtsZUBw
-								b255LmNvbYaE
-								AmlJAReShISE
-								DE5TRGljdGlv
-								bmFyeQCUhAFp
-								A5KElpYHTlND
-								b2xvcoaShISE
-								B05TQ29sb3IA
-								lIQBYwKEBGZm
-								ZmaDgYCAPYPm
-								5GQ+g4+Ojj4B
-								hpKElpYQTlNQ
-								YXJhZ3JhcGhT
-								dHlsZYaShISE
-								EE5TUGFyYWdy
-								YXBoU3R5bGUA
-								lIQEQ0NAUwAA
-								hISEB05TQXJy
-								YXkAlJkMkoSE
-								hAlOU1RleHRU
-								YWIAlIQCQ2YA
-								HIaShKKhADiG
-								koSioQBUhpKE
-								oqEAcIaShKKh
-								AIGMAIaShKKh
-								AIGoAIaShKKh
-								AIHEAIaShKKh
-								AIHgAIaShKKh
-								AIH8AIaShKKh
-								AIEYAYaShKKh
-								AIE0AYaShKKh
-								AIFQAYaGAIaS
-								hJaWBk5TRm9u
-								dIaShISEBk5T
-								Rm9udB6UmSSE
-								BVszNmNdBgAA
-								ABwAAAD//kgA
-								ZQBsAHYAZQB0
-								AGkAYwBhAE4A
-								ZQB1AGUAhAFm
-								DZsAmwGbAJsA
-								hoaG
+								Kxh0d2lua2xl
+								LXNwYXJrbGVA
+								cG9ueS5jb22G
+								hAJpSQEYkoSE
+								hAxOU0RpY3Rp
+								b25hcnkAlIQB
+								aQOShJaWB05T
+								Q29sb3KGkoSE
+								hAdOU0NvbG9y
+								AJSEAWMChARm
+								ZmZmg4GAgD2D
+								5uRkPoOPjo4+
+								AYaShJaWEE5T
+								UGFyYWdyYXBo
+								U3R5bGWGkoSE
+								hBBOU1BhcmFn
+								cmFwaFN0eWxl
+								AJSEBENDQFMA
+								AISEhAdOU0Fy
+								cmF5AJSZDJKE
+								hIQJTlNUZXh0
+								VGFiAJSEAkNm
+								AByGkoSioQA4
+								hpKEoqEAVIaS
+								hKKhAHCGkoSi
+								oQCBjACGkoSi
+								oQCBqACGkoSi
+								oQCBxACGkoSi
+								oQCB4ACGkoSi
+								oQCB/ACGkoSi
+								oQCBGAGGkoSi
+								oQCBNAGGkoSi
+								oQCBUAGGhgCG
+								koSWlgZOU0Zv
+								bnSGkoSEhAZO
+								U0ZvbnQelJkk
+								hAVbMzZjXQYA
+								AAAcAAAA//5I
+								AGUAbAB2AGUA
+								dABpAGMAYQBO
+								AGUAdQBlAIQB
+								Zg2bAJsBmwCb
+								AIaGhg==
 										</data>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
@@ -2490,7 +2618,7 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 TwinkleSparkle@pony.com}</string>
+\f0\fs26 \cf2 twinkle-sparkle@pony.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
@@ -2501,7 +2629,7 @@ inbox}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{729, 287.75}, {261, 198.25}}</string>
+							<string>{{774, 287.75}, {234, 198.25}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -2625,10 +2753,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>44.5</real>
+			<real>62.5</real>
 			<key>Points</key>
 			<array>
-				<string>{738, 173.86523}</string>
+				<string>{783, 164.86523}</string>
 				<string>{530.39331, 321.01819}</string>
 			</array>
 			<key>Style</key>
@@ -2671,7 +2799,7 @@ inbox}</string>
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{738, 74}, {144, 34}}</string>
+					<string>{{783, 65}, {144, 34}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2764,7 +2892,7 @@ inbox}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 229}, {244, 32}}</string>
+									<string>{{783, 220}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2837,50 +2965,50 @@ inbox}</string>
 								TlNPYmplY3QA
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
-								Kx5TdGFtcGVk
-								ZUxvdW5nZUBq
-								ZXdlbHJpZGVy
-								cy5jb22GhAJp
-								SQEekoSEhAxO
-								U0RpY3Rpb25h
-								cnkAlIQBaQOS
-								hJaWB05TQ29s
-								b3KGkoSEhAdO
-								U0NvbG9yAJSE
-								AWMChARmZmZm
-								g4GAgD2D5uRk
-								PoOPjo4+AYaS
-								hJaWEE5TUGFy
-								YWdyYXBoU3R5
-								bGWGkoSEhBBO
-								U1BhcmFncmFw
-								aFN0eWxlAJSE
-								BENDQFMAAISE
-								hAdOU0FycmF5
-								AJSZDJKEhIQJ
-								TlNUZXh0VGFi
-								AJSEAkNmAByG
-								koSioQA4hpKE
-								oqEAVIaShKKh
-								AHCGkoSioQCB
-								jACGkoSioQCB
-								qACGkoSioQCB
-								xACGkoSioQCB
-								4ACGkoSioQCB
-								/ACGkoSioQCB
-								GAGGkoSioQCB
-								NAGGkoSioQCB
-								UAGGhgCGkoSW
-								lgZOU0ZvbnSG
-								koSEhAZOU0Zv
-								bnQelJkkhAVb
-								MzZjXQYAAAAc
-								AAAA//5IAGUA
-								bAB2AGUAdABp
-								AGMAYQBOAGUA
-								dQBlAIQBZg2b
-								AJsBmwCbAIaG
-								hg==
+								Kx9zdGFtcGVk
+								ZS1sb3VuZ2VA
+								amV3ZWxyaWRl
+								cnMuY29thoQC
+								aUkBH5KEhIQM
+								TlNEaWN0aW9u
+								YXJ5AJSEAWkD
+								koSWlgdOU0Nv
+								bG9yhpKEhIQH
+								TlNDb2xvcgCU
+								hAFjAoQEZmZm
+								ZoOBgIA9g+bk
+								ZD6Dj46OPgGG
+								koSWlhBOU1Bh
+								cmFncmFwaFN0
+								eWxlhpKEhIQQ
+								TlNQYXJhZ3Jh
+								cGhTdHlsZQCU
+								hARDQ0BTAACE
+								hIQHTlNBcnJh
+								eQCUmQyShISE
+								CU5TVGV4dFRh
+								YgCUhAJDZgAc
+								hpKEoqEAOIaS
+								hKKhAFSGkoSi
+								oQBwhpKEoqEA
+								gYwAhpKEoqEA
+								gagAhpKEoqEA
+								gcQAhpKEoqEA
+								geAAhpKEoqEA
+								gfwAhpKEoqEA
+								gRgBhpKEoqEA
+								gTQBhpKEoqEA
+								gVABhoYAhpKE
+								lpYGTlNGb250
+								hpKEhIQGTlNG
+								b250HpSZJIQF
+								WzM2Y10GAAAA
+								HAAAAP/+SABl
+								AGwAdgBlAHQA
+								aQBjAGEATgBl
+								AHUAZQCEAWYN
+								mwCbAZsAmwCG
+								hoY=
 										</data>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
@@ -2888,14 +3016,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 StampedeLounge@jewelriders.com}</string>
+\f0\fs26 \cf2 stampede-lounge@jewelriders.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 194}, {244, 32}}</string>
+									<string>{{783, 185}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -2968,49 +3096,49 @@ inbox}</string>
 								TlNPYmplY3QA
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
-								KxlNb29uRGFu
-								Y2VAamV3ZWxy
-								aWRlcnMuY29t
-								hoQCaUkBGZKE
-								hIQMTlNEaWN0
-								aW9uYXJ5AJSE
-								AWkDkoSWlgdO
-								U0NvbG9yhpKE
-								hIQHTlNDb2xv
-								cgCUhAFjAoQE
-								ZmZmZoOBgIA9
-								g+bkZD6Dj46O
-								PgGGkoSWlhBO
-								U1BhcmFncmFw
-								aFN0eWxlhpKE
-								hIQQTlNQYXJh
-								Z3JhcGhTdHls
-								ZQCUhARDQ0BT
-								AACEhIQHTlNB
-								cnJheQCUmQyS
-								hISECU5TVGV4
-								dFRhYgCUhAJD
-								ZgAchpKEoqEA
-								OIaShKKhAFSG
-								koSioQBwhpKE
-								oqEAgYwAhpKE
-								oqEAgagAhpKE
-								oqEAgcQAhpKE
-								oqEAgeAAhpKE
-								oqEAgfwAhpKE
-								oqEAgRgBhpKE
-								oqEAgTQBhpKE
-								oqEAgVABhoYA
-								hpKElpYGTlNG
-								b250hpKEhIQG
-								TlNGb250HpSZ
-								JIQFWzM2Y10G
-								AAAAHAAAAP/+
-								SABlAGwAdgBl
-								AHQAaQBjAGEA
-								TgBlAHUAZQCE
-								AWYNmwCbAZsA
-								mwCGhoY=
+								Kxptb29uLWRh
+								bmNlQGpld2Vs
+								cmlkZXJzLmNv
+								bYaEAmlJARqS
+								hISEDE5TRGlj
+								dGlvbmFyeQCU
+								hAFpA5KElpYH
+								TlNDb2xvcoaS
+								hISEB05TQ29s
+								b3IAlIQBYwKE
+								BGZmZmaDgYCA
+								PYPm5GQ+g4+O
+								jj4BhpKElpYQ
+								TlNQYXJhZ3Jh
+								cGhTdHlsZYaS
+								hISEEE5TUGFy
+								YWdyYXBoU3R5
+								bGUAlIQEQ0NA
+								UwAAhISEB05T
+								QXJyYXkAlJkM
+								koSEhAlOU1Rl
+								eHRUYWIAlIQC
+								Q2YAHIaShKKh
+								ADiGkoSioQBU
+								hpKEoqEAcIaS
+								hKKhAIGMAIaS
+								hKKhAIGoAIaS
+								hKKhAIHEAIaS
+								hKKhAIHgAIaS
+								hKKhAIH8AIaS
+								hKKhAIEYAYaS
+								hKKhAIE0AYaS
+								hKKhAIFQAYaG
+								AIaShJaWBk5T
+								Rm9udIaShISE
+								Bk5TRm9udB6U
+								mSSEBVszNmNd
+								BgAAABwAAAD/
+								/kgAZQBsAHYA
+								ZQB0AGkAYwBh
+								AE4AZQB1AGUA
+								hAFmDZsAmwGb
+								AJsAhoaG
 										</data>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
@@ -3018,14 +3146,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 MoonDance@jewelriders.com}</string>
+\f0\fs26 \cf2 moon-dance@jewelriders.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738, 157.86523}, {244, 32}}</string>
+									<string>{{783, 148.86523}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -3099,14 +3227,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 SunStar@jewelriders.com}</string>
+\f0\fs26 \cf1 sun-star@jewelriders.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{738.00012, 121.29785}, {244, 32}}</string>
+									<string>{{783.00012, 112.29785}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -3179,49 +3307,49 @@ inbox}</string>
 								TlNPYmplY3QA
 								hZKEhIQITlNT
 								dHJpbmcBlIQB
-								KxlTd2lmdFdp
-								bmRAamV3ZWxy
-								aWRlcnMuY29t
-								hoQCaUkBGZKE
-								hIQMTlNEaWN0
-								aW9uYXJ5AJSE
-								AWkDkoSWlgdO
-								U0NvbG9yhpKE
-								hIQHTlNDb2xv
-								cgCUhAFjAoQE
-								ZmZmZoOBgIA9
-								g+bkZD6Dj46O
-								PgGGkoSWlhBO
-								U1BhcmFncmFw
-								aFN0eWxlhpKE
-								hIQQTlNQYXJh
-								Z3JhcGhTdHls
-								ZQCUhARDQ0BT
-								AACEhIQHTlNB
-								cnJheQCUmQyS
-								hISECU5TVGV4
-								dFRhYgCUhAJD
-								ZgAchpKEoqEA
-								OIaShKKhAFSG
-								koSioQBwhpKE
-								oqEAgYwAhpKE
-								oqEAgagAhpKE
-								oqEAgcQAhpKE
-								oqEAgeAAhpKE
-								oqEAgfwAhpKE
-								oqEAgRgBhpKE
-								oqEAgTQBhpKE
-								oqEAgVABhoYA
-								hpKElpYGTlNG
-								b250hpKEhIQG
-								TlNGb250HpSZ
-								JIQFWzM2Y10G
-								AAAAHAAAAP/+
-								SABlAGwAdgBl
-								AHQAaQBjAGEA
-								TgBlAHUAZQCE
-								AWYNmwCbAZsA
-								mwCGhoY=
+								Kxpzd2lmdC13
+								aW5kQGpld2Vs
+								cmlkZXJzLmNv
+								bYaEAmlJARqS
+								hISEDE5TRGlj
+								dGlvbmFyeQCU
+								hAFpA5KElpYH
+								TlNDb2xvcoaS
+								hISEB05TQ29s
+								b3IAlIQBYwKE
+								BGZmZmaDgYCA
+								PYPm5GQ+g4+O
+								jj4BhpKElpYQ
+								TlNQYXJhZ3Jh
+								cGhTdHlsZYaS
+								hISEEE5TUGFy
+								YWdyYXBoU3R5
+								bGUAlIQEQ0NA
+								UwAAhISEB05T
+								QXJyYXkAlJkM
+								koSEhAlOU1Rl
+								eHRUYWIAlIQC
+								Q2YAHIaShKKh
+								ADiGkoSioQBU
+								hpKEoqEAcIaS
+								hKKhAIGMAIaS
+								hKKhAIGoAIaS
+								hKKhAIHEAIaS
+								hKKhAIHgAIaS
+								hKKhAIH8AIaS
+								hKKhAIEYAYaS
+								hKKhAIE0AYaS
+								hKKhAIFQAYaG
+								AIaShJaWBk5T
+								Rm9udIaShISE
+								Bk5TRm9udB6U
+								mSSEBVszNmNd
+								BgAAABwAAAD/
+								/kgAZQBsAHYA
+								ZQB0AGkAYwBh
+								AE4AZQB1AGUA
+								hAFmDZsAmwGb
+								AJsAhoaG
 										</data>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
@@ -3229,7 +3357,7 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;\red15\green43\blue55;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf2 SwiftWind@jewelriders.com}</string>
+\f0\fs26 \cf2 swift-wind@jewelriders.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
@@ -3240,7 +3368,7 @@ inbox}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{729, 72}, {261, 198}}</string>
+							<string>{{774, 63}, {234, 198}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -3364,10 +3492,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{322.01355, 534.71021}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>85.331497192382812</real>
+			<real>123.59501647949219</real>
 			<key>Points</key>
 			<array>
-				<string>{269.99997, 276.40582}</string>
+				<string>{193.47293, 260.80118}</string>
 				<string>{464.66296, 306.01819}</string>
 			</array>
 			<key>Style</key>
@@ -3429,10 +3557,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{322.01355, 542.64728}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>86.331466674804688</real>
+			<real>123.59501647949219</real>
 			<key>Points</key>
 			<array>
-				<string>{270, 278.68652}</string>
+				<string>{193.47293, 260.80118}</string>
 				<string>{464.66296, 321.01819}</string>
 			</array>
 			<key>Style</key>
@@ -3494,10 +3622,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>86.331466674804688</real>
+			<real>124.59500122070312</real>
 			<key>Points</key>
 			<array>
-				<string>{270, 279.5401}</string>
+				<string>{193.47293, 262.06726}</string>
 				<string>{464.66293, 328.51816}</string>
 			</array>
 			<key>Style</key>
@@ -3537,7 +3665,7 @@ inbox}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{223.75, 248.25}, {42.5, 50}}</string>
+			<string>{{147.22292, 230.25}, {42.5, 50}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3629,10 +3757,10 @@ inbox}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{0, 0}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>85.331497192382812</real>
+			<real>124.59500122070312</real>
 			<key>Points</key>
 			<array>
-				<string>{269.99997, 276.40582}</string>
+				<string>{193.47293, 262.06726}</string>
 				<string>{464.66296, 336.01822}</string>
 			</array>
 			<key>Style</key>
@@ -3697,8 +3825,8 @@ inbox}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{613, 209}</string>
-				<string>{666, 254.5}</string>
+				<string>{584.99988, 209}</string>
+				<string>{684, 252}</string>
 				<string>{530.39337, 306.01819}</string>
 			</array>
 			<key>Style</key>
@@ -3735,81 +3863,6 @@ inbox}</string>
 				<key>Info</key>
 				<integer>1</integer>
 			</dict>
-		</dict>
-		<dict>
-			<key>Bounds</key>
-			<string>{{153, 306}, {135, 27}}</string>
-			<key>Class</key>
-			<string>ShapedGraphic</string>
-			<key>FitText</key>
-			<string>Vertical</string>
-			<key>Flow</key>
-			<string>Resize</string>
-			<key>FontInfo</key>
-			<dict>
-				<key>Color</key>
-				<dict>
-					<key>w</key>
-					<string>0</string>
-				</dict>
-				<key>Font</key>
-				<string>Corbel</string>
-				<key>Size</key>
-				<real>10</real>
-			</dict>
-			<key>HFlip</key>
-			<string>YES</string>
-			<key>ID</key>
-			<integer>88807</integer>
-			<key>Shape</key>
-			<string>Rectangle</string>
-			<key>Style</key>
-			<dict>
-				<key>fill</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>shadow</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-				<key>stroke</key>
-				<dict>
-					<key>Draws</key>
-					<string>NO</string>
-				</dict>
-			</dict>
-			<key>Text</key>
-			<dict>
-				<key>Align</key>
-				<integer>0</integer>
-				<key>RTFD</key>
-				<data>
-				BAtzdHJlYW10eXBlZIHoA4QBQISEhBJOU0F0dHJpYnV0
-				ZWRTdHJpbmcAhIQITlNPYmplY3QAhZKEhIQITlNTdHJp
-				bmcBlIQBKxJJbnZpc2libGUtUGlua0AuLi6GhAJpSQES
-				koSEhAxOU0RpY3Rpb25hcnkAlIQBaQOShJaWB05TQ29s
-				b3KGkoSEhAdOU0NvbG9yAJSEAWMChARmZmZmg+nnZz8A
-				g/78/D4BhpKElpYGTlNGb250hpKEhIQGTlNGb250HpSZ
-				JIQFWzM2Y10GAAAAHAAAAP/+SABlAGwAdgBlAHQAaQBj
-				AGEATgBlAHUAZQCEAWYOmwCbAZsAmwCGkoSWlhBOU1Bh
-				cmFncmFwaFN0eWxlhpKEhIQQTlNQYXJhZ3JhcGhTdHls
-				ZQCUhARDQ0BTAACEhIQHTlNBcnJheQCUmQCGgQAChARb
-				MWZdJIaGhg==
-				</data>
-				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red222\green0\blue107;}
-\deftab720
-\pard\pardeftab720
-
-\f0\fs28 \cf2 Invisible-Pink@...}</string>
-			</dict>
-			<key>TextPlacement</key>
-			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -3870,19 +3923,18 @@ inbox}</string>
 						hIQITlNPYmplY3QAhZKEhIQITlNT
 						dHJpbmcBlIQBKxF1bmljb3JubG91
 						bmdlLmNvbYaEAmlJARGShISEDE5T
-						RGljdGlvbmFyeQCUhAFpBJKElpYQ
-						TlNQYXJhZ3JhcGhTdHlsZYaShISE
-						EE5TUGFyYWdyYXBoU3R5bGUAlIQE
-						Q0NAUwAAhISEB05TQXJyYXkAlJkA
-						hoEAAoQEWzFmXSSGkoSWlg5OU09y
-						aWdpbmFsRm9udIaShISEBk5TRm9u
-						dB6UmSSEBVszNmNdBgAAABwAAAD/
-						/kgAZQBsAHYAZQB0AGkAYwBhAE4A
-						ZQB1AGUAhAFmE4QBYwChAaEAoQCG
-						koSWlgZOU0ZvbnSGkp+ShJaWB05T
-						Q29sb3KGkoSEhAdOU0NvbG9yAJSh
-						AoQEZmZmZoOdnBw/g/Du7j6DtbQ0
-						PgGGhoY=
+						RGljdGlvbmFyeQCUhAFpA5KElpYH
+						TlNDb2xvcoaShISEB05TQ29sb3IA
+						lIQBYwKEBGZmZmaDnZwcP4Pw7u4+
+						g7W0ND4BhpKElpYGTlNGb250hpKE
+						hIQGTlNGb250HpSZJIQFWzM2Y10G
+						AAAAHAAAAP/+SABlAGwAdgBlAHQA
+						aQBjAGEATgBlAHUAZQCEAWYTmwCb
+						AZsAmwCGkoSWlhBOU1BhcmFncmFw
+						aFN0eWxlhpKEhIQQTlNQYXJhZ3Jh
+						cGhTdHlsZQCUhARDQ0BTAACEhIQH
+						TlNBcnJheQCUmQCGgQAChARbMWZd
+						JIaGhg==
 						</data>
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
@@ -3912,7 +3964,7 @@ inbox}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 229}, {244, 32}}</string>
+									<string>{{369, 229}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -3988,7 +4040,7 @@ inbox}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 193}, {244, 32}}</string>
+									<string>{{369, 193}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4062,14 +4114,14 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 oneHornOr2@unicornlounge.com}</string>
+\f0\fs26 \cf1 two-horns@unicornlounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369, 157.86523}, {244, 32}}</string>
+									<string>{{369, 157.86523}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4204,7 +4256,7 @@ inbox}</string>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{369.00012, 121.29785}, {244, 32}}</string>
+									<string>{{369.00012, 121.29785}, {215.99989, 32}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -4278,7 +4330,7 @@ inbox}</string>
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 Invisible-Pink@unicornlounge.com}</string>
+\f0\fs26 \cf1 invisible-pink@unicornlounge.com}</string>
 										<key>VerticalPad</key>
 										<integer>1</integer>
 									</dict>
@@ -4289,7 +4341,7 @@ inbox}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{360, 72}, {261, 306}}</string>
+							<string>{{360, 72}, {234, 306}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -4446,7 +4498,7 @@ inbox}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-04-07 13:06:20 +0000</string>
+	<string>2013-04-07 13:21:45 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
