@@ -117,7 +117,7 @@ nav {
   position: fixed;
   top: 0;
   background-color: rgba(255,255,255,.97);
-  box-shadow: 0 1px rgba(255,255,255,.89);
+  box-shadow: 0 1px rgba(0,0,0,.05);
   border-bottom: 1px solid rgba(0,0,0,.21);
   z-index: 1000;
 }
@@ -171,13 +171,13 @@ nav {
 }
 
 .hero {
-  padding: 35px 0 70px;
+  padding: 25px 0 70px;
   overflow: hidden;
   clear: right;
 }
   .hero h2 {
     width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 65px;
     text-align: center;
     font-size: 80px;
   }
@@ -209,6 +209,8 @@ nav {
 
 .feature { overflow: hidden; }
 
+.feature.social-engines .headline { display: block; }
+.feature.social-engines .headline,
 .feature.main h3 {
   max-width: 728px;
   font-size: 25px;
@@ -365,7 +367,7 @@ footer ul {
   list-style: none;
 }
 
-footer li { font-size: 18px; }
+footer li { font-size: 16px; }
 
 footer a {
   color: rgba(0,0,0,.55);

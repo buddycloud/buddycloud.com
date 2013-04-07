@@ -45,7 +45,7 @@
 
 .icon-open:before { content: '\e025'; } /* '' */
 .icon-fork:before { content: '\e791'; } /* '' */
-.icon-distributed:before { content: '\f09e'; } /* '' */
+.icon-distributed:before { content: '\e776'; } /* '' */
 .icon-run:before { content: '\f0e4'; } /* '' */
 .icon-media:before { content: '🌄'; } /* '\1f304' */
 .icon-community:before { content: '👥'; } /* '\1f465' */
