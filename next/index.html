@@ -66,19 +66,20 @@
         <i class="icon-open"></i>
         <p>We have rethought the architecture of social networks. Instead of traditional <a href="http://facebook.com">centralised</a> <a href="http://twitter.com">models</a>. Our design principle is to distribute control: Each site runs its own buddycloud server. Users connect and share information with other users on other sites.</p>
         <p>This radical design gives you strong privacy controls and gives you access to friends anywhere on the buddycloud universe. [and connect to other social networks].</p>
-        <p>buddycloud and the <a href="http://w3c.org">W3C</a>, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and <a href="http://xmpp.org/">XSF</a> are working together to buile the strong foundation for an open social ecosystem.</p>
-        <p>We want to change how the world builds social networks. Soon all products will have a social layer integrated into them and we think that this should be buddycloud. So we have designed the buddycloud software to be easy to integrate and based on open protocols so that no one company can control the system.</p>
-        <p>All buddycloud software is open souce and reusable under the Apache 2.0 license. The reference server, web and android software is to help you quickly get your project benefiting from buddycloud's social tools.</p>
-        <p>We believe in the open web and have tried to reuse existing standards for example <a href="http://activitystrea.ms">ActivityStrea.ms</a> and the <a href="https://en.wikipedia.org/wiki/Atom_%28standard%29">ATOM syndication format</a>. This approach means that you benefit from existing libraries and gives you enough karma to buy a stable of unicorns. #GreatToBeOpen</p>
+        <p>buddycloud is working with the <a href="http://w3c.org">W3C</a>, <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>, and <a href="http://xmpp.org/">XSF</a> are working together to lay the solid foundation for an open social ecosystem.</p>
+        <p>Soon all products will integrate a social layer. The buddycloud software is a simple to integrate. Our open protocols mean no single company controls your system.</p>
+        <p>Our reference server, web and android software mean your project benefits quickly from buddycloud's social tools. All buddycloud software is open source and reusable under the Apache 2.0 license.</p>
+        <p>We make use of existing open standards like <a href="http://activitystrea.ms">ActivityStrea.ms</a> and the <a href="https://en.wikipedia.org/wiki/Atom_%28standard%29">ATOM syndication format</a>. You benefit from existing libraries and supporting the open web buys you enough karma to afford a stable of unicorns! #GreatToBeOpen</p>
       </div>
 
       <div class="main feature fork image-right">
         <h3>Fork the buddycloud software and kickstart your project</h3>
         <i class="icon-fork"></i>
         <ul>
-          <li>Avoid re-implementing a social stack on every single new project: buddycloud ships with working, Apache 2.0 licensed code, that will help get you started quickly.</li>
-          <li>The server is written in node.js, the webclient is a single-page backbone.js app, and and we have developed a native Android client.</li>
-          <li>All code is designed so that you can quickly and easily adapt and license under a do-what-you-want-with-it license.</li>
+          <li>Avoid re-implementing a social stack with every single new project: buddycloud ships with code examples get you started quickly.</li>
+          <li>The server is written in <a href="http://nodejs.org">node.js</a, the webclient is built with <a href="http://backbonejs.org">Backbone</a>, and and we have developed an <a href="https://play.google.com/store/apps/details?id=com.buddycloud">Android client</a>.</li>
+          <li>All code is designed so that you can quickly and easily adapt.</li>
+          <li>Licensed under a do-what-you-want-with-it license.</li>
         </ul>
       </div>
 
@@ -86,10 +87,10 @@
         <h3>Distributed by design</h3>
         <i class="icon-distributed"></i>
 
-        <p>How would it be if Gmail couldn't send email to a Hotmail account? Today social networks are designed like that.</p>
-        <p>buddycloud has designed a new way to share: each buddycloud instance can connect and share information with other buddycloud websites. Or run it behind your firewall for just your team.</p>
-        <p>Also, we have designed tools that tap into Facebook and Twitter to help connect with users on "legacy" social networks.</p>
-        <p>When you start your own buddycloud, your small website joins a much larger ecosystem of other domains also running buddycloud and users don't need to register again and again.</p>
+        <p>How would it be if Gmail couldn't send email to a Hotmail account? Social Networks are still like this.</p>
+        <p>buddycloud has designed a new way to share: each buddycloud instance can connect and share information with other buddycloud websites. Or you can run it behind your firewall for just your team alone.</p>
+        <p>Our tools also designed to link users with legacy networks like Facebook and Twiiter.</p>
+        <p>When you start your own buddycloud site, your small instance joins a much larger ecosystem of other sites already running buddycloud and users will never have to register again and again.</p>
         <img src="img/how-buddycloud-works.png" alt="How buddycloud works" width="960" height="506" />
       </div>
 
@@ -106,16 +107,16 @@
       </div>
 
       <div class="main feature media image-left">
-        <h3>Easy share films pictures or documents</h3>
+        <h3>Easy share files, films, photos.</h3>
         <i class="icon-media"></i>
 
         <p>Media can be shared within just one channel or with the entire world. On one buddycloud site or between buddycloud sites.</p>
-        <p>The buddycloud media server is like DropBox enhanced to work on every domain: now users and developers can manage their own media sharing. Files, films, photos are seamlessly synchronised and it just works. <a href="https://github.com/buddycloud/buddycloud-media-server" target="_blank">Learn more</a>.</p>
+        <p>The buddycloud media server is a bit like DropBox but enhanced to work on every site: now users and developers can manage their own media sharing. Files, films, photos are seamlessly synchronised. It just works.<a href="https://github.com/buddycloud/buddycloud-media-server" target="_blank">Learn more</a>.</p>
       </div>
 
       <div class="main feature image-right">
         <h3>buddycloud Library and API</h3>
-        <p>Quickly build your own buddycloud client with a drop in Javascript library. buddycloud also includes an API server that makes developing apps in any language easy. Naturally <a href="https://buddycloud.org">great documentation</a> is included.</p>
+        <p>Build your own buddycloud client with a drop in Javascript library. buddycloud also includes an API server that makes developing apps in any language easy. Naturally, <a href="https://buddycloud.org">great documentation</a> is included.</p>
         <div class="prettyprint-wrapper">
           <pre class="prettyprint">// get subscribers from bccc@topics.pouet.im (curl https://api.buddycloud.org/bccc@topics.pouet.im/subscribers/posts)
 buddycloud.Channel('bccc@topics.pouet.im').subscribers();
@@ -166,7 +167,7 @@ buddycloud.Channel('team@topics.buddycloud.org').similar();
         <h3>Join a helpful community</h3>
         <i class="icon-community"></i>
 
-        <p>We know that changing the world is difficult. If you get stuck, we're a pretty helpful and enthusiastic bunch and are here to help you.</p>
+        <p>We know that changing the world is difficult. If you get stuck, we're a pretty helpful and enthusiastic bunch. And are here to help you.</p>
         <p>Ask for help on the <a href="groups.google.com/group/buddycloud-dev">dev list</a>, the <a href="https://www.jappix.com/?r=seehaus@channels.buddycloud.com">chat room</a> or in the <a href="https://demo.buddycloud.com/team@topics.buddycloud.com">buddycloud team channel</a>.</p>
       </div>
 
@@ -185,23 +186,23 @@ buddycloud.Channel('team@topics.buddycloud.org').similar();
 
         <div class="feature channels grid-1">
           <h3>Recommendation engine</h3>
-          <p>If you like the buddycloud channel <code>food@foo.com</code> then might be interenestd in <code>omnomnom@bar.com</code>. The buddycloud crawler also ships with a nice API that helps your users find great content.</p>
+          <p>If you like the buddycloud channel <code>food@foo.com</code> then might be interenestd in <code>omnomnom@bar.com</code>. The buddycloud crawler also ships with a nice API that helps your users find great content. <a href="https://buddycloud.org/wiki/channel_directory_project">Learn more</a></p>
         </div>
 
         <div class="feature privacy grid-1 last">
           <h3>Realtime search engine</h3>
-          <p>Find channels about cooking or posts about siamese cats. Fast. Public content on buddycloud is quickly indexed and searchable and accessible via a standardised API and firehose feed.</p>
+          <p>Find channels or specific posts. Fast. Public content on buddycloud is quickly indexed and searchable and accessible via a standardised API and firehose feed. <a href="https://buddycloud.org/wiki/channel_directory_project">Learn more</a></p>
         </div>
 
         <div class="feature sharing grid-1">
           <h3>Social discovery engine</h3>
           <p>
-           The buddycloud friend finder helps your users find their friends on other social networks. The FF uses hashes of identifiers: for example Twitter or Facebook account IDs. This extends the usefulness to existing circles of friends.</p>
+           The buddycloud contact matcher helps your users find their friends on other social networks. The contact matcher uses hashes of user-identifiers: for example Twitter or Facebook account IDs. This extends buddycloud's usefulness to existing circles of friends. <a href="https://buddycloud.org/wiki/contact_matching">Learn More</a></p>
         </div>
 
         <div class="feature mobile grid-1 last">
           <h3>Push notification engine</h3>
-          <p>The buddycloud <i>pusher</i> sends mobile push notifications via iOS or Android and can also trigger emails when things happen inside buddycloud. For example, a follow request could trigger an email and alert on your phone. The alerts that get sent are completely customisable by users. The pusher also integrates with the existing buddycloud APIs.</p>
+          <p>The buddycloud <i>pusher</i> sends mobile push notifications via iOS or Android and can also trigger emails when things happen inside buddycloud. For example, a follow request could trigger an email and alert on your phone. The alerts that get sent are completely customisable by users. The pusher also integrates with the existing buddycloud APIs. <a href="https://buddycloud.org/wiki/email_and_push">Learn More</a></p>
         </div>
       </div>
     </div>
