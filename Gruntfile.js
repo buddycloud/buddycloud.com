@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'scripts.min.js': ['js/vendor/prettify.js', 'js/vendor/jquery.waypoints.js', 'js/scripts.js']
+          'scripts.min.js': ['js/vendor/prettify.js', 'js/vendor/jquery.waypoints.js', 'js/vendor/retina.js', 'js/scripts.js']
         }
       }
     }
