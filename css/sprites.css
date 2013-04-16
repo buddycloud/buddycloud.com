@@ -7,7 +7,7 @@
 .partners-bmw {
     width: 100px;
     height: 100px;
-    background-position: -3px -3px;
+    background-position: -5px -5px;
 }
 
 .partners-brightroll {
@@ -16,38 +16,38 @@
     background-position: -109px -3px;
 }
 
+.partners-fanout {
+    width: 199px;
+    height: 50px;
+    background-position: -115px -56px;
+}
+
 .partners-gi {
     width: 108px;
     height: 100px;
-    background-position: -109px -50px;
+    background-position: -5px -116px;
 }
 
 .partners-hillert {
     width: 100px;
     height: 100px;
-    background-position: -3px -156px;
+    background-position: -123px -116px;
 }
 
 .partners-surevine {
     width: 286px;
     height: 40px;
-    background-position: -285px -3px;
+    background-position: -5px -226px;
 }
 
 .partners-webfwd {
     width: 206px;
     height: 75px;
-    background-position: -285px -49px;
+    background-position: -324px -5px;
 }
 
 .partners-wikimedia {
     width: 100px;
     height: 100px;
-    background-position: -223px -130px;
-}
-
-.partners-fanout {
-    width: 199px;
-    height: 50px;
-    background-position: -223px -130px;
+    background-position: -324px -90px;
 }
