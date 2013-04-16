@@ -466,15 +466,6 @@ pre.prettyprint {
   box-sizing: border-box;
 }
 
-.prettyprint-wrapper {
-  overflow: auto;
-  height: 200px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
-}
   @media only screen and (max-width: 960px) {
     .grid-2 .grid-1,
     .grid-3 .grid-1 {
