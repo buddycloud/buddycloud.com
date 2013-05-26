@@ -6,8 +6,8 @@
       "webclient": "https://demo.buddycloud.org"
    },
    {
-      "name": "pouet.im",
-      "domain": "Schnouki's lair",
+      "name": "Schnouki's lair",
+      "domain": "pouet.im",
       "country-code": "FR",
       "webclient": "https://pouet.im/"
    }
