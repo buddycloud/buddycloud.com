@@ -1,0 +1,14 @@
+[
+   {
+      "name": "buddycloud test domain",
+      "domain": "buddycloud.com",
+      "country-code": "UK",
+      "webclient": "https://demo.buddycloud.org"
+   },
+   {
+      "name": "pouet.im",
+      "domain": "Schnouki's lair",
+      "country-code": "FR",
+      "webclient": "https://pouet.im/"
+   }
+]
