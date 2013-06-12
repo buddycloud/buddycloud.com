@@ -1,301 +1,221 @@
-<h1>
-  buddycloud HTTP API
-</h1>
-<p>
-  The HTTP API is implemented by the <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API_server" title="buddycloud HTTP API server" class="mw-redirect">buddycloud HTTP API server</a>.
-</p>
-<p>
-  The buddycloud HTTP API presents a simple way to access buddycloud channels through a REST-like interface. It is thought as an alternative to buddycloud's <a href="https://buddycloud.org/wiki/XMPP_XEP" title="XMPP XEP">XMPP interface</a>.
-</p>
-<h1>
-  General Notes
-</h1>
-<dl>
-  <dt>
-    HTTPS only
-  </dt>
-  <dd>
-    All requests should be sent using HTTPS.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    UTF-8 encoding
-  </dt>
-  <dd>
-    Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the case of JSON set "Content-Type" to "application/json; charset=utf-8")
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Time format
-  </dt>
-  <dd>
-    All dates accepted and sent by the API are in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format (example: "2012-08-21T22:31:20+0000"). In <a href="http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html">strftime</a> format, this equals the following specification: <i>%Y-%m-%dT%H:%M:%SZ</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Tools for experiments
-  </dt>
-  <dd>
-    An online-tool which can be helpful for experiments with the API: <a href="https://apigee.com/console/others">apigee</a>
-  </dd>
-</dl>
-<h1>
-  Finding the API server
-</h1>
-<p>
-  Since each domain runs their own buddycloud API server, you can use DNS to discover the API server for a domain.
-</p>
-<p>
-  A DNS lookup for the <code>_buddycloud-api._tcp.example.com</code> <a href="https://en.wikipedia.org/wiki/SRV_record">SRV record</a> will give you the server.
-</p>
-<ul>
-  <li>
-    <a>dig command</a>
-  </li>
-</ul>
-<pre class="prettyprint">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h2>
+			buddycloud HTTP API
+		</h2>
+		<p>
+			The HTTP API is implemented by the <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API_server" title="buddycloud HTTP API server" class="mw-redirect">buddycloud HTTP API server</a>.
+		</p>
+		<p>
+			The buddycloud HTTP API presents a simple way to access buddycloud channels through a REST-like interface. It is thought as an alternative to buddycloud's <a href="https://buddycloud.org/wiki/XMPP_XEP" title="XMPP XEP">XMPP interface</a>.
+		</p>
+		<h2>
+			General Notes
+		</h2>
+		<dl>
+			<dt>
+				HTTPS only
+			</dt>
+			<dd>
+				All requests should be sent using HTTPS.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				UTF-8 encoding
+			</dt>
+			<dd>
+				Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the case of JSON set "Content-Type" to "application/json; charset=utf-8")
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Time format
+			</dt>
+			<dd>
+				All dates accepted and sent by the API are in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format (example: "2012-08-21T22:31:20+0000"). In <a href="http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html">strftime</a> format, this equals the following specification: <i>%Y-%m-%dT%H:%M:%SZ</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Tools for experiments
+			</dt>
+			<dd>
+				An online-tool which can be helpful for experiments with the API: <a href="https://apigee.com/console/others">apigee</a>
+			</dd>
+		</dl>
+		<h2>
+			API Discovery
+		</h2>
+		<p>
+			Since each domain runs their own buddycloud API server, mobile clients use <a href="https://en.wikipedia.org/wiki/DNS-SD#DNS-SD">DNS-SD</a> to discover the API server for their domain.
+		</p>
+		<p>
+			A DNS lookup for the <code>TXT</code> record of <code>_buddycloud-api._tcp.example.com</code> and will return the following data:
+		</p>
+		<dl>
+			<dt>
+				API discovery results
+			</dt>
+			<dd>
+				<strong>protocol</strong> version
+			</dd>
+			<dd>
+				<strong>hostname</strong> to connect to
+			</dd>
+			<dd>
+				<strong>protocol</strong> to use
+			</dd>
+			<dd>
+				<strong>port</strong> number
+			</dd>
+		</dl>
+		<ul>
+			<li>Example
+				<pre class="prettyprint">
 <code class="language-bash">
-$ dig srv _buddycloud-api._tcp.example.com
-…
+dig TXT _buddycloud-api._tcp.buddycloud.org
+
 ;; ANSWER SECTION:
-_buddycloud-api._tcp.example.com. 300   IN      SRV     0 0 443 api-server.example.com.
+_buddycloud-api._tcp.buddycloud.org. 600 IN TXT "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"</code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			Authentication
+		</h2>
+		<p>
+			For requests that require authentication, use the <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic</a> method. The username should be a qualified username, like <i>user@example.com</i>. Note that only users belonging to the API server's "home" domain are accepted. (You cannot authenticate as <i>somebody@domain1.com</i> at the API server of <i>domain2.net</i>.)
+		</p>
+		<h2>
+			Content Format
+		</h2>
+		<p>
+			Content is returned in <a href="http://www.json.org/">JSON</a> format. Media is returned with the appropriate mime-tyoe.
+		</p>
+		<h2>
+			retrieving posts
+		</h2>
+		<dl>
+			<dt>
+				endpoint
+			</dt>
+			<dd>
+				/:channel/content/:node
+			</dd>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Receives or posts to a channel node, which represents a stream of channel content. Every channel has at least a <b>posts</b> node, which holds all posts published in the channel. Other types of channel nodes such as <i>geoloc</i> (location information) and <i>status</i> will be added in the future.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				Atom <i>(application/atom+xml)</i>
+			</dd>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves a channel node's content as Atom feed.
+			</dd>
+			<dd>
+				<b>POST</b> - Adds an Atom entry to the node. The created item's URL is returned in the response's <i>Location</i> header.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<b>max</b> <i>(optional)</i> - The maximum number of returned entries. Only allowed for GET.
+			</dd>
+			<dd>
+				<b>after</b> <i>(optional)</i> - Return only entries older than the entry with the specified ID. Only allowed for GET.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> if GET succeeds.
+			</dd>
+			<dd>
+				<b>201 Created</b> if POST succeeds.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> if an invalid Atom entry is posted.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> if the user is not permitted to view or post to the channel node (e.g. if the channel is private).
+			</dd>
+			<dd>
+				<b>404 Not Found</b> if the specified channel or node does not exist.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Post Threading
+			</dt>
+			<dd>
+				For items representing comments, the corresponding Atom entries include a <code>replyTo</code> (JSON) or <code>&lt;in-reply-to/&gt;</code> (XML) element as specified in the <a href="http://www.ietf.org/rfc/rfc4685.txt">Atom Threading Extensions</a>
+			</dd>
+		</dl>
+		<ul>
+			<li>JSON uses replyTo. For example:
+				<pre class="prettyprint">
+<code class="language-js">
+{ "author" : "alice@example.com",
+  "content" : "Ok",
+  "id" : "17163726-ea90-453e-ad25-455336a83fd4",
+  "published" : "2012-11-02T03:41:55.484Z",
+  "replyTo" : "9b7724d0-7ef5-4331-8974-81754abb7ba0",
+  "updated" : "2012-11-02T03:41:55.484Z" 
+}
 </code>
 </pre>
-<p>
-  This tells a client that any API calls for example.com should be made against api-server.example.com on port 443
-</p>
-<ul>
-  <li>
-    <a>Python</a>
-  </li>
-</ul>
-<pre class="prettyprint">
-<code class="language-bash">
-  import dns.resolver
-import logging
-from optparse import OptionParser
-import requests
- 
-parser = OptionParser()
-parser.add_option("-d", "--domain", dest="domain",
-          help="insert domain to check here", metavar="example.com")
-parser.add_option("-v", "--verbose", dest="verbose",
-          action="store_true", default=False,
-          help="show logging messages", metavar="example.com")
- 
-(options, args) = parser.parse_args()
- 
-if options.verbose:
-  logging.basicConfig(level=logging.INFO)
- 
-try:
-  answers = dns.resolver.query("_xmpp-server._tcp." + options.domain, "srv")
-  addresses = {}
-  intmax = 0
-  for answer in answers:
-    intmax += answer.priority
-    addresses[intmax] = (answer.target.to_text()[:-1],
-      answer.port)
-except:
-  print "Fail: Check your DNS"
- 
-logging.info(" XMPP-Server: " + addresses[5][0] + ":" + str(addresses[5][1]))
- 
-print "Success"
-</code>
-</pre>
-
-<h1>
-  Authenticating
-</h1>
-<p>
-  For requests that require authentication, use the <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic</a> method. The username should be a qualified username, like <i>user@example.com</i>. Note that only users belonging to the API server's "home" domain are accepted. (You cannot authenticate as <i>somebody@domain1.com</i> at the API server of <i>domain2.net</i>.)
-</p><!--content Types-->
-<h1>
-  Content Types
-</h1>
-<p>
-  A buddycloud channel is essentially a collection of publish subscribe nodes. Each post is a complete Atom formatted entry.
-</p>
-<p>
-  A <a href="http://www.json.org/">JSON</a>-based format is also available that includes the most important information present in the Atom feeds. To retrieve - pass the following request headers:
-</p>
-<pre class="prettyprint">
-<code class="language-bash">
-Accept: application/json
-Content-Type: application/json
-
-</code>
-</pre>
-<p>
-  The JSON format represents each channel node item as an object with the following string attributes:
-</p>
-<dl>
-  <dt>
-    id
-  </dt>
-  <dd>
-    The item's ID.
-  </dd>
-  <dt>
-    author
-  </dt>
-  <dd>
-    The user ID of the item's author.
-  </dd>
-  <dt>
-    updated
-  </dt>
-  <dd>
-    The date/time the entry was posted or last edited, in <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a>.
-  </dd>
-  <dt>
-    content
-  </dt>
-  <dd>
-    The entry's text content.
-  </dd>
-  <dt>
-    replyTo
-  </dt>
-  <dd>
-    The ID of the entry that this entry replies to. Only defined for comments.
-  </dd>
-</dl>
-<p>
-  A JSON channel node feed is simply an array of such item objects.
-</p><!--api endpoints-->
-<h1>
-  API Endpoints
-</h1>
-<h2>
-  /:channel/content/:node
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Receives or posts to a channel node, which represents a stream of channel content. Every channel has at least a <b>posts</b> node, which holds all posts published in the channel. Other types of channel nodes such as <i>geoloc</i> (location information) and <i>status</i> will be added in the future.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    Atom <i>(application/atom+xml)</i>
-  </dd>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves a channel node's content as Atom feed.
-  </dd>
-  <dd>
-    <b>POST</b> - Adds an Atom entry to the node. The created item's URL is returned in the response's <i>Location</i> header.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    <b>max</b> <i>(optional)</i> - The maximum number of returned entries. Only allowed for GET.
-  </dd>
-  <dd>
-    <b>after</b> <i>(optional)</i> - Return only entries older than the entry with the specified ID. Only allowed for GET.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> if GET succeeds.
-  </dd>
-  <dd>
-    <b>201 Created</b> if POST succeeds.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> if an invalid Atom entry is posted.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is required, but not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> if the user is not permitted to view or post to the channel node (e.g. if the channel is private).
-  </dd>
-  <dd>
-    <b>404 Not Found</b> if the specified channel or node does not exist.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Post Threading
-  </dt>
-  <dd>
-    For items representing comments, the corresponding Atom entries include a <code>replyTo</code> (JSON) or <code>&lt;in-reply-to/&gt;</code> (XML) element as specified in the <a href="http://www.ietf.org/rfc/rfc4685.txt">Atom Threading Extensions</a>
-  </dd>
-</dl>
-<ul>
-  <li>
-    JSON
-    <pre class="prettyprint">
-<code class="language-bash">
-uses replyTo. For example:
-
-      { "author" : "alice@example.com",
-        "content" : "Ok",
-        "id" : "17163726-ea90-453e-ad25-455336a83fd4",
-        "published" : "2012-11-02T03:41:55.484Z",
-        "replyTo" : "9b7724d0-7ef5-4331-8974-81754abb7ba0",
-        "updated" : "2012-11-02T03:41:55.484Z"
-      }
-</code></pre>
-  </li>
-<li>XML
-<pre class="prettyprint">
-<code class="language-bash">
-<entry xmlns="http://www.w3.org/2005/Atom">
-  …
-  <!-- This entry is a comment on the post with ID "original-post" -->
-  <in-reply-to xmlns="http://purl.org/syndication/thread/1.0" ref="original-post"/>
-</entry>
-</code></pre>
-</li>
-</ul>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    When posting an item, the item's ID and author don't need to be specified as they are filled in by the channel server.
-  </dd>
-  <dd>
-    (Observation on 2012-12-09: When only the item's content is specified, then published and updated are set to null. That is not necessarily how it should be. In such a case the server could set published to the current date and time.)
-  </dd>
-  <dd>
-    To make the item a comment, use the <code>replyTo</code> attribute for JSON or the <code>&lt;in-reply-to/&gt;</code> element (for Atom).
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-<li>GET
-  <pre class="prettyprint">
-    <code class="language-bash">
+			</li>
+		</ul>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				When posting an item, the item's ID and author don't need to be specified as they are filled in by the channel server.
+			</dd>
+			<dd>
+				(Observation on 2012-12-09: When only the item's content is specified, then published and updated are set to null. That is not necessarily how it should be. In such a case the server could set published to the current date and time.)
+			</dd>
+			<dd>
+				To make the item a comment, use the <code>replyTo</code> attribute for JSON or the <code>&lt;in-reply-to/&gt;</code> element (for Atom).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<pre class="prettyprint">
+	<code class="language-js">
 GET /alice@examle.com/content/posts
 Accept: application/json
 
@@ -304,30 +224,29 @@ Content-Type: application/json
 …
 [
   {
-    "id": "foo",
-    "author": "alice@example.com",
-    "updated": "2012-06-01T12:00:00Z",
-    "content": "This is my newest post!",
+	"id": "foo",
+	"author": "alice@example.com",
+	"updated": "2012-06-01T12:00:00Z",
+	"content": "This is my newest post!",
   },
   {
-    "id": "bar",
-    "author": "alice@example.com",
-    "updated": "2012-05-31T12:00:00Z",
-    "content": "June starts tomorrow.",
+	"id": "bar",
+	"author": "alice@example.com",
+	"updated": "2012-05-31T12:00:00Z",
+	"content": "June starts tomorrow.",
   },
   {
-    "id": "baz",
-    "author": "alice@example.com",
-    "updated": "2012-05-30T12:00:00Z",
-    "content": "Feeling good today!",
+	"id": "baz",
+	"author": "alice@example.com",
+	"updated": "2012-05-30T12:00:00Z",
+	"content": "Feeling good today!",
   }
-]
-</code></pre>
-</li>
-<li>POST
-
-<pre class="prettyprint">
-<code class="language-bash">
+]</code>
+</pre>
+			</li>
+			<li>POST
+				<pre class="prettyprint">
+<code class="language-js">
 POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
@@ -339,198 +258,89 @@ Content-Type: application/json
 201 Created
 Location: http://api.example.com/bob@example.com/content/posts/bipp
 …
-</code></pre>
-</li>
-<li>XML
- Retrieve all posts from "alice@example.com":
-
-GET /alice@example.com/content/posts
-<pre class="prettyprint">
-<code class="language-bash">
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>foo</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-06-01T12:00:00Z</published>
-    <content>This is my newest post!</content>
-  </entry>
-  <entry>
-    <id>bar</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-31T12:00:00Z</published>
-    <content>June starts tomorrow.</content>
-  </entry>
-  <entry>
-    <id>baz</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-30T12:00:00Z</published>
-    <content>Feeling good today!</content>
-  </entry>
-</feed>
-
-Retrieve the newest post from "alice@example.com":
-
-GET /alice@example.com/content/posts?max=1
-
-200 OK
-Content-Type: application/atom+xml
-…
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>foo</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-06-01T12:00:00Z</published>
-    <content>This is my newest post!</content>
-  </entry>
-</feed>
-
-Get the two newest posts that are older than the one retrieved above:
-
-GET /alice@example.com/content/posts?max=2&after=foo
-
-200 OK
-Content-Type: application/atom+xml
-…
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>bar</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-31T12:00:00Z</published>
-    <content>June starts tomorrow.</content>
-  </entry>
-  <entry>
-    <id>baz</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-30T12:00:00Z</published>
-    <content>Feeling good today!</content>
-  </entry>
-</feed>
-
-Add a post to "bob@example.com":
-
-POST /bob@example.com/content/posts
-Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/atom+xml
-…
-<entry xmlns="http://www.w3.org/2005/Atom">
-  <content>Hello World!</content>
-</entry>
-
-201 Created
-Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
-…
-
-Comment on the newest post of "alice@example.com":
-
-POST /alice@example.com/content/posts
-Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/atom+xml
-…
-<entry xmlns="http://www.w3.org/2005/Atom">
-  <in-reply-to ref="foo" xmlns="http://purl.org/syndication/thread/1.0"/>
-  <content>And this is my newest comment ;)</content>
-</entry>
-
-201 Created
-Location: http://api.example.com/alice@example.com/content/posts/fooboo
-…
-</code></pre>
-</li>
-</ul>
-<h2>
-  /:channel/content/:item/
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Allows access to single items (e.g., posts) of a channel node. Both Atom and JSON representations are available (see <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API#Channel_Content_Formats">#Channel Content Formats</a>).
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    Atom <i>(application/atom+xml)</i>
-  </dd>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves an item of a channel node.
-  </dd>
-  <dd>
-    <b>PUT</b> <i>(not implemented)</i> - Replaces an item with the Atom entry specified in the request body.
-  </dd>
-  <dd>
-    <b>DELETE</b> - Deletes an item.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> if a PUT request contains an invalid Atom entry.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is required, but not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> if the user is not permitted to view or edit the item.
-  </dd>
-  <dd>
-    <b>404 Not Found</b> if the specified channel, node or item does not exist.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    A channel node item may only be modified by the user who published it, and removed only by its publisher or the channel's owner.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-<li>JSON GET
-<pre class="prettyprint">
-<code class="language-bash">
+</code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			retrieving specific items
+		</h2>
+		<dl>
+			<dt>
+				endpoint
+			</dt>
+			<dd>
+				/:channel/content/:item/
+			</dd>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Allows access to single items (e.g., posts) of a channel node. Both Atom and JSON representations are available (see <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API#Channel_Content_Formats">#Channel Content Formats</a>).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				Atom <i>(application/atom+xml)</i>
+			</dd>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves an item of a channel node.
+			</dd>
+			<dd>
+				<b>PUT</b> <i>(not implemented)</i> - Replaces an item with the Atom entry specified in the request body.
+			</dd>
+			<dd>
+				<b>DELETE</b> - Deletes an item.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> if a PUT request contains an invalid Atom entry.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> if the user is not permitted to view or edit the item.
+			</dd>
+			<dd>
+				<b>404 Not Found</b> if the specified channel, node or item does not exist.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				A channel node item may only be modified by the user who published it, and removed only by its publisher or the channel's owner.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<pre class="prettyprint">
+<code class="language-js">
 Retrieve a post
 
 GET /alice@example.com/content/posts/baz
@@ -544,143 +354,114 @@ Content-Type: application/json
   "author": "alice@example.com",
   "updated": "2012-05-30T12:00:00Z",
   "content": "Feeling good today!"
-}
-</code></pre>
-</li>
-<li>XML GET
-
-<pre class="prettyprint">
-<code class="language-bash">
-Retrieve the post with ID "baz" of "alice@example.com":
-
-GET /alice@example.com/content/posts/baz
-
-200 OK
-Content-Type: application/atom+xml
-…
-<entry xmlns="http://www.w3.org/2005/Atom">
-  <id>baz</id>
-  <author>
-    <name>alice@example.com</name> 
-    <id>acct:alice@example.com</id>
-  </author>
-  <published>2012-05-30T12:00:00Z</published>
-  <content>Feeling good today!</content>
-</entry>
-</code></pre>
-<li>DELETE
-  <pre class="prettyprint">
-<code class="language-bash">
-Deletes the post with ID "baz" of "alice@example.com":
-
-DELETE /alice@example.com/content/posts/baz
-
-204 OK
-No Content
-</code></pre></li>
-</ul>
-<h2>
-  /:channel/metadata/:node
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Gets or sets metadata about a channel node.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Attributes
-  </dt>
-  <dd>
-    <i>title</i> - The channel node's title.
-  </dd>
-  <dd>
-    <i>description</i> - A short string describing the node.
-  </dd>
-  <dd>
-    <i>creation_date</i> - The date the node was created in <a href="http://www.ietf.org/rfc/rfc3339.txt">RFC339</a> format.
-  </dd>
-  <dd>
-    <i>access_model</i> - Whether the node is public ("open") or private ("authorize").
-  </dd>
-  <dd>
-    <i>channel_type</i> - The type of the containing channel ("personal" or "topic").
-  </dd>
-  <dd>
-    <i>default_affiliation</i> - New users default affiliation ("publisher" or "follower").
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Type
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves values in the channel node's metadata.
-  </dd>
-  <dd>
-    <b>POST</b> - Updates values in the channel node's metadata.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    (none)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is required, but not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> if the user is not permitted to access the channel node.
-  </dd>
-  <dd>
-    <b>404 Not Found</b> if the specified channel or node does not exist.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    The title and description of the channel's <i>posts</i> node define the respective attributes of the channel itself.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Example
-  </dt>
-</dl>
-<ul>
-<li>JSON
-  <p>Retrieve the metadata of the "posts" node of "alice@example.com":
-
-GET /alice@example.com/metadata/posts
-
-200 OK
-Content-Type: application/json
-…<p>
-  <pre class="prettyprint">
-    <code class="language-bash">
+}</code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			channel metadata
+		</h2>
+		<dl>
+			<dt>
+				Endpoint
+			</dt>
+			<dd>
+				/:channel/metadata/:node
+			</dd>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Gets or sets metadata about a channel node.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Attributes
+			</dt>
+			<dd>
+				<i>title</i> - The channel node's title.
+			</dd>
+			<dd>
+				<i>description</i> - A short string describing the node.
+			</dd>
+			<dd>
+				<i>creation_date</i> - The date the node was created in <a href="http://www.ietf.org/rfc/rfc3339.txt">RFC339</a> format.
+			</dd>
+			<dd>
+				<i>access_model</i> - Whether the node is public ("open") or private ("authorize").
+			</dd>
+			<dd>
+				<i>channel_type</i> - The type of the containing channel ("personal" or "topic").
+			</dd>
+			<dd>
+				<i>default_affiliation</i> - New users default affiliation ("publisher" or "follower").
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Type
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves values in the channel node's metadata.
+			</dd>
+			<dd>
+				<b>POST</b> - Updates values in the channel node's metadata.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				(none)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> if the user is not permitted to access the channel node.
+			</dd>
+			<dd>
+				<b>404 Not Found</b> if the specified channel or node does not exist.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				The title and description of the channel's <i>posts</i> node define the respective attributes of the channel itself.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Example
+			</dt>
+		</dl>
+		<ul>
+			<li>JSON
+				<p>
+					Retrieve the metadata of the "posts" node of "alice@example.com": GET /alice@example.com/metadata/posts 200 OK Content-Type: application/json
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 {
   "title": "Alice's Posts",
   "description": "Everything about Alice",
@@ -688,223 +469,230 @@ Content-Type: application/json
   "access_model": "whitelist",
   "channel_type": "personal",
   "default_affiliation": "publisher" 
-}
-</code></pre>
-</li>
-</ul>
-<h2>
-  <span>/:channel/subscribers/:node</span>
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Can be used to get a channel node's subscribers.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Type
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the list of subscribers as JSON object. The object's keys are the subscriber's usernames, the values are their member types ("owner", "publisher" or "member").
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    (none)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> if the user is not permitted to access the channel node.
-  </dd>
-  <dd>
-    <b>404 Not Found</b> if the specified channel or node does not exist.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON Retrieve the subscribers of the "posts" node of "alice@example.com": GET /alice@example.com/subscribers/posts 200 OK Content-Type: application/json …
-    <pre class="prettyprint">
-<code class="language-bash">
+}</code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			channel subscribers
+		</h2>
+		<dl>
+			<dt>
+				Endpoint
+			</dt>
+			<dd>
+				/:channel/subscribers/:node
+			</dd>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Can be used to get a channel node's subscribers.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Type
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the list of subscribers as JSON object. The object's keys are the subscriber's usernames, the values are their member types ("owner", "publisher" or "member").
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				(none)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> if the user is not permitted to access the channel node.
+			</dd>
+			<dd>
+				<b>404 Not Found</b> if the specified channel or node does not exist.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>JSON Retrieve the subscribers of the "posts" node of "alice@example.com": GET /alice@example.com/subscribers/posts 200 OK Content-Type: application/json …
+				<pre class="prettyprint">
+<code class="language-js">
 
 {
   "alice@example.com": "owner",
   "bob@example.com": "publisher"
-}
-</code>
+}</code>
 </pre>
-  </li>
-</ul>
-  <h2>
-      /:channel/media
-    </h2>
-    <dl>
-      <dt>
-        Description
-      </dt>
-      <dd>
-        Uploads media to a channel or lists the media in a channel
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Methods
-      </dt>
-      <dd>
-        <b>GET</b> - Gets all media metadata information from the specified channel.
-      </dd>
-      <dd>
-        <b>POST</b> - Uploads a media file to the specified channel.
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Content-Type (POST)
-      </dt>
-      <dd>
-        <i>application/x-www-form-urlencoded</i>
-      </dd>
-      <dd>
-        <i>multipart/form-data</i>
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Arguments (POST)
-      </dt>
-      <dd>
-        <i><b>data</b></i> - the media to upload
-      </dd>
-      <dd>
-        <i><b>content-type</b></i> - the media content-type
-      </dd>
-      <dd>
-        <i><b>filename</b> (optional)</i> - the media original filename
-      </dd>
-      <dd>
-        <i><b>title</b> (optional)</i> - the title of the media
-      </dd>
-      <dd>
-        <i><b>description</b> (optional)</i> - a description of the media
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Parameters
-      </dt>
-      <dd>
-        <i><b>max</b> (optional)</i> - maximum number of returned metadata. Only allowed for GET.
-      </dd>
-      <dd>
-        <i><b>after</b> (optional)</i> - only metadata older than the entry with the specified ID. Only allowed for GET.
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Responses
-      </dt>
-      <dd>
-        <b>200 OK</b> - if get succeeds, including the media metadata.
-      </dd>
-      <dd>
-        <b>201 Created</b> - if post succeeds, including the successfully uploaded media metadata.
-      </dd>
-      <dd>
-        <b>400 Bad Request</b> - if the client not provide proper authentication fields.
-      </dd>
-      <dd>
-        <b>401 Unauthorized</b> - if authentication is required, but not provided.
-      </dd>
-      <dd>
-        <b>403 Forbidden</b> - if the user is not permitted to get or post to the channel (e.g. if the channel is private).
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Media Metadata
-      </dt>
-      <dd>
-        <b>height</b> <i>server-set</i> height of the uploaded image or video. This is calculated by the server and not editable.
-      </dd>
-      <dd>
-        <b>width</b> <i>server-set</i> width of the uploaded image or video. This is calculated by the server and not editable.
-      </dd>
-      <dd>
-        <b>author</b> <i>required</i> the buddycloudID of the author
-      </dd>
-      <dd>
-        <b>entityId</b> <i>required</i> the buddycloudID of the channel or user that owns the media
-      </dd>
-      <dd>
-        <b>shaChecksum</b> <i>required</i> SHA1 file checksum
-      </dd>
-      <dd>
-        <b>mimeType</b> <i>required</i> mimetype
-      </dd>
-      <dd>
-        <b>fileName</b> <i>required</i> the uploaded filename (including extension)
-      </dd>
-      <dd>
-        <b>uploadedDate</b> <i>required</i> when the media was uploaded
-      </dd>
-      <dd>
-        <b>lastUpdatedDate</b> <i>required</i> last time this media was updated
-      </dd>
-      <dd>
-        <b>title</b> <i>optional</i> media title
-      </dd>
-      <dd>
-        <b>description</b> <i>optional</i> media description
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Notes
-      </dt>
-      <dd>
-        GET operations for public channels don't need authentication.
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        Examples
-      </dt>
-    </dl>
-<ul>
-  <li>JSON GET
-    <pre class="prettyprint">
-<code class="language-bash">
-  retrieve a list of all media in a channel together with metadata 
-
-GET https://api.example.com/channel@topics.domain.com/media
-
-  response, if everything went ok 
-
-// 200 response
+			</li>
+		</ul>
+		<h2>
+			Media
+		</h2>
+		<dl>
+			<dt>
+				Endpoint
+			</dt>
+			<dd>
+				/:channel/media
+			</dd>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Uploads media to a channel or lists the media in a channel
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Gets all media metadata information from the specified channel.
+			</dd>
+			<dd>
+				<b>POST</b> - Uploads a media file to the specified channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content-Type (POST)
+			</dt>
+			<dd>
+				<i>application/x-www-form-urlencoded</i>
+			</dd>
+			<dd>
+				<i>multipart/form-data</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (POST)
+			</dt>
+			<dd>
+				<i><b>data</b></i> - the media to upload
+			</dd>
+			<dd>
+				<i><b>content-type</b></i> - the media content-type
+			</dd>
+			<dd>
+				<i><b>filename</b> (optional)</i> - the media original filename
+			</dd>
+			<dd>
+				<i><b>title</b> (optional)</i> - the title of the media
+			</dd>
+			<dd>
+				<i><b>description</b> (optional)</i> - a description of the media
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<i><b>max</b> (optional)</i> - maximum number of returned metadata. Only allowed for GET.
+			</dd>
+			<dd>
+				<i><b>after</b> (optional)</i> - only metadata older than the entry with the specified ID. Only allowed for GET.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> - if get succeeds, including the media metadata.
+			</dd>
+			<dd>
+				<b>201 Created</b> - if post succeeds, including the successfully uploaded media metadata.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> - if the client not provide proper authentication fields.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> - if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> - if the user is not permitted to get or post to the channel (e.g. if the channel is private).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Media Metadata
+			</dt>
+			<dd>
+				<b>height</b> <i>server-set</i> height of the uploaded image or video. This is calculated by the server and not editable.
+			</dd>
+			<dd>
+				<b>width</b> <i>server-set</i> width of the uploaded image or video. This is calculated by the server and not editable.
+			</dd>
+			<dd>
+				<b>author</b> <i>required</i> the buddycloudID of the author
+			</dd>
+			<dd>
+				<b>entityId</b> <i>required</i> the buddycloudID of the channel or user that owns the media
+			</dd>
+			<dd>
+				<b>shaChecksum</b> <i>required</i> SHA1 file checksum
+			</dd>
+			<dd>
+				<b>mimeType</b> <i>required</i> mimetype
+			</dd>
+			<dd>
+				<b>fileName</b> <i>required</i> the uploaded filename (including extension)
+			</dd>
+			<dd>
+				<b>uploadedDate</b> <i>required</i> when the media was uploaded
+			</dd>
+			<dd>
+				<b>lastUpdatedDate</b> <i>required</i> last time this media was updated
+			</dd>
+			<dd>
+				<b>title</b> <i>optional</i> media title
+			</dd>
+			<dd>
+				<b>description</b> <i>optional</i> media description
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				GET operations for public channels don't need authentication.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					retrieve a list of all media in a channel together with metadata GET https://api.example.com/channel@topics.domain.com/media response, if everything went ok // 200 response
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 {{
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
   "fileName":"testimage.jpg",
@@ -933,25 +721,22 @@ GET https://api.example.com/channel@topics.domain.com/media
   "height":640,
   "width":480,
   "entityId":"channel@topics.domain.com"
- }}
-</code>
+ }}</code>
 </pre>
-  </li>
-  <li>JSON POST
-    <pre class="prettyprint">
-<code class="language-bash">
- upload a new item to channel@topics.domain.com
-
-POST {"filename": "testimage.jpg", 
-    "title": "Test Image", 
-    "description": "My test image", 
-    "content-type": "image/jpeg", 
-    "data": image} 
-    https://api.example.com/channel@topics.domain.com/media
-
-  response 
-
-// 201 response
+			</li>
+			<li>POST upload a new item to channel@topics.domain.com
+				<pre class="prettyprint">
+<code class="language-js">
+{"filename": "testimage.jpg", 
+	"title": "Test Image", 
+	"description": "My test image", 
+	"content-type": "image/jpeg", 
+	"data": image} 
+	https://api.example.com/channel@topics.domain.com/media
+</code>
+</pre>response
+				<pre class="prettyprint">
+<code class="language-js">
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
   "fileName":"testimage.jpg",
@@ -968,132 +753,132 @@ POST {"filename": "testimage.jpg",
 }
 </code>
 </pre>
-  </li>
-</ul>
-<h2>
-  <span>/:channel/media/:media</span>
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Updates metadata, deletes or gets a channel media.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>POST</b> - Updates the metadata of the specified media.
-  </dd>
-  <dd>
-    <b>GET</b> - Gets the specified media file.
-  </dd>
-  <dd>
-    <b>DELETE</b> - Deletes the specified media.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content-Type (POST)
-  </dt>
-  <dd>
-    <i>application/x-www-form-urlencoded</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (POST)
-  </dt>
-  <dd>
-    <i><b>filename</b> (optional)</i> - the new media filename
-  </dd>
-  <dd>
-    <i><b>title</b> (optional)</i> - the new title of the media
-  </dd>
-  <dd>
-    <i><b>description</b> (optional)</i> - a new description for the media
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    <b>maxheight</b> (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by the specified height. (GET only)
-  </dd>
-  <dd>
-    <b>maxwidth</b> (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by specified width. (GET only)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> - if get or post succeeds, including the media file or the media metadata.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> - if the client not provide proper authentication fields.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> - if authentication is required, but not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> - if the user is not permitted to update, get or delete the media (e.g. if the user is not a private channel's owner or moderator).
-  </dd>
-  <dd>
-    <b>404 Not Found</b> - there is no media with such id.
-  </dd>
-  <dd>
-    <b>412 Precondition Failed</b> - if the client requests a thumbnail of a media with a not valid format (different from image or video).
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    GET operations for public channels don't need authentication.
-  </dd>
-  <dd>
-    DELETE removes all media's information, including thumbnails and metadata.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-
-
-<li>JSON GET</li>
-
-<pre class="prettyprint">
-<code class="language-bash">
-    Get media 
-
+			</li>
+		</ul>
+		<h2>
+			/:channel/media/:media
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Updates media metadata, retrieves or deletes a channel's media.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>POST</b> - Updates the metadata of the specified media.
+			</dd>
+			<dd>
+				<b>GET</b> - Gets the specified media file.
+			</dd>
+			<dd>
+				<b>DELETE</b> - Deletes the specified media.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content-Type (POST)
+			</dt>
+			<dd>
+				<i>application/x-www-form-urlencoded</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (POST)
+			</dt>
+			<dd>
+				<i><b>filename</b> (optional)</i> - the new media filename
+			</dd>
+			<dd>
+				<i><b>title</b> (optional)</i> - the new title of the media
+			</dd>
+			<dd>
+				<i><b>description</b> (optional)</i> - a new description for the media
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<b>maxheight</b> (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by the specified height. (GET only)
+			</dd>
+			<dd>
+				<b>maxwidth</b> (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by specified width. (GET only)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> - if get or post succeeds, including the media file or the media metadata.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> - if the client not provide proper authentication fields.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> - if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> - if the user is not permitted to update, get or delete the media (e.g. if the user is not a private channel's owner or moderator).
+			</dd>
+			<dd>
+				<b>404 Not Found</b> - there is no media with such id.
+			</dd>
+			<dd>
+				<b>412 Precondition Failed</b> - if the client requests a thumbnail of a media with a not valid format (different from image or video).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				GET operations for public channels don't need authentication.
+			</dd>
+			<dd>
+				DELETE removes all media's information, including thumbnails and metadata.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					Get media
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3?maxwidth=640
 
-// 200 response with the media content
-
-
-</code></pre>
-<ul>
-<li>JSON POST
-<pre class="prettyprint">
-<code class="language-bash">
-    update the media information 
-
-POST {"filename": "newname.jpg", 
-      "title": "New Title", 
-      "description": "New description", 
-      https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
-
-    response, if everything went ok 
-
+// 200 response with the media content</code>
+</pre>
+			</li>
+			<li>POST update the media metadata
+				<pre class="prettyprint">
+<code class="language-js">
+{"filename": "newname.jpg", 
+	  "title": "New Title", 
+	  "description": "New description", 
+	  https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3}
+  </code>
+  
+</pre>
+				<p>
+					response, if everything went ok
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 // 200 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -1109,153 +894,149 @@ POST {"filename": "newname.jpg",
   "width":312,
   "entityId":"channel@topics.domain.com"
 }
-</code></pre>
-</li>
-<li>DELETE
-<pre class="prettyprint">
-<code class="language-bash">
-
-    Delete the media 
-
-DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
-
-// 200 response
-
-</code></pre>
-</li>
-</ul>
-<h2>
-  /:channel/media/avatar
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Special endpoint that handles channel's avatars: uploads, updates, deletes or gets a channel avatar.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>PUT</b> - Uploads an image to be the avatar of the specified channel. If there is a previous one, it is replaced.
-  </dd>
-  <dd>
-    <b>POST</b> - Updates the avatar <i>metadata</i>.
-  </dd>
-  <dd>
-    <b>GET</b> - Gets the avatar from the specified channel.
-  </dd>
-  <dd>
-    <b>DELETE</b> - Deletes the avatar from the specified channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content-Type (PUT)
-  </dt>
-  <dd>
-    <i>application/x-www-form-urlencoded</i>
-  </dd>
-  <dd>
-    <i>multipart/form-data</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (PUT)
-  </dt>
-  <dd>
-    <i><b>data</b></i> - the avatar to upload
-  </dd>
-  <dd>
-    <i><b>content-type</b></i> - the avatar content-type
-  </dd>
-  <dd>
-    <i><b>filename</b> (optional)</i> - the avatar original filename
-  </dd>
-  <dd>
-    <i><b>title</b> (optional)</i> - the title of the avatar
-  </dd>
-  <dd>
-    <i><b>description</b> (optional)</i> - a description of the avatar
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (POST)
-  </dt>
-  <dd>
-    <i><b>filename</b> (optional)</i> - the avatar new filename
-  </dd>
-  <dd>
-    <i><b>title</b> (optional)</i> - the new title of the avatar
-  </dd>
-  <dd>
-    <i><b>description</b> (optional)</i> - a new description for the avatar
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    <b>maxheight</b> (optional) - returns an avatar thumbnail that fits the specified height. Only allowed for GET.
-  </dd>
-  <dd>
-    <b>maxwidth</b> (optional) - returns an avatar thumbnail that fits the specified width. Only allowed for GET.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> - if get succeeds, including the avatar file.
-  </dd>
-  <dd>
-    <b>201 Created</b> - if put succeeds, including the successfully uploaded avatar metadata.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> - if the client not provide proper authentication fields.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> - if authentication is required, but not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> - if the user is not permitted to put or delete the channel's avatar (e.g. if the user is not the channel's owner or moderator).
-  </dd>
-  <dd>
-    <b>404 Not Found</b> - there is no avatar set to the specified channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Note
-  </dt>
-  <dd>
-    All avatars are public, that means that the GET operation doesn't need authentication.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON PUT
-    <pre class="prettyprint">
-<code class="language-bash">
+</code>
+</pre>
+			</li>
+			<li>DELETE Delete the media
+				<pre class="prettyprint">
+<code class="language-js">
+	DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
+	// 200 response</code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			/:channel/media/avatar
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Special endpoint that handles channel's avatars: uploads, updates, deletes or gets a channel avatar.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>PUT</b> - Uploads an image to be the avatar of the specified channel. If there is a previous one, it is replaced.
+			</dd>
+			<dd>
+				<b>POST</b> - Updates the avatar <i>metadata</i>.
+			</dd>
+			<dd>
+				<b>GET</b> - Gets the avatar from the specified channel.
+			</dd>
+			<dd>
+				<b>DELETE</b> - Deletes the avatar from the specified channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content-Type (PUT)
+			</dt>
+			<dd>
+				<i>application/x-www-form-urlencoded</i>
+			</dd>
+			<dd>
+				<i>multipart/form-data</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (PUT)
+			</dt>
+			<dd>
+				<i><b>data</b></i> - the avatar to upload
+			</dd>
+			<dd>
+				<i><b>content-type</b></i> - the avatar content-type
+			</dd>
+			<dd>
+				<i><b>filename</b> (optional)</i> - the avatar original filename
+			</dd>
+			<dd>
+				<i><b>title</b> (optional)</i> - the title of the avatar
+			</dd>
+			<dd>
+				<i><b>description</b> (optional)</i> - a description of the avatar
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (POST)
+			</dt>
+			<dd>
+				<i><b>filename</b> (optional)</i> - the avatar new filename
+			</dd>
+			<dd>
+				<i><b>title</b> (optional)</i> - the new title of the avatar
+			</dd>
+			<dd>
+				<i><b>description</b> (optional)</i> - a new description for the avatar
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<b>maxheight</b> (optional) - returns an avatar thumbnail that fits the specified height. Only allowed for GET.
+			</dd>
+			<dd>
+				<b>maxwidth</b> (optional) - returns an avatar thumbnail that fits the specified width. Only allowed for GET.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> - if get succeeds, including the avatar file.
+			</dd>
+			<dd>
+				<b>201 Created</b> - if put succeeds, including the successfully uploaded avatar metadata.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> - if the client not provide proper authentication fields.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> - if authentication is required, but not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> - if the user is not permitted to put or delete the channel's avatar (e.g. if the user is not the channel's owner or moderator).
+			</dd>
+			<dd>
+				<b>404 Not Found</b> - there is no avatar set to the specified channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Note
+			</dt>
+			<dd>
+				All avatars are public, that means that the GET operation doesn't need authentication.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>JSON PUT
+				<pre class="prettyprint">
+<code class="language-js">
  upload a new avatar
 
 PUT {"filename": "avatar.jpg", 
-    "title": "My New Avatar", 
-    "description": "My brand new avatar", 
-    "content-type": "image/jpeg", 
-    "data": image} 
-    https://api.example.com/alice@domain.com/media/avatar
+	"title": "My New Avatar", 
+	"description": "My brand new avatar", 
+	"content-type": "image/jpeg", 
+	"data": image} 
+	https://api.example.com/alice@domain.com/media/avatar
 
   response, if everything went ok 
 
@@ -1273,153 +1054,143 @@ PUT {"filename": "avatar.jpg",
   "height":312,
   "width":312,
   "entityId":"alice@domain.com"
-}
-</code>
+}</code>
 </pre>
-  </li>
-  <li>JSON GET
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+			<li>GET
+				<pre class="prettyprint">
+<code class="language-js">
   Visualize Alice's new avatar 
 
 GET https://api.example.com/alice@domain.com/avatar
 
-// 200 response with the picture content
-
-
-</code>
+// 200 response with the picture content</code>
 </pre>
-  </li>
-  <li>JSON DELETE
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+			<li>JSON DELETE
+				<pre class="prettyprint">
+<code class="language-js">
  Delete the avatar
 
 DELETE https://api.example.com/alice@domain.com/avatar
 
-// 200 response
-
-
-</code>
+// 200 response</code>
 </pre>
-  </li>
-</ul>
-<h2 class="mw-headline" id=".2F:channel">
-  /:channel
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Used to create a topic channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>POST</b> - Creates a topic channel with default configuration.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    (none)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is not provided.
-  </dd>
-  <dd>
-    <b>403 Forbidden</b> if the user is not allowed to create a channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>POST
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+		</ul>
+		<h2>
+			/:channel
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Used to create a topic channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>POST</b> - Creates a topic channel with default configuration.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				(none)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is not provided.
+			</dd>
+			<dd>
+				<b>403 Forbidden</b> if the user is not allowed to create a channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>POST
+				<pre class="prettyprint">
+<code class="language-js">
  Crates the topic channel "talesofalice@topics.example.com":
 
 POST /talesofalice@topics.example.com
 
-200 OK
-
-</code>
+200 OK</code>
 </pre>
-  </li>
-</ul>
-<h2 class="mw-headline" id=".2F:channel.2Fsimilar">
-  /:channel/similar
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Retrieves similar channels to a given channel based on the social graph indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Type
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the list of similar channels of a given channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    <i><b>max</b></i> (optional) - the maximum number of items to be returned.
-  </dd>
-  <dd>
-    <i><b>index</b></i> (optional) - the index for the first item to be returned.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-
-<ul>
-  <li>GET
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+		</ul>
+		<h2>
+			/:channel/similar
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Retrieves similar channels to a given channel based on the social graph indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Type
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the list of similar channels of a given channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<i><b>max</b></i> (optional) - the maximum number of items to be returned.
+			</dd>
+			<dd>
+				<i><b>index</b></i> (optional) - the index for the first item to be returned.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<pre class="prettyprint">
+<code class="language-js">
  Retrieve similar channels to node "alice@example.com":
 
 GET /alice@example.com/similar
@@ -1428,86 +1199,85 @@ GET /alice@example.com/similar
 Content-Type: application/json
 …
 { "items" : [ { "channelType" : "topic",
-    "creationDate" : "2012-04-24T09:13:51+0000",
-    "defaultAffiliation" : "publisher",
-    "description" : "/dev/hack",
-    "jid" : "team@topics.buddycloud.org",
-    "title" : "buddycloud dev team"
-    },
-    { "channelType" : "personal",
-    "creationDate" : "2012-02-05T13:31:12+0000",
-    "defaultAffiliation" : "publisher",
-    "description" : "Everything about Bob.",
-    "jid" : "bob@example.com",
-    "title" : "Bob's Posts"
-    }
+	"creationDate" : "2012-04-24T09:13:51+0000",
+	"defaultAffiliation" : "publisher",
+	"description" : "/dev/hack",
+	"jid" : "team@topics.buddycloud.org",
+	"title" : "buddycloud dev team"
+	},
+	{ "channelType" : "personal",
+	"creationDate" : "2012-02-05T13:31:12+0000",
+	"defaultAffiliation" : "publisher",
+	"description" : "Everything about Bob.",
+	"jid" : "bob@example.com",
+	"title" : "Bob's Posts"
+	}
   ],
   "rsm" : { "count" : "2",
-    "index" : "0"
+	"index" : "0"
   }
-}
-</code>
+}</code>
 </pre>
-  </li>
-</ul>
-<h2>
-  /subscribed
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Returns the user's subscriptions.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Type
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the list of subscribed-to channels as a JSON object. The object's keys are of the form "&lt;channel&gt;/&lt;node&gt;", the values denote the subscription type ("owner", "publisher" or "member").
-  </dd>
-  <dd>
-    <b>POST</b> - Subscribes to or unsubscribes from a node. The body must be a JSON object with exactly one key-value pair of the form returned by GET. The node will be subscribed to if the value is "publisher" or "member", while "none" means unsubscription.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    (none)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if the request is not authenticated.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON GET
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+		</ul>
+		<h2>
+			/subscribed
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Returns the user's subscriptions.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Type
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the list of subscribed-to channels as a JSON object. The object's keys are of the form "&lt;channel&gt;/&lt;node&gt;", the values denote the subscription type ("owner", "publisher" or "member").
+			</dd>
+			<dd>
+				<b>POST</b> - Subscribes to or unsubscribes from a node. The body must be a JSON object with exactly one key-value pair of the form returned by GET. The node will be subscribed to if the value is "publisher" or "member", while "none" means unsubscription.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				(none)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if the request is not authenticated.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<pre class="prettyprint">
+<code class="language-js">
 
  Retrieve the own subscribed-to channel nodes as "alice@example.com":
 
@@ -1521,13 +1291,12 @@ Content-Type: application/json
   "alice@example.com/posts": "owner",
   "bob@example.com/posts": "publisher",
   "public@topics.example.com/posts": "publisher"
-}
-</code>
+}</code>
 </pre>
-  </li>
-  <li>JSON POST
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+			<li>POST
+				<pre class="prettyprint">
+<code class="language-js">
 
  Subscribe to "bob@example.com":
 
@@ -1537,117 +1306,117 @@ Content-Type: application/json
 …
 {"bob@example.com": "publisher"}
 
-200 OK
-
-</code>
+200 OK</code>
 </pre>
-  </li>
-</ul>
-<h2>
-  /sync
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Allows access to the latest posts of all channel nodes a user subscribes to. Only JSON representation is available for this query (see <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API#Channel_Content_Formats">#Channel Content Formats</a>).
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the latests items of all channel nodes an user subcribes to.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (GET)
-  </dt>
-  <dd>
-    <i><b>since</b></i> - is used to filter out messages before a certain date/time.
-  </dd>
-  <dd>
-    <i><b>max</b></i> - the maximum number of posts to be returned per channel.
-  </dd>
-  <dd>
-    <i><b>counters</b></i> - (optional) if true, returns only the message counter per channel.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is not provided.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    The since argument must be given in the ISO 8601, following the given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-<li>JSON GET
-<pre class="prettyprint">
-<code class="language-bash">
-    <li>retrieve all channel posts since: 2012-11-01T00:00:00Z</li>
-    <li>but not more than 2 per channel</li>
-
-GET /sync?since=2012-11-01T00:00:00Z&max=2
+			</li>
+		</ul>
+		<h2>
+			/sync
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Allows access to the latest posts of all channel nodes a user subscribes to. Only JSON representation is available for this query (see <a href="https://buddycloud.org/wiki/buddycloud_HTTP_API#Channel_Content_Formats">#Channel Content Formats</a>).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the latests items of all channel nodes an user subcribes to.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (GET)
+			</dt>
+			<dd>
+				<i><b>since</b></i> - is used to filter out messages before a certain date/time.
+			</dd>
+			<dd>
+				<i><b>max</b></i> - the maximum number of posts to be returned per channel.
+			</dd>
+			<dd>
+				<i><b>counters</b></i> - (optional) if true, returns only the message counter per channel.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is not provided.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				The since argument must be given in the ISO 8601, following the given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					retrieve all channel posts since: 2012-11-01T00:00:00Z but not more than 2 per channel
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
+GET /sync?since=2012-11-01T00:00:00Z&amp;max=2
 
 200 OK
 Content-Type: application/json
 …
 { "/user/bob@example.com/posts" : [ { "author" : "bob@example.com",
-        "content" : "Nice post.",
-        "id" : "a8eb0384-b504-4aab-9b51-6174a7f9efe7",
-        "published" : "2012-11-01T20:06:01.787Z",
-        "replyTo" : "08795523-b719-4329-b334-3ee1667aa9c3",
-        "updated" : "2012-11-01T20:06:01.787Z"
-      } ],
+		"content" : "Nice post.",
+		"id" : "a8eb0384-b504-4aab-9b51-6174a7f9efe7",
+		"published" : "2012-11-01T20:06:01.787Z",
+		"replyTo" : "08795523-b719-4329-b334-3ee1667aa9c3",
+		"updated" : "2012-11-01T20:06:01.787Z"
+	  } ],
   "/user/alice@example.com/posts" : [ { "author" : "bob@example",
-        "content" : "Is it a nice post?",
-        "id" : "209aceda-32ef-4754-9746-c1dbc5716359",
-        "published" : "2012-11-02T03:42:28.510Z",
-        "updated" : "2012-11-02T03:42:28.510Z"
-      },
-      { "author" : "alice@example.com",
-        "content" : "Ok",
-        "id" : "17163726-ea90-453e-ad25-455336a83fd4",
-        "published" : "2012-11-02T03:41:55.484Z",
-        "replyTo" : "9b7724d0-7ef5-4331-8974-81754abb7ba0",
-        "updated" : "2012-11-02T03:41:55.484Z"
-      }
-    ]
+		"content" : "Is it a nice post?",
+		"id" : "209aceda-32ef-4754-9746-c1dbc5716359",
+		"published" : "2012-11-02T03:42:28.510Z",
+		"updated" : "2012-11-02T03:42:28.510Z"
+	  },
+	  { "author" : "alice@example.com",
+		"content" : "Ok",
+		"id" : "17163726-ea90-453e-ad25-455336a83fd4",
+		"published" : "2012-11-02T03:41:55.484Z",
+		"replyTo" : "9b7724d0-7ef5-4331-8974-81754abb7ba0",
+		"updated" : "2012-11-02T03:41:55.484Z"
+	  }
+	]
 }
-</code></pre>
-</li>
-<li>JSON GET with counters
-<pre class="prettyprint">
-<code class="language-bash">
-  GET /sync?since=2012-11-01T00:00:00Z&counters=true&max=1000
+</code>
+</pre>
+			</li>
+			<li>
+				<code class="language-js">GET with counters</code>
+				<pre class="prettyprint">
+<code class="language-js"><code class="language-js"><code class="language-js">
+GET /sync?since=2012-11-01T00:00:00Z&amp;counters=true&amp;max=1000
 
 200 OK
 Content-Type: application/json
@@ -1655,78 +1424,80 @@ Content-Type: application/json
 { "/user/bob@example.com/posts" : 3,
   "/user/alice@example.com/posts" : 10
 }
-</code></pre>
-</li>
-</ul>
-<h2>
-  /notification_settings
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Allows retrieval and modification on the user's notification settings.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the user's notification settings.
-  </dd>
-  <dd>
-    <b>POST</b> - Updates the user's notification settings.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Parameters
-  </dt>
-  <dd>
-    <b>type</b> - Type of notification transport (email, gcm)
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>401 Unauthorized</b> if authentication is not provided.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Notes
-  </dt>
-  <dd>
-    During a POST, any notification setting can be omitted. Thus, the setting will only be updated when provided.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON GET
-  </li>
-</ul>
-<pre class="prettyprint">
-<code class="language-bash">
-<br><b>Retrieves notification settings:<br><br></b>
+</code>
+</code></code>
+</pre>
+			</li>
+		</ul>
+		<h2>
+			/notification_settings
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Allows retrieval and modification on the user's notification settings.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the user's notification settings.
+			</dd>
+			<dd>
+				<b>POST</b> - Updates the user's notification settings.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Parameters
+			</dt>
+			<dd>
+				<b>type</b> - Type of notification transport (email, gcm)
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>401 Unauthorized</b> if authentication is not provided.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Notes
+			</dt>
+			<dd>
+				During a POST, any notification setting can be omitted. Thus, the setting will only be updated when provided.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					Retrieves notification settings:
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 GET /notification_settings?type=email
 
 200 OK
@@ -1740,14 +1511,14 @@ Content-Type: application/json
   "postOnSubscribedChannel": "false",
   "followMyChannel ": "true",
   "followRequest": "true"
-}
-</code>
+}</code>
 </pre>
-<ul>
-  <li>JSON POST
-
-<pre class="prettyprint">
-<code class="language-bash">
+			</li>
+		</ul>
+		<ul>
+			<li>POST
+				<pre class="prettyprint">
+<code class="language-js">
 Updates notification settings:
 
 POST /notification_settings
@@ -1775,80 +1546,77 @@ Content-Type: application/json
   "postOnSubscribedChannel": "false",
   "followMyChannel ": "false",
   "followRequest": "false"
-}
-</code>
+}</code>
 </pre>
-  </li>
-</ul>
-<h2 class="mw-headline" id=".2Fsearch">
-  /search
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Performs a search over channels' metadata and posts' content indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Performs a search query to the channel directory. It can be performed over posts(type=content) or channels(type=metadata).
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (GET)
-  </dt>
-  <dd>
-    <i><b>type</b></i> - <b>metadata</b> or <b>content</b>.
-  </dd>
-  <dd>
-    <i><b>q</b></i> - the search criteria.
-  </dd>
-  <dd>
-    <i><b>max</b></i> (optional) - the maximum number of items to be returned.
-  </dd>
-  <dd>
-    <i><b>index</b></i> (optional) - the index for the first item to be returned.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> - if the client does not provide the mandatory fields.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON GET for metadata
-  </li>
-  <li style="list-style: none">
-    <pre class="prettyprint">
-<code class="language-bash">
-Retrieve channels that have the keyword <b>hack</b> in their metadata:
-
-GET /search?type=metadata&amp;q=hack
+			</li>
+		</ul>
+		<h2>
+			/search
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Performs a search over channels' metadata and posts' content indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Performs a search query to the channel directory. It can be performed over posts(type=content) or channels(type=metadata).
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (GET)
+			</dt>
+			<dd>
+				<i><b>type</b></i> - <b>metadata</b> or <b>content</b>.
+			</dd>
+			<dd>
+				<i><b>q</b></i> - the search criteria.
+			</dd>
+			<dd>
+				<i><b>max</b></i> (optional) - the maximum number of items to be returned.
+			</dd>
+			<dd>
+				<i><b>index</b></i> (optional) - the index for the first item to be returned.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> - if the client does not provide the mandatory fields.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET for metadata
+				<p>
+					Retrieve channels that have the keyword <b>hack</b> in their metadata: GET /search?type=metadata&amp;q=hack
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 
 200 OK
 Content-Type: application/json
@@ -1863,13 +1631,12 @@ Content-Type: application/json
   ],
  "rsm":
   {"index":"0","count":"1"}
-}
-</code>
+}</code>
 </pre>
-  </li>
-  <li>GET for content
-    <pre class="prettyprint">
-<code class="language-bash">
+			</li>
+			<li>GET for content
+				<pre class="prettyprint">
+<code class="language-js">
 Retrieve posts that have the keyword hack in their content:
 
 GET /search?type=content&amp;q=hack
@@ -1878,208 +1645,202 @@ GET /search?type=content&amp;q=hack
 Content-Type: application/json
 …
 { "items" : [ { "author" : "jayteeuk@wyrddreams.org",
-    "content" : "Hacking in the evening of Online Services Sprint, Day One.",
-    "id" : "1c6cf8b1-cfad-41fb-864a-73accf614484",
-    "in_reply_to" : null,
-    "parent_fullid" : "/user/jayteeuk@wyrddreams.org/posts",
-    "parent_simpleid" : "jayteeuk@wyrddreams.org",
-    "published" : "2012-11-12T21:53:49+0000",
-    "updated" : "2012-11-12T21:53:49+0000"
-    },
-    { "author" : "tester1234@buddycloud.org",
-    "content" : "hack hack",
-    "id" : "d3cd8bc5-5722-42cd-9b95-1313fbe6644b",
-    "in_reply_to" : null,
-    "parent_fullid" : "/user/tester1234@buddycloud.org/posts",
-    "parent_simpleid" : "tester1234@buddycloud.org",
-    "published" : "2012-09-25T23:58:00+0000",
-    "updated" : "2012-09-25T23:58:00+0000"
-    }
+	"content" : "Hacking in the evening of Online Services Sprint, Day One.",
+	"id" : "1c6cf8b1-cfad-41fb-864a-73accf614484",
+	"in_reply_to" : null,
+	"parent_fullid" : "/user/jayteeuk@wyrddreams.org/posts",
+	"parent_simpleid" : "jayteeuk@wyrddreams.org",
+	"published" : "2012-11-12T21:53:49+0000",
+	"updated" : "2012-11-12T21:53:49+0000"
+	},
+	{ "author" : "tester1234@buddycloud.org",
+	"content" : "hack hack",
+	"id" : "d3cd8bc5-5722-42cd-9b95-1313fbe6644b",
+	"in_reply_to" : null,
+	"parent_fullid" : "/user/tester1234@buddycloud.org/posts",
+	"parent_simpleid" : "tester1234@buddycloud.org",
+	"published" : "2012-09-25T23:58:00+0000",
+	"updated" : "2012-09-25T23:58:00+0000"
+	}
   ],
   "rsm" : { "count" : "2",
-    "index" : "0"
+	"index" : "0"
   }
-}
-</code>
+}</code>
 </pre>
-  </li>
-</ul>
-<h2>
-  /recommendations
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Recommends channels for a given user based on taste data indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves channels recommendations for a given user.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (GET)
-  </dt>
-  <dd>
-    <i><b>user</b></i> - the jid of the user to be recommended.
-  </dd>
-  <dd>
-    <i><b>max</b></i> (optional) - the maximum number of items to be returned.
-  </dd>
-  <dd>
-    <i><b>index</b></i> (optional) - the index for the first item to be returned.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-  <dd>
-    <b>400 Bad Request</b> - if the client does not provide the mandatory fields.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-  <li>JSON GET
-
-<p>
-  Recommend channels for user <b>alice@example.com:</b>
-</p>
-<pre class="prettyprint">
-<code class="language-bash">
+			</li>
+		</ul>
+		<h2>
+			/recommendations
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Recommends channels for a given user based on taste data indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves channels recommendations for a given user.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (GET)
+			</dt>
+			<dd>
+				<i><b>user</b></i> - the jid of the user to be recommended.
+			</dd>
+			<dd>
+				<i><b>max</b></i> (optional) - the maximum number of items to be returned.
+			</dd>
+			<dd>
+				<i><b>index</b></i> (optional) - the index for the first item to be returned.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+			<dd>
+				<b>400 Bad Request</b> - if the client does not provide the mandatory fields.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					Recommend channels for user <b>alice@example.com:</b>
+				</p>
+				<pre class="prettyprint">
+<code class="language-js">
 GET /recommendations?user=alice@example.com
 
 200 OK
 Content-Type: application/json
 …
 { "items" : [ { "channelType" : "topic",
-    "creationDate" : "2012-04-24T09:13:51+0000",
-    "defaultAffiliation" : "publisher",
-    "description" : "/dev/hack",
-    "jid" : "team@topics.buddycloud.org",
-    "title" : "buddycloud dev team"
-    },
-    { "channelType" : "personal",
-    "creationDate" : "2012-02-05T13:31:12+0000",
-    "defaultAffiliation" : "publisher",
-    "description" : "Everything about Bob.",
-    "jid" : "bob@example.com",
-    "title" : "Bob's Posts"
-    }
+	"creationDate" : "2012-04-24T09:13:51+0000",
+	"defaultAffiliation" : "publisher",
+	"description" : "/dev/hack",
+	"jid" : "team@topics.buddycloud.org",
+	"title" : "buddycloud dev team"
+	},
+	{ "channelType" : "personal",
+	"creationDate" : "2012-02-05T13:31:12+0000",
+	"defaultAffiliation" : "publisher",
+	"description" : "Everything about Bob.",
+	"jid" : "bob@example.com",
+	"title" : "Bob's Posts"
+	}
   ],
   "rsm" : { "count" : "2",
-    "index" : "0"
+	"index" : "0"
   }
-}
-</code>
+}</code>
 </pre>
-  </li>
-</ul>
-<h2>
-  /most_active
-</h2>
-<dl>
-  <dt>
-    Description
-  </dt>
-  <dd>
-    Retrieves the most active channels among the channels indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>. The most active channels are the ones that had more posts in the window of a day.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Content Types
-  </dt>
-  <dd>
-    JSON <i>(application/json)</i>
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Methods
-  </dt>
-  <dd>
-    <b>GET</b> - Retrieves the most active channels.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Arguments (GET)
-  </dt>
-  <dd>
-    <i><b>max</b></i> (optional) - the maximum number of items to be returned.
-  </dd>
-  <dd>
-    <i><b>index</b></i> (optional) - the index for the first item to be returned.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Responses
-  </dt>
-  <dd>
-    <b>200 OK</b> on success.
-  </dd>
-</dl>
-<dl>
-  <dt>
-    Examples
-  </dt>
-</dl>
-<ul>
-<li>JSON GET
-
-<p>Retrieve the most active channels:</p>
-GET /most_active
-200 OK
-Content-Type: application/json
-…
-<pre class="prettyprint">
+			</li>
+		</ul>
+		<h2>
+			/most_active
+		</h2>
+		<dl>
+			<dt>
+				Description
+			</dt>
+			<dd>
+				Retrieves the most active channels among the channels indexed by the <a href="https://buddycloud.org/wiki/Channel_Directory_Project" title="Channel Directory Project" class="mw-redirect">Channel Directory</a>. The most active channels are the ones that had more posts in the window of a day.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Content Types
+			</dt>
+			<dd>
+				JSON <i>(application/json)</i>
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Methods
+			</dt>
+			<dd>
+				<b>GET</b> - Retrieves the most active channels.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Arguments (GET)
+			</dt>
+			<dd>
+				<i><b>max</b></i> (optional) - the maximum number of items to be returned.
+			</dd>
+			<dd>
+				<i><b>index</b></i> (optional) - the index for the first item to be returned.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Responses
+			</dt>
+			<dd>
+				<b>200 OK</b> on success.
+			</dd>
+		</dl>
+		<dl>
+			<dt>
+				Examples
+			</dt>
+		</dl>
+		<ul>
+			<li>GET
+				<p>
+					Retrieve the most active channels:
+				</p>GET /most_active 200 OK Content-Type: application/json …
+				<pre class="prettyprint">
 <code class="javascript">
 
 { "items" : [ { "channelType" : "topic",
-        "creationDate" : "2012-08-05T14:57:26+0000",
-        "defaultAffiliation" : "publisher",
-        "description" : "This is an RSS feed from the BBC News - World website.  Original: http://feeds.bbci.co.uk/news/world/rss.xml",
-        "jid" : "bbc_news_-_world@topics.buddycloud.org",
-        "title" : "BBC News - World"
-      },
-      { "channelType" : "personal",
-        "creationDate" : "2011-10-06T12:02:58+0000",
-        "defaultAffiliation" : "publisher",
-        "description" : "Flipping you the channel bits. Night and day, the distributed way",
-        "jid" : "simon@buddycloud.org",
-        "title" : "Simon's chonnel"
-      }
-    ],
+		"creationDate" : "2012-08-05T14:57:26+0000",
+		"defaultAffiliation" : "publisher",
+		"description" : "This is an RSS feed from the BBC News - World website.  Original: http://feeds.bbci.co.uk/news/world/rss.xml",
+		"jid" : "bbc_news_-_world@topics.buddycloud.org",
+		"title" : "BBC News - World"
+	  },
+	  { "channelType" : "personal",
+		"creationDate" : "2011-10-06T12:02:58+0000",
+		"defaultAffiliation" : "publisher",
+		"description" : "Flipping you the channel bits. Night and day, the distributed way",
+		"jid" : "simon@buddycloud.org",
+		"title" : "Simon's chonnel"
+	  }
+	],
   "rsm" : { "count" : "2",
-      "index" : "0"
-    }
-}
-</code>
+	  "index" : "0"
+	}
+}</code>
 </pre>
-</li></ul>
-
-</body></html>
+			</li>
+		</ul>
+	</body>
+</html>
