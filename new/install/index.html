@@ -1,112 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Install buddycloud</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+    <head>
+        <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
+        <meta charset="utf-8">
+        <title>
+            Install buddycloud
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content=""><!-- CSS -->
+        <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"><!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
-  </head>
-
-  <body>
-
-
-    <!-- Part 1: Wrap all page content here -->
-    <div id="wrap">
-
-      <!-- Begin page content -->
-      <div class="container">
-        <div class="page-header">
-          <h1>Install buddycloud</h1>
-        </div>
-
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Install_Requirements"><span class="tocnumber">1</span> <span class="toctext">Install Requirements</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Getting_help"><span class="tocnumber">2</span> <span class="toctext">Getting help</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#buddycloud_DNS"><span class="tocnumber">3</span> <span class="toctext">buddycloud DNS</span></a>
-<ul>
-<li class="toclevel-2 tocsection-4"><a href="#Configure"><span class="tocnumber">3.1</span> <span class="toctext">Configure</span></a></li>
-<li class="toclevel-2 tocsection-5"><a href="#Test"><span class="tocnumber">3.2</span> <span class="toctext">Test</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-6"><a href="#Firewall_Setup"><span class="tocnumber">4</span> <span class="toctext">Firewall Setup</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Prosody_Setup"><span class="tocnumber">5</span> <span class="toctext">Prosody Setup</span></a>
-<ul>
-<li class="toclevel-2 tocsection-8"><a href="#Dependencies"><span class="tocnumber">5.1</span> <span class="toctext">Dependencies</span></a></li>
-<li class="toclevel-2 tocsection-9"><a href="#Configure_Server"><span class="tocnumber">5.2</span> <span class="toctext">Configure Server</span></a></li>
-<li class="toclevel-2 tocsection-10"><a href="#Test_2"><span class="tocnumber">5.3</span> <span class="toctext">Test</span></a></li>
-<li class="toclevel-2 tocsection-11"><a href="#Debug"><span class="tocnumber">5.4</span> <span class="toctext">Debug</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-12"><a href="#buddycloud_Server"><span class="tocnumber">6</span> <span class="toctext">buddycloud Server</span></a>
-<ul>
-<li class="toclevel-2 tocsection-13"><a href="#Install"><span class="tocnumber">6.1</span> <span class="toctext">Install</span></a></li>
-<li class="toclevel-2 tocsection-14"><a href="#Configure_server_2"><span class="tocnumber">6.2</span> <span class="toctext">Configure server</span></a></li>
-<li class="toclevel-2 tocsection-15"><a href="#Start_Server"><span class="tocnumber">6.3</span> <span class="toctext">Start Server</span></a></li>
-<li class="toclevel-2 tocsection-16"><a href="#Test_3"><span class="tocnumber">6.4</span> <span class="toctext">Test</span></a></li>
-<li class="toclevel-2 tocsection-17"><a href="#Debug_database"><span class="tocnumber">6.5</span> <span class="toctext">Debug database</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-18"><a href="#buddycloud_API_Server"><span class="tocnumber">7</span> <span class="toctext">buddycloud API Server</span></a>
-<ul>
-<li class="toclevel-2 tocsection-19"><a href="#SSL_and_API_requests"><span class="tocnumber">7.1</span> <span class="toctext">SSL and API requests</span></a></li>
-<li class="toclevel-2 tocsection-20"><a href="#Dependencies_2"><span class="tocnumber">7.2</span> <span class="toctext">Dependencies</span></a></li>
-<li class="toclevel-2 tocsection-21"><a href="#Install_2"><span class="tocnumber">7.3</span> <span class="toctext">Install</span></a></li>
-<li class="toclevel-2 tocsection-22"><a href="#Configure_Server_3"><span class="tocnumber">7.4</span> <span class="toctext">Configure Server</span></a></li>
-<li class="toclevel-2 tocsection-23"><a href="#Start_Server_2"><span class="tocnumber">7.5</span> <span class="toctext">Start Server</span></a></li>
-<li class="toclevel-2 tocsection-24"><a href="#Test_4"><span class="tocnumber">7.6</span> <span class="toctext">Test</span></a></li>
-<li class="toclevel-2 tocsection-25"><a href="#Debug_2"><span class="tocnumber">7.7</span> <span class="toctext">Debug</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-26"><a href="#buddycloud_Webclient"><span class="tocnumber">8</span> <span class="toctext">buddycloud Webclient</span></a>
-<ul>
-<li class="toclevel-2 tocsection-27"><a href="#Install_3"><span class="tocnumber">8.1</span> <span class="toctext">Install</span></a></li>
-<li class="toclevel-2 tocsection-28"><a href="#Configure_2"><span class="tocnumber">8.2</span> <span class="toctext">Configure</span></a></li>
-<li class="toclevel-2 tocsection-29"><a href="#Test_5"><span class="tocnumber">8.3</span> <span class="toctext">Test</span></a></li>
-<li class="toclevel-2 tocsection-30"><a href="#Debug_3"><span class="tocnumber">8.4</span> <span class="toctext">Debug</span></a></li>
-</ul>
-</li>
-<li class="toclevel-1 tocsection-31"><a href="#Final_steps"><span class="tocnumber">9</span> <span class="toctext">Final steps</span></a></li>
-</ul>
-<h2 id="Install_Requirements"> Install Requirements </h2>
-<dl><dt>Your own server with an internet routable IP address. 
-</dt><dd> see <a href="/wiki/buddycloud_hosting_options" title="buddycloud hosting options">buddycloud hosting options</a> for other ways to host your install.
-</dd><dt>a domain name
-</dt><dd> You will need to edit DNS records for your domain (for the rest of this example we will assume that you are setting up <b>EXAMPLE.COM</b>)
-</dd><dt>Ubuntu ≥ 12.10 (Quantal Quetzal)
-</dt><dd> Links to install instructions for other distributions are included in this page too
-</dd></dl>
-<h2 id="Getting_help"> Getting help </h2>
-<p>We really want to help your server in the buddycloud federation.
-</p>
-<ul><li> the <a href="/wiki/How_to_report_bugs" title="How to report bugs" class="mw-redirect">How to report bugs</a> page which will help you find information for reporting a problem.
-</li><li> ask in the chatroom: <a rel="nofollow" class="external free" href="https://jappix.com/?r=seehaus@channels.buddycloud.com">https://jappix.com/?r=seehaus@channels.buddycloud.com</a>
-</li><li> post to the mailing list: <a rel="nofollow" class="external free" href="https://groups.google.com/forum/#!forum/buddycloud-dev">https://groups.google.com/forum/#!forum/buddycloud-dev</a>
-</li></ul>
-<h2 id="buddycloud_DNS"> buddycloud DNS </h2>
-<p><span style="color:green">Estimated time: <b>10 mins</b></span>
-</p>
-<h3 id="Configure">Configure</h3>
-<p>Log into your registrar or edit your DNS zone file (at Godaddy this is called the DNS Manager).
-In this example we use 1.2.3.4 as your server address.
-</p><p>Not using Bind for DNS? See Google's guide on how to <a href="https://support.google.com/a/bin/topic.py?hl=en&amp;topic=1409901">setup a TXT record</a>.
-<pre class="prettyprint">
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+    </head>
+    <body>
+        <!-- Part 1: Wrap all page content here -->
+        <div id="wrap">
+            <!-- Begin page content -->
+            <div class="container">
+                <div class="page-header">
+                    <h1>
+                        Install buddycloud
+                    </h1>
+                </div>
+                <ul>
+                    <li class="toclevel-1 tocsection-1">
+                        <a href="#Install_Requirements"><span class="tocnumber">1</span> <span class="toctext">Install Requirements</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-2">
+                        <a href="#Getting_help"><span class="tocnumber">2</span> <span class="toctext">Getting help</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-3">
+                        <a href="#buddycloud_DNS"><span class="tocnumber">3</span> <span class="toctext">buddycloud DNS</span></a>
+                        <ul>
+                            <li class="toclevel-2 tocsection-4">
+                                <a href="#Configure"><span class="tocnumber">3.1</span> <span class="toctext">Configure</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-5">
+                                <a href="#Test"><span class="tocnumber">3.2</span> <span class="toctext">Test</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toclevel-1 tocsection-6">
+                        <a href="#Firewall_Setup"><span class="tocnumber">4</span> <span class="toctext">Firewall Setup</span></a>
+                    </li>
+                    <li class="toclevel-1 tocsection-7">
+                        <a href="#Prosody_Setup"><span class="tocnumber">5</span> <span class="toctext">Prosody Setup</span></a>
+                        <ul>
+                            <li class="toclevel-2 tocsection-8">
+                                <a href="#Dependencies"><span class="tocnumber">5.1</span> <span class="toctext">Dependencies</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-9">
+                                <a href="#Configure_Server"><span class="tocnumber">5.2</span> <span class="toctext">Configure Server</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-10">
+                                <a href="#Test_2"><span class="tocnumber">5.3</span> <span class="toctext">Test</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-11">
+                                <a href="#Debug"><span class="tocnumber">5.4</span> <span class="toctext">Debug</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toclevel-1 tocsection-12">
+                        <a href="#buddycloud_Server"><span class="tocnumber">6</span> <span class="toctext">buddycloud Server</span></a>
+                        <ul>
+                            <li class="toclevel-2 tocsection-13">
+                                <a href="#Install"><span class="tocnumber">6.1</span> <span class="toctext">Install</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-14">
+                                <a href="#Configure_server_2"><span class="tocnumber">6.2</span> <span class="toctext">Configure server</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-15">
+                                <a href="#Start_Server"><span class="tocnumber">6.3</span> <span class="toctext">Start Server</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-16">
+                                <a href="#Test_3"><span class="tocnumber">6.4</span> <span class="toctext">Test</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-17">
+                                <a href="#Debug_database"><span class="tocnumber">6.5</span> <span class="toctext">Debug database</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toclevel-1 tocsection-18">
+                        <a href="#buddycloud_API_Server"><span class="tocnumber">7</span> <span class="toctext">buddycloud API Server</span></a>
+                        <ul>
+                            <li class="toclevel-2 tocsection-19">
+                                <a href="#SSL_and_API_requests"><span class="tocnumber">7.1</span> <span class="toctext">SSL and API requests</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-20">
+                                <a href="#Dependencies_2"><span class="tocnumber">7.2</span> <span class="toctext">Dependencies</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-21">
+                                <a href="#Install_2"><span class="tocnumber">7.3</span> <span class="toctext">Install</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-22">
+                                <a href="#Configure_Server_3"><span class="tocnumber">7.4</span> <span class="toctext">Configure Server</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-23">
+                                <a href="#Start_Server_2"><span class="tocnumber">7.5</span> <span class="toctext">Start Server</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-24">
+                                <a href="#Test_4"><span class="tocnumber">7.6</span> <span class="toctext">Test</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-25">
+                                <a href="#Debug_2"><span class="tocnumber">7.7</span> <span class="toctext">Debug</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toclevel-1 tocsection-26">
+                        <a href="#buddycloud_Webclient"><span class="tocnumber">8</span> <span class="toctext">buddycloud Webclient</span></a>
+                        <ul>
+                            <li class="toclevel-2 tocsection-27">
+                                <a href="#Install_3"><span class="tocnumber">8.1</span> <span class="toctext">Install</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-28">
+                                <a href="#Configure_2"><span class="tocnumber">8.2</span> <span class="toctext">Configure</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-29">
+                                <a href="#Test_5"><span class="tocnumber">8.3</span> <span class="toctext">Test</span></a>
+                            </li>
+                            <li class="toclevel-2 tocsection-30">
+                                <a href="#Debug_3"><span class="tocnumber">8.4</span> <span class="toctext">Debug</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="toclevel-1 tocsection-31">
+                        <a href="#Final_steps"><span class="tocnumber">9</span> <span class="toctext">Final steps</span></a>
+                    </li>
+                </ul>
+                <h2 id="Install_Requirements">
+                    Install Requirements
+                </h2>
+                <dl>
+                    <dt>
+                        Your own server with an internet routable IP address.
+                    </dt>
+                    <dd>
+                        see <a href="/wiki/buddycloud_hosting_options" title="buddycloud hosting options">buddycloud hosting options</a> for other ways to host your install.
+                    </dd>
+                    <dt>
+                        a domain name
+                    </dt>
+                    <dd>
+                        You will need to edit DNS records for your domain (for the rest of this example we will assume that you are setting up <b>EXAMPLE.COM</b>)
+                    </dd>
+                    <dt>
+                        Ubuntu &#226;&#8240;&#165; 12.10 (Quantal Quetzal)
+                    </dt>
+                    <dd>
+                        Links to install instructions for other distributions are included in this page too
+                    </dd>
+                </dl>
+                <h2 id="Getting_help">
+                    Getting help
+                </h2>
+                <p>
+                    We really want to help your server in the buddycloud federation.
+                </p>
+                <ul>
+                    <li>the <a href="/wiki/How_to_report_bugs" title="How to report bugs" class="mw-redirect">How to report bugs</a> page which will help you find information for reporting a problem.
+                    </li>
+                    <li>ask in the chatroom: <a rel="nofollow" class="external free" href="https://jappix.com/?r=seehaus@channels.buddycloud.com">https://jappix.com/?r=seehaus@channels.buddycloud.com</a>
+                    </li>
+                    <li>post to the mailing list: <a rel="nofollow" class="external free" href="https://groups.google.com/forum/#!forum/buddycloud-dev">https://groups.google.com/forum/#!forum/buddycloud-dev</a>
+                    </li>
+                </ul>
+                <h2 id="buddycloud_DNS">
+                    buddycloud DNS
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>10 mins</b></span>
+                </p>
+                <h3 id="Configure">
+                    Configure
+                </h3>
+                <p>
+                    Log into your registrar or edit your DNS zone file (at Godaddy this is called the DNS Manager). In this example we use 1.2.3.4 as your server address.
+                </p>
+                <p>
+                    Not using Bind for DNS? See Google's guide on how to <a href="https://support.google.com/a/bin/topic.py?hl=en&amp;topic=1409901">setup a TXT record</a>.
+                </p>
+                <pre class="prettyprint">
 <code>
 ; SRV records (below) must point to A records (never CNAMES)
 my-server.EXAMPLE.COM.                     IN A            1.2.3.4
@@ -125,10 +207,13 @@ _xmpp-server._tcp.buddycloud.EXAMPLE.COM.  IN SRV 5 0 5269 my-server.EXAMPLE.COM
 _xmpp-server._tcp.anon.EXAMPLE.COM.        IN SRV 5 0 5269 my-server.EXAMPLE.COM.
 </code>
 </pre>
-</p>
-<h3 id="Test">Test</h3>
-<p>Use the <code>dig</code> command to test your DNS
-<pre class="prettyprint">
+                <h3 id="Test">
+                    Test
+                </h3>
+                <p>
+                    Use the <code>dig</code> command to test your DNS
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 #check that the buddycloud server can be resolved as an A record
 dig -t A my-server.EXAMPLE.COM +short
@@ -148,11 +233,16 @@ dig -t A anon.EXAMPLE.COM +short
 "v=1.0" "host=api.buddycloud.org" "protocol=https" "path=/" "port=443"
 </code>
 </pre>
-</p>
-<h2 id="Firewall_Setup"> Firewall Setup </h2>
-<p><span style="color:green">Estimated time: <b>2 mins</b></span>
-</p><p>Double check your firewall rules. They should look something like this:
-<pre class="prettyprint">
+                <h2 id="Firewall_Setup">
+                    Firewall Setup
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>2 mins</b></span>
+                </p>
+                <p>
+                    Double check your firewall rules. They should look something like this:
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 # inbound webclient connections (bounced to SSL)
 iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d &lt;your server address&gt; -p tcp --dport 80   -j ACCEPT 
@@ -166,28 +256,44 @@ iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d &lt;your server address&
 iptables -A OUTPUT -m state --state NEW -s &lt;your server address&gt; -d 0.0.0.0/0 -p tcp --dport 5269 -j ACCEPT 
 </code>
 </pre>
-</p><p>If your hosting provider has its own firewall in addition to the firewall on your server (like on <a rel="nofollow"  href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using-network-security.html">Amazon EC2</a> instances), make sure to also open TCP ports 80, 43, 5222 and 5269 there.
-</p>
-<h2 id="Prosody_Setup"> Prosody Setup </h2>
-<p><span style="color:green">Estimated time: <b>10 mins</b></span>
-</p>
-<ul><li> alternative: <a href="/wiki/Installing_buddycloud_on_ejabberd" title="Installing buddycloud on ejabberd">Installing buddycloud on ejabberd</a>
-</li><li> alternative: <a rel="nofollow"  href="http://prosody.im/doc/install">official Prosody install guide</a> (good for older distributions)
-</li><li> alternative: Prosody with <a href="/wiki/LDAP_authentication" title="LDAP authentication">LDAP authentication</a>
-</li><li> alternative: <a href="/wiki/Installing_buddycloud_on_openfire" title="Installing buddycloud on openfire">Installing buddycloud on openfire</a>
-</li></ul>
-<h3 id="Dependencies">Dependencies</h3>
-<ul><li> Install the Prosody server and the OS Dependencies
-</li></ul>
-<p><pre class="prettyprint">
+                <p>
+                    If your hosting provider has its own firewall in addition to the firewall on your server (like on <a rel="nofollow" href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using-network-security.html">Amazon EC2</a> instances), make sure to also open TCP ports 80, 43, 5222 and 5269 there.
+                </p>
+                <h2 id="Prosody_Setup">
+                    Prosody Setup
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>10 mins</b></span>
+                </p>
+                <ul>
+                    <li>alternative: <a href="/wiki/Installing_buddycloud_on_ejabberd" title="Installing buddycloud on ejabberd">Installing buddycloud on ejabberd</a>
+                    </li>
+                    <li>alternative: <a rel="nofollow" href="http://prosody.im/doc/install">official Prosody install guide</a> (good for older distributions)
+                    </li>
+                    <li>alternative: Prosody with <a href="/wiki/LDAP_authentication" title="LDAP authentication">LDAP authentication</a>
+                    </li>
+                    <li>alternative: <a href="/wiki/Installing_buddycloud_on_openfire" title="Installing buddycloud on openfire">Installing buddycloud on openfire</a>
+                    </li>
+                </ul>
+                <h3 id="Dependencies">
+                    Dependencies
+                </h3>
+                <ul>
+                    <li>Install the Prosody server and the OS Dependencies
+                    </li>
+                </ul>
+                <pre class="prettyprint">
 <code class="language-bash">
 apt-get install prosody liblua5.1-sql-postgres-2 lua-dbi-postgresql postgresql
 </code>
 </pre>
-</p>
-<h3 id="Configure_Server">Configure Server</h3>
-<p>Edit <code>/etc/prosody/prosody.cfg.lua</code>, with the following settings.
-<pre class="prettyprint">
+                <h3 id="Configure_Server">
+                    Configure Server
+                </h3>
+                <p>
+                    Edit <code>/etc/prosody/prosody.cfg.lua</code>, with the following settings.
+                </p>
+                <pre class="prettyprint">
 <code class="language-lua">
 modules_enabled = {
 
@@ -232,17 +338,21 @@ Component "buddycloud.EXAMPLE.COM"
  component_secret      = "tellnoone"
 </code>
 </pre>
-</p>
-<p>restart the server
-<pre class="prettyprint">
+                <p>
+                    restart the server
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 /etc/init.d/prosody restart
 </code>
 </pre>
-</p>
-<h3 id="Test_2">Test</h3>
-<p>test the server is running
-<pre class="prettyprint">
+                <h3 id="Test_2">
+                    Test
+                </h3>
+                <p>
+                    test the server is running
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 # from a remote machine:
 telnet EXAMPLE.COM 5269
@@ -253,24 +363,33 @@ telnet EXAMPLE.COM 5222
 #you should receive a connection. 
 </code>
 </pre>
-</p>
-<h3 id="Debug">Debug</h3>
-<p><pre class="prettyprint">
+                <h3 id="Debug">
+                    Debug
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 tail -F /var/log/prosody/prosody.err \
 /var/log/prosody/prosody.log
-</pre>
 </code>
-</p>
-<h2 id="buddycloud_Server"> buddycloud Server </h2>
-<p><span style="color:green">Estimated time: <b>10 mins</b></span>
-</p>
-<ul><li> Alternative: <a href="/wiki/Running_a_buddycloud_topics_server" title="Running a buddycloud topics server">Running a buddycloud topics server</a>
-</li><li> Alternative: <a href="/wiki/Build#Build_the_Server" title="Build">build the buddycloud server yourself</a>
-</li><li> Alternative: <a href="/wiki/manually_create_the_buddycloud_server_database" title="manually create the buddycloud server database">manually create the buddycloud server database</a>
-</li></ul>
-<h3 id="Install">Install</h3>
-<p><pre class="prettyprint">
+</pre>
+                <h2 id="buddycloud_Server">
+                    buddycloud Server
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>10 mins</b></span>
+                </p>
+                <ul>
+                    <li>Alternative: <a href="/wiki/Running_a_buddycloud_topics_server" title="Running a buddycloud topics server">Running a buddycloud topics server</a>
+                    </li>
+                    <li>Alternative: <a href="/wiki/Build#Build_the_Server" title="Build">build the buddycloud server yourself</a>
+                    </li>
+                    <li>Alternative: <a href="/wiki/manually_create_the_buddycloud_server_database" title="manually create the buddycloud server database">manually create the buddycloud server database</a>
+                    </li>
+                </ul>
+                <h3 id="Install">
+                    Install
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo apt-get install software-properties-common python-software-properties; #needed for PPA access
 sudo add-apt-repository ppa:chris-lea/node.js-legacy # to retrieve nodejs version 0.8.23
@@ -283,37 +402,42 @@ node --version
 # The buddycloud-server requires nodejs 0.8.*
 </code>
 </pre>
-</p><p>Download the latest buddycloud-server package from <a rel="nofollow"  href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-server/">downloads.buddycloud.com</a>
-<pre class="prettyprint">
+                <p>
+                    Download the latest buddycloud-server package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-server/">downloads.buddycloud.com</a>
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo dpkg -i buddycloud-server*.deb; 
 </code>
 </pre>
-</p>
-<h3 id="Configure_server_2">Configure server</h3>
-<p><pre class="prettyprint">
+                <h3 id="Configure_server_2">
+                    Configure server
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo vim /etc/buddycloud-server/config.js
 </code>
 </pre>
-</p>
-<h3 id="Start_Server">Start Server</h3>
-<p><pre class="prettyprint">
+                <h3 id="Start_Server">
+                    Start Server
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo /etc/init.d/buddycloud-server start
 </code>
 </pre>
-</p>
-<h3 id="Test_3"> Test</h3>
-<p><pre class="prettyprint">
+                <h3 id="Test_3">
+                    Test
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo tail -F /var/log/buddycloud-server/buddycloud-server.log 
 </code>
 </pre>
-</p>
-<h3 id="Debug_database"> Debug database</h3>
-<p>
-<pre class="prettyprint">
+                <h3 id="Debug_database">
+                    Debug database
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 # Test the database is installed
 psql -h 127.0.0.1 --username buddycloudserver -d buddycloudserver -c "select * from nodes;"
@@ -324,17 +448,26 @@ node
 # this means that your buddycloud server database schema been installed successfully.
 </code>
 </pre>
-</p>
-<h2 id="buddycloud_API_Server"> buddycloud API Server </h2>
-<p><span style="color:green">Estimated time: <b>6 mins</b></span>
-</p>
-<h3 id="SSL_and_API_requests">SSL and API requests</h3>
-<p>Chrome and Firefox <b>will not work</b> with self signed certificates when used for API calls. Ordinarily you would receive a certificate warning. But for API requests, this does not happen and requests are silently drop. You have two options:
-# run without SSL on your API server
-</li><li> get a signed certificate
-</li></ol>
-<h3 id="Dependencies_2">Dependencies</h3>
-<p><pre class="prettyprint">
+                <h2 id="buddycloud_API_Server">
+                    buddycloud API Server
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>6 mins</b></span>
+                </p>
+                <h3 id="SSL_and_API_requests">
+                    SSL and API requests
+                </h3>
+                <p>
+                    Chrome and Firefox <b>will not work</b> with self signed certificates when used for API calls. Ordinarily you would receive a certificate warning. But for API requests, this does not happen and requests are silently drop. You have two options: # run without SSL on your API server
+                </p>
+                <ul>
+                    <li>get a signed certificate
+                    </li>
+                    <li style="list-style: none">
+                        <h3 id="Dependencies_2">
+                            Dependencies
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 apt-get install apache2 apache2.2-common
 # ensure you have the correct modules enabled in Apache
@@ -342,9 +475,10 @@ apt-get install apache2 apache2.2-common
 sudo service apache2 reload
 </code>
 </pre>
-</p>
-<h3 id="Install_2">Install</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Install_2">
+                            Install
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo apt-get install software-properties-common python-software-properties; #needed for PPA access
 sudo add-apt-repository ppa:chris-lea/node.js-legacy # to retrieve a more current nodejs version
@@ -355,57 +489,80 @@ sudo apt-get install libpq5  libicu48  libicu-dev libxml2-dev libssl1.0.0 \
 node --version # The buddycloud API requires nodejs 0.8.*
 </code>
 </pre>
-</p><p>Download the latest buddycloud-http-api package from <a rel="nofollow"  href="http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-http-api/">downloads.buddycloud.com</a>
-</p><p><pre class="prettyprint">
+                        <p>
+                            Download the latest buddycloud-http-api package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-http-api/">downloads.buddycloud.com</a>
+                        </p>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo dpkg -i buddycloud-http-api*.deb; 
 </code>
 </pre>
-</p>
-<h3 id="Configure_Server_3">Configure Server</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Configure_Server_3">
+                            Configure Server
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo vim /etc/buddycloud-http-api/config.js
 </code>
 </pre>
-</p>
-<h3 id="Start_Server_2"> Start Server</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Start_Server_2">
+                            Start Server
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo /etc/init.d/buddycloud-http-api start
 </code>
 </pre>
-</p>
-<h3 id="Test_4">Test</h3>
-<ul><li> Open <code><a rel="nofollow" class="external free" href="http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts">http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts</a></code> in your browser. 
-<ul><li> You should see an XML feed of posts
-</li></ul>
-</li></ul>
-<h3 id="Debug_2">Debug</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Test_4">
+                            Test
+                        </h3>
+                        <ul>
+                            <li>Open <code><a rel="nofollow" class="external free" href="http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts">http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts</a></code> in your browser.
+                                <ul>
+                                    <li>You should see an XML feed of posts
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3 id="Debug_2">
+                            Debug
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 tail -F /var/log/buddycloud-http-api/buddycloud-http-api.log
 </code>
 </pre>
-</p>
-<h2 id="buddycloud_Webclient"> buddycloud Webclient </h2>
-<p><span style="color:green">Estimated time: <b>5 mins</b></span>
-</p>
-<ul><li> Alternative: <a href="/wiki/buddycloud_Apache_virtual_host_setup" title="buddycloud Apache virtual host setup">buddycloud Apache virtual host setup</a>
-</li><li> Alternative: <a href="/wiki/buddycloud_nginx_setup" title="buddycloud nginx setup">buddycloud nginx setup</a>
-</li><li> Alternative: <a href="/wiki/buddycloud_lighttpd_setup" title="buddycloud lighttpd setup">buddycloud lighttpd setup</a>
-</li><li> Alternative: <a href="/wiki/buddycloud_SSL_setup" title="buddycloud SSL setup">buddycloud SSL setup</a>
-</li></ul>
-<h3 id="Install_3">Install</h3>
-<p>Download the latest buddycloud-webclient package from <a rel="nofollow"  href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-webclient/">downloads.buddycloud.com</a>
-</p><p><pre class="prettyprint">
+                        <h2 id="buddycloud_Webclient">
+                            buddycloud Webclient
+                        </h2>
+                        <p>
+                            <span style="color:green">Estimated time: <b>5 mins</b></span>
+                        </p>
+                        <ul>
+                            <li>Alternative: <a href="/wiki/buddycloud_Apache_virtual_host_setup" title="buddycloud Apache virtual host setup">buddycloud Apache virtual host setup</a>
+                            </li>
+                            <li>Alternative: <a href="/wiki/buddycloud_nginx_setup" title="buddycloud nginx setup">buddycloud nginx setup</a>
+                            </li>
+                            <li>Alternative: <a href="/wiki/buddycloud_lighttpd_setup" title="buddycloud lighttpd setup">buddycloud lighttpd setup</a>
+                            </li>
+                            <li>Alternative: <a href="/wiki/buddycloud_SSL_setup" title="buddycloud SSL setup">buddycloud SSL setup</a>
+                            </li>
+                        </ul>
+                        <h3 id="Install_3">
+                            Install
+                        </h3>
+                        <p>
+                            Download the latest buddycloud-webclient package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-webclient/">downloads.buddycloud.com</a>
+                        </p>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo dpkg -i buddycloud-webclient*.deb;
 </code>
 </pre>
-</p>
-<h3 id="Configure_2">Configure</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Configure_2">
+                            Configure
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 sudo vim /etc/apache2/sites-available/buddycloud-apache-virtual-host
 sudo vim /usr/share/buddycloud-webclient/config.js
@@ -413,56 +570,62 @@ a2ensite buddycloud-apache-virtual-host
 sudo service apache2 reload
 </code>
 </pre>
-</p>
-<h3 id="Test_5">Test</h3>
-<ul><li>If you are running with SSL, <a href="https://www.ssllabs.com/ssltest/index.html">check your SSL setup</a></li>
-  <li> open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a></code> in your browser: you should see the login screen</li>
-  <li> open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/team@topics.buddycloud.org">http://EXAMPLE.COM/team@topics.buddycloud.org</a></code> in your browser: you should see an open channel displayed</li>
-</ul>
-<h3 id="Debug_3">Debug</h3>
-<p><pre class="prettyprint">
+                        <h3 id="Test_5">
+                            Test
+                        </h3>
+                        <ul>
+                            <li>If you are running with SSL, <a href="https://www.ssllabs.com/ssltest/index.html">check your SSL setup</a>
+                            </li>
+                            <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a></code> in your browser: you should see the login screen
+                            </li>
+                            <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/team@topics.buddycloud.org">http://EXAMPLE.COM/team@topics.buddycloud.org</a></code> in your browser: you should see an open channel displayed
+                            </li>
+                        </ul>
+                        <h3 id="Debug_3">
+                            Debug
+                        </h3>
+                        <pre class="prettyprint">
 <code class="language-bash">
 tail -F /var/log/apache2/EXAMPLE.COM-error.log \ 
        /var/log/apache2/EXAMPLE.COM-error.log \
        /var/log/apache2/api.EXAMPLE.COM-error.log \
        /var/log/apache2/api.EXAMPLE.COM-error.log
-</pre>
 </code>
-</p>
-<h2 id="Final_steps">Final steps</h2>
-<p>That's it! Log-into your buddycloud node at <a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a> and follow your first channels.</a>.
-</p>
-</div>
-      </div>
-
-      <div id="push"></div>
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-      </div>
-    </div>
-
-
-
-    <!-- Le javascript
+</pre>
+                        <h2 id="Final_steps">
+                            Final steps
+                        </h2>
+                        <p>
+                            That's it! Log-into your buddycloud node at <a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a> and follow your first channels..
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="push"></div>
+        <div id="footer">
+            <div class="container">
+                <p class="muted credit">
+                    Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.
+                </p>
+            </div>
+        </div><!-- Le javascript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="assets/js/bootstrap-typeahead.js"></script>
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-
-  </body>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-transition.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-alert.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-modal.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-dropdown.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-scrollspy.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-tab.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-tooltip.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-popover.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-button.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-collapse.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-carousel.js" type="text/javascript">
+</script><script src="assets/js/bootstrap-typeahead.js" type="text/javascript">
+</script><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js" type="text/javascript">
+</script>
+    </body>
 </html>
