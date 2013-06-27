@@ -1,25 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
     <head>
         <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
-        <meta charset="utf-8">
         <title>
             Install buddycloud
         </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content=""><!-- CSS -->
         <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"><!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-    <![endif]-->
-        <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <!-- Part 1: Wrap all page content here -->
@@ -153,7 +140,7 @@
                         You will need to edit DNS records for your domain (for the rest of this example we will assume that you are setting up <b>EXAMPLE.COM</b>)
                     </dd>
                     <dt>
-                        Ubuntu &#226;&#8240;&#165; 12.10 (Quantal Quetzal)
+                        Ubuntu &acirc;&permil;&yen; 12.10 (Quantal Quetzal)
                     </dt>
                     <dd>
                         Links to install instructions for other distributions are included in this page too
@@ -226,11 +213,12 @@ dig -t A anon.EXAMPLE.COM +short
 1.2.3.4
 
 #check the server SRV record
-#dig -t srv _xmpp-server._tcp.EXAMPLE.COM +short
+dig -t srv _xmpp-server._tcp.EXAMPLE.COM +short
 5 0 5269 my-server.EXAMPLE.COM.
 
-#check the server SRV record
-"v=1.0" "host=api.buddycloud.org" "protocol=https" "path=/" "port=443"
+#check the API server is discoverable
+dig TXT _buddycloud-api._tcp.EXAMPLE.COM +short
+"v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 </code>
 </pre>
                 <h2 id="Firewall_Setup">
@@ -460,14 +448,10 @@ node
                 <p>
                     Chrome and Firefox <b>will not work</b> with self signed certificates when used for API calls. Ordinarily you would receive a certificate warning. But for API requests, this does not happen and requests are silently drop. You have two options: # run without SSL on your API server
                 </p>
-                <ul>
-                    <li>get a signed certificate
-                    </li>
-                    <li style="list-style: none">
-                        <h3 id="Dependencies_2">
-                            Dependencies
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Dependencies_2">
+                    Dependencies
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 apt-get install apache2 apache2.2-common
 # ensure you have the correct modules enabled in Apache
@@ -475,10 +459,10 @@ apt-get install apache2 apache2.2-common
 sudo service apache2 reload
 </code>
 </pre>
-                        <h3 id="Install_2">
-                            Install
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Install_2">
+                    Install
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo apt-get install software-properties-common python-software-properties; #needed for PPA access
 sudo add-apt-repository ppa:chris-lea/node.js-legacy # to retrieve a more current nodejs version
@@ -489,80 +473,78 @@ sudo apt-get install libpq5  libicu48  libicu-dev libxml2-dev libssl1.0.0 \
 node --version # The buddycloud API requires nodejs 0.8.*
 </code>
 </pre>
-                        <p>
-                            Download the latest buddycloud-http-api package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-http-api/">downloads.buddycloud.com</a>
-                        </p>
-                        <pre class="prettyprint">
+                <p>
+                    Download the latest buddycloud-http-api package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-http-api/">downloads.buddycloud.com</a>
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo dpkg -i buddycloud-http-api*.deb; 
 </code>
 </pre>
-                        <h3 id="Configure_Server_3">
-                            Configure Server
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Configure_Server_3">
+                    Configure Server
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo vim /etc/buddycloud-http-api/config.js
 </code>
 </pre>
-                        <h3 id="Start_Server_2">
-                            Start Server
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Start_Server_2">
+                    Start Server
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo /etc/init.d/buddycloud-http-api start
 </code>
 </pre>
-                        <h3 id="Test_4">
-                            Test
-                        </h3>
-                        <ul>
-                            <li>Open <code><a rel="nofollow" class="external free" href="http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts">http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts</a></code> in your browser.
-                                <ul>
-                                    <li>You should see an XML feed of posts
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h3 id="Debug_2">
-                            Debug
-                        </h3>
-                        <pre class="prettyprint">
+                <h3>
+                    Test
+                </h3>
+                <ul>
+                    <li>Open <code><a rel="nofollow" class="external free" href="http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts">http://buddycloud.EXAMPLE.COM/api/team@topics.buddycloud.org/content/posts</a></code> in your browser.
+                    </li>
+                    <li>You should see an XML feed of posts
+                    </li>
+                </ul>
+                <h3 id="Debug_2">
+                    Debug
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 tail -F /var/log/buddycloud-http-api/buddycloud-http-api.log
 </code>
 </pre>
-                        <h2 id="buddycloud_Webclient">
-                            buddycloud Webclient
-                        </h2>
-                        <p>
-                            <span style="color:green">Estimated time: <b>5 mins</b></span>
-                        </p>
-                        <ul>
-                            <li>Alternative: <a href="/wiki/buddycloud_Apache_virtual_host_setup" title="buddycloud Apache virtual host setup">buddycloud Apache virtual host setup</a>
-                            </li>
-                            <li>Alternative: <a href="/wiki/buddycloud_nginx_setup" title="buddycloud nginx setup">buddycloud nginx setup</a>
-                            </li>
-                            <li>Alternative: <a href="/wiki/buddycloud_lighttpd_setup" title="buddycloud lighttpd setup">buddycloud lighttpd setup</a>
-                            </li>
-                            <li>Alternative: <a href="/wiki/buddycloud_SSL_setup" title="buddycloud SSL setup">buddycloud SSL setup</a>
-                            </li>
-                        </ul>
-                        <h3 id="Install_3">
-                            Install
-                        </h3>
-                        <p>
-                            Download the latest buddycloud-webclient package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-webclient/">downloads.buddycloud.com</a>
-                        </p>
-                        <pre class="prettyprint">
+                <h2 id="buddycloud_Webclient">
+                    buddycloud Webclient
+                </h2>
+                <p>
+                    <span style="color:green">Estimated time: <b>5 mins</b></span>
+                </p>
+                <ul>
+                    <li>Alternative: <a href="/wiki/buddycloud_Apache_virtual_host_setup" title="buddycloud Apache virtual host setup">buddycloud Apache virtual host setup</a>
+                    </li>
+                    <li>Alternative: <a href="/wiki/buddycloud_nginx_setup" title="buddycloud nginx setup">buddycloud nginx setup</a>
+                    </li>
+                    <li>Alternative: <a href="/wiki/buddycloud_lighttpd_setup" title="buddycloud lighttpd setup">buddycloud lighttpd setup</a>
+                    </li>
+                    <li>Alternative: <a href="/wiki/buddycloud_SSL_setup" title="buddycloud SSL setup">buddycloud SSL setup</a>
+                    </li>
+                </ul>
+                <h3 id="Install_3">
+                    Install
+                </h3>
+                <p>
+                    Download the latest buddycloud-webclient package from <a rel="nofollow" href="http://downloads.buddycloud.com/packages/debian/releases/buddycloud-webclient/">downloads.buddycloud.com</a>
+                </p>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo dpkg -i buddycloud-webclient*.deb;
 </code>
 </pre>
-                        <h3 id="Configure_2">
-                            Configure
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Configure_2">
+                    Configure
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 sudo vim /etc/apache2/sites-available/buddycloud-apache-virtual-host
 sudo vim /usr/share/buddycloud-webclient/config.js
@@ -570,21 +552,21 @@ a2ensite buddycloud-apache-virtual-host
 sudo service apache2 reload
 </code>
 </pre>
-                        <h3 id="Test_5">
-                            Test
-                        </h3>
-                        <ul>
-                            <li>If you are running with SSL, <a href="https://www.ssllabs.com/ssltest/index.html">check your SSL setup</a>
-                            </li>
-                            <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a></code> in your browser: you should see the login screen
-                            </li>
-                            <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/team@topics.buddycloud.org">http://EXAMPLE.COM/team@topics.buddycloud.org</a></code> in your browser: you should see an open channel displayed
-                            </li>
-                        </ul>
-                        <h3 id="Debug_3">
-                            Debug
-                        </h3>
-                        <pre class="prettyprint">
+                <h3 id="Test_5">
+                    Test
+                </h3>
+                <ul>
+                    <li>If you are running with SSL, <a href="https://www.ssllabs.com/ssltest/index.html">check your SSL setup</a>
+                    </li>
+                    <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a></code> in your browser: you should see the login screen
+                    </li>
+                    <li>open <code><a rel="nofollow" class="external free" href="http://EXAMPLE.COM/team@topics.buddycloud.org">http://EXAMPLE.COM/team@topics.buddycloud.org</a></code> in your browser: you should see an open channel displayed
+                    </li>
+                </ul>
+                <h3 id="Debug_3">
+                    Debug
+                </h3>
+                <pre class="prettyprint">
 <code class="language-bash">
 tail -F /var/log/apache2/EXAMPLE.COM-error.log \ 
        /var/log/apache2/EXAMPLE.COM-error.log \
@@ -592,14 +574,12 @@ tail -F /var/log/apache2/EXAMPLE.COM-error.log \
        /var/log/apache2/api.EXAMPLE.COM-error.log
 </code>
 </pre>
-                        <h2 id="Final_steps">
-                            Final steps
-                        </h2>
-                        <p>
-                            That's it! Log-into your buddycloud node at <a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a> and follow your first channels..
-                        </p>
-                    </li>
-                </ul>
+                <h2 id="Final_steps">
+                    Final steps
+                </h2>
+                <p>
+                    That's it! Log-into your buddycloud node at <a rel="nofollow" class="external free" href="http://EXAMPLE.COM/">http://EXAMPLE.COM/</a> and follow your first channels..
+                </p>
             </div>
         </div>
         <div id="push"></div>
