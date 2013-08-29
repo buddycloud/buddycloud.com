@@ -1,7 +1,7 @@
 [
    {
       "name": "buddycloud test domain",
-      "domain": "buddycloud.com",
+      "domain": "buddycloud.org",
       "country-code": "UK",
       "site-avatar": "buddycloud.org.png",
       "webclient": "https://demo.buddycloud.org"
