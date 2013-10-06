@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
@@ -9,25 +9,22 @@
     </head>
     <body>
         <h2>
-            Distributed design
+            A Completely Distributed Design
         </h2>
         <p>
-            buddycloud is designed to be fully distributed. Much like how you can email someone on a different domain, buddycloud let's you share with users on your site, and remote buddycloud-enabled sites.
+            buddycloud is a distributed service. Any domain can run a buddycloud server, and each buddycloud server can find, connect and synchronise data for users on other sites (like email servers connect to eachother)
         </p>
-        <h2>
-            Federating with other buddycloud servers
-        </h2>
         <p>
-            buddycloud abstracts the finding, connecting to and communicating with remote buddycloud servers to the local XMPP server. The XMPP server is thus responsible for
+            XMPP is used to transport data between different buddycloud servers. Anytime two buddycloud servers need to exchange information,
         </p>
         <ol>
-            <li>DNS discovery of the remote XMPP server
+            <li>sending server queries DSN to discovery the address of teh remote buddycloud server,
             </li>
-            <li>connecting to and negotiating an encrypted stream with the remote server
+            <li>The two sites negotiate an encrypted connection,
             </li>
-            <li>exchanging buddycloud data
+            <li>data is streamed back and forth between the sites,
             </li>
-            <li>eventually expiring the connection if no subsequent traffic is sent or received (about 10 minutes)
+            <li>if no subsequent traffic is sent or received (about 10 minutes) then the connection is dropped.
             </li>
         </ol>
         <p>
@@ -37,11 +34,14 @@
             Home and remote buddycloud servers
         </h2>
         <p>
-            buddycloud clients, be they mobile or web connect to their home server. Their home server is responsible for hosting and sharing their data.
+            Like you connect your email client to your imap server, buddycloud clients, be they mobile or web connect to their <i>home</i> server. Their home server is responsible for hosting and sharing their data.
         </p>
         <p>
-            The buddycloud protocol is broken down into two parts: how servers connect to share and push and retrieve data from remote servers and how buddycloud applications connect to their home server to retrieve updates. Clients always talk to their home server.
+            The <a href="buddycloud%20protocol%20URL">buddycloud protocol</a> is broken down into two parts: how servers connect to share and push and retrieve data from remote servers and how buddycloud applications connect to their home server to retrieve updates. Clients always talk to their home server.
         </p>
+        <h2>
+            Data format
+        </h2>Creating an event in buddycloud can be in any format you wish: For example
         <h2>
             The buddycloud Inbox
         </h2>
@@ -186,15 +186,17 @@
             </tbody>
         </table>
         <h2>
-            <a name="h.f3f4llieqx8c" id="h.f3f4llieqx8c"></a>Channels and nodes
+            Channels and nodes
         </h2>
         <p>
-            A buddycloud channel such as <a class="c4" href="mailto:user@example.com">user@example.com</a>&nbsp;refers to a bundle of pub-sub nodes. There are some well established nodes such as:
+            A buddycloud channel such as <code>user@example.com</code> is a bundle of data streams. <code>user@example.com</code> might have the following channel nodes:
         </p>
         <ol>
-            <li>/user/name@example.com/posts (micro-blog-like updates)
+            <li>/user/user@example.com/posts (micro-blog-like updates)
             </li>
-            <li>/user/name@example.com/status (status updates like "build is working")
+            <li>/user/user@example.com/status (status updates like "build is working")
+            </li>
+            <li>/user/user@example.com/x-application-gamestatus (game state syncrhonised between decives).
             </li>
         </ol>
         <p>
