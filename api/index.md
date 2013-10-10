@@ -8,6 +8,9 @@ to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 General Notes
 =============
 
+HTTPS only
+:   All requests should be sent using HTTPS.
+
 UTF-8 encoding
 :   Each string passed to and from the buddycloud API must be UTF-8
     encoded. (In the case of JSON set "Content-Type" to
