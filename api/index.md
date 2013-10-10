@@ -1,3 +1,5 @@
+\_\_TOC\_\_
+
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
 
@@ -40,7 +42,7 @@ server. <tabber> dig command=
 
 ~~~~ {.bash}
 $ dig txt _buddycloud-api._tcp.EXAMPLE.COM
-
+...
 ;; ANSWER SECTION:
 _buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0" "host=buddycloud.EXAMPLE.COM" "protocol=https" "path=/api" "port=443"
 ~~~~
@@ -123,37 +125,21 @@ Changes
 
 *who can change what?*
 
-  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ --------------------------- ----------------- ------------ ----------------- ----------
-  |                                      | server operation                                               | Example                                           | producer   | moderator                 | follower+post   | follower   | anonymous/web   | banned
-
-  | Channel Jid                          |                                                                | me@domain.com                                     | no         | no                        | no              | no         | no              | no
-
-  | Channel name                         | manage-node-configuration *pubsub\#title*                      | My little channel                                 | yes        | no                        | no              | no         | no              | no
-
-  | Channel description                  | manage-node-configuration *pubsub\#description*                | A channel about me                                | yes        | no                        | no              | no         | no              | no
-
-  | mood                                 | publish-node-items in *status* node                            | Wishing it was Friday                             | yes        | no                        | no              | no         | no              | no
-
-  | geoloc                               | publish-node-items in *geoloc* nodes                           | News Cafe                                         | yes        | no                        | no              | no         | no              | no
-
-  | add post                             | publish-node-items in *posts* node                             | Lunch with me?                                    | yes        | yes                       | yes             | no         | no              | no
-
-  | remove post                          | retract-node-items (in *posts* node)                           |                                                   | yes        | yes                       | no              | no         | no              | no
-
-  | approve new followers                | manage-node-configuration *buddycloud\#approve\_followers*     | new followers must be approved *yes* or *no*      | yes        |                           | no              | no         | no              | no
-                                                                                                                                                                                                                                                        
-                                                                                                                                                                           -   personal channels: no                                                    
-                                                                                                                                                                           -   topic channels: yes                                                      
-                                                                                                                                                                                                                                                        
-
-  | set default role for new followers   | manage-node-configuration *buddycloud\#default\_affiliation*   | new followers are *follower* or *follower+post*   | yes        | no                        | no              | no         | no              | no
-
-  | channel privacy                      | manage-node-configuration *pubsub\#access\_model*              | toggle open / closed channel                      | yes        | no                        | no              | no         | no              | no
-
-  | change role of a follower            | manage-node-affiliations                                       |                                                   | yes        | yes                       | no              | no         | no              | no
-
-  | make moderator                       | manage-node-affiliations                                       |                                                   | yes        | no                        | no              | no         | no              | no
-  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ --------------------------- ----------------- ------------ ----------------- ----------
+  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ ----------------------------------------------- ----------------- ------------ ----------------- ----------
+  |                                      | server operation                                               | Example                                           | producer   | moderator                                     | follower+post   | follower   | anonymous/web   | banned
+  | Channel Jid                          |                                                                | me@domain.com                                     | no         | no                                            | no              | no         | no              | no
+  | Channel name                         | manage-node-configuration *pubsub\#title*                      | My little channel                                 | yes        | no                                            | no              | no         | no              | no
+  | Channel description                  | manage-node-configuration *pubsub\#description*                | A channel about me                                | yes        | no                                            | no              | no         | no              | no
+  | mood                                 | publish-node-items in *status* node                            | Wishing it was Friday                             | yes        | no                                            | no              | no         | no              | no
+  | geoloc                               | publish-node-items in *geoloc* nodes                           | News Cafe                                         | yes        | no                                            | no              | no         | no              | no
+  | add post                             | publish-node-items in *posts* node                             | Lunch with me?                                    | yes        | yes                                           | yes             | no         | no              | no
+  | remove post                          | retract-node-items (in *posts* node)                           |                                                   | yes        | yes                                           | no              | no         | no              | no
+  | approve new followers                | manage-node-configuration *buddycloud\#approve\_followers*     | new followers must be approved *yes* or *no*      | yes        | personal channels: no / topic channels: yes   | no              | no         | no              | no
+  | set default role for new followers   | manage-node-configuration *buddycloud\#default\_affiliation*   | new followers are *follower* or *follower+post*   | yes        | no                                            | no              | no         | no              | no
+  | channel privacy                      | manage-node-configuration *pubsub\#access\_model*              | toggle open / closed channel                      | yes        | no                                            | no              | no         | no              | no
+  | change role of a follower            | manage-node-affiliations                                       |                                                   | yes        | yes                                           | no              | no         | no              | no
+  | make moderator                       | manage-node-affiliations                                       |                                                   | yes        | no                                            | no              | no         | no              | no
+  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ ----------------------------------------------- ----------------- ------------ ----------------- ----------
 
 API Endpoints
 =============
@@ -216,7 +202,7 @@ Post Threading
 
 ~~~~ {.xml}
 <entry xmlns="http://www.w3.org/2005/Atom">
-  
+  ...
   <!-- This entry is a comment on the post with ID "original-post" -->
   <in-reply-to xmlns="http://purl.org/syndication/thread/1.0" ref="original-post"/>
 </entry>
@@ -248,7 +234,7 @@ Accept: application/json
 ~~~~ {.javascript}
 200 OK
 Content-Type: application/json
-
+...
 [
   {
     "id": "foo",
