@@ -1,5 +1,3 @@
-\_\_TOC\_\_
-
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
 
@@ -9,9 +7,6 @@ to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 
 General Notes
 =============
-
-HTTPS only
-:   All requests should be sent using HTTPS.
 
 UTF-8 encoding
 :   Each string passed to and from the buddycloud API must be UTF-8
