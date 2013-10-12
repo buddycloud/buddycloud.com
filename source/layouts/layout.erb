@@ -1,9 +1,13 @@
 <!doctype html>
 <html>
-  <%= render "views/layout/head" %>
+  <%= partial "views/layout/head" %>
   
   <body>
-    <%= render "views/layout/header" %>
+    <%= partial "views/home/header" %>
     <%= yield %>
+
+    <%= partial "views/layout/footer" %>
+    <%= partial "views/layout/ga" %>
+    <%= partial "views/layout/javascripts" %>
   </body>
 </html>
