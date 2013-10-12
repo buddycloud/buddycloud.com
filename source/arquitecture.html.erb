@@ -1,0 +1,232 @@
+---
+title: buddycloud arquitecture
+---
+<section class="arquitecture secondarySection">
+  <div class="container">
+    <h2>A Completely Distributed Design</h2>
+    <p>
+      buddycloud is a distributed service. Any domain can run a buddycloud server, and each buddycloud server can find, connect and synchronise data for users on other sites (like email servers connect to eachother)
+    </p>
+    <p>
+      XMPP is used to transport data between different buddycloud servers. Anytime two buddycloud servers need to exchange information,
+    </p>
+    <ol>
+      <li>
+        sending server queries DSN to discovery the address of teh remote buddycloud server,
+      </li>
+      <li>The two sites negotiate an encrypted connection,</li>
+      <li>data is streamed back and forth between the sites,</li>
+      <li>
+        if no subsequent traffic is sent or received (about 10 minutes) then the connection is dropped.
+      </li>
+    </ol>
+    <p>
+      This approach proves to be very robust and enables clean separation between buddycloud application logic and federation operations.
+    </p>
+    <h2>Home and remote buddycloud servers</h2>
+    <p>
+      Like you connect your email client to your imap server, buddycloud clients, be they mobile or web connect to their <i>home</i>
+      server. Their home server is responsible for hosting and sharing their data.
+    </p>
+    <p>
+      The
+      <a href="buddycloud%20protocol%20URL">buddycloud protocol</a>
+      is broken down into two parts: how servers connect to share and push and retrieve data from remote servers and how buddycloud applications connect to their home server to retrieve updates. Clients always talk to their home server.
+    </p>
+    <h2>Data format</h2>
+    <p>Creating an event in buddycloud can be in any format you wish: For example</p>
+    <h2>The buddycloud Inbox</h2>
+    <p>
+      The home buddycloud server maintains a "social inbox" for each user. This is list of events that have happened since that user was last online. For example post updates, and follow requests.
+    </p>
+    <p>
+      The home server is also responsible for re-syncing with remote servers should it be offline or down for maintenance. This way the user's social inbox is always current.
+    </p>
+    <p>
+      The buddycloud inbox approach means that the most current data is always available just one hop away from the mobile or webclient and information can be quickly updated when a client comes back online.
+    </p>
+    <p>
+      When buddycloud apps are online, new content from buddycloud servers skipps the inbox and is pushed is pushed straight through to the buddycloud client.
+    </p>
+    <h2>Many small services</h2>
+    <p>
+      buddycloud's design is based on small services doing specific tasks. For example the media server just serves media based, the pusher service just deals with sending out push notifications to phones and alert emails.
+    </p>
+    <p>
+      Each service can communicate with other services on local and the and remote buddycloud sites.
+    </p>
+    <p>
+      <%= image_tag "/arquitecture/images/image00.png", alt: "buddycloud architecture diagram", width: "539" %>
+    <h2>Data Storage</h2>
+    <p>
+      buddycloud is essentially a giant publish subscribe service. You can think of buddycloud channels as publish-subscribe nodes backed by application logic of what can read and write to each node.
+    </p>
+    <p>
+      buddycloud uses a SQL database to store the state and history of each of these nodes. Other buddycloud components implement their own data storage. A quick break down is as follows:
+    </p>
+    <table cellpadding="0" cellspacing="0" summary="where data lives in buddycloud">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>
+            <p>Database</p>
+          </td>
+          <td>
+            <p>Disk storage</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>buddycloud server</p>
+          </td>
+          <td>
+            <p>postgres or mysql</p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>buddycloud media server</p>
+          </td>
+          <td>
+            <p>postgres or mysql</p>
+          </td>
+          <td>
+            <p>disk storage for individual media objects</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>buddycloud API server</p>
+          </td>
+          <td>
+            <p>all state is stored in memory</p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <p>buddycloud pusher</p>
+          </td>
+          <td>
+            <p>postgres or mysql</p>
+          </td>
+          <td></td>
+        </tr>
+        <tr class="c6">
+          <td>
+            <p>buddycloud webclient</p>
+          </td>
+          <td>
+            <p>posts and state are stored in IndexedDB on the webclient</p>
+          </td>
+          <td>
+            <p>browser caching</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>buddycloud android client</p>
+          </td>
+          <td>
+            <p>SQLlite to store posts and access credentials</p>
+          </td>
+          <td>
+            <p>
+              A disk cache is used to speed up access to avatars and media posts
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Channels and nodes</h2>
+    <p>
+      A buddycloud channel such as
+      <code>user@example.com</code>
+      is a bundle of data streams.
+      <code>user@example.com</code>
+      might have the following channel nodes:
+    </p>
+    <ol>
+      <li>/user/user@example.com/posts (micro-blog-like updates)</li>
+      <li>
+        /user/user@example.com/status (status updates like "build is working")
+      </li>
+      <li>
+        /user/user@example.com/x-application-gamestatus (game state syncrhonised between decives).
+      </li>
+    </ol>
+    <p>
+      Applications that use buddycloud can then add application-specific nodes that are prefixed with "x-". for example
+    </p>
+    <ol>
+      <li>/user/name@example.com/x-faceblog</li>
+    </ol>
+    <p>
+      In this way different clients with different capabilities can query and update information relevant to their own use.
+    </p>
+    <h2>Resynchronising with remote domains</h2>
+    <p>
+      Posts from remote servers are treated as cached data with the "truth" available on the remote server. The buddycloud server is designed to treat data from remote buddycloud server as ephemeral and essentially a cache that can be resynchronised at any point in time.
+    </p>
+    <h2>Strong Identity</h2>
+    <p>
+      buddycloud users' identity is composed of &lt;username&gt;@&lt;domain&gt;. This fits with traditional schemes such as email
+      <a class="c4" href="mailto:name@example.com">name@example.com</a>
+      &nbsp;and is something familiar to the user.
+    </p>
+    <p>
+      buddycloud leverages the strong identity by virtue of using XMPP for federating between domains. The identity is bound to, authenticated against and stored in their home-domain's XMPP server. This means that a user could authenticate and access buddycloud services via any of the SASL authentication mechanisms.
+    </p>
+    <p>
+      The default buddycloud install stores user passwords using SCRAM-SHA256-PLUS. There is also the option to authenticate against external services such as LDAP or SQL systems.
+    </p>
+    <h2>Messaging</h2>
+    <p>
+      A user always posts to their local buddycloud server. That buddycloud server is then responsible for relaying on data to all the other buddycloud sites that include followers for that channel. Imagine a channel cats-pictures@domainA.com, with followers:
+    </p>
+    <ol>
+      <li>catlady@domainA.org</li>
+      <li>siamese@domainB.com</li>
+      <li>Ilovecats@domainB.com</li>
+      <li>catman@domainC.com</li>
+    </ol>
+    <p>
+      so when catlady@domainA.org posts to cats-pictures@domainA.com, the following messages are sent:
+    </p>
+    <ol>
+      <li>
+        1 message to domainB.com (domainB then deduplicates and stores the post in the inbox service to ensure that both user: siamese and user ilovecats domain receive it)
+      </li>
+      <li>1 message to domainC.com</li>
+    </ol>
+    <h3>client to server messages</h3>
+    <p>
+      buddycloud enabled client software communicates with the users home-buddycloud site. Each buddycloud site that intends to run clients should publish their API into DNS. Clients (for example the android client, then look up their respective API server to connect to depending on the domain portion of the users buddycloud id. For example
+    </p>
+    <p>
+      using the buddycloud HTTP API server and the buddycloud API. This uses HTTP server to server messages.
+    </p>
+    <p>
+      buddycloud server components use XMPP to exchange messages with other servers on their domain and also remote domains that are buddycloud enabled. For example: media-serverexample.com connects to and queries buddycloud-server.example.com and buddycloud.example.com will talk to buddycloud.example.org via XMPP.
+    </p>
+    <h2>Sequence diagrams</h2> 
+    <strong>media server</strong>
+    <!-- http://bramp.github.io/js-sequence-diagrams/ -->
+    <div id="diagram"></div>
+    <h2>Protocol checking</h2>
+    <p>
+      Occasionally minor changes and fixes are made to the buddycloud protocol.
+    </p>
+    <p>
+      Protocol changes are codified into the buddycloud-inspector service. This web service remotely tests domains and checks protocol compatibility.
+    </p>
+  </div>
+</section>
+<script src="../assets/js/underscore-min.js" type="text/javascript"></script>
+<script src="../assets/js/raphael-min.js" type="text/javascript"></script>
+<script src="../assets/js/sequence-diagram.js" type="text/javascript"></script>
+<script type="text/javascript">
+  var diagram = Diagram.parse("A->B: Message");
+  diagram.drawSVG("diagram", {theme: 'hand'});
+  </script>

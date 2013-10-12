@@ -3,17 +3,12 @@
 ###
 
 # Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+
+with_layout :page_layout do
+  page "*.html"
+end
+
+page "/index.html", layout: :home_layout
 
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -42,6 +37,9 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
+# Activate Pretty URLs (Directory Indexes)
+activate :directory_indexes
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -54,7 +52,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
