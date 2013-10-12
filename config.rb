@@ -40,6 +40,9 @@ set :images_dir, 'img'
 # Activate Pretty URLs (Directory Indexes)
 activate :directory_indexes
 
+# Activate Syntax Highlighter
+activate :syntax
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
