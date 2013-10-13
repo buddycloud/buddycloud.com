@@ -1,5 +1,9 @@
 <% wrap_layout :layout do %>
   <%= partial "views/layout/page_header" %>
   
-  <%= yield %>
+  <section class="page primarySection">
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
 <% end %>

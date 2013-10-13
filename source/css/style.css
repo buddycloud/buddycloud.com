@@ -200,12 +200,11 @@ nav {
 .features,
 .friends,
 .forYourCompany,
-.arquitecture,
-.contact {
+.page {
   border-bottom: 1px solid rgba(0,0,0,.21);
 }
 
-.features, .try-again, .arquitecture, .install, .contact {
+.features, .try-again {
   background: #eee;
 }
 
