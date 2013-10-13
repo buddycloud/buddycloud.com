@@ -40,7 +40,7 @@ A DNS lookup for the `_buddycloud-api._tcp.example.com` [TXT
 record](https://en.wikipedia.org/wiki/TXT_record) will give you the
 server. <tabber> dig command=
 
-~~~~ bash
+~~~~ {.bash}
 $ dig txt _buddycloud-api._tcp.EXAMPLE.COM
 ...
 ;; ANSWER SECTION:
@@ -187,7 +187,7 @@ Post Threading
 
 <tabber> JSON= uses `replyTo`. For example:
 
-~~~~ javascript
+~~~~ {.javascript}
       { "author" : "alice@example.com",
         "content" : "Ok",
         "id" : "17163726-ea90-453e-ad25-455336a83fd4",
@@ -200,7 +200,7 @@ Post Threading
 
 |-| XML=
 
-~~~~ xml
+~~~~ {.xml}
 <entry xmlns="http://www.w3.org/2005/Atom">
   ...
   <!-- This entry is a comment on the post with ID "original-post" -->
@@ -226,12 +226,12 @@ Examples
 
 `JSONÂ GET=`
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@examle.com/content/posts
 Accept: application/json
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -264,7 +264,7 @@ Content-Type: application/json
 
 `JSONÂ POST=`
 
-~~~~ javascript
+~~~~ {.javascript}
 POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
@@ -274,7 +274,7 @@ Content-Type: application/json
 }
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 201 Created
 Location: http://api.example.com/bob@example.com/content/posts/bipp
 ...
@@ -286,11 +286,11 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 
 Retrieve all posts from "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/content/posts
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Alice's posts</title>
   <entry>
@@ -328,11 +328,11 @@ GET /alice@example.com/content/posts
 
 Retrieve the newest post from "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/content/posts?max=1
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 200 OK
 Content-Type: application/atom+xml
 ...
@@ -352,11 +352,11 @@ Content-Type: application/atom+xml
 
 Get the two newest posts that are older than the one retrieved above:
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/content/posts?max=2&after=foo
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 200 OK
 Content-Type: application/atom+xml
 ...
@@ -385,7 +385,7 @@ Content-Type: application/atom+xml
 
 Add a post to "bob@example.com":
 
-~~~~ xml
+~~~~ {.xml}
 POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
@@ -395,7 +395,7 @@ Content-Type: application/atom+xml
 </entry>
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 201 Created
 Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
 ...
@@ -403,7 +403,7 @@ Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
 
 Comment on the newest post of "alice@example.com":
 
-~~~~ xml
+~~~~ {.xml}
 POST /alice@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
@@ -414,7 +414,7 @@ Content-Type: application/atom+xml
 </entry>
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 201 Created
 Location: http://api.example.com/alice@example.com/content/posts/fooboo
 ...
@@ -458,12 +458,12 @@ Examples
 
 <tabber> JSON GET= Retrieve a post
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/content/posts/baz
 Accept: application/json
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -478,11 +478,11 @@ Content-Type: application/json
 
 |-| XML GET= Retrieve the post with ID "baz" of "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/content/posts/baz
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 200 OK
 Content-Type: application/atom+xml
 ...
@@ -502,11 +502,11 @@ Content-Type: application/atom+xml
 
 |-| DELETE= Deletes the post with ID "baz" of "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 DELETE /alice@example.com/content/posts/baz
 ~~~~
 
-~~~~ xml
+~~~~ {.xml}
 204 OK
 No Content
 ~~~~
@@ -558,11 +558,11 @@ Example
 <tabber> JSON= Retrieve the metadata of the "posts" node of
 "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/metadata/posts
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -616,11 +616,11 @@ Examples
 <tabber> JSON GET= Retrieve the subscribers of the "posts" node of
 "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/subscribers/posts
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -633,7 +633,7 @@ Content-Type: application/json
 |-| JSON POST= Change the affiliation role of "bob@example.com" (who
 follows the "posts" node of "alice@example.com") to "member":
 
-~~~~ bash
+~~~~ {.bash}
 POST /alice@example.com/subscribers/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
@@ -641,17 +641,17 @@ Content-Type: application/json
 {"bob@example.com": "member"}
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
 The affiliation role of "bob@example.com" should be updated:
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/subscribers/posts
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -697,11 +697,11 @@ Examples
 <tabber> JSON GET= Retrieve subscription states of the "posts" node of
 "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/subscribers/posts/approve
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -715,7 +715,7 @@ Content-Type: application/json
 |-| JSON POST= Approves the request from "bob@example.com" and denies
 the one from "john@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 POST /alice@example.com/subscribers/posts/approve
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
@@ -726,7 +726,7 @@ Content-Type: application/json
 ]
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
@@ -796,13 +796,13 @@ Examples
 
 :   retrieve a list of all media in a channel together with metadata
 
-~~~~ bash
+~~~~ {.bash}
 GET https://api.example.com/channel@topics.domain.com/media
 ~~~~
 
 :   response, if everything went ok
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response
 {{
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -837,7 +837,7 @@ GET https://api.example.com/channel@topics.domain.com/media
 
 |-| JSON POST= upload a new item to **channel@topics.domain.com**
 
-~~~~ javascript
+~~~~ {.javascript}
 POST {"filename": "testimage.jpg", 
       "title": "Test Image", 
       "description": "My test image", 
@@ -848,7 +848,7 @@ POST {"filename": "testimage.jpg",
 
 :   response
 
-~~~~ javascript
+~~~~ {.javascript}
 // 201 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -919,11 +919,11 @@ Examples
 
 :   Get media
 
-~~~~ bash
+~~~~ {.bash}
 GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3?maxwidth=640
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response with the media content
 ~~~~
 
@@ -931,7 +931,7 @@ GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6r
 
 :   update the media information
 
-~~~~ javascript
+~~~~ {.javascript}
 POST {"filename": "newname.jpg", 
       "title": "New Title", 
       "description": "New description", 
@@ -940,7 +940,7 @@ POST {"filename": "newname.jpg",
 
 :   response, if everything went ok
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -962,11 +962,11 @@ POST {"filename": "newname.jpg",
 
 :   Delete the media
 
-~~~~ bash
+~~~~ {.bash}
 DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response
 ~~~~
 
@@ -1029,7 +1029,7 @@ Examples
 
 <tabber> JSON PUT= upload a new avatar
 
-~~~~ javascript
+~~~~ {.javascript}
 PUT {"filename": "avatar.jpg", 
       "title": "My New Avatar", 
       "description": "My brand new avatar", 
@@ -1040,7 +1040,7 @@ PUT {"filename": "avatar.jpg",
 
 :   response, if everything went ok
 
-~~~~ javascript
+~~~~ {.javascript}
 // 201 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -1062,21 +1062,21 @@ PUT {"filename": "avatar.jpg",
 
 :   Visualize Alice's new avatar
 
-~~~~ bash
+~~~~ {.bash}
 GET https://api.example.com/alice@domain.com/avatar
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response with the picture content
 ~~~~
 
 |-| JSON DELETE= Delete the avatar
 
-~~~~ bash
+~~~~ {.bash}
 DELETE https://api.example.com/alice@domain.com/avatar
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 // 200 response
 ~~~~
 
@@ -1104,11 +1104,11 @@ Examples
 <tabber> POST= Crates the topic channel
 "talesofalice@topics.example.com":
 
-~~~~ bash
+~~~~ {.bash}
 POST /talesofalice@topics.example.com
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
@@ -1140,11 +1140,11 @@ Examples
 
 <tabber> GET= Retrieve similar channels to node "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /alice@example.com/similar
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1202,12 +1202,12 @@ Examples
 <tabber> JSON GET= Retrieve the own subscribed-to channel nodes as
 "alice@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 GET /subscribed
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1220,7 +1220,7 @@ Content-Type: application/json
 
 |-| JSON POST= Subscribe to "bob@example.com":
 
-~~~~ bash
+~~~~ {.bash}
 POST /subscribed
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
@@ -1228,7 +1228,7 @@ Content-Type: application/json
 {"bob@example.com/posts": "publisher"}
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
@@ -1272,11 +1272,11 @@ Examples
 -   retrieve **all** channel posts since: `2012-11-01T00:00:00Z`
 -   but not more than `2` per channel
 
-~~~~ bash
+~~~~ {.bash}
 GET /sync?since=2012-11-01T00:00:00Z&max=2
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1308,11 +1308,11 @@ Content-Type: application/json
 
 -   retrieve **all** post counters since: `2012-11-01T00:00:00Z`
 
-~~~~ bash
+~~~~ {.bash}
 GET /sync?since=2012-11-01T00:00:00Z&counters=true&max=1000
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1352,11 +1352,11 @@ Examples
 
 <tabber> JSON GET= Retrieves notification settings:
 
-~~~~ bash
+~~~~ {.bash}
 GET /notification_settings?type=email
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1373,7 +1373,7 @@ Content-Type: application/json
 
 |-| JSON POST= Updates notification settings:
 
-~~~~ bash
+~~~~ {.bash}
 POST /notification_settings
 Content-Type: application/json
 ...
@@ -1389,7 +1389,7 @@ Content-Type: application/json
 }
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1437,11 +1437,11 @@ Examples
 <tabber> JSON GET for metadata= Retrieve channels that have the keyword
 **hack** in their metadata:
 
-~~~~ bash
+~~~~ {.bash}
 GET /search?type=metadata&q=hack
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1461,11 +1461,11 @@ Content-Type: application/json
 |-| JSON GET for content= Retrieve posts that have the keyword **hack**
 in their content:
 
-~~~~ bash
+~~~~ {.bash}
 GET /search?type=content&q=hack
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1524,11 +1524,11 @@ Examples
 
 <tabber> JSON GET= Recommend channels for user **alice@example.com**:
 
-~~~~ bash
+~~~~ {.bash}
 GET /recommendations?user=alice@example.com
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1582,11 +1582,11 @@ Examples
 
 <tabber> JSON GET= Retrieve the most active channels:
 
-~~~~ bash
+~~~~ {.bash}
 GET /most_active
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 Content-Type: application/json
 ...
@@ -1633,7 +1633,7 @@ Examples
 
 <tabber> JSON POST= Updates user's password:
 
-~~~~ bash
+~~~~ {.bash}
 POST /account/pw/change
 Content-Type: application/json
 ...
@@ -1643,7 +1643,7 @@ Content-Type: application/json
 }
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
@@ -1672,7 +1672,7 @@ Examples
 
 <tabber> JSON POST= Resets user's password:
 
-~~~~ bash
+~~~~ {.bash}
 POST /account/pw/reset
 Content-Type: application/json
 ...
@@ -1681,7 +1681,7 @@ Content-Type: application/json
 }
 ~~~~
 
-~~~~ javascript
+~~~~ {.javascript}
 200 OK
 ~~~~
 
