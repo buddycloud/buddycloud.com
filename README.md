@@ -25,4 +25,4 @@ Middleman is a Ruby static website generator. This means you can develop your st
 
 ### Configuration
 
-* External extenstions activation (like syntax highlighter) and other website configurations resides in the `config.rb` file. 
+* Site configuration (like external extensions activation and configuration) resides in the `config.rb` file.
