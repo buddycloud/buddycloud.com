@@ -23,10 +23,14 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 * Run `$> middleman server` (or just `$> middleman`). The server autoreloads if configuration changes.
 * Go to `http://localhost:4567`.
 
-### Site generation
-
-* `$> middleman build` (use --clean to remove old files if necessary). 
-
 ### Configuration
 
 * Site configuration (like external extensions activation and configuration) resides in the `config.rb` file.
+
+### Site generation
+
+* `$> middleman build` (use --clean to remove old files if necessary).
+
+### Publishing the website
+
+Read https://github.com/neo/middleman-gh-pages.

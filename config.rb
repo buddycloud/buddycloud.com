@@ -46,6 +46,8 @@ activate :syntax
 # Set Markdown Engine
 set :markdown_engine, :kramdown
 
+set :relative_links, true
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
