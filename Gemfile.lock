@@ -83,6 +83,7 @@ GEM
     redcarpet (2.2.2)
     rouge (0.3.10)
       thor
+    ruby18_source_location (0.2)
     sass (3.2.12)
     sprockets (2.10.0)
       hike (~> 1.2)
@@ -109,3 +110,4 @@ DEPENDENCIES
   middleman-livereload (~> 3.1.0)
   middleman-syntax (~> 1.2.1)
   redcarpet (~> 2.2.2)
+  ruby18_source_location

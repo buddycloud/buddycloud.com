@@ -38,7 +38,7 @@ to discover the API server for a domain.
 
 A DNS lookup for the `_buddycloud-api._tcp.example.com` [TXT
 record](https://en.wikipedia.org/wiki/TXT_record) will give you the
-server. <tabber> dig command=
+server.  dig command=
 
 ~~~~ {.bash}
 $ dig txt _buddycloud-api._tcp.EXAMPLE.COM
@@ -48,7 +48,7 @@ _buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0" "host=buddycloud.EXAMP
 ~~~~
 
 This tells a client that any API calls for `example.com` should be made
-against `https://buddycloud.example.com:443/api` </tabber>
+against `https://buddycloud.example.com:443/api` 
 
 Authenticating
 ==============
@@ -185,7 +185,7 @@ Post Threading
     specified in the [Atom Threading
     Extensions](http://www.ietf.org/rfc/rfc4685.txt)
 
-<tabber> JSON= uses `replyTo`. For example:
+ JSON= uses `replyTo`. For example:
 
 ~~~~ {.javascript}
       { "author" : "alice@example.com",
@@ -208,7 +208,7 @@ Post Threading
 </entry>
 ~~~~
 
-</tabber>
+
 
 Notes
 :   When posting an item, the item's ID and author don't need to be
@@ -222,7 +222,7 @@ Notes
 
 Examples
 
-<tabber>
+
 
 `JSONÂ GET=`
 
@@ -420,7 +420,7 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 ...
 ~~~~
 
-</tabber>
+
 
 /:channel/content/:item/
 ------------------------
@@ -456,7 +456,7 @@ Notes
 
 Examples
 
-<tabber> JSON GET= Retrieve a post
+ JSON GET= Retrieve a post
 
 ~~~~ {.bash}
 GET /alice@example.com/content/posts/baz
@@ -511,7 +511,7 @@ DELETE /alice@example.com/content/posts/baz
 No Content
 ~~~~
 
-</tabber>
+
 
 /:channel/metadata/:node
 ------------------------
@@ -555,7 +555,7 @@ Notes
 
 Example
 
-<tabber> JSON= Retrieve the metadata of the "posts" node of
+ JSON= Retrieve the metadata of the "posts" node of
 "alice@example.com":
 
 ~~~~ {.bash}
@@ -576,7 +576,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /:channel/subscribers/:node
 ---------------------------
@@ -613,7 +613,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET= Retrieve the subscribers of the "posts" node of
+ JSON GET= Retrieve the subscribers of the "posts" node of
 "alice@example.com":
 
 ~~~~ {.bash}
@@ -661,7 +661,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /:channel/subscribers/:node/approve
 -----------------------------------
@@ -694,7 +694,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET= Retrieve subscription states of the "posts" node of
+ JSON GET= Retrieve subscription states of the "posts" node of
 "alice@example.com":
 
 ~~~~ {.bash}
@@ -730,7 +730,7 @@ Content-Type: application/json
 200 OK
 ~~~~
 
-</tabber>
+
 
 /:channel/media
 ---------------
@@ -792,7 +792,7 @@ Notes
 
 Examples
 
-<tabber> JSON GET=
+ JSON GET=
 
 :   retrieve a list of all media in a channel together with metadata
 
@@ -866,7 +866,7 @@ POST {"filename": "testimage.jpg",
 }
 ~~~~
 
-</tabber>
+
 
 /:channel/media/:media
 ----------------------
@@ -915,7 +915,7 @@ Notes
 
 Examples
 
-<tabber> JSON GET=
+ JSON GET=
 
 :   Get media
 
@@ -970,7 +970,7 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 // 200 response
 ~~~~
 
-</tabber>
+
 
 /:channel/media/avatar
 ----------------------
@@ -1027,7 +1027,7 @@ Note
 
 Examples
 
-<tabber> JSON PUT= upload a new avatar
+ JSON PUT= upload a new avatar
 
 ~~~~ {.javascript}
 PUT {"filename": "avatar.jpg", 
@@ -1080,7 +1080,7 @@ DELETE https://api.example.com/alice@domain.com/avatar
 // 200 response
 ~~~~
 
-</tabber>
+
 
 /:channel
 ---------
@@ -1101,7 +1101,7 @@ Responses
 
 Examples
 
-<tabber> POST= Crates the topic channel
+ POST= Crates the topic channel
 "talesofalice@topics.example.com":
 
 ~~~~ {.bash}
@@ -1112,7 +1112,7 @@ POST /talesofalice@topics.example.com
 200 OK
 ~~~~
 
-</tabber>
+
 
 /:channel/similar
 -----------------
@@ -1138,7 +1138,7 @@ Responses
 
 Examples
 
-<tabber> GET= Retrieve similar channels to node "alice@example.com":
+ GET= Retrieve similar channels to node "alice@example.com":
 
 ~~~~ {.bash}
 GET /alice@example.com/similar
@@ -1169,7 +1169,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /subscribed
 -----------
@@ -1199,7 +1199,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET= Retrieve the own subscribed-to channel nodes as
+ JSON GET= Retrieve the own subscribed-to channel nodes as
 "alice@example.com":
 
 ~~~~ {.bash}
@@ -1232,7 +1232,7 @@ Content-Type: application/json
 200 OK
 ~~~~
 
-</tabber>
+
 
 /sync
 -----
@@ -1267,7 +1267,7 @@ Notes
 
 Examples
 
-<tabber> JSON GET=
+ JSON GET=
 
 -   retrieve **all** channel posts since: `2012-11-01T00:00:00Z`
 -   but not more than `2` per channel
@@ -1321,7 +1321,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /notification\_settings
 -----------------------
@@ -1350,7 +1350,7 @@ Notes
 
 Examples
 
-<tabber> JSON GET= Retrieves notification settings:
+ JSON GET= Retrieves notification settings:
 
 ~~~~ {.bash}
 GET /notification_settings?type=email
@@ -1404,7 +1404,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /search
 -------
@@ -1434,7 +1434,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET for metadata= Retrieve channels that have the keyword
+ JSON GET for metadata= Retrieve channels that have the keyword
 **hack** in their metadata:
 
 ~~~~ {.bash}
@@ -1494,7 +1494,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /recommendations
 ----------------
@@ -1522,7 +1522,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET= Recommend channels for user **alice@example.com**:
+ JSON GET= Recommend channels for user **alice@example.com**:
 
 ~~~~ {.bash}
 GET /recommendations?user=alice@example.com
@@ -1553,7 +1553,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /most\_active
 -------------
@@ -1580,7 +1580,7 @@ Responses
 
 Examples
 
-<tabber> JSON GET= Retrieve the most active channels:
+ JSON GET= Retrieve the most active channels:
 
 ~~~~ {.bash}
 GET /most_active
@@ -1611,7 +1611,7 @@ Content-Type: application/json
 }
 ~~~~
 
-</tabber>
+
 
 /account/pw/change
 ------------------
@@ -1631,7 +1631,7 @@ Responses
 
 Examples
 
-<tabber> JSON POST= Updates user's password:
+ JSON POST= Updates user's password:
 
 ~~~~ {.bash}
 POST /account/pw/change
@@ -1647,7 +1647,7 @@ Content-Type: application/json
 200 OK
 ~~~~
 
-</tabber>
+
 
 /account/pw/reset
 -----------------
@@ -1670,7 +1670,7 @@ Notes
 
 Examples
 
-<tabber> JSON POST= Resets user's password:
+ JSON POST= Resets user's password:
 
 ~~~~ {.bash}
 POST /account/pw/reset
@@ -1685,4 +1685,4 @@ Content-Type: application/json
 200 OK
 ~~~~
 
-</tabber>
+
