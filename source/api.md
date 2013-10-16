@@ -1,5 +1,3 @@
-\_\_TOC\_\_
-
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
 
@@ -38,17 +36,19 @@ to discover the API server for a domain.
 
 A DNS lookup for the `_buddycloud-api._tcp.example.com` [TXT
 record](https://en.wikipedia.org/wiki/TXT_record) will give you the
-server.  dig command=
+server.
 
-~~~~ {.bash}
+dig command=
+
+~~~~ bash
 $ dig txt _buddycloud-api._tcp.EXAMPLE.COM
-...
+…
 ;; ANSWER SECTION:
 _buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0" "host=buddycloud.EXAMPLE.COM" "protocol=https" "path=/api" "port=443"
 ~~~~
 
 This tells a client that any API calls for `example.com` should be made
-against `https://buddycloud.example.com:443/api` 
+against `https://buddycloud.example.com:443/api`
 
 Authenticating
 ==============
@@ -103,8 +103,8 @@ Visibility
 *who can see what?*
 
   ------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
-  |                                          | Example                                | producer   | moderator   | follower+post   | follower   | anonymous/web   | banned
-  | Channel Jid                              | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
+  | Element                                  | Example                                | producer   | moderator   | follower+post   | follower   | anonymous/web   | banned
+  | Channel address                          | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
   | Channel name                             | My little channel                      | yes        | yes         | yes             | yes        | yes             | yes
   | Channel description                      | A channel about me                     | yes        | yes         | yes             | yes        | yes             | yes
   | open channel: mood                       | Wishing it was Friday                  | yes        | yes         | yes             | yes        | yes             | yes
@@ -119,27 +119,6 @@ Visibility
   | banned list                              |                                        | yes        | yes         | no              | no         | no              | no
   | closed personal channel: outside roles   | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | no              | no
   ------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
-
-Changes
--------
-
-*who can change what?*
-
-  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ ----------------------------------------------- ----------------- ------------ ----------------- ----------
-  |                                      | server operation                                               | Example                                           | producer   | moderator                                     | follower+post   | follower   | anonymous/web   | banned
-  | Channel Jid                          |                                                                | me@domain.com                                     | no         | no                                            | no              | no         | no              | no
-  | Channel name                         | manage-node-configuration *pubsub\#title*                      | My little channel                                 | yes        | no                                            | no              | no         | no              | no
-  | Channel description                  | manage-node-configuration *pubsub\#description*                | A channel about me                                | yes        | no                                            | no              | no         | no              | no
-  | mood                                 | publish-node-items in *status* node                            | Wishing it was Friday                             | yes        | no                                            | no              | no         | no              | no
-  | geoloc                               | publish-node-items in *geoloc* nodes                           | News Cafe                                         | yes        | no                                            | no              | no         | no              | no
-  | add post                             | publish-node-items in *posts* node                             | Lunch with me?                                    | yes        | yes                                           | yes             | no         | no              | no
-  | remove post                          | retract-node-items (in *posts* node)                           |                                                   | yes        | yes                                           | no              | no         | no              | no
-  | approve new followers                | manage-node-configuration *buddycloud\#approve\_followers*     | new followers must be approved *yes* or *no*      | yes        | personal channels: no / topic channels: yes   | no              | no         | no              | no
-  | set default role for new followers   | manage-node-configuration *buddycloud\#default\_affiliation*   | new followers are *follower* or *follower+post*   | yes        | no                                            | no              | no         | no              | no
-  | channel privacy                      | manage-node-configuration *pubsub\#access\_model*              | toggle open / closed channel                      | yes        | no                                            | no              | no         | no              | no
-  | change role of a follower            | manage-node-affiliations                                       |                                                   | yes        | yes                                           | no              | no         | no              | no
-  | make moderator                       | manage-node-affiliations                                       |                                                   | yes        | no                                            | no              | no         | no              | no
-  -------------------------------------- ---------------------------------------------------------------- --------------------------------------------------- ------------ ----------------------------------------------- ----------------- ------------ ----------------- ----------
 
 API Endpoints
 =============
@@ -185,9 +164,9 @@ Post Threading
     specified in the [Atom Threading
     Extensions](http://www.ietf.org/rfc/rfc4685.txt)
 
- JSON= uses `replyTo`. For example:
+JSON= uses `replyTo`. For example:
 
-~~~~ {.javascript}
+~~~~ javascript
       { "author" : "alice@example.com",
         "content" : "Ok",
         "id" : "17163726-ea90-453e-ad25-455336a83fd4",
@@ -198,17 +177,15 @@ Post Threading
       }
 ~~~~
 
-|-| XML=
+XML=
 
-~~~~ {.xml}
+~~~~ xml
 <entry xmlns="http://www.w3.org/2005/Atom">
-  ...
+  …
   <!-- This entry is a comment on the post with ID "original-post" -->
   <in-reply-to xmlns="http://purl.org/syndication/thread/1.0" ref="original-post"/>
 </entry>
 ~~~~
-
-
 
 Notes
 :   When posting an item, the item's ID and author don't need to be
@@ -222,19 +199,17 @@ Notes
 
 Examples
 
+`JSON GET=`
 
-
-`JSONÂ GET=`
-
-~~~~ {.bash}
+~~~~ bash
 GET /alice@examle.com/content/posts
 Accept: application/json
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 [
   {
     "id": "foo",
@@ -260,37 +235,33 @@ Content-Type: application/json
 ]
 ~~~~
 
-|-|
+`JSON POST=`
 
-`JSONÂ POST=`
-
-~~~~ {.javascript}
+~~~~ javascript
 POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
-...
+…
 {
   "content": "Hello JSON!"
 }
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 201 Created
 Location: http://api.example.com/bob@example.com/content/posts/bipp
-...
+…
 ~~~~
-
-|-|
 
 `XML=`
 
 Retrieve all posts from "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/content/posts
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Alice's posts</title>
   <entry>
@@ -328,14 +299,14 @@ GET /alice@example.com/content/posts
 
 Retrieve the newest post from "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/content/posts?max=1
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 200 OK
 Content-Type: application/atom+xml
-...
+…
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Alice's posts</title>
   <entry>
@@ -352,14 +323,14 @@ Content-Type: application/atom+xml
 
 Get the two newest posts that are older than the one retrieved above:
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/content/posts?max=2&after=foo
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 200 OK
 Content-Type: application/atom+xml
-...
+…
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Alice's posts</title>
   <entry>
@@ -385,42 +356,40 @@ Content-Type: application/atom+xml
 
 Add a post to "bob@example.com":
 
-~~~~ {.xml}
+~~~~ xml
 POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
-...
+…
 <entry xmlns="http://www.w3.org/2005/Atom">
   <content>Hello World!</content>
 </entry>
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 201 Created
 Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
-...
+…
 ~~~~
 
 Comment on the newest post of "alice@example.com":
 
-~~~~ {.xml}
+~~~~ xml
 POST /alice@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
-...
+…
 <entry xmlns="http://www.w3.org/2005/Atom">
   <in-reply-to ref="foo" xmlns="http://purl.org/syndication/thread/1.0"/>
   <content>And this is my newest comment ;)</content>
 </entry>
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 201 Created
 Location: http://api.example.com/alice@example.com/content/posts/fooboo
-...
+…
 ~~~~
-
-
 
 /:channel/content/:item/
 ------------------------
@@ -456,17 +425,17 @@ Notes
 
 Examples
 
- JSON GET= Retrieve a post
+JSON GET= Retrieve a post
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/content/posts/baz
 Accept: application/json
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "id": "baz",
   "author": "alice@example.com",
@@ -476,16 +445,16 @@ Content-Type: application/json
 }
 ~~~~
 
-|-| XML GET= Retrieve the post with ID "baz" of "alice@example.com":
+XML GET= Retrieve the post with ID "baz" of "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/content/posts/baz
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 200 OK
 Content-Type: application/atom+xml
-...
+…
 <entry xmlns="http://www.w3.org/2005/Atom">
   <id>baz</id>
   <author>
@@ -500,18 +469,16 @@ Content-Type: application/atom+xml
 </entry>
 ~~~~
 
-|-| DELETE= Deletes the post with ID "baz" of "alice@example.com":
+DELETE= Deletes the post with ID "baz" of "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 DELETE /alice@example.com/content/posts/baz
 ~~~~
 
-~~~~ {.xml}
+~~~~ xml
 204 OK
 No Content
 ~~~~
-
-
 
 /:channel/metadata/:node
 ------------------------
@@ -555,17 +522,16 @@ Notes
 
 Example
 
- JSON= Retrieve the metadata of the "posts" node of
-"alice@example.com":
+JSON= Retrieve the metadata of the "posts" node of "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/metadata/posts
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "title": "Alice's Posts",
   "description": "Everything about Alice",
@@ -575,8 +541,6 @@ Content-Type: application/json
   "default_affiliation": "publisher" 
 }
 ~~~~
-
-
 
 /:channel/subscribers/:node
 ---------------------------
@@ -613,55 +577,53 @@ Responses
 
 Examples
 
- JSON GET= Retrieve the subscribers of the "posts" node of
+JSON GET= Retrieve the subscribers of the "posts" node of
 "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/subscribers/posts
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "alice@example.com": "owner",
   "bob@example.com": "publisher"
 }
 ~~~~
 
-|-| JSON POST= Change the affiliation role of "bob@example.com" (who
-follows the "posts" node of "alice@example.com") to "member":
+JSON POST= Change the affiliation role of "bob@example.com" (who follows
+the "posts" node of "alice@example.com") to "member":
 
-~~~~ {.bash}
+~~~~ bash
 POST /alice@example.com/subscribers/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
-...
+…
 {"bob@example.com": "member"}
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
 
 The affiliation role of "bob@example.com" should be updated:
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/subscribers/posts
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "alice@example.com": "owner",
   "bob@example.com": "member"
 }
 ~~~~
-
-
 
 /:channel/subscribers/:node/approve
 -----------------------------------
@@ -694,17 +656,17 @@ Responses
 
 Examples
 
- JSON GET= Retrieve subscription states of the "posts" node of
+JSON GET= Retrieve subscription states of the "posts" node of
 "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/subscribers/posts/approve
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 [
   {"subscription": "subscribed", "jid": "doe@example.com"},
   {"subscription": "pending", "jid": "bob@example.com"},
@@ -712,25 +674,23 @@ Content-Type: application/json
 ]
 ~~~~
 
-|-| JSON POST= Approves the request from "bob@example.com" and denies
-the one from "john@example.com":
+JSON POST= Approves the request from "bob@example.com" and denies the
+one from "john@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 POST /alice@example.com/subscribers/posts/approve
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
-...
+…
 [
   {"subscription": "subscribed", "jid": "bob@example.com"},
   {"subscription": "none", "jid": "john@example.com"}
 ]
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
-
-
 
 /:channel/media
 ---------------
@@ -792,17 +752,17 @@ Notes
 
 Examples
 
- JSON GET=
+JSON GET=
 
 :   retrieve a list of all media in a channel together with metadata
 
-~~~~ {.bash}
+~~~~ bash
 GET https://api.example.com/channel@topics.domain.com/media
 ~~~~
 
 :   response, if everything went ok
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response
 {{
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -835,9 +795,9 @@ GET https://api.example.com/channel@topics.domain.com/media
  }}
 ~~~~
 
-|-| JSON POST= upload a new item to **channel@topics.domain.com**
+JSON POST= upload a new item to **channel@topics.domain.com**
 
-~~~~ {.javascript}
+~~~~ javascript
 POST {"filename": "testimage.jpg", 
       "title": "Test Image", 
       "description": "My test image", 
@@ -848,7 +808,7 @@ POST {"filename": "testimage.jpg",
 
 :   response
 
-~~~~ {.javascript}
+~~~~ javascript
 // 201 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -865,8 +825,6 @@ POST {"filename": "testimage.jpg",
   "entityId":"channel@topics.domain.com"
 }
 ~~~~
-
-
 
 /:channel/media/:media
 ----------------------
@@ -915,23 +873,23 @@ Notes
 
 Examples
 
- JSON GET=
+JSON GET=
 
 :   Get media
 
-~~~~ {.bash}
+~~~~ bash
 GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3?maxwidth=640
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response with the media content
 ~~~~
 
-|-| JSON POST=
+JSON POST=
 
 :   update the media information
 
-~~~~ {.javascript}
+~~~~ javascript
 POST {"filename": "newname.jpg", 
       "title": "New Title", 
       "description": "New description", 
@@ -940,7 +898,7 @@ POST {"filename": "newname.jpg",
 
 :   response, if everything went ok
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -958,19 +916,17 @@ POST {"filename": "newname.jpg",
 }
 ~~~~
 
-|-| JSON DELETE=
+JSON DELETE=
 
 :   Delete the media
 
-~~~~ {.bash}
+~~~~ bash
 DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response
 ~~~~
-
-
 
 /:channel/media/avatar
 ----------------------
@@ -1027,9 +983,9 @@ Note
 
 Examples
 
- JSON PUT= upload a new avatar
+JSON PUT= upload a new avatar
 
-~~~~ {.javascript}
+~~~~ javascript
 PUT {"filename": "avatar.jpg", 
       "title": "My New Avatar", 
       "description": "My brand new avatar", 
@@ -1040,7 +996,7 @@ PUT {"filename": "avatar.jpg",
 
 :   response, if everything went ok
 
-~~~~ {.javascript}
+~~~~ javascript
 // 201 response
 {
   "id":"lETuJi8rPE4IfQrygN6rVtGx3",
@@ -1058,29 +1014,27 @@ PUT {"filename": "avatar.jpg",
 }
 ~~~~
 
-|-| JSON GET=
+JSON GET=
 
 :   Visualize Alice's new avatar
 
-~~~~ {.bash}
+~~~~ bash
 GET https://api.example.com/alice@domain.com/avatar
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response with the picture content
 ~~~~
 
-|-| JSON DELETE= Delete the avatar
+JSON DELETE= Delete the avatar
 
-~~~~ {.bash}
+~~~~ bash
 DELETE https://api.example.com/alice@domain.com/avatar
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 // 200 response
 ~~~~
-
-
 
 /:channel
 ---------
@@ -1101,18 +1055,15 @@ Responses
 
 Examples
 
- POST= Crates the topic channel
-"talesofalice@topics.example.com":
+POST= Crates the topic channel "talesofalice@topics.example.com":
 
-~~~~ {.bash}
+~~~~ bash
 POST /talesofalice@topics.example.com
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
-
-
 
 /:channel/similar
 -----------------
@@ -1138,16 +1089,16 @@ Responses
 
 Examples
 
- GET= Retrieve similar channels to node "alice@example.com":
+GET= Retrieve similar channels to node "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /alice@example.com/similar
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "items" : [ { "channelType" : "topic",
         "creationDate" : "2012-04-24T09:13:51+0000",
         "defaultAffiliation" : "publisher",
@@ -1168,8 +1119,6 @@ Content-Type: application/json
     }
 }
 ~~~~
-
-
 
 /subscribed
 -----------
@@ -1199,18 +1148,18 @@ Responses
 
 Examples
 
- JSON GET= Retrieve the own subscribed-to channel nodes as
+JSON GET= Retrieve the own subscribed-to channel nodes as
 "alice@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 GET /subscribed
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "alice@example.com/posts": "owner",
   "bob@example.com/posts": "publisher",
@@ -1218,21 +1167,19 @@ Content-Type: application/json
 }
 ~~~~
 
-|-| JSON POST= Subscribe to "bob@example.com":
+JSON POST= Subscribe to "bob@example.com":
 
-~~~~ {.bash}
+~~~~ bash
 POST /subscribed
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/json
-...
+…
 {"bob@example.com/posts": "publisher"}
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
-
-
 
 /sync
 -----
@@ -1267,19 +1214,19 @@ Notes
 
 Examples
 
- JSON GET=
+JSON GET=
 
 -   retrieve **all** channel posts since: `2012-11-01T00:00:00Z`
 -   but not more than `2` per channel
 
-~~~~ {.bash}
+~~~~ bash
 GET /sync?since=2012-11-01T00:00:00Z&max=2
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "/user/bob@example.com/posts" : [ { "author" : "bob@example.com",
         "content" : "Nice post.",
         "id" : "a8eb0384-b504-4aab-9b51-6174a7f9efe7",
@@ -1304,24 +1251,22 @@ Content-Type: application/json
 }
 ~~~~
 
-|-| JSON GET with counters=
+JSON GET with counters=
 
 -   retrieve **all** post counters since: `2012-11-01T00:00:00Z`
 
-~~~~ {.bash}
+~~~~ bash
 GET /sync?since=2012-11-01T00:00:00Z&counters=true&max=1000
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "/user/bob@example.com/posts" : 3,
   "/user/alice@example.com/posts" : 10
 }
 ~~~~
-
-
 
 /notification\_settings
 -----------------------
@@ -1350,16 +1295,16 @@ Notes
 
 Examples
 
- JSON GET= Retrieves notification settings:
+JSON GET= Retrieves notification settings:
 
-~~~~ {.bash}
+~~~~ bash
 GET /notification_settings?type=email
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "target": "mail@alice.com",
   "postAfterMe": "true",
@@ -1371,12 +1316,12 @@ Content-Type: application/json
 }
 ~~~~
 
-|-| JSON POST= Updates notification settings:
+JSON POST= Updates notification settings:
 
-~~~~ {.bash}
+~~~~ bash
 POST /notification_settings
 Content-Type: application/json
-...
+…
 {
   "type": "email",
   "target": "mail@alice.com",
@@ -1389,10 +1334,10 @@ Content-Type: application/json
 }
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {
   "target": "mail@alice.com",
   "postAfterMe": "true",
@@ -1403,8 +1348,6 @@ Content-Type: application/json
   "followRequest": "false"
 }
 ~~~~
-
-
 
 /search
 -------
@@ -1434,17 +1377,17 @@ Responses
 
 Examples
 
- JSON GET for metadata= Retrieve channels that have the keyword
-**hack** in their metadata:
+JSON GET for metadata= Retrieve channels that have the keyword **hack**
+in their metadata:
 
-~~~~ {.bash}
+~~~~ bash
 GET /search?type=metadata&q=hack
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 {"items":
   [{"jid":"team@topics.buddycloud.org",
     "description":"/dev/hack",
@@ -1458,17 +1401,17 @@ Content-Type: application/json
 }
 ~~~~
 
-|-| JSON GET for content= Retrieve posts that have the keyword **hack**
-in their content:
+JSON GET for content= Retrieve posts that have the keyword **hack** in
+their content:
 
-~~~~ {.bash}
+~~~~ bash
 GET /search?type=content&q=hack
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "items" : [ { "author" : "jayteeuk@wyrddreams.org",
         "content" : "Hacking in the evening of Online Services Sprint, Day One.",
         "id" : "1c6cf8b1-cfad-41fb-864a-73accf614484",
@@ -1493,8 +1436,6 @@ Content-Type: application/json
     }
 }
 ~~~~
-
-
 
 /recommendations
 ----------------
@@ -1522,16 +1463,16 @@ Responses
 
 Examples
 
- JSON GET= Recommend channels for user **alice@example.com**:
+JSON GET= Recommend channels for user **alice@example.com**:
 
-~~~~ {.bash}
+~~~~ bash
 GET /recommendations?user=alice@example.com
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "items" : [ { "channelType" : "topic",
         "creationDate" : "2012-04-24T09:13:51+0000",
         "defaultAffiliation" : "publisher",
@@ -1552,8 +1493,6 @@ Content-Type: application/json
     }
 }
 ~~~~
-
-
 
 /most\_active
 -------------
@@ -1580,16 +1519,16 @@ Responses
 
 Examples
 
- JSON GET= Retrieve the most active channels:
+JSON GET= Retrieve the most active channels:
 
-~~~~ {.bash}
+~~~~ bash
 GET /most_active
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 Content-Type: application/json
-...
+…
 { "items" : [ { "channelType" : "topic",
         "creationDate" : "2012-08-05T14:57:26+0000",
         "defaultAffiliation" : "publisher",
@@ -1611,8 +1550,6 @@ Content-Type: application/json
 }
 ~~~~
 
-
-
 /account/pw/change
 ------------------
 
@@ -1631,23 +1568,21 @@ Responses
 
 Examples
 
- JSON POST= Updates user's password:
+JSON POST= Updates user's password:
 
-~~~~ {.bash}
+~~~~ bash
 POST /account/pw/change
 Content-Type: application/json
-...
+…
 {
   "username": "alice@example.com",
   "password": "newpassword"
 }
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
-
-
 
 /account/pw/reset
 -----------------
@@ -1670,19 +1605,73 @@ Notes
 
 Examples
 
- JSON POST= Resets user's password:
+JSON POST= Resets user's password:
 
-~~~~ {.bash}
+~~~~ bash
 POST /account/pw/reset
 Content-Type: application/json
-...
+…
 {
   "username": "alice@example.com"
 }
 ~~~~
 
-~~~~ {.javascript}
+~~~~ javascript
 200 OK
 ~~~~
 
+/account
+--------
 
+Description
+:   Creates or deletes an user account.
+
+Attributes
+:   *username* - XMPP username (user@domain or simply user, which will
+    use the default domain configured in the API).
+:   *password* - A password for the XMPP account.
+:   *email* - E-mail address to receive push notifications.
+
+Accept
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Creates an user account.
+:   **DELETE** - Deletes an user account.
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if authentication is required, but not
+    provided.
+
+Example
+
+### POST
+
+Creates an user account
+
+~~~~ bash
+POST /account
+…
+{
+  "username": "alice@shakespeare.lit",
+  "password": "pass123",
+  "email": "alice@email.com" 
+}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+### DELETE
+
+Deletes an user account
+
+~~~~ bash
+DELETE /account
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
