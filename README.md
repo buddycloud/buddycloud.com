@@ -11,7 +11,7 @@ Middleman is a Ruby static website generator. This means you can develop your st
 
 ### Installation instructions
 
-* `$> git clone git@github.com:buddycloud/buddycloud.github.com.git`.
+* `$> git clone git@github.com:buddycloud/buddycloud.com.git`.
 * `$> bundle` (install Middleman and dependencies)
 
 ### First steps
