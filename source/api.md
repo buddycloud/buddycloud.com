@@ -1,3 +1,5 @@
+new api pages
+
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
 
