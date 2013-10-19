@@ -31,6 +31,8 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 
 * `$> middleman build` (use --clean to remove old files if necessary).
 
-### Publishing the website
+### Publishing your changes
 
-Read https://github.com/neo/middleman-gh-pages.
+Files are updated to the gh_pages branch in this repo
+`rake publish`
+
