@@ -11,8 +11,8 @@ Middleman is a Ruby static website generator. This means you can develop your st
 
 ### Installation instructions
 
-* `$> git clone git@github.com:buddycloud/buddycloud.com.git`.
-* `$> bundle` (install Middleman and dependencies)
+* `git clone git@github.com:buddycloud/buddycloud.com.git`.
+* `bundle` (install Middleman and dependencies)
 
 ### First steps
 
@@ -20,7 +20,7 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 
 ### Runing the server in development mode 
 
-* Run `$> middleman server` (or just `$> middleman`). The server autoreloads if configuration changes.
+* Run `middleman server` (or just `$> middleman`). The server autoreloads if configuration changes.
 * Go to `http://localhost:4567`.
 
 ### Configuration
@@ -33,6 +33,7 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 
 ### Publishing your changes
 
-Files are updated to the gh_pages branch in this repo
-`rake publish`
-
+Files are updated to the `gh_pages` branch in this repo
+* build the site: `rake build`
+* publish to the `gh_pages` branch on https://github.com/buddycloud/buddycloud.com repo: `rake publish`
+* view the updates on buddycloud.com
