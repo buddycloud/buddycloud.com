@@ -80,6 +80,7 @@ GEM
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
+    redcarpet (3.0.0)
     rouge (0.3.10)
       thor
     sass (3.2.12)
@@ -107,3 +108,4 @@ DEPENDENCIES
   middleman-gh-pages
   middleman-livereload (~> 3.1.0)
   middleman-syntax (~> 1.2.1)
+  redcarpet

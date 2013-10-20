@@ -7,8 +7,7 @@ The buddycloud HTTP API presents a simple way to access buddycloud
 channels through a REST-like interface. It is thought as an alternative
 to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 
-General Notes
-=============
+# General Notes
 
 HTTPS only
 :   All requests should be sent using HTTPS.
@@ -103,24 +102,24 @@ Visibility
 ----------
 
 *who can see what?*
-
-  ------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
-  | Element                                  | Example                                | producer   | moderator   | follower+post   | follower   | anonymous/web   | banned
-  | Channel address                          | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
-  | Channel name                             | My little channel                      | yes        | yes         | yes             | yes        | yes             | yes
-  | Channel description                      | A channel about me                     | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: mood                       | Wishing it was Friday                  | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: posts                      | Lunch with me?                         | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: geoloc                     | Next: News cafe                        | yes        | yes         | yes             | yes        | no              | no
-  | open channel: subscriber list            |                                        | yes        | yes         | yes             | yes        | yes             | yes
-  | open personal channel: outside roles     | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | yes             | yes
-  | closed channel: geoloc                   | Office                                 | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: posts                    | Did she really say that?               | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: mood                     | It's still Thursday                    | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: subscriber list          |                                        | yes        | yes         | yes             | yes        | no              | no
-  | banned list                              |                                        | yes        | yes         | no              | no         | no              | no
-  | closed personal channel: outside roles   | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | no              | no
-  ------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
+ 
+------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
+| Element                                  | Example                                | producer   | moderator   | follower+post   | follower   | anonymous/web   | banned
+| Channel address                          | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
+| Channel name                             | My little channel                      | yes        | yes         | yes             | yes        | yes             | yes
+| Channel description                      | A channel about me                     | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: mood                       | Wishing it was Friday                  | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: posts                      | Lunch with me?                         | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: geoloc                     | Next: News cafe                        | yes        | yes         | yes             | yes        | no              | no
+| open channel: subscriber list            |                                        | yes        | yes         | yes             | yes        | yes             | yes
+| open personal channel: outside roles     | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | yes             | yes
+| closed channel: geoloc                   | Office                                 | yes        | yes         | yes             | yes        | no              | no
+| closed channel: posts                    | Did she really say that?               | yes        | yes         | yes             | yes        | no              | no
+| closed channel: mood                     | It's still Thursday                    | yes        | yes         | yes             | yes        | no              | no
+| closed channel: subscriber list          |                                        | yes        | yes         | yes             | yes        | no              | no
+| banned list                              |                                        | yes        | yes         | no              | no         | no              | no
+| closed personal channel: outside roles   | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | no              | no
+------------------------------------------ ---------------------------------------- ------------ ------------- ----------------- ------------ ----------------- ----------
 
 API Endpoints
 =============

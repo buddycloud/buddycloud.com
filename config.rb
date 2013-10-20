@@ -44,7 +44,8 @@ activate :directory_indexes
 activate :syntax
 
 # Set Markdown Engine
-set :markdown_engine, :kramdown
+set :markdown_engine, :redcarpet
+set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
 
 set :relative_links, true
 
