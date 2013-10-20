@@ -34,6 +34,11 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 ### Publishing your changes
 
 Files are updated to the `gh_pages` branch in this repo
-* build the site: `rake build`
-* publish to the `gh_pages` branch on https://github.com/buddycloud/buddycloud.com repo: `rake publish`
-* view the updates on buddycloud.com
+```bash
+# build the site
+cd <project root>
+rake build
+# publish to the gh_pages branch on https://github.com/buddycloud/buddycloud.com repo:
+rake publish
+```
+view the updates on http://buddycloud.com
