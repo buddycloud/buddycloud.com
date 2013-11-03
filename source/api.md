@@ -954,11 +954,6 @@ Arguments (PUT)
 :   ***title** (optional)* - the title of the avatar
 :   ***description** (optional)* - a description of the avatar
 
-Arguments (POST)
-:   ***filename** (optional)* - the avatar new filename
-:   ***title** (optional)* - the new title of the avatar
-:   ***description** (optional)* - a new description for the avatar
-
 Parameters
 :   **maxheight** (optional) - returns an avatar thumbnail that fits the
     specified height. Only allowed for GET.
@@ -995,7 +990,7 @@ PUT {"filename": "avatar.jpg",
       https://api.example.com/alice@domain.com/media/avatar
 ~~~~
 
-:   response, if everything went ok
+:   response
 
 ~~~~ javascript
 // 201 response
@@ -1020,22 +1015,9 @@ JSON GET=
 :   Visualize Alice's new avatar
 
 ~~~~ bash
-GET https://api.example.com/alice@domain.com/avatar
+GET https://api.example.com/alice@domain.com/media/avatar
 ~~~~
 
-~~~~ javascript
-// 200 response with the picture content
-~~~~
-
-JSON DELETE= Delete the avatar
-
-~~~~ bash
-DELETE https://api.example.com/alice@domain.com/avatar
-~~~~
-
-~~~~ javascript
-// 200 response
-~~~~
 
 /:channel
 ---------

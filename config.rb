@@ -18,6 +18,16 @@ page "/index.html", layout: :home_layout
 # Helpers
 ###
 
+helpers do
+
+  def nav_link_to(title, path, options = {})
+    if current_resource.url.index(url_for(path))
+      options[:class] = options[:class].to_s + " active"
+    end
+    link_to(title, path, options)
+  end
+end
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
@@ -44,8 +54,7 @@ activate :directory_indexes
 activate :syntax
 
 # Set Markdown Engine
-set :markdown_engine, :redcarpet
-set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
+set :markdown_engine, :kramdown
 
 set :relative_links, true
 

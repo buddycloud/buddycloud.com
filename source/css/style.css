@@ -111,6 +111,14 @@ nav {
   }
     nav a:last-child:after { display: none; }
 
+  nav a.active {
+    font-weight:bold;
+  }
+
+  nav a.active:hover {
+    cursor: default;
+  }
+
 
 .fixedHeader {
   width: 100%;
