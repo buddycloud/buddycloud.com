@@ -14,6 +14,7 @@ Middleman's [GETTING STARTED](http://middlemanapp.com/getting-started/) page is 
 ```bash
 git clone ssh://git@github.com/buddycloud/buddycloud.com.git
 # install Middleman and dependencies
+cd buddycloud.com
 bundle 
 ```
 
