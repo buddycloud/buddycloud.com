@@ -1,0 +1,22 @@
+---
+title: getting started with buddycloud
+---
+
+<h2>hosted or self-install</h2>
+<p>
+  buddycloud is a distributed service. Any domain can run a buddycloud server, and each buddycloud server will find, connect and synchronise data with other buddycloud sites.
+
+  You can use a hosted version of buddycloud, or <a href="/install">install you own buddycloud site</a>. We recommend you start with the hosted version and see if buddycloud is right for you.
+</p>
+<h2>Testing buddycloud using XMPP-FTW</h2>
+<p>
+  Here's a quick demo of buddycloud using XMPP-FTW
+</p>
+
+<% content_for(:page_scripts) do %>
+  <%= javascript_include_tag "underscore-min", "raphael-min", "sequence-diagram" %>
+  <script type="text/javascript">
+    var diagram = Diagram.parse("A->B: Message");
+    diagram.drawSVG("diagram", {theme: 'hand'});
+  </script>
+<% end %>
