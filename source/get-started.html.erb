@@ -1,33 +1,36 @@
 ---
 title: get started with buddycloud
 ---
-
 <h2>hosted or self-install</h2>
 <p>
   buddycloud is a distributed service. Any domain can run a buddycloud server, and each buddycloud server will find, connect and synchronise data with other buddycloud sites.
-  </p>
+</p>
 <p>
-  You can use a hosted version of buddycloud, or <a href="/install">install you own buddycloud site</a>. We recommend you start with the hosted version and see if buddycloud is right for you.
+  You can use a hosted version of buddycloud, or
+  <a href="/install">install you own buddycloud site</a>. We recommend you start with the hosted version and see if buddycloud is right for you.
 </p>
 <h2>Testing buddycloud using XMPP-FTW</h2>
-<p>XMPP-FTW is a great way to get started using buddycloud. It is quick and easy to setup and makes your javascrpt coding against buddycloud go zing!</p>
-<h2>create a your first user login</h2>
-<p>this creates an account for your user. In this example we will create a fresh account but you could also authenticate against your applications existing accounts</p>
-<h2>create a publish subscribe node for your project</h2>
-<p>buddycloud channels contains nodes that hold data that can be subscribed to. In this case we create a node called <code>posts</code> for activity stream updates.</p>
-<p>You could quite easily create a node for each user called <code>todo-list</code> or <code>game-data</code>. Updates to nodes are automatically pushed to all users and devices that follow that user.</p>
-<h2>publish to the posts node</h2>
-<p>Now we publish an update to the user's <code>posts</code> node</i>.</p>  
-<h2>follow other nodes</h2> 
-<h2>get a few historical posts</h2>
-<h2>show off rsm</h2>
-
+<p>
+  XMPP-FTW is a great way to get started using buddycloud. It is quick and easy to setup and makes your javascrpt coding against buddycloud go zing!
 </p>
-
-<% content_for(:page_scripts) do %>
-  <%= javascript_include_tag "underscore-min", "raphael-min", "sequence-diagram" %>
-  <script type="text/javascript">
-    var diagram = Diagram.parse("A->B: Message");
-    diagram.drawSVG("diagram", {theme: 'hand'});
-  </script>
-<% end %>
+<h2>create a your first user login</h2>
+<p>
+  this creates an account for your user. In this example we will create a fresh account but you could also authenticate against your applications existing accounts
+</p>
+<h2>create a publish subscribe node for your project</h2>
+<p>
+  buddycloud channels contains nodes that hold data that can be subscribed to. In this case we create a node called
+  <code>posts</code>
+  for activity stream updates.
+</p>
+<p>
+  You could quite easily create a node for each user called
+  <code>todo-list</code>
+  or
+  <code>game-data</code>. Updates to nodes are automatically pushed to all users and devices that follow that user.
+</p>
+<h2>publish to the posts node</h2>
+<p>
+  Now we publish an update to the user's
+  <code>posts</code>
+  node</i>.
