@@ -1,5 +1,15 @@
 ## buddycloud website
 
+Our static-site-generator should have the following features:
+
+* Pretty URLS
+* Support for Markdown (check)
+* Google sitemap
+* Active menus
+* Publish to github pages (check)
+* Quick Bootstrap (check)
+* Live Preview (check)
+
 ### Requirements
 
 * Pelican 3.3
@@ -49,6 +59,8 @@ View at `http://localhost:8000`
 ```
 
 ### Site generation
+
+To just generate a new version (without starting up a local webserver) just do:
 
 `make html`
 
