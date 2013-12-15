@@ -1,3 +1,5 @@
+{% if using_tags %}
+
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
@@ -11,3 +13,5 @@
         </ul>
     </section>
 {% endblock %}
+
+{% endif %}

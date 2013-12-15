@@ -1,3 +1,5 @@
+{% if using_tags %}
+
 {% if article.tags %}
     {% if TAG_LIST_SEPARATOR is not defined %}
         {% set TAG_LIST_SEPARATOR = "/" %}
@@ -10,4 +12,6 @@
 	        {{ TAG_LIST_SEPARATOR }}
 	    {% endif %}
 	{% endfor %}
+{% endif %}
+
 {% endif %}
