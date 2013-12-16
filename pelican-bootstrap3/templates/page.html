@@ -2,14 +2,22 @@
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
     <section id="content" class="body">
-        <h1 class="entry-title">{{ page.title }}</h1>
-        {% if PDF_PROCESSOR %}
-            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
-                get the pdf
-            </a>
-        {% endif %}
-        <div class="entry-content">
-            {{ page.content }}
-        </div>
-    </section>
+        <div class="page-header">
+		<h1 class="entry-title">{{ page.title }}</h1>
+	</div>
+	{% if page.slug == "api" %}
+	<div class="entry-navbar">
+		{ API navigation bar linking to sections within the API documentation }
+		<ul class="nav nav-pills nav-stacked">
+		</ul>
+	</div>
+	<div class="entry-content">
+		{{ page.content }}
+	</div>
+	{% else %}
+	<div class="entry-content">
+		{{ page.content }}
+	</div>	    
+	{% endif %}
+  </section>
 {% endblock %}
