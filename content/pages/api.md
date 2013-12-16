@@ -1365,6 +1365,7 @@ Methods
 
 Parameters
 :   **type** - Type of notification transport (email, gcm)
+:   **target (optional)** - Target address (email address, gcm registration id)
 
 Responses
 :   **200 OK** on success.
@@ -1379,14 +1380,14 @@ Examples
 <tabber> JSON GET= Retrieves notification settings:
 
 ~~~~ bash
-GET /notification_settings?type=email
+GET /notification_settings?type=email&target=mail@alice.com
 ~~~~
 
 ~~~~ javascript
 200 OK
 Content-Type: application/json
 
-{
+[{
   "target": "mail@alice.com",
   "postAfterMe": "true",
   "postMentionedMe": "true",
@@ -1394,7 +1395,7 @@ Content-Type: application/json
   "postOnSubscribedChannel": "false",
   "followMyChannel ": "true",
   "followRequest": "true"
-}
+}]
 ~~~~
 
 |-| JSON POST= Updates notification settings:
