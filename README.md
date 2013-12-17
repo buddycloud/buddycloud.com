@@ -13,6 +13,7 @@ Our static-site-generator should have the following features:
 ### Requirements
 
 * Pelican 3.3
+* ghp-import
 * Markdown 2.3.1
 
 ### Introduction to Pelican

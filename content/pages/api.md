@@ -1362,6 +1362,7 @@ Content Types
 Methods
 :   **GET** - Retrieves the user's notification settings.
 :   **POST** - Updates the user's notification settings.
+:   **DELETE** - Deletes user's notification settings.
 
 Parameters
 :   **type** - Type of notification transport (email, gcm)
@@ -1429,6 +1430,22 @@ Content-Type: application/json
   "followMyChannel ": "false",
   "followRequest": "false"
 }
+~~~~
+
+|-| JSON DELETE= Deletes notification settings:
+
+~~~~ bash
+DELETE /notification_settings
+Content-Type: application/json
+
+{
+  "type": "email",
+  "target": "mail@alice.com",
+}
+~~~~
+
+~~~~ javascript
+200 OK
 ~~~~
 
 </tabber>
