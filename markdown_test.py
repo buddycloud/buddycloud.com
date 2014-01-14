@@ -1,0 +1,5 @@
+import markdown, sys, os
+
+md = markdown.Markdown(extensions=["mdext.markdown_bootstrap"])
+
+md.convertFile(sys.argv[1], "output.md")
