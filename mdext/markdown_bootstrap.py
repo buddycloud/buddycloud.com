@@ -27,13 +27,13 @@ class TabbedNavPre(Preprocessor):
 	This preprocessor will transform that into this:
 
 	{@
-	{@[KEY]}
+	{@$[KEY]}
 	{@[KEY2]}
 	...
 	{@[KEYn]}
 	@}
 	{{@
-	{{@[KEY]
+	{{@$[KEY]
 	VALUE
 	/@}}
 	{{@[KEY2]
@@ -136,16 +136,30 @@ class TabbedNavPre(Preprocessor):
 
 				new_lines.insert(i, "{@")
 				i += 1
+				first = True
 				for key in keys:
-					new_lines.insert(i, "{@[%s]}" % key)
+					if first:
+						new_lines.insert(i,
+							"{@$[%s]}" % key)
+						first = False
+					else:
+						new_lines.insert(i,
+							"{@[%s]}" % key)
 					i += 1
 				new_lines.insert(i, "@}")
 				i += 1
 
 				new_lines.insert(i, "{{@")
 				i += 1
+				first = True
 				for key in keys:
-					new_lines.insert(i, "{{@[%s]" % key)
+					if first:
+						new_lines.insert(i,
+							"{{@$[%s]" % key)
+						first = False
+					else:
+						new_lines.insert(i,
+							"{{@[%s]" % key)
 					i += 1
 					content_lines = values[key].split("\n")
 					for c_line in content_lines:
@@ -176,13 +190,13 @@ class TabbedNavPre(Preprocessor):
 				add_blanks_at.append(i+1)
 
 		for k in range(len(add_blanks_at)):
-			print "inserting at: ", add_blanks_at[k]
 			new_lines.insert(add_blanks_at[k], "\n")
 			for j in range(k+1, len(add_blanks_at)):
 				add_blanks_at[j] += 1
 
-		for k in new_lines:
-			print k
+		for j in range(len(new_lines)):
+			print new_lines[j]
+
 		return new_lines
 
 class TabbedNavBlockProcessor(BlockProcessor):
@@ -192,19 +206,16 @@ class TabbedNavBlockProcessor(BlockProcessor):
 
 	def test(self, parent, block):
 
-		print "PARENT: "
-		print parent.text
-		print "IS THIS BLOCK: "
-		print block
-		print "A TABBED NAV BLOCK?"
-
 		veredict = ( ( block.startswith("{@\n{@[")
+				and block.endswith("]") )
+			or   ( block.startswith("{@\n{@$[")
 				and block.endswith("]") )
 			or   ( block.startswith("/@}}\n{{@[")
 				and block.endswith("]") )
+			or   ( block.startswith("/@}}\n{{@$[")
+				and block.endswith("]") )
 			or   ( block.startswith("/@}}\n@}}") ) )
 
-		print "VEREDICT:", veredict
 		return veredict
 
 	def run(self, parent, blocks):
@@ -235,6 +246,10 @@ class TabbedNavPost(Postprocessor):
 
 	{@[ KEY ]} where KEY can be any character
 
+	Important: you need to specify one of the Tab Key declarations to be the active one. To do so, you insert an $ sign before the enclosing brackets, as follows:
+
+	{@$[ ACTIVE_KEY ]}
+
 	Tab Content declaration sections must be surrounded by the following lines:
 
 	{{@
@@ -244,6 +259,12 @@ class TabbedNavPost(Postprocessor):
 
 	{{@[ KEY ] where KEY must match a key declared at Tab Key declarations
 	/@}}
+
+	Important: The Tab Key declaration that will be automatically active must have a $ sign before the enclosing brackets:
+
+	{{@$[ ACTIVE_KEY ]
+
+	The active KEY must match the active KEY ofthe Tab Key declarations section.
 
 	The lines amidst those will be the content of your tabs.
 	Feel free to use anything defined by the Default Markdown syntax.
@@ -257,7 +278,7 @@ class TabbedNavPost(Postprocessor):
 	{@[KEYn]}
 	@}
 	{{@
-	{{@[KEY]
+	{{@$[KEY]
 	...
 	Your Markdown content for this tab
 	...
@@ -280,9 +301,11 @@ class TabbedNavPost(Postprocessor):
 
 		self.starttabsre = re.compile("(?<!{){@\s+")
 		self.tabkeydeclre = re.compile("(?<!{){@\[.*\]}")
+		self.activetabkeydeclre = re.compile("(?<!{){@\$\[.*\]}")
 		self.endtabsre = re.compile("@}\s+")
 		self.startcontentsre = re.compile("{{@\s+")
 		self.tabcontentdeclre = re.compile("{{@\[.*\]\s*")
+		self.activetabcontentdeclre = re.compile("{{@\$\[.*\]\s*")
 		self.endcontentsre = re.compile("/?@}}")
 
 	def tabkeydeclrepl(self, matchobj):
@@ -292,11 +315,25 @@ class TabbedNavPost(Postprocessor):
 		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
 		return html % (key.replace(" ", "_").lower(), key)
 
+	def activetabkeydeclrepl(self, matchobj):
+		
+		matched = matchobj.group(0).strip()
+		key = matched.replace("{@$[", "").replace("]}", "")
+		html = "\t<li class='active'><a href='#id_%s' data-toggle='tab'>%s</a></li>"
+		return html % (key.replace(" ", "_").lower(), key)
+
 	def tabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
-		html = "\t<div class='tab-pane' id='id_%s'>\n\t\t"
+		html = "\t<div class='tab-pane fade' id='id_%s'>\n\t\t"
+		return html % key.replace(" ", "_").lower()
+
+	def activetabcontentdeclrepl(self, matchobj):
+
+		matched = matchobj.group(0).strip()
+		key = matched.replace("{{@$[", "").replace("]", "")
+		html = "\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
 		return html % key.replace(" ", "_").lower()
 
 	def endingcontentsrepl(self, matchobj):
@@ -321,10 +358,14 @@ class TabbedNavPost(Postprocessor):
 
 	#Replacing all nav tab declarations by bootstrap <li><a> tags
 		text = re.sub(self.tabkeydeclre, self.tabkeydeclrepl, text)
+		text = re.sub(self.activetabkeydeclre,
+			self.activetabkeydeclrepl, text)
 
 	#Replacing all tab pane declarations by bootstrap <div> tags
 		text = re.sub(self.tabcontentdeclre, 
 			self.tabcontentdeclrepl, text)
+		text = re.sub(self.activetabcontentdeclre,
+			self.activetabcontentdeclrepl, text)
 
 	#Replacing all proper ending flags by bootstrap </ul> tags
 		html = "</ul>\n"

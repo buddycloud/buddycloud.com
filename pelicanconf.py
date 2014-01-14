@@ -31,7 +31,8 @@ STATIC_PATHS = [ 'images', 'CNAME' ]
 
 THEME = 'pelican-bootstrap3'
 
-MD_EXTENSIONS = 'mdext.markdown_bootstrap'
+MD_EXTENSIONS = [ 'mdext.markdown_bootstrap' ]
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
