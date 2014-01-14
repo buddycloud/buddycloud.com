@@ -1,5 +1,8 @@
 from markdown.preprocessors import Preprocessor
+from markdown.blockprocessors import BlockProcessor
 from markdown.postprocessors import Postprocessor
+from markdown.util import etree
+from markdown.util import AtomicString
 from markdown.extensions import Extension
 import re
 
@@ -127,7 +130,6 @@ class TabbedNavPre(Preprocessor):
 				for keyval in line.split("|-|"):
 					sep = keyval.find("=")
 					key = keyval[:sep].strip()
-					#key = key.replace("\\n", "")
 					val = keyval[sep+1:]
 					keys.append(key)
 					values[key] = val
@@ -145,7 +147,7 @@ class TabbedNavPre(Preprocessor):
 				for key in keys:
 					new_lines.insert(i, "{{@[%s]" % key)
 					i += 1
-					content_lines = values[key].split("\n")#"\\n")
+					content_lines = values[key].split("\n")
 					for c_line in content_lines:
 						new_lines.insert(i, c_line)
 						i += 1
@@ -154,9 +156,62 @@ class TabbedNavPre(Preprocessor):
 				new_lines.insert(i, "@}}")
 				i += 1
 
+		#Now make sure there's at least one blank line amidst each
+		#Tabbed Nav block (Bootstrap Tooglable Navs Markdown syntax)
+
+		add_blanks_at = []
+		aftertabcontentdefre = re.compile("{{@\[.*\]$")
+
+		for i in range(len(new_lines)):
+
+			line = new_lines[i]
+
+			if line == "{@":
+				add_blanks_at.append(i)
+			elif line == "/@}}":
+				add_blanks_at.append(i)
+			elif line == "@}}":
+				add_blanks_at.append(i+1)
+			elif aftertabcontentdefre.match(line):
+				add_blanks_at.append(i+1)
+
+		for k in range(len(add_blanks_at)):
+			print "inserting at: ", add_blanks_at[k]
+			new_lines.insert(add_blanks_at[k], "\n")
+			for j in range(k+1, len(add_blanks_at)):
+				add_blanks_at[j] += 1
+
 		for k in new_lines:
 			print k
 		return new_lines
+
+class TabbedNavBlockProcessor(BlockProcessor):
+
+	def __init__(self):
+		pass
+
+	def test(self, parent, block):
+
+		print "PARENT: "
+		print parent.text
+		print "IS THIS BLOCK: "
+		print block
+		print "A TABBED NAV BLOCK?"
+
+		veredict = ( ( block.startswith("{@\n{@[")
+				and block.endswith("]") )
+			or   ( block.startswith("/@}}\n{{@[")
+				and block.endswith("]") )
+			or   ( block.startswith("/@}}\n@}}") ) )
+
+		print "VEREDICT:", veredict
+		return veredict
+
+	def run(self, parent, blocks):
+
+		tabbed_nav = etree.SubElement(parent, "tabbed_nav")
+		tabbed_nav.text = AtomicString(blocks[0])
+		blocks.pop(0)
 
 class TabbedNavPost(Postprocessor):
 	"""
@@ -223,10 +278,6 @@ class TabbedNavPost(Postprocessor):
 
 	def __init__(self):
 
-#		self.openingptagre = re.compile("<p>(?=[^<]*[^{]{@.*</p>)",
-#			flags=re.DOTALL)
-#		self.closingptagre = re.compile("@}}(?=[^<]*(?P<target></p>))",
-#			flags=re.DOTALL)
 		self.starttabsre = re.compile("(?<!{){@\s+")
 		self.tabkeydeclre = re.compile("(?<!{){@\[.*\]}")
 		self.endtabsre = re.compile("@}\s+")
@@ -256,10 +307,9 @@ class TabbedNavPost(Postprocessor):
 
 	def run(self, text):
 
-	#Removing the surrounding <p> and </p> tags
-#		text = re.sub(self.openingptagre, "", text)
-#		search = re.search(self.closingptagre, text)
-#		text = text[:search.start(1)] + text[search.start(1)+4:]
+	#Removing the surrounding <tabbed_nav> and </tabbed_nav`> tags
+		text = text.replace("<tabbed_nav>", "")
+		text = text.replace("</tabbed_nav>", "")
 
 	#Replacing all proper starting flags by bootstrap nav tab <ul> tags
 		html = "<ul class='nav nav-tabs'>\n"
@@ -291,6 +341,8 @@ class Bootstrap_Markdown_Extension(Extension):
 	def extendMarkdown(self, md, md_globals):
 		md.preprocessors.add('tabbed_nav', TabbedNavPre(), "_begin")
 		md.postprocessors.add('tabbed_nav', TabbedNavPost(), "_begin")
+		md.parser.blockprocessors.add('tabbed_nav',
+			TabbedNavBlockProcessor(), "_begin")
 
 def makeExtension(configs=None):
 	return Bootstrap_Markdown_Extension(configs=configs)
