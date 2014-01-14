@@ -53,55 +53,55 @@ class TabbedNavPre(Preprocessor):
 	def run(self, lines):
 
 		new_lines = []
-		tabbed_block = ""			
+		tabbed_block = ""
 		inside_block = False
 
 		while ( len(lines) != 0 ):
 			
-			line = lines[0].strip()
+			line = lines[0]
 
 		#Is it just starting a new tabbed block?
-			if line.startswith("<tabber>"):
+			if line.strip().startswith("<tabber>"):
 				inside_block = True
 
-		#Is it finishing a tabbed block?
-			elif line.startswith("</tabber>"):
-				inside_block = False
-				new_lines.append(tabbed_block)
-				tabbed_block = ""
-				lines.pop(0)
-				continue
-
-		#Does it have <tabber> starting tags in the middle of the line?
-			if ( not line.startswith("<tabber>")
-			     and self.brkstartre.match(line) ):
-				split = [line[:line.find("<tabber>")],
-					line[line.find("<tabber>"):] ]
-				lines.pop(0)
-				lines.insert(0, split[1])
-				lines.insert(0, split[0])
-
-		#What about </tabber> ending tags?
-			if ( not line.startswith("</tabber>")
-			     and self.brkendre.match(line) ):
+		#Does it have </tabber> ending tags in the middle of the line?
+			if ( not line.strip().startswith("</tabber>")
+			     and self.brkendre.match(line.strip()) ):
 				split = [line[:line.find("</tabber>")],
 					line[line.find("</tabber>"):] ]
 				lines.pop(0)
 				lines.insert(0, split[1])
 				lines.insert(0, split[0])
+				continue
+
+		#What about <tabber> starting tags?
+			if ( not line.strip().startswith("<tabber>")
+			     and self.brkstartre.match(line.strip()) ):
+				split = [line[:line.find("<tabber>")],
+					line[line.find("<tabber>"):] ]
+				lines.pop(0)
+				lines.insert(0, split[1])
+				lines.insert(0, split[0])
+				continue
 
 		#Is the line empty, within a tabbed block?
 			if line.strip() == "" and inside_block:
-				line = "\\n"
+				line = "\n"
 
 		#If inside block, store line content
 		#to be added as a single line later
 			if inside_block:
-				tabbed_block += line
+				tabbed_block += "\n" + line
 		#Otherwise just add new line
 			else:
 				new_lines.append(line)
 			lines.pop(0)
+
+		#Is it finishing a tabbed block?
+			if line.startswith("</tabber>"):
+				inside_block = False
+				new_lines.append(tabbed_block)
+				tabbed_block = ""
 
 		i = 0
 		while ( i < len(new_lines) ):
@@ -110,7 +110,7 @@ class TabbedNavPre(Preprocessor):
 			i += 1
 
 		#Is this line representing a tabbed content?
-			if line.startswith("<tabber>"):
+			if line.strip().startswith("<tabber>"):
 
 				i -= 1
 			#Swap this line for a bunch of other lines
@@ -123,13 +123,12 @@ class TabbedNavPre(Preprocessor):
 
 				line = line.replace("<tabber>", "")
 				line = line.replace("</tabber>", "")
-				line = line.strip()
 
 				for keyval in line.split("|-|"):
 					sep = keyval.find("=")
 					key = keyval[:sep].strip()
-					key = key.replace("\\n", "")
-					val = keyval[sep+1:].strip()
+					#key = key.replace("\\n", "")
+					val = keyval[sep+1:]
 					keys.append(key)
 					values[key] = val
 
@@ -146,7 +145,7 @@ class TabbedNavPre(Preprocessor):
 				for key in keys:
 					new_lines.insert(i, "{{@[%s]" % key)
 					i += 1
-					content_lines = values[key].split("\\n")
+					content_lines = values[key].split("\n")#"\\n")
 					for c_line in content_lines:
 						new_lines.insert(i, c_line)
 						i += 1
@@ -224,79 +223,66 @@ class TabbedNavPost(Postprocessor):
 
 	def __init__(self):
 
+#		self.openingptagre = re.compile("<p>(?=[^<]*[^{]{@.*</p>)",
+#			flags=re.DOTALL)
+#		self.closingptagre = re.compile("@}}(?=[^<]*(?P<target></p>))",
+#			flags=re.DOTALL)
 		self.starttabsre = re.compile("(?<!{){@\s+")
 		self.tabkeydeclre = re.compile("(?<!{){@\[.*\]}")
 		self.endtabsre = re.compile("@}\s+")
 		self.startcontentsre = re.compile("{{@\s+")
-		self.tabcontentdeclre = re.compile("{{@\[.*\]")
+		self.tabcontentdeclre = re.compile("{{@\[.*\]\s*")
 		self.endcontentsre = re.compile("/?@}}")
 
 	def tabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@[", "").replace("]}", "")
-		html = "<li><a href='#%s' data-toggle='tab'>%s</a></li>\n"
-		return html % (key.replace(" ", "_"), key)
+		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
+		return html % (key.replace(" ", "_").lower(), key)
 
 	def tabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
-		html = "<div class='tab-pane' id='%s'>"
-		return html % key.replace(" ", "_")
+		html = "\t<div class='tab-pane' id='id_%s'>\n\t\t"
+		return html % key.replace(" ", "_").lower()
+
+	def endingcontentsrepl(self, matchobj):
+
+		matched = matchobj.group(0).strip()
+		html = "</div>"
+		return "\t" + html if matched.startswith("/") else html	
 
 	def run(self, text):
 
-		print "NOW IS"
-		print text
-		print "____"
+	#Removing the surrounding <p> and </p> tags
+#		text = re.sub(self.openingptagre, "", text)
+#		search = re.search(self.closingptagre, text)
+#		text = text[:search.start(1)] + text[search.start(1)+4:]
 
 	#Replacing all proper starting flags by bootstrap nav tab <ul> tags
 		html = "<ul class='nav nav-tabs'>\n"
 		text = re.sub(self.starttabsre, html, text)
 
-		print "NOW IS"
-		print text
-		print "____"
-
 	#Replacing all proper starting flags by bootstrap tab content <div> tags
 		html = "<div class='tab-content'>\n"
 		text = re.sub(self.startcontentsre, html, text)
 
-		print "NOW IS"
-		print text
-		print "____"
-
 	#Replacing all nav tab declarations by bootstrap <li><a> tags
 		text = re.sub(self.tabkeydeclre, self.tabkeydeclrepl, text)
-
-		print "NOW IS"
-		print text
-		print "____"
 
 	#Replacing all tab pane declarations by bootstrap <div> tags
 		text = re.sub(self.tabcontentdeclre, 
 			self.tabcontentdeclrepl, text)
 
-		print "NOW IS"
-		print text
-		print "____"
-
 	#Replacing all proper ending flags by bootstrap </ul> tags
 		html = "</ul>\n"
 		text = re.sub(self.endtabsre, html, text)
 
-		print "NOW IS"
-		print text
-		print "____"
-
 	#Replacing all proper ending flags by bootstrap </div> tags
-		html = "</div>"
-		text = re.sub(self.endcontentsre, html, text)
-
-		print "NOW IS"
-		print text
-		print "____"
+		text = re.sub(self.endcontentsre, 
+			self.endingcontentsrepl, text)
 
 		return text
 
