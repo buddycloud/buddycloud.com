@@ -197,8 +197,6 @@ class TabbedNavPre(Preprocessor):
 			for j in range(k+1, len(add_blanks_at)):
 				add_blanks_at[j] += 1
 
-		for line in new_lines:
-			print line
 		return new_lines
 
 class TabbedNavBlockProcessor(BlockProcessor):
@@ -312,61 +310,57 @@ class TabbedNavPost(Postprocessor):
 
 		self.keys_taken = []
 
+	def produce_new_key(self, key):
+
+		real_key = key.strip().replace(" ", "_").lower()
+
+		while (real_key in self.keys_taken):
+
+			real_key = "_" + real_key
+
+		self.keys_taken.append(real_key)
+		return real_key
+
+	def consume_existing_key(self, key):
+
+		real_key = key.strip().replace(" ", "_").lower()
+		stub_keys = map(lambda x: x.replace("_", ""), self.keys_taken)
+
+		if real_key.replace("_", "") in stub_keys:
+		
+			real_key_at = stub_keys.index(real_key.replace("_", ""))
+			real_key = self.keys_taken[real_key_at]
+			self.keys_taken.remove(real_key)
+
+		return real_key
+
 	def tabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@[", "").replace("]}", "")
-
-		real_key = key.strip().replace(" ", "_").lower()
-		if real_key in self.keys_taken:
-			real_key = "_" + real_key
-		self.keys_taken.append(real_key)
-
 		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (real_key, key)
+		return html % (self.produce_new_key(key), key)
 
 	def activetabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@$[", "").replace("]}", "")
-
-		real_key = key.strip().replace(" ", "_").lower()
-		if real_key in self.keys_taken:
-			real_key = "_" + real_key
-		self.keys_taken.append(real_key)
-
 		html = "\t<li class='active'><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (real_key, key)
+		return html % (self.produce_new_key(key), key)
 
 	def tabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
-
-		real_key = key.strip().replace(" ", "_").lower()
-		if real_key.replace("_", "") in map(lambda x: x.replace("_", ""), self.keys_taken):
-			real_key_at = map(lambda x: x.replace("_", ""),
-				self.keys_taken).index(real_key.replace("_", ""))
-			real_key = self.keys_taken[real_key_at]
-			self.keys_taken.remove(real_key)
-
 		html = "\t<div class='tab-pane fade' id='id_%s'>\n\t\t"
-		return html % real_key
+		return html % self.consume_existing_key(key)
 
 	def activetabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@$[", "").replace("]", "")
-
-		real_key = key.strip().replace(" ", "_").lower()
-		if real_key.replace("_", "") in map(lambda x: x.replace("_", ""), self.keys_taken):
-			real_key_at = map(lambda x: x.replace("_", ""),
-				self.keys_taken).index(real_key.replace("_", ""))
-			real_key = self.keys_taken[real_key_at]
-			self.keys_taken.remove(real_key)
-
-		html = "\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
-		return html % real_key
+		html ="\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
+		return html % self.consume_existing_key(key)
 
 	def endingcontentsrepl(self, matchobj):
 
