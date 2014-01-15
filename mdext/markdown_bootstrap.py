@@ -175,6 +175,7 @@ class TabbedNavPre(Preprocessor):
 
 		add_blanks_at = []
 		aftertabcontentdefre = re.compile("{{@\[.*\]$")
+		afteractivetabcontentdefre = re.compile("{{@\$\[.*\]$")
 
 		for i in range(len(new_lines)):
 
@@ -188,12 +189,16 @@ class TabbedNavPre(Preprocessor):
 				add_blanks_at.append(i+1)
 			elif aftertabcontentdefre.match(line):
 				add_blanks_at.append(i+1)
+			elif afteractivetabcontentdefre.match(line):
+				add_blanks_at.append(i+1)
 
 		for k in range(len(add_blanks_at)):
 			new_lines.insert(add_blanks_at[k], "\n")
 			for j in range(k+1, len(add_blanks_at)):
 				add_blanks_at[j] += 1
 
+		for line in new_lines:
+			print line
 		return new_lines
 
 class TabbedNavBlockProcessor(BlockProcessor):
@@ -305,33 +310,63 @@ class TabbedNavPost(Postprocessor):
 		self.activetabcontentdeclre = re.compile("{{@\$\[.*\]\s*")
 		self.endcontentsre = re.compile("/?@}}")
 
+		self.keys_taken = []
+
 	def tabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@[", "").replace("]}", "")
+
+		real_key = key.strip().replace(" ", "_").lower()
+		if real_key in self.keys_taken:
+			real_key = "_" + real_key
+		self.keys_taken.append(real_key)
+
 		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (key.replace(" ", "_").lower(), key)
+		return html % (real_key, key)
 
 	def activetabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@$[", "").replace("]}", "")
+
+		real_key = key.strip().replace(" ", "_").lower()
+		if real_key in self.keys_taken:
+			real_key = "_" + real_key
+		self.keys_taken.append(real_key)
+
 		html = "\t<li class='active'><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (key.replace(" ", "_").lower(), key)
+		return html % (real_key, key)
 
 	def tabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
+
+		real_key = key.strip().replace(" ", "_").lower()
+		if real_key.replace("_", "") in map(lambda x: x.replace("_", ""), self.keys_taken):
+			real_key_at = map(lambda x: x.replace("_", ""),
+				self.keys_taken).index(real_key.replace("_", ""))
+			real_key = self.keys_taken[real_key_at]
+			self.keys_taken.remove(real_key)
+
 		html = "\t<div class='tab-pane fade' id='id_%s'>\n\t\t"
-		return html % key.replace(" ", "_").lower()
+		return html % real_key
 
 	def activetabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@$[", "").replace("]", "")
+
+		real_key = key.strip().replace(" ", "_").lower()
+		if real_key.replace("_", "") in map(lambda x: x.replace("_", ""), self.keys_taken):
+			real_key_at = map(lambda x: x.replace("_", ""),
+				self.keys_taken).index(real_key.replace("_", ""))
+			real_key = self.keys_taken[real_key_at]
+			self.keys_taken.remove(real_key)
+
 		html = "\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
-		return html % key.replace(" ", "_").lower()
+		return html % real_key
 
 	def endingcontentsrepl(self, matchobj):
 
@@ -377,10 +412,10 @@ class TabbedNavPost(Postprocessor):
 class Bootstrap_Markdown_Extension(Extension):
 
 	def extendMarkdown(self, md, md_globals):
-		md.preprocessors.add('tabbed_nav', TabbedNavPre(), "_end")
-		md.postprocessors.add('tabbed_nav', TabbedNavPost(), "_end")
+		md.preprocessors.add('tabbed_nav', TabbedNavPre(), "_begin")
+		md.postprocessors.add('tabbed_nav', TabbedNavPost(), "_begin")
 		md.parser.blockprocessors.add('tabbed_nav',
-			TabbedNavBlockProcessor(), "_end")
+			TabbedNavBlockProcessor(), "_begin")
 
 def makeExtension(configs=None):
 	return Bootstrap_Markdown_Extension(configs=configs)
