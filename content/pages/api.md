@@ -3,6 +3,7 @@ url: api
 save_as: api.html
 
 \_\_TOC\_\_
+Above is the Table of Contents syntax.
 
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").

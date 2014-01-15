@@ -194,9 +194,6 @@ class TabbedNavPre(Preprocessor):
 			for j in range(k+1, len(add_blanks_at)):
 				add_blanks_at[j] += 1
 
-		for j in range(len(new_lines)):
-			print new_lines[j]
-
 		return new_lines
 
 class TabbedNavBlockProcessor(BlockProcessor):
@@ -380,10 +377,10 @@ class TabbedNavPost(Postprocessor):
 class Bootstrap_Markdown_Extension(Extension):
 
 	def extendMarkdown(self, md, md_globals):
-		md.preprocessors.add('tabbed_nav', TabbedNavPre(), "_begin")
-		md.postprocessors.add('tabbed_nav', TabbedNavPost(), "_begin")
+		md.preprocessors.add('tabbed_nav', TabbedNavPre(), "_end")
+		md.postprocessors.add('tabbed_nav', TabbedNavPost(), "_end")
 		md.parser.blockprocessors.add('tabbed_nav',
-			TabbedNavBlockProcessor(), "_begin")
+			TabbedNavBlockProcessor(), "_end")
 
 def makeExtension(configs=None):
 	return Bootstrap_Markdown_Extension(configs=configs)
