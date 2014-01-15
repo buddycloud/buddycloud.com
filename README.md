@@ -77,7 +77,7 @@ view the updates on http://new.buddycloud.com (and eventually buddycloud.com)
 
 We have developed several markdown extensions to fit our needs.
 
-#### Bootstrap Tooglable Navs Markdown Enxtension
+#### Bootstrap Tooglable tabs Markdown Enxtension
 
 Our newly defined Markdown syntax for creating Bootstrap Togglable tabs.
 
