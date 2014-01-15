@@ -8,7 +8,7 @@ import re
 
 class TabbedNavPre(Preprocessor):
 	"""
-	*Bootstrap Tabbed Navigation preprocessor*.
+	*Bootstrap Tooglable tabs preprocessor*.
 	
 	Necessary if the tabbed content was originally converted from
 	wikitext from https://buddycloud.org/wiki,
@@ -201,7 +201,7 @@ class TabbedNavPre(Preprocessor):
 
 class TabbedNavBlockProcessor(BlockProcessor):
 	"""
-	*Bootstrap Tabbed Navigation block processor*.
+	*Bootstrap Tooglable tabs block processor*.
 
 	Necessary to avoid having Markdown surround the
 	Bootstrap Toogable tabs Markdown markups with undesired HTML tags.
@@ -235,7 +235,7 @@ class TabbedNavBlockProcessor(BlockProcessor):
 
 class TabbedNavPost(Postprocessor):
 	"""
-	*Bootstrap Tabbed Navigation postprocessor*.
+	*Bootstrap Tooglable tabs postprocessor*.
 
 	Processes our newly defined Markdown syntax
 	for creating Bootstrap Togglable tabs.
