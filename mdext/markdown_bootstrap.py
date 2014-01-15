@@ -200,6 +200,15 @@ class TabbedNavPre(Preprocessor):
 		return new_lines
 
 class TabbedNavBlockProcessor(BlockProcessor):
+	"""
+	*Bootstrap Tabbed Navigation block processor*.
+
+	Necessary to avoid having Markdown surround the
+	Bootstrap Tooglable Navs Markdown markups with undesired HTML tags.
+
+	Each block of BTNM markup is then surrounded by a <tabbed_nav> element
+	which is then parsed out by our postprocessor.
+	"""
 
 	def __init__(self):
 		pass
@@ -267,7 +276,7 @@ class TabbedNavPost(Postprocessor):
 	The active KEY must match the active KEY ofthe Tab Key declarations section.
 
 	The lines amidst those will be the content of your tabs.
-	Feel free to use anything defined by the Default Markdown syntax.
+	Feel free to use any markup syntax there.
 
 	Example Usage:
 
@@ -307,60 +316,59 @@ class TabbedNavPost(Postprocessor):
 		self.tabcontentdeclre = re.compile("{{@\[.*\]\s*")
 		self.activetabcontentdeclre = re.compile("{{@\$\[.*\]\s*")
 		self.endcontentsre = re.compile("/?@}}")
-
 		self.keys_taken = []
 
-	def produce_new_key(self, key):
+	def produce_new_id(self, key):
 
-		real_key = key.strip().replace(" ", "_").lower()
+		key_id = key.strip().replace(" ", "_").lower()
 
-		while (real_key in self.keys_taken):
+		while (key_id in self.keys_taken):
 
-			real_key = "_" + real_key
+			key_id = "_" + key_id
 
-		self.keys_taken.append(real_key)
-		return real_key
+		self.keys_taken.append(key_id)
+		return key_id
 
-	def consume_existing_key(self, key):
+	def consume_existing_id(self, key):
 
-		real_key = key.strip().replace(" ", "_").lower()
+		key_id = key.strip().replace(" ", "_").lower()
 		stub_keys = map(lambda x: x.replace("_", ""), self.keys_taken)
 
-		if real_key.replace("_", "") in stub_keys:
+		if key_id.replace("_", "") in stub_keys:
 		
-			real_key_at = stub_keys.index(real_key.replace("_", ""))
-			real_key = self.keys_taken[real_key_at]
-			self.keys_taken.remove(real_key)
+			key_id_at = stub_keys.index(key_id.replace("_", ""))
+			key_id = self.keys_taken[key_id_at]
+			self.keys_taken.remove(key_id)
 
-		return real_key
+		return key_id
 
 	def tabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@[", "").replace("]}", "")
 		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (self.produce_new_key(key), key)
+		return html % (self.produce_new_id(key), key)
 
 	def activetabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@$[", "").replace("]}", "")
 		html = "\t<li class='active'><a href='#id_%s' data-toggle='tab'>%s</a></li>"
-		return html % (self.produce_new_key(key), key)
+		return html % (self.produce_new_id(key), key)
 
 	def tabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
 		html = "\t<div class='tab-pane fade' id='id_%s'>\n\t\t"
-		return html % self.consume_existing_key(key)
+		return html % self.consume_existing_id(key)
 
 	def activetabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@$[", "").replace("]", "")
 		html ="\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
-		return html % self.consume_existing_key(key)
+		return html % self.consume_existing_id(key)
 
 	def endingcontentsrepl(self, matchobj):
 

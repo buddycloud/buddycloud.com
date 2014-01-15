@@ -72,3 +72,73 @@ Files are updated to the `gh_pages` branch
 make github
 ```
 view the updates on http://new.buddycloud.com (and eventually buddycloud.com)
+
+### Our in-house Markdown Extensions
+
+We have developed several markdown extensions to fit our needs.
+
+#### Bootstrap Tooglable Navs Markdown Enxtension
+
+Our newly defined Markdown syntax for creating Bootstrap Togglable tabs.
+
+Since Bootstrap requires two HTML elements to compose Tooglable tabs, we also decided it would be easier to implement the transformation if the Markdown syntax also contained two sections, as follows:
+
+There's the **Tab Key declaration** section and the **Tab Content declaration** section.
+
+Tab Key declaration sections must be surrounded by the following lines:
+
+	{@
+	@}
+
+And each line amidst those will contain a Tab Key declaration and should be as follows:
+
+	{@[ KEY ]} where KEY can be any character
+
+*Important:* you need to specify one of the Tab Key declarations to be the active one. To do so, you insert an $ sign before the enclosing brackets, as follows:
+
+	{@$[ ACTIVE_KEY ]}
+
+Tab Content declaration sections must be surrounded by the following lines:
+
+	{{@
+	@}}
+
+And each block of lines amidst those will contain a Tab Content declaration. Remember, it is a block of lines. That block of lines must be surrounded by the following lines:
+
+	{{@[ KEY ] where KEY must match a key declared at Tab Key declarations
+	/@}}
+
+*Important:* The Tab Key declaration that will be automatically active must have a $ sign before the enclosing brackets:
+
+	{{@$[ ACTIVE_KEY ]
+
+The active KEY must match the active KEY ofthe Tab Key declarations section.
+
+The lines amidst those will be the content of your tabs.
+Feel free to use any markup syntax there.
+
+Example Usage:
+
+	{@
+	{@[KEY]}
+	{@[KEY2]}
+	...		(denoting multiple declarations in between)
+	{@[KEYn]}
+	@}
+	{{@
+	{{@$[KEY]
+	...
+	Your Markdown content for this tab
+	...
+	/@}}
+	{{@[KEY2]
+	...
+	Your Markdown content for this tab
+	/@}}
+	...		(denoting multiple declarations in between
+	{@[KEYn]
+	...
+	Your Markdown content for this tab
+	...
+	/@}}
+	@}}
