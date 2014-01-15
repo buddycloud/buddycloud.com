@@ -3,12 +3,12 @@ url: markdown_bootstrap_test
 save_as: markdown_bootstrap_test.html
 
 {@
-{@[JSON GET]}
+{@$[JSON GET]}
 {@[JSON POST]}
 {@[XML]}
 @}
 {{@
-{{@[JSON GET]
+{{@$[JSON GET]
 
 ~~~~ bash
 GET /alice@examle.com/content/posts
