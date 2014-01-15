@@ -1,4 +1,4 @@
-Title: Test -> Convertion from Markdown-Bootstrap syntax
+Title: Test -> Convertion from MD-Bootstrap
 url: markdown_bootstrap_test
 save_as: markdown_bootstrap_test.html
 
