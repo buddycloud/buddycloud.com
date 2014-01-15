@@ -128,17 +128,17 @@ Example Usage:
 	{{@
 	{{@$[KEY]
 	...
-	Your Markdown content for this tab
+	Your content for this tab
 	...
 	/@}}
 	{{@[KEY2]
 	...
-	Your Markdown content for this tab
+	Your content for this tab
 	/@}}
 	...		(denoting multiple declarations in between
 	{@[KEYn]
 	...
-	Your Markdown content for this tab
+	Your content for this tab
 	...
 	/@}}
 	@}}
