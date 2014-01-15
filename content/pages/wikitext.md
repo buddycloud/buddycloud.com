@@ -1,6 +1,6 @@
-Title: TEST
-url: test
-save_as: test.html
+Title: Test -> Convertion from wikitext
+url: wikitext_test
+save_as: wikitext_test.html
 
 
 <tabber> JSON GET=
