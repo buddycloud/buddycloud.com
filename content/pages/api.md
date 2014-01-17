@@ -2,8 +2,6 @@ Title: API
 url: api
 save_as: api.html
 
-\_\_TOC\_\_
-Above is the Table of Contents syntax.
 
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
@@ -81,18 +79,27 @@ retrieve - pass the following request headers:
 The JSON format represents each channel node item as an object with the
 following string attributes:
 
-id:
+id
 :   The item's ID.
+    
+
 author
 :   The user ID of the item's author.
+    
+
 updated
 :   The date/time the entry was posted or last edited, in [ISO 8601
     format](https://en.wikipedia.org/wiki/ISO_8601).
+
 content
 :   The entry's text content.
+    
+
 media
 :   Custom structured field, with necessary media information for
     fetching and displaying it.
+
+
 replyTo
 :   The ID of the entry that this entry replies to. Only defined for
     comments.

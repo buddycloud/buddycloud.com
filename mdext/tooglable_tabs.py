@@ -346,14 +346,14 @@ class TabbedNavPost(Postprocessor):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@[", "").replace("]}", "")
-		html = "\t<li><a href='#id_%s' data-toggle='tab'>%s</a></li>"
+		html = "\t<li><a href='#tooglable_tabs_id_%s' data-toggle='tab'>%s</a></li>"
 		return html % (self.produce_new_id(key), key)
 
 	def activetabkeydeclrepl(self, matchobj):
 		
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{@$[", "").replace("]}", "")
-		html = "\t<li class='active'><a href='#id_%s' data-toggle='tab'>%s</a></li>"
+		html = "\t<li class='active'><a href='#tooglable_tabs_id_%s' data-toggle='tab'>%s</a></li>"
 		return html % (self.produce_new_id(key), key)
 
 	def tabcontentdeclrepl(self, matchobj):
