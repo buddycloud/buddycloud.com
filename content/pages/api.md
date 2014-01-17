@@ -107,58 +107,559 @@ Visibility
 
 *who can see what?*
 
-  ---------------------------------------- -------------------------------------- ---------- ----------- --------------- ---------- --------------- --------
-  Element                                  Example                                producer   moderator   follower+post   follower   anonymous/web   banned
-  Channel address                          me@domain.com                          yes        yes         yes             yes        yes             yes
-  Channel name                             My little channel                      yes        yes         yes             yes        yes             yes
-  Channel description                      A channel about me                     yes        yes         yes             yes        yes             yes
-  open channel: mood                       Wishing it was Friday                  yes        yes         yes             yes        yes             yes
-  open channel: posts                      Lunch with me?                         yes        yes         yes             yes        yes             yes
-  open channel: geoloc                     Next: News cafe                        yes        yes         yes             yes        no              no
-  open channel: subscriber list                                                   yes        yes         yes             yes        yes             yes
-  open personal channel: outside roles     see what you follow/moderate/produce   yes        yes         yes             yes        yes             yes
-  closed channel: geoloc                   Office                                 yes        yes         yes             yes        no              no
-  closed channel: posts                    Did she really say that?               yes        yes         yes             yes        no              no
-  closed channel: mood                     It's still Thursday                    yes        yes         yes             yes        no              no
-  closed channel: subscriber list                                                 yes        yes         yes             yes        no              no
-  banned list                                                                     yes        yes         no              no         no              no
-  closed personal channel: outside roles   see what you follow/moderate/produce   yes        yes         yes             yes        no              no
-  ---------------------------------------- -------------------------------------- ---------- ----------- --------------- ---------- --------------- --------
+<table class='table table-condensed table-striped table-bordered'>
+	<thead>
+		<tr>
+			<th>  Element
+			</th>
+			<th> Example
+			</th>
+			<th> producer
+			</th>
+			<th> moderator
+			</th>
+			<th> follower+post
+			</th>
+			<th> follower
+			</th>
+			<th> anonymous/web
+			</th>
+			<th> banned
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> Channel address
+			</td>
+			<td> me@domain.com
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> Channel name
+			</td>
+			<td> My little channel
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> Channel description
+			</td>
+			<td> A channel about me
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> open channel: mood
+			</td>
+			<td> Wishing it was Friday
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> open channel: posts
+			</td>
+			<td> Lunch with me?
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> open channel: geoloc
+			</td>
+			<td> Next: News cafe
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> open channel: subscriber list
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> open personal channel: outside roles
+			</td>
+			<td> see what you follow/moderate/produce
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+		</tr>
+		<tr>
+			<td> closed channel: geoloc
+			</td>
+			<td> Office
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> closed channel: posts
+			</td>
+			<td> Did she really say that?
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> closed channel: mood
+			</td>
+			<td> It's still Thursday
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> closed channel: subscriber list
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> banned list
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> closed personal channel: outside roles
+			</td>
+			<td> see what you follow/moderate/produce
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 Changes
 -------
 
 *who can change what?*
 
-  ------------------------------------ -------------------------------------------------------------- ------------------------------------------------- ---------- --------------------------- --------------- ---------- --------------- --------
-                                       server operation                                               Example                                           producer   moderator                   follower+post   follower   anonymous/web   banned
-
-  Channel Jid                                                                                         me@domain.com                                     no         no                          no              no         no              no
-
-  Channel name                         manage-node-configuration *pubsub\#title*                      My little channel                                 yes        no                          no              no         no              no
-
-  Channel description                  manage-node-configuration *pubsub\#description*                A channel about me                                yes        no                          no              no         no              no
-
-  mood                                 publish-node-items in *status* node                            Wishing it was Friday                             yes        no                          no              no         no              no
-
-  geoloc                               publish-node-items in *geoloc* nodes                           News Cafe                                         yes        no                          no              no         no              no
-
-  add post                             publish-node-items in *posts* node                             Lunch with me?                                    yes        yes                         yes             no         no              no
-
-  remove post                          retract-node-items (in *posts* node)                                                                             yes        yes                         no              no         no              no
-
-  approve new followers                manage-node-configuration *buddycloud\#approve\_followers*     new followers must be approved *yes* or *no*      yes        -   personal channels: no   no              no         no              no
-                                                                                                                                                                   -   topic channels: yes                                                
-                                                                                                                                                                                                                                          
-
-  set default role for new followers   manage-node-configuration *buddycloud\#default\_affiliation*   new followers are *follower* or *follower+post*   yes        no                          no              no         no              no
-
-  channel privacy                      manage-node-configuration *pubsub\#access\_model*              toggle open / closed channel                      yes        no                          no              no         no              no
-
-  change role of a follower            manage-node-affiliations                                                                                         yes        yes                         no              no         no              no
-
-  make moderator                       manage-node-affiliations                                                                                         yes        no                          no              no         no              no
-  ------------------------------------ -------------------------------------------------------------- ------------------------------------------------- ---------- --------------------------- --------------- ---------- --------------- --------
+<table class='table table-condensed table-striped table-bordered'>
+	<thead>
+		<tr>
+			<th>
+			</th>
+			<th> server operation
+			</th>
+			<th> Example
+			</th>
+			<th> producer
+			</th>
+			<th> moderator
+			</th>
+			<th> follower+post
+			</th>
+			<th> follower
+			</th>
+			<th> anonymous/web
+			</th>
+			<th> banned
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> Channel Jid
+			</td>
+			<td>
+			</td>
+			<td> me@domain.com
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> Channel name
+			</td>
+			<td> manage-node-configuration <i>pubsub#title</i>
+			</td>
+			<td> My little channel
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> Channel description
+			</td>
+			<td> manage-node-configuration <i>pubsub#description</i>
+			</td>
+			<td> A channel about me
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> mood
+			</td>
+			<td> publish-node-items in <i>status</i> node
+			</td>
+			<td> Wishing it was Friday
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> geoloc
+			</td>
+			<td> publish-node-items in <i>geoloc</i> nodes
+			</td>
+			<td> News Cafe
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> add post
+			</td>
+			<td> publish-node-items in <i>posts</i> node
+			</td>
+			<td> Lunch with me?
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> remove post
+			</td>
+			<td> retract-node-items (in <i>posts</i> node)
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+		</td>
+		</tr>
+			<tr>
+			<td> approve new followers
+			</td>
+			<td> manage-node-configuration <i>buddycloud#approve_followers</i>
+			</td>
+			<td> new followers must be approved <i>yes</i> or <i>no</i>
+			</td>
+			<td> yes
+			</td>
+			<td>
+				<ul class='list-unstyled'>
+					<li>personal channels: no
+					</li><li>topic channels: yes
+					</li>
+				</ul>
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> set default role for new followers
+			</td>
+			<td> manage-node-configuration <i>buddycloud#default_affiliation</i>
+			</td>
+			<td> new followers are <i>follower</i> or <i>follower+post</i>
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> channel privacy
+			</td>
+			<td> manage-node-configuration <i>pubsub#access_model</i>
+			</td>
+			<td> toggle open / closed channel
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> change role of a follower
+			</td>
+			<td> manage-node-affiliations
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+		<tr>
+			<td> make moderator
+			</td>
+			<td> manage-node-affiliations
+			</td>
+			<td>
+			</td>
+			<td> yes
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+			<td> no
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 API Endpoints
 =============
