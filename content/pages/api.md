@@ -2293,3 +2293,52 @@ DELETE /account
 ~~~~
 
 </tabber>
+
+/match_contacts
+--------
+
+Description
+:   Publishes user contacts' hashes and matches previously reported hashes to jids. A hash is computed as following: sha256(provider:id), eg: sha256(facebook:1015747641) = 0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b.
+
+Attributes
+:   *mine* - array of this user's hashes to be reported to the friend finder.
+:   *others* - array of hashes to be matched by the friend finder.
+
+Accept
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Publishes and matches hashes to jids.
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if authentication is required, but not
+    provided.
+
+Example
+
+<tabber> POST= Creates an user account
+
+~~~~ bash
+POST /match_contacts
+
+{
+  "mine": ["0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b"], 
+  "others": ["023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17",   "bcee94d395fe9cd76dfae390e006a98032144fb48dc8181448c4cd192ec4b75c"]
+}
+~~~~
+
+~~~~ javascript
+200 OK
+
+{
+    "items": [
+        {
+            "jid": "alice@example.com",
+            "matched-hash": "023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17"
+        }
+    ]
+}
+~~~~
+
+</tabber>
