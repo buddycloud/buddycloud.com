@@ -2317,7 +2317,7 @@ Responses
 
 Example
 
-<tabber> POST= Creates an user account
+<tabber> POST= Publishes and matches hashes to jids
 
 ~~~~ bash
 POST /match_contacts
