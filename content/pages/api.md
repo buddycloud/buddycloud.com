@@ -1930,7 +1930,7 @@ Content-Type: application/json
 200 OK
 Content-Type: application/json
 
-{
+[{
   "target": "mail@alice.com",
   "postAfterMe": "true",
   "postMentionedMe": "true",
@@ -1938,7 +1938,7 @@ Content-Type: application/json
   "postOnSubscribedChannel": "false",
   "followMyChannel ": "false",
   "followRequest": "false"
-}
+}]
 ~~~~
 
 |-| JSON DELETE= Deletes notification settings:
