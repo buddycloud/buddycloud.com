@@ -360,14 +360,14 @@ class TabbedNavPost(Postprocessor):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@[", "").replace("]", "")
-		html = "\t<div class='tab-pane fade' id='id_%s'>\n\t\t"
+		html = "\t<div class='tab-pane fade' id='tooglable_tabs_id_%s'>\n\t\t"
 		return html % self.consume_existing_id(key)
 
 	def activetabcontentdeclrepl(self, matchobj):
 
 		matched = matchobj.group(0).strip()
 		key = matched.replace("{{@$[", "").replace("]", "")
-		html ="\t<div class='tab-pane fade in active' id='id_%s'>\n\t\t"
+		html ="\t<div class='tab-pane fade in active' id='tooglable_tabs_id_%s'>\n\t\t"
 		return html % self.consume_existing_id(key)
 
 	def endingcontentsrepl(self, matchobj):
