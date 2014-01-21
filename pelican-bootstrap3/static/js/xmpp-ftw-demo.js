@@ -274,7 +274,9 @@ $(window.document).ready(function() {
         console.log('Connected', data)
         socket.send('xmpp.login.anonymous', {})
         socket.on('xmpp.connected', function() {
-            
+            socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+                console.log(error, data)
+            })
             
         })
     })
