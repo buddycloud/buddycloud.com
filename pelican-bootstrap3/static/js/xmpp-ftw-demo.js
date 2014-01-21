@@ -8,6 +8,8 @@ var outgoingMessages = []
 var outgoing         = []
 var incoming         = []
 
+var xmppFtwUrl = 'https://xmpp-ftw.jit.su'
+
 var getEntryHtml = function(callback) {
     if (callback) {
         return $('<div class="message-container payload callback-yes">' +
@@ -125,12 +127,14 @@ var parsePage = function(incomingData) {
     data.each(function(i, ele) {
 
         if ('container' !== $(ele).attr('id')) return
-
+        
         $(ele).find('pre.in').each(function(i, message) {
+            if (-1 === message.attr('message').indexOf('buddycloud')) continue
             incoming.push($(message).attr('message'))
         })
 
         $(ele).find('pre.out').each(function(i, message) {
+            if (-1 === message.attr('message').indexOf('buddycloud')) continue
             var example = $(message).text().split($(message).attr('message') + '\',')[1]
             if (example) {
                 var splitString = (-1 === example.indexOf(', rsm)')) ?
@@ -156,7 +160,7 @@ var getMessages = function(path, delay) {
     increaseQueue()
     setTimeout(function() {
         $.ajax({
-            url: path || 'https://xmpp-ftw.jit.su/manual',
+            url: path || xmppFtwUrl + '/manual',
             type: 'get',
             dataType: 'html',
             success: parsePage,
@@ -261,22 +265,20 @@ $('#send').on('click', function() {
 /* jshint -W117 */
 $(window.document).ready(function() {
     console.log('Page loaded...')
-    getMessages('https://xmpp-ftw.jit.su/manual/message-archive-management', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/service-discovery', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/multi-user-chat', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/publish-subscribe', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/jabber-search', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/jabber-rpc', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/in-band-registration', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/extensions', 2000)
-    getMessages('https://xmpp-ftw.jit.su/manual/core')
-    getMessages()
+    getMessages(xmppFtwUrl + '/manual/extensions')
 
-    socket = new Primus('//' + window.document.location.host)
+    socket = new Primus(xmppFtwUrl)
     socket.on('error', function(error) { console.log(error); })
 
     socket.on('online', function(data) {
         console.log('Connected', data)
+        socket.send('xmpp.login.anonymous', {})
+        socket.on('xmpp.connected', function() {
+            socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+                console.log(error, data)
+            })
+            
+        })
     })
 
     socket.on('timeout', function(reason) {
