@@ -156,7 +156,7 @@ var getMessages = function(path, delay) {
     increaseQueue()
     setTimeout(function() {
         $.ajax({
-            url: path || '/manual',
+            url: path || 'https://xmpp-ftw.jit.su/manual',
             type: 'get',
             dataType: 'html',
             success: parsePage,
@@ -261,15 +261,15 @@ $('#send').on('click', function() {
 /* jshint -W117 */
 $(window.document).ready(function() {
     console.log('Page loaded...')
-    getMessages('/manual/message-archive-management', 2000)
-    getMessages('/manual/service-discovery', 2000)
-    getMessages('/manual/multi-user-chat', 2000)
-    getMessages('/manual/publish-subscribe', 2000)
-    getMessages('/manual/jabber-search', 2000)
-    getMessages('/manual/jabber-rpc', 2000)
-    getMessages('/manual/in-band-registration', 2000)
-    getMessages('/manual/extensions', 2000)
-    getMessages('/manual/core')
+    getMessages('https://xmpp-ftw.jit.su/manual/message-archive-management', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/service-discovery', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/multi-user-chat', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/publish-subscribe', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/jabber-search', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/jabber-rpc', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/in-band-registration', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/extensions', 2000)
+    getMessages('https://xmpp-ftw.jit.su/manual/core')
     getMessages()
 
     socket = new Primus('//' + window.document.location.host)
