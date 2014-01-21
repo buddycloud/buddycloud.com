@@ -129,27 +129,30 @@ var parsePage = function(incomingData) {
         if ('container' !== $(ele).attr('id')) return
         
         $(ele).find('pre.in').each(function(i, message) {
-            if (-1 === message.attr('message').indexOf('buddycloud')) continue
-            incoming.push($(message).attr('message'))
+            if (!(-1 === message.attr('message').indexOf('buddycloud'))){
+            	incoming.push($(message).attr('message'))
+	    }
         })
 
         $(ele).find('pre.out').each(function(i, message) {
-            if (-1 === message.attr('message').indexOf('buddycloud')) continue
-            var example = $(message).text().split($(message).attr('message') + '\',')[1]
-            if (example) {
-                var splitString = (-1 === example.indexOf(', rsm)')) ?
-                    'function(error, data) { console.log(error, data) }' :
-                    'function(error, data, rsm) { console.log(error, data, rsm) }'
-                example = example.split(splitString)[0].trim().slice(0, -1)
-            }
-            var out = {
-                value: $(message).attr('message'),
-                label: $(message).attr('message'),
-                callback: $(message).hasClass('callback'),
-                example: (example || '{}').replace(/\n/g, '<br/>')
-            }
-            outgoing.push(out)
-            outgoingMessages.push(out.value)
+            if (!(-1 === message.attr('message').indexOf('buddycloud'))){
+
+                var example = $(message).text().split($(message).attr('message') + '\',')[1]
+                if (example) {
+                    var splitString = (-1 === example.indexOf(', rsm)')) ?
+                        'function(error, data) { console.log(error, data) }' :
+                        'function(error, data, rsm) { console.log(error, data, rsm) }'
+                     example = example.split(splitString)[0].trim().slice(0, -1)
+                }
+                var out = {
+                    value: $(message).attr('message'),
+                    label: $(message).attr('message'),
+                    callback: $(message).hasClass('callback'),
+                    example: (example || '{}').replace(/\n/g, '<br/>')
+                }
+                outgoing.push(out)
+                outgoingMessages.push(out.value)
+	    }
         })
     })
     decreaseQueue()
