@@ -71,7 +71,7 @@ var useLocalStorage = function() {
     return $('input[name=useStorage]').is(':checked')
 }
 
-var setupAutocomplete = function() {
+/*var setupAutocomplete = function() {
     $('#message').autocomplete({
         minLength: 0,
         source: outgoing,
@@ -96,7 +96,7 @@ var setupAutocomplete = function() {
             return false
         }
     })
-}
+}*/
 
 var setupListener = function() {
     incoming.forEach(function(message) {
@@ -114,7 +114,7 @@ var decreaseQueue = function() {
     --manualPageRetrievalQueue
     if (manualPageRetrievalQueue > 0) return
     setupListener()
-    setupAutocomplete()
+    //setupAutocomplete()
     console.log('Listening for the following messages', incoming)
     console.log('Logging the following outgoing messages', outgoingMessages)
     $('.messages-container').css('display', 'block')
@@ -129,14 +129,16 @@ var parsePage = function(incomingData) {
         if ('container' !== $(ele).attr('id')) return
         
         $(ele).find('pre.in').each(function(i, message) {
-            if (!(-1 === message.attr('message').indexOf('buddycloud'))){
+	    console.log(message);
+            if (!(-1 === $(message).attr('message').indexOf('buddycloud'))){
             	incoming.push($(message).attr('message'))
-	    }
+	        }
         })
 
         $(ele).find('pre.out').each(function(i, message) {
-            if (!(-1 === message.attr('message').indexOf('buddycloud'))){
+            if (!(-1 === $(message).attr('message').indexOf('buddycloud'))){
 
+		console.log(message);
                 var example = $(message).text().split($(message).attr('message') + '\',')[1]
                 if (example) {
                     var splitString = (-1 === example.indexOf(', rsm)')) ?
@@ -152,7 +154,7 @@ var parsePage = function(incomingData) {
                 }
                 outgoing.push(out)
                 outgoingMessages.push(out.value)
-	    }
+	        }
         })
     })
     decreaseQueue()
