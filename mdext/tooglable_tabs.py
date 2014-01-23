@@ -171,7 +171,7 @@ class TabbedNavPre(Preprocessor):
 				i += 1
 
 		#Now make sure there's at least one blank line amidst each
-		#Tabbed Nav block (Bootstrap Toogable tabs Markdown syntax)
+		#Tabbed Nav block (Bootstrap Tooglable tabs Markdown syntax)
 
 		add_blanks_at = []
 		aftertabcontentdefre = re.compile("{{@\[.*\]$")
@@ -204,7 +204,7 @@ class TabbedNavBlockProcessor(BlockProcessor):
 	*Bootstrap Tooglable tabs block processor*.
 
 	Necessary to avoid having Markdown surround the
-	Bootstrap Toogable tabs Markdown markups with undesired HTML tags.
+	Bootstrap Tooglable tabs Markdown markups with undesired HTML tags.
 
 	Each block of BTNM markup is then surrounded by a <tabbed_nav> element
 	which is then parsed out by our postprocessor.

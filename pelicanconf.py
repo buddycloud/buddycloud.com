@@ -31,7 +31,7 @@ STATIC_PATHS = [ 'images', 'CNAME' ]
 
 THEME = 'pelican-bootstrap3'
 
-MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.tooglable_tabs' ]
+MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.tooglable_tabs', 'mdext.sequence_diagrams' ]
 
 
 # Uncomment following line if you want document-relative URLs when developing
