@@ -1,5 +1,5 @@
 Title: Sequence Diagrams Test
-url: seq_diag
+url: sequence_diagram
 save_as: sequence_diagram.html
 
 Title: Sequence Diagram Title
