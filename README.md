@@ -73,15 +73,15 @@ make github
 ```
 view the updates on http://new.buddycloud.com (and eventually buddycloud.com)
 
-### Our in-house Markdown Extensions
+### Markdown Extensions
 
 We have developed several markdown extensions to fit our needs.
 
 #### Bootstrap Tooglable tabs Markdown Enxtension
 
-Our newly defined Markdown syntax for creating Bootstrap Togglable tabs.
+Our newly defined Markdown extension for creating Bootstrap Togglable tabs.
 
-Since Bootstrap requires two HTML elements to compose Tooglable tabs, we also decided it would be easier to implement the transformation if the Markdown syntax also contained two sections, as follows:
+Since Bootstrap requires two HTML elements to compose Tooglable tabs, we also decided it would be easier to implement the transformation if the new Markdown syntax also contained two sections, as follows:
 
 There's the **Tab Key declaration** section and the **Tab Content declaration** section.
 
@@ -142,3 +142,28 @@ Example Usage:
 	...
 	/@}}
 	@}}
+
+#### js-sequence-diagrams Markdown Extension
+
+A new Markdown extension for writing Sequence Diagrams using the js-sequence-diagrams library.
+
+All it does in fact is merge the js-sequence-diagrams syntax into the existing Markdown syntax, handling potential conflicts between the two.
+
+We have the following restrictions upon the original js-sequence-diagrams syntax: definitions of sequence diagrams must not have black lines in between - the blocks of lines in between those blank lines will be understood as separate sequence diagram definitions.
+
+For example:
+
+    A->B: Message
+    Note right of B: "B is receiving Message"
+    
+    B-->A: Message back
+
+will not render a single sequence diagrams with the two messages specified.
+Instead, there will be two sequence diagrams, each with one of the messages and the first one containing the note on the right of B.
+To reach this result, the definition should be as follows:
+
+    A->B: Message
+    Note right of B: "B is receiving Message"
+    B-->A: Message back
+
+*IMPORTANT*: There must two blank lines, one before the sequence diagram block and another afterwards, separating the sequence diagram definition from other markup in the text.
