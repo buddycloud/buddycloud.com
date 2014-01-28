@@ -130,9 +130,9 @@ var parsePage = function(incomingData) {
         
         $(ele).find('pre.in').each(function(i, message) {
 	    console.log(message);
-            if (!(-1 === $(message).attr('message').indexOf('buddycloud'))){
+            if (-1 !== $(message).attr('message').indexOf('buddycloud')) {
             	incoming.push($(message).attr('message'))
-	        }
+	    }
         })
 
         $(ele).find('pre.out').each(function(i, message) {
