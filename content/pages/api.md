@@ -118,8 +118,9 @@ Visibility
 
 *who can see what?*
 
+<div class='table-container'>
 <table class='data'>
-	<thead>
+	<tbody>
 		<tr>
 			<th>  Element
 			</th>
@@ -138,8 +139,6 @@ Visibility
 			<th> banned
 			</th>
 		</tr>
-	</thead>
-	<tbody>
 		<tr>
 			<td> Channel address
 			</td>
@@ -394,14 +393,16 @@ Visibility
 		</tr>
 	</tbody>
 </table>
+</div>
 
 Changes
 -------
 
 *who can change what?*
 
+<div class="table-container">
 <table class='data'>
-	<thead>
+	<tbody>
 		<tr>
 			<th>
 			</th>
@@ -422,8 +423,6 @@ Changes
 			<th> banned
 			</th>
 		</tr>
-	</thead>
-	<tbody>
 		<tr>
 			<td> Channel Jid
 			</td>
@@ -671,6 +670,7 @@ Changes
 		</tr>
 	</tbody>
 </table>
+</div>
 
 API Endpoints
 =============
