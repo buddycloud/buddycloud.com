@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
-    <section id="content" class="body">
-        <div class="page-header">
-		<h1 class="entry-title">{{ page.title }}</h1>
-	</div>
-	<div class="entry-content">
-		{{ page.content }}
-	</div>	    
-	{% if page.slug == "developers" %}
-	<script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"></script>
-	<script type="text/javascript" src="{{ SITEURL }}/theme/js/xmpp-ftw-demo.js"></script>
-	{% endif %}
-  </section>
+<!--    <div class="page-header">
+	<h1 class="entry-title">{{ page.title }}</h1>
+    </div>-->
+    <div class="entry-content">
+	{{ page.content }}
+    </div>	    
+{% endblock %}
+{% block morescripts %}
+    {% if page.slug == "developers" %}
+    <script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/xmpp-ftw-demo.js"></script>
+    {% endif %}
 {% endblock %}
