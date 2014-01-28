@@ -2,9 +2,6 @@ Title: API
 url: api
 save_as: api.html
 
-API
-=========
-
 The HTTP API is implemented by the [buddycloud HTTP API
 server](buddycloud HTTP API server "wikilink").
 
@@ -121,7 +118,7 @@ Visibility
 
 *who can see what?*
 
-<table class='table table-condensed table-striped table-bordered'>
+<table class='data'>
 	<thead>
 		<tr>
 			<th>  Element
@@ -403,7 +400,7 @@ Changes
 
 *who can change what?*
 
-<table class='table table-condensed table-striped table-bordered'>
+<table class='data'>
 	<thead>
 		<tr>
 			<th>
