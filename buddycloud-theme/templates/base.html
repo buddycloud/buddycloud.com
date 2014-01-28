@@ -13,15 +13,15 @@
     {% else %}
 <!--        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>-->
     {% endif %}
-<!--    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">-->
-<!--    <link href="{{ SITEURL }}/theme/css/bootstrap-glyphicons.css" rel="stylesheet">-->
-<!--    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">-->
+    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/buddycloud-style.css" type="text/css"/>
 </head>
 <body>
 <header>
     <img class="logo" src="img/icons/buddycloud_icon_white.svg" alt="">
-    <h1><a href="#">buddycloud</a></h1>
+    <h1><a href="#">{{ SITENAME }}</a></h1>
     {% if DISPLAY_PAGES_ON_MENU %}
     <ul class="nav">
         {% for page in PAGES %}

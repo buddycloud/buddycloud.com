@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'buddycloud team'
-SITENAME = u'buddycloud.com'
+SITENAME = u'buddycloud'
 SITEURL = ''
 
 TIMEZONE = 'Europe/Berlin'
@@ -26,6 +26,8 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+
+DIRECT_TEMPLATES = ['index']
 
 STATIC_PATHS = [ 'images', 'CNAME' ]
 
