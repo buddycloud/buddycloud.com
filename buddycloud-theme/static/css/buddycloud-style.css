@@ -1,0 +1,458 @@
+body {
+	margin: 0;
+	font: 300 100%/1.5 'Open Sans';
+	-webkit-text-size-adjust: none;
+	color: #333;
+	/*background-color: hsl(185.4,76.6%,40.2%);*/
+}
+
+a {
+	text-decoration: none;
+	font-weight: 400;
+	color: #2DAEBF;
+}
+
+em {
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Header */
+
+header {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	min-width: 48em;
+	background-color: #2DAEBF;
+	z-index: 1;
+	top: 0;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Logo */
+
+header .logo {
+	width: 4em;
+	float: left;
+	margin: 1em;
+}
+
+header h1 {
+	margin: 1.9em 0 0 0;
+	padding: 0;
+	color: #fff;
+	font-size: 1.5em;
+	text-transform: lowercase;
+	font-weight: 400;
+	position: absolute;
+	left: 4em;
+}
+
+header h1 a{
+	color: #fff;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Header Navigation */
+
+header .nav {
+	margin: 3.4em 0 0 20em;
+	padding: 0 1em;
+	float: right;
+	list-style: none;
+	background-color: #2DAEBF;
+	text-transform: uppercase;
+}
+
+header .nav li {
+	display: inline-block;
+	font-weight: 600;
+}
+
+header .nav li a {
+	height: 2em;
+	padding: 1em 1em;
+	margin-bottom: 1em;
+	font-weight: 600;
+	color: hsl(185.4,76.6%,20%);
+}
+
+header .nav li a.selected{
+	color: #fff;
+}
+
+header .nav li a:hover {
+	color: hsl(185.4,76.6%,0%);
+}
+
+header .nav li a.selected {
+	color: #fff;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Content Section */
+
+#content {
+	margin-left: 6em;
+	padding-top: 5em;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Content Navigation */
+
+#content nav {
+	position: fixed;
+	font-size: .75em;
+}
+
+#content nav ul {
+	list-style: none;
+	margin-left: 4em;
+}
+
+#content nav ul {
+	list-style: none;
+	margin: 6em 0 0 0;
+	padding: 0;
+}
+
+#content nav ul li {
+	padding-bottom: 1em;
+}
+
+#content nav ul li a {
+	font-weight: 600;
+}
+
+#content nav ul li ul {
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: .5em 0 0 0;
+}
+
+#content nav ul li ul li {
+	padding-bottom: 0.5em;
+}
+
+#content nav ul li ul li a {
+	font-weight: 300;
+}
+
+#content nav a{
+	color: #333;
+}
+
+#content nav a:hover {
+	color: #2DAEBF;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Main Section */
+
+#main {
+	margin-left: 16em;
+	padding: 0 2em 5em 0;
+}
+
+#main section.intro {
+	padding-bottom: 2em;
+	border-top: 1px solid hsl(0,0%,100%);
+}
+
+#main section.intro p {
+	font-size: 1.333em;
+}
+
+#main section.intro h1,
+#main h1 {
+	font-size: 1.75em;
+	font-weight: 600;
+	margin: 0;
+}
+
+#main section {
+	padding: 0.5em 0 0 0;
+	margin: 3em 0 0em 0;
+	border-top: 1px solid hsl(0,0%,90%);
+	max-width: 40em;
+}
+
+#main h2 {
+	font-size: 1.333em;
+	font-weight: 600;
+	margin: 0;
+}
+
+#main h3 {
+	font-size: 1em;
+	font-weight: 600;
+	margin: 3em 0 1em 0;
+}
+
+img.sample {
+	/* border: 1px solid hsl(0,0%,80%); */
+	box-shadow: 0 0 1em rgba(0,0,0,.2);
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Main > Lists */
+
+#main ul {
+	margin: 1em 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#main li{
+	margin-left: -.5em;
+}
+
+#main ul li:before {
+	content: "?";
+	position: relative;
+	left: -.5em;
+	color: rgba(0,0,0,.2);
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Main > Data Table */
+
+div.table-container {
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+div.table-container::-webkit-scrollbar {
+	width: .75em;
+	height: .75em;
+	z-index: 2000;
+}
+
+div.table-container::-webkit-scrollbar-track-piece {
+	background: hsl(0,0%,95%);
+}
+
+div.table-container::-webkit-scrollbar-thumb {
+	background: hsl(0,0%,80%);
+}
+
+table.data { 
+	border: none;
+	border-collapse:collapse;
+	text-align: left;
+	width: 100%;
+}
+
+table.data th { 
+	white-space: nowrap;
+}
+
+table.data th,
+table.data td:nth-child(1) { 
+	font-weight: bold; 
+}
+
+table.data tr {
+	border-top: 1px solid hsl(0,0%,95%);
+	-webkit-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+}
+
+table.data tr:nth-child(2) {
+	border-top: 1px solid hsl(0,0%,60%);
+}
+
+table.data td,
+table.data th {
+	min-width: 10em;
+	font-size: 0.75em;
+	text-after-overflow: left;
+	vertical-align: top;
+	border: none;
+	padding: 0.5em 2em .5em 0em;
+	-webkit-transition: color .2s linear;
+	transition: color .2s linear;
+	cursor: default;
+}
+
+table.data tr:nth-child(even) {
+   background-color: hsl(0,0%,96%);
+}
+
+table.data:hover { 
+	color: hsl(0,0%,50%);
+}
+
+table.data:hover tr {
+   background-color: hsl(0,0%,100%);
+}
+
+table.data:hover tr:nth-child(2) {
+	border-top: 1px solid hsl(0,0%,95%);
+}
+
+table.data:hover th { 
+	color: hsl(0,0%,10%);
+}
+
+table.data tr:hover:not(:first-child) { 
+	color: hsl(0,0%,10%);
+	border-top: 1px solid hsl(0,0%,60%);
+	background-color: hsl(0,0%,96%);
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Team */
+
+#team img {
+	margin-left: -16em;
+	width: 12em;
+	float: left;
+	border-radius: .5em;
+	box-shadow:  0 0 .5em rgba(0,0,0,.2);
+}
+
+#team h3 small {
+	text-transform: uppercase;
+	display: block;
+	letter-spacing: .1em;
+	color: rgba(0,0,0,.4);
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Team > Contact Icons */
+
+.contact {
+	position: relative;
+	width: 100%;
+	margin-bottom: 2em;
+}
+
+.contact a {
+	display: block;
+	float: left;
+	margin-right: 1em;
+	width: 2em;
+	height: 2em;
+	background-color: #2DAEBF;
+	text-indent: -999em;
+	border-radius: 0.25em;
+	background-size: cover;
+	background-image: url('../img/contact/twitter.svg');
+	-webkit-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+}
+
+.contact a:hover {
+	background-color: #333;
+}
+
+.contact .blog {
+	background-image: url('../img/contact/blog.svg');
+}
+
+.contact .email {
+	background-image: url('../img/contact/email.svg');
+}
+
+.contact .twitter {
+	background-image: url('../img/contact/twitter.svg');
+}
+
+.contact .linkedin {
+	background-image: url('../img/contact/linkedin.svg');
+}
+
+.contact .github {
+	background-image: url('../img/contact/github.svg');
+}
+
+.contact .buddycloud {
+	background-image: url('../img/contact/buddycloud.svg');
+}
+
+.contact .googleplus {
+	background-image: url('../img/contact/googleplus.svg');
+}
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* dt / dd */
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0 0 1em 0;
+}
+
+
+code {
+	font-family: 'Source Code Pro';
+	font-weight: 500;
+	font-size: 0.85em;
+	color: #2DAEBF;
+	background-color: rgba(45, 174, 191, .075);
+	padding: 0.2em;
+}
+
+.nv {
+	color: #2DAEBF;
+}
+
+.s2 {
+	color: rgba(255,255,255,1);
+}
+.highlight {
+	width: 100%;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	background-color: #333;
+}
+
+.highlight::-webkit-scrollbar {
+	width: .75em;
+	height: .75em;
+	z-index: 2000;
+}
+
+.highlightr::-webkit-scrollbar-track-piece {
+	background: hsl(0,0%,95%);
+}
+
+.highlight::-webkit-scrollbar-thumb {
+	background: hsl(0,0%,80%);
+}
+
+.highlight pre {
+	font-family: 'Source Code Pro';
+	font-weight: 500;
+	font-size: 0.85em;
+	color: rgba(255,255,255,.5);
+	padding: 1em;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    {% if BOOTSTRAP_THEME %}
+<!--        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>-->
+    {% else %}
+<!--        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>-->
+    {% endif %}
+<!--    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">-->
+<!--    <link href="{{ SITEURL }}/theme/css/bootstrap-glyphicons.css" rel="stylesheet">-->
+<!--    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/buddycloud-style.css" type="text/css"/>
+</head>
+<body>
+<header>
+    <img class="logo" src="img/icons/buddycloud_icon_white.svg" alt="">
+    <h1><a href="#">buddycloud</a></h1>
+    {% if DISPLAY_PAGES_ON_MENU %}
+    <ul class="nav">
+        {% for page in PAGES %}
+        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+    </ul>    
+    {% endif %}
+</header>
+<section id="content">
+{% block content %}
+{% endblock %}
+</section>
+<script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+<script src="{{ SITEURL }}/theme/js/raphael-min.js"></script>
+<script src="{{ SITEURL }}/theme/js/underscore-min.js"></script>
+<script src="{{ SITEURL }}/theme/js/sequence-diagram-min.js"></script>
+<script src="{{ SITEURL }}/theme/js/smoothscroll.js"></script>
+<script>
+	$(".js_sequence_diagram").sequenceDiagram({theme: 'simple'});
+</script>
+</body>
+</html>

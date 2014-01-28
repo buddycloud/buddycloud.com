@@ -2,7 +2,7 @@ Title: Sequence Diagrams Test
 url: sequence_diagram
 save_as: sequence_diagram.html
 
-Title: Sequence Diagram Title
+Title: Sequence Diagram Title!
 A->B: Message
 Note right of B: B thinking
 B-->A: Message back

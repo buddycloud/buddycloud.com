@@ -29,7 +29,7 @@ DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = [ 'images', 'CNAME' ]
 
-THEME = 'pelican-bootstrap3'
+THEME = 'buddycloud-theme'
 
 MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.tooglable_tabs', 'mdext.sequence_diagrams' ]
 
