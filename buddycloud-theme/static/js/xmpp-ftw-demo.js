@@ -288,7 +288,7 @@ $(window.document).ready(function() {
 		    console.log("data was: ", data);
        	        });            
        	    });
-      )}, 20000);
+      }, 20000);
     });
 
     socket.on('timeout', function(reason) {
