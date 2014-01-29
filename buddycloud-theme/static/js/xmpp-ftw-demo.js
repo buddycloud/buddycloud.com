@@ -277,19 +277,19 @@ $(window.document).ready(function() {
 
 //    socket.on('online', function(data) {
 //    console.log('Connected', data)
-      socket.once('incoming::data', function(){
-//    setTimeout(function(){
+    socket.once('incoming::data', function(){
+      setTimeout(function(){
 	    console.log("sent anonymous login");
-	    socket.send('xmpp.login.anonymous', { jid: '@anon.buddycloud.org' }
+	    socket.send('xmpp.login.anonymous', { jid: '@anon.buddycloud.org' });
 	    console.log("sent connected");
 	    socket.on('xmpp.connected', function() {
                 socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                     console.log(error, data);
 		    console.log("data was: ", data);
-       	        })            
-       	    })
-//    )}, 20000);
-      })
+       	        });            
+       	    });
+      )}, 20000);
+    });
 
     socket.on('timeout', function(reason) {
         console.log('Connection failed: ' + reason)
