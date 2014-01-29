@@ -25,7 +25,15 @@
     {% if DISPLAY_PAGES_ON_MENU %}
     <ul class="nav">
         {% for page in PAGES %}
-        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+        <li>
+		<a href="{{ SITEURL }}/{{ page.url }}"
+		{% if page.slug == page.url %}
+			class="selected"
+		{% endif %}
+		>
+			{{ page.title }}
+		</a>
+	</li>
         {% endfor %}
     </ul>    
     {% endif %}
