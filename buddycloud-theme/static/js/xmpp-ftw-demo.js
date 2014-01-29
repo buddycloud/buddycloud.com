@@ -275,9 +275,8 @@ $(window.document).ready(function() {
     socket = new Primus(xmppFtwUrl)
     socket.on('error', function(error) { console.log(error); })
 
-//    socket.on('online', function(data) {
-//        console.log('Connected', data)
-      setTimeout(function(){
+    socket.on('online', function(data) {
+        console.log('Connected', data)
 	console.log("sent anonymous login");
         socket.send('xmpp.login.anonymous', {})
 	console.log("sent connected");
@@ -285,11 +284,9 @@ $(window.document).ready(function() {
             socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                 console.log(error, data);
 		console.log("data was: ", data);
-            })
-            
+            })            
         })
-      }, 5000)
-//    })
+    })
 
     socket.on('timeout', function(reason) {
         console.log('Connection failed: ' + reason)
