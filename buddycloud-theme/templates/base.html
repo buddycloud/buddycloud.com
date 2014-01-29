@@ -27,7 +27,8 @@
         {% for page in PAGES %}
         <li>
 		<a href="{{ SITEURL }}/{{ page.url }}"
-		{% if page.slug == page.url %}
+		active page is: {{ active_page }}
+		{% if active_page == page.slug %}
 			class="selected"
 		{% endif %}
 		>

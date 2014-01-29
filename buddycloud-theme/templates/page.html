@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% set active_page = page.slug %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
-    {% if page.slug == "api" %}
+    {% if active_page == "api" %}
     <nav class="table-contents"></nav>
     {% endif %}
     <section id="main">
@@ -14,7 +15,7 @@
     </section>
 {% endblock %}
 {% block morescripts %}
-    {% if page.slug == "developers" %}
+    {% if active_page == "developers" %}
     <script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"></script>
     <script type="text/javascript" src="{{ SITEURL }}/theme/js/xmpp-ftw-demo.js"></script>
     {% endif %}
