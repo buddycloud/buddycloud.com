@@ -33,7 +33,7 @@ STATIC_PATHS = [ 'img', 'CNAME' ]
 
 THEME = 'buddycloud-theme'
 
-MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.tooglable_tabs', 'mdext.sequence_diagrams' ]
+MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_tabs', 'mdext.sequence_diagrams' ]
 
 
 # Uncomment following line if you want document-relative URLs when developing
