@@ -29,7 +29,7 @@ DEFAULT_PAGINATION = 10
 
 DIRECT_TEMPLATES = ['index']
 
-STATIC_PATHS = [ 'images', 'CNAME' ]
+STATIC_PATHS = [ 'img', 'CNAME' ]
 
 THEME = 'buddycloud-theme'
 
