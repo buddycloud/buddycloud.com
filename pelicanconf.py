@@ -37,14 +37,12 @@ MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_t
 
 import os, sys
 sys.path.append(os.path.join(os.getcwd(), "jinjaext"))
-from table_of_contents import extractTableOfContentsInfo
-from table_of_contents import createTableOfContents
-from table_of_contents import addTableOfContentsHooks
+from table_of_contents import TableOfContents as TOC
 
 JINJA_FILTERS = {
-		  'extract_toc_info' : extractTableOfContentsInfo,
-		  'create_toc' : createTableOfContents,
-		  'add_toc_hooks' : addTableOfContentsHooks
+		  'extract_toc_info' : TOC.extractTableOfContentsInfo,
+		  'create_toc' : TOC.createTableOfContents,
+		  'add_toc_hooks' : TOC.addTableOfContentsHooks
 		}
 
 # Uncomment following line if you want document-relative URLs when developing
