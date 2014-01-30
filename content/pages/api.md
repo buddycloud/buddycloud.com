@@ -694,12 +694,12 @@ API Endpoints
 /:channel/content/:node
 -----------------------
 
-client -> +API server: HTTP request
-API server -> +XMPP server: create XMPP connection
-XMPP server --> -API server: XMPP connection created
-API server -> +Buddycloud server: XMPP request
-Buddycloud server --> -API server: XMPP response
-API server --> -client: HTTP response
+client->API server: HTTP request
+API server->XMPP server: create XMPP connection
+XMPP server-->API server: XMPP connection created
+API server->Buddycloud server: XMPP request
+Buddycloud server-->API server: XMPP response
+API server-->client: HTTP response
 
 Description
 :   Receives or posts to a channel node, which represents a stream of
