@@ -18,6 +18,18 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
+sys.path.append(os.path.join(os.getcwd(), "jinjaext"))
+from table_of_contents import extractTableOfContentsInfo
+from table_of_contents import createTableOfContents
+from table_of_contents import addTableOfContentsHooks
+
+JINJA_FILTERS = {
+		  'extract_toc_info' : extractTableOfContentsInfo,
+		  'create_toc' : createTableOfContents,
+		  'add_toc_hooks' : addTableOfContentsHooks
+		}
+
+
 # Following items are often useful when publishing
 
 #DISQUS_SITENAME = ""
