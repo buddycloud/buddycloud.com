@@ -59,15 +59,14 @@ class TableOfContents:
 	def createTableOfContents(toc_info):
 
 		toc_html = ""
-
 		if ( len(toc_info) == 0 ):
 			return toc_html
 		elif ( len(toc_info) == 1 ):
-			toc_html = "<ul><li><a href='#%s' class='smooth"				toc_html += "Scroll'>%s</a></li></ul>"
+			toc_html = "<ul><li><a href='#%s' class='smoothScroll'>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 		else:
-			toc_html = "<ul><li><a href='#%s' class='smooth"				toc_html += "Scroll'>%s</a></li></ul>"
+			toc_html = "<ul><li><a href='#%s' class='smoothScroll'>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 	
