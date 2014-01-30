@@ -11,7 +11,7 @@ Our static-site-generator should have the following features:
 * Live Preview (check)
 
 ### Requirements
-
+ 
 * Pelican 3.3
 * ghp-import
 * Markdown 2.3.1
