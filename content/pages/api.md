@@ -14,6 +14,22 @@ Element A -> Element B: Hello
 Element B--> Element A : Hello there!
 Note right of Element B: This is element B\nwhispering
 
+<!---
+Current used diagrams images:
+
+1 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiBIVFRQIHJlcXVlc3QKAA8KACMFWE1QUAAgCWNyZWF0ZSAADwVjb25uZWN0aW9uCgAZCyAtLT4gLQBRDAAeDwA9B2QAWBBCdWRkeWNsb3VkACwOAIEPCAAPEQBTF3Jlc3BvbnNlAIE7DS0-IC0AgXYGAIFkCQAfBw&s=default
+
+2 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiByZXF1ZXN0CgAKCgAeBU1lZGlhABwJZm9yd2FyZAAkCQASDCAtPiAARQxjaGVjawBOCW5vdGUgcmlnaHQgb2YgAEgOWEVQLTAwNzAAbw0tPgAXDwCBGgcgb2sAZhErQnVkZHljbG91ZACBRwlnZXQgUHViU3ViIGFmZmlsaWF0aW9ucwB6DwAmEwCBCAY2MAoARBEAgRAFLQCCBA4ATxQAgigMAIIUDy0-IC0AgmgOc3BvbnNlAIFrEC0AgyAGAIJmDAAiBw&s=default
+
+3 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiByZXF1ZXN0CgAKCgAeBUNoYW5uZWwgRGlyZWN0b3J5OiBmb3J3YXJkACkJABIRIC0tPiAtAE8Oc3BvbnNlAFENLT4gLQCBBwYASAwAIgc&s=default
+
+4 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiBIVFRQIHJlcXVlc3QKAA8KACMFWE1QUAAgCWNyZWF0ZSBhY2NvdW50ACoJABkLIC0tPiAtAFEMACMRc3BvbnNlAFsNLT4gLQCBFgYAgQQJAB8H&s=default
+
+5 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiBIVFRQIHJlcXVlc3QKAA8KACMFUHVzaGVyOiBYTVAAGgoADwYgLS0-IC0APQwAHgdzcG9uc2UAPQ0tPiAtAHgGAGYJAB8H&s=default
+
+6 - http://www.websequencediagrams.com/?lz=Y2xpZW50IC0-ICtBUEkgc2VydmVyOiBIVFRQIHJlcXVlc3QKAA8KACMFRnJpZW5kIEZpbmRlcjogWE1QACEKAA8NIC0tPiAtAEsMACUHc3BvbnNlAEsNLT4gLQCBBgYAdAkAHwc&s=default
+-->
+
 General Notes
 =============
 
@@ -678,6 +694,13 @@ API Endpoints
 /:channel/content/:node
 -----------------------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Receives or posts to a channel node, which represents a stream of
     channel content. Every channel has at least a **posts** node, which
@@ -945,6 +968,13 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 /:channel/content/:item/
 ------------------------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Allows access to single items (e.g., posts) of a channel node. Both
     Atom and JSON representations are available (see [\#Channel Content
@@ -1036,6 +1066,13 @@ No Content
 /:channel/metadata/:node
 ------------------------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Gets or sets metadata about a channel node.
 
@@ -1100,6 +1137,13 @@ Content-Type: application/json
 
 /:channel/subscribers/:node
 ---------------------------
+
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
 
 Description
 :   Can be used to get a channel node's subscribers or to change the
@@ -1186,6 +1230,13 @@ Content-Type: application/json
 /:channel/subscribers/:node/approve
 -----------------------------------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Lists and modifies the state of subscriptions in a node. Should be
     used in order to list, approve or deny pending subscription
@@ -1254,6 +1305,18 @@ Content-Type: application/json
 
 /:channel/media
 ---------------
+
+client -> +API server: request
+API server -> +Media server: forward request
+Media server -> API server: check request
+note right of Media server: XEP-0070
+API server --> Media server: request ok
+Media server -> +Buddycloud server: get PubSub affiliations
+note right of Buddycloud server: XEP-0060
+Buddycloud server --> -Media server: PubSub affiliations
+Media server
+Media server --> -API server: response
+API server --> -client: forward response
 
 Description
 :   Uploads media to a channel or lists the media in a channel
@@ -1391,6 +1454,18 @@ POST {"filename": "testimage.jpg",
 /:channel/media/:media
 ----------------------
 
+client -> +API server: request
+API server -> +Media server: forward request
+Media server -> API server: check request
+note right of Media server: XEP-0070
+API server --> Media server: request ok
+Media server -> +Buddycloud server: get PubSub affiliations
+note right of Buddycloud server: XEP-0060
+Buddycloud server --> -Media server: PubSub affiliations
+Media server
+Media server --> -API server: response
+API server --> -client: forward response
+
 Description
 :   Updates metadata, deletes or gets a channel media.
 
@@ -1494,6 +1569,18 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 
 /:channel/media/avatar
 ----------------------
+
+client -> +API server: request
+API server -> +Media server: forward request
+Media server -> API server: check request
+note right of Media server: XEP-0070
+API server --> Media server: request ok
+Media server -> +Buddycloud server: get PubSub affiliations
+note right of Buddycloud server: XEP-0060
+Buddycloud server --> -Media server: PubSub affiliations
+Media server
+Media server --> -API server: response
+API server --> -client: forward response
 
 Description
 :   Special endpoint that handles channel's avatars: uploads, updates,
@@ -1605,6 +1692,13 @@ DELETE https://api.example.com/alice@domain.com/media/avatar
 /:channel
 ---------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Used to create a topic channel.
 
@@ -1636,6 +1730,11 @@ POST /talesofalice@topics.example.com
 
 /:channel/similar
 -----------------
+
+client -> API server: HTTP request
+API server -> Channel Directory: XMPP request
+Channel Directory --> API server: XMPP response
+API server --> client: HTTP response
 
 Description
 :   Retrieves similar channels to a given channel based on the social
@@ -1693,6 +1792,13 @@ Content-Type: application/json
 
 /subscribed
 -----------
+
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
 
 Description
 :   Returns the user's subscriptions.
@@ -1756,6 +1862,13 @@ Content-Type: application/json
 
 /sync
 -----
+
+client -> +API server: HTTP request
+API server -> +XMPP server: create XMPP connection
+XMPP server --> -API server: XMPP connection created
+API server -> +Buddycloud server: XMPP request
+Buddycloud server --> -API server: XMPP response
+API server --> -client: HTTP response
 
 Description
 :   Allows access to the latest posts of all channel nodes a user
@@ -1865,6 +1978,11 @@ Content-Type: application/json
 /notification\_settings
 -----------------------
 
+client -> +API server: HTTP request
+API server -> +Pusher: XMPP request
+Pusher --> -API server: XMPP response
+API server --> -client: HTTP response
+
 Description
 :   Allows retrieval and modification on the user's notification
     settings.
@@ -1966,6 +2084,11 @@ Content-Type: application/json
 /search
 -------
 
+client -> +API server: request
+API server -> +Channel Directory: forward request
+Channel Directory --> -API server: response
+API server --> -client: forward response
+
 Description
 :   Performs a search over channels' metadata and posts' content indexed
     by the [Channel Directory](Channel Directory Project "wikilink").
@@ -2056,6 +2179,11 @@ Content-Type: application/json
 /recommendations
 ----------------
 
+client -> +API server: request
+API server -> +Channel Directory: forward request
+Channel Directory --> -API server: response
+API server --> -client: forward response
+
 Description
 :   Recommends channels for a given user based on taste data indexed by
     the [Channel Directory](Channel Directory Project "wikilink").
@@ -2115,6 +2243,11 @@ Content-Type: application/json
 /most\_active
 -------------
 
+client -> +API server: request
+API server -> +Channel Directory: forward request
+Channel Directory --> -API server: response
+API server --> -client: forward response
+
 Description
 :   Retrieves the most active channels among the channels indexed by the
     [Channel Directory](Channel Directory Project "wikilink"). The most
@@ -2173,6 +2306,11 @@ Content-Type: application/json
 /account/pw/change
 ------------------
 
+client -> +API server: HTTP request
+API server -> +XMPP server: create account request
+XMPP server --> -API server: create account response
+API server --> -client: HTTP response
+
 Description
 :   Allows for user password changes.
 
@@ -2208,6 +2346,11 @@ Content-Type: application/json
 
 /account/pw/reset
 -----------------
+
+client -> +API server: HTTP request
+API server -> +XMPP server: create account request
+XMPP server --> -API server: create account response
+API server --> -client: HTTP response
 
 Description
 :   Allows for user password reset.
@@ -2246,6 +2389,11 @@ Content-Type: application/json
 
 /account
 --------
+
+client -> +API server: HTTP request
+API server -> +XMPP server: create account request
+XMPP server --> -API server: create account response
+API server --> -client: HTTP response
 
 Description
 :   Creates or deletes an user account.
@@ -2299,7 +2447,12 @@ DELETE /account
 </tabber>
 
 /match_contacts
---------
+---------------
+
+client -> +API server: HTTP request
+API server -> +Friend Finder: XMPP request
+Friend Finder --> -API server: XMPP response
+API server --> -client: HTTP response
 
 Description
 :   Publishes user contacts' hashes and matches previously reported hashes to jids. A hash is computed as following: sha256(provider:id), eg: sha256(facebook:1015747641) = 0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b.
