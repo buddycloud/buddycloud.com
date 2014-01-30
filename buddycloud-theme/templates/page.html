@@ -3,14 +3,17 @@
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
     {% if active_page == "api" %}
-    <nav class="table-contents"></nav>
+    <nav class="table-contents">
+	{% set toc_info = page.content|extract_toc_info %}
+	{{ toc_info|create_toc }}
+    </nav>
     {% endif %}
     <section id="main">
         <section class="intro">
 		<h1>{{ page.title }}</h1>
         </section>
         <section>
-		{{ page.content }}
+		{{ page.content|add_toc_hooks(toc_info) }}
     	</section>
     </section>
 {% endblock %}

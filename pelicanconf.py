@@ -35,6 +35,17 @@ THEME = 'buddycloud-theme'
 
 MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_tabs', 'mdext.sequence_diagrams' ]
 
+import os, sys
+sys.path.append(os.path.join(os.getcwd(), "jinjaext"))
+from table_of_contents import extractTableOfContentsInfo
+from table_of_contents import createTableOfContents
+from table_of_contents import addTableOfContentsHooks
+
+JINJA_FILTERS = {
+		  'extract_toc_info' : extractTableOfContentsInfo,
+		  'create_toc' : createTableOfContents,
+		  'add_toc_hooks' : addTableOfContentsHooks
+		}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

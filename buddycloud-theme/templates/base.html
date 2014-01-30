@@ -21,12 +21,7 @@
     <ul class="nav">
         {% for page in PAGES %}
         <li>
-		<a href="{{ SITEURL }}/{{ page.url }}"
-		active page is: {{ active_page }}
-		{% if active_page == page.slug %}
-			class="selected"
-		{% endif %}
-		>
+		<a href="{{ SITEURL }}/{{ page.url }}"{% if active_page == page.slug %} class="selected"{% endif %}>
 			{{ page.title }}
 		</a>
 	</li>

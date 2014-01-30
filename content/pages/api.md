@@ -1702,7 +1702,7 @@ Content Type
 
 Methods
 :   **GET** - Retrieves the list of subscribed-to channels as a JSON
-    object. The object's keys are of the form "<channel>/<node>", the
+    object. The object's keys are of the form "{channel}/{node}", the
     values denote the subscription type ("owner", "publisher", "member"
     or "pending").
 :   **POST** - Subscribes to or unsubscribes from a node. The body must

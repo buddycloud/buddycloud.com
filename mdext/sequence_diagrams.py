@@ -1,5 +1,4 @@
 from markdown.blockprocessors import BlockProcessor
-from markdown.postprocessors import Postprocessor
 from markdown.util import etree
 from markdown.util import AtomicString
 from markdown.extensions import Extension
