@@ -3,7 +3,7 @@ from xml.etree import ElementTree
 
 def extractTableOfContentsInfo(content):
 
-	tree = ElementTree.fromstring("<root>"+content+"</root>")
+	root = ElementTree.fromstring("<root>"+content+"</root>")
 
 	toc = []
 
@@ -17,7 +17,7 @@ def extractTableOfContentsInfo(content):
 			#and place it here as well
 			toc.append((element.tag, element.text))
 
-	process(tree.getroot())
+	process(root)
 
 	return toc
 
