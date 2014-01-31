@@ -1306,15 +1306,14 @@ Content-Type: application/json
 /:channel/media
 ---------------
 
-client->API server: request
-API server->Media server: forward request
-Media server->API server: check request
-Note right of Media server: XEP-0070
-API server-->Media server: request ok
-Media server->Buddycloud server: get PubSub affiliations
-Note right of Buddycloud server: XEP-0060
-Buddycloud server-->Media server: PubSub affiliations
-Media server-->API server: response
+client->API server: HTTP request
+Note right of API server: token generation
+API server->Media server: HTTP auth request with token
+Media server->API server: XMPP request confirmation
+API server-->Media server: XMPP confirmation response
+Media server->Buddycloud server: XMPP request to check privileges
+Buddycloud server-->Media server: XMPP response to privileges
+Media server-->API server: HTTP request response
 API server-->client: forward response
 
 Description
@@ -1453,15 +1452,14 @@ POST {"filename": "testimage.jpg",
 /:channel/media/:media
 ----------------------
 
-client->API server: request
-API server->Media server: forward request
-Media server->API server: check request
-Note right of Media server: XEP-0070
-API server-->Media server: request ok
-Media server->Buddycloud server: get PubSub affiliations
-Note right of Buddycloud server: XEP-0060
-Buddycloud server-->Media server: PubSub affiliations
-Media server-->API server: response
+client->API server: HTTP request
+Note right of API server: token generation
+API server->Media server: HTTP auth request with token
+Media server->API server: XMPP request confirmation
+API server-->Media server: XMPP confirmation response
+Media server->Buddycloud server: XMPP request to check privileges
+Buddycloud server-->Media server: XMPP response to privileges
+Media server-->API server: HTTP request response
 API server-->client: forward response
 
 Description
@@ -1568,15 +1566,14 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 /:channel/media/avatar
 ----------------------
 
-client->API server: request
-API server->Media server: forward request
-Media server->API server: check request
-Note right of Media server: XEP-0070
-API server-->Media server: request ok
-Media server->Buddycloud server: get PubSub affiliations
-Note right of Buddycloud server: XEP-0060
-Buddycloud server-->Media server: PubSub affiliations
-Media server-->API server: response
+client->API server: HTTP request
+Note right of API server: token generation
+API server->Media server: HTTP auth request with token
+Media server->API server: XMPP request confirmation
+API server-->Media server: XMPP confirmation response
+Media server->Buddycloud server: XMPP request to check privileges
+Buddycloud server-->Media server: XMPP response to privileges
+Media server-->API server: HTTP request response
 API server-->client: forward response
 
 Description
