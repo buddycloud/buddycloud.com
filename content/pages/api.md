@@ -10,7 +10,7 @@ channels through a REST-like interface. It is thought as an alternative
 to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 
 Title: Sequence Diagram Test
-Element A -> Element B: Hello
+Element A->Element B: Hello
 Element B--> Element A : Hello there!
 Note right of Element B: This is element B\nwhispering
 
@@ -1308,7 +1308,7 @@ Content-Type: application/json
 
 client->API server: request
 API server->Media server: forward request
-Media server -> API server: check request
+Media server->API server: check request
 note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
@@ -1456,7 +1456,7 @@ POST {"filename": "testimage.jpg",
 
 client->API server: request
 API server->Media server: forward request
-Media server -> API server: check request
+Media server->API server: check request
 note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
@@ -1572,7 +1572,7 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 
 client->API server: request
 API server->Media server: forward request
-Media server -> API server: check request
+Media server->API server: check request
 note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
@@ -1731,8 +1731,8 @@ POST /talesofalice@topics.example.com
 /:channel/similar
 -----------------
 
-client -> API server: HTTP request
-API server -> Channel Directory: XMPP request
+client->API server: HTTP request
+API server->Channel Directory: XMPP request
 Channel Directory-->API server: XMPP response
 API server-->client: HTTP response
 
