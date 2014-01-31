@@ -1306,14 +1306,17 @@ Content-Type: application/json
 /:channel/media
 ---------------
 
-client->API server: HTTP request
+client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP auth request with token
-Media server->API server: XMPP request confirmation
-API server-->Media server: XMPP confirmation response
-Media server->Buddycloud server: XMPP request to check privileges
-Buddycloud server-->Media server: XMPP response to privileges
-Media server-->API server: HTTP request response
+API server->Media server: HTTP: auth request with token 
+Media server->API server: XMPP: asks for request confirmation
+Note right of Media server: XEP-0070
+Note right of API server: checking request origin
+API server-->Media server: XMPP: confirms request origin
+Media server->Buddycloud server: XMPP: check permissions to access media
+Note right of Buddycloud server: XEP-0060
+Buddycloud server-->Media server: XMPP: response to permission request
+Media server-->API server: HTTP: request response
 API server-->client: forward response
 
 Description
@@ -1452,14 +1455,17 @@ POST {"filename": "testimage.jpg",
 /:channel/media/:media
 ----------------------
 
-client->API server: HTTP request
+client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP auth request with token
-Media server->API server: XMPP request confirmation
-API server-->Media server: XMPP confirmation response
-Media server->Buddycloud server: XMPP request to check privileges
-Buddycloud server-->Media server: XMPP response to privileges
-Media server-->API server: HTTP request response
+API server->Media server: HTTP: auth request with token 
+Media server->API server: XMPP: asks for request confirmation
+Note right of Media server: XEP-0070
+Note right of API server: checking request origin
+API server-->Media server: XMPP: confirms request origin
+Media server->Buddycloud server: XMPP: check permissions to access media
+Note right of Buddycloud server: XEP-0060
+Buddycloud server-->Media server: XMPP: response to permission request
+Media server-->API server: HTTP: request response
 API server-->client: forward response
 
 Description
@@ -1566,14 +1572,17 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 /:channel/media/avatar
 ----------------------
 
-client->API server: HTTP request
+client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP auth request with token
-Media server->API server: XMPP request confirmation
-API server-->Media server: XMPP confirmation response
-Media server->Buddycloud server: XMPP request to check privileges
-Buddycloud server-->Media server: XMPP response to privileges
-Media server-->API server: HTTP request response
+API server->Media server: HTTP: auth request with token 
+Media server->API server: XMPP: asks for request confirmation
+Note right of Media server: XEP-0070
+Note right of API server: checking request origin
+API server-->Media server: XMPP: confirms request origin
+Media server->Buddycloud server: XMPP: check permissions to access media
+Note right of Buddycloud server: XEP-0060
+Buddycloud server-->Media server: XMPP: response to permission request
+Media server-->API server: HTTP: request response
 API server-->client: forward response
 
 Description
