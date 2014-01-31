@@ -1310,7 +1310,7 @@ client->API server: request
 API server->Media server: forward request
 Media server -> API server: check request
 note right of Media server: XEP-0070
-API server --> Media server: request ok
+API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
 note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
@@ -1458,7 +1458,7 @@ client->API server: request
 API server->Media server: forward request
 Media server -> API server: check request
 note right of Media server: XEP-0070
-API server --> Media server: request ok
+API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
 note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
@@ -1574,7 +1574,7 @@ client->API server: request
 API server->Media server: forward request
 Media server -> API server: check request
 note right of Media server: XEP-0070
-API server --> Media server: request ok
+API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
 note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
@@ -1733,8 +1733,8 @@ POST /talesofalice@topics.example.com
 
 client -> API server: HTTP request
 API server -> Channel Directory: XMPP request
-Channel Directory --> API server: XMPP response
-API server --> client: HTTP response
+Channel Directory-->API server: XMPP response
+API server-->client: HTTP response
 
 Description
 :   Retrieves similar channels to a given channel based on the social
