@@ -1309,12 +1309,11 @@ Content-Type: application/json
 client->API server: request
 API server->Media server: forward request
 Media server->API server: check request
-note right of Media server: XEP-0070
+Note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
-note right of Buddycloud server: XEP-0060
+Note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
-Media server
 Media server-->API server: response
 API server-->client: forward response
 
@@ -1457,12 +1456,11 @@ POST {"filename": "testimage.jpg",
 client->API server: request
 API server->Media server: forward request
 Media server->API server: check request
-note right of Media server: XEP-0070
+Note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
-note right of Buddycloud server: XEP-0060
+Note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
-Media server
 Media server-->API server: response
 API server-->client: forward response
 
@@ -1573,12 +1571,11 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 client->API server: request
 API server->Media server: forward request
 Media server->API server: check request
-note right of Media server: XEP-0070
+Note right of Media server: XEP-0070
 API server-->Media server: request ok
 Media server->Buddycloud server: get PubSub affiliations
-note right of Buddycloud server: XEP-0060
+Note right of Buddycloud server: XEP-0060
 Buddycloud server-->Media server: PubSub affiliations
-Media server
 Media server-->API server: response
 API server-->client: forward response
 
