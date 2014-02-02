@@ -8,6 +8,7 @@ class TableOfContents:
 	def produce_new_hook(text):
 
 		hook = text.strip().replace(" ", "_").lower()
+		hook = hook.replace("/:", ":").replace("/", ":")
 
 		hook_base = hook
 		hook_id = 2
@@ -23,6 +24,7 @@ class TableOfContents:
 	def consume_existing_hook(text):
 
 		hook = text.strip().replace(" ", "_").lower()
+		hook = hook.replace("/:", ":").replace("/", ":")
 		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
 		if hook[:hook.rfind("_")] in stub_hooks:
