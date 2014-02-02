@@ -9,6 +9,11 @@ class TableOfContents:
 
 		hook = text.strip().replace(" ", "_").lower()
 		hook = hook.replace("/:", ":").replace("/", ":")
+		hook = hook.replace(":", "_")
+		if ( hook.startswith("_") ):
+			hook = hook[1:]
+		if ( hook.endswith("_") ):
+			hook = hook[:-1]
 
 		hook_base = hook
 		hook_id = 2
@@ -25,6 +30,12 @@ class TableOfContents:
 
 		hook = text.strip().replace(" ", "_").lower()
 		hook = hook.replace("/:", ":").replace("/", ":")
+		hook = hook.replace(":", "_")
+		if ( hook.startswith("_") ):
+			hook = hook[1:]
+		if ( hook.endswith("_") ):
+			hook = hook[:-1]
+		
 		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
 		if hook[:hook.rfind("_")] in stub_hooks:
