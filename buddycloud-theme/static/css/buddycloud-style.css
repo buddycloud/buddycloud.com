@@ -114,8 +114,10 @@ header .nav li a.selected {
 /* Content Navigation */
 
 #content nav {
-	position: fixed;
+/*	position: fixed;*/
 	font-size: .75em;
+	width: 256px;
+	float:left;
 }
 
 #content nav ul {
