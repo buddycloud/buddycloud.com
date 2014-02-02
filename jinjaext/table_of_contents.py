@@ -107,10 +107,6 @@ class TableOfContents:
 	@staticmethod
 	def addTableOfContentsHooks(content, toc_info):
 
-		f = open("content_is", "w")
-		f.write(content)
-		f.close()
-	
 		root = ElementTree.fromstring("<root>"+content+"</root>")
 
 		def process(element):

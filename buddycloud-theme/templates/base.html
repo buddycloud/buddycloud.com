@@ -19,7 +19,7 @@
     <h1><a href="#">{{ SITENAME }}</a></h1>
     {% if DISPLAY_PAGES_ON_MENU %}
     <ul class="nav">
-        {% for page in PAGES %}
+        {% for page in PAGES|sort(attribute='order') %}
         <li>
 		<a href="{{ SITEURL }}/{{ page.url }}"{% if active_page == page.slug %} class="selected"{% endif %}>
 			{{ page.title }}
