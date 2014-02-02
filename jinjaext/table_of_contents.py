@@ -2,33 +2,34 @@ from xml.etree import ElementTree
 
 class TableOfContents:
 
-	def __init__(self):
-		self.hooks_taken = []
+	hooks_taken = []
 
-	def produce_new_hook(self, text):
+	@staticmethod
+	def produce_new_hook(text):
 
 		hook = text.strip().replace(" ", "_").lower()
 
 		hook_base = hook
 		hook_id = 2
-		while (hook in self.hooks_taken):
+		while (hook in TableOfContents.hooks_taken):
 
 			hook = hook_base + "_" + str(hook_id)
 			hook_id += 1
 
-		self.hooks_taken.append(hook)
+		TableOfContents.hooks_taken.append(hook)
 		return hook
 
-	def consume_existing_hook(self, text):
+	@staticmethod
+	def consume_existing_hook(text):
 
 		hook = text.strip().replace(" ", "_").lower()
-		stub_hooks = map(lambda x: x[:x.rfind("_")], self.hooks_taken)
+		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
 		if hook[:hook.rfind("_")] in stub_hooks:
 		
 			hook_at = stub_hooks.index(hook[:hook.rfind("_")])
-			hook = self.hooks_taken[hook_at]
-			self.hooks_taken.remove(hook)
+			hook = TableOfContents.hooks_taken[hook_at]
+			TableOfContents.hooks_taken.remove(hook)
 
 		return hook
 
@@ -40,36 +41,76 @@ class TableOfContents:
 		toc_info = []
 
 		def process(element):
-			global toc
 
 			if ( element.tag == 'h1'
-			  or element.tag == 'h2'
-			  or element.tag == 'h3' ):
+			  or element.tag == 'h2' ):
 				toc_info.append({
 					'tag' : element.tag,
 					'text' : element.text,
-					'hook' : self.produce_new_hook(text)
+					'hook' : TableOfContents.produce_new_hook(element.text)
 				})
 
-		process(root)
+			for child in element:
+				process(child)
 
+		process(root)
 		return toc_info
 
 	@staticmethod
 	def createTableOfContents(toc_info):
 
-		toc_html = ""
 		if ( len(toc_info) == 0 ):
+			toc_html = ""
 			return toc_html
 		elif ( len(toc_info) == 1 ):
 			toc_html = "<ul><li><a href='#%s' class='smoothScroll'>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 		else:
-			toc_html = "<ul><li><a href='#%s' class='smoothScroll'>%s</a></li></ul>"
-			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
+			a_html = "<a href='#%s' class='smoothScroll'>%s</a>"
+			toc_html = "<ul>"
+			toc_html += "<li>"
+			toc_html += a_html % (toc_info[0]['hook'], toc_info[0]['text'])
+			last_tag = toc_info[0]['tag']
+			for i in range(1,len(toc_info)):
+				if ( toc_info[i]['tag'] == 'h1' ):
+					if ( last_tag == 'h2' ):
+						toc_html += "</ul>"
+					toc_html += "</li>"
+					toc_html += "<li>"
+					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
+				elif ( toc_info[i]['tag'] == 'h2' ):
+					if ( last_tag == 'h1' ):
+						toc_html += "<ul>"
+					toc_html += "<li>"
+					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
+					toc_html += "</li>"
+
+				last_tag = toc_info[i]['tag']
+
+			toc_html += "</ul>"
 			return toc_html
 	
 	@staticmethod
 	def addTableOfContentsHooks(content, toc_info):
+
+		f = open("content_is", "w")
+		f.write(content)
+		f.close()
+	
+		root = ElementTree.fromstring("<root>"+content+"</root>")
+
+		def process(element):
+
+			if ( element.tag == 'h1'
+			  or element.tag == 'h2' ):
+				element.attrib["id"] = TableOfContents.consume_existing_hook(element.text)
+
+			for child in element:
+				process(child)
+
+		process(root)
+
+		content = ElementTree.tostring(root, method="html")
+		content = content.replace("<root>", "").replace("</root>", "") 
 		return content
