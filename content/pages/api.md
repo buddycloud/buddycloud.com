@@ -9,11 +9,6 @@ The buddycloud HTTP API presents a simple way to access buddycloud
 channels through a REST-like interface. It is thought as an alternative
 to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 
-Title: Sequence Diagram Test
-Element A->Element B: Hello
-Element B--> Element A : Hello there!
-Note right of Element B: This is element B\nwhispering
-
 <!---
 Current used diagrams images:
 
