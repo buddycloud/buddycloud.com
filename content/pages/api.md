@@ -687,8 +687,10 @@ Changes
 API Endpoints
 =============
 
-/:channel/content/:node
------------------------
+content endpoints
+-----------------
+
+### /:channel/content/:node
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -961,8 +963,7 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 
 </tabber>
 
-/:channel/content/:item/
-------------------------
+### /:channel/content/:item/
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1059,8 +1060,10 @@ No Content
 
 </tabber>
 
-/:channel/metadata/:node
-------------------------
+metadata endpoints
+------------------
+
+### /:channel/metadata/:node
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1131,8 +1134,10 @@ Content-Type: application/json
 
 </tabber>
 
-/:channel/subscribers/:node
----------------------------
+subscribers endpoints
+---------------------
+
+### /:channel/subscribers/:node
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1223,8 +1228,7 @@ Content-Type: application/json
 
 </tabber>
 
-/:channel/subscribers/:node/approve
------------------------------------
+### /:channel/subscribers/:node/approve
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1299,8 +1303,10 @@ Content-Type: application/json
 
 </tabber>
 
-/:channel/media
+media endpoints
 ---------------
+
+### /:channel/media
 
 client->API server: HTTP: request
 Note right of API server: token generation
@@ -1349,7 +1355,7 @@ Responses
 :   **401 Unauthorized** - if authentication is required, but not
     provided.
 :   **403 Forbidden** - if the user is not permitted to get or post to
-    the channel (e.g. if the channel is private).
+    the ----------channel (e.g. if the channel is private).
 
 Media Metadata
 :   **height** *server-set* height of the uploaded image or video. This
@@ -1448,8 +1454,7 @@ POST {"filename": "testimage.jpg",
 
 </tabber>
 
-/:channel/media/:media
-----------------------
+### /:channel/media/:media
 
 client->API server: HTTP: request
 Note right of API server: token generation
@@ -1565,8 +1570,7 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 
 </tabber>
 
-/:channel/media/avatar
-----------------------
+### /:channel/media/avatar
 
 client->API server: HTTP: request
 Note right of API server: token generation
@@ -1688,8 +1692,10 @@ DELETE https://api.example.com/alice@domain.com/media/avatar
 
 </tabber>
 
-/:channel
----------
+channel endpoints
+-----------------
+
+### /:channel
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1727,8 +1733,7 @@ POST /talesofalice@topics.example.com
 
 </tabber>
 
-/:channel/similar
------------------
+### /:channel/similar
 
 client->API server: HTTP request
 API server->Channel Directory: XMPP request
@@ -2302,8 +2307,10 @@ Content-Type: application/json
 
 </tabber>
 
-/account/pw/change
-------------------
+account endpoints
+-----------------
+
+### /account/pw/change
 
 client->API server: HTTP request
 API server->XMPP server: create account request
@@ -2343,8 +2350,7 @@ Content-Type: application/json
 
 </tabber>
 
-/account/pw/reset
------------------
+### /account/pw/reset
 
 client->API server: HTTP request
 API server->XMPP server: create account request
@@ -2386,8 +2392,7 @@ Content-Type: application/json
 
 </tabber>
 
-/account
---------
+### /account
 
 client->API server: HTTP request
 API server->XMPP server: create account request
