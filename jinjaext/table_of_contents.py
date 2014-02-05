@@ -76,11 +76,11 @@ class TableOfContents:
 			toc_html = ""
 			return toc_html
 		elif ( len(toc_info) == 1 ):
-			toc_html = "<ul><li><a href='#%s' data-scroll>%s</a></li></ul>"
+			toc_html = "<ul><li><a href='#%s' data-scroll data-url='true'>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 		else:
-			a_html = "<a href='#%s' data-scroll>%s</a>"
+			a_html = "<a href='#%s' data-scroll data-url='true'>%s</a>"
 			toc_html = "<ul>"
 			toc_html += "<li>"
 			toc_html += a_html % (toc_info[0]['hook'], toc_info[0]['text'])

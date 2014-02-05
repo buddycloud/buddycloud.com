@@ -460,6 +460,16 @@ code {
 }
 
 /* = = = = = = = = = = = = = = = = = = = = */
+/* Anchor Links */
+h1:before, h2:before {
+	display: block;
+	content: " ";
+	margin-top: -96px;
+	height: 96px;
+	visibility: hidden;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = */
 /* Sequence Diagrams */
 
 rect[fill=none] {

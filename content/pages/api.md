@@ -687,8 +687,8 @@ Changes
 API Endpoints
 =============
 
-Content
--------
+Node Content
+------------
 
 ### /:channel/content/:node
 
@@ -1060,8 +1060,8 @@ No Content
 
 </tabber>
 
-Metadata
---------
+Node Metadata
+-------------
 
 ### /:channel/metadata/:node
 
