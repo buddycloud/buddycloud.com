@@ -458,3 +458,28 @@ code {
 	color: rgba(255,255,255,.5);
 	padding: 1em;
 }
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Sequence Diagrams */
+
+rect[fill=none] {
+	fill: white;
+	stroke: #2DAEBF;
+	stroke-width: 4px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+rect[fill='#ffffff'] {
+	opacity: 0.0;
+}
+
+@font-face {
+	font-family: OpenSansRegular;
+	src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+text {
+	font-family: OpenSansRegular;
+	fill: #2DAEBF;
+}
