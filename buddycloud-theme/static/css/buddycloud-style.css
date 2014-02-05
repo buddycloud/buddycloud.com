@@ -465,9 +465,7 @@ code {
 rect[fill=none] {
 	fill: white;
 	stroke: #2DAEBF;
-	stroke-width: 4px;
-	stroke-linecap: round;
-	stroke-linejoin: round;
+	stroke-width: 2px;
 }
 
 rect[fill='#ffffff'] {
@@ -477,9 +475,16 @@ rect[fill='#ffffff'] {
 @font-face {
 	font-family: OpenSansRegular;
 	src: url('../fonts/OpenSans-Regular.ttf');
+	units-per-em: 2;
 }
 
-text {
-	font-family: OpenSansRegular;
+@font-face {
+	font-family: OpenSansBold;
+	src: url('../fonts/OpenSans-Bold.ttf');
+	units-per-em: 2;
+}
+
+text tspan {
+	font-family: OpenSansBold, verdana;
 	fill: #2DAEBF;
 }
