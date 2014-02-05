@@ -687,8 +687,8 @@ Changes
 API Endpoints
 =============
 
-content endpoints
------------------
+Content
+-------
 
 ### /:channel/content/:node
 
@@ -1060,8 +1060,8 @@ No Content
 
 </tabber>
 
-metadata endpoints
-------------------
+Metadata
+--------
 
 ### /:channel/metadata/:node
 
@@ -1134,8 +1134,8 @@ Content-Type: application/json
 
 </tabber>
 
-subscribers endpoints
----------------------
+Subscribers and Subscribed
+--------------------------
 
 ### /:channel/subscribers/:node
 
@@ -1303,8 +1303,77 @@ Content-Type: application/json
 
 </tabber>
 
-media endpoints
----------------
+### /subscribed
+
+client->API server: HTTP request
+API server->XMPP server: create XMPP connection
+XMPP server-->API server: XMPP connection created
+API server->Buddycloud server: XMPP request
+Buddycloud server-->API server: XMPP response
+API server-->client: HTTP response
+
+Description
+:   Returns the user's subscriptions.
+
+Content Type
+:   JSON *(application/json)*
+
+Methods
+:   **GET** - Retrieves the list of subscribed-to channels as a JSON
+    object. The object's keys are of the form "{channel}/{node}", the
+    values denote the subscription type ("owner", "publisher", "member"
+    or "pending").
+:   **POST** - Subscribes to or unsubscribes from a node. The body must
+    be a JSON object with exactly one key-value pair of the form
+    returned by GET. The node will be subscribed to if the value is
+    "publisher" or "member", while "none" means unsubscription.
+
+Parameters
+:   (none)
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if the request is not authenticated.
+
+Examples
+
+<tabber> JSON GET= Retrieve the own subscribed-to channel nodes as
+"alice@example.com":
+
+~~~~ bash
+GET /subscribed
+Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
+~~~~
+
+~~~~ javascript
+200 OK
+Content-Type: application/json
+
+{
+  "alice@example.com/posts": "owner",
+  "bob@example.com/posts": "publisher",
+  "public@topics.example.com/posts": "publisher"
+}
+~~~~
+
+|-| JSON POST= Subscribe to "bob@example.com":
+
+~~~~ bash
+POST /subscribed
+Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
+Content-Type: application/json
+
+{"bob@example.com/posts": "publisher"}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+</tabber>
+
+Media
+-----
 
 ### /:channel/media
 
@@ -1692,8 +1761,8 @@ DELETE https://api.example.com/alice@domain.com/media/avatar
 
 </tabber>
 
-channel endpoints
------------------
+Channel
+-------
 
 ### /:channel
 
@@ -1794,78 +1863,10 @@ Content-Type: application/json
 
 </tabber>
 
-/subscribed
------------
+Sync and Notification Settings
+------------------------------
 
-client->API server: HTTP request
-API server->XMPP server: create XMPP connection
-XMPP server-->API server: XMPP connection created
-API server->Buddycloud server: XMPP request
-Buddycloud server-->API server: XMPP response
-API server-->client: HTTP response
-
-Description
-:   Returns the user's subscriptions.
-
-Content Type
-:   JSON *(application/json)*
-
-Methods
-:   **GET** - Retrieves the list of subscribed-to channels as a JSON
-    object. The object's keys are of the form "{channel}/{node}", the
-    values denote the subscription type ("owner", "publisher", "member"
-    or "pending").
-:   **POST** - Subscribes to or unsubscribes from a node. The body must
-    be a JSON object with exactly one key-value pair of the form
-    returned by GET. The node will be subscribed to if the value is
-    "publisher" or "member", while "none" means unsubscription.
-
-Parameters
-:   (none)
-
-Responses
-:   **200 OK** on success.
-:   **401 Unauthorized** if the request is not authenticated.
-
-Examples
-
-<tabber> JSON GET= Retrieve the own subscribed-to channel nodes as
-"alice@example.com":
-
-~~~~ bash
-GET /subscribed
-Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-~~~~
-
-~~~~ javascript
-200 OK
-Content-Type: application/json
-
-{
-  "alice@example.com/posts": "owner",
-  "bob@example.com/posts": "publisher",
-  "public@topics.example.com/posts": "publisher"
-}
-~~~~
-
-|-| JSON POST= Subscribe to "bob@example.com":
-
-~~~~ bash
-POST /subscribed
-Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/json
-
-{"bob@example.com/posts": "publisher"}
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-</tabber>
-
-/sync
------
+### /sync
 
 client->API server: HTTP request
 API server->XMPP server: create XMPP connection
@@ -1979,8 +1980,7 @@ Content-Type: application/json
 
 </tabber>
 
-/notification\_settings
------------------------
+### /notification\_settings
 
 client->API server: HTTP request
 API server->Pusher: XMPP request
@@ -2085,8 +2085,10 @@ Content-Type: application/json
 
 </tabber>
 
-/search
--------
+Search and Recommendations
+--------------------------
+
+### /search
 
 client->API server: request
 API server->Channel Directory: forward request
@@ -2180,8 +2182,7 @@ Content-Type: application/json
 
 </tabber>
 
-/recommendations
-----------------
+### /recommendations
 
 client->API server: request
 API server->Channel Directory: forward request
@@ -2244,8 +2245,10 @@ Content-Type: application/json
 
 </tabber>
 
-/most\_active
--------------
+Most Active
+-----------
+
+### /most\_active
 
 client->API server: request
 API server->Channel Directory: forward request
@@ -2307,8 +2310,8 @@ Content-Type: application/json
 
 </tabber>
 
-account endpoints
------------------
+Account
+-------
 
 ### /account/pw/change
 
@@ -2450,8 +2453,10 @@ DELETE /account
 
 </tabber>
 
-/match_contacts
----------------
+Match Contacts
+--------------
+
+### /match_contacts
 
 client->API server: HTTP request
 API server->Friend Finder: XMPP request
