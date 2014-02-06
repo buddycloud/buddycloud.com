@@ -508,13 +508,12 @@ rect[fill='#ffffff'] {
 }
 
 .seq-diag-primary tspan {
-	font-family: OpenSansBold, verdana;
-	font-size: 105%;
+	font-family: OpenSansRegular;
 	fill: #2DAEBF;
 }
 
 .seq-diag-secondary tspan {
-	font-family: OpenSansRegular, verdana;
+	font-family: OpenSansRegular;
 	fill: #A6A6A6;
 }
 
