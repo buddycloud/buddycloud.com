@@ -509,6 +509,7 @@ rect[fill='#ffffff'] {
 
 .seq-diag-primary tspan {
 	font-family: OpenSansBold, verdana;
+	font-size: 105%;
 	fill: #2DAEBF;
 }
 
@@ -517,6 +518,20 @@ rect[fill='#ffffff'] {
 	fill: #A6A6A6;
 }
 
-.seq-diag-link tspan {
+.seq-diag-link tspan, .seq-diag-note tspan {
 	font-family: OpenSansBoldItalic;
+}
+
+.seq-diag-link {
+	opacity: 0.5;
+	stroke-opacity: 0.5;
+}
+
+rect[class='seq-diag-note'] {
+	fill: #2DAEBF;
+	stroke: #2DAEBF;
+}
+
+.seq-diag-note tspan {
+	fill: white;
 }
