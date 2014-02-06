@@ -42,26 +42,24 @@
 <script src="{{ SITEURL }}/theme/js/smooth-scroll.js"></script>
 <script>
 	$(".js_sequence_diagram").sequenceDiagram({theme: 'simple'});
+
 	$("rect").attr("rx", "2px");
 	$("rect").attr("ry", "2px");
 
 	function nextSequence(elements, current, elementSequence){
 		if ( current + (elementSequence.length-1) < elements.length ){
 			for (var i=0; i<(elementSequence.length); i++ ){
-				console.log("Comparing " + elements[current + i].tagName + " to " + elementSequence[i]);
 				if ( elements[current + i].tagName != elementSequence[i] ){
-					console.log("VIOLATION I.");
 					return false;
 				}
 			}
-			console.log("CHECK.");
 			return true;
 		}
-		console.log("VIOLATION II.");
 		return false;
 	}
 
 	$("svg").each(function(i, svg){
+
 		var numElements = 0;
 		var elements = $(svg).children();
 		var current = 0;
@@ -69,7 +67,6 @@
 		var linkSequence = [ "rect", "text", "path" ];
 		var noteSequence = [ "rect", "rect", "text" ];
 		while ( elements[current].tagName != "rect" ){
-			console.log("discarding...."+elements[current].tagName);
 			current++;
 		}
 		while ( current < elements.length ){
@@ -91,7 +88,6 @@
 				do{
 					current++;
 					$(elements[current]).attr("class", elementKind);
-					console.log("added "+elementKind+" to "+elements[current].tagName);
 				}
 				while ( elements[current].tagName != "path" );
 				numElements++;
@@ -102,7 +98,6 @@
 				do{
 					current++;
 					$(elements[current]).attr("class", "seq-diag-link");
-					console.log("processing link "+elements[current].tagName);
 				}
 				while ( elements[current].tagName != "path" );
 				current++;
@@ -112,13 +107,11 @@
 				do{
 					current++;
 					$(elements[current]).attr("class", "seq-diag-note");
-					console.log("processing note "+elements[current].tagName);
 				}
 				while ( elements[current].tagName != "text" );
 				current++;
 			}
 			else{
-				console.log("discarding this from the start element    " + elements[current].tagName);
 				current++;
 			}
 		}

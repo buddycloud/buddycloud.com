@@ -472,6 +472,11 @@ h1:before, h2:before {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Sequence Diagrams */
 
+.js_sequence_diagram {
+	width: 150%;
+	overflow: auto;
+}
+
 rect[fill=none] {
 	fill: white;
 	stroke-width: 2px;
