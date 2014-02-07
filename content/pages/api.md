@@ -1380,14 +1380,14 @@ Media
 client->API server: HTTP: request
 Note right of API server: token generation
 API server->Media server: HTTP: auth request with token 
-Media server->API server: XMPP: asks for request confirmation
+Media server->API server: XMPP: "dial-back" to confirm
 Note right of Media server: XEP-0070
 Note right of API server: checking request origin
 API server-->Media server: XMPP: confirms request origin
-Media server->Buddycloud server: XMPP: check permissions to access media
+Media server->Buddycloud server: XMPP: check perms
 Note right of Buddycloud server: XEP-0060
-Buddycloud server-->Media server: XMPP: response to permission request
-Media server-->API server: HTTP: request response
+Buddycloud server-->Media server: XMPP: response
+Media server-->API server: HTTP: response
 API server-->client: forward response
 
 Description
