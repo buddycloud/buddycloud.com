@@ -687,7 +687,7 @@ Changes
 API Endpoints
 =============
 
-Node Content
+Channel Content
 ------------
 
 ### /:channel/content/:node
@@ -1060,7 +1060,7 @@ No Content
 
 </tabber>
 
-Node Metadata
+Channel Metadata
 -------------
 
 ### /:channel/metadata/:node
@@ -1134,7 +1134,7 @@ Content-Type: application/json
 
 </tabber>
 
-Subscribers and Subscribed
+Subscriptions
 --------------------------
 
 ### /:channel/subscribers/:node
@@ -1555,20 +1555,15 @@ Arguments (POST)
 :   ***description** (optional)* - a new description for the media
 
 Parameters
-:   **maxheight** (optional) - if the media can be previewed (image or
-    video), returns a thumbnail bounded by the specified height. (GET
+:   **maxheight** (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by the specified height. (GET
     only)
-:   **maxwidth** (optional) - if the media can be previewed (image or
-    video), returns a thumbnail bounded by specified width. (GET only)
+:   **maxwidth** (optional) - if the media can be previewed (image or video), returns a thumbnail bounded by specified width. (GET only)
 
 Responses
-:   **200 OK** - if get or post succeeds, including the media file or
-    the media metadata.
-:   **400 Bad Request** - if the client not provide proper
-    authentication fields.
-:   **401 Unauthorized** - if authentication is required, but not
-    provided.
-:   **403 Forbidden** - if the user is not permitted to update, get or
+:   **200 OK** - get or post succeeds, including the media file or the media metadata.
+:   **400 Bad Request** - the client not provide correct authentication parameters.
+:   **401 Unauthorized** - authentication is required, but not provided.
+:   **403 Forbidden** - the user is not permitted to update, get or
     delete the media (e.g. if the user is not a private channel's owner
     or moderator).
 :   **404 Not Found** - there is no media with such id.
@@ -1761,8 +1756,8 @@ DELETE https://api.example.com/alice@domain.com/media/avatar
 
 </tabber>
 
-Channel
--------
+Channel Management
+------------------
 
 ### /:channel
 
@@ -1863,8 +1858,8 @@ Content-Type: application/json
 
 </tabber>
 
-Sync and Notification Settings
-------------------------------
+Content Sync
+------------
 
 ### /sync
 
@@ -1979,6 +1974,9 @@ Content-Type: application/json
 ~~~~
 
 </tabber>
+
+Notification Settings
+---------------------
 
 ### /notification\_settings
 
