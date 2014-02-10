@@ -2,24 +2,24 @@
 {% set active_page = page.slug %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}
+    <div class="bs-docs-section">
+	<h1 class="page-header">{{ page.title }}</h1>
+    </div>
+    <div class="bs-docs-section">
+	{% if active_page == "api" %}
+		{{ page.content|add_toc_hooks(toc_info) }}
+	{% else %}
+		{{ page.content }}
+	{% endif %}
+    </div>
+{% endblock %}
+{% block table_of_contents %}
     {% if active_page == "api" %}
-    <nav class="table-contents">
+    <div class="bs-sidebar hidden-print affix-top" role="complementary">
 	{% set toc_info = page.content|extract_toc_info %}
 	{{ toc_info|create_toc }}
-    </nav>
+    </div>
     {% endif %}
-    <section id="main">
-        <section class="intro">
-		<h1>{{ page.title }}</h1>
-        </section>
-        <section>
-		{% if active_page == "api" %}
-			{{ page.content|add_toc_hooks(toc_info) }}
-		{% else %}
-			{{ page.content }}
-		{% endif %}
-    	</section>
-    </section>
 {% endblock %}
 {% block morescripts %}
     {% if active_page == "developers" %}
