@@ -473,17 +473,15 @@ ul.nav-tabs > li a:hover {
 	}
 }
 
-
-
-
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Anchor Links */
-h1:before, h2:before,h3:before {
-    display: block;
-    content: ' ';
-    margin-top: -96px;
-    height: 96px;
-    visibility: hidden;
+h1[id], h2[id] {
+//    display: block;
+//    content: ' ';
+//    margin-top: -48px;
+//    height: 48px;
+//    visibility: hidden;
+      padding-top: 48px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = */
