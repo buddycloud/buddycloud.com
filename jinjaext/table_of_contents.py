@@ -76,13 +76,13 @@ class TableOfContents:
 			toc_html = ""
 			return toc_html
 		elif ( len(toc_info) == 1 ):
-			toc_html = "<ul><li><a href='#%s' data-scroll data-url='true'>%s</a></li></ul>"
+			toc_html = "<ul class='nav bs-sidenav'><li class='active'><a href='#%s' data-scroll data-url='true'>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 		else:
 			a_html = "<a href='#%s' data-scroll data-url='true'>%s</a>"
-			toc_html = "<ul>"
-			toc_html += "<li>"
+			toc_html = "<ul class='nav bs-sidenav'>"
+			toc_html += "<li class='active'>"
 			toc_html += a_html % (toc_info[0]['hook'], toc_info[0]['text'])
 			last_tag = toc_info[0]['tag']
 			for i in range(1,len(toc_info)):
@@ -94,7 +94,7 @@ class TableOfContents:
 					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
 				elif ( toc_info[i]['tag'] == 'h2' ):
 					if ( last_tag == 'h1' ):
-						toc_html += "<ul>"
+						toc_html += "<ul class='nav'>"
 					toc_html += "<li>"
 					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
 					toc_html += "</li>"
