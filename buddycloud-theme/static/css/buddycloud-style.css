@@ -488,8 +488,12 @@ h1[id], h2[id] {
 /* Sequence Diagrams */
 
 .js_sequence_diagram {
-    width: 150%;
+    width: 100%;
     overflow: auto;
+}
+
+div >> .js_sequence_diagram {
+    width: 100%;
 }
 
 rect[fill=none] {
