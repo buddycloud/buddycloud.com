@@ -537,7 +537,8 @@ rect[fill='#ffffff'] {
     font-family: OpenSansBold;
     fill: white;
     stroke: white;
-    stroke-width: -0.2px;
+    stroke-width: 0px;
+    stroke-width: -0.4px;
 }
 
 .seq-diag-secondary tspan {
