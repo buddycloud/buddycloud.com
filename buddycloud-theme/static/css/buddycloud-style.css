@@ -492,10 +492,6 @@ h1[id], h2[id] {
     overflow: auto;
 }
 
-/*div >> .js_sequence_diagram {
-    width: 100%;
-}*/
-
 rect[fill=none] {
     stroke-width: 2px;
 }
@@ -513,6 +509,10 @@ rect[fill=none] {
 rect[fill='#ffffff'] {
     opacity: 0.0;
     stroke-width: 2px;
+}
+
+path[class='seq-diag-primary'], path[class='seq-diag-secondary'] {
+    stroke-width: 2.6px;
 }
 
 @font-face {
