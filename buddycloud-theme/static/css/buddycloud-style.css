@@ -346,65 +346,6 @@ div.table-responsive::-webkit-scrollbar-thumb {
 	background: hsl(0,0%,80%);
 }
 
-
-/*
-.bs-docs-section table { 
-	border: none;
-	border-collapse:collapse;
-	text-align: left;
-	width: 100%;
-}
-
-.bs-docs-section table th { 
-	white-space: nowrap;
-}
-
-.bs-docs-section table th,
-.bs-docs-section table td:nth-child(1) { 
-	font-weight: bold; 
-}
-
-
-
-.bs-docs-section table tr:nth-child(2) {
-	border-top: 1px solid hsl(0,0%,60%);
-}
-
-
-
-.bs-docs-section table tr:nth-child(even) {
-   background-color: hsl(0,0%,96%);
-}
-
-.bs-docs-section table tr:last-child { 
-	border-bottom: 1px solid rgba(0,0,0,0);
-}
-
-.bs-docs-section table:hover { 
-	color: hsl(0,0%,50%);
-}
-
-.bs-docs-section table:hover tr {
-   background-color: hsl(0,0%,100%);
-}
-
-.bs-docs-section table:hover tr:nth-child(2) {
-	border-top: 1px solid hsl(0,0%,95%);
-}
-
-.bs-docs-section table:hover th { 
-	color: hsl(0,0%,10%);
-}
-
-.bs-docs-section table tr:hover:not(:first-child) { 
-	color: hsl(0,0%,10%);
-	border-top: 1px solid hsl(0,0%,50%);
-	border-bottom: 1px solid hsl(0,0%,50%);
-	background-color: hsl(0,0%,96%);
-}
-*/
-
-
 .table tr {
 	border-top: 1px solid hsl(0,0%,95%);
 	-webkit-transition: background-color .2s linear;
@@ -685,8 +626,14 @@ h1[id], h2[id] {
 
 .js_sequence_diagram {
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
+    position: relative;
 }
+
+/*.table-responsive {
+    position: relative;
+    overflow: hidden;
+}*/
 
 rect[fill=none] {
     stroke-width: 2px;
