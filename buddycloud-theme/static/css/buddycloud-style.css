@@ -1,7 +1,6 @@
 
 html {
 	font-size: 100%;
-	height:100%;
 }
 
 body {
@@ -10,8 +9,6 @@ body {
 	-webkit-text-size-adjust: none;
 	color: #333;
 	padding-top: 4em;
-	height:101%;
-	overflow:auto;
 }
 
 a {
@@ -29,6 +26,7 @@ a:hover {
 }
 
 .container {
+	width: auto;
 	margin: 0;
 }
 
@@ -42,38 +40,151 @@ a:hover {
 	background-color: rgba(0,0,0,0);
 }
 
+.bc-hide {
+	display: none;
+	opacity: 0.5;
+}
+		
+li.bc-hide {
+	display: none;
+	opacity: 0.5;
+}
+
+
+
 /* = = = = = = = = = = = = = = = = = = = = */
-/* Typography – Headlines */
+/* Example */
+
+.bs-example {
+  box-shadow: none;
+  border-color: hsl(0,0%,90%);
+  border-radius: 0;
+}
+/* Echo out a label for the example */
+.bs-example:after {
+  content: "Example";
+  position: absolute;
+  top:  15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.bs-example img {
+	opacity: 1;
+	border: 1px solid hsl(0,0%,90%);
+	margin-bottom: 1em;
+}
+
+.bs-example ul,
+.bs-example ol{
+	margin-left: 2em;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Typography – Headings */
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 600;
+}
 
 h1 {
 	font-size: 2em;
-	font-weight: 600;
-	margin: 0;
-
+	margin: 0 0 .5em 0;
 }
 
 h1.page-header {
 	border-bottom: none;
-
 }
 
 h2 {
 	font-size: 1.5em;
-	font-weight: 600;
 	border-top: 1px solid hsl(0,0%,90%);
 	padding: .5em 0 0 0;
-	margin: 2em 0 1em 0;
-}
-
-h3 {
-	font-size: 1.33em;
-	font-weight: 600;
 	margin: 3em 0 1em 0;
 }
 
-h4 {
-	font-weight: 600;
+h3 {
+	font-size: 1.25em;
 	margin: 2em 0 1em 0;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 2em 0 1em 0;
+}
+
+/*
+h5 {
+	font-size: 1em;
+	margin: 2em 0 1em 0;
+}
+
+h6 {
+	font-size: .875em;
+	margin: 2em 0 1em 0;
+}
+*/
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Typography – Body copy */
+
+p {
+	font: 300 100%/1.5 'Open Sans';
+	margin-bottom: 1em;
+}
+
+p.lead {
+	font-size: 1.25em;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Typography – Emphasis */
+
+strong {
+	font-weight: 600;
+}
+
+em {
+	font-weight: italic;
+}
+
+mark {
+	background-color: hsla(187,62%,46%,.8);
+	color: #fff;
+	padding: 0 .25em;
+	font-weight: 400;
+}
+
+small {
+	font-size: .75em;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+}
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Typography – Blockquotes */
+
+blockquote,
+.blockquote-reverse {
+	border-color:  hsla(187,62%,46%,.8);
+}
+
+
+blockquote footer,
+blockquote footer cite {
+	font-style: italic;
+	color: inherit;
 }
 
 
@@ -116,27 +227,17 @@ h4 {
 	font-weight: 700;
 }
 
-
-
-/* = = = = = = = = = = = = = = = = = = = = */
-/* Typography – Definitions */
-
-.bs-docs-section dt, dd {
-	padding-left: .5em;
-	border-left: 2px solid #2DAEBF;
-	background-color: hsl(0,0%,96%);
-}
-
-.bs-docs-section dt {
-	padding-top: .5em;
-	margin: 0 0 0 -.5em;
-	font-weight: 600;
+ul.list-unstyled > li:before,
+ul.list-inline > li:before{
+	content: none;
 }
 
 .bs-docs-section dd {
-	margin: 0 0 1em -.5em;
-	padding-bottom: .5em;
+	margin-bottom: 1em;
 }
+
+
+
 
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Typography – Code */
@@ -149,6 +250,17 @@ samp {
 	font-weight: 500;
 }
 
+pre {
+	background: red;
+	border: none;
+	border-radius: 0;
+	background-color: #333;
+	color: rgba(255,255,255,1);
+}
+
+kbd {
+	padding: .25em .5em .25em .5em;
+}
 
 code {
 	font-size: 0.85em;
@@ -179,12 +291,12 @@ code {
 	background: hsla(0,0%,55%,0);
 }
 
-.highlight pre:hover::-webkit-scrollbar-thumb {
-	background: hsl(0,0%,60%);
-}
-
 .highlight pre::-webkit-scrollbar-thumb {
 	background: hsl(0,0%,40%);
+}
+
+.highlight pre:hover::-webkit-scrollbar-thumb {
+	background: hsl(0,0%,60%);
 }
 
 .highlight pre {
@@ -199,32 +311,43 @@ code {
 	color: hsl(0,0%,70%);
 }
 
+.highlight pre .nt {
+	color: #2DAEBF;
+}
+
+.highlight pre .s {
+	color: #fff;
+}
 
 
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Typography – Table */
 
-div.table-container {
+
+div.table-responsive {
 	width: 100%;
 	overflow-y: hidden;
 	overflow-x: scroll;
 	margin-bottom: 1em;
 }
 
-div.table-container::-webkit-scrollbar {
+
+div.table-responsive::-webkit-scrollbar {
 	width: .75em;
 	height: .75em;
 	z-index: 2000;
 }
 
-div.table-container:hover::-webkit-scrollbar-track-piece {
+div.table-responsive:hover::-webkit-scrollbar-track-piece {
 	background: hsl(0,0%,95%);
 }
 
-div.table-container::-webkit-scrollbar-thumb {
+div.table-responsive::-webkit-scrollbar-thumb {
 	background: hsl(0,0%,80%);
 }
 
+
+/*
 .bs-docs-section table { 
 	border: none;
 	border-collapse:collapse;
@@ -241,28 +364,13 @@ div.table-container::-webkit-scrollbar-thumb {
 	font-weight: bold; 
 }
 
-.bs-docs-section table tr {
-	border-top: 1px solid hsl(0,0%,95%);
-	-webkit-transition: background-color .2s linear;
-	transition: background-color .2s linear;
-}
+
 
 .bs-docs-section table tr:nth-child(2) {
 	border-top: 1px solid hsl(0,0%,60%);
 }
 
-.bs-docs-section table td,
-.bs-docs-section table th {
-	min-width: 10em;
-	font-size: 0.75em;
-	text-after-overflow: left;
-	vertical-align: top;
-	border: none;
-	padding: 0.5em 2em .5em 0em;
-	-webkit-transition: color .2s linear;
-	transition: color .2s linear;
-	cursor: default;
-}
+
 
 .bs-docs-section table tr:nth-child(even) {
    background-color: hsl(0,0%,96%);
@@ -294,29 +402,110 @@ div.table-container::-webkit-scrollbar-thumb {
 	border-bottom: 1px solid hsl(0,0%,50%);
 	background-color: hsl(0,0%,96%);
 }
+*/
+
+
+.table tr {
+	border-top: 1px solid hsl(0,0%,95%);
+	-webkit-transition: background-color .2s linear;
+	transition: background-color .2s linear;
+}
+
+.table td,
+.table th {
+	min-width: 10em;
+	font-size: 0.75em;
+	text-after-overflow: left;
+	vertical-align: top;
+	border: none;
+	padding: 0.5em 2em .5em 0em;
+	-webkit-transition: color .2s linear;
+	transition: color .2s linear;
+	cursor: default;
+	border: none;
+}
+
+
+.table-striped > tbody > tr:nth-child(odd) > td, 
+.table-striped > tbody > tr:nth-child(odd) > th {
+   background-color: hsl(0,0%,96%);
+}
+
+.table-striped > tbody > tr:nth-child(even) {
+   background-color: none
+}
+
+.table tr:first-child {
+	border-bottom: 1px solid rgba(255,0,0,0);
+}
+
+.table tr:last-child { 
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
+
+.table.table-hover tr:hover:not(:first-child) { 
+	color: hsl(0,0%,10%);
+	border-top: 1px solid hsl(0,0%,50%);
+	border-bottom: 1px solid hsl(0,0%,50%);
+	background-color: hsl(0,0%,96%);
+}
+
 
 /* = = = = = = = = = = = = = = = = = = = = */
-/* Sample */
+/* Callout */
 
-.sample {
+.bs-callout-info {
+	border-color:  hsla(187,62%,46%,.8);
+	background-color: hsla(187,62%,46%,.1);
+}
+
+.bs-callout-info h4{
+	color:  hsla(187,62%,46%,1);
+}
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Buttons */
+
+
+.btn {
+	border: none;
+	font-weight: 600;
+	background-color: hsla(0,0%,90%,1);
+}
+
+.btn:hover {
+	background-color: hsla(0,0%,80%,1);
+}
+
+.btn-primary {
+	background-color: hsla(187,62%,46%,1);
+	border: none;
+	font-weight: 600;
+}
+
+.btn-primary:hover {
+	background-color: hsla(187,62%,40%,1);
+}
+
+.btn-primary.active{
+	background-color: hsla(187,50%,35%,1);
+	border: none;
+}
+
+.btn[disabled="disabled"],
+.btn.disabled {
 	opacity: .5;
 }
 
-h1.sample,
-h2.sample,
-h3.sample,
-h4.sample {
-	margin-top: .5em;
-}
-h1.sample {
-	margin-bottom: .5em;
+.btn-primary[disabled="disabled"],
+.btn-primary.disabled {
+	background-color: hsla(187,62%,46%,1);
 }
 
-img.sample {
-	opacity: 1;
-	border: 1px solid hsl(0,0%,90%);
-	margin-bottom: 1em;
-}
+
+
+
 
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Navigation – Code Tabs */
@@ -329,8 +518,10 @@ ul.nav-tabs > li a:hover {
 	color: #2DAEBF;
 }
 
+
+
 /* = = = = = = = = = = = = = = = = = = = = */
-/* Logo & Navigation */
+/* Navbar */
 
 .navbar {
 	min-height: 3em;
@@ -344,7 +535,7 @@ ul.nav-tabs > li a:hover {
 	color: #fff;
 	font-size: 1.5em;
 	font-weight: 400;
-	padding: .666em 0 0 4em;
+	padding: .666em 0 0 2.5em;
 	background-color: rgba(0,0,0,0);
 	line-height: .75;
 }
@@ -400,6 +591,11 @@ ul.nav-tabs > li a:hover {
 	border-top: 1px solid hsla(185.4,76.6%,20%,.3);
 }
 
+
+
+/* = = = = = = = = = = = = = = = = = = = = */
+/* Sidebar */
+
 .bs-sidebar {
 	padding-left: 4em;
 }
@@ -434,12 +630,16 @@ ul.nav-tabs > li a:hover {
 	margin-left: 5em;
 }
 
+
+
 @media (min-width: 768px) {
-	.container {
-		width: auto;
-	}
+
 	.navbar-nav {
 		float: right;
+	}
+
+	.navbar .navbar-brand {
+		padding-left: 4em;
 	}
 
 	.navbar-collapse ul{
@@ -453,24 +653,20 @@ ul.nav-tabs > li a:hover {
 		border-top: 0;
 	}
 	
-.col-md-9 {
-	float: right;
+	.col-md-9 {
+		float: right;
+	}
 }
 
 @media (min-width: 992px) {
-	.container {
-		width: auto;
-	}
-  
+
 	.navbar-inverse .nav li a {
 		padding-left: 1em;
 	}
 }
 
 @media (min-width: 1200px) {
-	.container {
-	width: auto;
-	}
+
 }
 
 /* = = = = = = = = = = = = = = = = = = = = */

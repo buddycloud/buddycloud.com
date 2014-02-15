@@ -130,9 +130,9 @@ Visibility
 
 *who can see what?*
 
-<div class='table-container'>
-<table class='data'>
-	<tbody>
+<div class='table-responsive'>
+<table class='table table-striped table-hover table-condensed'>
+	<thead>
 		<tr>
 			<th>  Element
 			</th>
@@ -151,6 +151,8 @@ Visibility
 			<th> banned
 			</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td> Channel address
 			</td>
@@ -412,9 +414,9 @@ Changes
 
 *who can change what?*
 
-<div class="table-container">
-<table class='data'>
-	<tbody>
+<div class='table-responsive'>
+<table class='table table-striped table-hover table-condensed'>
+	<thead>
 		<tr>
 			<th>
 			</th>
@@ -435,6 +437,8 @@ Changes
 			<th> banned
 			</th>
 		</tr>
+	</thead>
+	<tbody>
 		<tr>
 			<td> Channel Jid
 			</td>
