@@ -279,6 +279,10 @@ code {
 .highlight pre {
 	overflow-y: auto;
 	overflow-x: scroll;
+
+/*	overflow-x: hidden;
+	position: relative;
+	padding-bottom: 10px;*/
 }
 
 .highlight pre::-webkit-scrollbar {
@@ -327,12 +331,16 @@ code {
 div.table-responsive {
 	width: 100%;
 	overflow-y: hidden;
-	overflow-x: scroll;
+//	overflow-x: scroll;
 	margin-bottom: 1em;
+	
+	
+	overflow-x: hidden;
+	position: relative;
 }
 
 
-div.table-responsive::-webkit-scrollbar {
+/*div.table-responsive::-webkit-scrollbar {
 	width: .75em;
 	height: .75em;
 	z-index: 2000;
@@ -344,7 +352,7 @@ div.table-responsive:hover::-webkit-scrollbar-track-piece {
 
 div.table-responsive::-webkit-scrollbar-thumb {
 	background: hsl(0,0%,80%);
-}
+}*/
 
 .table tr {
 	border-top: 1px solid hsl(0,0%,95%);
