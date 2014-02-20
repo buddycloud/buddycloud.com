@@ -45,5 +45,7 @@ JINJA_FILTERS = {
 		  'add_toc_hooks' : TOC.addTableOfContentsHooks
 		}
 
+GOOGLE_ANALYTICS = "UA-1075750-2"
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
