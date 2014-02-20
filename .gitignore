@@ -11,3 +11,5 @@ srv.pid
 *.pyc
 *.~
 .DS_Store
+
+.project
