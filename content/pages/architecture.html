@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Architecture</title>
+<title>Buddycloud Architecture</title>
 <meta name="url" content="architecture" />
 <meta name="save_as" content="architecture.html" />
 <meta name="order" content="3" />
@@ -26,8 +26,60 @@
 			<li>This will save you development time</li>
 			<li>This gives you a great future platform to build on and extend to your own needs</li>
 		</ul>-->
-	<h2>Buddycloud Channel architecture</h2>
-	<br />
+	<p class="lead">Buddycloud is an ecosystem of components,
+		distributed by design, and built without cutting corners.</p>
+
+	<h2>Completely distributed design</h2>
+	<p>We've designed Buddycloud so that anyone can run their own
+		Buddycloud server. This means that companies and privacy aware
+		individuals can maintain their own communication cloud behind the
+		firewall and selectively choose what data they wish to share with
+		others.</p>
+	<p>
+	<figure>
+		<img src="/theme/img/features/completely distributed design.svg"
+			alt="completely distributed design">
+		<figcaption>Buddycloud sites find each other, connect,
+			and share information.</figcaption>
+	</figure>
+	</p>
+	<p>The old way of building communication services was to put all
+		the data into a central core.</p>
+	<p>Buddycloud is a revolutionary new design where anyone can run
+		their own Buddycloud server, and each Buddycloud server will find,
+		connect and share the data you choose with users on other Buddycloud
+		servers.</p>
+	<p>This approach has huge benefits, especially for industries that
+		care about data privacy (Finance, Medicine).</p>
+	<table class='table table-striped table-condensed'>
+		<tr>
+			<th></th>
+			<th>Old Design (Twitter, Facebook, G+, App.net)</th>
+			<th>Buddycloud</th>
+		</tr>
+		<tr>
+			<td>Trust Model</td>
+			<td>Trust them</td>
+			<td>You control and choose</td>
+		</tr>
+		<tr>
+			<td>Data location</td>
+			<td>USA</td>
+			<td>You choose</td>
+		</tr>
+		<tr>
+			<td>Intranet only/behind the firewall (runs in-house)</td>
+			<td>Not possible</td>
+			<td>Hosted or behind your firewall</td>
+		</tr>
+		<tr>
+			<td>Add new features</td>
+			<td>One-size-fits-all</td>
+			<td>fully extensible</td>
+		</tr>
+	</table>
+	</p>
+
 	<h3>Buddycloud uses channels</h3>
 	<p>
 		A channel is a collection of activity feeds and value-stores that can
@@ -35,6 +87,14 @@
 		millions of followers or scale down to be used as an individual
 		data-store. A channel looks like <em>user@example.com</em>
 	</p>
+	<p>
+	<figure>
+		<img src="/theme/img/architecture/buddycloud-uses-channels.svg"
+			alt="channels intercommunicate">
+		<figcaption>Buddycloud channels are extensible for any
+			application to use.</figcaption>
+	</figure>
+	<p>
 	<p>channels look like</p>
 	<table class="table table-striped table-condensed">
 		<tr>
@@ -66,22 +126,19 @@
 		an existing application node or create a new one for your projects
 		specific needs.
 	</p>
+	<p>
+	<figure>
+		<img
+			src="/theme/img/architecture/channels comprise application nodes.svg"
+			alt="channels intercommunicate">
+		<figcaption>Buddycloud channels are extensible for any
+			application to use.</figcaption>
+	</figure>
+	</p>
 	<p>Each Application node can have different stream formats,
 		different metadata fields and different stream lengths (single item vs
 		infinite items).</p>
 
-	<figure>
-		<img class="img-responsive" width="50%"
-			src="/theme/img/architecture/what-is-a-channel.svg"
-			alt="Channels can be extended to any application" />
-		<figcaption>Buddycloud channels are extensible for any
-			application to use.</figcaption>
-	</figure>
-	<p>
-		Application node examples <img
-			src="/theme/img/architecture/channel-hierachy.svg"
-			alt="channel-hierachy-diagram">
-	</p>
 	<table class="table table-striped table-condensed">
 		<tr>
 			<th>Channel and Application node name</th>
@@ -119,6 +176,14 @@
 		and the update is synchronised to followers on the local and remote
 		Buddycloud servers. The Buddycloud server will also take care of
 		"catching-up" from remote sites if it has been offline.
+	</p>
+		<p>
+	<figure>
+		<img
+			src="/theme/img/architecture/channel sync between sites.svg"
+			alt="channels intercommunicate">
+		<figcaption>Data posted into one channel is pushed to follower's channels.</figcaption>
+	</figure>
 	</p>
 	<br />
 	<h3>Personal and Topic channels</h3>
