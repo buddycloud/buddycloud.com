@@ -1,254 +1,93 @@
 <html>
 <head>
-<title>Features</title>
+<title>Buddycloud Features</title>
 <meta name="url" content="features" />
 <meta name="save_as" content="features.html" />
 <meta name="order" content="1" />
 </head>
 <body>
-	<h2>Completely distributed design</h2>
-	<p>We've designed Buddycloud so that anyone can run their own
-		Buddycloud server. This means that companies and privacy aware
-		individuals can maintain their own communication cloud behind the
-		firewall and selectively choose what data they wish to share with
-		others.</p>
-	<p>The old way of building communication services was to put all
-		the data into a central core.</p>
-	<p>Buddycloud is a revolutionary new design where anyone can run
-		their own Buddycloud server, and each Buddycloud server will find,
-		connect and share the data you choose with users on other Buddycloud
-		servers.</p>
-	<p>This approach has huge benefits, especially for industries that
-		care about data privacy (Finance, Medicine).</p>
-	<table class='table table-striped table-condensed'>
-		<tr>
-			<th></th>
-			<th>Old Design (Twitter, Facebook, G+, App.net)</th>
-			<th>Buddycloud</th>
-		</tr>
-		<tr>
-			<td>Trust Model</td>
-			<td>Trust them</td>
-			<td>You control and choose</td>
-		</tr>
-		<tr>
-			<td>Data location</td>
-			<td>USA</td>
-			<td>You choose</td>
-		</tr>
-		<tr>
-			<td>Intranet only/behind the firewall (runs in-house)</td>
-			<td>Not possible</td>
-			<td>Hosted or behind your firewall</td>
-		</tr>
-		<tr>
-			<td>Add new features</td>
-			<td>One-size-fits-all</td>
-			<td>fully extensible</td>
-		</tr>
-	</table>
-	<h2>Scalable</h2>
-	<p>Scaling your service because it's popular is a 'good problem to
-		have'. And it needs a good roadmap: so we have designed Buddycloud to
-		grow with you and scale up without bottlenecks. Buddycloud is
-		currently tested against servers that scale to over 10M simultaneous
-		users. Additionally, each server can subsequently be scaled
-		horizontally to support more simultaneous users.</p>
-	<p>Buddycloud also works with commercial realtime CDNs like
-		fanout.io which help you offload capacity to a Global push CDN.</p>
-	<h2>Rich Communications</h2>
-	<p>Move beyond just text sharing: Buddycloud enables you to share
-		media files with just one channel or with the entire world. And to
-		make development easy, the Buddycloud API will return scaled
-		thumbnails for easy embedded into your application.</p>
-	<p>Our rich communication roadmap includes adding full webRTC video
-		calling between Buddycloud channels.</p>
-	<h2>By developers, for developers</h2>
-	<p>Buddycloud is designed make adding communication to web and app
-		development as simple as possible by offloading as much of the tricky
-		application logic to the server. This means you can quickly write
-		reliable, services by just using the existing Buddycloud libraries.</p>
-	<p>The Buddycloud platform follows a convention over configuration
-		approach that helps you quickly build without pre-configuration.
-		{action} view the API {action}</p>
-	<h2>Open source and open standards</h2>
-	<p>Secure communication needs open, inspectable secure
-		communications come from publishing code as open source. Buddycloud's
-		code is maintained on Github and released under the Apache 2.0
-		license. Buddycloud builds on existing standards like ActivityStrea.ms
-		and the ATOM syndication format: you benefit from being able to reuse
-		a wide range of existing libraries.</p>
-	<p>Buddycloud works closely with the W3C, Mozilla Foundation, and
-		XSF to build the strong foundation for an open communication
-		ecosystem.</p>
-	<h2>Secure by design.</h2>
-	<p>Buddycloud is used by security-sensitive agencies to protoct
-		their communications.</p>
-	Buddycloud's modular design means that components communicate in their
-	own security space and leverage the tested XMPP communication security
-	for inter-module communication.
-	</p>
-	<p>All code is peer-reviewed and extensively tested.</p>
-	<p>All communication between Buddycloud servers and clients uses
-		TLSv1.2 for encryption.</p>
-	<p>Buddycloud uses hashed passwords</p>
-	<h2>User privacy</h2>
-	<p>Buddycloud enables users to set different privacy settings per
-		channel. Administrators can set permissions per Buddycloud site. Users
-		can select who can view their channel, make it open to just other
-		members of their Buddycloud site, or open to the world.</p>
-	<h2>Run it yourself or have Buddycloud host it for you.</h2>
-	<p>Buddycloud comes in two compatible flavours: fully hosted and an
-		install-it-yourself set of packages and instructions. Both editions
-		use exactly the same code so that you have the flexibility to migrate
-		your data and users between platforms by just changing the API url.</p>
-	<p>We recommend you test drive Buddycloud using the existing public
-		API on the hosted service before spinning up your own install. Then
-		when you are ready, follow the Install Guide or Sign up for
-		professional hosting.</p>
-	<h2>Community and enterprise editions</h2>
-	<p>The Buddycloud community edition is open source, free to
-		download and run on your site. It aims to provide the best both
-		worlds: rapid updates and fixes with long-term stability,
-		supportability, and maintainability.</p>
-	<p>The Buddycloud enterprise edition is integrated, tested, and
-		Includes patches, updates, SLA-based support, multi-year maintenance
-		policies.</p>
-	<p>Get in touch to find our more which edition is best for your
-		needs.</p>
-	<h2>Extensible design</h2>
-	<ul>
-		<li>Structured data {link to architecture page}</li>
-		<li>Application nodes within a channel</li>
-	</ul>
-	<h2>We have working demos</h2>
-	<p>{lots of screenshots}</p>
-	<h2>Modular</h2>
-	<p>Keep your operations lean and mean by only running the
-		Buddycloud services you need. If you don't need to support media or
-		push notifications, it's as simple as not installing these services.
-		If you find out that you later need social recommendations, just add
-		that Buddycloud component.</p>
-	<h2>{link to quick start}</h2>
-	<h2>Easy to use</h2>
+	<p class="lead">Quickly add secure and scalable communication to
+		your app or website.</p>
+	<h2>Full stack.</h2>
+	<p>Connect your users with each other through chat, status updates,
+		file sharing and micro-blogs.</p>
 	<p>
-		As a general rule we don't want to invent an enormous system that
-		takes ages to master. Buddycloud should be as easy to use as reading
-		the API and getting data from endpoints like
-		<code>api.example.com/testuser@myapp.com/content/posts</code>
-		.
+		Buddycloud does the heavy lifting for you: with a <a
+			href="//buddycloud.com/buddycloud-xep">protocol</a>, servers for <a
+			href="https://github.com/buddycloud-pusher">push</a>, <a
+			href="http://github.com/buddycloud/buddycloud-media-server">media
+			and file sharing</a>, <a
+			href="http://github.com/buddycloud/buddycloud-webclient">clients</a>,
+		<a href="https://github.com/buddycloud/buddycloudjs">libraries</a> and
+		<a href="/api">API</a> you have all the bits you need.
+	<figure>
+		<img src="/theme/img/features/full stack.png"
+			alt="Full buddycloud stack" class='center-block'  >
+	</figure>
 	</p>
-	<h2>Lots of libraries</h2>
-	<p>Buddycloud.js, xmpp-ftw or the android SDK</p>
-	<p>"As a general rule we don't want to invent an enormous
-		java.beans.everything class that people have to inherit from. Instead
-		we'd like the JavaBeans runtimes to provide default behaviour for
-		'normal' objects, but to allow objects to override a given piece of
-		default behaviour by inheriting from some specific
-		java.beans.something interface."</p>
-	<h2>push notifications</h2>
-	<ul>
-		<li>email or mobile</li>
-		<li>compatible with gateways like mailgun or sendgrid</li>
-	</ul>
-	<h2>Scale Buddycloud to millions of users</h2>
-	<ul>
-		<li>scalable architecture</li>
-		<li>scale horizontally</li>
-	</ul>
-	<h2>share media (unlke other services - media can be open or
-		closed)</h2>
-	<h2>open, open, open</h2>
-	<ul>
-		<li>open protocol</li>
-		<li>open open code</li>
-		<li>open design process</li>
-		<li>community</li>
-	</ul>
-	<h2>secure</h2>
-	<h2>features to get you started</h2>
-	<p>Together with services like push notifications we've added a
-		host of useful modules that will get you started. The media server
-		enables sharing of small and large files in channels, the search
-		engine indexes public channels.</p>
-	<ul>
-		<li>the firehose presents a realtime feed of new content</li>
-		<li>friend finder</li>
-		<li>channel discovery (active channels, recommended channels)</li>
-		<li>media server</li>
-		<li>search engine</li>
-		<li>firehose</li>
-		<li>APIs and SDKs</li>
-	</ul>
-	<p>Roadmap to rich communication and webRTC</p>
-	<table class='table table-striped table-condensed'>
-		<tbody>
-			<tr>
-				<th>Name</th>
-				<th>Description</th>
-				<th>Source</th>
-				<th>Package</th>
-				<th>Getting started</th>
-				<th>Contribute</th>
-			</tr>
-			<tr>
-				<td>Buddycloud server</td>
-				<td>stores, synchronises and updates Buddycloud chanels.</td>
-				<td>https://github.com/Buddycloud/Buddycloud-server-java</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/releases/Buddycloud-server-java/</td>
-				<td>https://github.com/Buddycloud/Buddycloud-server-java#build-and-run</td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>API server</td>
-				<td>RESTful access to all Buddycloud functions</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/nightly/Buddycloud-http-api/</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/nightly/Buddycloud-server-java/</td>
-				<td>https://github.com/Buddycloud/Buddycloud-http-api/blob/master/README.md#developers</td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>push server</td>
-				<td>Configure and push Buddycloud events to mobile and email</td>
-				<td>https://github.com/Buddycloud/Buddycloud-pusher</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/releases/Buddycloud-pusher/</td>
-				<td></td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>Buddycloud for Android</td>
-				<td>Access Buddycloud channels on Android</td>
-				<td>https://github.com/Buddycloud/Buddycloud-android</td>
-				<td>https://play.google.com/store/apps/details?id=com.Buddycloud</td>
-				<td></td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>Buddycloud webapp</td>
-				<td>Backbone based Buddycloud app</td>
-				<td>https://github.com/Buddycloud/webclient</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/releases/Buddycloud-webclient/</td>
-				<td>https://github.com/Buddycloud/webclient#development</td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>install tester</td>
-				<td>Test your own Buddycloud install</td>
-				<td>https://github.com/Buddycloud/Buddycloud-tests-framework</td>
-				<td></td>
-				<td>https://github.com/Buddycloud/Buddycloud-media-server#setup</td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-			<tr>
-				<td>Buddycloud media server</td>
-				<td>Share and synchronise media (and avatars between different
-					sites running Buddycloud)</td>
-				<td>https://github.com/Buddycloud/Buddycloud-media-server</td>
-				<td>http://downloads.Buddycloud.com/packages/debian/nightly/Buddycloud-media-server/</td>
-				<td>https://github.com/Buddycloud/Buddycloud-media-server#setup</td>
-				<td>https://github.com/Buddycloud/webclient/issues?labels=contributor+friendly</td>
-			</tr>
-		</tbody>
-	</table>
+	<h2>Own it</h2>
+	<p>You decide the server - run your own or use the hosted option.
+		Hosted gives you quick start. Run your own gives you complete control
+		and privacy.</p>
+	<p>you decide which bits to run: add push notifications, add media
+		sharing, add chat. Buddycloud is an ecosystem of components that
+		interconnect to save you time developing them.</p>
+	<p>You decide to run Buddycloud standalone or kick start your
+		application growth by interconnecting with other sites and existing
+		Buddycloud users.</p>
+	<p>
+	<figure>
+		<img src="/theme/img/features/completely distributed design.png"
+			alt="Buddycloud distributed" class='center-block'  >
+	</figure>
+
+	<h2>Privacy 2.0</h2>
+	<p>
+	<dl class="dl-horizontal">
+		<dt>For Organisations</dt>
+		<dd>Keep information belonging to you or your team secure by
+			running your own Buddycloud server inside your organisation's
+			network. You control which information you share outside of the
+			organisation. Your organization's communication data stays private.</dd>
+		<dt>For Developers</dt>
+		<dd>Protect users' privacy with Buddycloud's secure design and
+			inspectable open source code and protocol</dd>
+		<dt>For Users</dt>
+		<dd>Stay private with simple privacy controls</dd>
+	</dl>
+
+	<p>
+	<figure>
+		<img src="/theme/img/features/privacy.png"
+			alt="Buddycloud privacy model" class='center-block'>
+	</figure>
+	<h2></h2>
+	<p>
+	<div class="row clearfix">
+
+		<div class="col-md-4 column">
+			<h3>More features</h3>
+			<p>Learn about other Buddycloud features that help you build great apps.</p>
+			<p>
+				<a class="btn" href="#">More features</a>
+			</p>
+		</div>
+		<div class="col-md-4  column">
+			<h3>Hosted for you</h3>
+			<p>Your own Buddycloud site. Hosted for you, in about 2 minutes.</p>
+			<p>
+				<a class="btn btn-primary" href="https://hosting.buddycloud.com">Hosted
+					Buddycloud</a>
+			</p>
+		</div>
+		<div class="col-md-4 column">
+			<h3>Run it yourself</h3>
+			<p>Your own Buddycloud site, your own hardware, in about 60
+				minutes.</p>
+			<p>
+				<a class="btn" href="//install">Install Guide</a>
+			</p>
+		</div>
+	</div>
 </body>
 </html>

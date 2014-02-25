@@ -1,71 +1,75 @@
-{% extends "base.html" %}
-{% set active_page = "index" %}
-{% block morestyles %}
-    <link href="{{ SITEURL }}/theme/css/buddycloud-home.css" rel="stylesheet">
-{% endblock %}
-{% block content %}
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">     
-        <h1>Your communication fabric.</h1>
-    </div>
-    <div class="container" id="description">
-        <p><strong>buddycloud</strong> is an extensible set of libraries and server tools to quickly add secure communication and social features to your application.</p>
-        <div><a class="btn btn-primary btn-lg" role="button">Get startet</a><a class="btn btn-lg" role="button">Sign in</a></div>
-    </div>
+{% extends "base.html" %} {% set active_page = "index" %} {% block
+morestyles %}
+<link href="{{ SITEURL }}/theme/css/buddycloud-home.css"
+	rel="stylesheet">
+{% endblock %} {% block content %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+	<h1>
+		<!-- Your communication fabric. -->
+	</h1>
+</div>
+<div class="container" id="description">
+	<p>Quickly add a communication layer to your mobile or web app.
+		Super-easy. Secure. Open Source.</p>
+	<div>
+		<a class="btn btn-primary btn-lg" role="button">Get started</a><a
+			class="btn btn-lg" role="button">Sign in</a>
+	</div>
+</div>
 
-    <div class="container" id="features">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Drop into your app</h2>
-          <p>Buddycloud’s framework helps you easily add rich communication to  your application. And then extend it as your needs grow. Today it might be users to user conversations. Tomorrow video and private file sharing. Since buddycloud is open source, you can adapt and grow. Easily.</p>
-          <p><a href="#">Read more</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Built for developers</h2>
-          <p>Convention over configuration: Buddycloud does the heavy lifting so that you can get on with building your app. Buddycloud includes a REST API, buddycloud.js and an Android SDK that you can easily adapt to your needs . Quickly.</p>
-          <p><a href="#" "="">Read more</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Secure</h2>
-          <p>Code reviews, open protocols, competing open implementations, widespread use and diverse use-cases help secure buddycloud. Whether you run a self-hosted or a hosted site, you control your data and who can access your channels.</p>
-          <p><a href="#">Read more</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="container" id="friends">
-        <p>Friends and partners using buddycloud:</p>
-        <div></div>
-       
-    </div>
+<div class="container" id="features">
+	<div class="row">
+		<div class="col-md-4">
+			<h2>Tools</h2>
+			<p>Whether you are building mobile or web apps, the Buddycloud
+				server, clients and libraries will help you add chat, file sharing
+				and social activity streams to your project.</p>
+		</div>
+		<div class="col-md-4">
+			<h2>A Methodology</h2>
+			<p>Innovate at the edge using Buddycloud's distributed design
+				built on open standards and released as <a href="https://github.com/buddycloud">open source.</a></p>
+		</div>
+		<div class="col-md-4">
+			<h2>A Community of Peers</h2>
+			<p>Learn, share and work with a developer community building the
+				next generation of communication products.</p>
+		</div>
+	</div>
+</div>
+<div class="container" id="friends">
+	<p>Friends and partners using buddycloud:</p>
+	<div></div>
 
-    <div class="container" id="contact">
-      <div class="row">
-        <div class="col-md-4">
-          <h3>Get in touch</h3>
-		<ul>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">Team</a></li>
-			<li><a href="#">Press</a></li>
-		</ul>
-        </div>
-        <div class="col-md-4">
-          <h3>Help and support</h3>
-		<ul>
-			<li>+1 415-858-0202</li>
-			<li><a href="#">team mailing list</a></li>
-			<li><a href="#">get help in our chatroom</a></li>
-		</ul>
-       </div>
-        <div class="col-md-4">
-          <h3>Stay connected</h3>
+</div>
+
+<div class="container" id="contact">
+	<div class="row">
+		<div class="col-md-4">
+			<h3>Get in touch</h3>
+			<ul>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Team</a></li>
+				<li><a href="#">Press</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<h3>Help and support</h3>
+			<ul>
+				<li>+1 415-858-0202</li>
+				<li><a href="#">team mailing list</a></li>
+				<li><a href="#">get help in our chatroom</a></li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<h3>Stay connected</h3>
 			<div class="contact">
-					<a href="#" class="twitter">Twitter</a>
-					<a href="#" class="blog">Blog</a>
-					<a href="#" class="github">Github</a>
-					<a href="#" class="buddycloud">buddyloud</a>
-					<br>
+				<a href="#" class="twitter">Twitter</a> <a href="#" class="blog">Blog</a>
+				<a href="#" class="github">Github</a> <a href="#" class="buddycloud">buddyloud</a>
+				<br>
 			</div>
-        </div>
-      </div>
-    </div> 
+		</div>
+	</div>
+</div>
 {% endblock content %}
