@@ -38,11 +38,13 @@
         {% if DISPLAY_PAGES_ON_MENU %}
         <ul class="nav navbar-nav">
             {% for page in PAGES|sort(attribute='order') %}
-            <li {% if active_page == page.slug %}class="active"{% endif %} >
+	    {% if page.show_on_top_menu == "False" %}
+           <li {% if active_page == page.slug %}class="active"{% endif %} >
 		<a href="{{ SITEURL }}/{{ page.url }}">
 			{{ page.title }}
 		</a>
 	    </li>
+	    {% endblock %}
             {% endfor %}
         </ul>    
         {% endif %}
