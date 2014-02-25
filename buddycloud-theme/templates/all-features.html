@@ -1,13 +1,8 @@
-<html>
-<head>
-<title>All Buddycloud Features</title>
-<meta name="url" content="all-features" />
-<meta name="save_as" content="all-features.html" />
-<meta name="order" content="7" />
-<meta name="show_on_top_menu" content="False" />
+{% extends "base.html" %}
+{% set active_page = "all-features" %}
+{% block title %}buddycloud - All Buddycloud Features{% endblock %}
+{% block content %}
 
-</head>
-<body>
 <p class="lead">Quickly add secure and scalable communication to your app or website.</p>
 	<h2>Scalable</h2>
 	<p>Scaling your service because it's popular is a 'good problem to
@@ -211,5 +206,4 @@
 			</tr>
 		</tbody>
 	</table>
-</body>
-</html>
+{% endblock %}
