@@ -1,957 +1,1217 @@
 {% extends "base.html" %}
 {% set active_page = "style-guide" %}
-{% block morestyles %}
-{% endblock %}
+{% block title %}Buddycloud - Style Guide{% endblock %}
 {% block content %}
+
+
 <!-- Typography
 ================================================== -->
-
-			
 				<div class="bs-docs-section">
 					<h1 id="identity">Identity</h1>
 
 					<h2 id="identity-logo">Logo</h2>
 
 					<h3>Regular Logo</h3>
-					<div class="bs-example">
-						<img alt="" src="{{ SITEURL }}/theme/img/logos/buddycloud_logo.svg">
-					</div>
+					<p>
+						<a href="theme/img/logos/buddycloud_logo.eps" "="">EPS</a> / 
+						<a href="theme/img/logos/buddycloud_logo.pdf" "="">PDF</a> / 
+						<a href="theme/img/logos/buddycloud_logo.svg" "="">SVG</a> / 
+						<a href="theme/img/logos/buddycloud_logo.png" "="">PNG</a>
+					</p>
+					<div class="bs-example"><img alt="" src="theme/img/logos/buddycloud_logo.svg"></div>
+
 					<div class="highlight">
-						<pre><code class="html">&lt;img src="{{ SITEURL }}/theme/img/logos/buddycloud_logo.svg" alt=""&gt;</code>
+						<pre><code class="html">&lt;img src="theme/img/logos/buddycloud_logo.svg" alt=""&gt;</code>
 </pre>
 					</div>
 
 					<h3>Monochrome Logo</h3>
-					<div class="bs-example">
-						<img alt="" src="{{ SITEURL }}/theme/img/logos/buddycloud_logo_black.svg">
-					</div>
+					<p>
+						<a href="theme/img/logos/buddycloud_logo_black.eps" "="">EPS</a> / 
+						<a href="theme/img/logos/buddycloud_logo_black.pdf" "="">PDF</a> / 
+						<a href="theme/img/logos/buddycloud_logo_black.svg" "="">SVG</a> / 
+						<a href="theme/img/logos/buddycloud_logo_black.png" "="">PNG</a>
+					</p>
+					<div class="bs-example"><img alt="" src="theme/img/logos/buddycloud_logo_black.svg"></div>
+
 					<div class="highlight">
-						<pre><code class="html">&lt;img src="{{ SITEURL }}/theme/img/logos/buddycloud_logo_black.svg" alt=""&gt;</code>
+						<pre><code class="html">&lt;img src="theme/img/logos/buddycloud_logo_black.svg" alt=""&gt;</code>
 </pre>
 					</div>
 
 					<h3>Inverted Logo</h3>
-					<div class="bs-example">
-						<img alt="" src="{{ SITEURL }}/theme/img/logos/buddycloud_logo_white.svg" style="background-color: #2DAEBF">
-					</div>
+					<p>
+						<a href="theme/img/logos/buddycloud_logo_white.eps" "="">EPS</a> / 
+						<a href="theme/img/logos/buddycloud_logo_white.pdf" "="">PDF</a> / 
+						<a href="theme/img/logos/buddycloud_logo_white.svg" "="">SVG</a> / 
+						<a href="theme/img/logos/buddycloud_logo_white.png" "="">PNG</a>
+					</p>
+					<div class="bs-example"><img alt="" src="theme/img/logos/buddycloud_logo_white.svg" style="background-color: #2DAEBF"></div>
+
 					<div class="highlight">
-						<pre><code class="html">&lt;img src="{{ SITEURL }}/theme/img/logos/buddycloud_logo_white.svg" alt="" style="background-color: #2DAEBF"&gt;</code>
-</pre></div>
-
-<h2 id="identity-colors">Colors</h2>
-
-					<div class="table-responsive">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Color</th>
-								<th>Green-Blue</th>
-								<th>Dark Grey</th>
-								<th>Grey</th>
-								<th>Light Grey</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><strong>Sample</strong></td>
-								<td><div style="width: 8em; height:8em; background-color: #2DAEBF;"></div></td>
-								<td><div style="width: 8em; height:8em; background-color: #38434C;"></div></td>
-								<td><div style="width: 8em; height:8em; background-color: #C4C8CD;"></div></td>
-								<td><div style="width: 8em; height:8em	; background-color: #E5E9EF;"></div></td>
-							</tr>
-							<tr>
-								<td><strong>Hex</strong></td>
-								<td>#2DAEBF</td>
-								<td>#38434C</td>
-								<td>#C4C8CD</td>
-								<td>#E5E9EF</td>
-							</tr>
-							<tr>
-								<td><strong>RGB</strong></td>
-								<td>45, 174, 191</td>
-								<td>56, 67, 76</td>
-								<td>196, 200, 205</td>
-								<td>229, 233, 239</td>
-							</tr>
-							<tr>
-								<td><strong>HSL</strong></td>
-								<td>187° 62% 46%</td>
-								<td>207° 15% 26%</td>
-								<td>213° 8% 79%</td>
-								<td>216° 24% 92%</td>
-							</tr>
-						</tbody>
-					</table>
+						<pre><code class="html">&lt;img src="theme/img/logos/buddycloud_logo_white.svg" alt="" style="background-color: #2DAEBF"&gt;</code>
+</pre>
 					</div>
-				</div>
 
-			<div class="bs-docs-section">
-				<h1 id="type" class="page-header">
-					Typography
-				</h1>
 
-<!-- Headings -->
-				<h2 id="type-headings">
-					Headings
-				</h2>
-				<p>
-					HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h4&gt;</code>, are available. <code>&lt;h5&gt;</code> and <code>&lt;h6&gt;</code> should be avoided if possible.
-				</p>
-				<div class="bs-example bs-example-type">
-					<table class="table">
-						<tbody>
-							<tr>
-								<td>
-								<h1>
-									h1. buddycloud Heading
-								</h1>
-								</td>
-								<td class="type-info">Bold 32px</td>
-							</tr>
-							<tr>
-								<td>
-								<h2>
-									h2. buddycloud Heading
-								</h2>
-								</td>
-								<td class="type-info">Bold 24px</td>
-							</tr>
-							<tr>
-								<td>
-								<h3>
-									h3. buddycloud Heading
-								</h3>
-								</td>
-								<td class="type-info">Bold 20px</td>
-							</tr>
-							<tr>
-								<td>
-								<h4>
-									h4. buddycloud Heading
-								</h4>
-								</td>
-								<td class="type-info">Bold 16px</td>
-							</tr>
+					<h2 id="identity-icons">Icons</h2>
 
-						</tbody>
-					</table>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;h1&gt;</span>h1. buddycloud Heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. buddycloud Heading<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. buddycloud Heading<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. buddycloud Heading<span class="nt">&lt;/h4&gt;</span>
-</code></pre>
-				</div>
-
-<!-- Body copy -->
-				<h2 id="type-body-copy">
-					Body copy
-				</h2>
-				<p>
-					The global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>1.5</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of 1em (16px by default).
-				</p>
-				<div class="bs-example">
+					<h3>Logo Mark</h3>
+					<h4>Regular Logo Mark</h4>
 					<p>
-						Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+						<a href="theme/img/icons/buddycloud_icon.eps" "="">EPS</a> / 
+						<a href="theme/img/icons/buddycloud_icon.pdf" "="">PDF</a> / 
+						<a href="theme/img/icons/buddycloud_icon.svg" "="">SVG</a> / 
+						<a href="theme/img/icons/buddycloud_icon.png" "="">PNG</a>
 					</p>
+					<div class="bs-example"><img alt="" src="theme/img/icons/buddycloud_icon.svg"></div>
+
+					<div class="highlight">
+						<pre><code class="html">&lt;img src="theme/img/icons/buddycloud_icon.svg" alt=""&gt;</code>
+</pre>
+					</div>
+
+					<h4>Monochrome Logo Mark</h4>
 					<p>
-						Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+						<a href="theme/img/icons/buddycloud_icon_black.eps" "="">EPS</a> / 
+						<a href="theme/img/icons/buddycloud_icon_black.pdf" "="">PDF</a> / 
+						<a href="theme/img/icons/buddycloud_icon_black.svg" "="">SVG</a> / 
+						<a href="theme/img/icons/buddycloud_icon_black.png" "="">PNG</a>
 					</p>
+					<div class="bs-example"><img alt="" src="theme/img/icons/buddycloud_icon_black.svg"></div>
+
+					<div class="highlight">
+						<pre><code class="html">&lt;img src="theme/img/icons/buddycloud_icon_black.svg" alt=""&gt;</code>
+</pre>
+					</div>
+					
+					<h4>Inverted Logo Mark</h4>
 					<p>
-						Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+						<a href="theme/img/icons/buddycloud_icon_white.eps" "="">EPS</a> / 
+						<a href="theme/img/icons/buddycloud_icon_white.pdf" "="">PDF</a> / 
+						<a href="theme/img/icons/buddycloud_icon_white.svg" "="">SVG</a> / 
+						<a href="theme/img/icons/buddycloud_icon_white.png" "="">PNG</a>
 					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
-</code></pre>
-				</div>
+					<div class="bs-example"><img alt="" src="theme/img/icons/buddycloud_icon_white.svg" style="background-color: #2DAEBF"></div>
 
-<!-- Body copy .lead -->
-				<h3>
-					Lead body copy
-				</h3>
-				<p>
-					Make a paragraph stand out by adding <code>.lead</code>.
-				</p>
-				<div class="bs-example">
-					<p class="lead">
-						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
-					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
-</code></pre>
-				</div>
+					<div class="highlight">
+						<pre><code class="html">&lt;img src="theme/img/icons/buddycloud_icon._white.svg" alt=""&gt;</code>
+</pre>
+					</div>
 
-<!-- Emphasis -->
-				<h2 id="type-emphasis">
-					Emphasis
-				</h2>
-				<p>
-					Make use of HTML's default emphasis tags with lightweight styles.
-				</p>
-				<h3>
-					Small text
-				</h3>
-				<p>
-					For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 75% the size of the parent. 
-				</p>
-				<div class="bs-example">
+					<h3>iOS Icon</h3>
 					<p>
-						<small>This line of text is meant to be treated as fine print.</small>
+						<a href="theme/img/icons/apple-touch-icon-144x144-precomposed.png">Apple Touch Icon</a>
 					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Bold
-				</h3>
-				<p>
-					For emphasizing a snippet of text with a heavier font-weight.
-				</p>
-				<div class="bs-example">
+					<div class="bs-example"><img alt="" src="theme/img/icons/apple-touch-icon-144x144-precomposed.png"></div>
+
+					<div class="highlight">
+						<pre><code class="html">&lt;link href="theme/img/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144"&gt;</code>
+</pre>
+					</div>
+
+
+					<h3>Favicon</h3>
 					<p>
-						The following snippet of text is <strong>rendered as bold text</strong>.
+						<a href="theme/img/icons/favicon.ico">Favicon</a>
 					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;strong&gt;</span>rendered as bold text<span class="nt">&lt;/strong&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Italics
-				</h3>
-				<p>
-					For emphasizing a snippet of text with italics.
-				</p>
-				<div class="bs-example">
+					<div class="highlight">
+						<pre><code class="html">&lt;link href="theme/img/icons/favicon.ico" rel="shortcut icon"&gt;</code>
+</pre>
+					</div>
+
+					<h3>Android Launcher Icons</h3>
+					<p><a href="http://developer.android.com/design/style/iconography.html" target="_blank">Android Developers: Iconography</a></p>
 					<p>
-						The following snippet of text is <em>rendered as italicized text</em>.
+						<a href="theme/img/icons/android_google_play_launcher_icon.png">Google Play Launcher Icon</a><br>
+						<a href="theme/img/icons/ic_launcher_icon_mdpi.png">Launcher Icon MDPI</a><br>
+						<a href="theme/img/icons/ic_launcher_icon_hdpi.png">Launcher Icon HDPI</a><br>
+						<a href="theme/img/icons/ic_launcher_icon_xhdpi.png">Launcher Icon XHDPI</a><br>
+						<a href="theme/img/icons/ic_launcher_icon_xxhdpi.png">Launcher Icon XXHDPI</a><br>
+						<a href="theme/img/icons/ic_launcher_icon_xxxdpi.png">Launcher Icon XXXHDPI</a>
 					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;em&gt;</span>rendered as italicized text<span class="nt">&lt;/em&gt;</span>
-</code></pre>
-				</div>
-				
-				<h3>
-					Marked
-				</h3>
-				<p>
-					For emphasizing a snippet of text with marked text.
-				</p>
-				<div class="bs-example">
-					<p>
-						The following snippet of text is <mark>rendered as marked text</mark>.
-					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;em&gt;</span>rendered as marked text<span class="nt">&lt;/em&gt;</span>
-</code></pre>
-					</div>				
-				
-				
-			
+					<div class="bs-example">
+						<img alt="" src="theme/img/icons/ic_launcher_icon_mdpi.png" style="border: none; vertical-align: bottom">
+						<img alt="" src="theme/img/icons/ic_launcher_icon_hdpi.png" style="border: none; vertical-align: bottom">
+						<img alt="" src="theme/img/icons/ic_launcher_icon_xhdpi.png" style="border: none; vertical-align: bottom">
+						<img alt="" src="theme/img/icons/ic_launcher_icon_xxhdpi.png" style="border: none; vertical-align: bottom">
+						<img alt="" src="theme/img/icons/ic_launcher_icon_xxxhdpi.png" style="border: none; vertical-align: bottom">
+					</div>
 
-<!-- Blockquotes -->
-				<h2 id="type-blockquotes">
-					Blockquotes
-				</h2>
-				<p>
-					For quoting blocks of content from another source within your document.
-				</p>
-				<h3>
-					Default blockquote
-				</h3>
-				<p>
-					Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.
-				</p>
-				<div class="bs-example">
-					<blockquote>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</p>
-					</blockquote>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Blockquote options
-				</h3>
-				<p>
-					Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.
-				</p>
-				<h4>
-					Naming a source
-				</h4>
-				<p>
-					Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.
-				</p>
-				<div class="bs-example">
-					<blockquote>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</p>
-						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> 
-					</blockquote>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
-  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span>
-</code></pre>
-				</div>
-				<h4>
-					Alternate displays
-				</h4>
-				<p>
-					Add <code>.blockquote-reverse</code> for a blockquote with right-aligned content.
-				</p>
-				<div class="bs-example" style="overflow: hidden;">
-					<blockquote class="blockquote-reverse">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-						</p>
-						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> 
-					</blockquote>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote-reverse"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/blockquote&gt;</span>
-</code></pre>
-				</div>
 
-<!-- Lists -->
-				<h2 id="type-lists">
-					Lists
-				</h2>
-				<h3>
-					Unordered
-				</h3>
-				<p>
-					A list of items in which the order does <em>not</em> explicitly matter.
-				</p>
-				<div class="bs-example">
-					<ul>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>Consectetur adipiscing elit</li>
-						<li>Integer molestie lorem at massa</li>
-						<li>Facilisis in pretium nisl aliquet</li>
-						<li>Nulla volutpat aliquam velit 
-						<ul>
-							<li>Phasellus iaculis neque</li>
-							<li>Purus sodales ultricies</li>
-							<li>Vestibulum laoreet porttitor sem</li>
-							<li>Ac tristique libero volutpat at</li>
-						</ul>
-						</li>
-						<li>Faucibus porta lacus fringilla vel</li>
-						<li>Aenean sit amet erat nunc</li>
-						<li>Eget porttitor lorem</li>
-					</ul>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;ul&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Ordered
-				</h3>
-				<p>
-					A list of items in which the order <em>does</em> explicitly matter.
-				</p>
-				<div class="bs-example">
-					<ol>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>Consectetur adipiscing elit</li>
-						<li>Integer molestie lorem at massa</li>
-						<li>Facilisis in pretium nisl aliquet</li>
-						<li>Nulla volutpat aliquam velit</li>
-						<li>Faucibus porta lacus fringilla vel</li>
-						<li>Aenean sit amet erat nunc</li>
-						<li>Eget porttitor lorem</li>
-					</ol>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;ol&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ol&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Unstyled
-				</h3>
-				<p>
-					Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.
-				</p>
-				<div class="bs-example">
-					<ul class="list-unstyled">
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>Consectetur adipiscing elit</li>
-						<li>Integer molestie lorem at massa</li>
-						<li>Facilisis in pretium nisl aliquet</li>
-						<li>Nulla volutpat aliquam velit 
-						<ul>
-							<li>Phasellus iaculis neque</li>
-							<li>Purus sodales ultricies</li>
-							<li>Vestibulum laoreet porttitor sem</li>
-							<li>Ac tristique libero volutpat at</li>
-						</ul>
-						</li>
-						<li>Faucibus porta lacus fringilla vel</li>
-						<li>Aenean sit amet erat nunc</li>
-						<li>Eget porttitor lorem</li>
-					</ul>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Inline
-				</h3>
-				<p>
-					Place all list items on a single line with <code>display: inline-block;</code> and some light padding.
-				</p>
-				<div class="bs-example">
-					<ul class="list-inline">
-						<li>Lorem ipsum</li>
-						<li>Phasellus iaculis</li>
-						<li>Nulla volutpat</li>
-					</ul>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Description
-				</h3>
-				<p>
-					A list of terms with their associated descriptions.
-				</p>
-				<div class="bs-example">
-					<dl> 
-						<dt>Description lists</dt>
-						<dd>A description list is perfect for defining terms.</dd>
-						<dt>Euismod</dt>
-						<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-						<dd>Donec id elit non mi porta gravida at eget metus.</dd>
-						<dt>Malesuada porta</dt>
-						<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-					</dl>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;dl&gt;</span>
-  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
-  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
-<span class="nt">&lt;/dl&gt;</span>
-</code></pre>
-				</div>
-				<h4>
-					Horizontal description
-				</h4>
-				<p>
-					Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.
-				</p>
-				<div class="bs-example">
-					<dl class="dl-horizontal"> 
-						<dt>Description lists</dt>
-						<dd>A description list is perfect for defining terms.</dd>
-						<dt>Euismod</dt>
-						<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
-						<dd>Donec id elit non mi porta gravida at eget metus.</dd>
-						<dt>Malesuada porta</dt>
-						<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-						<dt>Felis euismod semper eget lacinia</dt>
-						<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
-					</dl>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
-  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
-<span class="nt">&lt;/dl&gt;</span>
-</code></pre>
-				</div>
-				<div class="bs-callout bs-callout-info">
-					<h4>
-						Auto-truncating
-					</h4>
-					<p>
-						Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.
-					</p>
-				</div>
-			</div>
 
-<!-- Code
-================================================== -->
-			<div class="bs-docs-section">
-				<h1 id="code" class="page-header">
-					Code
-				</h1>
-				<h2 id="code-inline">
-					Inline
-				</h2>
-				<p>
-					Wrap inline snippets of code with <code>&lt;code&gt;</code>.
-				</p>
-				<div class="bs-example">
-					For example, <code>&lt;section&gt;</code> should be wrapped as inline. 
-				</div>
-				<div class="highlight">
-<pre><code class="html">For example, <span class="nt">&lt;code&gt;</span><span class="ni"></span>section<span class="ni"></span><span class="nt">&lt;/code&gt;</span> should be wrapped as inline.
-</code></pre>
-				</div>
-				<h2 id="code-user-input">
-					User input
-				</h2>
-				<p>
-					Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.
-				</p>
-				<div class="bs-example">
-					To switch directories, type <kbd>cd</kbd> followed by the name of the directory. 
-				</div>
-				<div class="highlight">
-<pre><code class="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.
-</code></pre>
-				</div>
-				<h2 id="code-block">
-					Basic block
-				</h2>
-				<p>
-					Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.
-				</p>
-				<div class="bs-example">
-<pre><code class="html">&lt;p&gt;Sample text here...&lt;/p&gt;</code></pre> 
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;pre&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/pre&gt;</span>
-</code></pre>
-				</div>
-				<p>
-					You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.
-				</p>
-			</div>
+					<h2 id="identity-colors">Colors</h2>
 
-<!-- Tables
-================================================== -->
-			<div class="bs-docs-section">
-				<h1 id="tables" class="page-header">
-					Tables
-				</h1>
-				<h2 id="tables-example">
-					Basic example
-				</h2>
-				<p>
-					For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.
-				</p>
-				<div class="bs-example">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Username</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="tables-striped">
-					Striped rows
-				</h2>
-				<p>
-					Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.
-				</p>
-				<div class="bs-callout bs-callout-danger">
-					<h4>
-						Cross-browser compatibility
-					</h4>
-					<p>
-						Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.
-					</p>
-				</div>
-				<div class="bs-example">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Username</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="tables-bordered">
-					Bordered table
-				</h2>
-				<p>
-					Add <code>.table-bordered</code> for borders on all sides of the table and cells.
-				</p>
-				<div class="bs-example">
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Username</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td rowspan="2">1</td>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@TwBootstrap</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td colspan="2">Larry the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="tables-hover-rows">
-					Hover rows
-				</h2>
-				<p>
-					Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
-				</p>
-				<div class="bs-example">
-					<table class="table table-hover">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Username</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td colspan="2">Larry the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="tables-condensed">
-					Condensed table
-				</h2>
-				<p>
-					Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.
-				</p>
-				<div class="bs-example">
-					<table class="table table-condensed">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>First Name</th>
-								<th>Last Name</th>
-								<th>Username</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<td>2</td>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<td>3</td>
-								<td colspan="2">Larry the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-condensed"</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/table&gt;</span>
-</code></pre>
-				</div>
-				
-				<h2 id="tables-responsive">
-					Responsive tables
-				</h2>
-				<p>
-					Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.
-				</p>
-				<div class="bs-example">
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
 								<tr>
-									<th>#</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
+									<th>Color</th>
+
+									<th>Green-Blue</th>
+
+									<th>Dark Grey</th>
+
+									<th>Grey</th>
+
+									<th>Light Grey</th>
 								</tr>
 							</thead>
+
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+									<td><strong>Sample</strong></td>
+
+									<td>
+										<div style="width: 8em; height:8em; background-color: #2DAEBF;"></div>
+									</td>
+
+									<td>
+										<div style="width: 8em; height:8em; background-color: #38434C;"></div>
+									</td>
+
+									<td>
+										<div style="width: 8em; height:8em; background-color: #C4C8CD;"></div>
+									</td>
+
+									<td>
+										<div style="width: 8em; height:8em ; background-color: #E5E9EF;"></div>
+									</td>
 								</tr>
+
 								<tr>
-									<td>2</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+									<td><strong>Hex</strong></td>
+
+									<td>#2DAEBF</td>
+
+									<td>#38434C</td>
+
+									<td>#C4C8CD</td>
+
+									<td>#E5E9EF</td>
 								</tr>
+
 								<tr>
-									<td>3</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+									<td><strong>RGB</strong></td>
+
+									<td>45, 174, 191</td>
+
+									<td>56, 67, 76</td>
+
+									<td>196, 200, 205</td>
+
+									<td>229, 233, 239</td>
+								</tr>
+
+								<tr>
+									<td><strong>HSL</strong></td>
+
+									<td>187° 62% 46%</td>
+
+									<td>207° 15% 26%</td>
+
+									<td>213° 8% 79%</td>
+
+									<td>216° 24% 92%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="bs-docs-section">
+					<h1 class="page-header" id="type">Typography</h1><!-- Headings -->
+
+					<h2 id="type-headings">Headings</h2>
+
+					<p>HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h4&gt;</code>, are available. <code>&lt;h5&gt;</code> and <code>&lt;h6&gt;</code> should be avoided if possible.</p>
+
+					<div class="bs-example bs-example-type">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td>
+										<h1>h1. buddycloud Heading</h1>
+									</td>
+
+									<td class="type-info">Bold 32px</td>
+								</tr>
+
+								<tr>
+									<td>
+										<h2>h2. buddycloud Heading</h2>
+									</td>
+
+									<td class="type-info">Bold 24px</td>
+								</tr>
+
+								<tr>
+									<td>
+										<h3>h3. buddycloud Heading</h3>
+									</td>
+
+									<td class="type-info">Bold 20px</td>
+								</tr>
+
+								<tr>
+									<td>
+										<h4>h4. buddycloud Heading</h4>
+									</td>
+
+									<td class="type-info">Bold 16px</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
 
-<!-- /.table-responsive -->
-					<div class="table-responsive">
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;h1&gt;</span>h1. buddycloud Heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. buddycloud Heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. buddycloud Heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. buddycloud Heading<span class="nt">&lt;/h4&gt;</span>
+</code>
+</pre>
+					</div><!-- Body copy -->
+
+					<h2 id="type-body-copy">Body copy</h2>
+
+					<p>The global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>1.5</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of 1em (16px by default).</p>
+
+					<div class="bs-example">
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+
+						<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+					</div><!-- Body copy .lead -->
+
+					<h3>Lead body copy</h3>
+
+					<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+
+					<div class="bs-example">
+						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+</code>
+</pre>
+					</div><!-- Emphasis -->
+
+					<h2 id="type-emphasis">Emphasis</h2>
+
+					<p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+					<h3>Small text</h3>
+
+					<p>For de-emphasizing inline or blocks of text, use the <code>&lt;small&gt;</code> tag to set text at 75% the size of the parent.</p>
+
+					<div class="bs-example">
+						<p><small>This line of text is meant to be treated as fine print.</small></p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Bold</h3>
+
+					<p>For emphasizing a snippet of text with a heavier font-weight.</p>
+
+					<div class="bs-example">
+						<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;strong&gt;</span>rendered as bold text<span class="nt">&lt;/strong&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Italics</h3>
+
+					<p>For emphasizing a snippet of text with italics.</p>
+
+					<div class="bs-example">
+						<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;em&gt;</span>rendered as italicized text<span class="nt">&lt;/em&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Marked</h3>
+
+					<p>For emphasizing a snippet of text with marked text.</p>
+
+					<div class="bs-example">
+						<p>The following snippet of text is <mark>rendered as marked text</mark>.</p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;em&gt;</span>rendered as marked text<span class="nt">&lt;/em&gt;</span>
+</code>
+</pre>
+					</div><!-- Blockquotes -->
+
+					<h2 id="type-blockquotes">Blockquotes</h2>
+
+					<p>For quoting blocks of content from another source within your document.</p>
+
+					<h3>Default blockquote</h3>
+
+					<p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+
+					<div class="bs-example">
+						<blockquote>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						</blockquote>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Blockquote options</h3>
+
+					<p>Style and content changes for simple variations on a standard <code>&lt;blockquote&gt;</code>.</p>
+
+					<h4>Naming a source</h4>
+
+					<p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+
+					<div class="bs-example">
+						<blockquote>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+							<footer>
+								Someone famous in <cite title="Source Title">Source Title</cite>
+							</footer>
+						</blockquote>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer&gt;</span>Someone famous in <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Source Title"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h4>Alternate displays</h4>
+
+					<p>Add <code>.blockquote-reverse</code> for a blockquote with right-aligned content.</p>
+
+					<div class="bs-example" style="overflow: hidden;">
+						<blockquote class="blockquote-reverse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+							<footer>
+								Someone famous in <cite title="Source Title">Source Title</cite>
+							</footer>
+						</blockquote>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote-reverse"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/blockquote&gt;</span>
+</code>
+</pre>
+					</div><!-- Lists -->
+
+					<h2 id="type-lists">Lists</h2>
+
+					<h3>Unordered</h3>
+
+					<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+
+					<div class="bs-example">
+						<ul>
+							<li>Lorem ipsum dolor sit amet</li>
+
+							<li>Consectetur adipiscing elit</li>
+
+							<li>Integer molestie lorem at massa</li>
+
+							<li>Facilisis in pretium nisl aliquet</li>
+
+							<li>Nulla volutpat aliquam velit
+
+								<ul>
+									<li>Phasellus iaculis neque</li>
+
+									<li>Purus sodales ultricies</li>
+
+									<li>Vestibulum laoreet porttitor sem</li>
+
+									<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+
+							<li>Faucibus porta lacus fringilla vel</li>
+
+							<li>Aenean sit amet erat nunc</li>
+
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Ordered</h3>
+
+					<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+
+					<div class="bs-example">
+						<ol>
+							<li>Lorem ipsum dolor sit amet</li>
+
+							<li>Consectetur adipiscing elit</li>
+
+							<li>Integer molestie lorem at massa</li>
+
+							<li>Facilisis in pretium nisl aliquet</li>
+
+							<li>Nulla volutpat aliquam velit</li>
+
+							<li>Faucibus porta lacus fringilla vel</li>
+
+							<li>Aenean sit amet erat nunc</li>
+
+							<li>Eget porttitor lorem</li>
+						</ol>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Unstyled</h3>
+
+					<p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+
+					<div class="bs-example">
+						<ul class="list-unstyled">
+							<li>Lorem ipsum dolor sit amet</li>
+
+							<li>Consectetur adipiscing elit</li>
+
+							<li>Integer molestie lorem at massa</li>
+
+							<li>Facilisis in pretium nisl aliquet</li>
+
+							<li>Nulla volutpat aliquam velit
+
+								<ul>
+									<li>Phasellus iaculis neque</li>
+
+									<li>Purus sodales ultricies</li>
+
+									<li>Vestibulum laoreet porttitor sem</li>
+
+									<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+
+							<li>Faucibus porta lacus fringilla vel</li>
+
+							<li>Aenean sit amet erat nunc</li>
+
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Inline</h3>
+
+					<p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
+
+					<div class="bs-example">
+						<ul class="list-inline">
+							<li>Lorem ipsum</li>
+
+							<li>Phasellus iaculis</li>
+
+							<li>Nulla volutpat</li>
+						</ul>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Description</h3>
+
+					<p>A list of terms with their associated descriptions.</p>
+
+					<div class="bs-example">
+						<dl>
+							<dt>Description lists</dt>
+
+							<dd>A description list is perfect for defining terms.</dd>
+
+							<dt>Euismod</dt>
+
+							<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+
+							<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+
+							<dt>Malesuada porta</dt>
+
+							<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+						</dl>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h4>Horizontal description</h4>
+
+					<p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
+
+					<div class="bs-example">
+						<dl class="dl-horizontal">
+							<dt>Description lists</dt>
+
+							<dd>A description list is perfect for defining terms.</dd>
+
+							<dt>Euismod</dt>
+
+							<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+
+							<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+
+							<dt>Malesuada porta</dt>
+
+							<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+
+							<dt>Felis euismod semper eget lacinia</dt>
+
+							<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+						</dl>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>...<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>...<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<div class="bs-callout bs-callout-info">
+						<h4>Auto-truncating</h4>
+
+						<p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+					</div>
+				</div><!-- Code
+================================================== -->
+
+				<div class="bs-docs-section">
+					<h1 class="page-header" id="code">Code</h1>
+
+					<h2 id="code-inline">Inline</h2>
+
+					<p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+
+					<div class="bs-example">
+						For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html">For example, <span class="nt">&lt;code&gt;</span>section<span class="nt">&lt;/code&gt;</span> should be wrapped as inline.
+</code>
+</pre>
+					</div>
+
+					<h2 id="code-user-input">User input</h2>
+
+					<p>Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.</p>
+
+					<div class="bs-example">
+						To switch directories, type <kbd>cd</kbd> followed by the name of the directory.
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html">To switch directories, type <span class="nt">&lt;kbd&gt;</span>cd<span class="nt">&lt;/kbd&gt;</span> followed by the name of the directory.
+</code>
+</pre>
+					</div>
+
+					<h2 id="code-block">Basic block</h2>
+
+					<p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+
+					<div class="bs-example">
+						<pre><code class="html">&lt;p&gt;Sample text here...&lt;/p&gt;</code>
+</pre>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;pre&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span><span class="nt">&lt;/pre&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<p>You may optionally add the <code>.pre-scrollable</code> class, which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+				</div><!-- Tables
+================================================== -->
+
+				<div class="bs-docs-section">
+					<h1 class="page-header" id="tables">Tables</h1>
+
+					<h2 id="tables-example">Basic example</h2>
+
+					<p>For basic styling—light padding and only horizontal dividers—add the base class <code>.table</code> to any <code>&lt;table&gt;</code>. It may seem super redundant, but given the widespread use of tables for other plugins like calendars and date pickers, we've opted to isolate our custom table styles.</p>
+
+					<div class="bs-example">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+
+									<th>First Name</th>
+
+									<th>Last Name</th>
+
+									<th>Username</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>1</td>
+
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@mdo</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+
+									<td>Jacob</td>
+
+									<td>Thornton</td>
+
+									<td>@fat</td>
+								</tr>
+
+								<tr>
+									<td>3</td>
+
+									<td>Larry</td>
+
+									<td>the Bird</td>
+
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="tables-striped">Striped rows</h2>
+
+					<p>Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.</p>
+
+					<div class="bs-callout bs-callout-danger">
+						<h4>Cross-browser compatibility</h4>
+
+						<p>Striped tables are styled via the <code>:nth-child</code> CSS selector, which is not available in Internet Explorer 8.</p>
+					</div>
+
+					<div class="bs-example">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+
+									<th>First Name</th>
+
+									<th>Last Name</th>
+
+									<th>Username</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>1</td>
+
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@mdo</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+
+									<td>Jacob</td>
+
+									<td>Thornton</td>
+
+									<td>@fat</td>
+								</tr>
+
+								<tr>
+									<td>3</td>
+
+									<td>Larry</td>
+
+									<td>the Bird</td>
+
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-striped"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="tables-bordered">Bordered table</h2>
+
+					<p>Add <code>.table-bordered</code> for borders on all sides of the table and cells.</p>
+
+					<div class="bs-example">
 						<table class="table table-bordered">
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
-									<th>Table heading</th>
+
+									<th>First Name</th>
+
+									<th>Last Name</th>
+
+									<th>Username</th>
 								</tr>
 							</thead>
+
 							<tbody>
 								<tr>
-									<td>1</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+									<td rowspan="2">1</td>
+
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@mdo</td>
 								</tr>
+
+								<tr>
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@TwBootstrap</td>
+								</tr>
+
 								<tr>
 									<td>2</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+
+									<td>Jacob</td>
+
+									<td>Thornton</td>
+
+									<td>@fat</td>
 								</tr>
+
 								<tr>
 									<td>3</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
+
+									<td colspan="2">Larry the Bird</td>
+
+									<td>@twitter</td>
 								</tr>
 							</tbody>
 						</table>
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-bordered"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+</code>
+</pre>
 					</div>
 
-<!-- /.table-responsive -->
-				</div>
-<!-- /example -->
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
+					<h2 id="tables-hover-rows">Hover rows</h2>
+
+					<p>Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+
+					<div class="bs-example">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th>#</th>
+
+									<th>First Name</th>
+
+									<th>Last Name</th>
+
+									<th>Username</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>1</td>
+
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@mdo</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+
+									<td>Jacob</td>
+
+									<td>Thornton</td>
+
+									<td>@fat</td>
+								</tr>
+
+								<tr>
+									<td>3</td>
+
+									<td colspan="2">Larry the Bird</td>
+
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-hover"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="tables-condensed">Condensed table</h2>
+
+					<p>Add <code>.table-condensed</code> to make tables more compact by cutting cell padding in half.</p>
+
+					<div class="bs-example">
+						<table class="table table-condensed">
+							<thead>
+								<tr>
+									<th>#</th>
+
+									<th>First Name</th>
+
+									<th>Last Name</th>
+
+									<th>Username</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>1</td>
+
+									<td>Mark</td>
+
+									<td>Otto</td>
+
+									<td>@mdo</td>
+								</tr>
+
+								<tr>
+									<td>2</td>
+
+									<td>Jacob</td>
+
+									<td>Thornton</td>
+
+									<td>@fat</td>
+								</tr>
+
+								<tr>
+									<td>3</td>
+
+									<td colspan="2">Larry the Bird</td>
+
+									<td>@twitter</td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-condensed"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="tables-responsive">Responsive tables</h2>
+
+					<p>Create responsive tables by wrapping any <code>.table</code> in <code>.table-responsive</code> to make them scroll horizontally up to small devices (under 768px). When viewing on anything larger than 768px wide, you will not see any difference in these tables.</p>
+
+					<div class="bs-example">
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>#</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+
+									<tr>
+										<td>2</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+
+									<tr>
+										<td>3</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.table-responsive -->
+
+						<div class="table-responsive">
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>#</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+
+										<th>Table heading</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>1</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+
+									<tr>
+										<td>2</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+
+									<tr>
+										<td>3</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+
+										<td>Table cell</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /.table-responsive -->
+					</div><!-- /example -->
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-    ...
+	...
   <span class="nt">&lt;/table&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</code></pre>
-				</div>
-			</div>
-
-<!-- Buttons
+</code>
+</pre>
+					</div>
+				</div><!-- Buttons
 ================================================== -->
-			<div class="bs-docs-section">
-				<h1 id="buttons" class="page-header">
-					Buttons
-				</h1>
-				<h2 id="buttons-options">
-					Options
-				</h2>
-				<p>
-					Use any of the available button classes to quickly create a styled button.
-				</p>
-				<div class="bs-example">
-					<button type="button" class="btn btn-default">Default</button> <button type="button" class="btn btn-primary">Primary</button>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="c">&lt;!-- Standard button --&gt;</span>
+
+				<div class="bs-docs-section">
+					<h1 class="page-header" id="buttons">Buttons</h1>
+
+					<h2 id="buttons-options">Options</h2>
+
+					<p>Use any of the available button classes to quickly create a styled button.</p>
+
+					<div class="bs-example">
+						<button class="btn btn-default" type="button">Default</button> <button class="btn btn-primary" type="button">Primary</button>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="c">&lt;!-- Standard button --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="buttons-sizes">
-					Sizes
-				</h2>
-				<p>
-					Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.
-				</p>
-				<div class="bs-example">
-					<p>
-						<button type="button" class="btn btn-primary btn-lg">Large button</button> <button type="button" class="btn btn-default btn-lg">Large button</button> 
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary">Default button</button> <button type="button" class="btn btn-default">Default button</button> 
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary btn-sm">Small button</button> <button type="button" class="btn btn-default btn-sm">Small button</button> 
-					</p>
-					<p>
-						<button type="button" class="btn btn-primary btn-xs">Extra small button</button> <button type="button" class="btn btn-default btn-xs">Extra small button</button> 
-					</p>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;p&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="buttons-sizes">Sizes</h2>
+
+					<p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
+
+					<div class="bs-example">
+						<p><button class="btn btn-primary btn-lg" type="button">Large button</button> <button class="btn btn-default btn-lg" type="button">Large button</button></p>
+
+						<p><button class="btn btn-primary" type="button">Default button</button> <button class="btn btn-default" type="button">Default button</button></p>
+
+						<p><button class="btn btn-primary btn-sm" type="button">Small button</button> <button class="btn btn-default btn-sm" type="button">Small button</button></p>
+
+						<p><button class="btn btn-primary btn-xs" type="button">Extra small button</button> <button class="btn btn-default btn-xs" type="button">Extra small button</button></p>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;p&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg"</span><span class="nt">&gt;</span>Large button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
@@ -967,199 +1227,244 @@
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-xs"</span><span class="nt">&gt;</span>Extra small button<span class="nt">&lt;/button&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-xs"</span><span class="nt">&gt;</span>Extra small button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/p&gt;</span>
-</code></pre>
-				</div>
-				<p>
-					Create block level buttons—those that span the full width of a parent— by adding <code>.btn-block</code>.
-				</p>
-				<div class="bs-example">
-					<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
-						<button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button> <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button> 
+</code>
+</pre>
 					</div>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg btn-block"</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
+
+					<p>Create block level buttons—those that span the full width of a parent— by adding <code>.btn-block</code>.</p>
+
+					<div class="bs-example">
+						<div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+							<button class="btn btn-primary btn-lg btn-block" type="button">Block level button</button> <button class="btn btn-default btn-lg btn-block" type="button">Block level button</button>
+						</div>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg btn-block"</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg btn-block"</span><span class="nt">&gt;</span>Block level button<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="buttons-active">
-					Active state
-				</h2>
-				<p>
-					Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s should you need to replicate the active state progammatically.
-				</p>
-				<h3>
-					Button element
-				</h3>
-				<p>
-					No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.
-				</p>
-				<p class="bs-example">
-					<button type="button" class="btn btn-primary btn-lg active">Primary button</button> <button type="button" class="btn btn-default btn-lg active">Button</button> 
-				</p>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="buttons-active">Active state</h2>
+
+					<p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s should you need to replicate the active state progammatically.</p>
+
+					<h3>Button element</h3>
+
+					<p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
+
+					<p class="bs-example"><button class="btn btn-primary btn-lg active" type="button">Primary button</button> <button class="btn btn-default btn-lg active" type="button">Button</button></p>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg active"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-				</div>
-				<h3>
-					Anchor element
-				</h3>
-				<p>
-					Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.
-				</p>
-				<p class="bs-example">
-				<a href="#" class="btn btn-primary btn-lg active" role="button">Primary link</a> <a href="#" class="btn btn-default btn-lg active" role="button">Link</a> 
-				</p>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h3>Anchor element</h3>
+
+					<p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
+
+					<p class="bs-example"><a class="btn btn-primary btn-lg active" href="#">Primary link</a> <a class="btn btn-default btn-lg active" href="#">Link</a></p>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg active"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-</code></pre>
-				</div>
-				<h2 id="buttons-disabled">
-					Disabled state
-				</h2>
-				<p>
-					Make buttons look unclickable by fading them back 50%.
-				</p>
-				<h3>
-					Button element
-				</h3>
-				<p>
-					Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.
-				</p>
-				<p class="bs-example">
-					<button type="button" class="btn btn-primary btn-lg" disabled="disabled">Primary button</button> <button type="button" class="btn btn-default btn-lg" disabled="disabled">Button</button> 
-				</p>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-primary"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<h2 id="buttons-disabled">Disabled state</h2>
+
+					<p>Make buttons look unclickable by fading them back 50%.</p>
+
+					<h3>Button element</h3>
+
+					<p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+
+					<p class="bs-example"><button class="btn btn-primary btn-lg" disabled="disabled" type="button">Primary button</button> <button class="btn btn-default btn-lg" disabled="disabled" type="button">Button</button></p>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-primary"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Primary button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg"</span> <span class="na">disabled=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-				</div>
-				<div class="bs-callout bs-callout-danger">
-					<h4>
-						Cross-browser compatibility
-					</h4>
-					<p>
-						If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.
-					</p>
-				</div>
-				<h3>
-					Anchor element
-				</h3>
-				<p>
-					Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.
-				</p>
-				<p class="bs-example">
-				<a href="#" class="btn btn-primary btn-lg disabled" role="button">Primary link</a> <a href="#" class="btn btn-default btn-lg disabled" role="button">Link</a> 
-				</p>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg disabled"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
+</code>
+</pre>
+					</div>
+
+					<div class="bs-callout bs-callout-danger">
+						<h4>Cross-browser compatibility</h4>
+
+						<p>If you add the <code>disabled</code> attribute to a <code>&lt;button&gt;</code>, Internet Explorer 9 and below will render text gray with a nasty text-shadow that we cannot fix.</p>
+					</div>
+
+					<h3>Anchor element</h3>
+
+					<p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+
+					<p class="bs-example"><a class="btn btn-primary btn-lg disabled" href="#">Primary link</a> <a class="btn btn-default btn-lg disabled" href="#">Link</a></p>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-lg disabled"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Primary link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-lg disabled"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
-</code></pre>
-				</div>
-				<p>
-					We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. 
-				</p>
-				<div class="bs-callout bs-callout-warning">
-					<h4>
-						Link functionality not impacted
-					</h4>
-					<p>
-						This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.
-					</p>
-				</div>
-				<div class="bs-callout bs-callout-warning">
-					<h4>
-						Context-specific usage
-					</h4>
-					<p>
-						While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.
-					</p>
-				</div>
-			</div>
+</code>
+</pre>
+					</div>
 
-<!-- Buttons
+					<p>We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.</p>
+
+					<div class="bs-callout bs-callout-warning">
+						<h4>Link functionality not impacted</h4>
+
+						<p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+					</div>
+
+					<div class="bs-callout bs-callout-warning">
+						<h4>Context-specific usage</h4>
+
+						<p>While button classes can be used on <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements, only <code>&lt;button&gt;</code> elements are supported within our nav and navbar components.</p>
+					</div>
+				</div><!-- Buttons
 ================================================== -->
-			<div class="bs-docs-section">
-				<h1 id="images" class="page-header">
-					Images
-				</h1>
-				<h2 id="images-standart">
-					Standart Image
-				</h2>
 
-				<p>
-					A responsive image with caption.
-				</p>
-				<div class="bs-example">
-					<figure>
-					<img class="img-responsive" src="{{ SITEURL }}/theme/img/home/background.jpg" alt=""> 
-				  		<figcaption>A sample figure caption.</figcaption>
-					</figure>
-				</div>
-				<div class="highlight">
-<pre><code class="html"><span class="nt">&lt;figure&gt;</span>
-	&lt;img <span class="nt">class="img-responsive"</span> src="{{ SITEURL }}/theme/img/home/background.jpg" alt="" /&gt; 
+				<div class="bs-docs-section">
+					<h1 class="page-header" id="images">Images</h1>
+
+					<h2 id="images-standart">Standart Image</h2>
+
+					<p>A responsive image with caption.</p>
+
+					<div class="bs-example">
+						<figure>
+							<img alt="" class="img-responsive" src="theme/img/home/background.jpg">
+
+							<figcaption>
+								A sample figure caption.
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;figure&gt;</span>
+	&lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt; 
 	<span class="nt">&lt;figcaption&gt;</span>A sample figure caption.<span class="nt">&lt;/figcaption&gt;</span>
 <span class="nt">&lt;/figure&gt;</span>
-</code></pre>
-				</div>
+</code>
+</pre>
+					</div>
 
-			</div>
+					<h2 id="images-credits">Image Credits</h2>
+
+					<p>A responsive image with credits.</p>
+
+					<div class="bs-example">
+						<figure class="credits">
+							<img alt="" class="img-responsive" src="theme/img/home/background.jpg">
+
+							<figcaption>
+								Some sample image credits.<br>That can go over several lines.
+							</figcaption>
+						</figure>
+					</div>
+
+					<div class="highlight">
+						<pre><code class="html"><span class="nt">&lt;figure class="credits"&gt;</span>
+	&lt;img <span class="nt">class="img-responsive"</span> src="theme/img/home/background.jpg" alt="" /&gt; 
+	<span class="nt">&lt;figcaption&gt;</span>Some sample image credits.<span class="nt">&lt;/figcaption&gt;</span>
+<span class="nt">&lt;/figure&gt;</span>
+</code>
+</pre>
+					</div>
+				</div>
 {% endblock %}
 {% block table_of_contents %}
-<div class="bs-sidebar hidden-print affix-top" role="complementary">
-				<ul class="nav bs-sidenav">
-			
-					<li> <a data-scroll data-url='true' href="#identity">Identity</a>
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#identity-logo">Logo</a></li>
-						<li><a data-scroll data-url='true' href="#identity-colors">Colors</a></li>
+				<div class="bs-sidebar hidden-print affix">
+					<ul class="nav bs-sidenav">
+						<li class="active">
+							<a href="#identity">Identity</a>
+
+							<ul class="nav">
+								<li class="active"><a href="#identity-logo">Logo</a></li>
+								<li class=""><a href="#identity-icons">Icons</a></li>
+								<li class=""><a href="#identity-colors">Colors</a></li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#type">Typography</a>
+
+							<ul class="nav">
+								<li class=""><a href="#type-headings">Headings</a></li>
+
+								<li class=""><a href="#type-body-copy">Body copy</a></li>
+
+								<li class=""><a href="#type-emphasis">Emphasis</a></li>
+
+								<li><a href="#type-abbreviations">Abbreviations</a></li>
+
+								<li><a href="#type-addresses">Addresses</a></li>
+
+								<li class=""><a href="#type-blockquotes">Blockquotes</a></li>
+
+								<li class=""><a href="#type-lists">Lists</a></li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#code">Code</a>
+
+							<ul class="nav">
+								<li class=""><a href="#code-inline">Inline code</a></li>
+
+								<li class=""><a href="#code-user-input">User input</a></li>
+
+								<li class=""><a href="#code-block">Blocks of code</a></li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#tables">Tables</a>
+
+							<ul class="nav">
+								<li class=""><a href="#tables-example">Basic example</a></li>
+
+								<li class=""><a href="#tables-striped">Striped rows</a></li>
+
+								<li class=""><a href="#tables-bordered">Bordered table</a></li>
+
+								<li class=""><a href="#tables-hover-rows">Hover rows</a></li>
+
+								<li class=""><a href="#tables-condensed">Condensed table</a></li>
+
+								<li><a href="#tables-contextual-classes">Contextual classes</a></li>
+
+								<li class=""><a href="#tables-responsive">Responsive tables</a></li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#buttons">Buttons</a>
+
+							<ul class="nav">
+								<li class=""><a href="#buttons-options">Options</a></li>
+
+								<li class=""><a href="#buttons-sizes">Sizes</a></li>
+
+								<li class=""><a href="#buttons-active">Active state</a></li>
+
+								<li class=""><a href="#buttons-disabled">Disabled state</a></li>
+							</ul>
+						</li>
+
+						<li class="">
+							<a href="#images">Images</a>
+
+							<ul class="nav">
+								<li class=""><a href="#images-standart">Standart Image</a></li>
+								<li class=""><a href="#images-credits">Image Credits</a></li>
+							</ul>
+						</li>
 					</ul>
-					</li>					
-					<li> <a data-scroll data-url='true' href="#type">Typography</a> 
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#type-headings">Headings</a></li>
-						<li><a data-scroll data-url='true' href="#type-body-copy">Body copy</a></li>
-						<li><a data-scroll data-url='true' href="#type-emphasis">Emphasis</a></li>
-						<li><a data-scroll data-url='true' href="#type-abbreviations">Abbreviations</a></li>
-						<li><a data-scroll data-url='true' href="#type-addresses">Addresses</a></li>
-						<li><a data-scroll data-url='true' href="#type-blockquotes">Blockquotes</a></li>
-						<li><a data-scroll data-url='true' href="#type-lists">Lists</a></li>
-					</ul>
-					</li>
-					<li> <a data-scroll data-url='true' href="#code">Code</a> 
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#code-inline">Inline code</a></li>
-						<li><a data-scroll data-url='true' href="#code-user-input">User input</a></li>
-						<li><a data-scroll data-url='true' href="#code-block">Blocks of code</a></li>
-					</ul>
-					</li>
-					<li> <a data-scroll data-url='true' href="#tables">Tables</a> 
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#tables-example">Basic example</a></li>
-						<li><a data-scroll data-url='true' href="#tables-striped">Striped rows</a></li>
-						<li><a data-scroll data-url='true' href="#tables-bordered">Bordered table</a></li>
-						<li><a data-scroll data-url='true' href="#tables-hover-rows">Hover rows</a></li>
-						<li><a data-scroll data-url='true' href="#tables-condensed">Condensed table</a></li>
-						<li><a data-scroll data-url='true' href="#tables-contextual-classes">Contextual classes</a></li>
-						<li><a data-scroll data-url='true' href="#tables-responsive">Responsive tables</a></li>
-					</ul>
-					</li>
-					<li> <a data-scroll data-url='true' href="#buttons">Buttons</a> 
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#buttons-options">Options</a></li>
-						<li><a data-scroll data-url='true' href="#buttons-sizes">Sizes</a></li>
-						<li><a data-scroll data-url='true' href="#buttons-active">Active state</a></li>
-						<li><a data-scroll data-url='true' href="#buttons-disabled">Disabled state</a></li>
-					</ul>
-					</li>
-					<li> <a data-scroll data-url='true' href="#images">Images</a> 
-					<ul class="nav">
-						<li><a data-scroll data-url='true' href="#images-standart">Standart Image</a></li>
-					</ul>
-					</li>
-				</ul>
-			</div>
+				</div>
 {% endblock %}

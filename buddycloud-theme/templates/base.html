@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="en">
 <head>
     <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -39,9 +38,9 @@
         {% if DISPLAY_PAGES_ON_MENU %}
         <ul class="nav navbar-nav">
             {% for page in PAGES|sort(attribute='order') %}
-            <li {% if active_page == page.slug %}class="active"{% endif %} >
+           <li {% if active_page == page.slug %}class="active"{% endif %} >
 		<a href="{{ SITEURL }}/{{ page.url }}">
-			{{ page.title }}
+			{{ page.top_menu|default(page.title) }}
 		</a>
 	    </li>
             {% endfor %}
