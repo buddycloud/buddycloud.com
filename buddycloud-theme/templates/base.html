@@ -38,7 +38,7 @@
         {% if DISPLAY_PAGES_ON_MENU %}
         <ul class="nav navbar-nav">
             {% for page in PAGES|sort(attribute='order') if not (page.show_in_top_menu == "false") %}
-           <li {% if active_page == page.slug %}class="active"{% endif %} >
+           <li {% if active_page == page.show_as_selected|default(page.slug) %}class="active"{% endif %} >
 		<a href="{{ SITEURL }}/{{ page.url }}">
 			{{ page.top_menu_name|default(page.title) }}
 		</a>

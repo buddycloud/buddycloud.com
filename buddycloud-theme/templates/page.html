@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% set active_page = page.slug %}
+{% set active_page = page.show_as_selected|default(page.slug) %}
 {% block morestyles %}
 {% endblock %}
 {% block title %}{{ page.title }}{% endblock %}
