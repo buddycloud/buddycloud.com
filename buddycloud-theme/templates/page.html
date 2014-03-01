@@ -17,7 +17,7 @@
 {% endblock %}
 {% block table_of_contents %}
     {% if active_page == "api" %}
-    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+    <div class="bs-sidebar hidden-print affix">
 	{% set toc_info = page.content|extract_toc_info %}
 	{{ toc_info|create_toc }}
     </div>
