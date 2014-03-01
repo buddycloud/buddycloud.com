@@ -27,7 +27,7 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
-DIRECT_TEMPLATES = ['index', 'style-guide', 'all-features']
+DIRECT_TEMPLATES = ['index', 'style-guide']
 
 STATIC_PATHS = [ 'img', 'CNAME' ]
 
