@@ -8,7 +8,7 @@
 	<h1 class="page-header">{{ page.header | default(page.title) }}</h1>
     </div>
     <div class="bs-docs-section">
-	{% if active_page == "api" %}
+	{% if page.table_of_contents|default("false") == "true" %}
 		{{ page.content|add_toc_hooks(toc_info) }}
 	{% else %}
 		{{ page.content }}
@@ -16,7 +16,7 @@
     </div>
 {% endblock %}
 {% block table_of_contents %}
-    {% if active_page == "api" %}
+    {% if page.table_of_contents|default("false") == "true" %}
     <div class="bs-sidebar hidden-print affix-top" role="complementary">
 	{% set toc_info = page.content|extract_toc_info %}
 	{{ toc_info|create_toc }}
