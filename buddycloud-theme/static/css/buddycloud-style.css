@@ -1,5 +1,6 @@
 html {
 	font-size: 100%;
+	height:100%;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
 	-webkit-text-size-adjust: none;
 	color: #333;
 	padding-top: 4em;
+	height: 101%;
+	overflow:auto;
 }
 
 a {
