@@ -1,3 +1,9 @@
+Title: Install
+url: install
+save_as: install.html
+order: 
+table_of_contents: true
+
 Install Requirements
 --------------------
 
@@ -5,7 +11,7 @@ Install Requirements
     hosting options](buddycloud hosting options "wikilink"))
 -   a domain name (the instructions assume EXAMPLE.COM)
 -   the ability to edit your DNS
--   Ubuntu ≥ 12.04 (LTS)
+-   Ubuntu, 12.04 (LTS)
 
 Getting help
 ------------
