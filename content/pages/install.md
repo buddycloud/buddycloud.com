@@ -1,8 +1,13 @@
 Title: Install
 url: install
 save_as: install.html
+<<<<<<< HEAD
 order: 
 table_of_contents: false
+=======
+order: 1
+table_of_contents: true
+>>>>>>> FETCH_HEAD
 
 Install Requirements
 --------------------
