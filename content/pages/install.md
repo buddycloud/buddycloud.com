@@ -2,7 +2,7 @@ Title: Install
 url: install
 save_as: install.html
 order: 
-table_of_contents: false
+show_in_top_menu: false
 
 Install Requirements
 --------------------
