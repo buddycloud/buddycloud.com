@@ -1,7 +1,7 @@
 Title: API
 url: api
 save_as: api.html
-order: 1
+order: 2
 table_of_contents: true
 
 The HTTP API is implemented by the [buddycloud HTTP API

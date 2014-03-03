@@ -1,7 +1,7 @@
 Title: Install
 url: install
 save_as: install.html
-order: 
+order: 1
 table_of_contents: true
 
 Install Requirements
