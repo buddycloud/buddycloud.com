@@ -477,6 +477,7 @@ ul.nav-tabs > li a:hover {
 
 .navbar {
 	min-height: 3em;
+	z-index: 4000;
 }
 
 .navbar-nav {
