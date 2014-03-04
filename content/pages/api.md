@@ -64,7 +64,7 @@ server. <tabber> dig command=
 $ dig txt _buddycloud-api._tcp.EXAMPLE.COM
 
 ;; ANSWER SECTION:
-_buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0" "host=buddycloud.EXAMPLE.COM" "protocol=https" "path=/api" "port=443"
+_buddycloud-api._tcp.EXAMPLE.COM.         IN TXT "v=1.0" "host=buddycloud.EXAMPLE.COM" "protocol=https" "path=/api" "port=443"
 ~~~~
 
 This tells a client that any API calls for `example.com` should be made
