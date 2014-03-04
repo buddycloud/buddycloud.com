@@ -10,6 +10,7 @@ class TableOfContents:
 		hook = text.strip().replace(" ", "_").lower()
 		hook = hook.replace("/:", ":").replace("/", ":")
 		hook = hook.replace(":", "_")
+		hook = hook.replace(",", "").replace(".", "")
 		if ( hook.startswith("_") ):
 			hook = hook[1:]
 		if ( hook.endswith("_") ):
@@ -31,6 +32,7 @@ class TableOfContents:
 		hook = text.strip().replace(" ", "_").lower()
 		hook = hook.replace("/:", ":").replace("/", ":")
 		hook = hook.replace(":", "_")
+		hook = hook.replace(",", "").replace(".", "")
 		if ( hook.startswith("_") ):
 			hook = hook[1:]
 		if ( hook.endswith("_") ):
