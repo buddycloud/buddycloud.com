@@ -3,6 +3,8 @@ url: install
 save_as: install.html
 order: 1
 show_in_top_menu: false
+table_of_contents: true
+
 
 Install Requirements
 --------------------

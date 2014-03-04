@@ -167,3 +167,12 @@ To reach this result, the definition should be as follows:
     B-->A: Message back
 
 *IMPORTANT*: There must two blank lines, one before the sequence diagram block and another afterwards, separating the sequence diagram definition from other markup in the text.
+
+#### Omnigraffle image exporting
+
+Exports from Omnigraffle on OS X.
+
+```
+pip install omnigraffle-image-export
+omnigraffle-export -f png buddycloud.com-diagrams.graffle ~/Documents/src/buddycloud.com/buddycloud-theme/static/img/diagrams
+```
