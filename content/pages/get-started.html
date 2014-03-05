@@ -8,7 +8,7 @@
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
-	<h2>Get Setup</h2>
+	<h1>Get Setup</h1>
 	<p>Simply add the following to your pages:</p>
 	<div class="bs-example">
 		<pre>
@@ -18,7 +18,7 @@ and???
 ...</code>
 </pre>
 	</div>
-	<h2>Create a user</h2>
+	<h1>Create a user</h1>
 	<p>This is done the first time a user starts using buddycloud</p>
 	<div class="bs-example">
 		<pre>
@@ -42,8 +42,8 @@ socket.send(
 )</code>
 		</pre>
 	</div>
-	<h2>Create a shared channel</h2>
-	<h3>Creation</h3>
+	<h1>Create a shared channel</h1>
+	<h2>Creation</h2>
 	<p>Topic channels are shared channels that others can post to.</p>
 	<div class="bs-example">
 		<p>This creates a channel that other users can post to.</p>
@@ -61,7 +61,22 @@ socket.send(
 </code>
 </pre>
 	</div>
-	<h3>Post content to the shared channel</h3>
+	<h2>Set the new channel to viewable</h2>
+	<div class="bs-example">
+		<p>An open channel allows all Buddycloud users to view it.</p>
+	</div>
+	<div class="highlight">
+		<pre>
+			<code class="html">
+	
+	        {
+            node: '/user/weather@topics.evilprofessor.co.uk',
+            configuration: [pubsub#access_model = 'open']
+        }
+        		</code>
+</pre>
+	</div>
+	<h2>Post content to the shared channel</h2>
 	<div class="bs-example">
 		<p>
 			This posts a message to
@@ -87,22 +102,7 @@ socket.send(
 		</code>
 </pre>
 	</div>
-	<h2>Set the new channel to viewable</h2>
-	<div class="bs-example">
-		<p>An open channel allows all Buddycloud users to view it.</p>
-	</div>
-	<div class="highlight">
-		<pre>
-			<code class="html">
-	
-	        {
-            node: '/user/weather@topics.evilprofessor.co.uk',
-            configuration: []
-        }
-        		</code>
-</pre>
-	</div>
-	<h2>Fetch posts from the topic channel</h2>
+	<h1>Fetch posts from the topic channel</h1>
 	<p>Pre-populate your app with existing posts. New posts will arrive
 		automatically</p>
 	<div class="bs-example">
@@ -128,18 +128,18 @@ socket.send(
 		</code>
 </pre>
 	</div>
-	<h2>Go online</h2>
+	<h1>Go online</h1>
 	<p>Tell the server that you are online and want to start receiving new
 		realtime events</p>
 	<pre>
 	<code class="javascript">socket.send('xmpp.buddycloud.presence', {}) 
 	</code>
 	</pre>
-	<h2>Demo</h2>
+	<h1>Demo</h1>
 	<p>You can play with buddycloud using an anonymous connection here. Firstly
 		we'll automatically log you in an anonymous login and register with the
 		server.</p>
-	<h2>Status</h2>
+	<h1>Status</h1>
 	<ul class="status"></ul>
 </body>
 </html>
