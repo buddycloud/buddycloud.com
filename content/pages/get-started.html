@@ -81,7 +81,9 @@ socket.send(
 			<code class="javascript">
 socket.send(
   'xmpp.buddycloud.register',
-  {"to": "channels.buddycloud.org" /* this is the discovered address */},
+  {
+    "to": "channels.buddycloud.org" /* this is the discovered address */
+  },
   function(error, data) { console.log(error, data) }
 )</code>
 		</pre>
@@ -99,6 +101,7 @@ socket.send(
 socket.send(
   'xmpp.buddycloud.create',
   {
+    "to": "channels.buddycloud.org",
     "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
     "options": [{ var: 'pubsub#access_model', value: 'open' }]  
   },
@@ -120,6 +123,7 @@ socket.send(
 socket.send(
   'xmpp.buddycloud.publish',
   {
+    "to": "channels.buddycloud.org",
     "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
     "content": {
       "atom": {
@@ -149,6 +153,7 @@ socket.send(
 socket.send(
   'xmpp.buddycloud.items.recent',
   {
+    "to": "channels.buddycloud.org", 
     "max": 10,
     "since": "1970-01-01 00:00:00"
   },
