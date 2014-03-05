@@ -38,42 +38,41 @@
 		</code>
 	</p>
 	<h1>Create a user</h1>
-	<p>This is done the first time a user starts using buddycloud</p>
+	<p>Log in as the user (create it if it doesn't exist)</p>
+	<div class="bs-example">
+	  <pre>
+	    <code class="html">
+	    socket.send(
+  	      'xmpp.login',
+  	      {
+  	        "to": "buddycloud.org"
+                "jid": "romeo@buddycloud.org",
+                "password": "juliet-forever",
+                "register": true
+              }
+            )
+	    </code>
+	</pre>
+	</div>
+	<p>Now figure out where the buddycloud server for this domain is</p>
 	<div class="bs-example">
 		<pre>
-			<code class="html">socket.send('xmpp.register.set',
-    {
-      "to": "buddycloud.org", /* or your Buddycloud domain /*
-      "email": "romeo@montague.lit", 
-      "username": "romeo",            
-      "password": "juliet-forever",
-      "form": [ ],
-      "register: true"
-    },
-  function(error, data) { console.log(error, data) }
-)
-</code>
+		<code class="html">
+		  socket.send(
+                    'xmpp.buddycloud.discover',
+                    {},
+                    function(error, address) { console.log(error, address) }
+                  )
+		</code>
 		</pre>
 	</div>
-	<p>Now log in as the new user</p>
-	<div class="bs-example">
-		<pre>
-			<code class="html">socket.send(
-  'xmpp.login',
-  {
-    "jid": "romeo@buddycloud.org",
-    "password": "juliet-forever",
-  }
-)</code>
-		</pre>
-	</div>
-	<p>Finally create their Buddycloud channel</p>
+	<p>Finally create their Buddycloud account</p>
 	<div class="bs-example">
 		<pre>
 			<code class="html">
 socket.send(
   'xmpp.buddycloud.register',
-  {},
+  {"to": "channels.buddycloud.org" /* this is the discovered address */},
   function(error, data) { console.log(error, data) }
 )</code>
 		</pre>
