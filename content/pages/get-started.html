@@ -5,10 +5,11 @@
 <meta name="save_as" content="get-started.html" />
 <meta name="order" content="4" />
 <meta name="show_as_selected" content="get-started" />
+<meta name="table_of_contents" content="true" />
 </head>
 <body>
-	<h2>Setup</h2>
-	<p>To get setup add the following to your pages:
+	<h2>Get Setup</h2>
+	<p>Simply add the following to your pages:</p>
 	<div class="bs-example">
 		<pre>
 <code class="html">...
@@ -17,23 +18,110 @@ and???
 ...</code>
 </pre>
 	</div>
+	<h2>Create a user</h2>
+	<p>This is done the first time a user starts using buddycloud</p>
+	<div class="bs-example">
+		<pre>
+			<code class="html">socket.send(
+  'xmpp.register.set',
+    {
+      "to": "buddycloud.org", /* or your Buddycloud domain /*
+      "email": "romeo@montague.lit", 
+      "username": "romeo",            
+      "password": "juliet-forever",
+      "form": [ ]
+    },
+  function(error, data) { console.log(error, data) }
+)
+	
+/* Create the user's personal channel /* 
+socket.send(
+  'xmpp.buddycloud.register',
+  {},
+  function(error, data) { console.log(error, data) }
+)</code>
+		</pre>
+	</div>
+	<h2>Create a shared channel</h2>
+	<h3>Creation</h3>
+	<p>Topic channels are shared channels that others can post to.</p>
+	<div class="bs-example">
+		<p>This creates a channel that other users can post to.</p>
+	</div>
+	<div class="highlight">
+		<pre>
+			<code class="html">socket.send(
+            'xmpp.buddycloud.create',
+            {
+                "node": "my-little-topic-channel updates",
+             /* "options": [] */
+            },
+            function(error, data) { console.log(error, data) }
+        )				
+</code>
+</pre>
+	</div>
+	<h3>Post content to the shared channel</h3>
+	<div class="bs-example">
+		<p>
+			This posts a message to
+			<code>my-little-topic-channel</code>
+			.
+		</p>
+	</div>
+	<div class="highlight">
+		<pre>
+			<code class="html">
+     socket.send(
+            'xmpp.buddycloud.publish',
+            {
+                "node": "/user/my-little-topic-channel/posts",
+                "content": {
+                    "atom": {
+                        "content": "First Post!"
+                    },
+                    "in-reply-to": { "ref": "1234-5678-9087-6543" }
+                }
+            },
+            function(error, data) { console.log(error, data) }
+		</code>
+</pre>
+	</div>
+	<h2>Set the new channel to viewable</h2>
+	<h2>Fetch posts from the topic channel</h2>
+	<p>Pre-populate your app with existing posts. New posts will arrive
+		automatically</p>
+	<div class="bs-example">
+		<p>Fetch 10 new posts. <code>rsm</code> (<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result set management</a>) let's you page through
+			results.</p>
+	</div>
+	<div class="highlight">
+		<pre>
+			<code class="html">
+           socket.send(
+            'xmpp.buddycloud.items.recent',
+            {
+              "max": 10,
+              "since": "1970-01-01 00:00:00"
+            },
+            function(error, data, rsm) { console.log(error, data, rsm) }
+        )
+        
+		</code>
+</pre>
+	</div>
+	<h2>Go online</h2>
+	<p>Tell the server that you are online and want to start receiving new
+		realtime events</p>
+	<pre>
+	<code class="javascript">socket.send('xmpp.buddycloud.presence', {}) 
+	</code>
+	</pre>
 	<h2>Demo</h2>
 	<p>You can play with buddycloud using an anonymous connection here. Firstly
 		we'll automatically log you in an anonymous login and register with the
 		server.</p>
-	<h3>Status</h3>
+	<h2>Status</h2>
 	<ul class="status"></ul>
-	<!--
- 
-We need to show:
-- how to create a user with password
-- how to log-in with this user?
-- get ~5 posts from topic channel (perhaps use team@topics.buddycloud.org)
-- create a topic channel
-- set their new topic channel to open
-- post to their new topic channel
- 
- -->
-	
 </body>
 </html>
