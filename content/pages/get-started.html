@@ -8,6 +8,17 @@
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
+	<p>
+		You can access Buddycloud in many ways. This example uses <a
+			href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a>.
+		This page will show you how to do a few of the basic operations in Buddycloud.
+		XMPP-FTW is a great way to build realtime javascript apps. To Find out more
+		check the <a href="https://xmpp-ftw.jit.su/demo">Demo</a>.
+	</p>
+	<p>
+		For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
+			REST API</a>.
+	</p>
 	<h1>Get Setup</h1>
 	<p>Simply add the following to your pages:</p>
 	<div class="bs-example">
@@ -16,28 +27,47 @@
 &lt;script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"&gt;
 </code>
 </pre>
-<p>
-And call
-<code>socket = new Primus('//' + window.document.location.host)</code>
-</p>
 	</div>
+	<p>
+		And call
+		<code>socket = new Primus('https://xmpp-ftw.jit.su' + window.document.location.host)
+		wait... 
+		</code>
+	</p>
 	<h1>Create a user</h1>
 	<p>This is done the first time a user starts using buddycloud</p>
 	<div class="bs-example">
 		<pre>
-			<code class="html">socket.send(
-  'xmpp.register.set',
+			<code class="html">socket.send('xmpp.register.set',
     {
       "to": "buddycloud.org", /* or your Buddycloud domain /*
       "email": "romeo@montague.lit", 
       "username": "romeo",            
       "password": "juliet-forever",
-      "form": [ ]
+      "form": [ ],
+      "register: true"
     },
   function(error, data) { console.log(error, data) }
 )
-	
-/* Create the user's personal channel /* 
+</code>
+		</pre>
+	</div>
+	<p>Now log in as the new user</p>
+	<div class="bs-example">
+		<pre>
+			<code class="html">socket.send(
+  'xmpp.login',
+  {
+    "jid": "romeo@buddycloud.org",
+    "password": "juliet-forever",
+  }
+)</code>
+		</pre>
+	</div>
+	<p>Finally create their Buddycloud channel</p>
+	<div class="bs-example">
+		<pre>
+			<code class="html">
 socket.send(
   'xmpp.buddycloud.register',
   {},
@@ -45,8 +75,8 @@ socket.send(
 )</code>
 		</pre>
 	</div>
-	<h1>Create a shared channel</h1>
-	<p>Shared channels have multiple users that can follow and post to them</p>
+	<h1>Create a topic channel</h1>
+	<p>Topic channels have multiple users that can follow and post to them</p>
 	<h2>Create</h2>
 	<p>Topic channels are shared channels that others can post to.</p>
 	<div class="bs-example">
@@ -74,7 +104,7 @@ socket.send(
 			<code class="html">socket.send(
             'xmpp.buddycloud.config.set',
             {
-               "node": "/user/.co.uk updates",
+               "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
                "form:" [  { var: 'pubsub#access_model', value: 'open' } ]
             },
             function(error, data) { console.log(error, data) }
@@ -96,10 +126,10 @@ socket.send(
 	<div class="highlight">
 		<pre>
 			<code class="html">
-     socket.send(
+socket.send(
             'xmpp.buddycloud.publish',
             {
-                "node": "/user/my-little-topic-channel/posts",
+                "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
                 "content": {
                     "atom": {
                         "content": "First Post!"
