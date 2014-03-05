@@ -41,36 +41,31 @@
 	<p>Log in as the user (create it if it doesn't exist)</p>
 	<div class="bs-example">
 	  <pre>
-	    <code class="html">
-	    socket.send(
-  	      'xmpp.login',
-  	      {
-  	        "to": "buddycloud.org"
-                "jid": "romeo@buddycloud.org",
-                "password": "juliet-forever",
-                "register": true
-              }
-            )
-	    </code>
+	    <code class="html">socket.send(
+  'xmpp.login',
+  {
+    "to": "buddycloud.org"
+    "jid": "romeo@buddycloud.org",
+    "password": "juliet-forever",
+    "register": true
+  }
+)</code>
 	</pre>
 	</div>
 	<p>Now figure out where the buddycloud server for this domain is</p>
 	<div class="bs-example">
 		<pre>
-		<code class="html">
-		  socket.send(
-                    'xmpp.buddycloud.discover',
-                    {},
-                    function(error, address) { console.log(error, address) }
-                  )
-		</code>
+		<code class="html">socket.send(
+  'xmpp.buddycloud.discover',
+  {},
+  function(error, address) { console.log(error, address) }
+)</code>
 		</pre>
 	</div>
 	<p>Finally create their Buddycloud account</p>
 	<div class="bs-example">
 		<pre>
-			<code class="html">
-socket.send(
+			<code class="html">socket.send(
   'xmpp.buddycloud.register',
   {"to": "channels.buddycloud.org" /* this is the discovered address */},
   function(error, data) { console.log(error, data) }
