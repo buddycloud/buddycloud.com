@@ -71,7 +71,7 @@ Files are updated to the `gh_pages` branch
 ```bash
 make github
 ```
-view the updates on http://new.buddycloud.com (and eventually buddycloud.com)
+view the updates on http://buddycloud.com
 
 ### Markdown Extensions
 
