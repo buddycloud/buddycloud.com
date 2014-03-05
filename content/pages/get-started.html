@@ -38,10 +38,13 @@
 		</code>
 	</p>
 	<h1>Create a user</h1>
-	<p>Log in as the user (create it if it doesn't exist)</p>
 	<div class="bs-example">
+	  <p>Log in as the user (create it if it doesn't exist)</p>
+	</div>
+	<div class="highlight">
 	  <pre>
-	    <code class="html">socket.send(
+	    <code class="javascript">
+socket.send(
   'xmpp.login',
   {
     "to": "buddycloud.org"
