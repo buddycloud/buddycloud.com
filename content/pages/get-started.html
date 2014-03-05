@@ -88,12 +88,30 @@ socket.send(
 </pre>
 	</div>
 	<h2>Set the new channel to viewable</h2>
+	<div class="bs-example">
+		<p>An open channel allows all Buddycloud users to view it.</p>
+	</div>
+	<div class="highlight">
+		<pre>
+			<code class="html">
+	
+	        {
+            node: '/user/weather@topics.evilprofessor.co.uk',
+            configuration: []
+        }
+        		</code>
+</pre>
+	</div>
 	<h2>Fetch posts from the topic channel</h2>
 	<p>Pre-populate your app with existing posts. New posts will arrive
 		automatically</p>
 	<div class="bs-example">
-		<p>Fetch 10 new posts. <code>rsm</code> (<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result set management</a>) let's you page through
-			results.</p>
+		<p>
+			Fetch 10 new posts.
+			<code>rsm</code>
+			(<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result
+				set management</a>) let's you page through results.
+		</p>
 	</div>
 	<div class="highlight">
 		<pre>
