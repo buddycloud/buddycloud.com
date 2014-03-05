@@ -25,8 +25,7 @@
 	</div>
 	<div class="highlight">
 		<pre>
-<code class="html">
-&lt;script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"&gt;
+<code class="html">&lt;script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"&gt;
 </code>
 </pre>
 	</div>
@@ -35,8 +34,7 @@
     </div>
     <div class="highlight">
     	<pre>
-		<code class="javascript">
-socket = new Primus('https://xmpp-ftw.jit.su')
+<code class="javascript">socket = new Primus('https://xmpp-ftw.jit.su')
 socket.on('open', function(data){
   //Ready to go here
 })</code>
@@ -48,8 +46,7 @@ socket.on('open', function(data){
 	</div>
 	<div class="highlight">
 	  <pre>
-	    <code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.login',
   {
     "to": "buddycloud.org"
@@ -65,8 +62,7 @@ socket.send(
 	</div>
 	<div class="highlight">
 		<pre>
-		<code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.buddycloud.discover',
   {},
   function(error, address) { console.log(error, address) }
@@ -78,8 +74,7 @@ socket.send(
 	</div>
 	<div class="highlight">
 		<pre>
-			<code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.buddycloud.register',
   {
     "to": "channels.buddycloud.org" /* this is the discovered address */
@@ -97,8 +92,7 @@ socket.send(
 	</div>
 	<div class="highlight">
 		<pre>
-			<code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.buddycloud.create',
   {
     "to": "channels.buddycloud.org",
@@ -122,8 +116,7 @@ socket.send(
 	</div>
 	<div class="highlight">
 		<pre>
-			<code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.buddycloud.publish',
   {
     "to": "channels.buddycloud.org",
@@ -152,8 +145,7 @@ socket.send(
 	</div>
 	<div class="highlight">
 		<pre>
-			<code class="javascript">
-socket.send(
+<code class="javascript">socket.send(
   'xmpp.buddycloud.items.recent',
   {
     "to": "channels.buddycloud.org", 
