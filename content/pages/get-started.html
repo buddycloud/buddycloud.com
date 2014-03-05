@@ -102,8 +102,11 @@ socket.send(
   'xmpp.buddycloud.create',
   {
     "to": "channels.buddycloud.org",
-    "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
-    "options": [{ var: 'pubsub#access_model', value: 'open' }]  
+    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "options": [
+      { var: 'pubsub#access_model', value: 'open' }, 
+      { var: 'buddycloud#channel_type', value: 'topic' }
+    ]  
   },
   function(error, data) { console.log(error, data) }
 )</code>
@@ -124,7 +127,7 @@ socket.send(
   'xmpp.buddycloud.publish',
   {
     "to": "channels.buddycloud.org",
-    "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
+    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
     "content": {
       "atom": {
         "content": "First Post!"
