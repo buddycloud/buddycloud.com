@@ -30,8 +30,11 @@
 	</div>
 	<p>
 		And call
-		<code>socket = new Primus('https://xmpp-ftw.jit.su' + window.document.location.host)
-		wait... 
+		<code>
+		socket = new Primus('https://xmpp-ftw.jit.su')
+		socket.on('open', function(data){
+		  //Ready to go here
+		}) 
 		</code>
 	</p>
 	<h1>Create a user</h1>
