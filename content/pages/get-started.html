@@ -90,31 +90,11 @@ socket.send(
             'xmpp.buddycloud.create',
             {
                 "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
-             /* "options": [] */  
+                "options": [{ var: 'pubsub#access_model', value: 'open' }]  
             },
             function(error, data) { console.log(error, data) }
         )				
 </code>
-</pre>
-	</div>
-	<h2>Set viewable</h2>
-	<div class="bs-example">
-		<p>An open channel allows all Buddycloud users to view it.</p>
-	</div>
-	<div class="highlight">
-		<pre>
-			<code class="html">socket.send(
-            'xmpp.buddycloud.config.set',
-            {
-               "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
-               "form:" [  { var: 'pubsub#access_model', value: 'open' } ]
-            },
-            function(error, data) { console.log(error, data) }
-        )
-	        {
-            node: '/user/my-little-topic-channel@topics.buddycloud.org',
-            configuration: [pubsub#access_model = 'open']
-        }</code>
 </pre>
 	</div>
 	<h2>Post content</h2>
