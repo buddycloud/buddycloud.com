@@ -12,11 +12,14 @@
 	<p>Simply add the following to your pages:</p>
 	<div class="bs-example">
 		<pre>
-<code class="html">...
-&lt;script type="text/javascript" src="/scripts/primus.js"&gt;
-and???
-...</code>
+<code class="html">
+&lt;script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"&gt;
+</code>
 </pre>
+<p>
+And call
+<code>socket = new Primus('//' + window.document.location.host)</code>
+</p>
 	</div>
 	<h1>Create a user</h1>
 	<p>This is done the first time a user starts using buddycloud</p>
@@ -43,7 +46,8 @@ socket.send(
 		</pre>
 	</div>
 	<h1>Create a shared channel</h1>
-	<h2>Creation</h2>
+	<p>Shared channels have multiple users that can follow and post to them</p>
+	<h2>Create</h2>
 	<p>Topic channels are shared channels that others can post to.</p>
 	<div class="bs-example">
 		<p>This creates a channel that other users can post to.</p>
@@ -53,30 +57,35 @@ socket.send(
 			<code class="html">socket.send(
             'xmpp.buddycloud.create',
             {
-                "node": "my-little-topic-channel updates",
-             /* "options": [] */
+                "node": "/user/my-little-topic-channel@topics.buddycloud.org updates",
+             /* "options": [] */  
             },
             function(error, data) { console.log(error, data) }
         )				
 </code>
 </pre>
 	</div>
-	<h2>Set the new channel to viewable</h2>
+	<h2>Set viewable</h2>
 	<div class="bs-example">
 		<p>An open channel allows all Buddycloud users to view it.</p>
 	</div>
 	<div class="highlight">
 		<pre>
-			<code class="html">
-	
+			<code class="html">socket.send(
+            'xmpp.buddycloud.config.set',
+            {
+               "node": "/user/.co.uk updates",
+               "form:" [  { var: 'pubsub#access_model', value: 'open' } ]
+            },
+            function(error, data) { console.log(error, data) }
+        )
 	        {
-            node: '/user/weather@topics.evilprofessor.co.uk',
+            node: '/user/my-little-topic-channel@topics.buddycloud.org',
             configuration: [pubsub#access_model = 'open']
-        }
-        		</code>
+        }</code>
 </pre>
 	</div>
-	<h2>Post content to the shared channel</h2>
+	<h2>Post content</h2>
 	<div class="bs-example">
 		<p>
 			This posts a message to
@@ -102,7 +111,7 @@ socket.send(
 		</code>
 </pre>
 	</div>
-	<h1>Fetch posts from the topic channel</h1>
+	<h1>Fetch Posts</h1>
 	<p>Pre-populate your app with existing posts. New posts will arrive
 		automatically</p>
 	<div class="bs-example">
