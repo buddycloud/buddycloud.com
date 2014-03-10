@@ -28,7 +28,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-03-08 19:45:49 +0000</string>
+	<string>2014-03-10 18:04:37 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -5847,8 +5847,6 @@
 				<real>0.0</real>
 				<key>circoSeparation</key>
 				<real>0.0</real>
-				<key>dotNodekSep</key>
-				<real>0.27777777777777779</real>
 				<key>dotRankSep</key>
 				<real>0.27777777777777779</real>
 				<key>layoutEngine</key>
@@ -6563,8 +6561,6 @@
 				<real>0.0</real>
 				<key>circoSeparation</key>
 				<real>0.0</real>
-				<key>dotNodekSep</key>
-				<real>0.27777777777777779</real>
 				<key>dotRankSep</key>
 				<real>0.69444444444444442</real>
 				<key>layoutEngine</key>
@@ -14996,7 +14992,437 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{160, 100}, {130, 40}}</string>
+					<string>{{340, 410}, {140, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90018</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Rotation</key>
+					<real>270</real>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.74902</string>
+								<key>g</key>
+								<string>0.682353</string>
+								<key>r</key>
+								<string>0.176471</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf1 Video Bridge}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{220, 410}, {140, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90017</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Rotation</key>
+					<real>270</real>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.74902</string>
+								<key>g</key>
+								<string>0.682353</string>
+								<key>r</key>
+								<string>0.176471</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf1 Content recommendation}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{100, 410}, {140, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90016</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Rotation</key>
+					<real>270</real>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.74902</string>
+								<key>g</key>
+								<string>0.682353</string>
+								<key>r</key>
+								<string>0.176471</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf1 Contact Matching}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{320, 190}, {120, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90014</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 1}</string>
+						<string>{1, -1}</string>
+						<string>{-1, -1}</string>
+						<string>{-1, 1}</string>
+						<string>{0, 1}</string>
+						<string>{0, -1}</string>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.937255</string>
+								<key>g</key>
+								<string>0.913725</string>
+								<key>r</key>
+								<string>0.898039</string>
+							</dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.803922</string>
+								<key>g</key>
+								<string>0.784314</string>
+								<key>r</key>
+								<string>0.768627</string>
+							</dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Pattern</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf2 Stanza.io}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{400, 20}, {130, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90013</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 1}</string>
+						<string>{1, -1}</string>
+						<string>{-1, -1}</string>
+						<string>{-1, 1}</string>
+						<string>{0, 1}</string>
+						<string>{0, -1}</string>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.937255</string>
+								<key>g</key>
+								<string>0.913725</string>
+								<key>r</key>
+								<string>0.898039</string>
+							</dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.803922</string>
+								<key>g</key>
+								<string>0.784314</string>
+								<key>r</key>
+								<string>0.768627</string>
+							</dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Pattern</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf2 other buddycloud sites}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{340, 100}, {100, 40}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>1</string>
+						</dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>90012</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{1, 1}</string>
+						<string>{1, -1}</string>
+						<string>{-1, -1}</string>
+						<string>{-1, 1}</string>
+						<string>{0, 1}</string>
+						<string>{0, -1}</string>
+						<string>{1, 0}</string>
+						<string>{-1, 0}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.74902</string>
+								<key>g</key>
+								<string>0.682353</string>
+								<key>r</key>
+								<string>0.176471</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs26 \cf1 native http}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{140, 100}, {90, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15061,12 +15487,12 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 ASmack}</string>
+\f0\fs26 \cf1 ASmack (android)}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{250, 20}, {200, 40}}</string>
+					<string>{{250, 20}, {130, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15147,7 +15573,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{300, 100}, {130, 40}}</string>
+					<string>{{240, 100}, {90, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15212,76 +15638,12 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 Strophe}</string>
+\f0\fs26 \cf1 XMPP libraries}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{300, 190}, {130, 40}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Color</key>
-						<dict>
-							<key>w</key>
-							<string>1</string>
-						</dict>
-						<key>Font</key>
-						<string>OpenSans-Bold</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>90004</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{0, 1}</string>
-						<string>{0, -1}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
-
-\f0\b\fs26 \cf1 Native XMPP}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{160, 190}, {130, 40}}</string>
+					<string>{{180, 190}, {130, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15351,7 +15713,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{365.3125, 155.3125}, {279.375, 30}}</string>
+					<string>{{385, 175}, {240, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15419,7 +15781,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{30, 100}, {120, 40}}</string>
+					<string>{{30, 100}, {100, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15570,7 +15932,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{330, 360}, {90, 80}}</string>
+					<string>{{280, 410}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15592,6 +15954,8 @@
 						<string>{1, 0}</string>
 						<string>{-1, 0}</string>
 					</array>
+					<key>Rotation</key>
+					<real>270</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -15634,7 +15998,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{30, 190}, {120, 40}}</string>
+					<string>{{30, 190}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15704,7 +16068,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{130, 360}, {90, 80}}</string>
+					<string>{{40, 410}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15726,6 +16090,8 @@
 						<string>{1, 0}</string>
 						<string>{-1, 0}</string>
 					</array>
+					<key>Rotation</key>
+					<real>270</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -15768,7 +16134,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{430, 360}, {90, 80}}</string>
+					<string>{{400, 410}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15790,6 +16156,8 @@
 						<string>{1, 0}</string>
 						<string>{-1, 0}</string>
 					</array>
+					<key>Rotation</key>
+					<real>270</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -15832,7 +16200,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{30, 360}, {90, 80}}</string>
+					<string>{{-19.999999999999993, 410}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15854,6 +16222,8 @@
 						<string>{1, 0}</string>
 						<string>{-1, 0}</string>
 					</array>
+					<key>Rotation</key>
+					<real>270</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -15896,7 +16266,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{230, 360}, {90, 80}}</string>
+					<string>{{160, 410}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15918,6 +16288,8 @@
 						<string>{1, 0}</string>
 						<string>{-1, 0}</string>
 					</array>
+					<key>Rotation</key>
+					<real>270</real>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
@@ -16092,7 +16464,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 330}, {510, 120}}</string>
+					<string>{{20, 330}, {510, 190}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16296,7 +16668,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{365, 115}, {260, 70}}</string>
+					<string>{{390, 140}, {210, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -19034,9 +19406,9 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>BottomSlabHeight</key>
-		<real>213</real>
+		<real>275</real>
 		<key>CurrentSheet</key>
-		<integer>7</integer>
+		<integer>10</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
@@ -19052,7 +19424,7 @@
 		<key>SmallIcons</key>
 		<true/>
 		<key>VisibleRegion</key>
-		<string>{{32, 0}, {718, 653}}</string>
+		<string>{{-79, 0}, {718, 668}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
