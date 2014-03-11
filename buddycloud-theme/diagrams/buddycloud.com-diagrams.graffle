@@ -28,7 +28,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-03-10 18:14:12 +0000</string>
+	<string>2014-03-11 13:42:37 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -14992,7 +14992,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{340, 360}, {140, 40}}</string>
+					<string>{{340, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15058,7 +15058,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{220, 360}, {140, 40}}</string>
+					<string>{{220, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15124,7 +15124,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{100, 360}, {140, 40}}</string>
+					<string>{{100, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15190,7 +15190,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{275, 95}, {130, 40}}</string>
+					<string>{{305, 85}, {110, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15268,12 +15268,12 @@
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf2 Stanza.io}</string>
+\f0\b\fs26 \cf2 Stanza.io}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{345, 85}, {170, 40}}</string>
+					<string>{{355, 75}, {150, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15345,7 +15345,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{185, 95}, {130, 40}}</string>
+					<string>{{245, 85}, {110, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15417,7 +15417,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{60, 50}, {120, 40}}</string>
+					<string>{{30, 50}, {230, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15487,7 +15487,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{280, 360}, {140, 40}}</string>
+					<string>{{280, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15553,7 +15553,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{60, 140}, {120, 40}}</string>
+					<string>{{30, 130}, {230, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15623,7 +15623,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{40, 360}, {140, 40}}</string>
+					<string>{{40, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15689,7 +15689,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{400, 360}, {140, 40}}</string>
+					<string>{{400, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15755,7 +15755,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{-19.999999999999993, 360}, {140, 40}}</string>
+					<string>{{-19.999999999999993, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15821,7 +15821,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{160, 360}, {140, 40}}</string>
+					<string>{{160, 340}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15887,7 +15887,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{30, 230}, {490, 30}}</string>
+					<string>{{30, 210}, {460, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15951,7 +15951,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 110}, {380, 80}}</string>
+					<string>{{20, 100}, {380, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16009,17 +16009,17 @@
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\b\fs26 \cf1 APIs}</string>
+\f0\b\fs26 \cf2 APIs}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 280}, {510, 190}}</string>
+					<string>{{20, 260}, {480, 180}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16077,17 +16077,17 @@
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\b\fs26 \cf1 Buddycloud Components}</string>
+\f0\b\fs26 \cf2 Buddycloud Components}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 20}, {380, 80}}</string>
+					<string>{{20, 20}, {380, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16145,17 +16145,17 @@
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\b\fs26 \cf1 SDKs}</string>
+\f0\b\fs26 \cf2 SDKs}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 200}, {510, 70}}</string>
+					<string>{{20, 180}, {480, 70}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16213,17 +16213,17 @@
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\b\fs26 \cf1 Messaging, security, identity}</string>
+\f0\b\fs26 \cf2 Messaging, security, identity}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{390, 90}, {210, 70}}</string>
+					<string>{{385, 95}, {190, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16283,10 +16283,10 @@
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
+{\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qr
 
-\f0\b\fs26 \cf1 Federation with other Buddycloud Sites}</string>
+\f0\b\fs26 \cf2 Site to site federation}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
