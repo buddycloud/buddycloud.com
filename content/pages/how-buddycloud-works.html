@@ -9,7 +9,7 @@
 <meta name="alternate_table" content="true" />
 </head>
 <body>
-	<!--		<h2>Architecture / how it works</h2>
+	<!--		<h1>Architecture / how it works</h1>
 		<p>Answer:</p>
 		<ul>
 			<li>How does this work?</li>
@@ -28,32 +28,29 @@
 			<li>This will save you development time</li>
 			<li>This gives you a great future platform to build on and extend to your own needs</li>
 		</ul>-->
-	<p class="lead">Buddycloud is an ecosystem of components,
-		distributed by design, and built without cutting corners.</p>
-
-	<h2>Distributed design</h2>
-	<p>We've designed Buddycloud so that anyone can run their own
-		Buddycloud server. This means that companies and privacy aware
-		individuals can maintain their own communication cloud behind the
-		firewall and selectively choose what data they wish to share with
-		others.</p>
+	<p class="lead">Buddycloud is an ecosystem of components, distributed by
+		design, and built without cutting corners.</p>
+	<h1>Distributed design</h1>
+	<p>We've designed Buddycloud so that anyone can run their own Buddycloud
+		server. This means that companies and privacy aware individuals can maintain
+		their own communication cloud behind the firewall and selectively choose what
+		data they wish to share with others.</p>
 	<p>
 	<figure>
-		<img src="/theme/img/features/completely distributed design.svg"
-			alt="completely distributed design"/>
-		<figcaption>Buddycloud sites find each other, connect,
-			and share information.</figcaption>
+		<img src="/theme/img/features/completely distributed design.png"
+			alt="completely distributed design" />
+		<figcaption>Buddycloud sites find each other, connect, and share
+			information.</figcaption>
 	</figure>
 	</p>
-	<p>The old way of building communication services was to put all
-		the data into a central core.</p>
-	<p>Buddycloud is a revolutionary new design where anyone can run
-		their own Buddycloud server, and each Buddycloud server will find,
-		connect and share the data you choose with users on other Buddycloud
-		servers.</p>
-	<p>This approach has huge benefits, especially for industries that
-		care about data privacy (Finance, Medicine).</p>
-	<table class='table table-striped table-condensed'>
+	<p>The old way of building communication services was to put all the data
+		into a central core.</p>
+	<p>Buddycloud is a revolutionary new design where anyone can run their own
+		Buddycloud server, and each Buddycloud server will find, connect and share the
+		data you choose with users on other Buddycloud servers.</p>
+	<p>This approach has huge benefits, especially for industries that care
+		about data privacy (Finance, Medicine).</p>
+	<table class='table table-striped  '>
 		<tr>
 			<th></th>
 			<th>Old Design (Twitter, Facebook, G+, App.net)</th>
@@ -80,24 +77,24 @@
 			<td>fully extensible</td>
 		</tr>
 	</table>
-
-	<h3>Buddycloud uses channels</h3>
+	<h2>Buddycloud uses channels</h2>
 	<p>
-		A channel is a collection of activity feeds and value-stores that can
-		have publishers, and subscribers. Buddycloud channels can scale up to
-		millions of followers or scale down to be used as an individual
-		data-store. A channel looks like <em>user@example.com</em>
+		A channel is a collection of activity feeds and value-stores that can have
+		publishers, and subscribers. Buddycloud channels can scale up to millions of
+		followers or scale down to be used as an individual data-store. A channel
+		looks like
+		<code>user@example.com</code>
 	</p>
 	<p>
 	<figure>
-		<img src="/theme/img/architecture/buddycloud-uses-channels.svg"
-			alt="channels intercommunicate"/>
+		<img src="/theme/img/diagrams/buddycloud uses channels.png"
+			alt="buddycloud uses channels" />
 		<figcaption>Buddycloud channels are extensible for any
 			application to use.</figcaption>
 	</figure>
 	</p>
 	<p>channels look like</p>
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped  ">
 		<tr>
 			<th>Channel Address</th>
 			<th>Description</th>
@@ -116,31 +113,33 @@
 		</tr>
 	</table>
 	<br />
-	<h3>channels comprise application nodes</h3>
+	<h2>Channls are a bundle of nodes</h2>
 	<p>
-		Each channel is made up of application nodes. When you follow a
-		channel, for example, <em>user@example.com</em> you are really
-		following a collection of application nodes. (<em>user@example.com/posts
-			user@example.com/public-key user@example.com/geolocation</em> etc). Any
-		updates to a node are pushed out to all followers of the channel. So
-		when you want to build your application on Buddycloud you simply use
-		an existing application node or create a new one for your projects
-		specific needs.
+		Each channel is made up of application nodes. When you follow a channel, for
+		example,
+		<code>user@example.com</code>
+		you are really following a collection of application nodes. (
+		<code>user@example.com/posts</code>
+		,
+		<code>user@example.com/public-key</code>
+		,
+		<code>user@example.com/geolocation</code>
+		, etc). Any updates to a node are pushed out to all followers of the channel.
+		So when you want to build your application on Buddycloud you simply use an
+		existing application node or create a new one for your projects specific
+		needs.
 	</p>
 	<p>
 	<figure>
-		<img
-			src="/theme/img/architecture/channels comprise application nodes.svg"
-			alt="channels intercommunicate"/>
+		<img src="/theme/img/diagrams/channels comprise application nodes.png"
+			alt="channels intercommunicate" />
 		<figcaption>Buddycloud channels are extensible for any
 			application to use.</figcaption>
 	</figure>
 	</p>
-	<p>Each Application node can have different stream formats,
-		different metadata fields and different stream lengths (single item vs
-		infinite items).</p>
-
-	<table class="table table-striped table-condensed">
+	<p>Each Application node can have different stream formats, different
+		metadata fields and different stream lengths (single item vs infinite items).</p>
+	<table class="table table-striped  ">
 		<tr>
 			<th>Channel and Application node name</th>
 			<th>Example</th>
@@ -155,42 +154,42 @@
 		</tr>
 		<tr>
 			<td>user@example.com/public-key</td>
-			<td>A single public key that can be used to encrypt messages to
-				<em>user@example.com</em>
+			<td>A single public key that can be used to encrypt messages to <code>user@example.com</code>
 			</td>
 		</tr>
 		<tr>
 			<td>user@example.com/geolocation</td>
-			<td>An application updates the users location and all followers
-				receive the update</td>
+			<td>An application updates the users location and all followers receive
+				the update</td>
 		</tr>
 		<tr>
 			<td>user@example.com/webrtc</td>
-			<td>An application node used for webRTC call negotiation and
-				setup</td>
+			<td>An application node used for webRTC call negotiation and setup</td>
 		</tr>
 	</table>
 	<br />
-	<h3>Buddycloud channels are synchronized across Buddycloud sites</h3>
+	<h2>Channel synchronisation</h2>
+	<p>Buddycloud channels are synchronized across Buddycloud sites</p>
 	<p>
-		You post data in a channel (for example <em>user@example.com/posts</em>)
-		and the update is synchronised to followers on the local and remote
-		Buddycloud servers. The Buddycloud server will also take care of
-		"catching-up" from remote sites if it has been offline.
+		You post data in a channel (for example
+		<code>user@example.com/posts</code>
+		) and the update is synchronised to followers on the local and remote
+		Buddycloud servers. The Buddycloud server will also take care of "catching-up"
+		from remote sites if it has been offline.
 	</p>
-		<p>
+	<p>
 	<figure>
-		<img
-			src="/theme/img/architecture/channel sync between sites.svg"
-			alt="channels intercommunicate"/>
-		<figcaption>Data posted into one channel is pushed to follower's channels.</figcaption>
+		<img src="/theme/img/diagrams/channel sync between sites.png"
+			alt="channels intercommunicate" />
+		<figcaption>Data posted into one channel is pushed to follower's
+			channels.</figcaption>
 	</figure>
 	</p>
 	<br />
-	<h3>Personal and Topic channels</h3>
+	<h2>Personal and Topic channels</h2>
 	<p>There are two different types of channels. Personal channels and
 		Topic/Group/Application channels.</p>
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped  ">
 		<tr>
 			<th></th>
 			<th>Personal channels</th>
@@ -203,9 +202,9 @@
 		</tr>
 		<tr>
 			<td>Example</td>
-			<td><em>user@example.com</em></td>
-			<td><em>football@example.com</em><br /> <em>cat-pictures@example.com</em><br />
-				<em>{uuid}@example.com</em></td>
+			<td><code>user@example.com</code></td>
+			<td><code>football@example.com</code><br /> <code>cat-pictures@example.com</code><br />
+				<code>{uuid}@example.com</code></td>
 		</tr>
 		<tr>
 			<td>Channels per user</td>
@@ -214,9 +213,9 @@
 		</tr>
 	</table>
 	<br />
-	<h3>Channel privacy</h3>
+	<h2>Channel privacy</h2>
 	<p>Each channel can have different privacy models</p>
-	<table class="table table-striped table-condensed">
+	<table class="table table-striped  ">
 		<tr>
 			<th>Privacy model</th>
 			<th>Typical use</th>
@@ -225,26 +224,25 @@
 		<tr>
 			<td>whitelist</td>
 			<td>New followers to a channel need to be approved</td>
-			<td><em>user@example.com</em></td>
+			<td><code>user@example.com</code></td>
 		</tr>
 		<tr>
 			<td>open</td>
 			<td>A popular channel that serves public information</td>
-			<td><em>news-updates@bbc.co.uk</em></td>
+			<td><code>news-updates@bbc.co.uk</code></td>
 		</tr>
 		<tr>
 			<td>site-wide</td>
-			<td>A company channel where you want to automatically approve
-				anyone on a domain</td>
-			<td><em>team@example.com</em></td>
+			<td>A company channel where you want to automatically approve anyone on
+				a domain</td>
+			<td><code>team@example.com</code></td>
 		</tr>
 	</table>
 	<br />
-	<h3>Channel Roles</h3>
-	<p>Channel followers have have different roles. Most of the time
-		you will not need them but roles can help keep the social aspect
-		flowing.</p>
-	<table class="table table-striped table-condensed">
+	<h2>Channel Roles</h2>
+	<p>Channel followers have have different roles. Most of the time you will
+		not need them but roles can help keep the social aspect flowing.</p>
+	<table class="table table-striped  ">
 		<tr>
 			<th>Role</th>
 			<th>What can they do?</th>
@@ -255,8 +253,8 @@
 		</tr>
 		<tr>
 			<td>Moderator</td>
-			<td>A list of users who can approve new followers to the
-				channel. Curate posts.</td>
+			<td>A list of users who can approve new followers to the channel. Curate
+				posts.</td>
 		</tr>
 		<tr>
 			<td>Follower+post</td>
@@ -271,21 +269,20 @@
 			<td>A list of users that cannot access the channel</td>
 		</tr>
 	</table>
-	<p>Channel owners can set the default role for new followers. For
-		example: new followers will inherit the follower+post role.</p>
+	<p>Channel owners can set the default role for new followers. For example:
+		new followers will inherit the follower+post role.</p>
 	<br />
-	<h2>Buddycloud System Architecture</h2>
+	<h1>Buddycloud System Architecture</h1>
 	<br />
-	<h3>Modular design</h3>
-	<p>Buddycloud is is an ecosystem of servers bound together on a
-		common messaging bus. Each server component runs independently and
-		communications with it's peers locally or with remote sites that also
-		run buddycloud.</p>
-	<p>This component model also helps with scaling. When the time
-		comes to grow, simply add a new component with the same address and
-		requests are load balanced between them.</p>
+	<h2>Modular design</h2>
+	<p>Buddycloud is is an ecosystem of servers bound together on a common
+		messaging bus. Each server component runs independently and communications
+		with it's peers locally or with remote sites that also run buddycloud.</p>
+	<p>This component model also helps with scaling. When the time comes to
+		grow, simply add a new component with the same address and requests are load
+		balanced between them.</p>
 	<br />
-	<h3>Everything is modular / a component</h3>
+	<h2>Everything is modular / a component</h2>
 	<p>We've designed Buddycloud to be extensible. Indeed even the
 		Buddycloud-server is just another component that connects to a common
 		communication bus. This modular design has particular advantages:</p>
@@ -296,10 +293,10 @@
 		<li>Modules can be geographically distributed or hosted remotely</li>
 	</ul>
 	<br />
-	<h3>Authenticate against your existing database of users</h3>
-	<p>Buddycloud has a number of ways to authenticate against your
-		existing database of users.</p>
-	<table class="table table-striped table-condensed">
+	<h2>Authenticate against your existing database of users</h2>
+	<p>Buddycloud has a number of ways to authenticate against your existing
+		database of users.</p>
+	<table class="table table-striped  ">
 		<tr>
 			<th></th>
 			<th>How it works</th>
@@ -312,42 +309,41 @@
 		</tr>
 		<tr>
 			<td>Parallel secret</td>
-			<td>Your application generates a secret to be used with the
-				buddycloud service</td>
+			<td>Your application generates a secret to be used with the buddycloud
+				service</td>
 			<td>New user base or existing user database</td>
 		</tr>
 		<tr>
 			<td>Remote application call</td>
-			<td>Authenticate users according to a pre-existing application
-				API (for example https://your-app.com/auth)</td>
+			<td>Authenticate users according to a pre-existing application API (for
+				example https://your-app.com/auth)</td>
 			<td>New user base or existing user database</td>
 		</tr>
 	</table>
 	<br />
-	<h3>Connection handling</h3>
-	<p>Applications have a number of different ways to connect to
-		Buddycloud.</p>
-	<table class="table table-striped table-condensed">
+	<h2>Connection handling</h2>
+	<p>Applications have a number of different ways to connect to Buddycloud.</p>
+	<table class="table table-striped  ">
 		<tr>
 			<th>Endpoint</th>
 			<th>Useful for</th>
 		</tr>
 		<tr>
-			<td>HTTP API</td>
-			<td>REST Based API</td>
+			<td><a href="/api">HTTP API</a></td>
+			<td>REST Based API - great for mobile apps.</td>
 		</tr>
 		<tr>
-			<td>XMPP-FTW</td>
-			<td>Javascript web development</td>
+			<td><a href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a></td>
+			<td>JavaScript web development</td>
 		</tr>
 		<tr>
-			<td>XMPP</td>
-			<td>XMPP</td>
+			<td><a href="/buddycloud-xep">XMPP</a></td>
+			<td>Native XMPP gateway</td>
 		</tr>
-		<tr>
+		<!-- 	<tr>
 			<td>Libraries</td>
-			<td>buddycloud.js. (other SDKs in development)</td>
-		</tr>
+			<td><a href="http://buddycloudjs.buddycloud.com/">buddycloud.js</a></td>
+		</tr> -->
 	</table>
 </body>
 </html>

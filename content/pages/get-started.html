@@ -5,35 +5,174 @@
 <meta name="save_as" content="get-started.html" />
 <meta name="order" content="4" />
 <meta name="show_as_selected" content="get-started" />
+<meta name="table_of_contents" content="true" />
 </head>
 <body>
-	<h2>Setup</h2>
-	<p>To get setup add the following to your pages:
+	<p>
+		You can access Buddycloud in many ways. This example uses <a
+			href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a>.
+		This page will show you how to do a few of the basic operations in Buddycloud.
+		XMPP-FTW is a great way to build realtime javascript apps. To Find out more
+		check the <a href="https://xmpp-ftw.jit.su/demo">Demo</a>.
+	</p>
+	<p>
+		For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
+			REST API</a>.
+	</p>
+	<h1>Get Setup</h1>
 	<div class="bs-example">
+	  <p>Simply add the following to your pages:</p>
+	</div>
+	<div class="highlight">
 		<pre>
-<code class="html">...
-&lt;script type="text/javascript" src="/scripts/primus.js"&gt;
-and???
-...</code>
+<code class="html">&lt;script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"&gt;
+</code>
 </pre>
 	</div>
-	<h2>Demo</h2>
-	<p>You can play with buddycloud using an anonymous connection here. Firstly
-		we'll automatically log you in an anonymous login and register with the
-		server.</p>
-	<h3>Status</h3>
+	<div class="bs-example">
+	<p>And call</p>
+    </div>
+    <div class="highlight">
+    	<pre>
+<code class="javascript">socket = new Primus('https://xmpp-ftw.jit.su')
+socket.on('open', function(data){
+  //Ready to go here
+})</code>
+	    </pre>
+	</div>
+	<h1>Create a user</h1>
+	<div class="bs-example">
+	  <p>Log in as the user (create it if it doesn't exist)</p>
+	</div>
+	<div class="highlight">
+	  <pre>
+<code class="javascript">socket.send(
+  'xmpp.login',
+  {
+    "to": "buddycloud.org"
+    "jid": "romeo@buddycloud.org",
+    "password": "juliet-forever",
+    "register": true
+  }
+)</code>
+	</pre>
+	</div>
+	<div class="bs-example">
+	  <p>Now figure out where the buddycloud server for this domain is</p>
+	</div>
+	<div class="highlight">
+		<pre>
+<code class="javascript">socket.send(
+  'xmpp.buddycloud.discover',
+  {},
+  function(error, address) { console.log(error, address) }
+)</code>
+		</pre>
+	</div>
+	<div class="bs-example">
+	<p>Finally create their Buddycloud account</p>
+	</div>
+	<div class="highlight">
+		<pre>
+<code class="javascript">socket.send(
+  'xmpp.buddycloud.register',
+  {
+    "to": "channels.buddycloud.org" /* this is the discovered address */
+  },
+  function(error, data) { console.log(error, data) }
+)</code>
+		</pre>
+	</div>
+	<h1>Create a topic channel</h1>
+	<p>Topic channels have multiple users that can follow and post to them</p>
+	<h2>Create</h2>
+	<p>Topic channels are shared channels that others can post to.</p>
+	<div class="bs-example">
+		<p>This creates a channel that other users can post to.</p>
+	</div>
+	<div class="highlight">
+		<pre>
+<code class="javascript">socket.send(
+  'xmpp.buddycloud.create',
+  {
+    "to": "channels.buddycloud.org",
+    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "options": [
+      { var: 'pubsub#access_model', value: 'open' }, 
+      { var: 'buddycloud#channel_type', value: 'topic' }
+    ]  
+  },
+  function(error, data) { console.log(error, data) }
+)</code>
+</pre>
+	</div>
+	<h2>Post content</h2>
+	<div class="bs-example">
+		<p>
+			This posts a message to
+			<code>my-little-topic-channel</code>
+			.
+		</p>
+	</div>
+	<div class="highlight">
+		<pre>
+<code class="javascript">socket.send(
+  'xmpp.buddycloud.publish',
+  {
+    "to": "channels.buddycloud.org",
+    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "content": {
+      "atom": {
+        "content": "First Post!"
+      },
+      "in-reply-to": { "ref": "1234-5678-9087-6543" }
+    }
+  },
+  function(error, data) { console.log(error, data) }
+)</code>
+</pre>
+	</div>
+	<h1>Fetch Posts</h1>
+	<p>Pre-populate your app with existing posts. New posts will arrive
+		automatically</p>
+	<div class="bs-example">
+		<p>
+			Fetch 10 new posts.
+			<code>rsm</code>
+			(<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result
+				set management</a>) lets you page through results.
+		</p>
+	</div>
+	<div class="highlight">
+		<pre>
+<code class="javascript">socket.send(
+  'xmpp.buddycloud.items.recent',
+  {
+    "to": "channels.buddycloud.org", 
+    "max": 10,
+    "since": "1970-01-01 00:00:00"
+  },
+  function(error, data, rsm) { console.log(error, data, rsm) }
+)</code>
+</pre>
+	</div>
+	<h1>Realtime events</h1>
+	<div class="bs-example">
+	  <p>Tell the server that you are online and want to start receiving new
+	  	realtime events</p>
+	</div>
+	<div class="highlight">
+	  <pre>
+	    <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
+	  </pre>
+	</div>
+		<h1>Demo</h1>
+	<p>You can play with Buddycloud using XMPP-FTW.</p>
+	<p>
+		<a class="btn btn-primary btn-lg active" href="https://xmpp-ftw.jit.su/demo">Buddycloud Demo</a>
+	</p>
+	<!-- 
+	<h1>Status</h1>
 	<ul class="status"></ul>
-	<!--
- 
-We need to show:
-- how to create a user with password
-- how to log-in with this user?
-- get ~5 posts from topic channel (perhaps use team@topics.buddycloud.org)
-- create a topic channel
-- set their new topic channel to open
-- post to their new topic channel
- 
- -->
-	
-</body>
+	 --></body>
 </html>
