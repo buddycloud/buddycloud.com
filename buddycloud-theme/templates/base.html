@@ -87,7 +87,19 @@
 <script>
 	$(".js_sequence_diagram").perfectScrollbar();
 	$(".table-responsive").perfectScrollbar();
-	hljs.initHighlightingOnLoad();
+//	hljs.initHighlightingOnLoad();
+	$(document).ready(function() {
+		$('pre:not(pre:has(code))').each(function(i, e){
+			hljs.highlightBlock(e);
+			console.log("!code:");
+			console.log(e);
+		});
+		$('pre code').each(function(i, e){
+			hljs.highlightBlock(e);
+			console.log("code:");
+			console.log(e);
+		});
+	});
 </script>
 {% block morescripts %}
 {% endblock %}

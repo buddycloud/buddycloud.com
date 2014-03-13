@@ -1,7 +1,12 @@
+/*Tweaks needed to make it work alongside with codehilite md extension*/
+.highlight .hljs span {
+	color: #61DFF5;
+}
+
 /* Comment */
 .hljs-comment,
 .hljs-title {
-  color: #969896;
+  color: #969896 !important;
 }
 
 /* Buddycloud Light Grey */
@@ -14,7 +19,7 @@
 .hljs-constant,
 .ruby .hljs-class .hljs-title,
 .css .hljs-rules .hljs-attribute {
-  color: #E5E9EF;
+  color: #E5E9EF !important;
 }
 
 /* Buddycloud Grey */
@@ -24,7 +29,7 @@
 .hljs-header,
 .ruby .hljs-symbol,
 .xml .hljs-cdata {
-  color: #C4C8CD;
+  color: #C4C8CD !important;
 }
 
 /* Buddycloud Green-Blue */
@@ -51,9 +56,10 @@
 .coffeescript .hljs-title,
 .hljs-keyword,
 .javascript .hljs-function {
-  color: #2DAEBF;
+  color: #2DAEBF !important;
 }
 
+.highlight .hljs,
 .highlight pre .hljs {
   display: block;
   background: transparent;
