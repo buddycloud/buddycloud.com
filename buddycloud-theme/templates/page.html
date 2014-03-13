@@ -8,7 +8,7 @@
 {% block title %}{{ page.title }}{% endblock %}
 {% block table_of_contents %}
     {% if page.table_of_contents|default("false") == "true" %}
-    <div class="bs-sidebar hidden-print affix-top" role="complementary">
+    <div class="bs-sidebar hidden-print affix-top" role="complementary" style="width:auto;">
 	{{ toc_info|create_toc }}
     </div>
     {% endif %}
