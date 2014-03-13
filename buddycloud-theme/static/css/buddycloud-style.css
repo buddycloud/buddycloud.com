@@ -770,3 +770,7 @@ path[class='seq-diag-primary'], path[class='seq-diag-secondary'] {
 .seq-diag-link tspan, .seq-diag-note tspan {
     font-family: OpenSansBoldItalic;
 }
+
+body {
+	padding-bottom: 35px;
+}
