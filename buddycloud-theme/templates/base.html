@@ -63,6 +63,13 @@
 {% endblock %}
 </div>
 </div>
+{% if active_page != "index" %}
+<div id="footer">
+	<div class="container">
+		<p class="text-muted pull-right">Built with love and a text editor.</p>
+	</div>
+</div>
+{% endif %}
 </div>
 {% endif %}
 <script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"></script>
