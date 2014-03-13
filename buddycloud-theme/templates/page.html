@@ -15,7 +15,7 @@
 {% endblock %}
 {% block content %}
     <div class="bs-docs-section">
-	<h1 class="page-header">{{ page.header | default(page.title) }}</h1>
+	<h1 class="page-header">{{ page.header|default(page.title) }}</h1>
     </div>
     <div class="bs-docs-section">
 	{% if page.table_of_contents|default("false") == "true" %}
