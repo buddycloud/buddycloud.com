@@ -17,13 +17,13 @@ class TableOfContents:
 			hook = hook[:-1]
 
 		hook_base = hook
+		hook = hook_base + "_"
 		hook_id = 2
 		while (hook in TableOfContents.hooks_taken):
 
 			hook = hook_base + "_" + str(hook_id)
 			hook_id += 1
 
-		print "producing", hook
 		TableOfContents.hooks_taken.append(hook)
 		return hook
 
@@ -38,18 +38,15 @@ class TableOfContents:
 			hook = hook[1:]
 		if ( hook.endswith("_") ):
 			hook = hook[:-1]
-		
+	
+		hook += "_"	
 		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
 		if hook[:hook.rfind("_")] in stub_hooks:
 		
 			hook_at = stub_hooks.index(hook[:hook.rfind("_")])
-			print "@", hook_at
-			hook = TableOfContents.hooks_taken[hook_at]
-			print "$", hook
 		
 		TableOfContents.hooks_taken.remove(hook)
-		print "consuming", hook
 		return hook
 
 	@staticmethod
@@ -69,7 +66,6 @@ class TableOfContents:
 					'text' : element.text,
 					'hook' : TableOfContents.produce_new_hook(element.text)
 				})
-				print "produced: ", toc_info[-1]['hook']
 
 			for child in element:
 				process(child)
@@ -122,7 +118,6 @@ class TableOfContents:
 			if ( element.tag == 'h1'
 			  or element.tag == 'h2' ):
 				element.attrib["id"] = TableOfContents.consume_existing_hook(element.text)
-				print "consumed: ", element.attrib['id']
 
 			for child in element:
 				process(child)
