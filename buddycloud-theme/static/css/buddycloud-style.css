@@ -293,12 +293,13 @@ code {
 	font-family: 'Source Code Pro';
 	font-weight: 500;
 	font-size: 0.85em;
-	color: rgba(255,255,255,1);
+//	color: hsl(0,0%,70%);
 	padding: 1em 1em .5em 1em;
 }
 
 .highlight pre code {
-	color: hsl(0,0%,70%);
+//	color: hsl(0,0%,70%);
+	color: transparent;
 }
 
 .highlight pre .nt {
