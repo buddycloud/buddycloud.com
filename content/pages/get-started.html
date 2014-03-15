@@ -107,8 +107,7 @@ socket.on('open', function(data){
 	<h2>Post content</h2>
 	<div class="bs-example">
 		<p>
-			This posts a message to
-			<code>my-little-topic-channel</code>
+			This posts a message to the buddycloud lounge
 			.
 		</p>
 	</div>
@@ -117,8 +116,7 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.buddycloud.publish',
   {
-    "to": "channels.buddycloud.org",
-    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "node": "/user/lounge@topics.buddycloud.org/posts",
     "content": {
       "atom": {
         "content": "First Post!"
