@@ -21,7 +21,7 @@
 	</p>
 	<h1>Get Setup</h1>
 	<div class="bs-example">
-	  <p>Simply add the following to your pages:</p>
+		<p>Simply add the following to your pages:</p>
 	</div>
 	<div class="highlight">
 		<pre>
@@ -30,10 +30,10 @@
 </pre>
 	</div>
 	<div class="bs-example">
-	<p>And call</p>
-    </div>
-    <div class="highlight">
-    	<pre>
+		<p>And call</p>
+	</div>
+	<div class="highlight">
+		<pre>
 <code class="javascript">socket = new Primus('https://xmpp-ftw.jit.su')
 socket.on('open', function(data){
   //Ready to go here
@@ -42,10 +42,10 @@ socket.on('open', function(data){
 	</div>
 	<h1>Create a user</h1>
 	<div class="bs-example">
-	  <p>Log in as the user (create it if it doesn't exist)</p>
+		<p>Log in as the user (create it if it doesn't exist)</p>
 	</div>
 	<div class="highlight">
-	  <pre>
+		<pre>
 <code class="javascript">socket.send(
   'xmpp.login',
   {
@@ -57,7 +57,7 @@ socket.on('open', function(data){
 	</pre>
 	</div>
 	<div class="bs-example">
-	  <p>Now figure out where the buddycloud server for this domain is</p>
+		<p>Now figure out where the buddycloud server for this domain is</p>
 	</div>
 	<div class="highlight">
 		<pre>
@@ -69,7 +69,7 @@ socket.on('open', function(data){
 		</pre>
 	</div>
 	<div class="bs-example">
-	<p>Finally create their Buddycloud account</p>
+		<p>Finally create their Buddycloud account</p>
 	</div>
 	<div class="highlight">
 		<pre>
@@ -105,7 +105,8 @@ socket.on('open', function(data){
 	<h2>Post content</h2>
 	<div class="bs-example">
 		<p>
-			This posts a message to the <code>my-little-topic-channel</code>
+			This posts a message to the
+			<code>my-little-topic-channel</code>
 			.
 		</p>
 	</div>
@@ -125,8 +126,13 @@ socket.on('open', function(data){
 )</code>
 </pre>
 	</div>
-        <p>On success the <code>data</code> argument will include an object iwith property <code>id</code> containing the ID of the new post.</p>
-
+	<p>
+		On success the
+		<code>data</code>
+		argument will include an object iwith property
+		<code>id</code>
+		containing the ID of the new post.
+	</p>
 	<h1>Fetch Posts</h1>
 	<p>Pre-populate your app with existing posts. New posts will arrive
 		automatically</p>
@@ -152,21 +158,23 @@ socket.on('open', function(data){
 	</div>
 	<h1>Realtime events</h1>
 	<div class="bs-example">
-	  <p>Tell the server that you are online and want to start receiving new
-	  	realtime events</p>
+		<p>Tell the server that you are online and want to start receiving new
+			realtime events</p>
 	</div>
 	<div class="highlight">
-	  <pre>
+		<pre>
 	    <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
 	  </pre>
 	</div>
-		<h1>Demo</h1>
+	<h1>Demo</h1>
 	<p>You can play with Buddycloud using XMPP-FTW.</p>
 	<p>
-		<a class="btn btn-primary btn-lg active" href="https://xmpp-ftw.jit.su/demo">Buddycloud Demo</a>
+		<a class="btn btn-primary btn-lg active" href="https://xmpp-ftw.jit.su/demo">Buddycloud
+			Demo</a>
 	</p>
 	<!-- 
 	<h1>Status</h1>
 	<ul class="status"></ul>
-	 --></body>
+	 -->
+</body>
 </html>

@@ -1,130 +1,13 @@
 <html>
 <head>
-<title>How it works</title>
-<meta name="url" content="how-buddycloud-works" />
-<meta name="save_as" content="how-buddycloud-works.html" />
-<meta name="order" content="5" />
-<meta name="header" content="How it works" />
-<meta name="table_of_contents" content="true" />
+<title>Channels</title>
+<meta name="url" content="channels" />
+<meta name="save_as" content="channels.html" />
+<meta name="order" content="9" />
+<meta name="show_in_top_menu" content="false" />
+<meta name="top_menu_name" content="channels" />
 </head>
 <body>
-	<h2>TL;DR</h2>
-	<p class="lead">The simplest way to describe Buddycloud is that there is a
-		nice API that lets you get and put and delete and update content. This content
-		is automatically pushed to and shared with users on other sites running
-		Buddycloud.</p>
-	<figure>
-		<img src="/theme/img/features/architecture diagram.png"
-			alt="Buddycloud Architecture" />
-	</figure>
-	<p>What could this content be: This content is ATOM formatted posts, it's
-		chat messages, it's any kind of file, likes, anything that helps communication
-		and if it's not there, adding new content handlers is easy. Buddycloud has a
-		complete set of calls that are accessible through three different APIs.</p>
-	<h2>APIs</h2>
-	<ul>
-		<li>Rest based API Buddycloud JS XMPP-FTW in production: stanza.io
-			plugin.</li>
-	</ul>
-	<p>
-		All the <a href="/software#APIs">APIs</a> let you shove data into and pull
-		data out of Buddycloud, synchronise clients with Buddycloud in an easy to
-		understand way.
-	</p>
-	<h2>What is a channel?</h2>
-	<p>Where is the API sending the DATA?</p>
-	<p>The data is going to different services. The most common one is the
-		Buddycloud Channel server. To describe that we need to explain what a channel
-		is. A channel is much like your Facebook feed or Twitter stream. You post
-		content about what you are doing. Or status updates, or your Geolocation
-		client posts latitude and longitude updates, it could be where you post your
-		public key. Basically it's a way to push data to people that are interested in
-		it and have them comment on it.</p>
-	<p>You could also use a channel to programmatically share states between
-		applications. For example your game could synchronise state between clients
-		and players by posting to an application specific channel.</p>
-	<h2>Buddycloud services</h2>
-	<p>The Buddycloud server is the most common service in Buddycloud. But
-		there are other services too. For example:
-	<ul>
-		<li><em>the media server</em>, lets you upload media and share it with
-			the followers of a channel or the whole wide world.</li>
-		<li>The <em>push notification service</em> tells your followers, via
-			mobile notifications and/or email about new content.
-		</li>
-		<li>There's a service that helps you connect with friends from other
-			social networks called the <em>friend finder</em> service.
-		</li>
-		<li>There's a <em>content recommendations</em> engine that uses scalable
-			machine learning to suggest similar content ("if you liked this content,
-			perhaps you would also like ... If you like these channels, perhaps you would
-			like these similar channels).
-		</li>
-	</ul>
-	<p>And a growing range of new services.</p>
-	<figure>
-		<img src="/theme/img/features/full stack.png" alt="Buddycloud Components" />
-	</figure>
-	<h2>Distributed design</h2>
-	<p>How do all these services intercommunicate?</p>
-	<p>The magic about Buddycloud: it's completely distributed. For you this
-		means that you can connect to, find, share and exchange updates with other
-		Buddycloud users on your own Buddycloud server, or other sites also running
-		Buddycloud.</p>
-	<h2>Network transparent</h2>
-	<p>
-		Imagine the paradigm where Gmail users can only email Gmail users, Yahoo mail
-		users can only email Yahoo users. Hotmail only Hotmail users. You expect to be
-		able to email users on other sites. And yet this is how existing social
-		networks [don't] inter-operate. Buddycloud blows this notion apart by
-		introducing complete network transparency. Users on any Buddycloud site can
-		contact users on any other site. <em>This is revolutionary!</em>
-	</p>
-	<figure>
-		<img src="/theme/img/features/buddycloud uses channels.png"
-			alt="Site interconnectedness" />
-	</figure>
-	<h2>Synchronising</h2>
-	<p>All this network transparency means that it's now possible to build
-		social services where one organisation's users can connect share and update
-		information with other organisations'.</p>
-	<p>The Buddycloud service takes care of this magically behind the scenes:
-		making sure that all the right content is in the right people's channels on
-		the right domains, with the right permissions, in realtime.</p>
-	<figure>
-		<img src="/theme/img/features/federation.png"
-			alt="Updates are pushed automatically" />
-	</figure>
-	<h2>Publish subscribe</h2>
-	<p>So let's drill down into what a channel actually is.</p>
-	<p>A channel is a collection of publish-subscribe nodes. Each channel has a
-		set of followers, who receive updates when new posts are created. For example,
-		when you change your status node to "I'm happy", all your followers are pushed
-		an update if they are online.</p>
-	<figure>
-		<img src="/theme/img/features/channels comprise application nodes.png"
-			alt="Buddycloud channels are built up from application nodes" />
-	</figure>
-	<h2>Content types</h2>
-	<p>And this information can really be any type of information that you can
-		define: For example Developers use Buddycloud to publish activity streams
-		(similar to Twitter or Facebook), documents, public keys (to be able to
-		exchange encrypted messages), votes, likes and incident reports.</p>
-	<h2>Next step</h2>
-	<p>Check out the quick start page and create your Buddycloud app.</p>
-	<h2>Distributed design</h2>
-	<p>We've designed Buddycloud so that anyone can run their own Buddycloud
-		server. This means that companies and privacy aware individuals can maintain
-		their own communication cloud behind the firewall and selectively choose what
-		data they wish to share with others.</p>
-	<figure>
-		<img src="/theme/img/features/completely distributed design.png"
-			alt="completely distributed design" />
-		<figcaption>Buddycloud sites find each other, connect, and share
-			information.</figcaption>
-	</figure>
-	<p>The old way of building communication services was to put all the data
-		into a central core.</p>
 	<p>Buddycloud is a revolutionary new design where anyone can run their own
 		Buddycloud server, and each Buddycloud server will find, connect and share the
 		data you choose with users on other Buddycloud servers.</p>
@@ -347,26 +230,6 @@
 	</table>
 	<p>Channel owners can set the default role for new followers. For example:
 		new followers will inherit the follower+post role.</p>
-	<br />
-	<h2>Buddycloud System Architecture</h2>
-	<h2>Modular design</h2>
-	<p>Buddycloud is is an ecosystem of servers bound together on a common
-		messaging bus. Each server component runs independently and communications
-		with it's peers locally or with remote sites that also run buddycloud.</p>
-	<p>This component model also helps with scaling. When the time comes to
-		grow, simply add a new component with the same address and requests are load
-		balanced between them.</p>
-	<h2>Everything is modular / a component</h2>
-	<p>We've designed Buddycloud to be extensible. Indeed even the
-		Buddycloud-server is just another component that connects to a common
-		communication bus. This modular design has particular advantages:</p>
-	<ul>
-		<li>Easily add new features by just adding new modules</li>
-		<li>Independently scale modules</li>
-		<li>Security is compartmentalized</li>
-		<li>Modules can be geographically distributed or hosted remotely</li>
-	</ul>
-	<br />
 	<h2>Authenticate against your existing database of users</h2>
 	<p>Buddycloud has a number of ways to authenticate against your existing
 		database of users.</p>

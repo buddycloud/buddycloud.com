@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'buddycloud team'
-SITENAME = u'buddycloud'
-SITEURL = ''
+AUTHOR = u'Buddycloud team'
+SITENAME = u'Buddycloud'
+SITEURL = 'http://buddycloud.com'
 
 TIMEZONE = 'Europe/Berlin'
 

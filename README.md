@@ -1,15 +1,5 @@
 ## buddycloud website
 
-Our static-site-generator should have the following features:
-
-* Pretty URLS
-* Support for Markdown (check)
-* Google sitemap
-* Active menus
-* Publish to github pages (check)
-* Quick Bootstrap (check)
-* Live Preview (check)
-
 ### Requirements
 
 * Pelican 3.3
