@@ -28,7 +28,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-03-11 14:34:57 +0000</string>
+	<string>2014-03-11 19:30:43 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -14953,7 +14953,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{345, 85}, {110, 40}}</string>
+					<string>{{405, 85}, {110, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15036,7 +15036,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{405, 85}, {110, 40}}</string>
+					<string>{{345, 85}, {110, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
