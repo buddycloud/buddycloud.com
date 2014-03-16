@@ -25,7 +25,7 @@
 	</div>
 	<div class="highlight">
 		<pre>
-<code class="html">&lt;script src='https://xmpp-ftw.jit.su/scripts/primus.js'&gt;
+<code class="html">&lt;script src='https://xmpp-ftw.jit.su/scripts/primus.js'&gt;&lt;/script&gt;
 </code>
 </pre>
 	</div>
@@ -49,7 +49,6 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.login',
   {
-    "to": "buddycloud.org"
     "jid": "romeo@buddycloud.org",
     "password": "juliet-forever",
     "register": true
@@ -76,9 +75,7 @@ socket.on('open', function(data){
 		<pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.register',
-  {
-    "to": "channels.buddycloud.org" /* this is the discovered address */
-  },
+  {},
   function(error, data) { console.log(error, data) }
 )</code>
 		</pre>
@@ -95,8 +92,7 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.buddycloud.create',
   {
-    "to": "channels.buddycloud.org",
-    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
     "options": [
       { var: 'pubsub#access_model', value: 'open' }, 
       { var: 'buddycloud#channel_type', value: 'topic' }
@@ -109,8 +105,7 @@ socket.on('open', function(data){
 	<h2>Post content</h2>
 	<div class="bs-example">
 		<p>
-			This posts a message to
-			<code>my-little-topic-channel</code>
+			This posts a message to the <code>my-little-topic-channel</code>
 			.
 		</p>
 	</div>
@@ -119,19 +114,19 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.buddycloud.publish',
   {
-    "to": "channels.buddycloud.org",
-    "node": "/user/my-little-topic-channel@buddycloud.org/posts",
+    "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
     "content": {
       "atom": {
-        "content": "First Post!"
-      },
-      "in-reply-to": { "ref": "1234-5678-9087-6543" }
+        "content": "Hello from a new developer!"
+      }
     }
   },
   function(error, data) { console.log(error, data) }
 )</code>
 </pre>
 	</div>
+        <p>On success the <code>data</code> argument will include an object iwith property <code>id</code> containing the ID of the new post.</p>
+
 	<h1>Fetch Posts</h1>
 	<p>Pre-populate your app with existing posts. New posts will arrive
 		automatically</p>
@@ -148,7 +143,6 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.buddycloud.items.recent',
   {
-    "to": "channels.buddycloud.org", 
     "max": 10,
     "since": "1970-01-01 00:00:00"
   },
