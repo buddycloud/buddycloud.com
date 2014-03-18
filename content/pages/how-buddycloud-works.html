@@ -32,14 +32,20 @@
 			alt="Buddycloud Architecture" />
 	</figure>
 	<h2>APIs</h2>
-	<ul>
-		<li>Rest based API Buddycloud JS XMPP-FTW in production: stanza.io
-			plug-in.</li>
-	</ul>
 	<p>
 		All the <a href="/software#APIs">APIs</a> let you shove data into and pull
 		data out of Buddycloud, synchronise clients with Buddycloud in an easy to
 		understand way.
+	</p>
+	<p>Buddycloud is an open protocol with different API implementations
+	<ul>
+		<li>Rest based API</li>
+		<li>Buddycloud.JS (Javascript against a REST API)</li>
+		<li>XMPP-FTW (pure Javascript)</li>
+		<li>Stanza.io plug-in.(in development)</li>
+	</ul>
+	APIs are covered in more detail on the
+	<a href="/software">Buddycloud Software</a> page.
 	</p>
 	<h2>Buddycloud Channels</h2>
 	<blockquote>Where is the API sending the DATA?</blockquote>
@@ -53,7 +59,7 @@
 	<p>You could also use a channel to programmatically share states between
 		applications. For example your game could synchronise state between clients
 		and players by posting to an application specific channel.</p>
-	<h2>Buddycloud services</h2>
+	<h2>Buddycloud Services</h2>
 	<p>The Buddycloud server is the most common service in Buddycloud. But
 		there are other services too. For example:</p>
 	<ul>
@@ -73,19 +79,21 @@
 	</ul>
 	<p>And a growing range of new services.</p>
 	<figure>
-		<img class="center-block" src="/theme/img/diagrams/full stack.png" alt="Buddycloud Components" />
+		<img class="center-block" src="/theme/img/diagrams/full stack.png"
+			alt="Buddycloud Components" />
 	</figure>
-	<h2>Distributed design</h2>
+	<h2>Distributed Design</h2>
 	<blockquote>How do all these services intercommunicate?</blockquote>
 	<p>The magic about Buddycloud: it's completely distributed. For you this
 		means that you can connect to, find, share and exchange updates with other
 		Buddycloud users on your own Buddycloud server, or other sites also running
 		Buddycloud.</p>
 	<figure>
-		<img class="center-block" src="/theme/img/diagrams/completely distributed design.png"
+		<img class="center-block"
+			src="/theme/img/diagrams/completely distributed design.png"
 			alt="Distributed like hell!" />
 	</figure>
-	<h2>Network transparent</h2>
+	<h2>Network Transparency</h2>
 	<p>
 		Imagine the paradigm where Gmail users can only email Gmail users, Yahoo mail
 		users can only email Yahoo users. Hotmail only Hotmail users. You expect to be
@@ -95,10 +103,11 @@
 		contact users on any other site. <em>This is revolutionary!</em>
 	</p>
 	<figure>
-		<img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png"
+		<img class="center-block"
+			src="/theme/img/diagrams/buddycloud uses channels.png"
 			alt="Site interconnectedness" />
 	</figure>
-	<h2>Synchronising</h2>
+	<h2>Synchronising Data</h2>
 	<p>All this network transparency means that it's now possible to build
 		social services where one organisation's users can connect share and update
 		information with other organisations'.</p>
@@ -109,22 +118,29 @@
 		<img class="center-block" src="/theme/img/diagrams/federation.png"
 			alt="Updates are pushed automatically" />
 	</figure>
-	<h2>Publish subscribe</h2>
+	<h2>Publish-Subscribe</h2>
 	<blockquote>So what is a channel really?</blockquote>
 	<p>A channel is a collection of publish-subscribe nodes. Each channel has a
 		set of followers, who receive updates when new posts are created. For example,
 		when you change your status node to "I'm happy", all your followers are pushed
 		an update if they are online.</p>
 	<figure>
-		<img class="center-block" src="/theme/img/diagrams/channels comprise application nodes.png"
+		<img class="center-block"
+			src="/theme/img/diagrams/channels comprise application nodes.png"
 			alt="Buddycloud channels are built up from application nodes" />
 	</figure>
-	<h2>Content types</h2>
+	<h2>Content Types</h2>
 	<p>And this information can really be any type of information that you can
 		define: For example Developers use Buddycloud to publish activity streams
 		(similar to Twitter or Facebook), documents, public keys (to be able to
 		exchange encrypted messages), votes, likes and incident reports.</p>
-	<h2>Next step</h2>
-	<p>Check out the quick start page and create your Buddycloud app.</p>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="center-block">
+				<p>Start adding communication and collaboration into your app now.</p>
+				<a class="btn center-block" href="/get-started">Get Started</a>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
