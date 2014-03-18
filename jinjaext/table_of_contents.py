@@ -50,10 +50,31 @@ class TableOfContents:
 		return hook
 
 	@staticmethod
-	def extractTableOfContentsInfo(content):
+	def extractTableOfContentsInfo(content, active_page):
 
 		hooks_taken = []
-		root = ElementTree.fromstring("<root>"+content+"</root>")
+		
+		try:
+			root = ElementTree.fromstring("<root>"+content+"</root>")
+		except ElementTree.ParseError as e:
+			print "Error while extracting ToC from content"
+			print "Could not parse page: %s" % active_page
+			print "The problem: " + str(e)
+
+			base = str(e).replace("mismatched tag: line", "")
+			line = int(base[:base.find(",")].strip())
+			column = int(base[base.find(", column")+8:].strip())
+
+			content = "<root>"+content+"</root>"
+			print ">>>\t%s" % (content.split("\n")[line-1])
+			print "   \t" + (" " * (column-2)) + "^"
+
+			return None
+		except Exception as e:
+			print "Error while extracting ToC from content"
+			print "Something unexpected happened while parsing page: %s" % active_page
+			print "The problem: " + str(e)
+			return None
 
 		toc_info = []
 
@@ -75,6 +96,9 @@ class TableOfContents:
 
 	@staticmethod
 	def createTableOfContents(toc_info):
+
+		if ( toc_info == None ):
+			return ""
 
 		if ( len(toc_info) == 0 ):
 			toc_html = ""
@@ -109,9 +133,23 @@ class TableOfContents:
 			return toc_html
 	
 	@staticmethod
-	def addTableOfContentsHooks(content, toc_info):
+	def addTableOfContentsHooks(content, toc_info, active_page):
 
-		root = ElementTree.fromstring("<root>"+content+"</root>")
+		if ( toc_info == None ):
+			return content
+
+		try:
+			root = ElementTree.fromstring("<root>"+content+"</root>")
+		except ElementTree.ParseError as e:
+			print "Error while adding ToC hooks to content"
+			print "Could not parse page: %s" % active_page
+			print "The problem: " + str(e)
+			return content
+		except Exception as e:
+			print "Error while adding ToC hooks to content"
+			print "Something unexpected happened while parsing page: %s" % active_page
+			print "The problem: " + str(e)
+			return content
 
 		def process(element):
 

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set active_page = page.show_as_selected|default(page.slug) %}
 {% if page.table_of_contents|default("false") == "true" %}
-	{% set toc_info = page.content|extract_toc_info %}
+	{% set toc_info = page.content|extract_toc_info(active_page) %}
 {% endif %}
 {% block morestyles %}
 {% endblock %}
@@ -19,7 +19,7 @@
     </div>
     <div class="bs-docs-section">
 	{% if page.table_of_contents|default("false") == "true" %}
-		{{ page.content|add_toc_hooks(toc_info) }}
+		{{ page.content|add_toc_hooks(toc_info, active_page) }}
 	{% else %}
 		{{ page.content }}
 	{% endif %}
