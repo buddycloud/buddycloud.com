@@ -1,4 +1,5 @@
 from xml.etree import ElementTree
+from string import punctuation
 
 class TableOfContents:
 
@@ -11,7 +12,7 @@ class TableOfContents:
 		hook = hook.replace("/:", ":").replace("/", ":")
 		hook = hook.replace(":", "_")
 
-		for token in "?!,.;":
+		for token in punctuation.replace("_", ""):
 			hook = hook.replace(token, "")
 
 		if ( hook.startswith("_") ):
