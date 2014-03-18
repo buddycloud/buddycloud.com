@@ -5,18 +5,26 @@ class TableOfContents:
 	hooks_taken = []
 
 	@staticmethod
-	def produce_new_hook(text):
+	def parse_hook_from_text(text):
 
 		hook = text.strip().replace(" ", "_").lower()
 		hook = hook.replace("/:", ":").replace("/", ":")
 		hook = hook.replace(":", "_")
-		hook = hook.replace(",", "").replace(".", "")
+
+		for token in "?!,.;":
+			hook = hook.replace(token, "")
+
 		if ( hook.startswith("_") ):
 			hook = hook[1:]
 		if ( hook.endswith("_") ):
 			hook = hook[:-1]
 
-		hook_base = hook
+		return hook
+
+	@staticmethod
+	def produce_new_hook(text):
+
+		hook_base = TableOfContents.parse_hook_from_text(text)
 		hook = hook_base + "_"
 		hook_id = 2
 		while (hook in TableOfContents.hooks_taken):
@@ -30,15 +38,7 @@ class TableOfContents:
 	@staticmethod
 	def consume_existing_hook(text):
 
-		hook = text.strip().replace(" ", "_").lower()
-		hook = hook.replace("/:", ":").replace("/", ":")
-		hook = hook.replace(":", "_")
-		hook = hook.replace(",", "").replace(".", "")
-		if ( hook.startswith("_") ):
-			hook = hook[1:]
-		if ( hook.endswith("_") ):
-			hook = hook[:-1]
-	
+		hook = TableOfContents.parse_hook_from_text(text)
 		hook += "_"	
 		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
