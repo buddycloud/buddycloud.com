@@ -19,6 +19,7 @@ body {
 	background-repeat: no-repeat;
 	color: #fff;
 	margin-bottom: 0;
+	position: relative;
 }
 
 .jumbotron h1 {
@@ -34,20 +35,16 @@ body {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Description */
 
-#description {
-	position: absolute;
-	top: 35em;
+.container-description {
 	background-color: hsla(207,15%,10%,.7);
-	margin: 0;
+	position: absolute;
+	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+#description {
 	padding: 1em;
-	margin-bottom: -5em;
-	-webkit-transform: translate(0,-100%);
-	-moz-transform: translate(0,-100%);
-	-ms-transform: translate(0,-100%);
-	-o-transform: translate(0,-100%);
-	transform: translate(0,-100%);
 }
 
 #description p {
@@ -90,8 +87,11 @@ body {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Features */
 
-#features {
+.background-features {
 	background-color: #2DAEBF;
+}
+
+#features {
 	color: #fff;
 	font-weight: 400;
 	padding-bottom: 2em;
@@ -115,8 +115,11 @@ body {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Friends */
 
-#friends {
+.background-friends {
 	background-color: #E5E9EF;
+}
+
+#friends {
 	color: #666;
 	padding: 1em 1em 2em 1em;
 }
@@ -140,8 +143,11 @@ body {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Contact */
 
-#contact {
+.background-contact {
 	background-color: #38434C;
+}
+
+#contact {
 	color: #fff;
 	font-weight: 400;
 	padding-bottom: 5em;
@@ -181,7 +187,7 @@ body {
 		background-image: url('../img/friends/friends_02.png');
 		height: 8em;
 	}
-	
+
 	#description .btn {
 		width: 10em;
 	}
@@ -193,6 +199,10 @@ body {
 }
 
 @media (min-width: 768px) {
+	.container {
+		/*width: 90%;*/
+	}
+
 	.jumbotron {
 		height: 32em;
 	}
@@ -203,17 +213,13 @@ body {
 	}
 
 	#description,
+	#features,
 	#friends,
 	#contact {
-		padding-left: 6em;
 	}
 
 	#description p {
 		font-size: 1.25em;
-	}
-
-	#features {
-		padding-left: 6em;
 	}
 
 	#friends div {
