@@ -4,35 +4,45 @@
 <meta name="url" content="how-buddycloud-works" />
 <meta name="save_as" content="how-buddycloud-works.html" />
 <meta name="order" content="5" />
-<meta name="header" content="How it works" />
+<meta name="header" content="How Buddycloud Works" />
+<meta name="top_menu_name" content="How it works" />
+<meta name="title" content="How Buddycloud Works" />
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
-	<h2>TL;DR</h2>
-	<p class="lead">The simplest way to describe Buddycloud is that there is a
-		nice API that lets you get and put and delete and update content. This content
-		is automatically pushed to and shared with users on other sites running
-		Buddycloud.</p>
+	<p class="lead">
+		The simplest way to describe Buddycloud is that you
+		<code>GET</code>
+		and
+		<code>PUT</code>
+		and
+		<code>DELETE</code>
+		and
+		<code>UPDATE</code>
+		content. These changes are automatically pushed to and shared with users on
+		other sites running Buddycloud.
+	</p>
+	<blockquote>What could this content be?</blockquote>
+	<p>This content is ATOM formatted posts, it's chat messages, it's any kind
+		of file, likes, anything that helps communication and if it's not there,
+		adding new content handlers is easy. Buddycloud has a complete set of calls
+		that are accessible through three different APIs.</p>
 	<figure>
-		<img src="/theme/img/features/architecture diagram.png"
+		<img class="center-block" src="/theme/img/diagrams/architecture diagram.png"
 			alt="Buddycloud Architecture" />
 	</figure>
-	<p>What could this content be: This content is ATOM formatted posts, it's
-		chat messages, it's any kind of file, likes, anything that helps communication
-		and if it's not there, adding new content handlers is easy. Buddycloud has a
-		complete set of calls that are accessible through three different APIs.</p>
 	<h2>APIs</h2>
 	<ul>
 		<li>Rest based API Buddycloud JS XMPP-FTW in production: stanza.io
-			plugin.</li>
+			plug-in.</li>
 	</ul>
 	<p>
 		All the <a href="/software#APIs">APIs</a> let you shove data into and pull
 		data out of Buddycloud, synchronise clients with Buddycloud in an easy to
 		understand way.
 	</p>
-	<h2>What is a channel?</h2>
-	<p>Where is the API sending the DATA?</p>
+	<h2>Buddycloud Channels</h2>
+	<blockquote>Where is the API sending the DATA?</blockquote>
 	<p>The data is going to different services. The most common one is the
 		Buddycloud Channel server. To describe that we need to explain what a channel
 		is. A channel is much like your Facebook feed or Twitter stream. You post
@@ -63,14 +73,18 @@
 	</ul>
 	<p>And a growing range of new services.</p>
 	<figure>
-		<img src="/theme/img/features/full stack.png" alt="Buddycloud Components" />
+		<img class="center-block" src="/theme/img/diagrams/full stack.png" alt="Buddycloud Components" />
 	</figure>
 	<h2>Distributed design</h2>
-	<p>How do all these services intercommunicate?</p>
+	<blockquote>How do all these services intercommunicate?</blockquote>
 	<p>The magic about Buddycloud: it's completely distributed. For you this
 		means that you can connect to, find, share and exchange updates with other
 		Buddycloud users on your own Buddycloud server, or other sites also running
 		Buddycloud.</p>
+	<figure>
+		<img class="center-block" src="/theme/img/diagrams/completely distributed design.png"
+			alt="Distributed like hell!" />
+	</figure>
 	<h2>Network transparent</h2>
 	<p>
 		Imagine the paradigm where Gmail users can only email Gmail users, Yahoo mail
@@ -81,7 +95,7 @@
 		contact users on any other site. <em>This is revolutionary!</em>
 	</p>
 	<figure>
-		<img src="/theme/img/features/buddycloud uses channels.png"
+		<img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png"
 			alt="Site interconnectedness" />
 	</figure>
 	<h2>Synchronising</h2>
@@ -92,17 +106,17 @@
 		making sure that all the right content is in the right people's channels on
 		the right domains, with the right permissions, in realtime.</p>
 	<figure>
-		<img src="/theme/img/features/federation.png"
+		<img class="center-block" src="/theme/img/diagrams/federation.png"
 			alt="Updates are pushed automatically" />
 	</figure>
 	<h2>Publish subscribe</h2>
-	<p>So let's drill down into what a channel actually is.</p>
+	<blockquote>So what is a channel really?</blockquote>
 	<p>A channel is a collection of publish-subscribe nodes. Each channel has a
 		set of followers, who receive updates when new posts are created. For example,
 		when you change your status node to "I'm happy", all your followers are pushed
 		an update if they are online.</p>
 	<figure>
-		<img src="/theme/img/features/channels comprise application nodes.png"
+		<img class="center-block" src="/theme/img/diagrams/channels comprise application nodes.png"
 			alt="Buddycloud channels are built up from application nodes" />
 	</figure>
 	<h2>Content types</h2>
@@ -112,7 +126,5 @@
 		exchange encrypted messages), votes, likes and incident reports.</p>
 	<h2>Next step</h2>
 	<p>Check out the quick start page and create your Buddycloud app.</p>
-
-	
 </body>
 </html>

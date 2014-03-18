@@ -12,3 +12,5 @@ srv.pid
 *.~
 .DS_Store
 .project
+
+*.swp
