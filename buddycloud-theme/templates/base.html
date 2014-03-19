@@ -50,7 +50,7 @@
        </div>
     </div>
 </nav>
-{% if active_page != "index" %}
+{% if active_page != "index" and active_page != "contact" %}
 <div class="container bs-docs-container">
     <div class="row">
         <div class="col-md-3 col-sm-3">
@@ -63,7 +63,7 @@
         {% block content %}
         {% endblock %}
 
-{% if active_page != "index" %}
+{% if active_page != "index" and active_page != "contact" %}
         </div>
     </div>
 </div>

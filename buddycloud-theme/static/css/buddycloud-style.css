@@ -81,7 +81,7 @@ li.bc-hide {
 
 .bs-example ul,
 .bs-example ol{
-	margin-left: 2em;
+	/*margin-left: 2em;*/
 }
 
 
@@ -95,7 +95,7 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
 	font-size: 2em;
-	margin: 0 0 .5em 0;
+	/*margin: 0 0 .5em 0;*/
 }
 
 h1.page-header {
@@ -106,7 +106,7 @@ h2 {
 	font-size: 1.5em;
 	border-top: 1px solid hsl(0,0%,90%);
 	padding: .5em 0 0 0;
-	margin: 3em 0 1em 0;
+	margin: 2em 0 1em 0;
 }
 
 h3 {
@@ -181,9 +181,13 @@ blockquote footer cite {
 /* = = = = = = = = = = = = = = = = = = = = */
 /* Typography – Lists */
 
+.bs-docs-section img {
+	max-width: 100%;
+}
+
 .bs-docs-section ul,
 .bs-docs-section ol {
-	padding-left: 0;
+	/*padding-left: 0;*/
 }
 
 .bs-docs-section ul > li {
@@ -696,6 +700,7 @@ ul.nav-tabs > li a:hover {
 }*/
 
 h1[id], h2[id] {
+		margin: 20px 0 10px;
     padding-top: 48px;
 }
 

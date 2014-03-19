@@ -94,9 +94,9 @@ socket.on('open', function(data){
   {
     "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
     "options": [
-      { var: 'pubsub#access_model', value: 'open' }, 
+      { var: 'pubsub#access_model', value: 'open' },
       { var: 'buddycloud#channel_type', value: 'topic' }
-    ]  
+    ]
   },
   function(error, data) { console.log(error, data) }
 )</code>
@@ -149,6 +149,7 @@ socket.on('open', function(data){
 <code class="javascript">socket.send(
   'xmpp.buddycloud.items.recent',
   {
+    "to": "channels.buddycloud.org",
     "max": 10,
     "since": "1970-01-01 00:00:00"
   },
@@ -172,7 +173,7 @@ socket.on('open', function(data){
 		<a class="btn btn-primary btn-lg active" href="https://xmpp-ftw.jit.su/demo">Buddycloud
 			Demo</a>
 	</p>
-	<!-- 
+	<!--
 	<h1>Status</h1>
 	<ul class="status"></ul>
 	 -->
