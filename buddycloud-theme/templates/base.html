@@ -1,90 +1,5 @@
 <!DOCTYPE html lang="en">
 <head>
-<<<<<<< HEAD
-    <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link href="img/apple-touch-icon-144x144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed">
-    <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/icons/favicon.ico"/>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/docs.min.css" type="text/css"/>
-    <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/buddycloud-style.css" type="text/css"/>
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/perfect-scrollbar.css" type="text/css"/>
-{% block morestyles %}
-{% endblock %}
-{% include 'includes/ga.html' %}
-</head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header" href="#">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">buddycloud</a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-            {% if DISPLAY_PAGES_ON_MENU %}
-            <ul class="nav navbar-nav">
-            {% for page in PAGES|sort(attribute='order') if not (page.show_in_top_menu == "false") %}
-               <li {% if active_page == page.show_as_selected|default(page.slug) %}class="active"{% endif %}>
-                <a href="{{ SITEURL }}/{{ page.url }}">
-                    {{ page.top_menu_name|default(page.title) }}
-                </a>
-               </li>
-            {% endfor %}
-            </ul>
-            {% endif %}
-       </div>
-    </div>
-</nav>
-{% if active_page != "index" and active_page != "contact" %}
-<div class="container bs-docs-container">
-    <div class="row">
-        <div class="col-md-3 col-sm-3">
-            {% block table_of_contents %}
-            {% endblock %}
-        </div>
-        <div class="col-md-9 col-sm-9" role="main">
-{% endif %}
-
-        {% block content %}
-        {% endblock %}
-
-{% if active_page != "index" and active_page != "contact" %}
-        </div>
-    </div>
-</div>
-{% endif %}
-<script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/docs.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
-<script src="{{ SITEURL }}/theme/js/raphael-min.js"></script>
-<script src="{{ SITEURL }}/theme/js/underscore-min.js"></script>
-<script src="{{ SITEURL }}/theme/js/sequence-diagram-min.js"></script>
-<script src="{{ SITEURL }}/theme/js/smooth-scroll.js"></script>
-<script src="{{ SITEURL }}/theme/js/buddycloud-sequence-diagram.js"></script>
-<script src="{{ SITEURL }}/theme/js/perfect-scrollbar-0.4.8.min.js"></script>
-<script>
-    $(".js_sequence_diagram").perfectScrollbar();
-    $(".table-responsive").perfectScrollbar();
-</script>
-{% block morescripts %}
-{% endblock %}
-=======
 <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
@@ -145,24 +60,31 @@
 			</div>
 		</div>
 	</div>
-	{% if active_page != "index" %}
-	<div class="container bs-docs-container">
-		<div class="row">
-			<div class="col-md-9" role="main">{% endif %} {% block content %} {%
-				endblock %} {% if active_page != "index" %}</div>
-			<div class="col-md-3">{% block table_of_contents %} {% endblock %}</div>
-		</div>
-		{% if active_page != "index" %}
-		<div id="navbar navbar-default navbar-fixed-bottom">
-			<div class="container">
-				<p class="text-muted pull-right">Made with love. <a href="https://github.com/buddycloud/buddycloud.com">Corrections
-						welcomed</a>.
-				</p>
-			</div>
-		</div>
-		{% endif %}
-	</div>
-	{% endif %}
+	{% if active_page != "index" and active_page != "contact" %}
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                {% block table_of_contents %}
+                {% endblock %}
+            </div>
+            <div class="col-md-9 col-sm-9" role="main">
+    {% endif %}
+
+            {% block content %}
+            {% endblock %}
+
+    {% if active_page != "index" and active_page != "contact" %}
+            </div>
+        </div>
+        <div id="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <p class="text-muted pull-right">Made with love. <a href="https://github.com/buddycloud/buddycloud.com">Corrections
+                        welcomed</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 	<script src="{{ SITEURL }}/theme/js/jquery-1.10.2.min.js"></script>
 	<script src="{{ SITEURL }}/theme/js/bootstrap.min.js"></script>
 	<script src="{{ SITEURL }}/theme/js/docs.min.js"></script>
@@ -192,6 +114,5 @@
 		});
 	</script>
 	{% block morescripts %} {% endblock %}
->>>>>>> master
 </body>
 </html>
