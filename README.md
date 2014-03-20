@@ -1,4 +1,5 @@
 ## buddycloud website
+[![Build Status](https://travis-ci.org/buddycloud/buddycloud.com.png?branch=master)](https://travis-ci.org/buddycloud/buddycloud.com)
 
 ### Requirements
 

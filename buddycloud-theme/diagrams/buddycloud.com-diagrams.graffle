@@ -6386,8 +6386,6 @@
 				<real>0.0</real>
 				<key>circoSeparation</key>
 				<real>0.0</real>
-				<key>dotNodekSep</key>
-				<real>0.27777777777777779</real>
 				<key>dotRankSep</key>
 				<real>0.69444444444444442</real>
 				<key>layoutEngine</key>
@@ -18720,7 +18718,7 @@
 		<key>BottomSlabHeight</key>
 		<real>275</real>
 		<key>CurrentSheet</key>
-		<integer>0</integer>
+		<integer>11</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
