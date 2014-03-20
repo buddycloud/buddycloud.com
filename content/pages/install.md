@@ -241,7 +241,7 @@ Test the database is installed (password is in
 `/etc/buddycloud-server-java/configuration.properties`)
 
 ~~~~ bash
-psql -h 127.0.0.1 --username buddycloudserver -d buddycloudserver -c "select * from nodes;"
+psql -h 127.0.0.1 --username buddycloudserverjava -d buddycloudserverjava -c "select * from nodes;" 
 node
 ------
 (0 rows)
