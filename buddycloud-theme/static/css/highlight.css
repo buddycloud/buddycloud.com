@@ -1,12 +1,14 @@
 /*Tweaks needed to make it work alongside with codehilite md extension*/
 .highlight .hljs span {
-	color: #61DFF5;
+//	color: #61DFF5;
+	color: #2DAEBF;
 }
 
 /* Comment */
 .hljs-comment,
 .hljs-title {
-  color: #969896 !important;
+//	color: #969896 !important;
+	color: #38434C;
 }
 
 /* Buddycloud Light Grey */
@@ -63,7 +65,8 @@
 .highlight pre .hljs {
   display: block;
   background: transparent;
-  color: #61DFF5;
+//  color: #61DFF5;
+  color: #2DAEBF;
   padding: 0.5em;
 }
 
