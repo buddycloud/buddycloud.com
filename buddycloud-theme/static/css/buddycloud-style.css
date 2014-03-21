@@ -13,6 +13,10 @@ body {
     overflow:auto;
 }
 
+#container-content {
+    padding-bottom: 60px;
+}
+
 a {
     font-weight: 400;
     color: #2DAEBF;
@@ -238,7 +242,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: 'Source Code Pro', Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-family: 'Source Code Pro', Menlo, Monaco, Consolas, "Courier New", monospace;
     font-weight: 500;
 }
 
@@ -259,6 +263,9 @@ code {
     color: #2DAEBF;
     background-color: rgba(45, 174, 191, .075);
     padding: 0.2em;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
 }
 
 .highlight {
@@ -295,13 +302,16 @@ code {
     font-family: 'Source Code Pro';
     font-weight: 500;
     font-size: 0.85em;
-//  color: hsl(0,0%,70%);
+    /*color: hsl(0,0%,70%);*/
     padding: 1em 1em .5em 1em;
 }
 
 .highlight pre code {
-//  color: hsl(0,0%,70%);
+    /*color: hsl(0,0%,70%);*/
     color: transparent;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
 }
 
 .highlight pre .nt {

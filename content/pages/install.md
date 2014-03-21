@@ -91,15 +91,6 @@ Prosody Setup
 
 <span style="color:green">Estimated time: **10 mins**</span>
 
--   alternative: [Installing buddycloud on
-    ejabberd](Installing buddycloud on ejabberd "wikilink")
--   alternative: [official Prosody install
-    guide](http://prosody.im/doc/install) (good for older distributions)
--   alternative: Prosody with [LDAP
-    authentication](LDAP authentication "wikilink")
--   alternative: [Installing buddycloud on
-    openfire](Installing buddycloud on openfire "wikilink")
-
 ### Install
 
 ~~~~ bash
@@ -158,15 +149,19 @@ VirtualHost "anon.EXAMPLE.COM"
   allow_registration    = false
   anonymous_login       = true
 
--- buddycloud Channel Server XMPP component configuration.
+-- Buddycloud Channel Server XMPP component configuration.
 Component "buddycloud.EXAMPLE.COM"
   component_secret      = "tellnoone"
+  
+-- Buddycloud Channel Server (optional topic channels).
+Component "topics.EXAMPLE.COM"
+  component_secret      = "tellnoone"
 
--- buddycloud Media Server XMPP component configuration.
+-- Buddycloud Media Server XMPP component configuration.
 Component "media.EXAMPLE.COM"
   component_secret      = "tellnoone"
 
--- buddycloud Pusher Server XMPP component configuration.
+-- Buddycloud Pusher Server XMPP component configuration.
 Component "pusher.EXAMPLE.COM"
   component_secret      = "tellnoone"
 ~~~~
@@ -241,7 +236,7 @@ Test the database is installed (password is in
 `/etc/buddycloud-server-java/configuration.properties`)
 
 ~~~~ bash
-psql -h 127.0.0.1 --username buddycloudserver -d buddycloudserver -c "select * from nodes;"
+psql -h 127.0.0.1 --username buddycloudserverjava -d buddycloudserverjava -c "select * from nodes;" 
 node
 ------
 (0 rows)
