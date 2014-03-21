@@ -60,7 +60,7 @@
 	</div>
 	{% if active_page != "index" %}
 	<div class="container bs-docs-container">
-		<div class="row">
+		<div class="row" id="container-content">
 			<div class="col-md-9" role="main">{% endif %} {% block content %} {%
 				endblock %} {% if active_page != "index" %}</div>
 			<div class="col-md-3">{% block table_of_contents %} {% endblock %}</div>

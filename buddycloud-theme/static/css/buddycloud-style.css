@@ -13,6 +13,10 @@ body {
 	overflow:auto;
 }
 
+#container-content {
+	padding-bottom: 60px;
+}
+
 a {
 	font-weight: 400;
 	color: #2DAEBF;
