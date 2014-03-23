@@ -1,70 +1,83 @@
-{% extends "base.html" %} {% set active_page = "index" %} {% block morestyles %}
+{% extends "base.html" %}
+{% set active_page = "index" %}
+{% block morestyles %}
 <link href="{{ SITEURL }}/theme/css/buddycloud-home.css" rel="stylesheet">
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 	<h1>
 	<!--  Open Communication Fabric -->
 	</h1>
-</div>
-<div class="container" id="description">
-	<p>User and group communication for your app. Simple.
-		Secure. Open Source.</p>
-	<div>
-		<a href="/get-started" class="btn btn-primary btn-lg" role="button">Get started</a>
-		<a href="https://hosting.buddycloud.com" class="btn btn-lg" role="button">Hosting</a>
-	</div>
-</div>
-<div class="container" id="features">
-	<div class="row">
-		<div class="col-md-4">
-			<h2>Tools</h2>
-			<p>Whether you are building mobile or web apps, the Buddycloud server,
-				clients and libraries will help you add chat, file sharing and social
-				activity streams to your project.</p>
-		</div>
-		<div class="col-md-4">
-			<h2>A Methodology</h2>
-			<p>
-				Innovate at the edge using Buddycloud's distributed design built on open
-				standards and released as open source.
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>A Community of Peers</h2>
-			<p>Learn, share and work with a developer community building the next
-				generation of communication products.</p>
+
+	<div class="container-description">
+		<div class="container" id="description">
+			<p>User and group communication for your app. Simple.
+				Secure. Open Source.</p>
+			<div>
+				<a href="/get-started" class="btn btn-primary btn-lg" role="button">Get started</a>
+				<a href="https://hosting.buddycloud.com" class="btn btn-lg" role="button">Hosting</a>
+			</div>
 		</div>
 	</div>
 </div>
-<div class="container" id="friends">
-	<p>Already using Buddycloud</p>
-	<div></div>
+<div class="background-features">
+	<div class="container" id="features">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Tools</h2>
+				<p>Whether you are building mobile or web apps, the Buddycloud server,
+					clients and libraries will help you add chat, file sharing and social
+					activity streams to your project.</p>
+			</div>
+			<div class="col-md-4">
+				<h2>A Methodology</h2>
+				<p>
+					Innovate at the edge using Buddycloud's distributed design built on open
+					standards and released as open source.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>A Community of Peers</h2>
+				<p>Learn, share and work with a developer community building the next
+					generation of communication products.</p>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="container" id="contact">
-	<div class="row">
-		<div class="col-md-4">
-			<h3>Get in touch</h3>
-			<ul>
-				<li><a href="/contact">Contact</a></li>
-				<!-- <li><a href="">Team</a></li>
-				<li><a href="#">Press</a></li> -->
-			</ul>
-		</div>
-		<div class="col-md-4">
-			<h3>Help and support</h3>
-			<ul>
-				<li>+1 415-858-0202</li>
-				<li><a href="https://groups.google.com/forum/#!forum/buddycloud-dev">Team mailing list</a></li>
-				<li><a href="https://jappix.com/?r=seehaus@channels.buddycloud.com">Get help in our chatroom</a></li>
-			</ul>
-		</div>
-		<div class="col-md-4">
-			<h3>Stay connected</h3>
-			<div class="contact">
-				<a href="https://twitter.com/buddycloud" class="twitter">Twitter</a> <a href="http://blog.buddycloud.com" class="blog">Blog</a> <a
-					href="https://github.com/buddycloud" class="github">Github</a> <a href="https://demo.buddycloud.org/team@topics.buddycloud.com" class="buddycloud">buddyloud</a>
-				<br>
+<div class="background-friends">
+	<div class="container" id="friends">
+		<p>Already using Buddycloud</p>
+		<div></div>
+	</div>
+</div>
+<div class="background-contact">
+	<div class="container" id="contact">
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Get in touch</h3>
+				<ul>
+					<li><a href="/contact">Contact</a></li>
+					<!-- <li><a href="">Team</a></li>
+					<li><a href="#">Press</a></li> -->
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3>Help and support</h3>
+				<ul>
+					<li>+1 415-858-0202</li>
+					<li><a href="https://groups.google.com/forum/#!forum/buddycloud-dev">Team mailing list</a></li>
+					<li><a href="https://jappix.com/?r=seehaus@channels.buddycloud.com">Get help in our chatroom</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3>Stay connected</h3>
+				<div class="contact">
+					<a href="https://twitter.com/buddycloud" class="twitter">Twitter</a> <a href="http://blog.buddycloud.com" class="blog">Blog</a> <a
+						href="https://github.com/buddycloud" class="github">Github</a> <a href="https://demo.buddycloud.org/team@topics.buddycloud.com" class="buddycloud">buddyloud</a>
+					<br>
+				</div>
 			</div>
 		</div>
 	</div>
