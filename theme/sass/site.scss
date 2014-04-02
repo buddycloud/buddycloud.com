@@ -1,0 +1,52 @@
+@import 'compass/css3/transition';
+
+$primary-color: #2DAEBF;
+
+// contact icons
+.contact {
+  a {
+    display: block;
+    float: left;
+    margin-right: 1em;
+    width: 2em;
+    height: 2em;
+    background-color: #2DAEBF;
+    text-indent: -999em;
+    border-radius: 0.25em;
+    background-size: cover;
+    background-image: url('../img/contact/twitter.svg');
+    @include transition(background-color .2s linear);
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  .blog {
+    background-image: url('../img/contact/blog.svg');
+  }
+
+  .email {
+    background-image: url('../img/contact/email.svg');
+  }
+
+  .twitter {
+    background-image: url('../img/contact/twitter.svg');
+  }
+
+  .linkedin {
+    background-image: url('../img/contact/linkedin.svg');
+  }
+
+  .github {
+    background-image: url('../img/contact/github.svg');
+  }
+
+  .buddycloud {
+    background-image: url('../img/contact/buddycloud.svg');
+  }
+
+  .googleplus {
+    background-image: url('../img/contact/googleplus.svg');
+  }
+}

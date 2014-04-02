@@ -8,44 +8,44 @@
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
-	<p>
-		You can access Buddycloud in many ways. This example uses <a
-			href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a>.
-		This page will show you how to do a few of the basic operations in Buddycloud.
-		XMPP-FTW is a great way to build realtime javascript apps. To Find out more
-		check the <a href="https://xmpp-ftw.jit.su/demo">Demo</a>.
-	</p>
-	<p>
-		For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
-			REST API</a>.
-	</p>
-	<h1>Get Setup</h1>
-	<div class="bs-example">
-		<p>Simply add the following to your pages:</p>
-	</div>
-	<div class="highlight">
-		<pre>
+  <p>
+    You can access Buddycloud in many ways. This example uses <a
+      href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a>.
+    This page will show you how to do a few of the basic operations in Buddycloud.
+    XMPP-FTW is a great way to build realtime javascript apps. To Find out more
+    check the <a href="https://xmpp-ftw.jit.su/demo">Demo</a>.
+  </p>
+  <p>
+    For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
+      REST API</a>.
+  </p>
+  <h1>Get Setup</h1>
+  <div class="bs-example">
+    <p>Simply add the following to your pages:</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="html">&lt;script src='https://xmpp-ftw.jit.su/scripts/primus.js'&gt;&lt;/script&gt;
 </code>
 </pre>
-	</div>
-	<div class="bs-example">
-		<p>And call</p>
-	</div>
-	<div class="highlight">
-		<pre>
+  </div>
+  <div class="bs-example">
+    <p>And call</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket = new Primus('https://xmpp-ftw.jit.su')
 socket.on('open', function(data){
   //Ready to go here
 })</code>
-	    </pre>
-	</div>
-	<h1>Create a user</h1>
-	<div class="bs-example">
-		<p>Log in as the user (create it if it doesn't exist)</p>
-	</div>
-	<div class="highlight">
-		<pre>
+      </pre>
+  </div>
+  <h1>Create a user</h1>
+  <div class="bs-example">
+    <p>Log in as the user (create it if it doesn't exist)</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.login',
   {
@@ -54,41 +54,41 @@ socket.on('open', function(data){
     "register": true
   }
 )</code>
-	</pre>
-	</div>
-	<div class="bs-example">
-		<p>Now figure out where the buddycloud server for this domain is</p>
-	</div>
-	<div class="highlight">
-		<pre>
+  </pre>
+  </div>
+  <div class="bs-example">
+    <p>Now figure out where the buddycloud server for this domain is</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.discover',
   {},
   function(error, address) { console.log(error, address) }
 )</code>
-		</pre>
-	</div>
-	<div class="bs-example">
-		<p>Finally create their Buddycloud account</p>
-	</div>
-	<div class="highlight">
-		<pre>
+    </pre>
+  </div>
+  <div class="bs-example">
+    <p>Finally create their Buddycloud account</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.register',
   {},
   function(error, data) { console.log(error, data) }
 )</code>
-		</pre>
-	</div>
-	<h1>Create a topic channel</h1>
-	<p>Topic channels have multiple users that can follow and post to them</p>
-	<h2>Create</h2>
-	<p>Topic channels are shared channels that others can post to.</p>
-	<div class="bs-example">
-		<p>This creates a channel that other users can post to.</p>
-	</div>
-	<div class="highlight">
-		<pre>
+    </pre>
+  </div>
+  <h1>Create a topic channel</h1>
+  <p>Topic channels have multiple users that can follow and post to them</p>
+  <h2>Create</h2>
+  <p>Topic channels are shared channels that others can post to.</p>
+  <div class="bs-example">
+    <p>This creates a channel that other users can post to.</p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.create',
   {
@@ -101,17 +101,17 @@ socket.on('open', function(data){
   function(error, data) { console.log(error, data) }
 )</code>
 </pre>
-	</div>
-	<h2>Post content</h2>
-	<div class="bs-example">
-		<p>
-			This posts a message to the
-			<code>my-little-topic-channel</code>
-			.
-		</p>
-	</div>
-	<div class="highlight">
-		<pre>
+  </div>
+  <h2>Post content</h2>
+  <div class="bs-example">
+    <p>
+      This posts a message to the
+      <code>my-little-topic-channel</code>
+      .
+    </p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.publish',
   {
@@ -125,27 +125,27 @@ socket.on('open', function(data){
   function(error, data) { console.log(error, data) }
 )</code>
 </pre>
-	</div>
-	<p>
-		On success the
-		<code>data</code>
-		argument will include an object iwith property
-		<code>id</code>
-		containing the ID of the new post.
-	</p>
-	<h1>Fetch Posts</h1>
-	<p>Pre-populate your app with existing posts. New posts will arrive
-		automatically</p>
-	<div class="bs-example">
-		<p>
-			Fetch 10 new posts.
-			<code>rsm</code>
-			(<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result
-				set management</a>) lets you page through results.
-		</p>
-	</div>
-	<div class="highlight">
-		<pre>
+  </div>
+  <p>
+    On success the
+    <code>data</code>
+    argument will include an object iwith property
+    <code>id</code>
+    containing the ID of the new post.
+  </p>
+  <h1>Fetch Posts</h1>
+  <p>Pre-populate your app with existing posts. New posts will arrive
+    automatically</p>
+  <div class="bs-example">
+    <p>
+      Fetch 10 new posts.
+      <code>rsm</code>
+      (<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result
+        set management</a>) lets you page through results.
+    </p>
+  </div>
+  <div class="highlight">
+    <pre>
 <code class="javascript">socket.send(
   'xmpp.buddycloud.items.recent',
   {
@@ -156,26 +156,26 @@ socket.on('open', function(data){
   function(error, data, rsm) { console.log(error, data, rsm) }
 )</code>
 </pre>
-	</div>
-	<h1>Realtime events</h1>
-	<div class="bs-example">
-		<p>Tell the server that you are online and want to start receiving new
-			realtime events</p>
-	</div>
-	<div class="highlight">
-		<pre>
-	    <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
-	  </pre>
-	</div>
-	<h1>Demo</h1>
-	<p>You can play with Buddycloud using XMPP-FTW.</p>
-	<p>
-		<a class="btn btn-primary btn-lg active" href="https://xmpp-ftw.jit.su/demo">Buddycloud
-			Demo</a>
-	</p>
-	<!--
-	<h1>Status</h1>
-	<ul class="status"></ul>
-	 -->
+  </div>
+  <h1>Realtime events</h1>
+  <div class="bs-example">
+    <p>Tell the server that you are online and want to start receiving new
+      realtime events</p>
+  </div>
+  <div class="highlight">
+    <pre>
+      <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
+    </pre>
+  </div>
+  <h1>Demo</h1>
+  <p>You can play with Buddycloud using XMPP-FTW.</p>
+  <p>
+    <a class="btn btn-primary btn-lg" href="https://xmpp-ftw.jit.su/demo">Buddycloud
+      Demo</a>
+  </p>
+  <!--
+  <h1>Status</h1>
+  <ul class="status"></ul>
+   -->
 </body>
 </html>

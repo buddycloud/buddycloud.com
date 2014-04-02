@@ -10,11 +10,11 @@ TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
 
-DIRECT_TEMPLATES = ['index', 'style-guide']
+DIRECT_TEMPLATES = ['index']
 
 STATIC_PATHS = [ 'img', 'CNAME' ]
 
-THEME = 'buddycloud-theme'
+THEME = 'theme'
 
 MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_tabs', 'mdext.sequence_diagrams', 'mdext.fix_code_blocks' ]
 

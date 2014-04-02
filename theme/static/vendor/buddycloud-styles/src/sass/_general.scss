@@ -1,0 +1,19 @@
+/***********************
+* General
+***********************/
+body {
+  padding-top: 70px; // we are using .navbar-fixed-top
+}
+
+pre {
+  border-radius: 0;
+}
+
+code {
+  color: $primary-color;
+  background-color: rgba(45, 174, 191, .075);
+}
+
+img {
+  max-width: 100%;
+}

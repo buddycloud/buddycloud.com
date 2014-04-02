@@ -98,11 +98,11 @@ following string attributes:
 
 id
 :   The item's ID.
-    
+
 
 author
 :   The user ID of the item's author.
-    
+
 
 updated
 :   The date/time the entry was posted or last edited, in [ISO 8601
@@ -110,7 +110,7 @@ updated
 
 content
 :   The entry's text content.
-    
+
 
 media
 :   Custom structured field, with necessary media information for
@@ -133,280 +133,280 @@ Visibility
 
 <div class='table-responsive'>
 <table class='table table-striped table-condensed'>
-	<thead>
-		<tr>
-			<th>  Element
-			</th>
-			<th> Example
-			</th>
-			<th> producer
-			</th>
-			<th> moderator
-			</th>
-			<th> follower+post
-			</th>
-			<th> follower
-			</th>
-			<th> anonymous/web
-			</th>
-			<th> banned
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td> Channel address
-			</td>
-			<td> me@domain.com
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> Channel name
-			</td>
-			<td> My little channel
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> Channel description
-			</td>
-			<td> A channel about me
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> open channel: mood
-			</td>
-			<td> Wishing it was Friday
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> open channel: posts
-			</td>
-			<td> Lunch with me?
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> open channel: geoloc
-			</td>
-			<td> Next: News cafe
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> open channel: subscriber list
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> open personal channel: outside roles
-			</td>
-			<td> see what you follow/moderate/produce
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-		</tr>
-		<tr>
-			<td> closed channel: geoloc
-			</td>
-			<td> Office
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> closed channel: posts
-			</td>
-			<td> Did she really say that?
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> closed channel: mood
-			</td>
-			<td> It's still Thursday
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> closed channel: subscriber list
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> banned list
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> closed personal channel: outside roles
-			</td>
-			<td> see what you follow/moderate/produce
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th>  Element
+      </th>
+      <th> Example
+      </th>
+      <th> producer
+      </th>
+      <th> moderator
+      </th>
+      <th> follower+post
+      </th>
+      <th> follower
+      </th>
+      <th> anonymous/web
+      </th>
+      <th> banned
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Channel address
+      </td>
+      <td> me@domain.com
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> Channel name
+      </td>
+      <td> My little channel
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> Channel description
+      </td>
+      <td> A channel about me
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> open channel: mood
+      </td>
+      <td> Wishing it was Friday
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> open channel: posts
+      </td>
+      <td> Lunch with me?
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> open channel: geoloc
+      </td>
+      <td> Next: News cafe
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> open channel: subscriber list
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> open personal channel: outside roles
+      </td>
+      <td> see what you follow/moderate/produce
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+    </tr>
+    <tr>
+      <td> closed channel: geoloc
+      </td>
+      <td> Office
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> closed channel: posts
+      </td>
+      <td> Did she really say that?
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> closed channel: mood
+      </td>
+      <td> It's still Thursday
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> closed channel: subscriber list
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> banned list
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> closed personal channel: outside roles
+      </td>
+      <td> see what you follow/moderate/produce
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+  </tbody>
 </table>
 </div>
 
@@ -417,275 +417,275 @@ Changes
 
 <div class='table-responsive'>
 <table class='table table-striped table-condensed'>
-	<thead>
-		<tr>
-			<th>
-			</th>
-			<th> server operation
-			</th>
-			<th> Example
-			</th>
-			<th> producer
-			</th>
-			<th> moderator
-			</th>
-			<th> follower+post
-			</th>
-			<th> follower
-			</th>
-			<th> anonymous/web
-			</th>
-			<th> banned
-			</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td> Channel Jid
-			</td>
-			<td>
-			</td>
-			<td> me@domain.com
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> Channel name
-			</td>
-			<td> manage-node-configuration <i>pubsub#title</i>
-			</td>
-			<td> My little channel
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> Channel description
-			</td>
-			<td> manage-node-configuration <i>pubsub#description</i>
-			</td>
-			<td> A channel about me
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> mood
-			</td>
-			<td> publish-node-items in <i>status</i> node
-			</td>
-			<td> Wishing it was Friday
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> geoloc
-			</td>
-			<td> publish-node-items in <i>geoloc</i> nodes
-			</td>
-			<td> News Cafe
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> add post
-			</td>
-			<td> publish-node-items in <i>posts</i> node
-			</td>
-			<td> Lunch with me?
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> remove post
-			</td>
-			<td> retract-node-items (in <i>posts</i> node)
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-		</td>
-		</tr>
-			<tr>
-			<td> approve new followers
-			</td>
-			<td> manage-node-configuration <i>buddycloud#approve_followers</i>
-			</td>
-			<td> new followers must be approved <i>yes</i> or <i>no</i>
-			</td>
-			<td> yes
-			</td>
-			<td>
-				<ul class='list-unstyled'>
-					<li>personal channels: no
-					</li><li>topic channels: yes
-					</li>
-				</ul>
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> set default role for new followers
-			</td>
-			<td> manage-node-configuration <i>buddycloud#default_affiliation</i>
-			</td>
-			<td> new followers are <i>follower</i> or <i>follower+post</i>
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> channel privacy
-			</td>
-			<td> manage-node-configuration <i>pubsub#access_model</i>
-			</td>
-			<td> toggle open / closed channel
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> change role of a follower
-			</td>
-			<td> manage-node-affiliations
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-		<tr>
-			<td> make moderator
-			</td>
-			<td> manage-node-affiliations
-			</td>
-			<td>
-			</td>
-			<td> yes
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-			<td> no
-			</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th>
+      </th>
+      <th> server operation
+      </th>
+      <th> Example
+      </th>
+      <th> producer
+      </th>
+      <th> moderator
+      </th>
+      <th> follower+post
+      </th>
+      <th> follower
+      </th>
+      <th> anonymous/web
+      </th>
+      <th> banned
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Channel Jid
+      </td>
+      <td>
+      </td>
+      <td> me@domain.com
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> Channel name
+      </td>
+      <td> manage-node-configuration <i>pubsub#title</i>
+      </td>
+      <td> My little channel
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> Channel description
+      </td>
+      <td> manage-node-configuration <i>pubsub#description</i>
+      </td>
+      <td> A channel about me
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> mood
+      </td>
+      <td> publish-node-items in <i>status</i> node
+      </td>
+      <td> Wishing it was Friday
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> geoloc
+      </td>
+      <td> publish-node-items in <i>geoloc</i> nodes
+      </td>
+      <td> News Cafe
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> add post
+      </td>
+      <td> publish-node-items in <i>posts</i> node
+      </td>
+      <td> Lunch with me?
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> remove post
+      </td>
+      <td> retract-node-items (in <i>posts</i> node)
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+    </td>
+    </tr>
+      <tr>
+      <td> approve new followers
+      </td>
+      <td> manage-node-configuration <i>buddycloud#approve_followers</i>
+      </td>
+      <td> new followers must be approved <i>yes</i> or <i>no</i>
+      </td>
+      <td> yes
+      </td>
+      <td>
+        <ul class='list-unstyled'>
+          <li>personal channels: no
+          </li><li>topic channels: yes
+          </li>
+        </ul>
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> set default role for new followers
+      </td>
+      <td> manage-node-configuration <i>buddycloud#default_affiliation</i>
+      </td>
+      <td> new followers are <i>follower</i> or <i>follower+post</i>
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> channel privacy
+      </td>
+      <td> manage-node-configuration <i>pubsub#access_model</i>
+      </td>
+      <td> toggle open / closed channel
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> change role of a follower
+      </td>
+      <td> manage-node-affiliations
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+    <tr>
+      <td> make moderator
+      </td>
+      <td> manage-node-affiliations
+      </td>
+      <td>
+      </td>
+      <td> yes
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+      <td> no
+      </td>
+    </tr>
+  </tbody>
 </table>
 </div>
 
@@ -759,7 +759,7 @@ Post Threading
 
 ~~~~ xml
 <entry xmlns="http://www.w3.org/2005/Atom">
-  
+
   <!-- This entry is a comment on the post with ID "original-post" -->
   <in-reply-to xmlns="http://purl.org/syndication/thread/1.0" ref="original-post"/>
 </entry>
@@ -844,7 +844,7 @@ GET /alice@example.com/content/posts
   <entry>
     <id>foo</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-06-01T12:00:00Z</published>
@@ -853,7 +853,7 @@ GET /alice@example.com/content/posts
   <entry>
     <id>bar</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-05-31T12:00:00Z</published>
@@ -862,7 +862,7 @@ GET /alice@example.com/content/posts
   <entry>
     <id>baz</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-05-30T12:00:00Z</published>
@@ -889,7 +889,7 @@ Content-Type: application/atom+xml
   <entry>
     <id>foo</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-06-01T12:00:00Z</published>
@@ -913,7 +913,7 @@ Content-Type: application/atom+xml
   <entry>
     <id>bar</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-05-31T12:00:00Z</published>
@@ -922,7 +922,7 @@ Content-Type: application/atom+xml
   <entry>
     <id>baz</id>
     <author>
-      <name>alice@example.com</name> 
+      <name>alice@example.com</name>
       <id>acct:alice@example.com</id>
     </author>
     <published>2012-05-30T12:00:00Z</published>
@@ -1041,7 +1041,7 @@ Content-Type: application/atom+xml
 <entry xmlns="http://www.w3.org/2005/Atom">
   <id>baz</id>
   <author>
-    <name>alice@example.com</name> 
+    <name>alice@example.com</name>
     <id>acct:alice@example.com</id>
   </author>
   <published>2012-05-30T12:00:00Z</published>
@@ -1133,7 +1133,7 @@ Content-Type: application/json
   "creation_date": "2012-05-30",
   "access_model": "whitelist",
   "channel_type": "personal",
-  "default_affiliation": "publisher" 
+  "default_affiliation": "publisher"
 }
 ~~~~
 
@@ -1384,7 +1384,7 @@ Media
 
 client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP: auth request with token 
+API server->Media server: HTTP: auth request with token
 Media server->API server: XMPP: "dial-back" to confirm
 Note right of Media server: XEP-0070
 Note right of API server: checking request origin
@@ -1498,11 +1498,11 @@ GET https://api.example.com/channel@topics.domain.com/media
 |-| JSON POST= upload a new item to **channel@topics.domain.com**
 
 ~~~~ javascript
-POST {"filename": "testimage.jpg", 
-      "title": "Test Image", 
-      "description": "My test image", 
-      "content-type": "image/jpeg", 
-      "data": image} 
+POST {"filename": "testimage.jpg",
+      "title": "Test Image",
+      "description": "My test image",
+      "content-type": "image/jpeg",
+      "data": image}
       https://api.example.com/channel@topics.domain.com/media
 ~~~~
 
@@ -1532,7 +1532,7 @@ POST {"filename": "testimage.jpg",
 
 client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP: auth request with token 
+API server->Media server: HTTP: auth request with token
 Media server->API server: XMPP: asks for request confirmation
 Note right of Media server: XEP-0070
 Note right of API server: checking request origin
@@ -1599,9 +1599,9 @@ GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6r
 :   update the media information
 
 ~~~~ javascript
-POST {"filename": "newname.jpg", 
-      "title": "New Title", 
-      "description": "New description", 
+POST {"filename": "newname.jpg",
+      "title": "New Title",
+      "description": "New description",
       https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
 ~~~~
 
@@ -1643,7 +1643,7 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 
 client->API server: HTTP: request
 Note right of API server: token generation
-API server->Media server: HTTP: auth request with token 
+API server->Media server: HTTP: auth request with token
 Media server->API server: XMPP: asks for request confirmation
 Note right of Media server: XEP-0070
 Note right of API server: checking request origin
@@ -1709,11 +1709,11 @@ Examples
 <tabber> JSON PUT= upload a new avatar
 
 ~~~~ javascript
-PUT {"filename": "avatar.jpg", 
-      "title": "My New Avatar", 
-      "description": "My brand new avatar", 
-      "content-type": "image/jpeg", 
-      "data": image} 
+PUT {"filename": "avatar.jpg",
+      "title": "My New Avatar",
+      "description": "My brand new avatar",
+      "content-type": "image/jpeg",
+      "data": image}
       https://api.example.com/alice@domain.com/media/avatar
 ~~~~
 
@@ -2436,7 +2436,7 @@ POST /account
 {
   "username": "alice@shakespeare.lit",
   "password": "pass123",
-  "email": "alice@email.com" 
+  "email": "alice@email.com"
 }
 ~~~~
 
@@ -2492,7 +2492,7 @@ Example
 POST /match_contacts
 
 {
-  "mine": ["0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b"], 
+  "mine": ["0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b"],
   "others": ["023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17",   "bcee94d395fe9cd76dfae390e006a98032144fb48dc8181448c4cd192ec4b75c"]
 }
 ~~~~
