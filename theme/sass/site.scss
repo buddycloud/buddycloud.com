@@ -2,8 +2,16 @@
 
 $primary-color: #2DAEBF;
 
-// contact icons
+dd {
+  margin-bottom: .5em;
+}
+
+.contact-page dd {
+  margin-bottom: .875em;
+}
+// contact icons from home
 .contact {
+
   a {
     display: block;
     float: left;

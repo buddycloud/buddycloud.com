@@ -19,6 +19,9 @@
     For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
       REST API</a>.
   </p>
+
+  <hr />
+
   <h1>Get Setup</h1>
   <div class="bs-example">
     <p>Simply add the following to your pages:</p>
@@ -40,6 +43,9 @@ socket.on('open', function(data){
 })</code>
       </pre>
   </div>
+
+  <hr />
+
   <h1>Create a user</h1>
   <div class="bs-example">
     <p>Log in as the user (create it if it doesn't exist)</p>
@@ -80,8 +86,14 @@ socket.on('open', function(data){
 )</code>
     </pre>
   </div>
+
+  <hr />
+
   <h1>Create a topic channel</h1>
   <p>Topic channels have multiple users that can follow and post to them</p>
+
+  <hr />
+
   <h2>Create</h2>
   <p>Topic channels are shared channels that others can post to.</p>
   <div class="bs-example">
@@ -102,6 +114,9 @@ socket.on('open', function(data){
 )</code>
 </pre>
   </div>
+
+  <hr />
+
   <h2>Post content</h2>
   <div class="bs-example">
     <p>
@@ -133,6 +148,9 @@ socket.on('open', function(data){
     <code>id</code>
     containing the ID of the new post.
   </p>
+
+  <hr />
+
   <h1>Fetch Posts</h1>
   <p>Pre-populate your app with existing posts. New posts will arrive
     automatically</p>
@@ -157,6 +175,9 @@ socket.on('open', function(data){
 )</code>
 </pre>
   </div>
+
+  <hr />
+
   <h1>Realtime events</h1>
   <div class="bs-example">
     <p>Tell the server that you are online and want to start receiving new
@@ -167,6 +188,9 @@ socket.on('open', function(data){
       <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
     </pre>
   </div>
+
+  <hr />
+
   <h1>Demo</h1>
   <p>You can play with Buddycloud using XMPP-FTW.</p>
   <p>

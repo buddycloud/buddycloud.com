@@ -11,6 +11,8 @@ The buddycloud HTTP API presents a simple way to access buddycloud
 channels through a REST-like interface. It is thought as an alternative
 to buddycloud's [XMPP interface](XMPP XEP "wikilink").
 
+---
+
 <!---
 Current used diagrams images:
 
@@ -50,6 +52,8 @@ Tools for experiments
 :   An online-tool which can be helpful for experiments with the API:
     [apigee](https://apigee.com/console/others)
 
+---
+
 Finding the API server
 ======================
 
@@ -70,6 +74,8 @@ _buddycloud-api._tcp.EXAMPLE.COM.         IN TXT "v=1.0" "host=buddycloud.EXAMPL
 This tells a client that any API calls for `example.com` should be made
 against `https://buddycloud.example.com:443/api` </tabber>
 
+---
+
 Authenticating
 ==============
 
@@ -79,6 +85,8 @@ The username should be a qualified username, like *user@example.com*.
 Note that only users belonging to the API server's "home" domain are
 accepted. (You cannot authenticate as *somebody@domain1.com* at the API
 server of *domain2.net*.)
+
+---
 
 Content Types
 =============
@@ -122,6 +130,8 @@ replyTo
     comments.
 
 A JSON channel node feed is simply an array of such item objects.
+
+---
 
 Permissions
 ===========
@@ -410,6 +420,8 @@ Visibility
 </table>
 </div>
 
+---
+
 Changes
 -------
 
@@ -689,6 +701,8 @@ Changes
 </table>
 </div>
 
+---
+
 API Endpoints
 =============
 
@@ -704,29 +718,29 @@ API server->Buddycloud server: XMPP request
 Buddycloud server-->API server: XMPP response
 API server-->client: HTTP response
 
-Description
+#### Description
 :   Receives or posts to a channel node, which represents a stream of
     channel content. Every channel has at least a **posts** node, which
     holds all posts published in the channel. Other types of channel
     nodes such as *geoloc* (location information) and *status* will be
     added in the future.
 
-Content Types
+#### Content Types
 :   Atom *(application/atom+xml)*
 :   JSON *(application/json)*
 
-Methods
+#### Methods
 :   **GET** - Retrieves a channel node's content as Atom feed.
 :   **POST** - Adds an Atom entry to the node. The created item's URL is
     returned in the response's *Location* header.
 
-Parameters
+#### Parameters
 :   **max** *(optional)* - The maximum number of returned entries. Only
     allowed for GET.
 :   **after** *(optional)* - Return only entries older than the entry
     with the specified ID. Only allowed for GET.
 
-Responses
+#### Responses
 :   **200 OK** if GET succeeds.
 :   **201 Created** if POST succeeds.
 :   **400 Bad Request** if an invalid Atom entry is posted.
@@ -736,11 +750,12 @@ Responses
     the channel node (e.g. if the channel is private).
 :   **404 Not Found** if the specified channel or node does not exist.
 
-Post Threading
-:   For items representing comments, the corresponding Atom entries
-    include a `replyTo` (JSON) or `<in-reply-to/>` (XML) element as
-    specified in the [Atom Threading
-    Extensions](http://www.ietf.org/rfc/rfc4685.txt)
+#### Post Threading
+
+For items representing comments, the corresponding Atom entries
+include a `replyTo` (JSON) or `<in-reply-to/>` (XML) element as
+specified in the [Atom Threading
+Extensions](http://www.ietf.org/rfc/rfc4685.txt)
 
 <tabber> JSON= uses `replyTo`. For example:
 
@@ -967,6 +982,8 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 ~~~~
 
 </tabber>
+
+---
 
 ### /:channel/content/:item/
 
@@ -1233,6 +1250,8 @@ Content-Type: application/json
 
 </tabber>
 
+---
+
 ### /:channel/subscribers/:node/approve
 
 client->API server: HTTP request
@@ -1307,6 +1326,8 @@ Content-Type: application/json
 ~~~~
 
 </tabber>
+
+---
 
 ### /subscribed
 
@@ -1528,6 +1549,8 @@ POST {"filename": "testimage.jpg",
 
 </tabber>
 
+---
+
 ### /:channel/media/:media
 
 client->API server: HTTP: request
@@ -1638,6 +1661,8 @@ DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQryg
 ~~~~
 
 </tabber>
+
+---
 
 ### /:channel/media/avatar
 
@@ -1801,6 +1826,8 @@ POST /talesofalice@topics.example.com
 ~~~~
 
 </tabber>
+
+---
 
 ### /:channel/similar
 
@@ -2185,6 +2212,8 @@ Content-Type: application/json
 
 </tabber>
 
+---
+
 ### /recommendations
 
 client->API server: request
@@ -2356,6 +2385,8 @@ Content-Type: application/json
 
 </tabber>
 
+---
+
 ### /account/pw/reset
 
 client->API server: HTTP request
@@ -2397,6 +2428,8 @@ Content-Type: application/json
 ~~~~
 
 </tabber>
+
+---
 
 ### /account
 

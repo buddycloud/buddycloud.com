@@ -1,26 +1,14 @@
-/* line 7, ../../sass/site.scss */
-.bs-example img {
-  border: 1px solid #e6e6e6;
+/* line 5, ../../sass/site.scss */
+dd {
+  margin-bottom: .5em;
 }
 
-@media (min-width: 768px) {
-  /* line 13, ../../sass/site.scss */
-  .bs-sidebar {
-    padding-left: 0;
-  }
-}
-/* line 20, ../../sass/site.scss */
-.bs-sidebar .nav > li > a:hover, .bs-sidebar .nav > li > a:focus {
-  color: #2daebf;
-  border-left-color: transparent;
-}
-/* line 29, ../../sass/site.scss */
-.bs-sidebar .nav > .active > a, .bs-sidebar .nav > .active:hover > a, .bs-sidebar .nav > .active:focus > a {
-  color: #2daebf;
-  border-left-color: transparent;
+/* line 9, ../../sass/site.scss */
+.contact-page dd {
+  margin-bottom: .875em;
 }
 
-/* line 39, ../../sass/site.scss */
+/* line 15, ../../sass/site.scss */
 .contact a {
   display: block;
   float: left;
@@ -37,35 +25,35 @@
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
-/* line 52, ../../sass/site.scss */
+/* line 28, ../../sass/site.scss */
 .contact a:hover {
   background-color: #333;
 }
-/* line 57, ../../sass/site.scss */
+/* line 33, ../../sass/site.scss */
 .contact .blog {
   background-image: url("../img/contact/blog.svg");
 }
-/* line 61, ../../sass/site.scss */
+/* line 37, ../../sass/site.scss */
 .contact .email {
   background-image: url("../img/contact/email.svg");
 }
-/* line 65, ../../sass/site.scss */
+/* line 41, ../../sass/site.scss */
 .contact .twitter {
   background-image: url("../img/contact/twitter.svg");
 }
-/* line 69, ../../sass/site.scss */
+/* line 45, ../../sass/site.scss */
 .contact .linkedin {
   background-image: url("../img/contact/linkedin.svg");
 }
-/* line 73, ../../sass/site.scss */
+/* line 49, ../../sass/site.scss */
 .contact .github {
   background-image: url("../img/contact/github.svg");
 }
-/* line 77, ../../sass/site.scss */
+/* line 53, ../../sass/site.scss */
 .contact .buddycloud {
   background-image: url("../img/contact/buddycloud.svg");
 }
-/* line 81, ../../sass/site.scss */
+/* line 57, ../../sass/site.scss */
 .contact .googleplus {
   background-image: url("../img/contact/googleplus.svg");
 }
