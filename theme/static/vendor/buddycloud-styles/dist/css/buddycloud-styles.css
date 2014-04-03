@@ -1942,17 +1942,26 @@ body {
 }
 
 /* line 8, ../../src/sass/_general.scss */
+a {
+  outline: 0;
+}
+/* line 12, ../../src/sass/_general.scss */
+a:active, a:focus {
+  outline: 0;
+}
+
+/* line 17, ../../src/sass/_general.scss */
 pre {
   border-radius: 0;
 }
 
-/* line 12, ../../src/sass/_general.scss */
+/* line 21, ../../src/sass/_general.scss */
 code {
   color: #2daebf;
   background-color: rgba(45, 174, 191, 0.075);
 }
 
-/* line 17, ../../src/sass/_general.scss */
+/* line 26, ../../src/sass/_general.scss */
 img {
   max-width: 100%;
 }
@@ -2081,41 +2090,42 @@ ul.list-inline > li:before {
 /* line 6, ../../src/sass/_buttons.scss */
 .btn {
   border: none;
+  background-color: #e6e6e6;
 }
 
-/* line 11, ../../src/sass/_buttons.scss */
+/* line 12, ../../src/sass/_buttons.scss */
 .open .dropdown-toggle.btn-default, .btn-default {
   background-color: #e6e6e6;
 }
 
-/* line 25, ../../src/sass/_buttons.scss */
+/* line 26, ../../src/sass/_buttons.scss */
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
   background-color: #cccccc;
 }
-/* line 30, ../../src/sass/_buttons.scss */
+/* line 31, ../../src/sass/_buttons.scss */
 .btn-default[disabled="disabled"], .btn-default.disabled {
   background-color: #e6e6e6;
 }
 
-/* line 36, ../../src/sass/_buttons.scss */
+/* line 37, ../../src/sass/_buttons.scss */
 .open .dropdown-toggle.btn-primary, .btn-primary {
   background-color: #2daebf;
 }
 
-/* line 50, ../../src/sass/_buttons.scss */
+/* line 51, ../../src/sass/_buttons.scss */
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
   background-color: #2796a5;
 }
-/* line 55, ../../src/sass/_buttons.scss */
+/* line 56, ../../src/sass/_buttons.scss */
 .btn-primary[disabled="disabled"], .btn-primary.disabled {
   background-color: #2daebf;
 }
 
-/* line 61, ../../src/sass/_buttons.scss */
+/* line 62, ../../src/sass/_buttons.scss */
 .btn-link {
   color: #2daebf;
 }
-/* line 67, ../../src/sass/_buttons.scss */
+/* line 68, ../../src/sass/_buttons.scss */
 .btn-link:hover, .btn-link:focus, .btn-link:active, .btn-link.active {
   color: #2796a5;
 }

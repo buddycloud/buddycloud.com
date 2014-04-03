@@ -18,7 +18,7 @@ $body.scrollspy({
 $body.on('click', '.bs-docs-sidebar a', function (e) {
   setTimeout(function() {
     $window.scrollTop($window.scrollTop() - 65)
-  }, 1);
+  }, 10);
 })
 
 $window.on('load', function () {

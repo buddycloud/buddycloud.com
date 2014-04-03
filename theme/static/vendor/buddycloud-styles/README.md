@@ -14,6 +14,6 @@ Then add the stylesheets and scripts to the page:
 
 ```html
 <script src="{{ bower directory }}/jquery/dist/jquery.min.js"></script>
-<script src="{{ bower directory }}/bootstrap/dist/css/bootstrap.min.js"></script>
+<script src="{{ bower directory }}/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{ bower directory }}/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
 ```
