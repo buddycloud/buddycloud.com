@@ -28,7 +28,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-03-16 20:12:37 +0000</string>
+	<string>2014-04-02 07:24:39 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -907,7 +907,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 500}, {140, 20}}</string>
+					<string>{{680, 500}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -985,7 +985,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 350}, {140, 20}}</string>
+					<string>{{680, 350}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1063,7 +1063,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 310}, {140, 20}}</string>
+					<string>{{680, 310}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1141,7 +1141,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 270}, {140, 20}}</string>
+					<string>{{680, 270}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1221,7 +1221,7 @@
 					<key>AllowConnections</key>
 					<string>NO</string>
 					<key>Bounds</key>
-					<string>{{680, 230}, {140, 20}}</string>
+					<string>{{680, 230}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1312,7 +1312,7 @@
 					<key>AllowConnections</key>
 					<string>NO</string>
 					<key>Bounds</key>
-					<string>{{680, 460}, {140, 20}}</string>
+					<string>{{680, 460}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1403,7 +1403,7 @@
 					<key>AllowConnections</key>
 					<string>NO</string>
 					<key>Bounds</key>
-					<string>{{680, 420}, {140, 20}}</string>
+					<string>{{680, 420}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1492,7 +1492,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 390}, {140, 20}}</string>
+					<string>{{680, 390}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1570,7 +1570,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 200}, {140, 20}}</string>
+					<string>{{680, 200}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1659,7 +1659,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 160}, {140, 20}}</string>
+					<string>{{680, 160}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1748,7 +1748,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{680, 120}, {140, 20}}</string>
+					<string>{{680, 120}, {200, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2503,7 +2503,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 default role}</string>
+\f0\fs26 \cf1 channel default role}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -2583,7 +2583,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 access model}</string>
+\f0\fs26 \cf1 channel access model}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -3129,7 +3129,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 channel metadata}</string>
+\f0\fs26 \cf1 metadata}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -3311,7 +3311,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\fs26 \cf1 pub-sub nodes}</string>
+\f0\fs26 \cf1 publish-subscribe}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -5844,7 +5844,7 @@
 					<key>Points</key>
 					<array>
 						<string>{250, 390}</string>
-						<string>{300, 480}</string>
+						<string>{300, 470}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5885,7 +5885,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{300, 460}, {180, 40}}</string>
+					<string>{{300, 450}, {180, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -18718,13 +18718,13 @@
 		<key>BottomSlabHeight</key>
 		<real>275</real>
 		<key>CurrentSheet</key>
-		<integer>11</integer>
+		<integer>2</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{0, 4}, {1280, 748}}</string>
+		<string>{{0, 30}, {1280, 748}}</string>
 		<key>ShowInfo</key>
-		<true/>
+		<false/>
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
@@ -18734,7 +18734,7 @@
 		<key>SmallIcons</key>
 		<true/>
 		<key>VisibleRegion</key>
-		<string>{{-79, 0}, {718, 606}}</string>
+		<string>{{-229, 0}, {1019, 606}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
