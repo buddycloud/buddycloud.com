@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% set active_page = page.show_as_selected|default(page.slug) %}
+{% block title %}{{ page.title }}{% endblock %}
+
+{% if page.table_of_contents|default("false") == "true" %}
+  {% set toc_info = page.content|extract_toc_info(active_page) %}
+{% endif %}
+{% block table_of_contents %}
+    {% if page.table_of_contents|default("false") == "true" %}
+    <div class="bs-docs-sidebar hidden-print affix-top" role="complementary">
+  {{ toc_info|create_toc }}
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% if active_page != "contact" %}
+    <h1 class="page-header" id="main-title">{{ page.header | default(page.title) }}</h1>
+  {% endif %}
+
+    <div class="bs-docs-section">
+  {% if page.table_of_contents|default("false") == "true" %}
+    {{ page.content|add_toc_hooks(toc_info, active_page) }}
+  {% else %}
+    {{ page.content }}
+  {% endif %}
+    </div>
+{% endblock %}
+
+{% block morescripts %}
+    {% if active_page == "get-started" %}
+<!--    <script type="text/javascript" src="https://xmpp-ftw.jit.su/scripts/primus.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/theme/js/xmpp-ftw-demo.js"></script>-->
+    {% endif %}
+{% endblock %}

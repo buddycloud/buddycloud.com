@@ -40,13 +40,13 @@ class TableOfContents:
 	def consume_existing_hook(text):
 
 		hook = TableOfContents.parse_hook_from_text(text)
-		hook += "_"	
+		hook += "_"
 		stub_hooks = map(lambda x: x[:x.rfind("_")], TableOfContents.hooks_taken)
 
 		if hook[:hook.rfind("_")] in stub_hooks:
-		
+
 			hook_at = stub_hooks.index(hook[:hook.rfind("_")])
-		
+
 		TableOfContents.hooks_taken.remove(hook)
 		return hook
 
@@ -54,7 +54,7 @@ class TableOfContents:
 	def extractTableOfContentsInfo(content, active_page):
 
 		hooks_taken = []
-		
+
 		try:
 			root = ElementTree.fromstring("<root>"+content+"</root>")
 		except ElementTree.ParseError as e:
@@ -105,12 +105,12 @@ class TableOfContents:
 			toc_html = ""
 			return toc_html
 		elif ( len(toc_info) == 1 ):
-			toc_html = "<ul class='nav bs-sidenav'><li class='active'><a href='#%s' data-scroll data-url='true'>%s</a></li></ul>"
+			toc_html = "<ul class='nav bs-docs-sidenav'><li class='active'><a href='#%s' data-scroll data-url>%s</a></li></ul>"
 			toc_html %= (toc_info[0]['hook'], toc_info[0]['text'])
 			return toc_html
 		else:
-			a_html = "<a href='#%s' data-scroll data-url='true'>%s</a>"
-			toc_html = "<ul class='nav bs-sidenav'>"
+			a_html = "<a href='#%s' data-scroll data-url>%s</a>"
+			toc_html = "<ul class='nav bs-docs-sidenav'>"
 			toc_html += "<li class='active'>"
 			toc_html += a_html % (toc_info[0]['hook'], toc_info[0]['text'])
 			last_tag = toc_info[0]['tag']
@@ -132,7 +132,7 @@ class TableOfContents:
 
 			toc_html += "</ul>"
 			return toc_html
-	
+
 	@staticmethod
 	def addTableOfContentsHooks(content, toc_info, active_page):
 
@@ -164,5 +164,5 @@ class TableOfContents:
 		process(root)
 
 		content = ElementTree.tostring(root, method="html")
-		content = content.replace("<root>", "").replace("</root>", "") 
+		content = content.replace("<root>", "").replace("</root>", "")
 		return content
