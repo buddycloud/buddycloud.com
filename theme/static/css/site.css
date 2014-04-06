@@ -1,10 +1,131 @@
-/* line 1, ../../sass/_general.scss */
+/* line 1, ../../sass/pages/general/_diagrams.scss */
+.js_sequence_diagram {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 7, ../../sass/pages/general/_diagrams.scss */
+rect[fill=none] {
+  stroke-width: 2px;
+}
+
+/* line 11, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-primary {
+  stroke: #2DAEBF;
+  fill: #2DAEBF;
+}
+
+/* line 16, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-secondary {
+  stroke: #A6A6A6;
+  fill: #A6A6A6;
+}
+
+/* line 21, ../../sass/pages/general/_diagrams.scss */
+rect[fill='#ffffff'] {
+  opacity: 0;
+  stroke-width: 2px;
+}
+
+/* line 26, ../../sass/pages/general/_diagrams.scss */
+path[class='seq-diag-primary'], path[class='seq-diag-secondary'] {
+  stroke-width: 2.6px;
+}
+
+/* line 30, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-primary tspan {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  fill: white;
+  stroke: white;
+  stroke-width: 0px;
+  stroke-width: -0.4px;
+}
+
+/* line 39, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-secondary tspan {
+  font-family: 'Open Sans';
+  fill: white;
+  stroke: white;
+  stroke-width: 0px;
+}
+
+/* line 47, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-link,
+.seq-diag-note {
+  opacity: 0.5;
+  stroke-opacity: 0.5;
+}
+/* line 51, ../../sass/pages/general/_diagrams.scss */
+.seq-diag-link tspan,
+.seq-diag-note tspan {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* line 3, ../../sass/pages/_general.scss */
 dd {
   margin-bottom: .5em;
 }
 
-/* line 3, ../../sass/_home.scss */
-.contact a {
+/* line 3, ../../sass/pages/_home.scss */
+.index {
+  padding-top: 3em;
+  /* = = = = = = = = = = = = = = = = = = = = */
+  /* jumbotron */
+  /* = = = = = = = = = = = = = = = = = = = = */
+  /* Description */
+}
+/* line 1, ../../sass/pages/home/_features.scss */
+.index .background-features {
+  background-color: #2DAEBF;
+}
+/* line 5, ../../sass/pages/home/_features.scss */
+.index #features {
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 2em;
+}
+/* line 11, ../../sass/pages/home/_features.scss */
+.index #features h2 {
+  font-weight: 600;
+  border: none;
+  margin: 1em 0 .5em 0;
+}
+/* line 17, ../../sass/pages/home/_features.scss */
+.index #features p {
+  font-weight: 400;
+}
+/* line 21, ../../sass/pages/home/_features.scss */
+.index #features p a {
+  color: #fff;
+  font-weight: 600;
+}
+/* line 1, ../../sass/pages/home/_footer.scss */
+.index .background-contact {
+  background-color: #38434C;
+}
+/* line 5, ../../sass/pages/home/_footer.scss */
+.index #contact {
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 3em;
+}
+/* line 11, ../../sass/pages/home/_footer.scss */
+.index #contact ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 2;
+}
+/* line 18, ../../sass/pages/home/_footer.scss */
+.index #contact a {
+  color: #fff;
+}
+/* line 24, ../../sass/pages/home/_footer.scss */
+.index .contact a {
   display: block;
   float: left;
   margin-right: 1em;
@@ -20,107 +141,210 @@ dd {
   -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
-/* line 16, ../../sass/_home.scss */
-.contact a:hover {
+/* line 37, ../../sass/pages/home/_footer.scss */
+.index .contact a:hover {
   background-color: #333;
 }
-/* line 21, ../../sass/_home.scss */
-.contact .blog {
+/* line 42, ../../sass/pages/home/_footer.scss */
+.index .contact .blog {
   background-image: url("../img/contact/blog.svg");
 }
-/* line 25, ../../sass/_home.scss */
-.contact .email {
+/* line 46, ../../sass/pages/home/_footer.scss */
+.index .contact .email {
   background-image: url("../img/contact/email.svg");
 }
-/* line 29, ../../sass/_home.scss */
-.contact .twitter {
+/* line 50, ../../sass/pages/home/_footer.scss */
+.index .contact .twitter {
   background-image: url("../img/contact/twitter.svg");
 }
-/* line 33, ../../sass/_home.scss */
-.contact .linkedin {
+/* line 54, ../../sass/pages/home/_footer.scss */
+.index .contact .linkedin {
   background-image: url("../img/contact/linkedin.svg");
 }
-/* line 37, ../../sass/_home.scss */
-.contact .github {
+/* line 58, ../../sass/pages/home/_footer.scss */
+.index .contact .github {
   background-image: url("../img/contact/github.svg");
 }
-/* line 41, ../../sass/_home.scss */
-.contact .buddycloud {
+/* line 62, ../../sass/pages/home/_footer.scss */
+.index .contact .buddycloud {
   background-image: url("../img/contact/buddycloud.svg");
 }
-/* line 45, ../../sass/_home.scss */
-.contact .googleplus {
+/* line 66, ../../sass/pages/home/_footer.scss */
+.index .contact .googleplus {
   background-image: url("../img/contact/googleplus.svg");
 }
-
-/* line 1, ../../sass/_contact.scss */
-.contact-page dd {
-  margin-bottom: .875em;
+/* line 1, ../../sass/pages/home/_friends.scss */
+.index .background-friends {
+  background-color: #E5E9EF;
 }
-
-/* line 1, ../../sass/_diagrams.scss */
-.js_sequence_diagram {
-  width: 100%;
-  overflow: hidden;
+/* line 5, ../../sass/pages/home/_friends.scss */
+.index #friends {
+  color: #666;
+  padding: 1em 1em 2em 1em;
+}
+/* line 9, ../../sass/pages/home/_friends.scss */
+.index #friends p {
+  margin: 0;
+  font-weight: 500;
+}
+/* line 14, ../../sass/pages/home/_friends.scss */
+.index #friends div {
+  background-image: url("../img/friends/friends_01.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 16em;
+  margin-right: 2em;
+  opacity: .7;
+}
+@media (min-width: 420px) {
+  /* line 26, ../../sass/pages/home/_friends.scss */
+  .index #friends div {
+    background-image: url("../img/friends/friends_02.png");
+    height: 8em;
+  }
+}
+@media (min-width: 768px) {
+  /* line 33, ../../sass/pages/home/_friends.scss */
+  .index #friends div {
+    background-image: url("../img/friends/friends_04.png");
+    height: 6em;
+  }
+}
+/* line 1, ../../sass/pages/home/_header.scss */
+.index .navbar {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+/* line 4, ../../sass/pages/home/_highlight.scss */
+.index .jumbotron {
+  height: 32em;
+  background-image: url("../img/home/background.jpg");
+  background-position: center bottom;
+  background-size: 275%;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin-bottom: 0;
   position: relative;
 }
-
-/* line 7, ../../sass/_diagrams.scss */
-rect[fill=none] {
-  stroke-width: 2px;
+@media (min-width: 420px) {
+  /* line 4, ../../sass/pages/home/_highlight.scss */
+  .index .jumbotron {
+    background-position: center;
+    background-size: cover;
+  }
+}
+/* line 19, ../../sass/pages/home/_highlight.scss */
+.index .jumbotron h1 {
+  margin-top: 7em;
+  line-height: 1.1;
+  font-size: 1.65em;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 420px) {
+  /* line 19, ../../sass/pages/home/_highlight.scss */
+  .index .jumbotron h1 {
+    margin-top: 8em;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+@media (min-width: 768px) {
+  /* line 19, ../../sass/pages/home/_highlight.scss */
+  .index .jumbotron h1 {
+    margin-top: 5em;
+    font-size: 3em;
+  }
+}
+@media (min-width: 992px) {
+  /* line 19, ../../sass/pages/home/_highlight.scss */
+  .index .jumbotron h1 {
+    font-size: 3.5em;
+    margin-top: 4em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 19, ../../sass/pages/home/_highlight.scss */
+  .index .jumbotron h1 {
+    font-size: 4em;
+    margin-top: 3.5em;
+  }
+}
+/* line 53, ../../sass/pages/home/_highlight.scss */
+.index .container-description {
+  background-color: rgba(22, 26, 29, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 61, ../../sass/pages/home/_highlight.scss */
+.index #description {
+  padding: 1em;
+}
+/* line 64, ../../sass/pages/home/_highlight.scss */
+.index #description p {
+  font-size: 1em;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+/* line 71, ../../sass/pages/home/_highlight.scss */
+.index #description p:first-child {
+  text-align: left;
+  margin-bottom: .5em;
+  max-width: 40em;
+}
+@media (min-width: 768px) {
+  /* line 64, ../../sass/pages/home/_highlight.scss */
+  .index #description p {
+    font-size: 1.25em;
+  }
+}
+/* line 82, ../../sass/pages/home/_highlight.scss */
+.index #description div {
+  text-align: center;
+}
+@media (min-width: 420px) {
+  /* line 82, ../../sass/pages/home/_highlight.scss */
+  .index #description div {
+    text-align: right;
+  }
+}
+/* line 90, ../../sass/pages/home/_highlight.scss */
+.index #description .btn {
+  width: 100%;
+  height: 2.5em;
+  margin: 0;
+  font-size: 1em;
+  padding: 9px 0 0;
+  border: none;
+  background-color: #fff;
+  border-radius: .5em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 420px) {
+  /* line 90, ../../sass/pages/home/_highlight.scss */
+  .index #description .btn {
+    width: 10em;
+  }
+}
+/* line 106, ../../sass/pages/home/_highlight.scss */
+.index #description .btn-primary {
+  background-color: #2DAEBF;
+  top: 7em;
+  margin: 0 0 1em 0;
+}
+@media (min-width: 420px) {
+  /* line 106, ../../sass/pages/home/_highlight.scss */
+  .index #description .btn-primary {
+    margin: 0 1em 0 0;
+  }
 }
 
-/* line 11, ../../sass/_diagrams.scss */
-.seq-diag-primary {
-  stroke: #2DAEBF;
-  fill: #2DAEBF;
-}
-
-/* line 16, ../../sass/_diagrams.scss */
-.seq-diag-secondary {
-  stroke: #A6A6A6;
-  fill: #A6A6A6;
-}
-
-/* line 21, ../../sass/_diagrams.scss */
-rect[fill='#ffffff'] {
-  opacity: 0;
-  stroke-width: 2px;
-}
-
-/* line 26, ../../sass/_diagrams.scss */
-path[class='seq-diag-primary'], path[class='seq-diag-secondary'] {
-  stroke-width: 2.6px;
-}
-
-/* line 30, ../../sass/_diagrams.scss */
-.seq-diag-primary tspan {
-  font-family: 'Open Sans';
-  font-weight: 600;
-  fill: white;
-  stroke: white;
-  stroke-width: 0px;
-  stroke-width: -0.4px;
-}
-
-/* line 39, ../../sass/_diagrams.scss */
-.seq-diag-secondary tspan {
-  font-family: 'Open Sans';
-  fill: white;
-  stroke: white;
-  stroke-width: 0px;
-}
-
-/* line 47, ../../sass/_diagrams.scss */
-.seq-diag-link,
-.seq-diag-note {
-  opacity: 0.5;
-  stroke-opacity: 0.5;
-}
-/* line 51, ../../sass/_diagrams.scss */
-.seq-diag-link tspan,
-.seq-diag-note tspan {
-  font-family: 'Open Sans';
-  font-weight: 600;
-  font-style: italic;
+/* line 1, ../../sass/pages/_contact.scss */
+.contact dd {
+  margin-bottom: .875em;
 }
