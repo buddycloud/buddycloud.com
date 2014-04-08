@@ -43,9 +43,16 @@ eg:
 Recipee ideas
 -------------
 
+- Add chat to your webapp recipe
 - geolocation sharing
 - webrtc calling
 - private dropbox
 - facewall with buddycloud.js
 - meatmap (capture the geoloc, place the captured image onto a map)
 - meatpile (capture the photo, drop it into a pile on the screen)
+- Build a secure "WhatsApp" proof of concept (using GPG and ./public-key node.)
+- Build and open source "Vine video messaging" using open protocols.
+- Create a "meat map" with recorded videos from other people running the demo.
+- Share files using a QR code, upload any file to the QR code (which is actually the API endpoint, or something like that) 
+- Build a public Dropbox. 100% DMCA free. (using the media server)
+- Meatspac.es clone built on buddycloud (it's forkable at https://github.com/meatspaces/meatspace-chat)
