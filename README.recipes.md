@@ -20,18 +20,18 @@ Format
 
 - end result eg:
 ```Build a simple webrtc client that can call your friends```
-- difficultly level: <easy|medium|difficult>
+- difficultly level:
+```<easy|medium|difficult>```
 - ingredients
--- a list of everything needed to start working eg:
-```
-Ingredients:
+a list of everything needed to start working eg:
+```Ingredients:
 - skeleton project
 - jquery
-- npm module x, y anx z
-```
+- npm module x, y anx z```
 - time needed for each step
+```estimated time: 5 minutes```
 - Steps
-(steps should be similar to the format we use in installing buddycloud (http://buddycloud.com/install)- to the point of being mostly copy/paste-able.)
+steps should be similar to the format we use in installing buddycloud (http://buddycloud.com/install)- to the point of being mostly copy/paste-able.
 eg:
 ```download the skeleton project from...
 unpack the project into <directory>
