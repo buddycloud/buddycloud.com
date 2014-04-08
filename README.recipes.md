@@ -24,12 +24,10 @@ Format
 ```<easy|medium|difficult>```
 - ingredients
 a list of everything needed to start working eg:
-```
-Ingredients:
+```Ingredients:
 - skeleton project
 - jquery
-- npm module x, y anx z
-```
+- npm module x, y anx z```
 - time needed for each step
 ```estimated time: 5 minutes```
 - Steps
