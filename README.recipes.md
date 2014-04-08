@@ -36,3 +36,11 @@ eg:
 ```download the skeleton project from...
 unpack the project into <directory>
 ```
+
+Recipee ideas
+-------------
+
+- geolocation sharing
+- webrtc calling
+- private dropbox
+- facewall with buddycloud.js
