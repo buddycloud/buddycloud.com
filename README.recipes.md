@@ -47,3 +47,5 @@ Recipee ideas
 - webrtc calling
 - private dropbox
 - facewall with buddycloud.js
+- meatmap (capture the geoloc, place the captured image onto a map)
+- meatpile (capture the photo, drop it into a pile on the screen)
