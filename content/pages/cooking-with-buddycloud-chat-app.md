@@ -81,18 +81,15 @@ Chatting works as follows
 First up, let's register a user
 ~~~~ javascript
 socket.send(
-  'xmpp.register.get',
-    { "to": "buddycloud.org"
-    },
-      function(error, data) { console.log(error, data) }
-    )
+// Add code here
+
 ~~~~
 
 We don't have in-band registration working. We need to fix this or offer an API call. 
 
 Once we have a registered users, we need to go-online (which tells the server to start sending us events)
 ~~~~ javascript
-socket...
+// Add code here
 ~~~~
 
 Now we will create our channel for sharing chat messages
