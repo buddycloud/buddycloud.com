@@ -88,7 +88,7 @@ socket.send(
     )
 ~~~~
 
-! We don't have in-band registration working. We need to fix this or offer an API call. 
+We don't have in-band registration working. We need to fix this or offer an API call. 
 
 Once we have a registered users, we need to go-online (which tells the server to start sending us events)
 ~~~~ javascript
@@ -97,18 +97,17 @@ socket...
 
 Now we will create our channel for sharing chat messages
 ~~~~ javascript
-socket.send(
-
+// Add code here
 ~~~~
 
 Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected.
 ~~~~ javascript
-socket.send(
+// Add code here
 ~~~~
 
 now send a message to the chat room
 ~~~~ javascript
-socket.send(
+// Add code here
 ~~~~
 
 Since the chat room is open, it can be viewed on demo.buddycloud.org/<full address>
@@ -117,5 +116,5 @@ Bonus round:
 
 Set the channel to private
 ~~~~ javascript
-socket.send(
+// Add code here
 ~~~~
