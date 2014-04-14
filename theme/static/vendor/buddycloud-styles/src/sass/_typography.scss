@@ -13,6 +13,31 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 600;
 }
 
+h1 {
+  &.main-title,
+  &[id].main-title {
+    margin-top: 0;
+    padding-top: 20px;
+  }
+}
+
+h1[id],
+h2,
+.h2 {
+  margin-top: 58px;
+  padding-top: 0;
+}
+
+h3, .h3 {
+  margin-top: 38px;
+  margin-bottom: 20px;
+}
+
+h4, .h4 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
 a {
   color: $primary-color;
   font-weight: 400;

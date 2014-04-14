@@ -6,7 +6,10 @@
     "Vítor Avelino <contact@vitoravelino.me>"
   ],
   "description": "Bootstrap theme for buddycloud sites",
-  "main": "dist/buddycloud-styles.css",
+  "main": [
+    "dist/css/buddycloud-styles.css",
+    "dist/js/buddycloud-styles.js"
+  ],
   "keywords": [
     "css",
     "framework",

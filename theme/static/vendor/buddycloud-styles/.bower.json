@@ -5,7 +5,10 @@
     "Vítor Avelino <contact@vitoravelino.me>"
   ],
   "description": "Bootstrap theme for buddycloud sites",
-  "main": "dist/buddycloud-styles.css",
+  "main": [
+    "dist/css/buddycloud-styles.css",
+    "dist/js/buddycloud-styles.js"
+  ],
   "keywords": [
     "css",
     "framework",
@@ -23,13 +26,14 @@
     "bootstrap": "3.1.1"
   },
   "homepage": "https://github.com/buddycloud/buddycloud-styles",
-  "_release": "db8176a1ee",
+  "_release": "b20b2fbc49",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "db8176a1eeb5f1832dd3ce4696ad967f84e7dab7"
+    "commit": "b20b2fbc49f678bd157f4745bf30801f9801e477"
   },
   "_source": "git://github.com/buddycloud/buddycloud-styles.git",
   "_target": "*",
-  "_originalSource": "buddycloud/buddycloud-styles"
+  "_originalSource": "buddycloud/buddycloud-styles",
+  "_direct": true
 }

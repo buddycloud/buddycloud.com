@@ -1983,22 +1983,48 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 600;
 }
 
-/* line 16, ../../src/sass/_typography.scss */
+/* line 18, ../../src/sass/_typography.scss */
+h1.main-title, h1[id].main-title {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+/* line 26, ../../src/sass/_typography.scss */
+h1[id],
+h2,
+.h2 {
+  margin-top: 58px;
+  padding-top: 0;
+}
+
+/* line 31, ../../src/sass/_typography.scss */
+h3, .h3 {
+  margin-top: 38px;
+  margin-bottom: 20px;
+}
+
+/* line 36, ../../src/sass/_typography.scss */
+h4, .h4 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+/* line 41, ../../src/sass/_typography.scss */
 a {
   color: #2daebf;
   font-weight: 400;
 }
-/* line 20, ../../src/sass/_typography.scss */
+/* line 45, ../../src/sass/_typography.scss */
 a:hover {
   color: #2daebf;
 }
 
-/* line 25, ../../src/sass/_typography.scss */
+/* line 50, ../../src/sass/_typography.scss */
 p {
   margin: 0 0 1em;
 }
 
-/* line 32, ../../src/sass/_typography.scss */
+/* line 57, ../../src/sass/_typography.scss */
 code,
 kbd,
 pre,
@@ -2007,7 +2033,7 @@ samp {
   font-weight: 500;
 }
 
-/* line 37, ../../src/sass/_typography.scss */
+/* line 62, ../../src/sass/_typography.scss */
 mark {
   background-color: #2daebf;
   color: white;
@@ -2015,36 +2041,36 @@ mark {
   font-weight: 400;
 }
 
-/* line 44, ../../src/sass/_typography.scss */
+/* line 69, ../../src/sass/_typography.scss */
 small {
   font-weight: 500;
   letter-spacing: 0.05em;
 }
 
-/* line 49, ../../src/sass/_typography.scss */
+/* line 74, ../../src/sass/_typography.scss */
 dd {
   margin-bottom: 0.875em;
 }
 
-/* line 55, ../../src/sass/_typography.scss */
+/* line 80, ../../src/sass/_typography.scss */
 blockquote,
 .blockquote-reverse {
   border-color: #2daebf;
 }
 
-/* line 60, ../../src/sass/_typography.scss */
+/* line 85, ../../src/sass/_typography.scss */
 blockquote footer,
 blockquote footer cite {
   font-style: italic;
   color: inherit;
 }
 
-/* line 66, ../../src/sass/_typography.scss */
+/* line 91, ../../src/sass/_typography.scss */
 ul > li {
   list-style: none;
 }
 
-/* line 70, ../../src/sass/_typography.scss */
+/* line 95, ../../src/sass/_typography.scss */
 ul > li:before {
   content: ' ';
   width: .5em;
@@ -2059,14 +2085,14 @@ ul > li:before {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* line 80, ../../src/sass/_typography.scss */
+/* line 105, ../../src/sass/_typography.scss */
 ol > li {
   position: relative;
   list-style: none;
   counter-increment: list-order;
 }
 
-/* line 86, ../../src/sass/_typography.scss */
+/* line 111, ../../src/sass/_typography.scss */
 ol > li:before {
   margin: 0 0 0 -1em;
   padding: 0 .5em 0 0;
@@ -2077,7 +2103,7 @@ ol > li:before {
   font-weight: 700;
 }
 
-/* line 98, ../../src/sass/_typography.scss */
+/* line 123, ../../src/sass/_typography.scss */
 .nav li:before,
 ul.list-unstyled > li:before,
 ul.list-inline > li:before {

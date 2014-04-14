@@ -136,6 +136,8 @@ A JSON channel node feed is simply an array of such item objects.
 Permissions
 ===========
 
+---
+
 Visibility
 ----------
 
@@ -705,6 +707,8 @@ Changes
 
 API Endpoints
 =============
+
+---
 
 Channel Content
 ------------

@@ -449,7 +449,11 @@ dd {
   }
 }
 
-/* line 1, ../../sass/pages/_contact.scss */
+/* line 2, ../../sass/pages/_contact.scss */
+.contact h2 {
+  margin-top: 20px;
+}
+/* line 6, ../../sass/pages/_contact.scss */
 .contact dd {
   margin-bottom: .875em;
 }
