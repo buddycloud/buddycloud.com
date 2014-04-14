@@ -9,7 +9,7 @@ table_of_contents: false
 Aim
 ---
 
-Add chat to any webp in 10 minutes
+Add chat to a web app in 10 minutes
 
 Ingredients
 -----------
@@ -25,6 +25,11 @@ Easy
 Please ask if you get stuck
 -  reach-a-developer@buddycloud.com
 -  [@buddycloud](https://twitter.com/buddycloud)
+
+See it in action
+----------------
+
+Link to project working in http://codepen.io/ 
 
 Architecture
 ------------
@@ -80,9 +85,7 @@ Chatting works as follows
 
 First up, let's register a user
 ~~~~ javascript
-socket.send(
-// Add code here
-
+// Add code here (this will need to happen against the Buddycloud API since inband registation is mostly deprecated (and turned off on buddycloud servers to prevent spam)
 ~~~~
 
 We don't have in-band registration working. We need to fix this or offer an API call. 
