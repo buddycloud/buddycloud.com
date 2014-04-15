@@ -35,7 +35,7 @@ Architecture
 ------------
 
 - the chat client will use [Primus](primus.io) for messaging over a websocket (with fallback to long polling)
-- the XMPP-ftw service takes JSON from the browser and turns it into XMPP messages
+- the [XMPP-FTW](https://xmpp-ftw.jit.su) service takes JSON from the browser and turns it into XMPP messages
 - XMPP messages are "handed off" to the XMPP server for realtime delivery
 
 ```
@@ -73,8 +73,8 @@ git clone https://github.com/buddycloud/skeleton-project.git
 
 Then we get all the npm modules installed and start npm
 ~~~~ bash
-npm -i .    # installes npm dependencies
-npm start   # starts npm listening on http://127.0.0.1:3000
+npm i .    # installes npm dependencies
+npm start  # starts npm listening on http://127.0.0.1:3000
 ~~~~
 
 Chatting works as follows
