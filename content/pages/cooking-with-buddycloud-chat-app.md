@@ -14,8 +14,9 @@ Add chat to a web app in 10 minutes
 Ingredients
 -----------
 
-- npm
 - web browser
+- Site running Buddycloud
+- [Primus](http://primus.io/) (the glue-without-the-goo that looks after websocket and long polling connection handling)
 - text editor
 
 Difficulty
