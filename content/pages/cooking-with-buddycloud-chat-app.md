@@ -84,7 +84,7 @@ Chatting works as follows
 - Other users are then automatically notified of new messages
 - Users can post back to the channel
 
-First up, let's register a user
+First up, let's register a user by issuing a POST request to the HTTP API /account endpoint:
 ~~~~ javascript
 var apiLocation = "https://demo.buddycloud.org/api";
 var domain = "@buddycloud.org";
@@ -113,17 +113,73 @@ $.ajax({
     }
 });
 ~~~~
+If the call fails, we are issuing another call to the API to check whether the usernam is already taken. 
 
-We don't have in-band registration working. We need to fix this or offer an API call. 
+Once we have a registered users, we need to go-online (which tells the server to start sending us events).
 
-Once we have a registered users, we need to go-online (which tells the server to start sending us events)
 ~~~~ javascript
-// Add code here
+function login(jid, password) {
+    socket.send(
+        'xmpp.login',
+        {
+            jid: jid,
+            password: password
+        }
+    );
+};
+
+socket.on('xmpp.connection', function(data) {
+    console.log('Connected as', data.jid);
+    discoverBuddycloudServer();
+});
 ~~~~
 
-Now we will create our channel for sharing chat messages
+As you have seen above, once connected you must discover the Buddycloud server:
+
+~~~~
+function discoverBuddycloudServer() {
+    socket.send(
+        'xmpp.buddycloud.discover',
+        {}, /* or you may optionally pass a shortcut:     { server: 'channels.buddycloud.org' },*/
+        function(error, data) {
+            if (error) return console.error(error);
+            console.log('Discovered Buddycloud server at', data);
+            createNode();
+        }
+    );
+}
+~~~~
+
+Now we will create our channel for sharing chat messages: it will be ```chat-room@topics.buddycloud.org```
+
 ~~~~ javascript
-// Add code here
+function createNode(){
+    socket.send('xmpp.buddycloud.create',
+    {
+        node : "/user/chat-room@topics.buddycloud.org/chat",
+        options: [
+            { "var": "buddycloud#channel_type", value : "topic" },
+            { "var": "pubsub#title", value : "Chat Topic Channel" },
+            { "var": "pubsub#access_model", value : "open" },
+            { "var": "buddycloud#default_affiliation", value : "publisher" }
+        ]
+    },
+    function(error, data) {
+        console.log('xmpp.buddycloud.create response arrived');
+        if (!error){
+            console.log('Created Chat Room node', data);
+        }
+        else if ("cancel" === error.type &&
+            "conflict" === error.condition){
+                subscribeToNode();
+        }
+        else {
+            console.error(error);
+        }
+        getNewMessagesNotification();
+        sendPresenceToBuddycloudServer();
+    });
+}
 ~~~~
 
 Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected.
