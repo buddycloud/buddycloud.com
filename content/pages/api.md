@@ -710,6 +710,153 @@ API Endpoints
 
 ---
 
+Account
+-------
+
+### /account
+
+client->API server: HTTP request
+API server->XMPP server: create account request
+XMPP server-->API server: create account response
+API server-->client: HTTP response
+
+Description
+:   Creates or deletes an user account.
+
+Attributes
+:   *username* - XMPP username (user@domain or simply user, which will
+    use the default domain configured in the API).
+:   *password* - A password for the XMPP account.
+:   *email* - E-mail address to receive push notifications.
+
+Accept
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Creates an user account.
+:   **DELETE** - Deletes an user account.
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if authentication is required, but not
+    provided.
+
+Example
+
+<tabber> POST= Creates an user account
+
+~~~~ bash
+POST /account
+
+{
+  "username": "alice@shakespeare.lit",
+  "password": "pass123",
+  "email": "alice@email.com"
+}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+|-| DELETE= Deletes an user account
+
+~~~~ bash
+DELETE /account
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+</tabber>
+
+---
+
+### /account/pw/change
+
+client->API server: HTTP request
+API server->XMPP server: create account request
+XMPP server-->API server: create account response
+API server-->client: HTTP response
+
+Description
+:   Allows for user password changes.
+
+Content Types
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Changes the user's password.
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if authentication is not provided.
+
+Examples
+
+<tabber> JSON POST= Updates user's password:
+
+~~~~ bash
+POST /account/pw/change
+Content-Type: application/json
+
+{
+  "username": "alice@example.com",
+  "password": "newpassword"
+}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+</tabber>
+
+---
+
+### /account/pw/reset
+
+client->API server: HTTP request
+API server->XMPP server: create account request
+XMPP server-->API server: create account response
+API server-->client: HTTP response
+
+Description
+:   Allows for user password reset.
+
+Content Types
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Resets the user's password.
+
+Responses
+:   **200 OK** on success.
+
+Notes
+:   When its current password is reset, the user receives an email with
+    a new (random) password.
+
+Examples
+
+<tabber> JSON POST= Resets user's password:
+
+~~~~ bash
+POST /account/pw/reset
+Content-Type: application/json
+
+{
+  "username": "alice@example.com"
+}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+</tabber>
+
 Channel Content
 ------------
 
@@ -2345,156 +2492,6 @@ Content-Type: application/json
 ~~~~
 
 </tabber>
-
-Account
--------
-
-### /account
-
-client->API server: HTTP request
-API server->XMPP server: create account request
-XMPP server-->API server: create account response
-API server-->client: HTTP response
-
-Description
-:   Creates or deletes an user account.
-
-Attributes
-:   *username* - XMPP username (user@domain or simply user, which will
-    use the default domain configured in the API).
-:   *password* - A password for the XMPP account.
-:   *email* - E-mail address to receive push notifications.
-
-Accept
-:   JSON *(application/json)*
-
-Methods
-:   **POST** - Creates an user account.
-:   **DELETE** - Deletes an user account.
-
-Responses
-:   **200 OK** on success.
-:   **401 Unauthorized** if authentication is required, but not
-    provided.
-
-Example
-
-<tabber> POST= Creates an user account
-
-~~~~ bash
-POST /account
-
-{
-  "username": "alice@shakespeare.lit",
-  "password": "pass123",
-  "email": "alice@email.com"
-}
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-|-| DELETE= Deletes an user account
-
-~~~~ bash
-DELETE /account
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-</tabber>
-
----
-
-### /account/pw/change
-
-client->API server: HTTP request
-API server->XMPP server: create account request
-XMPP server-->API server: create account response
-API server-->client: HTTP response
-
-Description
-:   Allows for user password changes.
-
-Content Types
-:   JSON *(application/json)*
-
-Methods
-:   **POST** - Changes the user's password.
-
-Responses
-:   **200 OK** on success.
-:   **401 Unauthorized** if authentication is not provided.
-
-Examples
-
-<tabber> JSON POST= Updates user's password:
-
-~~~~ bash
-POST /account/pw/change
-Content-Type: application/json
-
-{
-  "username": "alice@example.com",
-  "password": "newpassword"
-}
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-</tabber>
-
----
-
-### /account/pw/reset
-
-client->API server: HTTP request
-API server->XMPP server: create account request
-XMPP server-->API server: create account response
-API server-->client: HTTP response
-
-Description
-:   Allows for user password reset.
-
-Content Types
-:   JSON *(application/json)*
-
-Methods
-:   **POST** - Resets the user's password.
-
-Responses
-:   **200 OK** on success.
-
-Notes
-:   When its current password is reset, the user receives an email with
-    a new (random) password.
-
-Examples
-
-<tabber> JSON POST= Resets user's password:
-
-~~~~ bash
-POST /account/pw/reset
-Content-Type: application/json
-
-{
-  "username": "alice@example.com"
-}
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-</tabber>
-
----
-
 
 Match Contacts
 --------------
