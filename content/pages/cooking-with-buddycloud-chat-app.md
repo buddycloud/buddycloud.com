@@ -86,7 +86,32 @@ Chatting works as follows
 
 First up, let's register a user
 ~~~~ javascript
-// Add code here (this will need to happen against the Buddycloud API since inband registation is mostly deprecated (and turned off on buddycloud servers to prevent spam)
+var apiLocation = "https://demo.buddycloud.org/api";
+var domain = "@buddycloud.org";
+var jid = username + domain;
+$.ajax({
+    type: "POST",
+    url: apiLocation + "/account",
+    contentType: "application/json",
+    processData: true,
+    data: "{\"username\": \""+jid+"\", \"password\": \""+password+"\", \"email\": \"+email+\"}",
+    success: function(data) {
+        window.alert(jid + " registered successfully!");
+    },
+    error: function(jqXHR) {
+        $.ajax({
+            type: "GET",
+            url: apiLocation + "/" + jid + "/metadata/posts",
+            success: function(data) {
+                window.alert(jid + " already exists!");
+            },
+            error: function(jqXHR) {
+                window.alert("Problem trying to register user!");
+                console.log("Error", jqXHR);
+            }
+        }); 
+    }
+});
 ~~~~
 
 We don't have in-band registration working. We need to fix this or offer an API call. 
