@@ -94,7 +94,7 @@ $.ajax({
     url: apiLocation + "/account",
     contentType: "application/json",
     processData: true,
-    data: "{\"username\": \""+jid+"\", \"password\": \""+password+"\", \"email\": \"+email+\"}",
+    data: "{\"username\": \""+jid+"\", \"password\": \""+password+"\", \"email\": \""+email+"\"}",
     success: function(data) {
         window.alert(jid + " registered successfully!");
     },
