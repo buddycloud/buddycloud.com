@@ -2349,6 +2349,66 @@ Content-Type: application/json
 Account
 -------
 
+### /account
+
+client->API server: HTTP request
+API server->XMPP server: create account request
+XMPP server-->API server: create account response
+API server-->client: HTTP response
+
+Description
+:   Creates or deletes an user account.
+
+Attributes
+:   *username* - XMPP username (user@domain or simply user, which will
+    use the default domain configured in the API).
+:   *password* - A password for the XMPP account.
+:   *email* - E-mail address to receive push notifications.
+
+Accept
+:   JSON *(application/json)*
+
+Methods
+:   **POST** - Creates an user account.
+:   **DELETE** - Deletes an user account.
+
+Responses
+:   **200 OK** on success.
+:   **401 Unauthorized** if authentication is required, but not
+    provided.
+
+Example
+
+<tabber> POST= Creates an user account
+
+~~~~ bash
+POST /account
+
+{
+  "username": "alice@shakespeare.lit",
+  "password": "pass123",
+  "email": "alice@email.com"
+}
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+|-| DELETE= Deletes an user account
+
+~~~~ bash
+DELETE /account
+~~~~
+
+~~~~ javascript
+200 OK
+~~~~
+
+</tabber>
+
+---
+
 ### /account/pw/change
 
 client->API server: HTTP request
@@ -2435,63 +2495,6 @@ Content-Type: application/json
 
 ---
 
-### /account
-
-client->API server: HTTP request
-API server->XMPP server: create account request
-XMPP server-->API server: create account response
-API server-->client: HTTP response
-
-Description
-:   Creates or deletes an user account.
-
-Attributes
-:   *username* - XMPP username (user@domain or simply user, which will
-    use the default domain configured in the API).
-:   *password* - A password for the XMPP account.
-:   *email* - E-mail address to receive push notifications.
-
-Accept
-:   JSON *(application/json)*
-
-Methods
-:   **POST** - Creates an user account.
-:   **DELETE** - Deletes an user account.
-
-Responses
-:   **200 OK** on success.
-:   **401 Unauthorized** if authentication is required, but not
-    provided.
-
-Example
-
-<tabber> POST= Creates an user account
-
-~~~~ bash
-POST /account
-
-{
-  "username": "alice@shakespeare.lit",
-  "password": "pass123",
-  "email": "alice@email.com"
-}
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-|-| DELETE= Deletes an user account
-
-~~~~ bash
-DELETE /account
-~~~~
-
-~~~~ javascript
-200 OK
-~~~~
-
-</tabber>
 
 Match Contacts
 --------------
