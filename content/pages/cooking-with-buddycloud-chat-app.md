@@ -21,16 +21,18 @@ Ingredients
 
 Difficulty
 ----------
-Easy
 
-Please ask if you get stuck
--  reach-a-developer@buddycloud.com
--  [@buddycloud](https://twitter.com/buddycloud)
+<span style="color:green-blue">Easy</span>
+
+Please ask if you get stuck:
+
+-  Email: <reach-a-developer@buddycloud.com>
+-  Twitter: [@buddycloud](https://twitter.com/buddycloud)
 
 See it in action
 ----------------
 
-Working demo in [codepen.io] (http://codepen.io/guilhermesgb/pen/lJfLg/)
+Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/)!
 
 Architecture
 ------------
@@ -77,6 +79,8 @@ Then we get all the npm modules installed and start npm
 npm i .    # installes npm dependencies
 npm start  # starts npm listening on http://127.0.0.1:3000
 ~~~~
+
+Now let's start cooking!
 
 Chatting works as follows
 - we create a "channel" and post messages into the channel
@@ -276,8 +280,8 @@ We also view the source code of this Simple Chat recipe [here](https://github.co
 Any Questions?
 --------------
 
-Please contact us at <reach-a-developer@buddycloud.com>!
-Cheers!
-
-
 Want to contribute to this [page](https://github.com/buddycloud/buddycloud.com/blob/master/content/pages/cooking-with-buddycloud-chat-app.md)?
+
+For any questions or concerns, please contact us at <reach-a-developer@buddycloud.com> or at Twitter: [@buddycloud](https://twitter.com/buddycloud)!
+
+Good cooking!
