@@ -30,7 +30,7 @@ Please ask if you get stuck
 See it in action
 ----------------
 
-Link to project working in [codepen.io] (http://codepen.io/guilhermesgb/pen/lJfLg/)
+Working demo in [codepen.io] (http://codepen.io/guilhermesgb/pen/lJfLg/)
 
 Architecture
 ------------
@@ -268,11 +268,16 @@ function sendMessage(message){
 }
 ~~~~
 
-We also view the source code of this Chat recipe [here] (https://github.com/guilhermesgb/chat-recipe)!
+And that's it!
 
-Bonus round:
+Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/).
+We also view the source code of this Simple Chat recipe [here](https://github.com/guilhermesgb/chat-recipe)!
 
-Set the channel to private
-~~~~ javascript
-// Add code here
-~~~~
+Any Questions?
+--------------
+
+Please contact us at <reach-a-developer@buddycloud.com>!
+Cheers!
+
+
+Want to contribute to this [page](https://github.com/buddycloud/buddycloud.com/blob/master/content/pages/cooking-with-buddycloud-chat-app.md)?
