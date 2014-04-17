@@ -30,7 +30,7 @@ Please ask if you get stuck
 See it in action
 ----------------
 
-Link to project working in http://codepen.io/ 
+Link to project working in [codepen.io] (http://codepen.io/guilhermesgb/pen/lJfLg/)
 
 Architecture
 ------------
@@ -41,7 +41,7 @@ Architecture
 
 ```
   +---------+  HTML/IMG/JS/CSS  +----------+
-  | User /  | <---------------+ | xmpp-ftw |
+  | User /  | <---------------+ | xmpp-ftw | (we're using: https://xmpp-ftw.buddycloud.com/)
   | Browser |      websocket    | server   |
   +---------+ <---------------> +----------+
                                     ^
@@ -88,30 +88,36 @@ First up, let's register a user by issuing a POST request to the HTTP API /accou
 ~~~~ javascript
 var apiLocation = "https://demo.buddycloud.org/api";
 var domain = "@buddycloud.org";
-var jid = username + domain;
-$.ajax({
-    type: "POST",
-    url: apiLocation + "/account",
-    contentType: "application/json",
-    processData: true,
-    data: "{\"username\": \""+jid+"\", \"password\": \""+password+"\", \"email\": \""+email+"\"}",
-    success: function(data) {
-        window.alert(jid + " registered successfully!");
-    },
-    error: function(jqXHR) {
-        $.ajax({
-            type: "GET",
-            url: apiLocation + "/" + jid + "/metadata/posts",
-            success: function(data) {
-                window.alert(jid + " already exists!");
-            },
-            error: function(jqXHR) {
-                window.alert("Problem trying to register user!");
-                console.log("Error", jqXHR);
-            }
-        }); 
-    }
-});
+_registerUser = function(username, password) {
+    var jid = username + domain;
+    $.ajax({
+        type: "POST",
+        url: apiLocation + "/account",
+        contentType: "application/json",
+        processData: true,
+        data: JSON.stringify({
+                username: jid,
+                password: password,
+                email: "email@email.com"
+        }),
+        success: function(data) {
+            window.alert(jid + " registered successfully!");
+            $("#toggleRegistrationForm").click();
+        },
+        error: function(jqXHR) {
+            $.ajax({
+                 type: "GET",
+                 url: apiLocation + "/" + jid + "/metadata/posts",
+                 success: function(data) {
+                     window.alert(jid + " already exists!");
+                 },
+                 error: function(jqXHR) {
+                     window.alert("Problem trying to register user!");
+                 }
+            }); 
+        }
+    });
+};
 ~~~~
 If the call fails, we are issuing another call to the API to check whether the usernam is already taken. 
 
@@ -140,7 +146,7 @@ As you have seen above, once connected you must discover the Buddycloud server:
 function discoverBuddycloudServer() {
     socket.send(
         'xmpp.buddycloud.discover',
-        {}, /* or you may optionally pass a shortcut:     { server: 'channels.buddycloud.org' },*/
+        {},
         function(error, data) {
             if (error) return console.error(error);
             console.log('Discovered Buddycloud server at', data);
@@ -228,7 +234,7 @@ var getNodeItems = function(itemId) {
         rsm: { max:6 } 
     }
     if (itemId) { //specify itemId if you want to retrieve a specific item by id
-        data['id'] = itemId;
+        data.id = itemId;
     }
     socket.send(
         'xmpp.buddycloud.retrieve',
@@ -262,9 +268,7 @@ function sendMessage(message){
 }
 ~~~~
 
-You can see the whole source code here: https://github.com/guilhermesgb/skeleton-project
-
-Since the chat room is open, it can be viewed on demo.buddycloud.org/chat-room@topics.buddycloud.org/chat
+We also view the source code of this Chat recipe [here] (https://github.com/guilhermesgb/chat-recipe)!
 
 Bonus round:
 
