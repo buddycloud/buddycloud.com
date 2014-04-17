@@ -22,7 +22,7 @@ Ingredients
 Difficulty
 ----------
 
-<span style="color:green-blue">Easy</span>
+<span style="color:green;"><strong>Easy</strong></span>
 
 Please ask if you get stuck:
 
@@ -43,7 +43,7 @@ Architecture
 
 ```
   +---------+  HTML/IMG/JS/CSS  +----------+
-  | User /  | <---------------+ | xmpp-ftw | (we're using: https://xmpp-ftw.buddycloud.com/)
+  | User /  | <---------------+ | xmpp-ftw | (codepen demo is using: "https://xmpp-ftw.buddycloud.com")
   | Browser |      websocket    | server   |
   +---------+ <---------------> +----------+
                                     ^
@@ -67,7 +67,7 @@ Architecture
 Method
 ------
 
-<span style="color:green-blue">Estimated time: 2 mins</span>
+<span style="color:green;">Estimated time: <strong>2 mins</strong></span>
 
 Let's get setup with a skeleton project.
 ~~~~ bash
@@ -123,7 +123,7 @@ _registerUser = function(username, password) {
     });
 };
 ~~~~
-If the call fails, we are issuing another call to the API to check whether the usernam is already taken. 
+If the call fails, we are issuing another call to the API to check whether the username is already taken. 
 
 Once we have a registered users, we need to go-online (which tells the server to start sending us events).
 
@@ -161,7 +161,7 @@ function discoverBuddycloudServer() {
 }
 ~~~~
 
-Now we will create our channel for sharing chat messages: it will be ```chat-room@topics.buddycloud.org```
+Now we will create our channel for sharing chat messages: it will be ```chat-room@topics.buddycloud.org```:
 
 ~~~~ javascript
 function createNode(){
@@ -211,7 +211,7 @@ function subscribeToNode(){
 }
 ~~~~
 
-Then specify that you want to listen for incoming messages
+Then specify that you want to listen for incoming messages:
 ~~~~
 function getNewMessagesNotification(){
     socket.on('xmpp.buddycloud.push.item', function(data) {
@@ -230,7 +230,7 @@ function sendPresenceToBuddycloudServer(){
 }
 ~~~~
 
-Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected (for now simply picking the last 6 items).
+Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected (for now simply picking the last 6 items):
 ~~~~ javascript
 var getNodeItems = function(itemId) {
     var data = {
@@ -248,7 +248,7 @@ var getNodeItems = function(itemId) {
 }
 ~~~~
 
-now send a message to the chat room
+Now, you can try sending a message to the chat room:
 ~~~~ javascript
 function sendMessage(message){
     var node = "/user/chat-room@topics.buddycloud.org/chat";
@@ -274,7 +274,10 @@ function sendMessage(message){
 
 And that's it!
 
-Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/).
+Hope you had fun cooking with buddycloud.
+
+Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/), feel free to take a look at it if need be.
+
 We also view the source code of this Simple Chat recipe [here](https://github.com/guilhermesgb/chat-recipe)!
 
 Any Questions?
