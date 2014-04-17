@@ -145,6 +145,7 @@ function discoverBuddycloudServer() {
             if (error) return console.error(error);
             console.log('Discovered Buddycloud server at', data);
             createNode();
+            getNodeItems();
         }
     );
 }
@@ -182,17 +183,68 @@ function createNode(){
 }
 ~~~~
 
-Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected.
+Specify that you want to listen for incoming messages
+~~~~
+function getNewMessagesNotification(){
+    socket.on('xmpp.buddycloud.push.item', function(data) {
+        var node = "/user/chat-room@topics.buddycloud.org/chat";
+        if ( node === data.node ){ //Notifications of messages on other nodes may arrive as well
+            handleItem(data);
+        }
+    });
+}
+~~~~
+
+And you must send presence to the buddycloud server to inform it you're online:
+~~~~
+function sendPresenceToBuddycloudServer(){
+    socket.send('xmpp.buddycloud.presence', {});
+}
+~~~~
+
+Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected (for now simply picking the last 6 items).
 ~~~~ javascript
-// Add code here
+var getNodeItems = function(itemId) {
+    var data = {
+    node: node,
+        rsm: { max:6 } 
+    }
+    if (itemId) { //specify itemId if you want to retrieve a specific item by id
+        data['id'] = itemId;
+    }
+    socket.send(
+        'xmpp.buddycloud.retrieve',
+        data,
+        handleItems
+    );
+}
 ~~~~
 
 now send a message to the chat room
 ~~~~ javascript
-// Add code here
+function sendMessage(message){
+    var node = "/user/chat-room@topics.buddycloud.org/chat";
+    socket.send(
+        'xmpp.buddycloud.publish',
+        {
+            "node": node,
+            "content": {
+                "atom": {
+                    "content": message
+                }
+            }
+        },
+        function(error, data) {
+            if (error) console.error(error);
+            else {
+                console.log("Message sent.");
+            }
+        }
+    );
+}
 ~~~~
 
-Since the chat room is open, it can be viewed on demo.buddycloud.org/<full address>
+Since the chat room is open, it can be viewed on demo.buddycloud.org/chat-room@topics.buddycloud.org/chat
 
 Bonus round:
 
