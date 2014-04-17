@@ -183,7 +183,25 @@ function createNode(){
 }
 ~~~~
 
-Specify that you want to listen for incoming messages
+As you may have noticed, if the node already exists,
+we'll at least make sure the user is subscribed to it (in a best effort approach):
+~~~~
+function subscribeToNode(){
+    var node = "/user/chat-room@topics.buddycloud.org/chat";
+    socket.send(
+        'xmpp.buddycloud.subscribe',
+        {
+            "node": node,
+        },
+        function(error, data) {
+            if (error) return console.error(error);
+            console.log("Subscribed to Chat Room node");
+        }
+    );
+}
+~~~~
+
+Then specify that you want to listen for incoming messages
 ~~~~
 function getNewMessagesNotification(){
     socket.on('xmpp.buddycloud.push.item', function(data) {
@@ -243,6 +261,8 @@ function sendMessage(message){
     );
 }
 ~~~~
+
+You can see the whole source code here: https://github.com/guilhermesgb/skeleton-project
 
 Since the chat room is open, it can be viewed on demo.buddycloud.org/chat-room@topics.buddycloud.org/chat
 
