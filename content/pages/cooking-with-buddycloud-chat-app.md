@@ -8,8 +8,9 @@ table_of_contents: false
 Aim
 ---
 
-Add chat to a web app in 10 minutes
-Difficulty: <span style="color:green;"><strong>Easy</strong></span>
+Add chat to a web app in <span style="color:#2DAEBF;"><strong>10 minutes</strong></span>
+
+Difficulty: <span style="color:#2DAEBF;"><strong>Easy</strong></span>
 
 Ingredients
 -----------
