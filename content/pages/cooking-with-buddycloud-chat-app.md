@@ -16,7 +16,7 @@ Ingredients
 -----------
 
 - [Project Skeleton](https://github.com/buddycloud/skeleton-project.git)
-- [Primus](http://primus.io/) (manages the websocket and long polling connection)
+- [Node and NPM](http://nodejs.org/download/)
 - Your favourite text editor
 
 Getting help:
@@ -70,6 +70,7 @@ git clone https://github.com/buddycloud/skeleton-project.git
 
 Then we get all the npm modules installed and start npm
 ~~~~ bash
+cd buddycloud-skeleton
 npm i .    # installes npm dependencies
 npm start  # starts npm listening on http://127.0.0.1:3000
 ~~~~
@@ -77,7 +78,7 @@ npm start  # starts npm listening on http://127.0.0.1:3000
 Now let's start cooking!
 
 Chatting works as follows
-- we create a "channel" and post messages into the channel
+- we create a <i>channel</i> and post messages into the channel
 - Other users connect and retrieve message history from when they were last online
 - Other users are then automatically notified of new messages
 - Users can post back to the channel
