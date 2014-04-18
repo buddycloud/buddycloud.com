@@ -12,6 +12,8 @@ Add chat to a web app in <span style="color:#2DAEBF;"><strong>10 minutes</strong
 
 Difficulty: <span style="color:#2DAEBF;"><strong>Easy</strong></span>
 
+[Chat client demo](http://codepen.io/guilhermesgb/pen/lJfLg/)
+
 Ingredients
 -----------
 
@@ -19,26 +21,18 @@ Ingredients
 - [Node and NPM](http://nodejs.org/download/)
 - Your favourite text editor
 
-Getting help:
+Getting help
+------------
 
 -  Email: <reach-a-developer@buddycloud.com>
 -  Twitter: [@buddycloud](https://twitter.com/buddycloud)
 
-See it in action
-----------------
-
-Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/)!
-
 Method
 ------
-<span style="color:green;">Estimated time: <strong>2 mins</strong></span>
 
-Architecture
-------------
-
-- the chat client will use [Primus](primus.io) for messaging over a websocket (with fallback to long polling)
-- the [XMPP-FTW](https://xmpp-ftw.jit.su) service takes JSON from the browser and turns it into XMPP messages
-- XMPP messages are "handed off" to the XMPP server for realtime delivery
+- The chat client uses [Primus](primus.io) for messaging over a websocket (with fallback to long polling)
+- The [XMPP-FTW](https://xmpp-ftw.jit.su) service takes JSON from the browser and turns it into XMPP messages
+- XMPP messages are offloaded to the XMPP server for realtime delivery
 
 ```
   +---------+  HTML/IMG/JS/CSS  +----------+
@@ -51,7 +45,7 @@ Architecture
                                     v
                                 +--------+   component   +------------+
                                 |  XMPP  |   connection  | buddycloud |
-                                | server |<------------->| server  |
+                                | server |<------------->| server     |
                                 +--------+               +------------+
                                     ^
                                     |
@@ -77,7 +71,7 @@ npm start  # starts npm listening on http://127.0.0.1:3000
 
 Now let's start cooking!
 
-Chatting works as follows
+Chatting works as follows:
 - we create a <i>channel</i> and post messages into the channel
 - Other users connect and retrieve message history from when they were last online
 - Other users are then automatically notified of new messages
@@ -118,6 +112,7 @@ _registerUser = function(username, password) {
     });
 };
 ~~~~
+
 If the call fails, we are issuing another call to the API to check whether the username is already taken. 
 
 Once we have a registered users, we need to go-online (which tells the server to start sending us events).
@@ -188,8 +183,7 @@ function createNode(){
 }
 ~~~~
 
-As you may have noticed, if the node already exists,
-we'll at least make sure the user is subscribed to it (in a best effort approach):
+As you may have noticed, if the node already exists, we'll at least make sure the user is subscribed to it (in a best effort approach):
 ~~~~
 function subscribeToNode(){
     var node = "/user/chat-room@topics.buddycloud.org/chat";
@@ -282,4 +276,4 @@ Want to contribute to this [page](https://github.com/buddycloud/buddycloud.com/b
 
 For any questions or concerns, please contact us at <reach-a-developer@buddycloud.com> or at Twitter: [@buddycloud](https://twitter.com/buddycloud)!
 
-Good cooking!
+Happy cooking!
