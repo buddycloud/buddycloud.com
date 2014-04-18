@@ -5,26 +5,20 @@ order: 1
 show_in_top_menu: false
 table_of_contents: false
 
-
 Aim
 ---
 
 Add chat to a web app in 10 minutes
+Difficulty: <span style="color:green;"><strong>Easy</strong></span>
 
 Ingredients
 -----------
 
-- web browser
-- Site running Buddycloud
-- [Primus](http://primus.io/) (the glue-without-the-goo that looks after websocket and long polling connection handling)
-- text editor
+- [Project Skeleton](https://github.com/buddycloud/skeleton-project.git)
+- [Primus](http://primus.io/) (manages the websocket and long polling connection)
+- Your favourite text editor
 
-Difficulty
-----------
-
-<span style="color:green;"><strong>Easy</strong></span>
-
-Please ask if you get stuck:
+Getting help:
 
 -  Email: <reach-a-developer@buddycloud.com>
 -  Twitter: [@buddycloud](https://twitter.com/buddycloud)
@@ -33,6 +27,10 @@ See it in action
 ----------------
 
 Working demo in [codepen.io](http://codepen.io/guilhermesgb/pen/lJfLg/)!
+
+Method
+------
+<span style="color:green;">Estimated time: <strong>2 mins</strong></span>
 
 Architecture
 ------------
@@ -52,7 +50,7 @@ Architecture
                                     v
                                 +--------+   component   +------------+
                                 |  XMPP  |   connection  | buddycloud |
-                                | server |<------------->| component  |
+                                | server |<------------->| server  |
                                 +--------+               +------------+
                                     ^
                                     |
@@ -63,11 +61,6 @@ Architecture
                                |  server  |
                                +----------+
 ```
-
-Method
-------
-
-<span style="color:green;">Estimated time: <strong>2 mins</strong></span>
 
 Let's get setup with a skeleton project.
 ~~~~ bash
