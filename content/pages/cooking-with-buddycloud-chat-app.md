@@ -30,7 +30,7 @@ Getting help
 Method
 ------
 
-- The chat client uses [Primus](primus.io) for messaging over a websocket (with fallback to long polling)
+- The chat client uses [Primus](http://primus.io) for messaging over a websocket (with fallback to long polling)
 - The [XMPP-FTW](https://xmpp-ftw.jit.su) service takes JSON from the browser and turns it into XMPP messages
 - XMPP messages are offloaded to the XMPP server for realtime delivery
 
