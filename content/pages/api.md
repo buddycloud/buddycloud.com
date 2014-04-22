@@ -5,11 +5,11 @@ order: 2
 table_of_contents: true
 
 The HTTP API is implemented by the [buddycloud HTTP API
-server](buddycloud HTTP API server "wikilink").
+server](https://github.com/buddycloud/buddycloud-http-api).
 
 The buddycloud HTTP API presents a simple way to access buddycloud
 channels through a REST-like interface. It is thought as an alternative
-to buddycloud's [XMPP interface](XMPP XEP "wikilink").
+to buddycloud's [XMPP interface](http://buddycloud.github.io/buddycloud-xep).
 
 ---
 
