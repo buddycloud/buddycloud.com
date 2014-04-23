@@ -1,11 +1,10 @@
 var $container = $('#isotope-container');
 
 $container.isotope({
-    itemSelector: '.item',
-    layoutMode: 'cellsByRow',
+    itemSelector: '.isotope-item',
+    layoutMode: 'masonry',
     animationEngine: 'best-available',
-    cellsByRow: {
-        columnWidth: 74,
-        rowWidth: 74
+    masonry: {
+        columnWidth: 210,
     }
 });

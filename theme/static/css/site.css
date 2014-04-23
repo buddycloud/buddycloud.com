@@ -355,15 +355,15 @@ dd {
 
 /* isotope config */
 
-#isotope-container{
-  width: 100%;
-}
 .isotope-item{
-  float: left;
   width: 200px;
-  height: 200px;
-  background: #2DAEBF;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.7);
-  margin: 3px;
+  margin: 5px;
+}
+
+.isotope-item.width-medium{
+  width: 410px;
+}
+
+.isotope-item.width-large{
+  width: 830px;
 }
