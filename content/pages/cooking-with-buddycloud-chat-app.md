@@ -3,7 +3,7 @@ url: cooking-with-buddycloud-chat-app
 save_as: cooking-with-buddycloud-chat-app.html
 order: 1
 show_in_top_menu: false
-table_of_contents: false
+table_of_contents: true
 
 Aim
 ---
@@ -72,6 +72,7 @@ npm start  # starts npm listening on http://127.0.0.1:3000
 Now let's start cooking!
 
 Chatting works as follows:
+
 - we create a <i>channel</i> and post messages into the channel
 - Other users connect and retrieve message history from when they were last online
 - Other users are then automatically notified of new messages

@@ -61,15 +61,6 @@ class TableOfContents:
 			print "Error while extracting ToC from content"
 			print "Could not parse page: %s" % active_page
 			print "The problem: " + str(e)
-
-			base = str(e).replace("mismatched tag: line", "")
-			line = int(base[:base.find(",")].strip())
-			column = int(base[base.find(", column")+8:].strip())
-
-			content = "<root>"+content+"</root>"
-			print ">>>\t%s" % (content.split("\n")[line-1])
-			print "   \t" + (" " * (column-2)) + "^"
-
 			return None
 		except Exception as e:
 			print "Error while extracting ToC from content"
