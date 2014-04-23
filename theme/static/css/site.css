@@ -352,3 +352,18 @@ dd {
 .contact dd {
   margin-bottom: .875em;
 }
+
+/* isotope config */
+
+#isotope-container{
+  width: 100%;
+}
+.isotope-item{
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #2DAEBF;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  margin: 3px;
+}
