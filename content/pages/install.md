@@ -9,8 +9,8 @@ table_of_contents: true
 Install Requirements
 --------------------
 
--   a server with an internet routable IP address (other [buddycloud
-    hosting options](buddycloud hosting options "wikilink"))
+-   a server with an internet routable IP address (No public IP, no problem, use the [buddycloud
+    hosting](http://hosting.buddycloud.com))
 -   a domain name (the instructions assume EXAMPLE.COM)
 -   the ability to edit your DNS
 -   Ubuntu, 12.04 (LTS)
