@@ -54,7 +54,8 @@ _xmpp-server._tcp.anon.EXAMPLE.COM.        IN SRV 5 0 5269 buddycloud.EXAMPLE.CO
 _xmpp-client._tcp.anon.EXAMPLE.COM.        IN SRV 5 0 5222 buddycloud.EXAMPLE.COM. # XMPP anonymous client connections
 _xmpp-server._tcp.media.EXAMPLE.COM.       IN SRV 5 0 5269 buddycloud.EXAMPLE.COM. # Media Server XMPP component
 _xmpp-server._tcp.buddycloud.EXAMPLE.COM.  IN SRV 5 0 5269 buddycloud.EXAMPLE.COM. # buddycloud Server XMPP component
-_buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0 host=buddycloud.EXAMPLE.COM protocol=https path=/api port=443" ~~~~
+_buddycloud-api._tcp.EXAMPLE.COM.          IN TXT "v=1.0 host=buddycloud.EXAMPLE.COM protocol=https path=/api port=443" 
+~~~~
 
 ### Test
 
