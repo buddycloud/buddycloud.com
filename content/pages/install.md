@@ -248,7 +248,7 @@ buddycloud API Server
 
 <span style="color:green">Estimated time: **6 mins**</span>
 
--   Alternative: [Install from source](Install from source "wikilink")
+-   Alternative: [Install from source](http://github.com/buddycloud/buddycloud-http-api)
 
 *Note: SSL and API requests: Chrome and Firefox will **not** work with
 self signed certificates when used for API calls. Ordinarily you would

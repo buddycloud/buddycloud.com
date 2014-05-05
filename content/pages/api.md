@@ -9,7 +9,7 @@ server](https://github.com/buddycloud/buddycloud-http-api).
 
 The buddycloud HTTP API presents a simple way to access buddycloud
 channels through a REST-like interface. It is thought as an alternative
-to buddycloud's [XMPP interface](http://buddycloud.github.io/buddycloud-xep).
+to buddycloud's [XMPP interface](http://buddycloud.github.io/buddycloud-xep/).
 
 ---
 
@@ -2278,7 +2278,7 @@ API server-->client: forward response
 
 Description
 :   Performs a search over channels' metadata and posts' content indexed
-    by the [Channel Directory](Channel Directory Project "wikilink").
+    by the [Channel Directory](https://buddycloud.org/wiki/Channel_Directory_Project).
 
 Content Types
 :   JSON *(application/json)*
