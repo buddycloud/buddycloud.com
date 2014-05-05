@@ -21,9 +21,9 @@ Getting help
 Please ask if you get stuck
 
 -   chatroom: <https://jappix.com/?r=seehaus@channels.buddycloud.com>
--   mailing list:
-    <https://groups.google.com/forum/>\#!forum/buddycloud-dev
--   [How to report bugs](How to report bugs "wikilink")
+-   mailing list: <https://groups.google.com/forum/#!forum/buddycloud-dev>
+-   report an issue on github: <https://github.com/buddycloud>
+-   email us at: [reach-a-developer@buddycloud.com](mailto:reach-a-developer@buddycloud.com)
 
 buddycloud DNS
 --------------
@@ -443,8 +443,7 @@ gcm.api_key=
 ### Test
 
 -   Enable and configure push notifications in the webclient (or via the
-    [<https://buddycloud.org/wiki/buddycloud_HTTP_API>\#.2Fnotification\_settings
-    Pusher API])
+    [Pusher API](http://buddycloud.com/api#notification_settings_))
 -   After a new post in your channel, for instance, you should get an
     email and/or GCM notification.
 
@@ -471,8 +470,7 @@ The following commands will generate a file called
 When you have run the commands, please share the link in the [buddycloud
 chat room](https://jappix.com/?r=seehaus@channels.buddycloud.com) or on
 the
-[<https://groups.google.com/forum/?fromgroups>\#!forum/buddycloud-dev
-buddycloud-dev mailing list].
+[https://groups.google.com/forum/#!forum/buddycloud-dev](buddycloud-dev mailing list).
 
 ~~~~ bash
 # buddycloud related configuration files

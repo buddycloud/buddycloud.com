@@ -2374,7 +2374,7 @@ API server-->client: forward response
 
 Description
 :   Recommends channels for a given user based on taste data indexed by
-    the [Channel Directory](Channel Directory Project "wikilink").
+    the [Channel Directory](https://buddycloud.org/wiki/Channel_Directory_Project).
 
 Content Types
 :   JSON *(application/json)*
@@ -2440,9 +2440,7 @@ API server-->client: forward response
 
 Description
 :   Retrieves the most active channels among the channels indexed by the
-    [Channel Directory](Channel Directory Project "wikilink"). The most
-    active channels are the ones that had more posts in the window of a
-    day.
+    [Channel Directory](https://buddycloud.org/wiki/Channel_Directory_Project). The most active channels are the ones that had more posts in the window of a day.
 
 Content Types
 :   JSON *(application/json)*
