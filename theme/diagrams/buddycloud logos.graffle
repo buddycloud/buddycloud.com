@@ -5,7 +5,7 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGraffle6</string>
-		<string>156.6.0.202882</string>
+		<string>156.11.0.206384</string>
 	</array>
 	<key>CreationDate</key>
 	<string>2014-02-14 08:19:41 +0000</string>
@@ -5592,11 +5592,11 @@
 		<key>BottomSlabHeight</key>
 		<real>337</real>
 		<key>CurrentSheet</key>
-		<integer>3</integer>
+		<integer>0</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{0, 0}, {1280, 748}}</string>
+		<string>{{0, 4}, {1280, 748}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
@@ -5608,7 +5608,7 @@
 		<key>SmallIcons</key>
 		<true/>
 		<key>VisibleRegion</key>
-		<string>{{-605, -681}, {3449.9998629093225, 3711.1109636448109}}</string>
+		<string>{{-605, -508}, {3449.9998629093225, 3361.1109775525606}}</string>
 		<key>Zoom</key>
 		<real>0.18000000715255737</real>
 		<key>ZoomValues</key>
