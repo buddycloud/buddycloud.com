@@ -50,13 +50,13 @@ var showIsotope = function(container, template, view){
             columnWidth: 210,
         }
     });
-    reorder(SELECTED_TYPE);
 }
 
 $(window.document).ready(function(){
-    window.setTimeout(function(){
     if ( _isotopeRoot ){
         showIsotope(_isotopeRoot, _isotopeTemplate, _isotopeView);
+        window.setTimeout(function(){
+            reorder(SELECTED_TYPE);
+        }, 300);
     }
-    }, 300);
 });

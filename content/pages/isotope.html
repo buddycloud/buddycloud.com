@@ -3,21 +3,23 @@
 <title>Isotope</title>
 <meta name="url" content="isotope" />
 <meta name="save_as" content="isotope.html" />
-<meta name="order" content="3" />
-<meta name="top_menu_name" content="Isotope" />
-<meta name="show_in_top_menu" content="false" />
-<meta name="show_as_selected" content="isotope" />
+<meta name="order" content="100" />
+<meta name="title" content="Buddycloud Software" />
 <meta name="table_of_contents" content="false" />
 </head>
 <body>
-  <h2>Isotope Demo</h2>
+  <p class="lead">
+      This is a selection of apps and services built with the Buddycloud stack.
+  </p>
   <script id="isotope-template" type="x-tmpl-mustache">
       <div>
           <div>
               {{#buttons}}
-              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
-                  {{name}}
-              </button>
+              <div>
+                  <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                      {{name}}s
+                  </button>
+              </div>
               {{/buttons}}
           </div>
       </div>
@@ -40,7 +42,6 @@
                   <div>
                       <a href='{{info_link}}' target='_blank'>
                           <span class='glyphicon glyphicon-file'></span>
-                          <small>Learn more</small>
                       </a>
                   </div>
                   {{/info_link}}
@@ -48,6 +49,21 @@
                   <div>
                       <a href='{{demo_link}}' target='_blank'>
                           <span class='glyphicon glyphicon-link'></span>
+                      </a>
+                  </div>
+                  {{/demo_link}}
+              </div>
+              <div>
+                  {{#info_link}}
+                  <div>
+                      <a href='{{info_link}}' target='_blank'>
+                          <small>Learn more</small>
+                      </a>
+                  </div>
+                  {{/info_link}}
+                  {{#demo_link}}
+                  <div>
+                      <a href='{{demo_link}}' target='_blank'>
                           <small>Demo</small>
                       </a>
                   </div>
@@ -91,10 +107,10 @@
             },
             {
                 title: 'Android demo client',
-                description: 'A demo client built on Android and the Buddycloud API',
+                description: 'A demo client built on Android and the Buddycloud API.',
                 type: 'Client',
                 image: {
-                    screenshot: 'https://www.dropbox.com/s/jvv03tdhup0ubqp/Screenshot_2014-05-06-15-09-33.png'
+                    screenshot: '/theme/img/isotope/buddycloud_android_demo_client.png'
                 },
                 info_link: 'https://github.com/buddycloud/buddycloud-android/blob/master/README.md',
                 demo_link: 'https://play.google.com/store/apps/details?id=com.buddycloud'
@@ -103,10 +119,8 @@
                 title: 'Bccc',
                 description: 'BCCC (Buddycloud console client) is a Python application to access channels directly using XMPP. ',
                 type: 'Client',
-                image: {
-                    screenshot: 'https://www.youtube.com/watch?v=vi1nyCPDGTk&feature=youtu.be'
-                },
-                info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md'
+                info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md',
+                demo_link: 'https://www.youtube.com/watch?v=vi1nyCPDGTk&feature=youtu.be'
             },
             {
                 title: 'Buddycloud server',
@@ -116,10 +130,10 @@
             },
             {
                 title: 'Buddycloud protocol tester',
-                description: 'Test your own Buddycloud install',
+                description: 'Test your own Buddycloud install.',
                 type: 'Service',
                 image: {
-                    screenshot: 'https://www.dropbox.com/s/x6mjxgzj9hnyw6h/Screenshot%202014-05-06%2015.11.33.png'
+                    screenshot: '/theme/img/isotope/buddycloud_protocol_tester.png'
                 },
                 info_link: 'https://github.com/buddycloud/buddycloud-tests-framework/blob/master/README.md',
                 demo_link: 'http://protocol.buddycloud.com'

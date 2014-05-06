@@ -384,7 +384,68 @@ dd {
   margin-top: 10px;
 }
 
+.isotope-item figure{
+  margin-bottom: 10px;
+  overflow:hidden;
+  border-radius: 4px;
+}
+
+.isotope-item > div{
+  display: table;
+  width: 100%;
+}
+
+.isotope-item > div > div{
+  display: table-row;
+}
+
+.isotope-item > div > div > div{
+  display: table-cell;
+  text-align: center;
+}
+
+.isotope-item > div > div > div > a{
+  color: black;
+  cursor: pointer;
+}
+
+.isotope-item > div > div > div > a:hover{
+  text-decoration: none;
+}
+
 .isotope-item.width-medium h2,
-.isotope-item.width-medium p{
+.isotope-item.width-medium p,
+.isotope-item.width-medium > div > div > div > a{
   color: white;
+}
+
+#isotope-root > div:nth-child(1){
+  display: table;
+  margin-left: 25%;
+  width: 50%;
+}
+
+#isotope-root > div:nth-child(1) > div{
+  display: table-row;
+}
+
+#isotope-root > div:nth-child(1) > div > div{
+  display: table-cell;
+}
+
+#isotope-root > div:nth-child(1) > div > div > button{
+  width: 72px;
+}
+
+#isotope-root > div:nth-child(1) > div > div:nth-child(1) > button{
+  float: right;
+}
+
+#isotope-root > div:nth-child(1) > div > div:nth-child(2) > button{
+  float: left;
+  margin-left: 25%;
+}
+
+#isotope-root > div:nth-child(1) > div > div:nth-child(3) > button{
+  float: left;
 }
