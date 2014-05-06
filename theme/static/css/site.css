@@ -353,17 +353,38 @@ dd {
   margin-bottom: .875em;
 }
 
+.navbar-fixed-bottom{
+  margin-top: 50px;
+}
+
 /* isotope config */
 
 .isotope-item{
   width: 200px;
   margin: 5px;
+  border-radius: 4px;
+  background-color: #C4C8CD;
+  padding: 10px;
 }
 
 .isotope-item.width-medium{
   width: 410px;
+  background-color: #2DAEBF;
 }
 
 .isotope-item.width-large{
   width: 830px;
+}
+
+#isotope-container{
+  margin-bottom: 50px;
+}
+
+.isotope-item h2{
+  margin-top: 10px;
+}
+
+.isotope-item.width-medium h2,
+.isotope-item.width-medium p{
+  color: white;
 }

@@ -7,90 +7,125 @@
 <meta name="top_menu_name" content="Isotope" />
 <meta name="show_in_top_menu" content="false" />
 <meta name="show_as_selected" content="isotope" />
-<meta name="table_of_contents" content="true" />
+<meta name="table_of_contents" content="false" />
 </head>
 <body>
   <h2>Isotope Demo</h2>
-  <div id="isotope-container">
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>One small item</figcaption>
-          </figure>
+  <script id="isotope-template" type="x-tmpl-mustache">
+      <div>
+          <div>
+              {{#buttons}}
+              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                  {{name}}
+              </button>
+              {{/buttons}}
+          </div>
       </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Another small item</figcaption>
+      <div id='isotope-container'>
+      {{#items}}
+      <div class='isotope-item' data-type='{{type}}'>
+          <h2>{{title}}</h2>
+          <p>{{description}}</p>
+          {{#image}}
+          <figure class='credits'>
+              <img class='img-responsive' src='{{screenshot}}' alt=''/>
+              {{#caption}}
+              <figcaption>{{caption}}</figcaption>
+              {{/caption}}
           </figure>
+          {{/image}}
+          <div>
+              <div>
+                  {{#info_link}}
+                  <div>
+                      <a href='{{info_link}}' target='_blank'>
+                          <span class='glyphicon glyphicon-file'></span>
+                          <small>Learn more</small>
+                      </a>
+                  </div>
+                  {{/info_link}}
+                  {{#demo_link}}
+                  <div>
+                      <a href='{{demo_link}}' target='_blank'>
+                          <span class='glyphicon glyphicon-link'></span>
+                          <small>Demo</small>
+                      </a>
+                  </div>
+                  {{/demo_link}}
+              </div>
+          </div>
       </div>
-      <div class="isotope-item width-medium">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>One medium item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Yet another small item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Just another small item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>One more small item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Never tired of small items</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Here you are another small item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Just another one...</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item width-large">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>A large item!!</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item width-medium">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Another medium item</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Really never tired of small items</figcaption>
-          </figure>
-      </div>
-      <div class="isotope-item">
-          <figure class="credits">
-              <img class="img-responsive" src="/theme/img/home/background.jpg" alt="" />
-              <figcaption>Ever.</figcaption>
-          </figure>
-      </div>
-
+      {{/items}}
   </div>
+  </script>
+  <div id="isotope-root">
+  </div>
+  <script language="javascript" type="text/javascript">
+    _isotopeRoot = "#isotope-root";
+    _isotopeTemplate = "#isotope-template";
+    _isotopeView = {
+        buttons: [
+            {
+                name: 'API'
+            },
+            {
+                name: 'Client'
+            },
+            {
+                name: 'Service'
+            }
+        ],
+        items: [
+            {
+                title: 'REST API Server',
+                description: 'Designed for mobile app developers, the HTTP API is a simple way to get and update Buddycloud channel content.',
+                type: 'API',
+                info_link: 'https://github.com/buddycloud/buddycloud-http-api/blob/master/README.md',
+                demo_link: 'http://buddycloud.com/api'
+            },
+            {
+                title: 'XMPP-FTW',
+                description: 'An easy-to-use Javascript SDK for building browser-based messaging and Buddycloud apps.',
+                type: 'API',
+                info_link: 'https://xmpp-ftw.jit.su/manual/extensions#buddycloud', demo_link: 'https://xmpp-ftw.jit.su/demo'
+            },
+            {
+                title: 'Android demo client',
+                description: 'A demo client built on Android and the Buddycloud API',
+                type: 'Client',
+                image: {
+                    screenshot: 'https://www.dropbox.com/s/jvv03tdhup0ubqp/Screenshot_2014-05-06-15-09-33.png'
+                },
+                info_link: 'https://github.com/buddycloud/buddycloud-android/blob/master/README.md',
+                demo_link: 'https://play.google.com/store/apps/details?id=com.buddycloud'
+            },
+            {
+                title: 'Bccc',
+                description: 'BCCC (Buddycloud console client) is a Python application to access channels directly using XMPP. ',
+                type: 'Client',
+                image: {
+                    screenshot: 'https://www.youtube.com/watch?v=vi1nyCPDGTk&feature=youtu.be'
+                },
+                info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md'
+            },
+            {
+                title: 'Buddycloud server',
+                description: 'Stores, synchronises and updates Buddycloud channels.',
+                type: 'Service',
+                info_link: 'https://github.com/buddycloud/buddycloud-server-java/blob/master/README.md'
+            },
+            {
+                title: 'Buddycloud protocol tester',
+                description: 'Test your own Buddycloud install',
+                type: 'Service',
+                image: {
+                    screenshot: 'https://www.dropbox.com/s/x6mjxgzj9hnyw6h/Screenshot%202014-05-06%2015.11.33.png'
+                },
+                info_link: 'https://github.com/buddycloud/buddycloud-tests-framework/blob/master/README.md',
+                demo_link: 'http://protocol.buddycloud.com'
+            }
+        ]
+    };
+  </script>
 </body>
 </html>

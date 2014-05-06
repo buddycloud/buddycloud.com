@@ -60,7 +60,8 @@
 {% if active_page != "index" and active_page != "contact" %}
       </div>
   </div>
-  <nav id="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <nav>
+      <hr/>
       <div class="container">
           <p class="text-muted pull-right">
               Made with love. 
@@ -83,7 +84,8 @@
   <script src="theme/js/sequence-diagrams.js"></script>
   <script src="theme/vendor/isotope/isotope.pkgd.min.js"></script>
   <script src="theme/vendor/isotope/cells-by-row.js"></script>
-  <script src="theme/js/isotope-config.js"></script>
+  <script src="theme/vendor/mustache/jquery.mustache.js"></script>
+  <script src="theme/js/isotope-mustache.config.js"></script>
   {% block morescripts %} {% endblock %}
 </body>
 </html>
