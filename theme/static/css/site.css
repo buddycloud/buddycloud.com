@@ -363,12 +363,27 @@ dd {
   width: 200px;
   margin: 5px;
   border-radius: 4px;
-  background-color: #C4C8CD;
   padding: 10px;
+  overflow: hidden;
+}
+
+.isotope-item:nth-child(even){
+  background-color: #C4C8CD;
+}
+
+.isotope-item:nth-child(odd){
+  background-color: #E5E9EF;
 }
 
 .isotope-item.width-medium{
   width: 410px;
+}
+
+.isotope-item.width-medium:nth-child(even){
+  background-color: #38434C;
+}
+
+.isotope-item.width-medium:nth-child(odd){
   background-color: #2DAEBF;
 }
 
@@ -434,7 +449,7 @@ dd {
 }
 
 #isotope-root > div:nth-child(1) > div > div > button{
-  width: 72px;
+  width: 80px;
 }
 
 #isotope-root > div:nth-child(1) > div > div:nth-child(1) > button{
@@ -443,7 +458,7 @@ dd {
 
 #isotope-root > div:nth-child(1) > div > div:nth-child(2) > button{
   float: left;
-  margin-left: 25%;
+  margin-left: 50px;
 }
 
 #isotope-root > div:nth-child(1) > div > div:nth-child(3) > button{
