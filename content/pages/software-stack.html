@@ -39,8 +39,8 @@
               <figcaption>{{caption}}</figcaption>
               {{/caption}}
           </figure>
-          {{/image}}
-          {{#video}}
+         {{/image}}
+         {{#video}}
               <div class='video_box'>
                   <div class='video_content'>
                       <iframe src='{{video}}' frameborder="0" allowfullscreen></iframe>
@@ -118,21 +118,21 @@
         ],
         items: [
             {
-                title: 'REST API Server',
-                description: 'Designed for mobile app developers, the HTTP API is a simple way to get and update Buddycloud channel content.',
+                title: 'HTTP API',
+                description: 'Designed and optimised for mobile apps, the API is the simplest way to post to channels, and share media. Build on Node.js. License: Apache 2.0',
                 type: 'API',
                 info_link: 'https://github.com/buddycloud/buddycloud-http-api/blob/master/README.md',
                 demo_link: 'http://buddycloud.com/api'
             },
             {
-                title: 'XMPP-FTW',
-                description: 'An easy-to-use Javascript SDK for building browser-based messaging and Buddycloud apps.',
+                title: 'Javascipt SDK',
+                description: 'XMPP-FTW is an awesome way to build Buddycloud-flavoured javascript apps. XMPP-FTW handles realtime events using websockets and long-polling. And integrates nicely with the rest of the Buddycloud stack. License:Apache 2.0 licensed,.
                 type: 'API',
                 info_link: 'https://xmpp-ftw.jit.su/manual/extensions#buddycloud', demo_link: 'https://xmpp-ftw.jit.su/demo'
             },
             {
-                title: 'Android demo client',
-                description: 'A demo client built on Android and the Buddycloud API.',
+                title: 'Android demo app',
+                description: 'A quick demo app for Android. The app discovers the correct API server, fetches and posts to channels and uses the search and content recommendation services to find and suggest new content. License: Apache 2.0',
                 type: 'Client',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_android_demo_client.png'
@@ -141,21 +141,21 @@
                 demo_link: 'https://play.google.com/store/apps/details?id=com.buddycloud'
             },
             {
-                title: 'Bccc',
-                description: 'BCCC (Buddycloud console client) is a Python application to access channels directly using XMPP. ',
+                title: 'bccc',
+                description: 'The <strong>B</strong>uddycloud <strong>c</strong>onsole <strong>c</strong>lient) is written in Python 3.0 and lets you browse and post to your channel from the comfort of your terminal. License: Apache 2.0',
                 type: 'Client',
                 info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md',
                 video: 'https://www.youtube.com/embed/vi1nyCPDGTk?rel=0'
             },
             {
-                title: 'Buddycloud server',
-                description: 'Stores, synchronises and updates Buddycloud channels.',
+                title: 'Buddycloud Server',
+                description: 'Each Buddycloud-enabled domain to runs a Buddycloud server. The server synchronises channel posts, followers and subscriptions with other Buddycloud servers. The server is extensible to support new content type and use cases. License: Apache 2.0',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/buddycloud-server-java/blob/master/README.md'
             },
             {
-                title: 'Buddycloud protocol tester',
-                description: 'Test your own Buddycloud install.',
+                title: 'Protocol testing suite',
+                description: 'The protocol tester helps check your Buddycloud code and site install for common faults. It works by discovering the Buddycloud-enabled domain"'"s API and then remotely tests all aspects of the Buddycloud stack. License: Apache 2.0',
                 type: 'Service',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_protocol_tester.png'
@@ -165,13 +165,13 @@
             },
             {
                 title: 'Buddycloud XEP',
-                description: 'The realtime messaging protocol that powers the Buddycloud stack. This specification covers how clients update channels, followers and subscriptions. And how servers relay messages.',
+                description: 'The Buddycloud "XEP" is the realtime messaging protocol that defines how Buddycloud clients and servers talk to each other. It is an open standard so anyone can implement their own Buddycloud server and all competing implementations seamlessly interoperate.',
                 type: 'API',
                 info_link: 'http://buddycloud.github.io/buddycloud-xep'
             },
             {
-                title: 'Buddycloud Web-app',
-                description: 'A webclient built around the HTTP API.',
+                title: 'Demo web app',
+                description: 'A <a href="http://backbonejs.org">Backbone.js</a based web app that uses the <a href="//api">API</a> to showcase Buddycloud channels. The app supports registration, channel subscription, posting, deletions, file sharing, and content recommentation. License: Apache 2.0',
                 type: 'Client',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_webclient.jpg'
@@ -180,32 +180,32 @@
                 demo_link: 'https://demo.buddycloud.com'
             },
             {
-                title: 'Bummer',
-                description: 'A soon to be released Buddycloud client.',
+                title: 'codename: bummer',
+                description: 'This is what happens when a skunkworks team is given free reign to design and build. Don"'"t let the name put you off. Bummer is a mystery, much anticipated and soon to be released web app. Bummer uses the Buddycloud stack to create a Yammer-like social network. With a twist.',
                 type: 'Client'
             },
             {
-                title: 'Push Notification server',
-                description: 'Configure and push Buddycloud events to mobile and email.',
+                title: 'Push Server',
+                description: 'Push notifications to mobile clients when activity happens on Buddycloud. The Push Server support Android, iOS and email, and can be configured to push on certain events. For example "someone followed you. Easily extensible to new platforms and message types. License: Apache 2.0',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/buddycloud-pusher/blob/master/README.md'
             },
             {
-                title: 'Buddycloud media server',
-                description: 'Share and synchronise media (and avatars) between different sites running Buddycloud.',
+                title: 'Media Server',
+                description: 'Securely share and synchronise media with channel followers. The media server takes care of file permissions, uploading, and can also generate previews of files and resiable user avatars. License: Apache 2.0',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/buddycloud-media-server/blob/master/README.md',
                 demo_link: 'https://demo.buddycloud.org/api/team@topics.buddycloud.org/media/avatar?maxheight=200&maxwidth=200'
             },
             {
                 title: 'Friend Finder',
-                description: 'Leverage other social graphs to find buddycloud users.',
+                description: 'Terrible name, great service. The Friend Finder is a social graph importer. It helps users import their social graph from services like Facebook and Twitter and match it with existing users on Buddycloud.',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/buddycloud-friend-finder/blob/master/README.md'
             },
             {
                 title: 'Search Engine',
-                description: 'Find content.',
+                description: 'Find content and channels using text and geolocation as inputs. The Search engine crawls Buddycloud channels and indexes content from public channels. License Apache 2.0',
                 type: 'Service',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_search_engine.jpg',
@@ -214,8 +214,8 @@
                 info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md'
             },
             {
-                title: 'Channel recommendation Engine',
-                description: 'Recommend interesting content based on what you follow.',
+                title: 'Recommendation Engine',
+                description: 'This service recommends interesting content based on what you already follow. It can also show channels similar to an existing chanenl. License: Apache 2.0',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md',
                 demo_link: 'https://demo.buddycloud.org/api/team@topics.buddycloud.org/similar'
