@@ -13,15 +13,18 @@
       This is a selection of apps and services built with the Buddycloud stack.
   </p>
   <script id="isotope-template" type="x-tmpl-mustache">
-      <div>
-          <div>
-              {{#buttons}}
-              <div>
-                  <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
-                      {{name}}s
-                  </button>
-              </div>
-              {{/buttons}}
+      <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group btn-group-lg">
+          {{#buttons}}
+              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                  {{name}}s
+              </button>
+          {{/buttons}}
+          </div>
+          <div class="btn-group btn-group-lg">
+              <button class='isotope-btn btn btn-default' type='button' data-type='All' onclick="shuffleAll();">
+                  All
+              </button>
           </div>
       </div>
       <div id='isotope-container'>
@@ -73,7 +76,21 @@
           </div>
       </div>
       {{/items}}
-  </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group btn-group-lg">
+          {{#buttons}}
+              <button class='isotope-btn btn btn-default' type='button' data-type='{{name}}' onclick="reorder('{{name}}');">
+                  {{name}}s
+              </button>
+          {{/buttons}}
+          </div>
+          <div class="btn-group btn-group-lg">
+              <button class='isotope-btn btn btn-default' type='button' data-type='All' onclick="shuffleAll();">
+                  All
+              </button>
+          </div>
+      </div>
   </script>
   <div id="isotope-root">
   </div>

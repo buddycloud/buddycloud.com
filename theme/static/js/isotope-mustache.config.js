@@ -1,4 +1,5 @@
 var reorder = null;
+var shuffleAll = null;
 var showIsotope = function(container, template, view){
 
     template = $(template).html();
@@ -19,6 +20,22 @@ var showIsotope = function(container, template, view){
         $("#isotope-container").isotope('reloadItems');
 
         SELECTED_TYPE = selected;
+        $("#isotope-container").isotope({ sortBy: 'priority' });
+        $("#isotope-container").isotope('updateSortData').isotope();
+    }
+
+    shuffleAll = function(){
+        $(".isotope-btn.active").removeClass("btn-primary");
+        $(".isotope-btn.active").addClass("btn-default");
+        $(".isotope-btn.active").removeClass("active");
+        $(".isotope-btn[data-type='All']").addClass("active");
+        $(".isotope-btn[data-type='All']").removeClass("btn-default");
+        $(".isotope-btn[data-type='All']").addClass("btn-primary");
+
+        $(".isotope-item").addClass("width-medium");
+        $("#isotope-container").isotope('reloadItems');
+
+        $("#isotope-container").isotope({ sortBy: 'random' });
         $("#isotope-container").isotope('updateSortData').isotope();
     }
 
@@ -32,7 +49,7 @@ var showIsotope = function(container, template, view){
     $("#isotope-container").isotope({
         itemSelector: '.isotope-item',
         getSortData: {
-            priority : function(itemElem){
+            priority: function(itemElem){
                 type = $(itemElem).attr('data-type');
                 if ( type === SELECTED_TYPE ){
                     return 1;
