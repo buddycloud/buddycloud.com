@@ -409,7 +409,6 @@ dd {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
-  border-radius: 4px;
 }
 
 .isotope-item .video_box:before{
@@ -424,6 +423,8 @@ dd {
   left: 0;
   bottom: 0;
   right: 0;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .isotope-item iframe{
