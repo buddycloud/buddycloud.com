@@ -31,7 +31,7 @@
       {{#items}}
       <div class='isotope-item' data-type='{{type}}'>
           <h2>{{title}}</h2>
-          <p>{{description}}</p>
+          <p>{{&description}}</p>
           {{#image}}
           <figure class='credits'>
               <img class='img-responsive' src='{{screenshot}}' alt='{{caption}}'/>
@@ -171,7 +171,7 @@
             },
             {
                 title: 'Demo web app',
-                description: 'A <a href="http://backbonejs.org">Backbone.js</a based web app that uses the <a href="//api">API</a> to showcase Buddycloud channels. The app supports registration, channel subscription, posting, deletions, file sharing, and content recommentation. License: Apache 2.0.',
+                description: 'A <a href="http://backbonejs.org">Backbone.js</a> based web app that uses the <a href="/api">API</a> to showcase Buddycloud channels. The app supports registration, channel subscription, posting, deletions, file sharing, and content recommentation. License: Apache 2.0.',
                 type: 'Client',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_webclient.jpg'
