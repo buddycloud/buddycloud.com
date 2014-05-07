@@ -40,6 +40,13 @@
               {{/caption}}
           </figure>
           {{/image}}
+          {{#video}}
+              <div class='video_box'>
+                  <div class='video_content'>
+                      <iframe src='{{video}}' frameborder="0" allowfullscreen></iframe>
+                  </div>
+              </div>
+          {{/video}}
           <div>
               <div>
                   {{#info_link}}
@@ -138,7 +145,7 @@
                 description: 'BCCC (Buddycloud console client) is a Python application to access channels directly using XMPP. ',
                 type: 'Client',
                 info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md',
-                demo_link: 'https://www.youtube.com/watch?v=vi1nyCPDGTk&feature=youtu.be'
+                video: 'https://www.youtube.com/embed/vi1nyCPDGTk?rel=0'
             },
             {
                 title: 'Buddycloud server',
