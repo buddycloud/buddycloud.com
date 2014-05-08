@@ -31,7 +31,9 @@
       {{#items}}
       <div class='isotope-item' data-type='{{type}}'>
           <h2>{{title}}</h2>
-          <p>{{&description}}</p>
+          <div class='ellipsis'>
+              <p>{{&description}}</p>
+          </div>
           {{#image}}
           <figure class='credits'>
               <img class='img-responsive' src='{{screenshot}}' alt='{{caption}}'/>
@@ -47,7 +49,7 @@
                   </div>
               </div>
           {{/video}}
-          <div>
+          <div class='links'>
               <div>
                   {{#info_link}}
                   <div>
