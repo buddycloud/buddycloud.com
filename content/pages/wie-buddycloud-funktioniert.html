@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>Wie Buddycloud Funktioniert</title>
+    <meta name="url" content="wie-buddycloud-funktioniert" />
+    <meta name="save_as" content="wie-buddycloud-funktioniert.html" />
+    <meta name="order" content="5" />
+    <meta name="header" content="Wie Buddycloud Funktioniert" />
+    <meta name="top_menu_name" content="Wie es funktioniert" />
+    <meta name="title" content="Wie Buddycloud Funktioniert" />
+    <meta name="table_of_contents" content="true" />
+</head>
+ 
+<body>
+    <p class="lead">
+        Buddycloud ist eine Herausgeben-Abonnieren-Architektur mit Echtzeit-Aktualisierungen.
+    </p>
+    <h2>Herausgeben-Abonnieren</h2>
+    <p>Buddycloud-Herausgeber (publisher) stellen (<code>PUT</code>), aktualisieren (<code>UPDATE</code>) und löschen (<code>DELETE</code>) Inhalte in Buddycloud-Kanälen. Änderungen werden zu allen Abonennten (subscriber) des Kanals hinausgesendet ("gepusht").</p>
+    <figure>
+        <img class="center-block" src="/theme/img/diagrams/publish-subscribe.png" alt="Buddycloud Herausgeben-Abonnieren." />
+    </figure>
+    <h2>Arten von Kanalinhalten</h2>
+    <p>Kanal-Posts verwenden das offene <a href="http://www.odata.org/documentation/odata-version-3-0/atom-format/">ATOM</a> Inhaltsformat. Diese Posts können sein:
+        <ul>
+            <li>Posts</li>
+            <li>Kommentare zu Posts</li>
+            <li>Positive Bewertungen ("Stimme dafür"/"Gefällt mir"/"+1")</li>
+            <li>Mediendateien</li>
+        </ul>
+        Es ist einfach, bestehende Post-Arten zu erweitern oder neue Post-Arten hinzuzufügen, damit verschiedene Anwendungen unterstützt werden.</p>
+
+    <h2>Buddycloud-Kanäle</h2>
+    <p>A Buddycloud Kanal ist eine Sammlung von Posts, Followern und Herausgebern. Kanäle enthalten verschiedene Knotenarten.</p>
+    <p>Ein Kanal enthält:
+        <ul>
+            <li>Herausgeber</li>
+            <li>Follower</li>
+            <li>Metadaten</li>
+            <li>Knoten</li>
+        </ul>
+    </p>
+    <figure>
+        <img class="center-block" src="/theme/img/diagrams/channel hierachy.png" alt="Buddycloud-Kanäle" />
+    </figure>
+
+            <h2>Kanalknoten</h2>
+            <p>Jeder Kanal besteht aus mehreren Knoten. Knoten enthalten einen bestimmten Satz an Inhalten. Zum Beispiel enthält der Posts-Knoten (<code>posts</code>) Aktivitätsstromdaten und der <code>status</code>-Knoten enthält deine derzeitige Stimmung.</p>
+            <p>Kanalknoten teilen einen gemeinsamen Satz von Followern, Herausgebern und Metadaten.</p>
+            <p>Jeder Kanal kommt ausgestattet mit einem Satz von Standardknoten heraus:
+                <ul>
+                    <li><code>posts</code>          (Posts)
+                    </li>
+                    <li><code>status</code>         (Stimmung)
+                    </li>
+                    <li><code>geoloc-past</code>    (vergangener Aufenthaltsort)
+                    </li>
+                    <li><code>geoloc</code>         (aktueller Aufenthaltsort)
+                    </li>
+                    <li><code>geoloc-future</code>  (zukünftiger Aufenthaltsort)
+                    </li>
+                    <li><code>public-key</code>     (öffentlicher Schlüssel)
+                    </li>
+                </ul>
+                Anwendungen können auf einfache Weise neue Knoten- und Inhaltsarten erzeugen. Zum Beispiel könnte ein Spiel einen Knoten <code>game-highscore</code> erzeugen und ihn für Follower aktualisieren.
+            </p>
+            <figure>
+                <img class="center-block" src="/theme/img/diagrams/channels comprise application nodes.png" alt="Buddycloud-Kanäle sind aus Anwendungsknoten aufgebaut." />
+            </figure>
+
+
+
+
+        <h2>Dezentraler Aufbau</h2>
+            <p>Buddycloud ist ein föderal organisierter Dienst: Genau wie E-Mails von Ort zu Ort fließen, so auch Buddycloud-Nachrichten. In Echtzeit.</p>
+            <p>Wir sind wirklich stolz auf Buddyclouds Netzwerktransparenz: Nutzer an einem beliebigen Buddycloud-Standort können Nutzer an jedem anderen Standort kontaktieren. Nahtlos.
+            </p>
+            <figure>
+                <img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png" alt="Standortvernetzung" />
+            </figure>
+
+        <h2>Helferdienste</h2>
+    <p>Buddyclouds Aufbau folgt der <a href="http://de.wikipedia.org/wiki/Unix-Philosophie">Unix-Philosophie</a>: Jeder Buddycloud-Dienst macht eine Sache (und macht sie gut). Jeder Dienst bringt sich mit seiner Arbeit ein, um das Ökosystem zu erweitern:</p>
+        <ul>
+            <li><em><a href="/software#media">Der Medienserver</a></em>, ermöglicht das Teilen von Bildern, Dateien und Videos mit den Followern eines Kanals.</li>
+            <li>Der <em>Push-Benachrichtigungsdienst</em> informiert die Follower eines Kanals, via mobiler Benachrichtigungen und/oder E-Mail über neue Inhalte.
+            </li>
+            <li>Der <em><a href="https://github.com/buddycloud/buddycloud-friend-finder">Freundefinder</a></em>dienst hilft dabei, Sozialdiagramme von existierenden sozialen Netzwerken zu importieren.
+            </li>
+            <li>Die <em><a href="https://github.com/buddycloud/channel-directory">Inhaltsempfehlung</a></em>smaschine verwendet skalierbares maschinelles Lernen, um ähnliche Inhalte zu empfehlen ("Wenn dir dieser Inhalt gefallen hat, könnte dir vielleicht auch Folgendes gefallen (...)"; "Wenn dir diese Kanäle gefallen haben, würden dir vielleicht auch diese ähnlichen Kanäle gefallen").
+            </li>
+        </ul>
+        <figure>
+            <img class="center-block" src="/theme/img/diagrams/full stack.png" alt="Buddycloud-Bestandteile" />
+        </figure>
+    
+<hr/>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="center-block">
+                        <p>Fang jetzt an und verleihe deiner App Kommunikation und Zusammenarbeit!</p>
+                        <a class="btn center-block" href="/get-started">Loslegen</a>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
