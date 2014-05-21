@@ -10,7 +10,7 @@
 </head>
 <body>
   <p class="lead">
-      This is a selection of apps and services built with the Buddycloud stack.
+      This is a selection of plugins, apps and helper services built using the Buddycloud stack.
   </p>
   <script id="isotope-template" type="x-tmpl-mustache">
       <div class="btn-toolbar" role="toolbar">
@@ -70,7 +70,7 @@
                   {{#info_link}}
                   <div>
                       <a href='{{info_link}}' target='_blank'>
-                          <small>Learn more</small>
+                          <small>Info</small>
                       </a>
                   </div>
                   {{/info_link}}
@@ -112,10 +112,13 @@
                 name: 'API'
             },
             {
-                name: 'Client'
+                name: 'App'
             },
             {
                 name: 'Service'
+            },            
+            {
+                name: 'Plugin'
             }
         ],
         items: [
@@ -135,7 +138,7 @@
             {
                 title: 'Android demo app',
                 description: 'A quick demo app for Android. The app discovers the correct API server, fetches and posts to channels and uses the search and content recommendation services to find and suggest new content. License: Apache 2.0.',
-                type: 'Client',
+                type: 'App',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_android_demo_client.png'
                 },
@@ -145,7 +148,7 @@
             {
                 title: 'bccc',
                 description: 'The <strong>B</strong>uddy<strong>c</strong>loud <strong>c</strong>onsole <strong>c</strong>lient) is written in Python 3.0 and lets you browse and post to your channel from the comfort of your terminal. License: Apache 2.0.',
-                type: 'Client',
+                type: 'App',
                 info_link: 'https://github.com/Schnouki/bccc/blob/master/README.md',
                 video: 'https://www.youtube.com/embed/vi1nyCPDGTk?rel=0'
             },
@@ -174,7 +177,7 @@
             {
                 title: 'Demo web app',
                 description: 'A <a href="http://backbonejs.org">Backbone.js</a> based web app that uses the <a href="/api">API</a> to showcase Buddycloud channels. The app supports registration, channel subscription, posting, deletions, file sharing, and content recommentation. License: Apache 2.0.',
-                type: 'Client',
+                type: 'App',
                 image: {
                     screenshot: '/theme/img/isotope/buddycloud_webclient.jpg'
                 },
@@ -183,8 +186,8 @@
             },
             {
                 title: 'codename: bummer',
-                description: 'This is what happens when a skunkworks team is given free reign to design and build. Don\'t let the name put you off. Bummer is a mystery, much anticipated and soon to be released web app. Bummer uses the Buddycloud stack to create a Yammer-like social network. With a twist.',
-                type: 'Client'
+                description: 'Don\'t let the working-name put you off. This is what happens when a skunkworks team is given free reign to design and build a webapp. Bummer uses the Buddycloud stack to create a Yammer-like social network. With a twist. We\'re looking forward to the release!',
+                type: 'App'
             },
             {
                 title: 'Push Server',
@@ -201,7 +204,7 @@
             },
             {
                 title: 'Friend Finder',
-                description: 'Terrible name, great service. The Friend Finder is a social graph importer. It helps users import their social graph from services like Facebook and Twitter and match it with existing users on Buddycloud.',
+                description: 'Terrible name, great service. The Friend Finder can is a social graph importer. It helps users import their social graph from services like Facebook and Twitter and match it with existing users on Buddycloud.',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/buddycloud-friend-finder/blob/master/README.md'
             },
@@ -216,11 +219,25 @@
                 info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md'
             },
             {
-                title: 'Recommend Engine',
+                title: 'Taste Engine',
                 description: 'This service recommends interesting content based on what you already follow. It can also show channels similar to an existing chanenl. License: Apache 2.0.',
                 type: 'Service',
                 info_link: 'https://github.com/buddycloud/channel-directory/blob/master/README.md',
                 demo_link: 'https://demo.buddycloud.org/api/team@topics.buddycloud.org/similar'
+            },
+            {
+                title: 'Jenkins plugin',
+                description: 'A Jenkins CI plugin that pushes successful/failing build notifications to a Buddycloud channel. License: Apache 2.0.',
+                type: 'Plugin',
+                info_link: 'https://wiki.jenkins-ci.org/display/JENKINS/Buddycloud+Plugin',
+                demo_link: 'https://github.com/jenkinsci/buddycloud-plugin'
+            },
+            {
+                title: 'Github plugin',
+                description: 'Official GitHub Services Integration: in your repository settings screen under Service Hooks to setup posting commits to a Buddycloud channel.',
+                type: 'Plugin',
+                info_link: 'https://github.com/github/github-services/blob/master/lib/services/buddycloud.rb',
+                demo_link: 'https://github.com/github/github-services/blob/master/docs/buddycloud'
             }
         ]
     };
