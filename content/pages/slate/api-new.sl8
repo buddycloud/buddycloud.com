@@ -1,11 +1,12 @@
-Title: API-NEW
-url: api-new
-save_as: api-new.html
+Title: Slate API
+url: slate-api
+save_as: slate-api.html
 order: 2
 table_of_contents: true
+show_in_top_menu: false
 
 ---
-title: API Reference
+title: Buddycloud API Reference
 
 language_tabs:
   - shell
