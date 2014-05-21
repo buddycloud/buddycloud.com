@@ -17,7 +17,7 @@ var showIsotope = function(container, template, view){
 
         $(".width-medium").removeClass("width-medium");
         $(".isotope-item[data-type='"+selected+"']").addClass("width-medium");
-        $("#isotope-container").isotope('reloadItems');
+//        $("#isotope-container").isotope('reloadItems');
 
         SELECTED_TYPE = selected;
         $("#isotope-container").isotope({ sortBy: 'priority' });
@@ -33,7 +33,7 @@ var showIsotope = function(container, template, view){
         $(".isotope-btn[data-type='All']").addClass("btn-primary");
 
         $(".isotope-item").addClass("width-medium");
-        $("#isotope-container").isotope('reloadItems');
+//        $("#isotope-container").isotope('reloadItems');
 
         $("#isotope-container").isotope({ sortBy: 'random' });
         $("#isotope-container").isotope('updateSortData').isotope();
@@ -70,7 +70,7 @@ var showIsotope = function(container, template, view){
 }
 
 $(window.document).ready(function(){
-    if ( _isotopeRoot ){
+    if ( typeof _isotopeRoot !== "undefined" ){
         showIsotope(_isotopeRoot, _isotopeTemplate, _isotopeView);
         window.setTimeout(function(){
             reorder(SELECTED_TYPE);

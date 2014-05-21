@@ -30,5 +30,10 @@ JINJA_FILTERS = {
 
 GOOGLE_ANALYTICS = "UA-1075750-9"
 
+PLUGINS = ['slate.pelican_plugin',]
+
+SLATE_PAGES_DIR = 'pages/slate'
+PAGE_EXCLUDES = ('slate',)
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
