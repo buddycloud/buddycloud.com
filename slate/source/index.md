@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Buddycloud API Reference
 
 language_tabs:
   - shell

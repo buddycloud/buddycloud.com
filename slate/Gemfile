@@ -7,8 +7,8 @@ gem "middleman", "~>3.3.0"
 # For syntax highlighting
 gem "middleman-syntax"
 
-# Plugin for middleman to generate Github pages
-gem 'middleman-gh-pages'
+## Plugin for middleman to generate Github pages
+#gem 'middleman-gh-pages'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.3.0"
