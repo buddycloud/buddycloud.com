@@ -1,12 +1,12 @@
 language: ruby
 rvm:
-  - 2.1.0
+  - 2.1.1
 branches:
   only:
   - master
 before_install:
 - sudo apt-get install python-pip
-- pip install pelican ghp-import markdown
+- sudo pip install pelican ghp-import markdown
 install:
 - make github
 env:
