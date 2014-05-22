@@ -1,3 +1,4 @@
 #require 'middleman-gh-pages'
+#require 'middleman'
 
-task :default => [:build]
+#task :default => [:build]

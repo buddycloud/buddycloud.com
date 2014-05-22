@@ -67,7 +67,8 @@ class SlateGenerator(PagesGenerator):
                 slate_content.close()
                 os.chdir(os.path.join(os.getcwd(), "slate"))
 
-                p = subprocess.Popen(['rake', 'build'],
+                p = subprocess.Popen(
+                    ['bundle', 'exec', 'middleman', 'build', '--clean'],
                     stdout=subprocess.PIPE,
                     stderr=subprocess.PIPE)
                 out, err = p.communicate()
