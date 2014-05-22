@@ -5,7 +5,7 @@ branches:
   only:
   - master
 before_install:
-- apt-get install python-pip
+- sudo apt-get install python-pip
 - pip install pelican ghp-import markdown
 install:
 - make github
