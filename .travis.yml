@@ -1,13 +1,13 @@
 language: ruby
 rvm:
-  - 2.1.1
+  - 1.9.3
 branches:
   only:
   - master
 before_install:
 - sudo apt-get install python-pip
-- sudo pip install pelican ghp-import markdown
 install:
+- sudo pip install pelican ghp-import markdown
 - cd slate
 - bundle install
 script:
