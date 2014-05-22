@@ -2,9 +2,12 @@ language: python
 branches:
   only:
   - master
-install:
+before_install:
 - pip install pelican ghp-import markdown
-script:
+- \curl -sSL https://get.rvm.io | bash -s stable --ruby
+- rvm install 2.1.2 
+- gem install bundler
+install:
 - make github
 env:
   global:
