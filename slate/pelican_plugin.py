@@ -28,7 +28,28 @@ class SlateReader(BaseReader):
         content = source.read()
         source.close()
 
-        return content, metadata
+        slate_content = codecs.open('slate/source/index.md', 'w')
+        slate_content.write(content)
+        slate_content.close()
+        os.chdir(os.path.join(os.getcwd(), "slate"))
+
+        p = subprocess.Popen(
+            ['bundle', 'exec', 'middleman', 'build', '--clean'],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+        out, err = p.communicate()
+        if ( p.returncode != 0 ):
+            raise Exception(err)
+
+        slate_content = codecs.open('build/index.html', 'r')
+        processed = slate_content.read()
+        processed = processed.decode('utf-8')
+        slate_content.close()
+        os.chdir("../")
+
+        print processed
+
+        return processed, metadata
 
 def add_reader(readers):
     readers.reader_classes['slate'] = SlateReader
@@ -43,27 +64,28 @@ def _make_sure_path_exists(path):
         if e.errno != errno.EEXIST:
             raise
 
+class SlatePage(Page):
+    default_template = 'slate_page'
+
 class SlateGenerator(PagesGenerator):
 
-    def __init__(self, pelican_object):
-        context = pelican_object.settings.copy()
-        context['filenames'] = {}
-        context['localsiteurl'] = pelican_object.settings['SITEURL']
-        generators = [
-            cls(
-                context = context,
-                settings = pelican_object.settings,
-                path = pelican_object.path,
-                theme = pelican_object.theme,
-                output_path = pelican_object.output_path,
-            ) for cls in pelican_object.get_generator_classes()
-        ]
+    def __init__(self, pages_generator):
+##    def __init__(self, pelican_object):
+##        context = pelican_object.settings.copy()
+##        context['filenames'] = {}
+##        context['localsiteurl'] = pelican_object.settings['SITEURL']
+##        generators = [
+##            cls(
+##                context = context,
+##                settings = pelican_object.settings,
+##                path = pelican_object.path,
+##                theme = pelican_object.theme,
+##                output_path = pelican_object.output_path,
+##            ) for cls in pelican_object.get_generator_classes()
+##        ]
 
-#        for g in pelican_object.get_generator_classes():
-#            print "generator: ", g, " and is a Pages one? (", isinstance(g, PagesGenerator), ")"
-
-        pages_generator = next(g for g in generators
-                              if isinstance(g, PagesGenerator))
+##        pages_generator = next(g for g in generators
+##                              if isinstance(g, PagesGenerator))
         self.generator = pages_generator
 
     def generate(self):
@@ -74,31 +96,16 @@ class SlateGenerator(PagesGenerator):
 
                 page = self.generator.readers.read_file(
                     base_path = self.generator.path, path = f,
-                    content_class = Page, context = self.generator.context)
-
-                slate_content = codecs.open('slate/source/index.md', 'w')
-                slate_content.write(page.content)
-                slate_content.close()
-                os.chdir(os.path.join(os.getcwd(), "slate"))
-
-                p = subprocess.Popen(
-                    ['bundle', 'exec', 'middleman', 'build', '--clean'],
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE)
-                out, err = p.communicate()
-                if ( p.returncode != 0 ):
-                    raise Exception(err)
-
-                os.chdir("../")
+                    content_class = SlatePage, context = self.generator.context)
 
                 _make_sure_path_exists("output/theme/vendor")
 
-                p = subprocess.Popen(['cp',
-                    'slate/build/index.html',
-                    'output/' + page.save_as.strip()])
-                out, err = p.communicate()
-                if ( p.returncode != 0 ):
-                    raise Exception(err)
+#                p = subprocess.Popen(['cp',
+#                    'slate/build/index.html',
+#                    'output/' + page.save_as.strip()])
+#                out, err = p.communicate()
+#                if ( p.returncode != 0 ):
+#                    raise Exception(err)
 
                 p = subprocess.Popen(['cp', '-R',
                     'slate/build/theme/vendor/slate',
@@ -130,4 +137,4 @@ def generate_slate_pages_too(pelican_object):
     slate_generator = SlateGenerator(pelican_object)
     slate_generator.generate()
 
-signals.finalized.connect(generate_slate_pages_too)
+signals.page_generator_finalized.connect(generate_slate_pages_too)
