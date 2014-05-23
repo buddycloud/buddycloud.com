@@ -11,6 +11,7 @@ class FixCodeBlocksPost(Postprocessor):
 
 		text = text.replace("<pre>", "<pre><code>")
 		text = text.replace("</pre>", "</code></pre>")
+
 		return text
 
 class Bootstrap_Markdown_Extension(Extension):

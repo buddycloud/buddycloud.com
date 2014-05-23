@@ -1,4 +1,4 @@
-import subprocess, logging, os, errno
+import subprocess, logging, os, errno, codecs
 from itertools import chain
 from pelican import signals
 from pelican.readers import BaseReader
@@ -15,7 +15,7 @@ class SlateReader(BaseReader):
 
     def read(self, source_path):
 
-        source = open(source_path, 'r')
+        source = codecs.open(source_path, 'r')
 
         metadata = {}
         line = source.readline()
@@ -45,7 +45,25 @@ def _make_sure_path_exists(path):
 
 class SlateGenerator(PagesGenerator):
 
-    def __init__(self, pages_generator):
+    def __init__(self, pelican_object):
+        context = pelican_object.settings.copy()
+        context['filenames'] = {}
+        context['localsiteurl'] = pelican_object.settings['SITEURL']
+        generators = [
+            cls(
+                context = context,
+                settings = pelican_object.settings,
+                path = pelican_object.path,
+                theme = pelican_object.theme,
+                output_path = pelican_object.output_path,
+            ) for cls in pelican_object.get_generator_classes()
+        ]
+
+#        for g in pelican_object.get_generator_classes():
+#            print "generator: ", g, " and is a Pages one? (", isinstance(g, PagesGenerator), ")"
+
+        pages_generator = next(g for g in generators
+                              if isinstance(g, PagesGenerator))
         self.generator = pages_generator
 
     def generate(self):
@@ -56,13 +74,9 @@ class SlateGenerator(PagesGenerator):
 
                 page = self.generator.readers.read_file(
                     base_path = self.generator.path, path = f,
-                    content_class = Page, context = self.generator.context,
-                    preread_signal = signals.page_generator_preread,
-                    preread_sender = self.generator,
-                    context_signal = signals.page_generator_context,
-                    context_sender = self.generator)
+                    content_class = Page, context = self.generator.context)
 
-                slate_content = open('slate/source/index.md', 'w')
+                slate_content = codecs.open('slate/source/index.md', 'w')
                 slate_content.write(page.content)
                 slate_content.close()
                 os.chdir(os.path.join(os.getcwd(), "slate"))
@@ -98,8 +112,8 @@ class SlateGenerator(PagesGenerator):
                 continue
             else:
 
-                if not is_valid_content(page, f):
-                    continue
+#                if not is_valid_content(page, f):
+#                   continue
 
                 self.generator.add_source_path(page)
 
@@ -116,5 +130,4 @@ def generate_slate_pages_too(pelican_object):
     slate_generator = SlateGenerator(pelican_object)
     slate_generator.generate()
 
-#signals.get_generators.connect(get_generators)
-signals.page_generator_finalized.connect(generate_slate_pages_too)
+signals.finalized.connect(generate_slate_pages_too)
