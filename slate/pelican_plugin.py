@@ -47,8 +47,6 @@ class SlateReader(BaseReader):
         slate_content.close()
         os.chdir("../")
 
-        print processed
-
         return processed, metadata
 
 def add_reader(readers):
@@ -70,22 +68,6 @@ class SlatePage(Page):
 class SlateGenerator(PagesGenerator):
 
     def __init__(self, pages_generator):
-##    def __init__(self, pelican_object):
-##        context = pelican_object.settings.copy()
-##        context['filenames'] = {}
-##        context['localsiteurl'] = pelican_object.settings['SITEURL']
-##        generators = [
-##            cls(
-##                context = context,
-##                settings = pelican_object.settings,
-##                path = pelican_object.path,
-##                theme = pelican_object.theme,
-##                output_path = pelican_object.output_path,
-##            ) for cls in pelican_object.get_generator_classes()
-##        ]
-
-##        pages_generator = next(g for g in generators
-##                              if isinstance(g, PagesGenerator))
         self.generator = pages_generator
 
     def generate(self):
@@ -100,13 +82,6 @@ class SlateGenerator(PagesGenerator):
 
                 _make_sure_path_exists("output/theme/vendor")
 
-#                p = subprocess.Popen(['cp',
-#                    'slate/build/index.html',
-#                    'output/' + page.save_as.strip()])
-#                out, err = p.communicate()
-#                if ( p.returncode != 0 ):
-#                    raise Exception(err)
-
                 p = subprocess.Popen(['cp', '-R',
                     'slate/build/theme/vendor/slate',
                     'output/theme/vendor/slate'])
@@ -118,9 +93,6 @@ class SlateGenerator(PagesGenerator):
                 logger.warning('Could not process {}\n{}'.format(f, e))
                 continue
             else:
-
-#                if not is_valid_content(page, f):
-#                   continue
 
                 self.generator.add_source_path(page)
 
