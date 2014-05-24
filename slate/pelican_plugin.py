@@ -72,6 +72,7 @@ class SlateGenerator(PagesGenerator):
 
     def generate(self):
 
+        slate_pages = False
         for f in self.generator.get_files(
             self.generator.settings['SLATE_PAGES_DIR']):
             try:
@@ -79,15 +80,6 @@ class SlateGenerator(PagesGenerator):
                 page = self.generator.readers.read_file(
                     base_path = self.generator.path, path = f,
                     content_class = SlatePage, context = self.generator.context)
-
-                _make_sure_path_exists("output/theme/vendor")
-
-                p = subprocess.Popen(['cp', '-R',
-                    'slate/build/theme/vendor/slate',
-                    'output/theme/vendor/slate'])
-                out, err = p.communicate()
-                if ( p.returncode != 0 ):
-                    raise Exception(err)
 
             except Exception as e:
                 logger.warning('Could not process {}\n{}'.format(f, e))
@@ -98,9 +90,21 @@ class SlateGenerator(PagesGenerator):
 
                 if page.status == "published":
                     self.generator.pages.append(page)
+                    slate_pages = True
                 else:
                     logger.warning("Unknown status %s for file %s," +
                         " skipping it." % (repr(page.status), repr(f)))
+
+        if ( slate_pages ):
+            _make_sure_path_exists("output/theme/vendor/slate")
+
+            p = subprocess.Popen(['cp', '-R',
+                    'slate/build/theme/vendor/slate/',
+                    'output/theme/vendor/'])
+            out, err = p.communicate()
+            if ( p.returncode != 0 ):
+                logger.warning("Could not set up Slate pages " +
+                    "resources: {}".format(err))
 
         self.generator._update_context(('pages', ))
         self.generator.context['PAGES'] = self.generator.pages

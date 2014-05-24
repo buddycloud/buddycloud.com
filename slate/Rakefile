@@ -1,4 +1,0 @@
-#require 'middleman-gh-pages'
-#require 'middleman'
-
-#task :default => [:build]
