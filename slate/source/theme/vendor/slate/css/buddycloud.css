@@ -2,6 +2,10 @@
   margin-top: 50px;
 }
 
+.tocify-wrapper > img {
+  display: none;
+}
+
 .page-wrapper {
   margin-top: 50px;
 }
