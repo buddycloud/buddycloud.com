@@ -14,7 +14,6 @@ License for the specific language governing permissions and limitations
 under the License.
 %>
 <% language_tabs = current_page.data.language_tabs %>
-<base target="_parent" />
 <!doctype html>
 <html>
   <head>
@@ -34,17 +33,6 @@ under the License.
     <link rel="stylesheet" href="theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
     <link href="theme/vendor/slate/css/buddycloud.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <%= javascript_include_tag  "all" %>
-
-    <% if language_tabs %>
-      <script>
-        $(function() {
-          setupLanguages(<%= language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>);
-        });
-      </script>
-    <% end %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -133,5 +121,17 @@ under the License.
         <% end %>
       </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <%= javascript_include_tag  "all" %>
+
+    <% if language_tabs %>
+      <script>
+        $(function() {
+          setupLanguages(<%= language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>);
+        });
+      </script>
+    <% end %>
+
   </body>
 </html>
