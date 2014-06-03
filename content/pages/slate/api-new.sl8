@@ -10,8 +10,7 @@ title: Buddycloud API Reference
 
 language_tabs:
   - shell
-  - ruby
-  - python
+  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -28,10 +27,10 @@ Buddycloud has APIs optimised for both mobile and for web applications. The Budd
 
 To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implemetnation. Of course you are welcome to download the mobile or web API soruce code and run your own API.
 
-## Time format
+##Time Format
 All dates are in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format (example: "2012-08-21T22:31:20+0000"). In [strftime](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) format, `*%Y-%m-%dT%H:%M:%SZ*`
 
-##UTF-8 encoding
+##Encoding
 Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the case of JSON set `Content-Type` to `application/json; charset=utf-8`)
 
 #Pagination
@@ -99,12 +98,24 @@ curl -i https://demo.buddycloud.com/api/account \
            "email": "alice@buddycloud.org" \
          }'
 ```
+> The above command returns JSON structured like this:
 
-#delete user
+```json
+[
+  {
+  ???
+  },
+  {
+  ???
+  }
+]
+```
+
+##Delete user
 
 <aside class="warning">Removing a user will delete the account. But not their channels. If it's important, delete their channels first.</aside>
 
-#Realtime events
+#Realtime Events
 
 something about sending presence to go online and start getting events
 
@@ -128,47 +139,48 @@ geoloc-future   | Where they will go next      |
 ##Change channel metadata
 ##Delete a channel
 
-#Channel Subscriptions
+#Posts
+##Create Post
+##Delete Post
+##Fetch Posts
+Mention sync endpoint
+##Upvote Post
+##Firehose Access
+
+#Subscriptions
 ##Fetch Subscriptions 
 ##Follow a channel
 ##Unfollow a channel
 
-#Posts
-##Creating
-##Deleting
-##Fetching
-Mention sync endpoint
-##Firehose
-
-#Post Voting
-#Channel Followers
-##Authorising new followers
-##Getting Followers
-##Altering follower roles
+#Followers
+##Authorise New Followers
+##Fetch Followers
+##Alter Follower Roles
 
 #Messaging
-##Sending a message
-##Retrieving message history
+##Send Message
+##Retrieve messages
+Mention MAM
 
 #Media
-##Posting media
-##Deleting media
 ##Special IDs (avatar)
+##Post media
+##Delete media
 
 #Search
-##nearby channels
-##search channel names and descriptions
-##search for posts
+##Content Search
+##Metadata Search
+##Nearby Channel Search
 
 #Push Notifications
-##Getting settings
-##Changing settings
+##Fetch Settings
+##Update Settings
 
 #Social Discovery
 ##Recommended channels
 ##Find Similar channels
 
-#Importing friends
+#Import friends
 ##Social Graph comparison
 
 
