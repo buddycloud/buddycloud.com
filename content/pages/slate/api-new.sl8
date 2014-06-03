@@ -77,6 +77,8 @@ dig txt +short _buddycloud-api._tcp.buddycloud.org
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 ```
 
+> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
+
 ```javascript
 socket.send(
     'xmpp.buddycloud.discover',
@@ -85,11 +87,11 @@ socket.send(
 )
 ```
 
-If a server is discovered the `data` will contain the channel server host, if not `error` will be populated to tell you that no server was found.
+> If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
 
-#User management
+#Users
 
-##create user
+##Create User
 
 ```shell
 curl -i https://demo.buddycloud.com/api/account \
@@ -111,9 +113,11 @@ curl -i https://demo.buddycloud.com/api/account \
 ]
 ```
 
-##Delete user
+##Delete User
 
 <aside class="warning">Removing a user will delete the account. But not their channels. If it's important, delete their channels first.</aside>
+
+##Change Password
 
 #Realtime Events
 
