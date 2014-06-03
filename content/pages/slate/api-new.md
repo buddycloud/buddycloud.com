@@ -81,6 +81,7 @@ dig txt +short _buddycloud-api._tcp.buddycloud.org
 
 > This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
 
+Running the same with JS
 ```javascript
 socket.send(
     'xmpp.buddycloud.discover',
@@ -92,6 +93,13 @@ socket.send(
 > If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
 
 #Users
+
+
+Attributes | Required | Description
+---------- | -------- |------------
+username   | Yes      | Must contain a domain element that matches the virtual host.
+password   | Yes      |
+email      | No       | Address to receive push notifications and password resets
 
 ##Create User
 
@@ -117,7 +125,8 @@ curl -i https://demo.buddycloud.com/api/account \
 
 ##Delete User
 
-<aside class="warning">Removing a user will delete the account. But not their channels. If it's important, delete their channels first.</aside>
+
+<aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
 ##Change Password
 
@@ -162,7 +171,7 @@ Mention sync endpoint
 
 #Followers
 ##Fetch Followers
-##Authorise New Followers
+##Authorise Pending Followers
 ##Alter Follower Roles
 
 #Messaging
@@ -170,18 +179,20 @@ Mention sync endpoint
 ##Retrieve Messages
 Mention MAM
 
-#Media
-##Special IDs (avatar)
-##Post media
-##Delete media
+#Media Objects
+##Media Metadata
+##Fetch Media
+###Special MediaIDs
+##Post Media
+##Delete Media
 
 #Search
 ##Search by Content
 Mention private search
 
 ##Search by Author
-##Search Metadata
-##Search Nearby
+##Search by Metadata
+##Search by Location
 
 #Push Notifications
 ##Fetch Settings

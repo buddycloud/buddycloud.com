@@ -3,18 +3,196 @@ title: Buddycloud API Reference
 
 language_tabs:
   - shell
-  - ruby
-  - python
+  - javascript
+  - sequence-diagram
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
+  - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
 
 includes:
   - errors
 
 search: true
 ---
+
+#Introduction 
+
+Buddycloud has APIs optimised for both mobile and for web applications. The Buddycloud mobile API is REST based. The web API uses is designed for Javascript and node-based applications.
+
+To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implemetnation. Of course you are welcome to download the mobile or web API soruce code and run your own API.
+
+##Time Format
+All dates are in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format (example: "2012-08-21T22:31:20+0000"). In [strftime](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) format, `*%Y-%m-%dT%H:%M:%SZ*`
+
+##Encoding
+Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the case of JSON set `Content-Type` to `application/json; charset=utf-8`)
+
+#Pagination
+
+All Buddycloud API resources have support for handling large results. Results are paginated. 
+    
+## Query Parameters
+
+Parameter | Reqired/Optional | Description
+--------- | ---------------- | -----------
+max       | optional         | The maximum number of returned entries
+before    |                  | Get posts before this timestamp
+first     |                  | ??? is this a date and what format???
+last      |                  | ??? is this a date and what format???
+after     |                  | Return only entries older than the entry with the specified ID.
+index     |                  | The element's (for example, a post) position in the result set
+
+```shell
+curl something.... 
+"rsm" : { 
+"count" : "2",
+"index" : "0"
+    }
+```
+
+```json
+[
+  {
+        count: 99
+        first: "item-123",
+        last: "item-173"
+    }
+]
+```
+
+#API discovery
+When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
+
+Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
+
+```shell
+# to resolve the API endpoint for buddycloud.org we use:
+dig txt +short _buddycloud-api._tcp.buddycloud.org 
+"v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
+```
+
+> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
+
+```javascript
+socket.send(
+    'xmpp.buddycloud.discover',
+    { /* "server": "channels.buddycloud.org" */ },
+    function(error, data) { console.log(error, data) }
+)
+```
+
+> If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
+
+#Users
+
+##Create User
+
+```shell
+curl -i https://demo.buddycloud.com/api/account \
+     -d '{ "username": "alice@buddycloud.org", \
+           "password": "tell-no-one", \
+           "email": "alice@buddycloud.org" \
+         }'
+```
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+  ???
+  },
+  {
+  ???
+  }
+]
+```
+
+##Delete User
+
+
+<aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
+
+##Change Password
+
+#Realtime Events
+
+something about sending presence to go online and start getting events
+
+#Channels
+Following a channel grants one access to that channels current [and future] nodes. The following default nodes are created. Additional nodes can be created by the channel owner.
+
+Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`
+
+
+##Create Channel
+##Update Metadata
+##Delete Channel
+##Default Nodes
+
+node            | Description | Example
+--------------- | ----------- | ----------
+status          | A one line ???string format??? status message | Build completed - happy days
+posts           | ATOM formatted activy stream | 
+geoloc-previous | Where they were              |    
+geoloc-current  | Where they are               |
+geoloc-future   | Where they will go next      |
+
+##Create Node
+Create a new Application node (for example `/user/user@example.com/game-highscores), do ???
+
+#Posts
+##Create Post
+##Delete Post
+##Fetch Posts
+Mention sync endpoint
+##Upvote Post
+##Firehose Access
+
+#Subscriptions
+##Fetch Subscriptions 
+##Follow Channel
+##Unfollow Channel
+
+#Followers
+##Fetch Followers
+##Authorise Pending Followers
+##Alter Follower Roles
+
+#Messaging
+##Send Message
+##Retrieve Messages
+Mention MAM
+
+#Media Objects
+##Media Metadata
+##Fetch Media
+###Special MediaIDs
+##Post Media
+##Delete Media
+
+#Search
+##Search by Content
+Mention private search
+
+##Search by Author
+##Search by Metadata
+##Search by Location
+
+#Push Notifications
+##Fetch Settings
+##Update Settings
+
+#Social Discovery
+
+Useful for onboarding new users, Buddycloud can recommend similar channels to a channel, and iscovery Based on the (search and crawler), Buddycloud 
+
+##Recommend Channels
+##Similar Channels
+##Popular Channels
+
+#Import friends
+##Social Graph comparison
+
 
 # Introduction
 
