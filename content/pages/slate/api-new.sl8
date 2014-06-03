@@ -11,6 +11,7 @@ title: Buddycloud API Reference
 language_tabs:
   - shell
   - javascript
+  - sequence-diagram
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -128,7 +129,11 @@ Following a channel grants one access to that channels current [and future] node
 
 Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`
 
-## Default channel nodes
+
+##Create Channel
+##Update Metadata
+##Delete Channel
+##Default Nodes
 
 node            | Description | Example
 --------------- | ----------- | ----------
@@ -138,10 +143,8 @@ geoloc-previous | Where they were              |
 geoloc-current  | Where they are               |
 geoloc-future   | Where they will go next      |
 
-
-##Create a channel
-##Change channel metadata
-##Delete a channel
+##Create Node
+Create a new Application node (for example `/user/user@example.com/game-highscores), do ???
 
 #Posts
 ##Create Post
@@ -153,17 +156,17 @@ Mention sync endpoint
 
 #Subscriptions
 ##Fetch Subscriptions 
-##Follow a channel
-##Unfollow a channel
+##Follow Channel
+##Unfollow Channel
 
 #Followers
-##Authorise New Followers
 ##Fetch Followers
+##Authorise New Followers
 ##Alter Follower Roles
 
 #Messaging
 ##Send Message
-##Retrieve messages
+##Retrieve Messages
 Mention MAM
 
 #Media
@@ -172,25 +175,27 @@ Mention MAM
 ##Delete media
 
 #Search
-##Content Search
-##Metadata Search
-##Nearby Channel Search
+##Search by Content
+Mention private search
+
+##Search by Author
+##Search Metadata
+##Search Nearby
 
 #Push Notifications
 ##Fetch Settings
 ##Update Settings
 
 #Social Discovery
-##Recommended channels
-##Find Similar channels
+
+Useful for onboarding new users, Buddycloud can recommend similar channels to a channel, and iscovery Based on the (search and crawler), Buddycloud 
+
+##Recommend Channels
+##Similar Channels
+##Popular Channels
 
 #Import friends
 ##Social Graph comparison
-
-
-
-
-
 
 
 # Introduction
