@@ -17,9 +17,9 @@ search: true
 
 #Introduction 
 
-Buddycloud has APIs optimised for both mobile and for web applications. The Buddycloud mobile API is REST based. The web API uses is designed for Javascript and node-based applications.
+Buddycloud has APIs optimised for both mobile and for web applications. The Buddycloud mobile API is REST based. The web API is designed for Javascript and node-based applications.
 
-To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implemetnation. Of course you are welcome to download the mobile or web API soruce code and run your own API.
+To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implementation. Of course you are welcome to download the mobile or web API source code and run your own API.
 
 ##Time Format
 All dates are in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format (example: "2012-08-21T22:31:20+0000"). In [strftime](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) format, `*%Y-%m-%dT%H:%M:%SZ*`
@@ -73,6 +73,7 @@ dig txt +short _buddycloud-api._tcp.buddycloud.org
 
 > This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
 
+Running the same with JS
 ```javascript
 socket.send(
     'xmpp.buddycloud.discover',
@@ -84,6 +85,13 @@ socket.send(
 > If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
 
 #Users
+
+
+Attributes | Required | Description
+---------- | -------- |------------
+username   | Yes      | Must contain a domain element that matches the virtual host.
+password   | Yes      |
+email      | No       | Address to receive push notifications and password resets
 
 ##Create User
 
