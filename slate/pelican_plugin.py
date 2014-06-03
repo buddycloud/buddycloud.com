@@ -1,9 +1,14 @@
 import subprocess, logging, os, errno, codecs
 from itertools import chain
 from pelican import signals
-from pelican.readers import BaseReader
+from pelican.readers import BaseReader, pelican_open
 from pelican.generators import PagesGenerator
 from pelican.contents import Page, is_valid_content
+
+try:
+    from markdown import Markdown
+except ImportError:
+    Markdown = False
 
 
 logger = logging.getLogger(__name__)
@@ -11,7 +16,34 @@ logger = logging.getLogger(__name__)
 
 class SlateReader(BaseReader):
     enabled = True
-    file_extensions = ['slate', 'slt', 'sl8']
+    file_extensions = ['md', 'markdown', 'mkd', 'mdown']
+
+    def __init__(self, *args, **kwargs):
+        super(SlateReader, self).__init__(*args, **kwargs)
+        self.extensions = list(self.settings['MD_EXTENSIONS'])
+        if 'meta' not in self.extensions:
+            self.extensions.append('meta')
+
+    def markdown_read(self, source_path):
+
+        md = Markdown(extensions=self.extensions)
+        with pelican_open(source_path) as text:
+            content = md.convert(text)
+
+        metadata = {}
+        for name, value in md.Meta.items():
+            name = name.lower()
+            if name == "summary":
+                summary_values = "\n".join(value)
+                md.reset()
+                summary = md.convert(summary_values)
+                metadata[name] = self.process_metadata(name, summary)
+            elif len(value) > 1:
+                metadata[name] = self.process_metadata(name, value)
+            else:
+                metadata[name] = self.process_metadata(name, value[0])
+
+        return content, metadata
 
     def read(self, source_path):
 
@@ -27,6 +59,10 @@ class SlateReader(BaseReader):
 
         content = source.read()
         source.close()
+
+        if not ('slate' in metadata and metadata['slate'].lower() == 'true'):
+            if ( bool(Markdown) ):
+                return self.markdown_read(source_path)
 
         slate_content = codecs.open('slate/source/index.md', 'w')
         slate_content.write(content)
