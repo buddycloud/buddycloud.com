@@ -49,20 +49,20 @@ All Buddycloud API resources have support for handling large results. Results ar
     
 ## Query Parameters
 
-Parameter | Reqired          | Description
---------- | ---------------- | -----------
-max       | False            | The maximum number of returned entries
-before    | False            | Get posts before this timestamp
-first     | False            | ??? is this a date and what format???
-last      | False            | ??? is this a date and what format???
-after     | False            | Return only entries older than the entry with the specified ID.
-index     | False            | The element's (for example, a post) position in the result set
+Parameter | Description
+--------- |  -----------
+max       | The maximum number of returned entries
+before    | Get posts before this timestamp
+first     | ??? is this a date and what format???
+last      | ??? is this a date and what format???
+after     | Return only entries older than the entry with the specified ID.
+index     | The element's (for example, a post) position in the result set
 
 #API discovery
 
-When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
+To avoid needing to hard-code an When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
-Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
+<aside>User's _home_ Buddycloud server passes messages to followers on remote Buddycloud server.</aside>
 
 ```shell
 # to resolve the API endpoint for buddycloud.org we use:
@@ -89,7 +89,7 @@ socket.send(
 ???
 ```
 
-#Users
+#Accounts
 
 Create user accounts that can then use the service
 
@@ -198,7 +198,13 @@ Start receciving realtime events from local and remote Buddycloud servers.
 ```
 
 ```javascript
-socket.send('xmpp.buddycloud.presence', {})
+socket.send('xmpp.buddycloud.presence',
+            {}
+            )
+```
+
+```json
+???
 ```
 
 #Channels
