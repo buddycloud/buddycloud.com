@@ -25,9 +25,12 @@ search: true
 
 #Introduction 
 
-Buddycloud has APIs optimised for both mobile and for web applications. The Buddycloud mobile API is REST based. The web API is designed for Javascript and node-based applications.
+Buddycloud has APIs optimised for both mobile and for web applications. 
 
-To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implementation. Of course you are welcome to download the mobile or web API source code and run your own API.
+* The REST API is optimised for mobile app development.
+* Every API call also has a matching Javascript call for realtime web application programming.
+
+<aside>To make Buddycloud as accessible as possible, all these API calls should work against the test instance running on buddycloud.org. Consider buddycloud.org a good reference implementation. Of course you are welcome to download the mobile or web API source code and run your own API.</aside>
 
 ##Time Format
 All dates are in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format (example: "2012-08-21T22:31:20+0000"). In [strftime](http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html) format, `*%Y-%m-%dT%H:%M:%SZ*`
@@ -35,40 +38,28 @@ All dates are in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format (exam
 ##Encoding
 Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the case of JSON set `Content-Type` to `application/json; charset=utf-8`)
 
+##Authentication
+Buddycloud uses HTTP Basic method. The username should also include the domain. For example `user@example.com` works/`user` not. 
+
+<aside class="warning">Always authenticate a user against their home API server. While it may be possible to authenticate against a third-party API server, this could potentially expose user credentials.</aside>
+
 #Pagination
 
 All Buddycloud API resources have support for handling large results. Results are paginated. 
     
 ## Query Parameters
 
-Parameter | Reqired/Optional | Description
+Parameter | Reqired          | Description
 --------- | ---------------- | -----------
-max       | optional         | The maximum number of returned entries
-before    |                  | Get posts before this timestamp
-first     |                  | ??? is this a date and what format???
-last      |                  | ??? is this a date and what format???
-after     |                  | Return only entries older than the entry with the specified ID.
-index     |                  | The element's (for example, a post) position in the result set
-
-```shell
-curl something.... 
-"rsm" : { 
-"count" : "2",
-"index" : "0"
-    }
-```
-
-```json
-[
-  {
-        count: 99
-        first: "item-123",
-        last: "item-173"
-    }
-]
-```
+max       | False            | The maximum number of returned entries
+before    | False            | Get posts before this timestamp
+first     | False            | ??? is this a date and what format???
+last      | False            | ??? is this a date and what format???
+after     | False            | Return only entries older than the entry with the specified ID.
+index     | False            | The element's (for example, a post) position in the result set
 
 #API discovery
+
 When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
 Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
@@ -76,27 +67,33 @@ Post-it note: Your home Buddycloud server will then pass messages to followers o
 ```shell
 # to resolve the API endpoint for buddycloud.org we use:
 dig txt +short _buddycloud-api._tcp.buddycloud.org 
+```
+
+```shell
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 ```
 
 > This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
 
-Running the same with JS
 ```javascript
 socket.send(
-    'xmpp.buddycloud.discover',
-    { /* "server": "channels.buddycloud.org" */ },
-    function(error, data) { console.log(error, data) }
+  'xmpp.buddycloud.discover',
+  {},
+  function(error, address) { console.log(error, address) }
 )
 ```
 
 > If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
 
+```json
+???
+```
+
 #Users
 
 Create user accounts that can then use the service
 
-Attributes | Required | Description
+Arguments  | Required | Description
 ---------- | -------- |------------
 username   | True     | Must contain a domain element that matches the virtual host.
 password   | True     |
@@ -105,8 +102,6 @@ email      | False    | Address to receive push notifications and password reset
 ##Create User
 
 > POST https://demo.buddycloud.org/api/account
-
-> Example request
 
 ```shell 
 curl https://demo.buddycloud.org/api/account \
@@ -119,20 +114,18 @@ curl https://demo.buddycloud.org/api/account \
 ```
 
 ```javascript
-???
+socket.send(
+  'xmpp.login',
+  {
+    "jid": "romeo@buddycloud.org",
+    "password": "juliet-forever",
+    "register": true
+  }
+)
 ```
 
-> Example response
-
 ```json
-[
-  {
-  ???
-  },
-  {
-  ???
-  }
-]
+???
 ```
 
 ##Delete User
@@ -143,8 +136,6 @@ Removes a user from the system
 
 > POST https://demo.buddycloud.org/api/????
 
-> Example request
-
 ```shell 
 curl https://demo.buddycloud.org/api/????
 ????
@@ -153,8 +144,6 @@ curl https://demo.buddycloud.org/api/????
 ```javascript```
 ???
 ```
-
-> Example response
 
 ```json
 ???
@@ -166,8 +155,6 @@ curl https://demo.buddycloud.org/api/????
 
 > POST https://demo.buddycloud.org/api/????
 
-> Example request
-
 ```shell 
 curl https://demo.buddycloud.org/api/????
 ???
@@ -176,8 +163,6 @@ curl https://demo.buddycloud.org/api/????
 ```javascript```
 ???
 ```
-
-> Example response
 
 ```json
 ???
@@ -193,14 +178,12 @@ Resets the user's password and sends a reset token via email.
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
-???
+ -
 ```
 
 ```javascript```
 ???
 ```
-
-> Example response
 
 ```json
 ???
@@ -208,7 +191,15 @@ curl https://demo.buddycloud.org/api/????
 
 #Realtime Events
 
-something about sending presence to go online and start getting events
+Start receciving realtime events from local and remote Buddycloud servers.
+
+```shell
+#Justin needs to tell us how to do this
+```
+
+```javascript
+socket.send('xmpp.buddycloud.presence', {})
+```
 
 #Channels
 Following a channel grants one access to that channels current [and future] nodes. The following default nodes are created. Additional nodes can be created by the channel owner.
