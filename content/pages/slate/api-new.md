@@ -10,8 +10,9 @@ slate: true
 title: Buddycloud API Reference
 
 language_tabs:
-  - shell
-  - javascript
+  - shell : cURL
+  - javascript : Javascript
+  - plaintext : Sequence Diagram
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -59,24 +60,24 @@ index     | False            | The element's (for example, a post) position in t
 
 #API discovery
 
-> To resolve the API endpoint for buddycloud.org we use:
-
 ```shell
->: dig txt +short _buddycloud-api._tcp.buddycloud.org
+dig txt +short _buddycloud-api._tcp.buddycloud.org
 ```
 
-> And we get this:
-
 ```shell
+#The response:
+
 "v=1.0 host=demo.buddycloud.org protocol=https path=/api port=443"
+
+#This means that client calls should be made against
+#`https://demo.buddycloud.org:443/api`
 ```
 
-> Which essentially means that client calls should be made against `https://demo.buddycloud.org:443/api`
+When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`.
 
+Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
-When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
-
-Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
+Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud servers. Consider buddycloud.org a testing server for trying out requests.
 
 #Users
 
