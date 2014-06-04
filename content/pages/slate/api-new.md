@@ -94,23 +94,35 @@ socket.send(
 
 #Users
 
+Create user accounts that can then use the service
 
 Attributes | Required | Description
 ---------- | -------- |------------
-username   | Yes      | Must contain a domain element that matches the virtual host.
-password   | Yes      |
-email      | No       | Address to receive push notifications and password resets
+username   | True     | Must contain a domain element that matches the virtual host.
+password   | True     |
+email      | False    | Address to receive push notifications and password resets
 
 ##Create User
 
-```shell
-curl -i https://demo.buddycloud.com/api/account \
-     -d '{ "username": "alice@buddycloud.org", \
+> POST https://demo.buddycloud.org/api/account
+
+> Example request
+
+```shell 
+curl https://demo.buddycloud.org/api/account \
+	-X POST \
+	-H "Content-Type: application/json" \
+	-d '{ "username": "alice@buddycloud.org", \
            "password": "tell-no-one", \
            "email": "alice@buddycloud.org" \
-         }'
+        }'
 ```
-> The above command returns JSON structured like this:
+
+```javascript
+???
+```
+
+> Example response
 
 ```json
 [
@@ -125,10 +137,74 @@ curl -i https://demo.buddycloud.com/api/account \
 
 ##Delete User
 
+Removes a user from the system 
 
 <aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
+> POST https://demo.buddycloud.org/api/????
+
+> Example request
+
+```shell 
+curl https://demo.buddycloud.org/api/????
+????
+```
+
+```javascript```
+???
+```
+
+> Example response
+
+```json
+???
+```
+
 ##Change Password
+
+???what does it do???
+
+> POST https://demo.buddycloud.org/api/????
+
+> Example request
+
+```shell 
+curl https://demo.buddycloud.org/api/????
+???
+```
+
+```javascript```
+???
+```
+
+> Example response
+
+```json
+???
+```
+
+##Reset Password
+
+Resets the user's password and sends a reset token via email.
+
+> POST https://demo.buddycloud.org/api/????
+
+> Example request
+
+```shell 
+curl https://demo.buddycloud.org/api/????
+???
+```
+
+```javascript```
+???
+```
+
+> Example response
+
+```json
+???
+```
 
 #Realtime Events
 
@@ -358,5 +434,5 @@ This endpoint retrieves a specific kitten.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the cat to retrieve
+ID        | The ID of the cat to retrieve
 
