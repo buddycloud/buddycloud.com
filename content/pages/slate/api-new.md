@@ -12,7 +12,6 @@ title: Buddycloud API Reference
 language_tabs:
   - shell
   - javascript
-  - sequencediagram
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -66,26 +65,10 @@ index     | False            | The element's (for example, a post) position in t
 >: dig txt +short _buddycloud-api._tcp.buddycloud.org
 ```
 
-```javascript
-Not supported yet (maybe it is through buddycloud.js)
-```
-
-```sequencediagram
-Not applicable
-```
-
 > And we get this:
 
 ```shell
 "v=1.0 host=demo.buddycloud.org protocol=https path=/api port=443"
-```
-
-```javascript
-No response
-```
-
-```sequencediagram
-Not applicable
 ```
 
 > Which essentially means that client calls should be made against `https://demo.buddycloud.org:443/api`
