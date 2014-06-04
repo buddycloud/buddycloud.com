@@ -12,7 +12,7 @@ title: Buddycloud API Reference
 language_tabs:
   - shell
   - javascript
-  - sequence-diagram
+  - sequence_diagram
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -62,36 +62,20 @@ index     | False            | The element's (for example, a post) position in t
 
 > To resolve the API endpoint for buddycloud.org we use:
 
-
 ```shell
-$dig txt +short _buddycloud-api._tcp.buddycloud.org
-
-And we get:
-
+>: dig txt +short _buddycloud-api._tcp.buddycloud.org
 "v=1.0 host=demo.buddycloud.org protocol=https path=/api port=443"
-
-Which essentially means that client calls should be made against `https://demo.buddycloud.org:443/api`
-
 ```
 
 ```javascript
-/* Assuming you are using xmpp-ftw and already have a socket connection */
-
-socket.send(
-    'xmpp.buddycloud.discover',
-    {},
-    function(error, address) { console.log(error, address) }
-  {},
-)
-
-/*If a server is discovered the `data` will contain the channel server host*/
-/*If no server is found, `error` will be populated*/
-
+Not supported yet (maybe it is through buddycloud.js)
 ```
 
-```sequence-diagram
-No sequence diagram this time (this msg will be removed)
+```sequence_diagram
+Not applicable
 ```
+
+> Which essentially means that client calls should be made against `https://demo.buddycloud.org:443/api`
 
 
 When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
