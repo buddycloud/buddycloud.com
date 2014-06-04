@@ -69,28 +69,37 @@ curl something....
 ```
 
 #API discovery
-When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
-Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
+> To resolve the API endpoint for buddycloud.org we use:
 
 ```shell
-# to resolve the API endpoint for buddycloud.org we use:
 dig txt +short _buddycloud-api._tcp.buddycloud.org 
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 ```
 
-> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
-
-Running the same with JS
 ```javascript
+/* Assuming you are using xmpp-ftw and already have a socket connection */
 socket.send(
     'xmpp.buddycloud.discover',
-    { /* "server": "channels.buddycloud.org" */ },
+    {},
     function(error, data) { console.log(error, data) }
 )
 ```
 
+```sequence-diagram
+No sequence diagram this time (this msg will be removed)
+```
+
+> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
+
+
 > If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
+
+
+When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
+
+Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud server. Consider buddycloud.org a testing server for trying out requests.
+
 
 #Users
 
