@@ -2,11 +2,11 @@
 
 Create user accounts that can then use the service
 
-Arguments  | Required | Description
+Argument   | Required | Notes
 ---------- | -------- |------------
 username   | True     | Must contain a domain element that matches the virtual host.
-password   | True     |
-email      | False    | Address to receive push notifications and password resets
+password   | True     | The API is agnostic to password strength requirements.
+email      | False    | An Email address to receive push notifications and password resets.
 
 ##Create User
 
@@ -39,7 +39,7 @@ socket.send(
 
 ##Delete User
 
-Removes a user from the system 
+Removes a user account from the this domain.
 
 <aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
@@ -60,7 +60,7 @@ curl https://demo.buddycloud.org/api/????
 
 ##Change Password
 
-???@abmar: how does this work? Generate email with a new password or sends a token???
+?????
 
 `POST https://demo.buddycloud.org/api/????`
 
@@ -79,14 +79,15 @@ curl https://demo.buddycloud.org/api/????
 
 ##Reset Password
 
-Resets the user's password and sends a reset token via email.
+Resets the user's password and sends a reset token via email. (I think. @abmar: how does this work? Generate email with a new password or sends a token?)
 
 `POST https://demo.buddycloud.org/api/????`
 
 
 ```shell 
-curl https://demo.buddycloud.org/api/????
- -
+curl https://demo.buddycloud.org/api/???? \
+ --more-curly-bits \
+ --and-more
 ```
 
 ```javascript```
