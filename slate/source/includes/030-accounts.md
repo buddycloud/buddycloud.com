@@ -10,7 +10,7 @@ email      | False    | Address to receive push notifications and password reset
 
 ##Create User
 
-> POST https://demo.buddycloud.org/api/account
+`POST https://demo.buddycloud.org/api/account`
 
 ```shell 
 curl https://demo.buddycloud.org/api/account \
@@ -43,7 +43,7 @@ Removes a user from the system
 
 <aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
-> POST https://demo.buddycloud.org/api/????
+`POST https://demo.buddycloud.org/api/????`
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
@@ -60,9 +60,9 @@ curl https://demo.buddycloud.org/api/????
 
 ##Change Password
 
-???what does it do???
+???@abmar: how does this work? Generate email with a new password or sends a token???
 
-> POST https://demo.buddycloud.org/api/????
+`POST https://demo.buddycloud.org/api/????`
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
@@ -81,9 +81,8 @@ curl https://demo.buddycloud.org/api/????
 
 Resets the user's password and sends a reset token via email.
 
-> POST https://demo.buddycloud.org/api/????
+`POST https://demo.buddycloud.org/api/????`
 
-> Example request
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
