@@ -10,9 +10,9 @@ slate: true
 title: Buddycloud API Reference
 
 language_tabs:
-  - shell
-  - javascript
-  - sequence-diagram
+  - shell : cURL
+  - javascript : Javascript
+  - plaintext : Sequence Diagram
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -60,34 +60,31 @@ index     | The element's (for example, a post) position in the result set
 
 #API discovery
 
+<<<<<<< HEAD
 To avoid needing to hard-code an When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
 <aside>User's _home_ Buddycloud server passes messages to followers on remote Buddycloud server.</aside>
 
+=======
+>>>>>>> FETCH_HEAD
 ```shell
-# to resolve the API endpoint for buddycloud.org we use:
-dig txt +short _buddycloud-api._tcp.buddycloud.org 
+dig txt +short _buddycloud-api._tcp.buddycloud.org
 ```
 
 ```shell
-"v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
+#The response:
+
+"v=1.0 host=demo.buddycloud.org protocol=https path=/api port=443"
+
+#This means that client calls should be made against
+#`https://demo.buddycloud.org:443/api`
 ```
 
-> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
+When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`.
 
-```javascript
-socket.send(
-  'xmpp.buddycloud.discover',
-  {},
-  function(error, address) { console.log(error, address) }
-)
-```
+Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
 
-> If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
-
-```json
-???
-```
+Post-it note: Your home Buddycloud server will then pass messages to followers on remote buddycloud servers. Consider buddycloud.org a testing server for trying out requests.
 
 #Accounts
 
@@ -124,10 +121,6 @@ socket.send(
 )
 ```
 
-```json
-???
-```
-
 ##Delete User
 
 Removes a user from the system 
@@ -145,13 +138,7 @@ curl https://demo.buddycloud.org/api/????
 ???
 ```
 
-```json
-???
-```
-
 ##Change Password
-
-???what does it do???
 
 > POST https://demo.buddycloud.org/api/????
 
@@ -164,17 +151,11 @@ curl https://demo.buddycloud.org/api/????
 ???
 ```
 
-```json
-???
-```
+???what does it do???
 
 ##Reset Password
 
-Resets the user's password and sends a reset token via email.
-
 > POST https://demo.buddycloud.org/api/????
-
-> Example request
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
@@ -185,9 +166,7 @@ curl https://demo.buddycloud.org/api/????
 ???
 ```
 
-```json
-???
-```
+Resets the user's password and sends a reset token via email.
 
 #Realtime Events
 
@@ -208,10 +187,10 @@ socket.send('xmpp.buddycloud.presence',
 ```
 
 #Channels
+
 Following a channel grants one access to that channels current [and future] nodes. The following default nodes are created. Additional nodes can be created by the channel owner.
 
 Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`
-
 
 ##Create Channel
 ##Update Metadata
@@ -227,7 +206,30 @@ geoloc-current  | Where they are               |
 geoloc-future   | Where they will go next      |
 
 ##Create Node
-Create a new Application node (for example `/user/user@example.com/game-highscores), do ???
+
+```curl
+socket.send('xmpp.buddycloud.create',
+      {
+          node : "/user/user@example.com/game-highscores",
+          options: [
+              { "var": "pubsub#title", value : "Game Highscores" },
+              { "var": "pubsub#access_model", value : "open" },
+              { "var": "buddycloud#default_affiliation", value : "member" }
+          ]
+      },
+      function(error, data) {
+          if (!error){
+              console.log('Created application node', data);
+          }
+      });
+);
+```
+
+```javascript
+Missing javascript way
+```
+
+Create a new Application node (for example `/user/user@example.com/game-highscores`).
 
 #Posts
 ##Create Post
@@ -281,155 +283,3 @@ Useful for onboarding new users, Buddycloud can recommend similar channels to a 
 
 #Import friends
 ##Social Graph comparison
-
-
-# Introduction
-
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
-
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import 'kittn'
-
-api = Kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace `meowmeowmeow` with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import 'kittn'
-
-api = Kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Isis",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
-```
-
-This endpoint retrieves all kittens.
-
-### HTTP Request
-
-`GET http://example.com/kittens`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import 'kittn'
-
-api = Kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/3"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID        | The ID of the cat to retrieve
-
