@@ -1,22 +1,128 @@
 #Channels
-Following a channel grants one access to that channels current [and future] nodes. The following default nodes are created. Additional nodes can be created by the channel owner.
+
+Following a channel grants one access to that channels current [and future] nodes. 
+
+<aside class="notice">Each channel contains multiple _nodes_. Following `user@example.com` has the effect of granting access to `user@example.com/posts`, `user@example.com/status`, `user@example.com/my-blog`. In this example `posts`, `status` and `my-blog` are all channels nodes.</aside>
 
 Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`
 
-
 ##Create Channel
+
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
+
 ##Update Metadata
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+Metadata allows you to describe the channel, set defaults and even apply a location to the channel.
+
+### Parameters
+
+Argument            | Editable | Values | Description
+------------------- | -------- | -------| -----------
+title               | true     | ??? characters | The channel's title.
+description         | true     | ??? characters | A short string describing the channel 
+creation_date       | false    | RFC3399 format timestamp | When the channel was created
+access_model        | false    | open, authorize | Whether the channel is `open` for anyone to view or if followers should first be `authorize`d to view it.
+channel_type        | false    | personal, topic, | Whether this is a users `personal` channel or a `topic` channel
+default_affiliation | true | publisher, follower | The role new followers inherit
+
+A complete set of channel metadata is avaliable from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
+
 ##Delete Channel
+
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+Removes a channel from the system. 
+
+<aside class="notice">???Lloyd - could you write about what this does to the subscription list of the channels followers???</aside>
+
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
+
 ##Default Nodes
 
-node            | Description | Example
---------------- | ----------- | ----------
-status          | A one line ???string format??? status message | Build completed - happy days
-posts           | ATOM formatted activy stream | 
-geoloc-previous | Where they were              |    
-geoloc-current  | Where they are               |
-geoloc-future   | Where they will go next      |
+The following default nodes are created. Additional nodes can be created by the channel owner.
+
+Channel node    | Description 
+--------------- | -----------
+status          | A one line status message 
+posts           | ATOM formatted activy stream 
+geoloc-previous | Where they were              
+geoloc-current  | Where they are              
+geoloc-future   | Where they will go next   
+public-key      | Users can optionally publish their public key
+
+Default nodes are defined in the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#well-known-nodes).
 
 ##Create Node
-Create a new Application node (for example `/user/user@example.com/game-highscores), do ???
 
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+It's recommended to create new nodes for new application types. You can then use this node for sharing information between devices or as a simple data store for your application.
+
+For example perhaps your chess app created a `x-chess-activity-stream` node.  You could then share this node with competing players and keep state between two games.
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
