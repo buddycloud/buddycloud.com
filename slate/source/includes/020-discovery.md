@@ -23,9 +23,5 @@ socket.send(
 )
 ```
 
-If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
-
-```json
-???
-```
+The data variable will have the Buddycloud server address. For example `buddycloud.example.com`
 
