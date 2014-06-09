@@ -1,7 +1,7 @@
 #API discovery
 
 ```shell
-# to resolve the API endpoint for buddycloud.org we use:
+# to resolve the API endpoint for buddycloud.org
 dig txt +short _buddycloud-api._tcp.buddycloud.org 
 ```
 
@@ -22,6 +22,6 @@ socket.send(
 > The data variable will have the Buddycloud server address. For example `buddycloud.example.com`
 
 
-To avoid needing to hard-code an When `user@example.com` starts a Buddycloud-enabled app, the app must discover the API for `example.com`. Clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.
+When `user@example.com` starts a Buddycloud-enabled app, the app must discover the corrent API endpoint for `example.com`. Likewise `user@other-domain.com` will retrieve a different API endpoint. To find out the API for a domain, clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.  See the [IANA service record](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=buddycloud)) if you are curious. 
 
 <aside>User's _home_ Buddycloud server passes messages to followers on remote Buddycloud server.</aside>
