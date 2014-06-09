@@ -13,7 +13,7 @@ dig txt +short _buddycloud-api._tcp.buddycloud.org
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 ```
 
-> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
+This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
 
 ```javascript
 socket.send(
@@ -23,7 +23,7 @@ socket.send(
 )
 ```
 
-> If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
+If a server is discovered the `data` will contain the channel server host. If no server is found, `error` will be populated.
 
 ```json
 ???
