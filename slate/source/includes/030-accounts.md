@@ -1,6 +1,10 @@
 #Accounts
 
-Create user accounts that can then use the service
+Create and destroy user accounts and permit the user to manage and reset their password.
+
+<aside class="notice">A user account enables a user to connect to their messaging service. They will still need to create their personal channel</aside>
+
+### Query Parameters
 
 Argument   | Required | Notes
 ---------- | -------- |------------
@@ -9,8 +13,6 @@ password   | True     | The API is agnostic to password strength requirements.
 email      | False    | An Email address to receive push notifications and password resets.
 
 ##Create User
-
-`POST https://demo.buddycloud.org/api/account`
 
 ```shell 
 curl https://demo.buddycloud.org/api/account \
@@ -37,13 +39,12 @@ socket.send(
 ???
 ```
 
+This will create a new user and set their password. 
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/account`
+
 ##Delete User
-
-Removes a user account from the this domain.
-
-<aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
-
-`POST https://demo.buddycloud.org/api/????`
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
@@ -58,11 +59,14 @@ curl https://demo.buddycloud.org/api/????
 ???
 ```
 
-##Change Password
+This removes a user account.
 
-?????
+<aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
+### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
+
+## Change Password
 
 ```shell 
 curl https://demo.buddycloud.org/api/????
@@ -77,12 +81,12 @@ curl https://demo.buddycloud.org/api/????
 ???
 ```
 
+Changes a user password to the new password supplied.
+
+### HTTP Request
+`??? https://demo.buddycloud.org/api/????`
+
 ##Reset Password
-
-Resets the user's password and sends a reset token via email. (I think. @abmar: how does this work? Generate email with a new password or sends a token?)
-
-`POST https://demo.buddycloud.org/api/????`
-
 
 ```shell 
 curl https://demo.buddycloud.org/api/???? \
@@ -98,3 +102,7 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
+Resets the user's password and sends a reset token via email. (I think. @abmar: how does this work? Generate email with a new password or sends a token?)
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
