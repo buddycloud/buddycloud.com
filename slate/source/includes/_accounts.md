@@ -58,7 +58,9 @@ This removes a user account.
 <aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`DELETE https://demo.buddycloud.org/api/account`
+
+<aside class="warning">Requires Basic Authentication.</aside>
 
 ## Change Password
 
