@@ -28,15 +28,11 @@ curl https://demo.buddycloud.org/api/account \
 socket.send(
   'xmpp.login',
   {
-    "jid": "romeo@buddycloud.org",
-    "password": "juliet-forever",
+    "jid": "alice@buddycloud.org",
+    "password": "tell-no-one",
     "register": true
   }
 )
-```
-
-```json
-???
 ```
 
 This will create a new user and set their password. 
@@ -46,16 +42,14 @@ This will create a new user and set their password.
 
 ##Delete User
 
-```shell 
-curl https://demo.buddycloud.org/api/????
-????
+```shell
+export CREDENTIAL=alice@buddycloud.org:tell-no-one
+curl https://demo.buddycloud.org/api/account \
+	-X DELETE \
+	-H "Authorization: Basic `echo $CREDENTIAL | base64 -`"
 ```
 
 ```javascript```
-???
-```
-
-```json
 ???
 ```
 
