@@ -16,22 +16,23 @@ email      | False    | An Email address to receive push notifications and passw
 
 ```shell 
 curl https://demo.buddycloud.org/api/account \
-	-X POST \
-	-H "Content-Type: application/json" \
-	-d '{ "username": "alice@buddycloud.org", \
-           "password": "tell-no-one", \
-           "email": "alice@buddycloud.org" \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "username": "alice@buddycloud.org", \
+            "password": "tell-no-one", \
+            "email": "alice@buddycloud.org" \
         }'
 ```
 
 ```javascript
 socket.send(
-  'xmpp.login',
-  {
-    "jid": "alice@buddycloud.org",
-    "password": "tell-no-one",
-    "register": true
-  }
+    'xmpp.login',
+    {
+        "jid": "alice@buddycloud.org",
+        "password": "tell-no-one",
+        "register": true
+    }
 )
 ```
 
@@ -45,8 +46,8 @@ This will create a new user and set their password.
 ```shell
 export CREDENTIAL=alice@buddycloud.org:tell-no-one
 curl https://demo.buddycloud.org/api/account \
-	-X DELETE \
-	-H "Authorization: Basic `echo $CREDENTIAL | base64 -`"
+    -X DELETE \
+    -H "Authorization: Basic `echo $CREDENTIAL | base64 -`"
 ```
 
 ```javascript```
@@ -65,40 +66,42 @@ This removes a user account.
 ## Change Password
 
 ```shell 
-curl https://demo.buddycloud.org/api/????
-???
+export CREDENTIAL=alice@buddycloud.org:tell-no-one
+curl https://demo.buddycloud.org/api/account/pw/change \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Basic `echo $CREDENTIAL | base64 -`" \
+    -d '{ \
+            "username": "alice@buddycloud.org", \
+            "password": "new-password" \
+        }'
 ```
 
 ```javascript```
-???
-```
-
-```json
 ???
 ```
 
 Changes a user password to the new password supplied.
 
 ### HTTP Request
-`??? https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/account/pw/change`
 
 ##Reset Password
 
 ```shell 
-curl https://demo.buddycloud.org/api/???? \
- --more-curly-bits \
- --and-more
+curl https://demo.buddycloud.org/api/account/pw/reset \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "username": "alice@buddycloud.org" \
+        }'
 ```
 
 ```javascript```
 ???
 ```
 
-```json
-???
-```
-
 Resets the user's password and sends a reset token via email. (I think. @abmar: how does this work? Generate email with a new password or sends a token?)
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/account/pw/reset`
