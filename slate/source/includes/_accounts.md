@@ -19,9 +19,9 @@ curl https://demo.buddycloud.org/api/account \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{ \
-            "username": "alice@buddycloud.org", \
-            "password": "tell-no-one", \
-            "email": "alice@buddycloud.org" \
+            "username": "juliet@buddycloud.org", \
+            "password": "romeo-forever", \
+            "email": "juliet@buddycloud.org" \
         }'
 ```
 
@@ -29,8 +29,8 @@ curl https://demo.buddycloud.org/api/account \
 socket.send(
     'xmpp.login',
     {
-        "jid": "alice@buddycloud.org",
-        "password": "tell-no-one",
+        "jid": "juliet@buddycloud.org",
+        "password": "romeo-forever",
         "register": true
     }
 )
@@ -46,7 +46,7 @@ This will create a new user and set their password.
 ```shell
 curl https://demo.buddycloud.org/api/account \
     -X DELETE \
-    -H "Authorization: Basic `echo "alice@buddycloud.org:tell-no-one" | base64 -`"
+    -H "Authorization: Basic `echo "juliet@buddycloud.org:romeo-forever" | base64 -`"
 ```
 
 ```javascript```
@@ -68,9 +68,9 @@ This removes a user account.
 curl https://demo.buddycloud.org/api/account/pw/change \
     -X POST \
     -H "Content-Type: application/json" \
-    -H "Authorization: Basic `echo "alice@buddycloud.org:tell-no-one" | base64 -`" \
+    -H "Authorization: Basic `echo "juliet@buddycloud.org:romeo-forever" | base64 -`" \
     -d '{ \
-            "username": "alice@buddycloud.org", \
+            "username": "juliet@buddycloud.org", \
             "password": "new-password" \
         }'
 ```
@@ -93,7 +93,7 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{ \
-            "username": "alice@buddycloud.org" \
+            "username": "juliet@buddycloud.org" \
         }'
 ```
 
