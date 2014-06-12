@@ -70,7 +70,7 @@ maxwidth         | optional   | Bound the output by a maximum width
 When both `maxheight` and `maxwidth` are requested the server will return a file smaller than or equal to both parameters.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/{channel}/media/{media}?maxheight={}&maxwidth={}
+`POST https://demo.buddycloud.org/api/{channel}/media/{media}?maxheight={}&maxwidth={}`
 
 ##Post Media
 
