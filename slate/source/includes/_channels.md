@@ -48,6 +48,8 @@ curl https://demo.buddycloud.org/api/???? \
 
 Metadata allows you to describe the channel, set defaults and even apply a location to the channel.
 
+Metadata is visible for both public and private channels.
+
 ### Parameters
 
 Argument            | Editable | Values | Description
