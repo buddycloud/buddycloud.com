@@ -67,7 +67,7 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 ##Delete Channel
 
 ```shell
-@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), but the problem is we simply don't have an HTTP API endpoint for deleting specific nodes.
+@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don`t know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
 ```
 
 ```javascript```
