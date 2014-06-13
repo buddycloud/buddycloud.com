@@ -65,7 +65,7 @@ This removes a user account.
 ## Change Password
 
 ```shell 
-curl --user juliet@buddycloud.org:fomeo-forever \
+curl --user juliet@buddycloud.org:romeo-forever \
     https://demo.buddycloud.org/api/account/pw/change \
     -X POST \
     -H "Content-Type: application/json" \

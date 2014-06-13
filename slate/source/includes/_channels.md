@@ -9,9 +9,11 @@ Each user has a channel automatically created for them on sign-up that that matc
 ##Create Channel
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+@guilhermesgb: The personal channels of a user are created alongside with their accounts through the Create Account endpoint. Through the HTTP API, one can only create topic channels:
+
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
+    -X POST
 ```
 
 ```javascript```
@@ -22,7 +24,7 @@ curl https://demo.buddycloud.org/api/???? \
 Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/:channel`
 
 ##Update Metadata
 
@@ -65,17 +67,10 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 ##Delete Channel
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), but the problem is we simply don't have an HTTP API endpoint for deleting specific nodes.
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
