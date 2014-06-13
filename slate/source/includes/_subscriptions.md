@@ -61,14 +61,18 @@ Following works as follows:
 * the approval or rejection is then sent back to the user trying to follow the channel
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/subscribed`
 
 ##Unfollow Channel
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/subscribed \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "romeo@buddycloud.org/posts": "none" \
+        }'
 ```
 
 ```javascript```
@@ -76,12 +80,7 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-```json
-???
-???
-```
-
 This unfollows a channel. Unfollowing a closed channel will require re-requesting a subscription and re-approval of a moderator.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/subscribed`
