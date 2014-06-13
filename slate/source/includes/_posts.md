@@ -12,16 +12,21 @@ New public posts are automaticaly
 ##Create Post
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "content": "O Romeo, Romeo, wherefore art thou Romeo?" \
+        }'
+```
+
+```shell
+201 Created
+Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_ID
 ```
 
 ```javascript```
-
-```
-
-```json
 
 ```
 
@@ -36,17 +41,14 @@ For example the `posts` node expects Activity Streams format.
 ##Delete Post
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+@guilhermesgb: Maybe explain beforehand how to retrieve a POST_ID using the GET method?
+
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
+    -X DELETE
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
@@ -57,22 +59,40 @@ The Buddycloud server will also issue a retraction message to the channel's subs
 
 ### HTTP Request
 
-`???DELETE? https://demo.buddycloud.org/api/:channel-name:/content/posts`
+`DELETE https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
 
 ##Fetch Posts
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
+    -X GET \
+    -H "Accept: application/json"
+```
+
+```shell
+200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "foo",
+        "author": "romeo@buddycloud.org",
+        "updated": "1595-06-01T12:00:00Z",
+        "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+        "media": null
+    },
+    ...
+    {
+        "id": "bar",
+        "author": "romeo@buddycloud.org",
+        "updated": "1591-06-04T12:00:00Z",
+        "content": "Thus with a kiss I die.",
+        "media": null
+    }
+]
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
@@ -88,7 +108,8 @@ You can query using the [Atom threading extensions](http://www.ietf.org/rfc/rfc4
 Often it's useful to quickly paint a clients screen with a query for the 20 most recent posts. However some of these posts may references a parent post outside of the clients post cache. To retrieve a missing parent post, query for the post ID that matches the clients `replyTo`.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`GET https://demo.buddycloud.org/api/:channel-name:/content/posts`
+`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
 
 ### Sync Posts
 
@@ -121,11 +142,6 @@ Vote or upvote posts
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```

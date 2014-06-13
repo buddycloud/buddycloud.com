@@ -24,7 +24,7 @@ curl --user juliet@buddycloud.org:romeo-forever \
 Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel`
+`POST https://demo.buddycloud.org/api/:channel-name`
 
 ##Update Metadata
 
@@ -62,7 +62,7 @@ default_affiliation | true | publisher, follower | The role new followers inheri
 A complete set of channel metadata is avaliable from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel/metadata/:node`
+`POST https://demo.buddycloud.org/api/:channel-name/metadata/:node`
 
 ##Delete Channel
 
