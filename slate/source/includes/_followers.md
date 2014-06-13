@@ -9,22 +9,23 @@ Users follow channels. You should never see a channel with the metadata `channel
 ##Fetch Followers
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
+    -X GET
+```
+
+```shell
+200 OK
+Content-Type: application/json
+
+{
+    "romeo@buddycloud.org": "owner",
+    "juliet@buddycloud.org": "publisher"
+}
 ```
 
 ```javascript```
 ???
 ???
-```
-
-```json
-{
-  "alice@example.com/posts": "owner",
-  "bob@example.com/posts": "publisher",
-  "public@topics.example.com/posts": "publisher"
-}
 ```
 
 Retrieves a list of followers and their role in that channel.
