@@ -12,12 +12,68 @@ It is also possible to query for similar channels to a channel. For example, que
 
 ##Recommend Channels
 
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
 Returns a list of recommended channels based on the channels that the user already follows.
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????` 
 
 ##Similar Channels
 
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
 Returns a list of channels similar to the queried channel.
 
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????` 
+
 ##Popular Channels
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
 
 Returns a list of popular channels ???@abmar: how do we calculate popularity??? both on the local buddycloud domain, or across all buddycloud sites.
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????` 
