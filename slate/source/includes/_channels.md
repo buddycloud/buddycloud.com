@@ -19,29 +19,25 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-```json
-???
-???
-```
-
 Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
 
 ##Update Metadata
+
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "title": "New Juliet`s Posts Node Title", \
+            "description": "Everything about Juliet", \
+            "default_affiliation": "publisher" \
+        }'
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
@@ -62,6 +58,9 @@ channel_type        | false    | personal, topic, | Whether this is a users `per
 default_affiliation | true | publisher, follower | The role new followers inherit
 
 A complete set of channel metadata is avaliable from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/:channel/metadata/:node`
 
 ##Delete Channel
 
