@@ -31,8 +31,8 @@ includes:
   - media
   - search
   - push
-  - social-discovery
-  - social-graph
+  - content-recommendation
+  - social-recommendation
 
 search: true
 ---
