@@ -101,17 +101,10 @@ Default nodes are defined in the [Buddycloud protocol specification](http://budd
 ##Create Node
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+@guilhermesgb: There's no HTTP API endpoint for creating specific nodes.
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
