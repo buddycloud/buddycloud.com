@@ -5,17 +5,24 @@ The subscription list contains the channels and nodes that a user follows.
 ##Fetch Subscriptions
 
 ```shell
-curl https://demo.buddycloud.org/api/????
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/subscribed \
+    -X GET \
+    -H "Accept: application/json"
+```
 
+```shell
+200 OK
+Content-Type: application/json
+
+{
+    "juliet@buddycloud.org": "owner",
+    "romeo@buddycloud.org": "publisher",
+    "capulet@topics.buddycloud.org": "publisher"
+}
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
-???
 ???
 ```
 
@@ -23,24 +30,22 @@ Returns the user's channel subscriptions as a JSON object. The object's keys are
 
 
 ### HTTP Request
-`GET https://demo.buddycloud.org/api/????`
-
+`GET https://demo.buddycloud.org/api/subscribed`
 
 
 ##Follow Channel
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/subscribed \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{ \
+            "romeo@buddycloud.org/posts": "publisher" \
+        }'
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
