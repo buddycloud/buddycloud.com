@@ -44,9 +44,9 @@ This will create a new user and set their password.
 ##Delete User
 
 ```shell
-curl https://demo.buddycloud.org/api/account \
-    -X DELETE \
-    -H "Authorization: Basic `echo "juliet@buddycloud.org:romeo-forever" | base64 -`"
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/account \
+    -X DELETE
 ```
 
 ```javascript```
@@ -65,10 +65,10 @@ This removes a user account.
 ## Change Password
 
 ```shell 
-curl https://demo.buddycloud.org/api/account/pw/change \
+curl --user juliet@buddycloud.org:fomeo-forever \
+    https://demo.buddycloud.org/api/account/pw/change \
     -X POST \
     -H "Content-Type: application/json" \
-    -H "Authorization: Basic `echo "juliet@buddycloud.org:romeo-forever" | base64 -`" \
     -d '{ \
             "username": "juliet@buddycloud.org", \
             "password": "new-password" \
