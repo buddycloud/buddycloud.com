@@ -17,7 +17,7 @@ Content-Type: application/json
 
 {
     "juliet@buddycloud.org": "owner",
-    "romeo@buddycloud.org": "publisher",
+    "romeo@buddycloud.org": "pending",
     "capulet@topics.buddycloud.org": "publisher"
 }
 ```
