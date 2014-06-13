@@ -1,10 +1,28 @@
 #Channels
 
+A channel is a group of nodes.
+
+Each node contains a feed of items with similarly structured content.
+
+For example:
+-the `posts` node contains a feed of activity-stream items.
+-The `status` node contains a single entry:  your current mood.
+
+Channels (and their nodes) share a common set of followers, publishers and metadata.
+
+Each channel is preconfigured with a group of default nodes:
+-`posts`
+-`status`
+-`geoloc-past`
+-`geoloc`
+-`geoloc-future`
+-`public-key`
+
+Applications can easily create new nodes and content types. For example, a game might create a node `game-highscore` so that followers receive realtime updates of new scores.
+
 Following a channel grants one access to that channels current [and future] nodes. 
 
-<aside class="notice">Each channel contains multiple _nodes_. Following `user@example.com` has the effect of granting access to `user@example.com/posts`, `user@example.com/status`, `user@example.com/my-blog`. In this example `posts`, `status` and `my-blog` are all channels nodes.</aside>
-
-Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`
+<aside>Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`</aside>
 
 ##Create Channel
 
