@@ -32,6 +32,8 @@ Returns the user's channel subscriptions as a JSON object. The object's keys are
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/subscribed`
 
+<aside class="warning">Requires Basic Authentication.</aside>
+
 
 ##Follow Channel
 
@@ -63,6 +65,8 @@ Following works as follows:
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/subscribed`
 
+<aside class="warning">Requires Basic Authentication.</aside>
+
 ##Unfollow Channel
 
 ```shell
@@ -84,3 +88,5 @@ This unfollows a channel. Unfollowing a closed channel will require re-requestin
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/subscribed`
+
+<aside class="warning">Requires Basic Authentication.</aside>

@@ -38,6 +38,8 @@ For example the `posts` node expects Activity Streams format.
 
 `POST https://demo.buddycloud.org/api/:channel-name:/content/posts`
 
+<aside class="warning">Requires Basic Authentication.</aside>
+
 ##Delete Post
 
 ```shell
@@ -60,6 +62,8 @@ The Buddycloud server will also issue a retraction message to the channel's subs
 ### HTTP Request
 
 `DELETE https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
+
+<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Fetch Posts
 

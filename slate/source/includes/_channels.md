@@ -42,12 +42,15 @@ curl --user juliet@buddycloud.org:romeo-forever \
 Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel-name`
+`POST https://demo.buddycloud.org/api/:topic-channel-name`
+
+<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Update Metadata
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+curl --user juliet@buddycloud.org:romeo-forever \
+    https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
     -X POST \
     -H "Content-Type: application/json" \
     -d '{ \
@@ -81,6 +84,8 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/metadata/:node`
+
+<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Delete Channel
 
