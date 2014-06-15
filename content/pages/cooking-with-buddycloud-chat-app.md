@@ -64,7 +64,7 @@ git clone https://github.com/buddycloud/skeleton-project.git
 
 Then we get all the npm modules installed and start npm
 ~~~~ bash
-cd buddycloud-skeleton
+cd skeleton-project
 npm i .    # installs dependencies
 npm start  # starts npm listening on http://127.0.0.1:3000
 ~~~~
