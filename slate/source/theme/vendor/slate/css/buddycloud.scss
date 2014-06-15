@@ -1,0 +1,36 @@
+.api {
+  padding-top: 50px;
+
+  blockquote {
+    border-left: none;
+  }
+
+  .highlight {
+    border: none;
+  }
+
+}
+
+
+.tocify-wrapper {
+  a:hover {
+    text-decoration: none;
+  }
+
+  .tocify-focus {
+    a {
+      font-weight: bold;
+      color: #2DAEBF;
+    }
+  }
+}
+
+.content table tr:nth-child(even) > td,
+.content section table tr:nth-child(even) > td {
+  background-color: #F9F9F9;
+}
+
+.content table tr:nth-child(odd) > td,
+.content section table tr:nth-child(odd) > td {
+  background-color: #fff;
+}

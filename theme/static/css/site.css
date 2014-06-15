@@ -353,13 +353,9 @@ dd {
   margin-bottom: .875em;
 }
 
-.navbar-fixed-bottom{
-  margin-top: 50px;
-}
-
 /* isotope config */
-
-.isotope-item{
+/* line 3, ../../sass/_isotope-config.scss */
+.isotope-item {
   width: 200px;
   margin: 5px;
   border-radius: 4px;
@@ -367,57 +363,69 @@ dd {
   overflow: hidden;
 }
 
-.isotope-item:nth-child(even){
+/* line 11, ../../sass/_isotope-config.scss */
+.isotope-item:nth-child(even) {
   background-color: #C4C8CD;
 }
 
-.isotope-item:nth-child(odd){
+/* line 15, ../../sass/_isotope-config.scss */
+.isotope-item:nth-child(odd) {
   background-color: #E5E9EF;
 }
 
-.isotope-item.width-medium{
+/* line 19, ../../sass/_isotope-config.scss */
+.isotope-item.width-medium {
   width: 410px;
 }
 
-.isotope-item.width-medium:nth-child(even){
+/* line 23, ../../sass/_isotope-config.scss */
+.isotope-item.width-medium:nth-child(even) {
   background-color: #38434C;
 }
 
-.isotope-item.width-medium:nth-child(odd){
+/* line 27, ../../sass/_isotope-config.scss */
+.isotope-item.width-medium:nth-child(odd) {
   background-color: #2DAEBF;
 }
 
-.isotope-item.width-large{
+/* line 31, ../../sass/_isotope-config.scss */
+.isotope-item.width-large {
   width: 830px;
 }
 
-#isotope-container{
+/* line 35, ../../sass/_isotope-config.scss */
+#isotope-container {
   margin-bottom: 50px;
 }
 
-.isotope-item h2{
+/* line 39, ../../sass/_isotope-config.scss */
+.isotope-item h2 {
   margin-top: 10px;
 }
 
-.isotope-item figure{
+/* line 43, ../../sass/_isotope-config.scss */
+.isotope-item figure {
   margin-bottom: 10px;
   overflow: hidden;
   border-radius: 4px;
 }
 
-.isotope-item .video_box{
+/* line 49, ../../sass/_isotope-config.scss */
+.isotope-item .video_box {
   position: relative;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.isotope-item .video_box:before{
+/* line 55, ../../sass/_isotope-config.scss */
+.isotope-item .video_box:before {
   content: "";
   display: block;
   padding-top: 75%;
 }
 
-.isotope-item .video_content{
+/* line 61, ../../sass/_isotope-config.scss */
+.isotope-item .video_content {
   position: absolute;
   top: 0;
   left: 0;
@@ -427,48 +435,58 @@ dd {
   overflow: hidden;
 }
 
-.isotope-item iframe{
+/* line 71, ../../sass/_isotope-config.scss */
+.isotope-item iframe {
   width: 100%;
   height: 100%;
 }
 
-.isotope-item > .links{
+/* line 76, ../../sass/_isotope-config.scss */
+.isotope-item > .links {
   display: table;
   width: 100%;
 }
 
-.isotope-item > .links > div{
+/* line 81, ../../sass/_isotope-config.scss */
+.isotope-item > .links > div {
   display: table-row;
 }
 
-.isotope-item > .links > div > div{
+/* line 85, ../../sass/_isotope-config.scss */
+.isotope-item > .links > div > div {
   display: table-cell;
   text-align: center;
 }
 
-.isotope-item > .links > div > div > a{
+/* line 90, ../../sass/_isotope-config.scss */
+.isotope-item > .links > div > div > a {
   cursor: pointer;
 }
 
-.isotope-item:not(.width-medium) > .links > div > div > a{
+/* line 94, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .links > div > div > a {
   color: #38434C;
 }
 
-.isotope-item:not(.width-medium) > .links > div:nth-child(2) > div{
+/* line 98, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .links > div:nth-child(2) > div {
   display: none;
 }
 
-.isotope-item > .links > div > div > a:hover{
+/* line 102, ../../sass/_isotope-config.scss */
+.isotope-item > .links > div > div > a:hover {
   text-decoration: none;
 }
 
+/* line 108, ../../sass/_isotope-config.scss */
 .isotope-item.width-medium h2,
 .isotope-item.width-medium p,
-.isotope-item.width-medium > .links > div > div > a{
+.isotope-item.width-medium > .links > div > div > a {
   color: white;
 }
 
-.isotope-item:not(.width-medium) > .ellipsis{
+/* line 112, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .ellipsis {
   overflow: hidden;
   height: 60px;
   line-height: 25px;
@@ -476,7 +494,8 @@ dd {
   margin-bottom: 1em;
 }
 
-.isotope-item:not(.width-medium) > .ellipsis:before{
+/* line 120, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .ellipsis:before {
   content: "";
   float: left;
   width: 5px;
@@ -484,14 +503,16 @@ dd {
   overflow: hidden;
 }
 
-.isotope-item:not(.width-medium) > .ellipsis > p{
+/* line 128, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .ellipsis > p {
   float: right;
   width: 100%;
   margin: 0;
   margin-left: -5px;
 }
 
-.isotope-item:not(.width-medium) > .ellipsis:after{
+/* line 135, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium) > .ellipsis:after {
   content: "\02026";
   box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -506,18 +527,20 @@ dd {
   text-align: right;
 }
 
-.isotope-item:not(.width-medium):nth-child(even) > .ellipsis:after{
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#C4C8CD), color-stop(50%, #C4C8CD));
-  background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #C4C8CD 50%, #C4C8CD);
-  background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #C4C8CD 50%, #C4C8CD);
-  background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #C4C8CD 50%, #C4C8CD);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #C4C8CD 50%, #C4C8CD);
+/* line 150, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium):nth-child(even) > .ellipsis:after {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#c4c8cd), color-stop(50%, #c4c8cd));
+  background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #c4c8cd 50%, #c4c8cd);
+  background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #c4c8cd 50%, #c4c8cd);
+  background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #c4c8cd 50%, #c4c8cd);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #c4c8cd 50%, #c4c8cd);
 }
 
-.isotope-item:not(.width-medium):nth-child(odd) > .ellipsis:after{
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#E5E9EF), color-stop(50%, #E5E9EF));
-  background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #E5E9Ef 50%, #E5E9EF);
-  background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #E5E9EF 50%, #E5E9EF);
-  background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #E5E9EF 50%, #E5E9EF);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #E5E9EF 50%, #E5E9EF);
+/* line 158, ../../sass/_isotope-config.scss */
+.isotope-item:not(.width-medium):nth-child(odd) > .ellipsis:after {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#e5e9ef), color-stop(50%, #e5e9ef));
+  background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
+  background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
+  background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
 }

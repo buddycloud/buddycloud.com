@@ -14,7 +14,7 @@ License for the specific language governing permissions and limitations
 under the License.
 %>
 <% language_tabs = current_page.data.language_tabs %>
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -25,17 +25,15 @@ under the License.
 
     <title><%= current_page.data.title || "API Documentation" %></title>
 
-    <%= stylesheet_link_tag :screen, media: :screen %>
-    <%= stylesheet_link_tag :print, media: :print %>
     <link rel="shortcut icon" href="theme/vendor/buddycloud-styles/dist/img/icons/favicon.ico" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
-    <link href="theme/vendor/slate/css/buddycloud.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+
+    <%= stylesheet_link_tag :print, media: :print %>
+    <%= stylesheet_link_tag :screen, media: :screen %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> api">
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -82,7 +80,6 @@ under the License.
     </div>
 
     <div class="tocify-wrapper">
-      <%= image_tag "logo.png" %>
       <% if current_page.data.search %>
         <div class="search">
           <input type="text" class="search" id="input-search">
@@ -91,13 +88,6 @@ under the License.
       <% end %>
       <div id="toc">
       </div>
-      <% if current_page.data.toc_footers %>
-        <ul class="toc-footer">
-          <% current_page.data.toc_footers.each do |footer| %>
-            <li><%= footer %></li>
-          <% end %>
-        </ul>
-      <% end %>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>

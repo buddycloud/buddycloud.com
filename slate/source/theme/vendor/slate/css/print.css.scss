@@ -76,7 +76,7 @@ body {
   }
 
   h1 {
-    @extend %header-font;
+    // @extend %header-font;
     font-size: 2.5em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -88,7 +88,7 @@ body {
   }
 
   h2 {
-    @extend %header-font;
+    // @extend %header-font;
     font-size: 1.8em;
     margin-top: 2em;
     border-top: 2px solid $print-color-light;
@@ -102,7 +102,7 @@ body {
   }
 
   h3, h4 {
-    @extend %header-font;
+    // @extend %header-font;
     font-size: 0.8em;
     margin-top: 1.5em;
     margin-bottom: 0.8em;

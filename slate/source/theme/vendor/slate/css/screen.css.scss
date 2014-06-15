@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import 'normalize';
 @import 'compass';
 @import 'variables';
 @import 'syntax';
@@ -51,6 +50,15 @@ html, body {
   background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
+
+  // begin custom
+  margin-top: 50px;
+  border-right: 1px solid #ddd;
+
+  a {
+    color: #999;
+  }
+  // end custom
 
   // This is the logo at the top of the ToC
   &>img {
@@ -125,8 +133,8 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    @include box-shadow(0px 1px 0px $nav-active-shadow);
-    background-color: $nav-active-bg;
+    // @include box-shadow(0px 1px 0px $nav-active-shadow);
+    // background-color: $nav-active-bg;
     color: $nav-active-text;
   }
 
@@ -136,13 +144,13 @@ html, body {
     display: none; // tocify will override this when needed
     background-color: $nav-subitem-bg;
     font-weight: 500;
-    @include background-image(
-      linear-gradient(top,
-                      darken($nav-subitem-bg,2%),
-                      $nav-subitem-bg 10%,
-                      $nav-subitem-bg 90%,
-                      darken($nav-subitem-bg,2%))
-    );
+    // @include background-image(
+    //   linear-gradient(top,
+    //                   darken($nav-subitem-bg,2%),
+    //                   $nav-subitem-bg 10%,
+    //                   $nav-subitem-bg 90%,
+    //                   darken($nav-subitem-bg,2%))
+    // );
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
       font-size: 12px;
@@ -268,7 +276,7 @@ html, body {
       padding: 0 $main-padding;
       @include box-sizing(border-box);
       display: block;
-      @include text-shadow($main-embossed-text-shadow);
+      // @include text-shadow($main-embossed-text-shadow);
     }
 
     &>ul, &>ol {
@@ -281,7 +289,7 @@ html, body {
     }
 
     h1 {
-      @extend %header-font;
+      // @extend %header-font;
       font-size: 30px;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
@@ -295,7 +303,7 @@ html, body {
     }
 
     h2 {
-      @extend %header-font;
+      // @extend %header-font;
       font-size: 20px;
       margin-top: 4em;
       margin-bottom: 0;
@@ -315,7 +323,7 @@ html, body {
     }
 
     h3, h4, h5, h6 {
-      @extend %header-font;
+      // @extend %header-font;
       font-size: 12px;
       margin-top: 2.5em;
       margin-bottom: 0.8em;
@@ -323,7 +331,7 @@ html, body {
     }
 
     h4, h5, h6 {
-      font-size: 10px;
+      // font-size: 10px;
     }
 
     hr {
@@ -392,7 +400,7 @@ html, body {
     aside {
       padding-top: 1em;
       padding-bottom: 1em;
-      text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
+      // text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
       margin-top: 1.5em;
       margin-bottom: 1.5em;
       background: $aside-notice-bg;
@@ -400,12 +408,12 @@ html, body {
 
       &.warning {
         background-color: $aside-warning-bg;
-        text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
+        // text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
       }
 
       &.success {
         background-color: $aside-success-bg;
-        text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
+        // text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
       }
     }
 
@@ -482,3 +490,12 @@ html, body {
     }
   }
 }
+
+@import 'bootstrap';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/variables';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/general';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/navbar';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/typography';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/highlight';
+@import '../../../../../../output/theme/vendor/buddycloud-styles/src/sass/tables';
+@import 'buddycloud';
