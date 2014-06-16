@@ -1,4 +1,4 @@
-import subprocess, logging, os, errno, codecs
+import subprocess, logging, os, errno, codecs, shutil
 from itertools import chain
 from pelican import signals
 from pelican.readers import BaseReader, pelican_open
@@ -92,13 +92,6 @@ def add_reader(readers):
 def register():
     signals.readers_init.connect(add_reader)
 
-def _make_sure_path_exists(path):
-    try:
-        os.makedirs(path)
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
-
 class SlatePage(Page):
     default_template = 'slate_page'
 
@@ -133,15 +126,10 @@ class SlateGenerator(PagesGenerator):
                         " skipping it." % (repr(page.status), repr(f)))
 
         if ( slate_pages ):
-            _make_sure_path_exists("output/theme/vendor/slate")
-
-            p = subprocess.Popen(['cp', '-R',
-                    'slate/build/theme/vendor/slate/',
-                    'output/theme/vendor/'])
-            out, err = p.communicate()
-            if ( p.returncode != 0 ):
-                logger.warning("Could not set up Slate pages " +
-                    "resources: {}".format(err))
+            if ( os.path.exists("output/theme/vendor/slate") ):
+                shutil.rmtree("output/theme/vendor/slate")
+            shutil.copytree("slate/build/theme/vendor/slate",
+                "output/theme/vendor/slate")
 
         self.generator._update_context(('pages', ))
         self.generator.context['PAGES'] = self.generator.pages
