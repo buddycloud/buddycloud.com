@@ -167,3 +167,7 @@ Exports from Omnigraffle on OS X.
 pip install omnigraffle-image-export
 omnigraffle-export -f png buddycloud.com-diagrams.graffle ~/Documents/src/buddycloud.com/buddycloud-theme/static/img/diagrams
 ```
+
+#### Slate pages
+
+Coming soon.
