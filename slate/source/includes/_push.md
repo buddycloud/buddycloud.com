@@ -6,19 +6,19 @@ Push notifications currently work with Android's GCM and email.
 
 Push notifications are powered by the [Buddycloud Pusher](https://github.com/buddycloud/buddycloud-pusher). The Pusher is designed to be easy to extend to cover new event types in channels and new push systems.
 
-
 ### Query Parameters
 
 Argument                | Value      | Default | Notes
 ----------------------- | ---------- |-------- | ----
-type                    | email,???Abmar - what else??? | The push notification type.
-target                  | juliet@buddycloud.com | The email or ???abmar: what else???
-postAfterMe             | true,false | ??? | New posts in the same thread
-postMentionedMe         | true,false | ??? | When a post in a channel the users follows mentions their ID.
-postOnMyChannel         | true,false | ??? | Posts into a channel where the user is an owner
-postOnSubscribedChannel | true,false | ??? | Only notifications for subscribed channels ???abmar: why would you get notificiations for other channels???
-followMyChannel         | true,false | ??? | Notifies the user when someone follows their channel ???abmar: Only if it's a closed channe or both??? 
-followRequest           | true,false | ??? | ???Whats the difference???
+type                    | email,gcm | - |The push notification type.
+target                  | {email address, GCM id} | - | An email address or a GCMRegistrationId
+postAfterMe             | true,false | true | New posts in a thread the user has previously posted
+postMentionedMe         | true,false | true | When a post in any channel mentions the user's id.
+postOnMyChannel         | true,false | true | Posts into a channel the user owns
+postOnSubscribedChannel | true,false | false | Posts in any channels the user subscribes to
+followRequest           | true,false | true | A request to follow a private channel the user owns or moderates waits for approval 
+followMyChannel         | true,false | true | Someone started following the user's channel
+
 }
 
 
