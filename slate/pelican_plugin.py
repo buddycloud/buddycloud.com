@@ -75,6 +75,7 @@ class SlateReader(BaseReader):
             stderr=subprocess.PIPE)
         out, err = p.communicate()
         if ( p.returncode != 0 ):
+            logger.warning('Slate page {} building process failed!'.format(source_path))
             raise Exception(err)
 
         slate_content = codecs.open('build/index.html', 'r')
