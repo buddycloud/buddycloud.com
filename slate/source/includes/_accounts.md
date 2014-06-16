@@ -101,7 +101,7 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
 ???
 ```
 
-Resets the user's password and sends a reset token via email. (I think. @abmar: how does this work? Generate email with a new password or sends a token?)
+Resets the user's password by sending a new password to the email address provided by the user during registration.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/account/pw/reset`
