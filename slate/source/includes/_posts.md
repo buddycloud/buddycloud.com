@@ -12,13 +12,11 @@ New public posts are automaticaly
 ##Create Post
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "content": "O Romeo, Romeo, wherefore art thou Romeo?" \
-        }'
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ "content": "O Romeo, Romeo, wherefore art thou Romeo?" }'
 ```
 
 ```shell
@@ -26,8 +24,8 @@ curl --user juliet@buddycloud.org:romeo-forever \
 Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_ID
 ```
 
-```javascript```
-
+```javascript
+???
 ```
 
 New posts should conform to the content type of the node. 
@@ -45,9 +43,9 @@ For example the `posts` node expects Activity Streams format.
 ```shell
 @guilhermesgb: Maybe explain beforehand how to retrieve a POST_ID using the GET method?
 
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
-    -X DELETE
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
+    -X DELETE \
+    -u juliet@buddycloud.org:romeo-forever 
 ```
 
 ```javascript```
@@ -69,8 +67,8 @@ The Buddycloud server will also issue a retraction message to the channel's subs
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
-    -X GET \
-    -H "Accept: application/json"
+     -X GET \
+     -H "Accept: application/json"
 ```
 
 ```shell
