@@ -5,9 +5,9 @@ The subscription list contains the channels and nodes that a user follows.
 ##Fetch Subscriptions
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/subscribed \
+curl https://demo.buddycloud.org/api/subscribed \
     -X GET \
+    -u juliet@buddycloud.org:romeo-forever \
     -H "Accept: application/json"
 ```
 
@@ -38,13 +38,11 @@ Returns the user's channel subscriptions as a JSON object. The object's keys are
 ##Follow Channel
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/subscribed \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "romeo@buddycloud.org/posts": "publisher" \
-        }'
+curl https://demo.buddycloud.org/api/subscribed \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ "romeo@buddycloud.org/posts": "publisher" }'
 ```
 
 ```javascript```
@@ -70,13 +68,13 @@ Following works as follows:
 ##Unfollow Channel
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/subscribed \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "romeo@buddycloud.org/posts": "none" \
-        }'
+curl https://demo.buddycloud.org/api/subscribed \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ \
+             "romeo@buddycloud.org/posts": "none" \
+         }'
 ```
 
 ```javascript```
