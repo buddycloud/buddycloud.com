@@ -16,13 +16,13 @@ email      | False    | An Email address to receive push notifications and passw
 
 ```shell 
 curl https://demo.buddycloud.org/api/account \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
+     -X POST \
+     -H "Content-Type: application/json" \
+     -d '{ \
             "username": "juliet@buddycloud.org", \
             "password": "romeo-forever", \
             "email": "juliet@buddycloud.org" \
-        }'
+         }'
 ```
 
 ```javascript
@@ -44,9 +44,9 @@ This will create a new user and set their password.
 ##Delete User
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/account \
-    -X DELETE
+curl https://demo.buddycloud.org/api/account \
+     -X DELETE \
+     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
@@ -65,14 +65,14 @@ This removes a user account.
 ## Change Password
 
 ```shell 
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/account/pw/change \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
+curl https://demo.buddycloud.org/api/account/pw/change \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ \
             "username": "juliet@buddycloud.org", \
             "password": "new-password" \
-        }'
+         }'
 ```
 
 ```javascript```
@@ -90,11 +90,11 @@ Changes a user password to the new password supplied.
 
 ```shell 
 curl https://demo.buddycloud.org/api/account/pw/reset \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "username": "juliet@buddycloud.org" \
-        }'
+     -X POST \
+     -H "Content-Type: application/json" \
+     -d '{ \
+           "username": "juliet@buddycloud.org" \
+         }'
 ```
 
 ```javascript```

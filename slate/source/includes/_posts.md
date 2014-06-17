@@ -44,8 +44,8 @@ For example the `posts` node expects Activity Streams format.
 @guilhermesgb: Maybe explain beforehand how to retrieve a POST_ID using the GET method?
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
-    -X DELETE \
-    -u juliet@buddycloud.org:romeo-forever 
+     -X DELETE \
+     -u juliet@buddycloud.org:romeo-forever 
 ```
 
 ```javascript```
