@@ -29,9 +29,9 @@ Following a channel grants one access to that channels current [and future] node
 ```shell
 @guilhermesgb: The personal channels of a user are created alongside with their accounts through the Create Account endpoint. Through the HTTP API, one can only create topic channels:
 
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-    -X POST
+curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
@@ -49,15 +49,15 @@ Each Buddycloud user has a personal channel automatically created for them (`use
 ##Update Metadata
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "title": "New Juliet`s Posts Node Title", \
-            "description": "Everything about Juliet", \
-            "default_affiliation": "publisher" \
-        }'
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ \
+             "title": "New Juliet`s Posts Node Title", \
+             "description": "Everything about Juliet", \
+             "default_affiliation": "publisher" \
+         }'
 ```
 
 ```javascript```
