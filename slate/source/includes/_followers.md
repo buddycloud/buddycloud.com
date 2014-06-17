@@ -10,7 +10,7 @@ Users follow channels. You should never see a channel with the metadata `channel
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
-    -X GET
+     -X GET
 ```
 
 ```shell
@@ -38,9 +38,9 @@ Retrieves a list of followers and their role in that channel.
 ##Retrieve Pending Followers
 
 ```shell
-curl --user romeo@buddycloud.org:juliet-forever \
-    https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
-    -X GET
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
+     -X GET \
+     -u romeo@buddycloud.org:juliet-forever
 ```
 
 ```shell
@@ -78,20 +78,20 @@ Retrieves the list of subscriptions of a node. Returns a list of objects contain
 ##Authorise Pending Followers
 
 ```shell
-curl --user romeo@buddycloud.org:juliet-forever \
-    https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '[ \
-            { \
-                "subscription": "subscribed", \
-                "jid": "juliet@buddycloud.org" \
-            }, \
-            { \
-                "subscription": "none", \
-                "jid": "tybalt@buddycloud.org" \
-            } \
-        ]'
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
+     -X POST \
+     -u romeo@buddycloud.org:juliet-forever \
+     -H "Content-Type: application/json" \
+     -d '[ \
+             { \
+                 "subscription": "subscribed", \
+                 "jid": "juliet@buddycloud.org" \
+             }, \
+             { \
+                 "subscription": "none", \
+                 "jid": "tybalt@buddycloud.org" \
+             } \
+         ]'
 ```
 
 ```javascript```
@@ -109,13 +109,13 @@ This allows you to approve or deny incoming subscription requests, by assigning 
 ##Alter Follower Roles
 
 ```shell
-curl --user romeo@buddycloud.org:juliet-forever \
-    https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
-            "juliet@buddycloud.org": "member" \
-        }'
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
+     -X POST \
+     -u romeo@buddycloud.org:juliet-forever \
+     -H "Content-Type: application/json" \
+     -d '{ \
+             "juliet@buddycloud.org": "member" \
+         }'
 ```
 
 ```javascript```

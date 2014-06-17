@@ -6,9 +6,9 @@ The subscription list contains the channels and nodes that a user follows.
 
 ```shell
 curl https://demo.buddycloud.org/api/subscribed \
-    -X GET \
-    -u juliet@buddycloud.org:romeo-forever \
-    -H "Accept: application/json"
+     -X GET \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Accept: application/json"
 ```
 
 ```shell
