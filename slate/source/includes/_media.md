@@ -25,35 +25,57 @@ description      | optional   | a longer form description of the object
 ##List Objects
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
+     -X GET
+```
+```shell
+200 OK
+Content-Type: application/json
+
+{{
+    "id": "lETuJi8rPE4IfQrygN8rVtGx3",
+    "fileName": "photo.jpg",
+    "author": "juliet@buddycloud.org",
+    "title": "Juliet's pic",
+    "mimeType": "image/jpeg",
+    "description": "Juliet's picture 1595/06/01",
+    "fileExtension": "jpg",
+    "shaChecksum": "bc46e5fac2f1cbb607c8b253a5af33181f161562",
+    "fileSize": "60892",
+    "height": "312",
+    "width": "312",
+    "entityId": "capulet@topics.buddycloud.org"
+}}
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
 
 This returns a list of all avaliable media objects in a channel.
 
+### HTTP Request
+`GET https://demo.buddycloud.org/api/:channel-name/media`
+
 ##Fetch Object
 
 ```shell
-??? include soemthing about maxheight/width???
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+     -X GET
+
+-OR- (get media preview)
+
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
+     -X GET
+
+-OR- (get avatar)
+
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
+     -X GET
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
@@ -70,7 +92,7 @@ maxwidth         | optional   | Bound the output by a maximum width
 When both `maxheight` and `maxwidth` are requested the server will return a file smaller than or equal to both parameters.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/{channel}/media/{media}?maxheight={}&maxwidth={}`
+`GET https://demo.buddycloud.org/api/:channel-name/media/:media-id?maxheight=:x&maxwidth=:x`
 
 ##Post Media
 
