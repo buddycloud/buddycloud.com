@@ -53,8 +53,6 @@ Users can create any number of topic channels. An error is returned if there is 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:topic-channel-name`
 
-<aside class="warning">Requires Basic Authentication.</aside>
-
 ##Update Metadata
 
 ```shell
@@ -93,8 +91,6 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/metadata/:node`
-
-<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Delete Channel
 
