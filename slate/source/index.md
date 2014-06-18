@@ -4,6 +4,7 @@ title: Buddycloud API Reference
 language_tabs:
   - shell : cURL
   - javascript : Javascript
+  - xml: XMPP
   - plaintext : Sequence Diagram
 
 toc_footers:

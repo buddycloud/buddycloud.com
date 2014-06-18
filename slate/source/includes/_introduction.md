@@ -17,3 +17,5 @@ Each string passed to and from the buddycloud API must be UTF-8 encoded. (In the
 Buddycloud uses HTTP Basic method. The username should also include the domain. For example `user@example.com` works/`user` not. 
 
 <aside class="warning">Always authenticate a user against their home API server. While it may be possible to authenticate against a third-party API server, this could potentially expose user credentials.</aside>
+
+@@@how do we do external auth???@@@

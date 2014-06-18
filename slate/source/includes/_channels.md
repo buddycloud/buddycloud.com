@@ -11,12 +11,12 @@ For example:
 Channels (and their nodes) share a common set of followers, publishers and metadata.
 
 Each channel is preconfigured with a group of default nodes:
--`posts`
--`status`
--`geoloc-past`
--`geoloc`
--`geoloc-future`
--`public-key`
+* `posts`
+* `status`
+* `geoloc-past`
+* `geoloc`
+* `geoloc-future`
+* `public-key`
 
 Applications can easily create new nodes and content types. For example, a game might create a node `game-highscore` so that followers receive realtime updates of new scores.
 
