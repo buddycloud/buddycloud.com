@@ -1,13 +1,13 @@
 #Posts
 
-New posts to a channel are automatically pushed to all subscribers of that channel. Posts to public channels are also pushed to the server's firehose. 
-
-New public posts are automaticaly
-* pushed to online subscribers
+When a user posts to a channel's node, the new post is are automaticaly
+* pushed to the channel's online followers
+* spooled up for the channel's offline followers
 * pushed to the server's firehose
-* queued for offline subscribers
-* archived and avalible for querying
+* archived and retrievable using the [Fetch Posts](#fetch posts) method.
 * indexed by the [channel crawler](https://github.com/buddycloud/channel-directory)
+
+Different channel types have different post formats.
 
 ##Create Post
 
@@ -28,15 +28,15 @@ Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_I
 ???
 ```
 
-New posts should conform to the content type of the node. 
+Creating a post adds a new item to a channel's node. 
 
-For example the `posts` node expects Activity Streams format.
+???The server will timestamp the message/the client's timestamp will be respected?'
+
+<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#Default Channel Nodes) have a pre-defined format and will reject posts that are not formated arrording to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
 
 ### HTTP Request
 
 `POST https://demo.buddycloud.org/api/:channel-name:/content/posts`
-
-<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Delete Post
 
@@ -53,15 +53,15 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID
 ???
 ```
 
-Removes a single post from a node. 
+Removes a single post from a node.
 
 The Buddycloud server will also issue a retraction message to the channel's subscribers.
 
+<aside>Deleting a post that references a mediaID will not remove the media object from the media server. That should be done seperately using a [delete media](#Delete Media) query.</aside>
+
 ### HTTP Request
 
-`DELETE https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
-
-<aside class="warning">Requires Basic Authentication.</aside>
+`DELETE https://demo.buddycloud.org/api/:channel-name:/content/:node-name:/:post-id:`
 
 ##Fetch Posts
 
@@ -69,6 +69,7 @@ The Buddycloud server will also issue a retraction message to the channel's subs
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
      -X GET \
      -H "Accept: application/json"
+     ???Guilherme - can you give an example using pagination please???
 ```
 
 ```shell
@@ -99,27 +100,57 @@ Content-Type: application/json
 ???
 ```
 
-Retrieves posts using [pagination](#Pagination) ranges.
+Retrieves posts uses [pagination](#Pagination) ranges.
 
-### Queriyng for child posts
+##Fetch Child Posts
 
-You can query using the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt] for children of posts. ???@abmar: how do we get children? ???
 
-### Quering for parent posts
+```shell
+???
+```
 
-Often it's useful to quickly paint a clients screen with a query for the 20 most recent posts. However some of these posts may references a parent post outside of the clients post cache. To retrieve a missing parent post, query for the post ID that matches the clients `replyTo`.
+```javascript
+
+````
+
+???@abmar: how do we get children? Nothing documented that makes sense.???
+
+Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
+
+
+## Fetch Parent Posts
+
+Often it's useful to quickly show the 20 most recent posts. However some of these posts may references a parent post outside of the client's cache. To retrieve a missing parent post, you can query for the post ID that matches the clients `replyTo`.
+
+```shell
+???
+```
+
+```javascript
+
+````
 
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/:channel-name:/content/posts`
 `GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
 
-### Sync Posts
+###Sync Posts
 
-Sometimes it's necessary to quickly retrieve a number of posts to draw a client screen. For example a client that shows 10 posts per channel. In this case, you can run a query that breaks down to "show me [up to] 10 posts per channel newer than [date of most recent post in client cache]. This avoids the problem of a very busy channel "drowning out" other posts during a client synchronisation.
+```shell
+???
+```
+
+```javascript
+
+````
+
+Sometimes it's useful to quickly retrieve a number of posts to draw a client screen. A client might want to just show the latest 10 posts per channel (older posts can be paged in as the users scrolls down). 
+
+The `sync` query is a "show me [???up to???] 10 posts per channel newer than [date of most recent post in client cache]. This avoids the problem of a very busy channel "drowning" other posts during a client synchronisation.
 
 Paramenter | Required | Value      | Description
 -----------|----------|------------|------------
-since      | true     | ISO 8601 timestamp | of the most recent posts in the client's cache
+since      | true     | ISO 8601 timestamp ??? seriously??? | of the most recent posts in the client's cache 
 max        | false    | integer    | the maximum number of posts to be returned per channel
 summary    | false    | true,false | returns only summary information per channel (not posts)
 
@@ -135,12 +166,12 @@ summary    | false    | true,false | returns only summary information per channe
 ???
 ```
 
-Vote or upvote posts
+Your users can give feedback to eachother by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
 
-##Firehose Access
+##Post Firehose
 
 ```shell
-@justin ???
+lloyd???
 ```
 
 ```javascript```
@@ -148,4 +179,8 @@ Vote or upvote posts
 ???
 ```
 
-The firehose node `???what is the node???` contains a feed of all public channel posts. It can be queried for historical posts as well as feed out new posts in realtime.
+The firehose node `???what is the node???` contains a feed of all public channel posts from the local Buddycloud server. 
+
+The firehose node can also be queried for historical posts using [pagination](#pagination)
+
+The firehose will only show posts from public channels.
