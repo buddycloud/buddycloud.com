@@ -100,7 +100,9 @@ Content-Type: application/json
 ???
 ```
 
-Retrieves posts uses [pagination](#Pagination) ranges.
+Retrieves one or more posts using [pagination](#Pagination) ranges.
+
+The Buddycloud server will store all posts including post revocations (deleted posts).
 
 ##Fetch Child Posts
 
