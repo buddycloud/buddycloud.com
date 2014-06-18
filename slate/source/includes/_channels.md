@@ -3,19 +3,19 @@
 Channels help you group together similar content in nodes in a way that is easily understandable to your users. This content is grouped into nodes. A node is simply a stream of events.
 
 An example: The channel `juliet@capulet.lit` contains nodes for each type of information that `juliet` wants to share. When `romeo@montague.lit` follows the channel `juliet@capulet.lit` a subscription is created for `juliet@capulet.lit` nodes:
-* `posts` node (the serialization `juliet@capulet.lit`'s of social activities ()
-* `status` node (a text string describing `juliet@capulet.lit`'s mood)
-* `music-i-liked` (a hypothetical (activity stream)[http://activitystrea.ms/specs/json/1.0/] of music `juliet@capulet.lit` liked)
+- `posts` node (the serialization `juliet@capulet.lit`'s of social activities)
+- `status` node (a text string describing `juliet@capulet.lit`'s mood)
+- `music-i-liked` (a hypothetical (activity stream)[http://activitystrea.ms/specs/json/1.0/] of music `juliet@capulet.lit` liked)
 
 Together these nodes are described as the `juliet@capulet.lit` channel and share a common set of followers, publishers and metadata.
 
 Your application can use default channel nodes or define new channel nodes with new content types. To make things easier for you, each channel is preconfigured with a group of default nodes:
-* `posts`
-* `status`
-* `geoloc-past`
-* `geoloc`
-* `geoloc-future`
-* `public-key`
+- `posts`
+- `status`
+- `geoloc-past`
+- `geoloc`
+- `geoloc-future`
+- `public-key`
 
 <img src="/static/img/diagrams/channels comprise application nodes.png">
 
@@ -122,8 +122,8 @@ Removes a channel from the Buddycloud Server.
 
 The following default nodes are created. Additional nodes can be created by the channel owner.
 
-Node name        | Personal Channel |Topic Channel | Description 
------------------|----------------- | -------------|----------------
+Node Name        | Personal Channel |Topic Channel | Description 
+-----------------|:---------------: |:------------:|----------------
 status           | ✓                | ✓            | A one line status message 
 posts            | ✓                | ✓            | ATOM formatted activy stream 
 geoloc-previous  | ✓                | ✗            | Where they were              
