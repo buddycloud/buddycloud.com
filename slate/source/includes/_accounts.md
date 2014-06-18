@@ -92,9 +92,7 @@ Changes a user password to the new password supplied.
 curl https://demo.buddycloud.org/api/account/pw/reset \
      -X POST \
      -H "Content-Type: application/json" \
-     -d '{ \
-           "username": "juliet@buddycloud.org" \
-         }'
+     -d '{ "username": "juliet@buddycloud.org" }'
 ```
 
 ```javascript```
