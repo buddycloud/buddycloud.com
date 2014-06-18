@@ -1,16 +1,15 @@
 #Channels
 
-A channel is a group of nodes.
+Channels help you group together similar content in nodes in a way that is easily understandable to your users. This content is grouped into nodes. A node is simply a stream of events.
 
-Each node contains a feed of items with similarly structured content.
+An example: The channel `juliet@capulet.lit` contains nodes for each type of information that `juliet` wants to share. When `romeo@montague.lit` follows the channel `juliet@capulet.lit` a subscription is created for `juliet@capulet.lit` nodes:
+* `posts` node (the serialization `juliet@capulet.lit`'s of social activities ()
+* `status` node (a text string describing `juliet@capulet.lit`'s mood)
+* `music-i-liked` (a hypothetical (activity stream)[http://activitystrea.ms/specs/json/1.0/] of music `juliet@capulet.lit` liked)
 
-For example:
--the `posts` node contains a feed of activity-stream items.
--The `status` node contains a single entry:  your current mood.
+Together these nodes are described as the `juliet@capulet.lit` channel and share a common set of followers, publishers and metadata.
 
-Channels (and their nodes) share a common set of followers, publishers and metadata.
-
-Each channel is preconfigured with a group of default nodes:
+Your application can use default channel nodes or define new channel nodes with new content types. To make things easier for you, each channel is preconfigured with a group of default nodes:
 * `posts`
 * `status`
 * `geoloc-past`
@@ -18,20 +17,28 @@ Each channel is preconfigured with a group of default nodes:
 * `geoloc-future`
 * `public-key`
 
-Applications can easily create new nodes and content types. For example, a game might create a node `game-highscore` so that followers receive realtime updates of new scores.
+<img src="/static/img/diagrams/channels comprise application nodes.png">
 
-Following a channel grants one access to that channels current [and future] nodes. 
+### Channel Types
 
-<aside>Each user has a channel automatically created for them on sign-up that that matches their ID. For example `user@example.com` will have a channel created called `user@example.com`</aside>
+There are two types of channels in Buddycloud:
 
-##Create Channel
+_Personal_ Channels                            | _Topic_ Channels 
+-----------------------------------------------|--------------------------------------------------------------
+(for example: `juliet@capulet.lit`)            | (for eample: `montague-family@topics.montague.org`)
+created in `<channelID>@example.com` namespace | created in `<channelID>@topics.example.com` namespace
+represent a real person                        | represent a topic
+named after a user's `BuddycloudID`            | not tied to a user's `BuddycloudID`
+channel name matches the user's BuddycloudID   | owned by any user
+can also receive private chat messages         | not applicable
+geolocation optionally shared with followers   | anyone can search for nearby channels
+
+##Create Topic Channel
 
 ```shell
-@guilhermesgb: The personal channels of a user are created alongside with their accounts through the Create Account endpoint. Through the HTTP API, one can only create topic channels:
-
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-    -X POST
+curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
+     -X POST
+     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
@@ -39,7 +46,9 @@ curl --user juliet@buddycloud.org:romeo-forever \
 ???
 ```
 
-Each Buddycloud user has a personal channel automatically created for them (`user@example.com`). New topic channels are created in their own namespace (`user@topics.example.com`).
+Users can create any number of topic channels. An error is returned if there is an existing channel with the same `ChannelID`.
+
+<aside>At sign-up, each user has a personal channel automatically created for them. For example `user@example.com` will have a channel created called `user@example.com` auto-created. Remember, new topic channels are created in their own namespace (`user@topics.example.com`).</aside>
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:topic-channel-name`
@@ -49,15 +58,15 @@ Each Buddycloud user has a personal channel automatically created for them (`use
 ##Update Metadata
 
 ```shell
-curl --user juliet@buddycloud.org:romeo-forever \
-    https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{ \
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -H "Content-Type: application/json" \
+     -d '{ \
             "title": "New Juliet`s Posts Node Title", \
             "description": "Everything about Juliet", \
             "default_affiliation": "publisher" \
-        }'
+         }'
 ```
 
 ```javascript```
@@ -65,9 +74,9 @@ curl --user juliet@buddycloud.org:romeo-forever \
 ???
 ```
 
-Metadata allows you to describe the channel, set defaults and even apply a location to the channel.
+Metadata allows you to describe the channel, set defaults and even add a location to the channel so that it will show up in nearby queries.
 
-Metadata is visible for both public and private channels.
+Channel metadata is always visible for both public and private channels.
 
 ### Parameters
 
@@ -90,7 +99,10 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 ##Delete Channel
 
 ```shell
-@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don`t know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
+???@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don't know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
+
+???st: I guess we are missing this... :()
+
 ```
 
 ```javascript```
@@ -98,7 +110,7 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 ???
 ```
 
-Removes a channel from the system. 
+Removes a channel from the Buddycloud Server.
 
 <aside class="notice">???Lloyd - could you write about what this does to the subscription list of the channels followers???</aside>
 
@@ -106,18 +118,18 @@ Removes a channel from the system.
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
 
-##Default Nodes
+##Default Channel Nodes
 
 The following default nodes are created. Additional nodes can be created by the channel owner.
 
-Channel node    | Description 
---------------- | -----------
-status          | A one line status message 
-posts           | ATOM formatted activy stream 
-geoloc-previous | Where they were              
-geoloc-current  | Where they are              
-geoloc-future   | Where they will go next   
-public-key      | Users can optionally publish their public key
+Node name        | Personal Channel |Topic Channel | Description 
+-----------------|----------------- | -------------|----------------
+status           | ✓                | ✓            | A one line status message 
+posts            | ✓                | ✓            | ATOM formatted activy stream 
+geoloc-previous  | ✓                | ✗            | Where they were              
+geoloc-current   | ✓                | ✗            | Where they are              
+geoloc-future    | ✓                | ✗            | Where they will go next   
+public-key       | ✓                | ✗            | Public key for secure messaging
 
 Default nodes are defined in the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#well-known-nodes).
 
@@ -132,9 +144,9 @@ Default nodes are defined in the [Buddycloud protocol specification](http://budd
 ???
 ```
 
-It's recommended to create new nodes for new application types. You can then use this node for sharing information between devices or as a simple data store for your application.
+It's recommended to create new nodes for new applications. `X-application-<your-application-name>` will avoid bumping into other developers application data.
 
-For example perhaps your chess app created a `x-chess-activity-stream` node.  You could then share this node with competing players and keep state between two games.
+For example perhaps your chess app created a `x-application-ChessApp` node.  You could then share this node with competing players and keep state between two games.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
