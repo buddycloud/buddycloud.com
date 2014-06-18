@@ -17,8 +17,6 @@ Your application can use default channel nodes or define new channel nodes with 
 - `geoloc-future`
 - `public-key`
 
-<img src="/static/img/diagrams/channels comprise application nodes.png">
-
 ### Channel Types
 
 There are two types of channels in Buddycloud:

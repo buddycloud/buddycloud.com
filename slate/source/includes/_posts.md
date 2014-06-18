@@ -32,7 +32,7 @@ Creating a post adds a new item to a channel's node.
 
 ???The server will timestamp the message/the client's timestamp will be respected?'
 
-<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#Default Channel Nodes) have a pre-defined format and will reject posts that are not formated arrording to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
+<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated arrording to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
 
 ### HTTP Request
 
