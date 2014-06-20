@@ -84,6 +84,8 @@ This request returns a media file.
 
 The request can also be used to return an image preview or small user avatar sized files.
 
+If the media object belongs to a public channel, you don't need an Authorization header. Notice that if you're building a web frontend, embedding public media from the media-server means just creating an ```<img>``` tag.
+
 Parameter        | Required   | Description
 -----------------|------------|--------------------------------------------
 maxheight        | optional   | Bound the ouput by a maximum height
