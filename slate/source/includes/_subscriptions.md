@@ -1,8 +1,8 @@
 #Subscriptions
 
-Your users' channel subscriptions are stored on Buddycloud server. The subscription list contains
+Retrieving your users' channel subscription list will return
 * the channels (and nodes) that they follow
-* the channels (and nodes) that have pending subscriptions
+* the channels (and nodes) they have asked (subscription state is `pending`) to follow (private channels require approval of the channel owner or channel moderators).
 
 Each item also contain the user's role (`owner`, `moderator`, `publisher`, `member` or `pending`) in that channel.
 
@@ -32,7 +32,7 @@ Content-Type: application/json
 ???
 ```
 
-Returns the user's channel subscriptions as a JSON object. The object's keys are of the form `{channel}`/`{node}`, the values denote the subscription type (`owner`, `moderator`, `publisher`, `member` or `pending`).
+Returns the user's channel subscriptions as a JSON object. The object's keys are of the form `{channel}` `/` `{node}`, the values denote the subscription type (`owner`, `moderator`, `publisher`, `member` or `pending`).
 
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/subscribed`
@@ -56,17 +56,18 @@ curl https://demo.buddycloud.org/api/subscribed \
 ```
 Following behavior is dependent on the channel type.
 
-Following an _open_ channel is automatically allowed. 
+Following an _open_ channel is automatically allowed.
 
-Following a _private_ channel is generates a subscription request
-* the ueser's subscrition state is set to `pending`
-* the private channels `owner` or a `moderator` receives a subscription request (immediately if they are online or queued up for when they come online)
-* the `owner` or `moderator` approval [or rejection] is then sent back to the user trying to follow the channel
-* the user's subscription state is changed to `subscribed` ??? [or `none`] ???
+Following a _private_ channel generates a `pending` subscription request
+* the user is added to the channel's `pending` subscription list
+* the channel's `owner` or a `moderator` receives a subscription request (immediately if they are online or queued up for when they come online)
+* either the channels `owner` or any of the channels `moderator`s approves [or rejects] and the result is then sent back to the user trying to follow the channel ???how???
+* the user's subscription state is changed to `subscribed`, `publisher` (or `none` if rejected) depending on the channel's `default_affiliation`. 
+
+<aside>The channel `owner` and `moderator` roles can adjust the `default_affiliation` is set in [#Update Metadata].</aside>
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/subscribed`
-
 
 ##Unfollow Channel
 
