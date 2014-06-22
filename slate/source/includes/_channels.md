@@ -31,6 +31,17 @@ channel name matches the user's BuddycloudID   | owned by any user
 can also receive private chat messages         | not applicable
 geolocation optionally shared with followers   | anyone can search for nearby channels
 
+### Channel Privacy
+
+There are two types of channels
+
+Public channel | Private channel
+---------------|----------------
+Anyone can view | Requires a subscription request to view
+
+A channel's privacy can can be chaned from _public_ to _private_. The channels subscribers are not altered by a change. 
+
+
 ##Create Topic Channel
 
 ```shell

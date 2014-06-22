@@ -1,17 +1,17 @@
 #Search
 
-You can query all public channels on all federated Buddycloud servers. You can also perform more specific searches for content on your local Buddycloud server. 
+You can search for authors, metadata, channels, and channel content.
 
-There are two search services on Buddycloud:
-- *Local search* that references content on your buddycloud site.
-- *Remote search* that [crawls public channels](https://github.com/buddycloud/channel-directory) on all buddycloud sites for channel content and channel metadata.
+There are two search services on Buddycloud that are tuned for different needs,
+- *Local search:* finds content on your own Buddycloud domain.
+- *Buddycloud-wide search:* finds channels, posts and metadata from open channels using the [Buddycloud crawler](https://github.com/buddycloud/channel-directory).
 
 Local search 
-???Lloyd - what does this do???
+???Lloyd - could you pleae write a quick description of this???
 
 Search type      | Local search | Buddycloud-wide search
 -----------------|--------------|------------------------
-Channel content  | avaliable for open and closed channels on local Buddycloud site | only posts in an open channel but on all Buddycloud sites
+Channel content  | open and private channels | open channels
 Post author  | yes | no
 Channel metadata | yes | yes
 Location / Nearby | no  | yes
