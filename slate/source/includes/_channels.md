@@ -6,7 +6,7 @@ An example: The channel `juliet@capulet.lit` contains nodes for each type of inf
 
 - `posts` node (the serialization `juliet@capulet.lit`'s of social activities)
 - `status` node (a text string describing `juliet@capulet.lit`'s mood)
-- `music-i-liked` (a hypothetical (activity stream)[http://activitystrea.ms/specs/json/1.0/] of music `juliet@capulet.lit` liked)
+- `music-i-liked` node (a hypothetical [activity stream](http://activitystrea.ms/specs/json/1.0/) of music `juliet@capulet.lit` liked)
 
 Together these nodes are described as the `juliet@capulet.lit` channel and share a common set of followers, publishers and metadata.
 
