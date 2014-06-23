@@ -124,14 +124,43 @@ The Buddycloud server will store all posts including post revocations (deleted p
 
 
 ```shell
-???
+POST_ID=qux
+curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
+     -X GET \
+     -H "Accept: application/json"
+```
+
+```shell
+200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "foo",
+        "replyTo": "qux",
+        "author": "romeo@buddycloud.org",
+        "updated": "1595-06-01T12:00:00Z",
+        "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+        "media": null
+    },
+    ...
+    {
+        "id": "bar",
+        "replyTo": "qux",
+        "author": "romeo@buddycloud.org",
+        "updated": "1591-06-04T12:00:00Z",
+        "content": "Thus with a kiss I die.",
+        "media": null
+    }
+]
 ```
 
 ```javascript
 
 ````
 
-???@abmar: how do we get children? Nothing documented that makes sense.???
+### HTTP Request
+`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id/replyto`
 
 Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
 
