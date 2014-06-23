@@ -98,8 +98,8 @@ Channel metadata is always visible for both public and private channels.
 
 Argument            | Editable | Values | Description
 ------------------- | -------- | -------| -----------
-title               | true     | ??? characters | The channel's title.
-description         | true     | ??? characters | A short string describing the channel 
+title               | true     | ???@lloyd: max length? | The channel's title.
+description         | true     | ???@lloyd: max length? | A short string describing the channel 
 creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | When the channel was created
 access_model        | true    | `open`, `authorize` | Whether the channel is `open` for anyone to view or if followers should first be `authorize`d to view it.
 channel_type        | false   | `personal`, `topic` | Whether this is a users `personal` channel or a `topic` channel
