@@ -57,11 +57,34 @@ Returns a list of channels similar to the queried channel.
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????` 
 
-##Popular Channels
+##Most active channels
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/most_active?domain=example.com&period=7 
+```
+```shell
+200 OK
+Content-Type: application/json
+
+
+{ "items" : [ { "channelType" : "topic",
+        "creationDate" : "2012-08-05T14:57:26+0000",
+        "defaultAffiliation" : "publisher",
+        "description" : "This is an RSS feed from the BBC News - World website.  Original: http://feeds.bbci.co.uk/news/world/rss.xml",
+        "jid" : "bbc_news_-_world@topics.buddycloud.org",
+        "title" : "BBC News - World"
+      },
+      { "channelType" : "personal",
+        "creationDate" : "2011-10-06T12:02:58+0000",
+        "defaultAffiliation" : "publisher",
+        "description" : "Flipping you the channel bits. Night and day, the distributed way",
+        "jid" : "simon@buddycloud.org",
+        "title" : "Simon's chonnel"
+      }
+    ],
+  "rsm" : { "count" : "2",
+      "index" : "0"
+    }
+}
 ```
 
 ```javascript```
@@ -74,7 +97,7 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-Returns a list of popular channels ???@abmar: how do we calculate popularity??? both on the local buddycloud domain, or across all buddycloud sites.
+Returns a list of the most active channels both on the local buddycloud domain (if ```domain``` is specified), or across all buddycloud sites. The most active channels are the channels with the greater number of new posts in the last ```period``` days. 
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????` 
+`POST https://demo.buddycloud.org/api/most_active` 
