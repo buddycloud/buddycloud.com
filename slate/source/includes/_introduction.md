@@ -26,4 +26,4 @@ The external authentication features will backhaul login requests to your own AP
 ##Getting help
 We really want this API to be useful to you. If you run into problems please [contact](/contact) us. [Documenetation fixes](https://github.com/buddycloud/buddycloud.com/tree/master/slate/source/includes) and ideas for improvements are always welcomed.
 
-All documentation is generated using [Slate](https://github.com/tripit/slate).
+Documentation is generated using [Slate](https://github.com/tripit/slate).
