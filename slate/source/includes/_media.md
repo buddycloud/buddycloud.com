@@ -22,6 +22,55 @@ entityId         | required   | The channel where the media object was posted.
 title            | optional   | a short title of the object
 description      | optional   | a longer form description of the object
 
+
+
+###Special MediaIDs
+ 
+ 
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+The media `id` of `avatar` is currently reserved and used for storing a channels avatar.
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
+
+###Media Metadata
+
+```shell
+curl https://demo.buddycloud.org/api/???? \
+ --??? \
+ --???
+```
+
+```javascript```
+???
+???
+```
+
+```json
+???
+???
+```
+
+Metadata upates must include the `id`. 
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
+
 ##List Media
 
 ```shell
@@ -149,56 +198,8 @@ Posting new media will return the object `id` and metadata.
 
 Updating existing media with the same `id` will overwrite the existing media content.
 
-
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/media`
-
-##Special MediaIDs
- 
- 
-```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
-```
-
-```javascript```
-???
-???
-```
-
-```json
-???
-???
-```
-
-The media `id` of `avatar` is currently reserved and used for storing a channels avatar.
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
-
-##Media Metadata
-
-```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
-```
-
-```javascript```
-???
-???
-```
-
-```json
-???
-???
-```
-
-Metadata upates must include the `id`. 
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
 
 ##Delete Media
 ```shell
@@ -221,3 +222,4 @@ Deleting media will remove it from the requested channel. This does not remove i
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
+
