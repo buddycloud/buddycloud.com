@@ -1,12 +1,26 @@
 #Import friends
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/match_contacts\
+  -H "Content-Type: application/json" \
+  -d '{"mine": ["0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b"], \
+       "others": ["023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17", \
+                  "bcee94d395fe9cd76dfae390e006a98032144fb48dc8181448c4cd192ec4b75c"]}'
 ```
 
-```javascript```
+```
+200 OK 
+{
+  "items": [
+    {
+      "jid": "alice@capulet.lit",
+      "matched-hash": "023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17"
+    }
+  ]
+}
+```
+
+```javascript
 ???
 ???
 ```
@@ -42,40 +56,3 @@ A POST to this endpoint will publish user contacts' hashes and match previously 
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/match_contacts`
-
-##Social Graph comparison
-
-```shell
-curl https://demo.buddycloud.org/api/match_contacts\
-  -H "Content-Type: application/json" \
-  -d '{"mine": ["0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b"], \
-       "others": ["023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17", \
-                  "bcee94d395fe9cd76dfae390e006a98032144fb48dc8181448c4cd192ec4b75c"]}'
-```
-
-```
-200 OK 
-{
-  "items": [
-    {
-      "jid": "alice@capulet.lit",
-      "matched-hash": "023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17"
-    }
-  ]
-}
-```
-
-```javascript```
-???
-???
-```
-
-```json
-???
-???
-```
-
-@Abmar: please complete.
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
