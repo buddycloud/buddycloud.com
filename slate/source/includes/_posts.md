@@ -1,13 +1,13 @@
 #Posts
 
-To create new content, your users post to a [channel-node](#Channel-Nodes).
+To create new content, your users post to a [channel-node](#channel-nodes).
 
 New post is are automaticaly:
 
 * pushed to the channel's online followers
 * spooled up for the channel's offline followers
 * pushed to the server's firehose
-* archived and retrievable using the [Fetch Posts](#fetch posts) method.
+* archived and retrievable using the [fetch posts](#fetch-posts) method.
 * indexed by the [channel crawler](https://github.com/buddycloud/channel-directory)
 
 Different channel types have different post formats.
@@ -35,7 +35,7 @@ Creating a post adds a new item to a channel's node.
 
 ???The server will timestamp the message/the client's timestamp will be respected?'
 
-<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated arrording to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
+<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated according to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
 
 ### HTTP Request
 
@@ -60,7 +60,7 @@ Removes a single post from a node.
 
 The Buddycloud server will also issue a retraction message to the channel's subscribers.
 
-<aside>Deleting a post that references a mediaID will not remove the media object from the media server. That should be done seperately using a [delete media](#Delete Media) query.</aside>
+<aside>Deleting a post that references a mediaID will not remove the media object from the media server. That should be done seperately using a [delete media](#delete-media) query.</aside>
 
 ### HTTP Request
 
@@ -103,7 +103,7 @@ Content-Type: application/json
 ???
 ```
 
-Retrieves one or more posts using [pagination](#Pagination) ranges.
+Retrieves one or more posts using [pagination](#pagination) ranges.
 
 The Buddycloud server will store all posts including post revocations (deleted posts).
 

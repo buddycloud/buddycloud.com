@@ -18,7 +18,8 @@ geolocation optionally shared with followers   | anyone can search for nearby ch
 
 ### Channel Privacy
 
-You can set your channels `access_model ` to `open` (a Public channel) or `authorize` (a Private channel).
+
+You can set your channels `access_model ` to `open` (a public channel) or `authorize` (a private channel).
 
                |Public channel | Private channel
 ---------------|---------------|-----------------
@@ -76,10 +77,10 @@ Argument            | Editable | Values | Description
 ------------------- | -------- | -------| -----------
 title               | true     | ??? characters | The channel's title.
 description         | true     | ??? characters | A short string describing the channel 
-creation_date       | false    | RFC3399 format timestamp | When the channel was created
-access_model        | false    | open, authorize | Whether the channel is `open` for anyone to view or if followers should first be `authorize`d to view it.
-channel_type        | false    | personal, topic, | Whether this is a users `personal` channel or a `topic` channel
-default_affiliation | true | publisher, follower | The role new followers inherit
+creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | When the channel was created
+access_model        | true    | `open`, `authorize` | Whether the channel is `open` for anyone to view or if followers should first be `authorize`d to view it.
+channel_type        | false   | `personal`, `topic` | Whether this is a users `personal` channel or a `topic` channel
+default_affiliation | true | `publisher`, `follower` | The role new followers inherit
 
 A complete set of channel metadata is avaliable from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
 
