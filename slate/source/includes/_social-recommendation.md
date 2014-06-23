@@ -20,21 +20,20 @@ You can improve your users' onboarding experience by comparing existing social g
 
 The results of this query are usually displayed to the end user as a "People you may know" screen.
 
-The friend finder can use arbitary identificaiton sources. Currently these are:
-* email
-* phone number
-* Twitter ???@abmar - what???
-* Facebook ???@abmar - what???
+As the friend finder is agnostic to the social graph that holds the user's identification handle, one can use arbitary identification providers. Examples of providers that are currently in use are:
 
-To create a hash:
-1. `@abmar: please fill in`
-2. ... 
-3. ... 
+* email address
+* phone number (last 6 digits)
+* Twitter (handle without the starting '@')
+* Facebook (numeric id, as returned in https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.0)
 
 ###Privacy
 The [friend finder](http://github.com/buddycloud/friend-finder) service matains the user's privacy by only ever uploading hashes of identifiers - never the users or their address friends' real email, phone number or other private information.
 
 You should also request your users permission before uploading any identifiers.
+
+A hash must be unique across different identity providers, that's why 
+
 
 
 ### HTTP Request
