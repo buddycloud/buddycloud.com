@@ -18,7 +18,7 @@ Field       | Description | Set by | Example
 ------------|-------------|--------|---------
 `author`    | BuddycloudID| server | `juliet@capulet.lit`
 `content`   | [usually] Activity stream content | user   | `O Romeo, Romeo! wherefore art thou Romeo?` 
-`id`        | a unique-per-Buddycloud-site ID | server | `17163726-ea90-453e-ad25-455336a83fd4`
+`id`        | a unique post ID | server | `17163726-ea90-453e-ad25-455336a83fd4`
 `media`     | a list of media objects the post might refer to | user | `[{"id": "romeo-photo-id", "channel": "alice@capulet.lit"}]`
 `replyTo`   | parent post `id` | user |`9b7724d0-7ef5-4331-8974-81754abb7ba0`
 `published` | when the post was created | server | `2012-11-02T03:41:55.484Z`
@@ -52,7 +52,7 @@ Creating a post adds a new item to a channel's node.
 
 ### HTTP Request
 
-`POST https://demo.buddycloud.org/api/:channel-name:/content/posts`
+`POST https://demo.buddycloud.org/api/{channelID}/content/posts`
 
 ##Delete Post
 
@@ -77,7 +77,7 @@ The Buddycloud server will also issue a retraction message to the channel's subs
 
 ### HTTP Request
 
-`DELETE https://demo.buddycloud.org/api/:channel-name:/content/:node-name:/:post-id:`
+`DELETE https://demo.buddycloud.org/api/{channelID}/content/{node-name}/{postID}`
 
 ##Fetch Posts
 
@@ -162,7 +162,7 @@ Content-Type: application/json
 Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
 
 ### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id/replyto`
+`GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}/replyto`
 
 ## Fetch Parent Posts
 
@@ -177,8 +177,8 @@ Often it's useful to quickly show the 20 most recent posts. However some of thes
 ````
 
 ### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name:/content/posts`
-`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id`
+`GET https://demo.buddycloud.org/api/{channelID}/content/posts`
+`GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}`
 
 ###Sync Posts
 
@@ -217,7 +217,7 @@ Your users can give feedback to eachother by upvoting/liking posts. Upvotes take
 ##Access Firehose
 
 ```shell
-lloyd???
+lloyd??? I have no idea how to access this
 ```
 
 ```javascript```

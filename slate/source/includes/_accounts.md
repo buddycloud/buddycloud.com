@@ -8,9 +8,9 @@ Create and destroy user accounts and permit the user to manage and reset their p
 
 Argument   | Required | Notes
 ---------- | -------- |------------
-username   | True     | Must contain a domain element that matches the virtual host.
-password   | True     | The API is agnostic to password strength requirements.
-email      | False    | An Email address to receive push notifications and password resets.
+`username`   | true     | Must contain a domain element that matches the virtual host.
+`password`   | true     | The API is agnostic to password strength requirements.
+`email`      | false    | An Email address to receive push notifications and password resets.
 
 ##Create User
 

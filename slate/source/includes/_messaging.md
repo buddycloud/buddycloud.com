@@ -70,5 +70,5 @@ socket.on('xmpp.chat.message', function(data) {
 }
 ```
 
-To begin receiving messages you should register for [realtime events](#realtime-events).
+To begin receiving messages your application should enable [realtime event](#realtime-events) sending. Messages will then arrive as they are sent without needing to poll.
 
