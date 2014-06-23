@@ -24,6 +24,7 @@ includes:
   - accounts
   - realtime
   - channels
+  - nodes
   - posts
   - subscriptions
   - followers

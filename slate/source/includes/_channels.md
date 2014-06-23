@@ -2,47 +2,30 @@
 
 Channels help you group together similar content in nodes in a way that is easily understandable to your users. This content is grouped into nodes. A node is simply a stream of events.
 
-An example: The channel `juliet@capulet.lit` contains nodes for each type of information that `juliet` wants to share. When `romeo@montague.lit` follows the channel `juliet@capulet.lit` a subscription is created for `juliet@capulet.lit` nodes:
-
-- `posts` node (the serialization `juliet@capulet.lit`'s of social activities)
-- `status` node (a text string describing `juliet@capulet.lit`'s mood)
-- `music-i-liked` node (a hypothetical [activity stream](http://activitystrea.ms/specs/json/1.0/) of music `juliet@capulet.lit` liked)
-
-Together these nodes are described as the `juliet@capulet.lit` channel and share a common set of followers, publishers and metadata.
-
-Your application can use default channel nodes or define new channel nodes with new content types. To make things easier for you, each channel is preconfigured with a group of default nodes:
-
-- `posts`
-- `status`
-- `geoloc-past`
-- `geoloc`
-- `geoloc-future`
-- `public-key`
-
 ### Channel Types
 
 There are two types of channels in Buddycloud:
 
 _Personal_ Channels                            | _Topic_ Channels 
 -----------------------------------------------|--------------------------------------------------------------
-(for example: `juliet@capulet.lit`)            | (for eample: `montague-family@topics.montague.org`)
+e.g. `juliet@capulet.lit`                      | e.g. `montague-family@topics.montague.org`
 created in `<channelID>@example.com` namespace | created in `<channelID>@topics.example.com` namespace
 represent a real person                        | represent a topic
 named after a user's `BuddycloudID`            | not tied to a user's `BuddycloudID`
-channel name matches the user's BuddycloudID   | owned by any user
+owned by the maching BuddycloudID              | can be owned by any user
 can also receive private chat messages         | not applicable
 geolocation optionally shared with followers   | anyone can search for nearby channels
 
 ### Channel Privacy
 
-There are two types of channels
+You can set your channels `access_model ` to `open` (a Public channel) or `authorize` (a Private channel).
 
-Public channel | Private channel
----------------|----------------
-Anyone can view | Requires a subscription request to view
+               |Public channel | Private channel
+---------------|---------------|-----------------
+access_model   |open           |authorize
+visibility     |Anyone can view | Requires a subscription request to view
 
-A channel's privacy can can be chaned from _public_ to _private_. The channels subscribers are not altered by a change. 
-
+The [metadata](#metadata) for _public_ and _private_ channels is alway's publically accessible.
 
 ##Create Topic Channel
 
@@ -125,35 +108,3 @@ Removes a channel from the Buddycloud Server.
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
 
-##Default Channel Nodes
-
-The following default nodes are created. Additional nodes can be created by the channel owner.
-
-Node Name        | Personal Channel |Topic Channel | Description 
------------------|:---------------: |:------------:|----------------
-status           | ✓                | ✓            | A one line status message 
-posts            | ✓                | ✓            | ATOM formatted activy stream 
-geoloc-previous  | ✓                | ✗            | Where they were              
-geoloc-current   | ✓                | ✗            | Where they are              
-geoloc-future    | ✓                | ✗            | Where they will go next   
-public-key       | ✓                | ✗            | Public key for secure messaging
-
-Default nodes are defined in the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#well-known-nodes).
-
-##Create Node
-
-```shell
-@guilhermesgb: There's no HTTP API endpoint for creating specific nodes.
-```
-
-```javascript```
-???
-???
-```
-
-It's recommended to create new nodes for new applications. `X-application-<your-application-name>` will avoid bumping into other developers application data.
-
-For example perhaps your chess app created a `x-application-ChessApp` node.  You could then share this node with competing players and keep state between two games.
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
