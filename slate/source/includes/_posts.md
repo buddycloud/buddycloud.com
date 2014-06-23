@@ -1,6 +1,9 @@
 #Posts
 
-When a user posts to a channel's node, the new post is are automaticaly
+To create new content, your users post to a [channel-node](#Channel-Nodes).
+
+New post is are automaticaly:
+
 * pushed to the channel's online followers
 * spooled up for the channel's offline followers
 * pushed to the server's firehose
