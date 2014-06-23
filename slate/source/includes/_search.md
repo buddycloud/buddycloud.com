@@ -105,7 +105,7 @@ curl https://demo.buddycloud.org/api/???? \
 
 Query for channels by location. This search will return channels nearby to a latitude and longitude.
 
-<aside>Channels [#Update Metadata] can optionally be tagged with a latitude and a longitude.</aside>
+<aside>You can set a channel's latitude and longitude in the in the [metadata](#update-metadata)</aside>
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
