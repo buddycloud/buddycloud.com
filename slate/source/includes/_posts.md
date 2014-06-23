@@ -196,9 +196,9 @@ The `sync` query is a "show me [???up to???] 10 posts per channel newer than [da
 
 Paramenter | Required | Value      | Description
 -----------|----------|------------|------------
-since      | true     | ISO 8601 timestamp ??? seriously??? | of the most recent posts in the client's cache 
-max        | false    | integer    | the maximum number of posts to be returned per channel
-summary    | false    | true,false | returns only summary information per channel (not posts)
+`since`      | `true`     | ISO 8601 timestamp ??? | of the most recent posts in the client's cache 
+`max`        | `false`    | integer    | the maximum number of posts to be returned per channel
+`summary`    | `false`    | `true`, `false` | returns only summary information per channel (not posts)
 
 ##Upvote Post
 
@@ -227,6 +227,6 @@ lloyd???
 
 The firehose node `???what is the node???` contains a feed of all public channel posts from the local Buddycloud server. 
 
-The firehose node can also be queried for historical posts using [pagination](#pagination)
+The firehose node can also be queried for historical posts using [pagination](#pagination).
 
 The firehose will only show posts from public channels.
