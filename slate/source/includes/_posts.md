@@ -16,8 +16,8 @@ Different channel types have different post formats.
 
 Field       | Description | Set by | Example
 ------------|-------------|--------|---------
-`author`    | BuddycloudID| server | `alice@example.com`
-`content`   | [usually] Activity stream content | user   | `Oh Romeo!` 
+`author`    | BuddycloudID| server | `juliet@capulet.lit`
+`content`   | [usually] Activity stream content | user   | `O Romeo, Romeo! wherefore art thou Romeo?` 
 `id`        | a unique-per-Buddycloud-site ID | server | `17163726-ea90-453e-ad25-455336a83fd4`
 `media`     | whether the post refers to a media object |user or server| `null`
 `replyTo`   | parent post `id` | user |`9b7724d0-7ef5-4331-8974-81754abb7ba0`
