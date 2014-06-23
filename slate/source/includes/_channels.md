@@ -16,17 +16,18 @@ owned by the maching BuddycloudID              | can be owned by any user
 can also receive private chat messages         | not applicable
 geolocation optionally shared with followers   | anyone can search for nearby channels
 
-### Channel Privacy
+### Channel Privacy Settings
 
+Channels may be private or public.
 
-You can set your channels `access_model ` to `open` (a public channel) or `authorize` (a private channel).
+Channel Privacy is controlled by the channel's `access_model `:
 
                |Public channel | Private channel
 ---------------|---------------|-----------------
 access_model   |open           |authorize
 visibility     |Anyone can view | Requires a subscription request to view
 
-The [metadata](#update-metadata) for _public_ and _private_ channels is alway's publically accessible.
+The channel [metadata](#update-metadata) for _public_ and _private_ channels is alway's publically accessible.
 
 ##Create Channel
 

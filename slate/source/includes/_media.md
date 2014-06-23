@@ -1,6 +1,8 @@
 #Media
 
-The media server helps you add media sharing to channels. Users can upload a file to a channel and this is then shared with the followers of that channel. Only users that follow this channel can access the media. 
+Users can upload a file to a channel. This is then avaliable to all followers of that channel. The [Buddycloud media server](http://github.com/buddycloud/buddycloud-media-server) will also generate and cache scaled versions of uploaded images (useful for scaled previews or creating user avatars from larger files).
+
+The uploaded file is permissioned so that only channel followers can access it. 
 
 Media can be any type of file, and any file size (Buddycloud site administrators usually set about 10GB as a maximum size.)
 
@@ -8,21 +10,20 @@ Media can be any type of file, and any file size (Buddycloud site administrators
 
 Media Metadata
 
-Parameter        | Required   | Description
+Parameter        | Set by    | Description
 -----------------|------------|--------------------------------------------
-height           | server-set | Height of the uploaded image or video. This is calculated by the server and not editable.
-width            | server-set | Hidth of the uploaded image or video. This is calculated by the server and not editable.
-author           | server-set | the ID of the uploader
-shaChecksum      | server-set | SHA1 file checksum
-uploadedDate     | server-set | when the media was uploaded
-lastUpdatedDate  | server-set | when the media was updated
-mimeType         | required   | The file mimetype (??? for example???)
-fileName         | required   | The uploaded filename and extension.
-entityId         | required   | The channel where the media object was posted.
-title            | optional   | a short title of the object
-description      | optional   | a longer form description of the object
-
-
+id  ???             | server     | ??? does such a thing exist???
+height           | server     | Height of the uploaded image or video. This is calculated by the server and not editable.
+width            | server     | Hidth of the uploaded image or video. This is calculated by the server and not editable.
+author           | server     | the ID of the uploader
+shaChecksum      | server     | SHA1 file checksum
+uploadedDate     | server     | when the media was uploaded
+lastUpdatedDate  | server     | when the media was updated
+mimeType         | user       | The file mimetype (??? for example???)
+fileName         | user       | The uploaded filename and extension.
+entityId         | user       | The channel where the media object was posted.
+title            | user (optional)   | a short title of the object
+description      | user (optional)   | a longer form description of the object
 
 ###Special MediaIDs
  
@@ -43,7 +44,10 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-The media `id` of `avatar` is currently reserved and used for storing a channels avatar.
+The media `id` of `avatar` is currently reserved and used for storing a channel's avatar. This makes it easy to always request an avatar for a known `channelID`. For example:
+[{API Prefix}/{ChannelID}/media/avatar](https://demo.buddycloud.org/api/simon@buddycloud.org/media/avatar?maxheight=50&maxwidth=50)
+
+Like a channel's metadata, the `avatar` `id` is also set to always be publiclly avaliable.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
@@ -129,7 +133,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
 ???
 ```
 
-This request returns a media file.
+This request returns a file.
 
 The request can also be used to return an image preview or small user avatar sized files.
 
@@ -143,9 +147,9 @@ maxwidth         | optional   | Bound the output by a maximum width
 When both `maxheight` and `maxwidth` are requested the server will return a file smaller than or equal to both parameters.
 
 ### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name/media/:media-id`
-`GET https://demo.buddycloud.org/api/:channel-name/media/:media-id?maxheight=:x&maxwidth=:x`
-`GET https://demo.buddycloud.org/api/:channel-name/avatar`
+`GET https://demo.buddycloud.org/api/{channelID}/media/{id}`
+`GET https://demo.buddycloud.org/api/{channelID}/media/{id}?maxheight={x}&maxwidth={x}`
+`GET https://demo.buddycloud.org/api/{channelID}/avatar`
 
 ##Post Media
 
