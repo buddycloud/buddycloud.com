@@ -22,7 +22,7 @@ entityId         | required   | The channel where the media object was posted.
 title            | optional   | a short title of the object
 description      | optional   | a longer form description of the object
 
-##List Objects
+##List Media
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
@@ -58,7 +58,7 @@ This returns a list of all avaliable media objects in a channel.
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/:channel-name/media`
 
-##Fetch Object
+##Fetch Media
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
