@@ -2,7 +2,7 @@
 
 Direct messages give you a quick way to send messages betwen users on your Buddycloud site and to users on remote Buddycloud sites. Direct messaging uses XMPP's native messaging.
  
-##Send Message
+##Post Message
 
 ```javascript```
 socket.send(

@@ -10,14 +10,14 @@ Push notifications are powered by the [Buddycloud Pusher](https://github.com/bud
 
 Argument                | Value      | Default | Notes
 ----------------------- | ---------- |-------- | ----
-type                    | email,gcm | - |The push notification type.
-target                  | {email address, GCM id} | - | An email address or a GCMRegistrationId
-postAfterMe             | true,false | true | New posts in a thread the user has previously posted
-postMentionedMe         | true,false | true | When a post in any channel mentions the user's id.
-postOnMyChannel         | true,false | true | Posts into a channel the user owns
-postOnSubscribedChannel | true,false | false | Posts in any channels the user subscribes to
-followRequest           | true,false | true | A request to follow a private channel the user owns or moderates waits for approval 
-followMyChannel         | true,false | true | Someone started following the user's channel
+type                    | `email`, `gcm` |   |The push notification type.
+target                  | `email` `GCMRegistrationId` | - | An email address or a Google Cloud messenger Registration ID
+postAfterMe             | `true`,`false` | `true` | New posts in a thread the user has previously posted
+postMentionedMe         | `true`,`false` | `true` | When a post in any channel mentions the user's id.
+postOnMyChannel         | `true`,`false` | `true` | Posts into a channel the user owns
+postOnSubscribedChannel | `true`,`false` | `false` | Posts in any channels the user subscribes to
+followRequest           | `true`,`false` | `true` | A request to follow a private channel the user owns or moderates waits for approval 
+followMyChannel         | `true`,`false` | `true` | Someone started following the user's channel
 
 }
 

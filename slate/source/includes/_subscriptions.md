@@ -37,9 +37,6 @@ Returns the user's channel subscriptions as a JSON object. The object's keys are
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/subscribed`
 
-<aside class="warning">Requires Basic Authentication.</aside>
-
-
 ##Follow Channel
 
 ```shell

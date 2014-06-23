@@ -26,9 +26,9 @@ You can set your channels `access_model ` to `open` (a public channel) or `autho
 access_model   |open           |authorize
 visibility     |Anyone can view | Requires a subscription request to view
 
-The [metadata](#metadata) for _public_ and _private_ channels is alway's publically accessible.
+The [metadata](#update-metadata) for _public_ and _private_ channels is alway's publically accessible.
 
-##Create Topic Channel
+##Create Channel
 
 ```shell
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
@@ -47,6 +47,29 @@ Users can create any number of topic channels. An error is returned if there is 
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:topic-channel-name`
+
+
+##Delete Channel
+
+```shell
+???@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don't know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
+
+???st: I guess we are missing this... :()
+
+```
+
+```javascript```
+???
+???
+```
+
+Removes a channel from the Buddycloud Server.
+
+<aside class="notice">???Lloyd - could you write about what this does to the subscription list of the channels followers???</aside>
+
+
+### HTTP Request
+`POST https://demo.buddycloud.org/api/????`
 
 ##Update Metadata
 
@@ -86,26 +109,3 @@ A complete set of channel metadata is avaliable from the [Buddycloud protocol sp
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/metadata/:node`
-
-##Delete Channel
-
-```shell
-???@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don't know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
-
-???st: I guess we are missing this... :()
-
-```
-
-```javascript```
-???
-???
-```
-
-Removes a channel from the Buddycloud Server.
-
-<aside class="notice">???Lloyd - could you write about what this does to the subscription list of the channels followers???</aside>
-
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
-

@@ -60,8 +60,6 @@ This removes a user account.
 ### HTTP Request
 `DELETE https://demo.buddycloud.org/api/account`
 
-<aside class="warning">Requires Basic Authentication.</aside>
-
 ## Change Password
 
 ```shell 
@@ -83,8 +81,6 @@ Changes a user password to the new password supplied.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/account/pw/change`
-
-<aside class="warning">Requires Basic Authentication.</aside>
 
 ##Reset Password
 

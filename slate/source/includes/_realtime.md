@@ -28,4 +28,4 @@ To begin receiving messages since the user was last online, and enable streaming
 @@@Lloyd - how are invites spooled up? 
 @@@Lloyd - how are follow requests spooled up?
 
-<aside>Buddycloud uses the ???Justin: GRIT specification??? from and [Fanout's](http://fanout.io) realtime content delivery network for scaling realtime event pushes. The [Fanout.io Documentation](https://fanout.io/docs/) has details on getting this setup.</aside>
+<aside>Buddycloud uses the ???Justin: GRIT specification??? from and [Fanout's](https://fanout.io) realtime content delivery network for scaling realtime event pushes. The [Fanout.io Documentation](https://fanout.io/docs/) has details on getting this setup.</aside>

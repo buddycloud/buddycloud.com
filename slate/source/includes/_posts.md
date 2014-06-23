@@ -173,7 +173,7 @@ summary    | false    | true,false | returns only summary information per channe
 
 Your users can give feedback to eachother by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
 
-##Post Firehose
+##Access Firehose
 
 ```shell
 lloyd???

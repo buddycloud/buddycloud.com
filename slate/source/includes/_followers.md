@@ -73,8 +73,6 @@ Retrieves the list of subscriptions of a node. Returns a list of objects contain
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve`
 
-<aside class="warning">Requires Basic Authentication.</aside>
-
 ##Authorise Pending Followers
 
 ```shell
@@ -104,8 +102,6 @@ This allows you to approve or deny incoming subscription requests, by assigning 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve`
 
-<aside class="warning">Requires Basic Authentication.</aside>
-
 ##Alter Follower Roles
 
 ```shell
@@ -127,5 +123,3 @@ This lets you promote (or demote) user subscriptions to `publisher`, `member` or
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node`
-
-<aside class="warning">Requires Basic Authentication.</aside>
