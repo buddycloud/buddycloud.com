@@ -5,7 +5,7 @@ In general,
 * The REST API is optimised for mobile app development.
 * The Javascript calls are better for realtime web application programming.
 
-We recommend you start testing against the buddycloud API running at `demo.buddycloud.org/api`. You can then run your own Buddyclouyd stack, using the [hosting](https://hosting.buddycloud.com) service or [self-install](/install) your own Buddycloud stack.
+We recommend you start testing against the buddycloud API running at `demo.buddycloud.org/api`. You can then run your own Buddycloud stack, using the [hosting](https://hosting.buddycloud.com) service or [self-install](/install) your own Buddycloud stack.
 
 ##Encoding
 The Buddycloud API uses UTF-8 encoding.
