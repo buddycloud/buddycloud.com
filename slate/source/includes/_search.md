@@ -3,18 +3,19 @@
 You can search for authors, metadata, channels, and channel content.
 
 There are two search services on Buddycloud that are tuned for different needs,
+
 - *Local search:* finds content on your own Buddycloud domain.
-- *Buddycloud-wide search:* finds channels, posts and metadata from open channels using the [Buddycloud crawler](https://github.com/buddycloud/channel-directory).
+- *Buddycloud-wide search:* finds channels, posts and metadata from public channels using the [Buddycloud crawler](https://github.com/buddycloud/channel-directory).
 
 Local search 
 ???Lloyd - could you pleae write a quick description of this???
 
 Search type      | Local search | Buddycloud-wide search
 -----------------|--------------|------------------------
-Channel content  | open and private channels | open channels
-Post author  | yes | no
-Channel metadata | yes | yes
-Location / Nearby | no  | yes
+Channel content  | public and private channels | public channels
+Post author      | yes          | no
+Channel metadata | yes          | yes
+Location         | no           | yes
 
 ##Search by Content
 ```shell
