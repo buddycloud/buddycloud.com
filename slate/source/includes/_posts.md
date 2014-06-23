@@ -159,11 +159,10 @@ Content-Type: application/json
 
 ````
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id/replyto`
-
 Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
 
+### HTTP Request
+`GET https://demo.buddycloud.org/api/:channel-name:/content/posts/:post-id/replyto`
 
 ## Fetch Parent Posts
 
