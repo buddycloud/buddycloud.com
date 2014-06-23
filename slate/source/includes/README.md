@@ -18,3 +18,21 @@ Referring to a channel (the JID-like part) we call it the `channelID` (not `chan
 ##Examples
 
 Use examples from romeo and juliet. (not alice and bob)
+
+##BuddycloudID 
+
+`buddycloudID` is the user's login
+
+## Table headings 
+
+* Capitalise table headings
+* arguments should be nicely code formatted eg: `username`
+
+eg:
+
+Argument   | Required | Notes
+---------- | -------- |------------
+`username`   | true     | Must contain a domain element that matches the virtual host.
+`password`   | true     | The API is agnostic to password strength requirements.
+`email`      | false    | An Email address to receive push notifications and password resets.
+
