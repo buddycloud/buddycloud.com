@@ -32,9 +32,9 @@ The [friend finder](http://github.com/buddycloud/friend-finder) service matains 
 
 You should also request your users permission before uploading any identifiers.
 
-A hash must be unique across different identity providers, that's why 
-
-
+To create a hash:
+1. Append the provider and the identifier, separated by a colon. E.g. ```facebook:1015747641```
+2. ... 
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
