@@ -10,11 +10,15 @@ Parameter | Description
 --------- |  -----------
 max       | The maximum number of returned entries
 before    | Get posts before this timestamp
-first     | Return only entries older than the entry with the specified ID
-last      | ??? is this a date and what format???
 after     | Return only entries older than the entry with the specified ID.
 index     | The element's (for example, a post) position in the result set
 
-## Response Parameters
+## Response Attibutes
 
-The following parameters are returned in a paged query response
+The following attributes are returned in a paged query response
+
+Parameter | Description
+--------- |  -----------
+count     | The total number of entries that the query would return
+first     | The ID of the first item in the page
+last      | The ID of the last item in the page
