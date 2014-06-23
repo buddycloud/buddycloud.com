@@ -4,13 +4,17 @@ You can request paginated data back from the API. This is useful when building m
     
 ## Query Parameters
 
-The following query parameters are avaliable
+The following query parameters are available
 
 Parameter | Description
 --------- |  -----------
 max       | The maximum number of returned entries
 before    | Get posts before this timestamp
-first     | ??? is this a date and what format???
+first     | Return only entries older than the entry with the specified ID
 last      | ??? is this a date and what format???
 after     | Return only entries older than the entry with the specified ID.
 index     | The element's (for example, a post) position in the result set
+
+## Response Parameters
+
+The following parameters are returned in a paged query response
