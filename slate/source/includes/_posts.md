@@ -19,7 +19,7 @@ Field       | Description | Set by | Example
 `author`    | BuddycloudID| server | `juliet@capulet.lit`
 `content`   | [usually] Activity stream content | user   | `O Romeo, Romeo! wherefore art thou Romeo?` 
 `id`        | a unique-per-Buddycloud-site ID | server | `17163726-ea90-453e-ad25-455336a83fd4`
-`media`     | a list of media objects the post might refer to | user | `null`, `[{"id": "romeo-photo-id", "channel": "alice@capulet.lit"}]`
+`media`     | a list of media objects the post might refer to | user | `[{"id": "romeo-photo-id", "channel": "alice@capulet.lit"}]`
 `replyTo`   | parent post `id` | user |`9b7724d0-7ef5-4331-8974-81754abb7ba0`
 `published` | when the post was created | server | `2012-11-02T03:41:55.484Z`
 `updated`   | the last time there was a reply in this thread or when the post was created | server | `2012-11-02T03:41:55.484Z`
