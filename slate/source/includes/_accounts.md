@@ -1,16 +1,20 @@
 #Accounts
 
-Create and destroy user accounts and permit the user to manage and reset their password.
+Your app will need to authenticate users. Some methods used are
 
-<aside class="notice">A user account enables a user to connect to their messaging service. They will still need to create their personal channel</aside>
+* the user creates a `username` and `password`
+* using the phone's [telehone number](http://en.wikipedia.org/wiki/MSISDN) as a `username`
+* no user interaction / your application backend providing a `username` and `password`
+
+<aside class="notice">The account enables a user to connect. They will still need to create their personal channel</aside>
 
 ### Query Parameters
 
 Argument   | Required | Notes
 ---------- | -------- |------------
-`username`   | true     | Must contain a domain element that matches the virtual host.
-`password`   | true     | The API is agnostic to password strength requirements.
-`email`      | false    | An Email address to receive push notifications and password resets.
+`username` | true     | Must contain a domain element that matches the virtual host.
+`password` | true     | The API is agnostic to password strength requirements.
+`email`    | false    | An Email address to receive push notifications and password resets.
 
 ##Create User
 
@@ -36,7 +40,7 @@ socket.send(
 )
 ```
 
-This will create a new user and set their password. 
+This will create a new account for `username` and set their `password`. You can optionally pass in an `email` which can be used for `password` resets.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/account`
@@ -53,7 +57,7 @@ curl https://demo.buddycloud.org/api/account \
 ???
 ```
 
-This removes a user account.
+Removes a user account. 
 
 <aside class="warning">Deleting a user will delete their account. It will not delete their channels. To completely remove the user, an application should first delete their channels, then the user account.</aside>
 

@@ -42,7 +42,7 @@ socket.on('xmpp.chat.receipt', function(data) {
 
 This sends a message to another user. Messages will be stored for the user if they are not online. 
 
-##Retrieve Messages
+##Receive Messages
 
 ```javascript```
 socket.on('xmpp.chat.message', function(data) {
@@ -71,4 +71,8 @@ socket.on('xmpp.chat.message', function(data) {
 ```
 
 To begin receiving messages your application should enable [realtime event](#realtime-events) sending. Messages will then arrive as they are sent without needing to poll.
+
+##Retrieve Message History
+
+???
 
