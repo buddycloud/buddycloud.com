@@ -21,8 +21,7 @@ Variable | Description
 ---------|------------
 `channelID`| (the JID-like part) we call it the `channelID` (not `channel-name`)
 `mediaID` | the id of a media object
-`buddycloudID`| user's log in / their jid
-
+`buddycloudID`| user's log in / their jid (we nevr mention `jid`)
 
 ##Examples
 
