@@ -16,6 +16,7 @@ socket.send('xmpp.buddycloud.presence',
 ```
 
 Your app can receive realtime upates for all Buddycloud events. These events include:
+
 * new posts from followed channels
 * new posts from all public channels via the firehose
 * new follow requests
@@ -25,7 +26,6 @@ When your users are not online, these events are spooled up in rhe user's inbox.
 
 To begin receiving messages since the user was last online, and enable streaming of subsequent events, you should tell the server that the client is now online.
 
-@@@Lloyd - how are invites spooled up? 
-@@@Lloyd - how are follow requests spooled up?
+??? Add bit about using MAM to query for subscription events since you were last online???
 
 <aside>Buddycloud uses the ???Justin: GRIT specification??? from and [Fanout's](https://fanout.io) realtime content delivery network for scaling realtime event pushes. The [Fanout.io Documentation](https://fanout.io/docs/) has details on getting this setup.</aside>

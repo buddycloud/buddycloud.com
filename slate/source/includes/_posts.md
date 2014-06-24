@@ -225,8 +225,8 @@ lloyd??? I have no idea how to access this
 ???
 ```
 
-The firehose node `???what is the node???` contains a feed of all public channel posts from the local Buddycloud server. 
+The `/firehose` contains a feed of all channel nodes that you are subscribed to that are cached locally.
 
 The firehose node can also be queried for historical posts using [pagination](#pagination).
 
-The firehose will only show posts from public channels.
+The firehose will only show posts from public channels. If you are logged in you can also retrieve posts that you subscribe to from private channels.

@@ -66,7 +66,7 @@ Users can create any number of topic channels. An error is returned if there is 
 
 Removes a channel from the Buddycloud Server.
 
-<aside class="notice">???Lloyd - could you write about what this does to the subscription list of the channels followers???</aside>
+<aside class="notice">???Add a bit about how events are sent out to subscribers on the local and remote servers???</aside>
 
 
 ### HTTP Request
