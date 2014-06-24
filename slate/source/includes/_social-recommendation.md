@@ -29,7 +29,7 @@ Social Graph | Calculating
 -------------|--------------
 `email`      | `sha256(email:<email-address>)`
 `phone`      | `sha256(phone:<last 6 digits with spaces removed>)`
-`Twitter`    | `sha256(twitter:<handle without the starting @>)`
+`Twitter`    | `sha256(twitter:<Twitter username without the '@'>)`
 `Facebook`   | `sha256(facebook:<numeric-id>)`  ([retrieving the Facebook numeric-id](https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.0))
 
 The `POST` requst should prefix the hash with `mine` and `others` to identify the hash source. Multiple `mine` hashes can be uploaded at the same time.

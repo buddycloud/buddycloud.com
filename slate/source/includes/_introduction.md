@@ -1,11 +1,17 @@
 #Introduction 
 
-In general, 
+The listed API calls enable you to build mobile and web applications that include a rich messaging and social features using the Buddycloud stack.
 
-* The REST API is optimised for mobile app development.
-* The Javascript calls are better for realtime web application programming.
+The API calls are tailored to the different constraints of web and mobile application development. In general, 
 
-We recommend you start testing against the buddycloud API running at `demo.buddycloud.org/api`. You can then run your own Buddycloud stack, using the [hosting](https://hosting.buddycloud.com) service or [self-install](/install) your own Buddycloud stack.
+* the *REST API* is optimised for mobile app development,
+* the *Javascript* calls are better for realtime web application programming.
+
+The API can be used against:
+
+* the demo API endpoint running at `https://demo.buddycloud.org/api` (recommended)
+* the [hosting](https://hosting.buddycloud.com) service
+* or a [self-install](/install) of the Buddycloud stack
 
 ##Encoding
 The Buddycloud API uses UTF-8 encoding.

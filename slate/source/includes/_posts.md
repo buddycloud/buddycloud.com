@@ -197,7 +197,7 @@ The `sync` query is a "show me [???up to???] 10 posts per channel newer than [da
 
 Paramenter | Required | Value      | Description
 -----------|----------|------------|------------
-`since`      | `true`     | ISO 8601 timestamp ??? | of the most recent posts in the client's cache 
+`since`      | `true`     | [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp??? | Useful for catching up from the most recent post in the Buddycloud app's cache. 
 `max`        | `false`    | integer    | the maximum number of posts to be returned per channel
 `summary`    | `false`    | `true`, `false` | returns only summary information per channel (not posts)
 
