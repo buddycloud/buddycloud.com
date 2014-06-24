@@ -178,6 +178,7 @@ Often it's useful to quickly show the 20 most recent posts. However some of thes
 
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/{channelID}/content/posts`
+
 `GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}`
 
 ###Sync Posts

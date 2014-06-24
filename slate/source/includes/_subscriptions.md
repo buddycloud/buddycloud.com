@@ -1,6 +1,7 @@
 #Subscriptions
 
 Retrieving your users' channel subscription list will return
+
 * the channels (and nodes) that they follow
 * the channels (and nodes) they have asked (subscription state is `pending`) to follow (private channels require approval of the channel owner or channel moderators).
 
@@ -56,6 +57,7 @@ Following behavior is dependent on the channel type.
 Following an _open_ channel is automatically allowed.
 
 Following a _private_ channel generates a `pending` subscription request
+
 * the user is added to the channel's `pending` subscription list
 * the channel's `owner` or a `moderator` receives a subscription request (immediately if they are online or queued up for when they come online)
 * either the channels `owner` or any of the channels `moderator`s approves [or rejects] and the result is then sent back to the user trying to follow the channel ???how???

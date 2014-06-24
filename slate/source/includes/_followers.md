@@ -1,6 +1,18 @@
 #Followers
 
-Queries who follows a channel. The data back doesn't isn't sorted in any particular order. 
+You can list and alter the subscribers of a channel. 
+
+Each channel has the following roles
+
+Role       | User sees      | Can do
+-----------|----------------|-------------
+`owner`    |`owner`         |Can add and remove `moderator`s
+`moderator`|`moderator`     |can approve new `followers` and remove posts
+`publisher`|`follower+post` |can also post into the channel
+`member`   |`follower`      |read-only view
+`pending`  |`pending subscription` | access not yet approved by the channel `moderator`
+`outcast`  | `null`         |a list of banned users. Only visible to the channel's `owner` and moderator` roles.
+
 
 <aside class="warning">
 Users follow channels. You should never see a channel with the metadata `channeltype=topic` following a channel.
