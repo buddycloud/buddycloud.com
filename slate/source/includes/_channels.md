@@ -1,6 +1,14 @@
 #Channels
 
-Channels help you group together similar content in nodes in a way that is easily understandable to your users. This content is grouped into nodes. A node is simply a stream of events.
+Channels help you group together similar content in a way that is easily understandable to your users. 
+
+This content is grouped into nodes that together represent a channel. 
+
+Each node node is contains a list of posts.
+
+![Channels and Nodes](/theme/static/img/diagrams/channel%20hierachy.png "Channels and Nodes")
+
+
 
 ### Channel Types
 

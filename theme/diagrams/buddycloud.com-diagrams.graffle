@@ -6577,7 +6577,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-05-06 12:28:33 +0000</string>
+	<string>2014-06-25 10:05:07 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -6606,7 +6606,7 @@
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595.28001499176025, 841.8900146484375}</string>
+			<string>{595, 842}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -6636,7 +6636,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>FontInfo</key>
@@ -6719,7 +6719,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -6798,7 +6798,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -6931,7 +6931,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -7212,7 +7212,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -7271,7 +7271,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -7330,7 +7330,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -7428,7 +7428,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1118.5600299835205, 782.8900146484375}}</string>
+				<string>{{0, 0}, {1118, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -7522,7 +7522,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -7600,7 +7600,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -7678,7 +7678,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -7756,7 +7756,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -7847,7 +7847,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -7938,7 +7938,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8029,7 +8029,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8107,7 +8107,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8196,7 +8196,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8285,7 +8285,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8374,7 +8374,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8465,7 +8465,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8556,7 +8556,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8647,7 +8647,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8727,7 +8727,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8807,7 +8807,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8887,7 +8887,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -8967,7 +8967,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9047,7 +9047,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9127,7 +9127,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9218,7 +9218,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9309,7 +9309,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9400,7 +9400,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9491,7 +9491,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9582,7 +9582,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9673,7 +9673,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9764,7 +9764,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9855,7 +9855,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -9946,7 +9946,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -10037,7 +10037,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -10128,7 +10128,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -10219,7 +10219,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -10310,7 +10310,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -12257,7 +12257,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -13407,7 +13407,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13496,7 +13496,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13575,7 +13575,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13654,7 +13654,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13731,7 +13731,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13808,7 +13808,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -13885,7 +13885,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -14145,7 +14145,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -14207,7 +14207,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -14269,7 +14269,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -14360,7 +14360,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -14449,7 +14449,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -14538,7 +14538,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -14833,7 +14833,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -14911,7 +14911,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -14975,7 +14975,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -15147,7 +15147,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -15199,7 +15199,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -15259,7 +15259,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -15315,7 +15315,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -15367,7 +15367,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -15448,7 +15448,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -15475,10 +15475,326 @@
 			<key>GraphicsList</key>
 			<array>
 				<dict>
+					<key>Bounds</key>
+					<string>{{300, 270}, {120, 30}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>89797</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.73960018000000005, -1.1094005}</string>
+						<string>{-0.42163690999999998, -1.2649111}</string>
+						<string>{0, -1.3333333999999999}</string>
+						<string>{0.42163718, -1.2649109000000001}</string>
+						<string>{0.73960048, -1.1094002000000001}</string>
+						<string>{1.1094005, -0.73960018000000005}</string>
+						<string>{1.2649113000000001, -0.42163669999999998}</string>
+						<string>{1.3333333999999999, 0}</string>
+						<string>{1.2649108, 0.42163773999999998}</string>
+						<string>{1.1094002000000001, 0.73960048}</string>
+						<string>{0.73960018000000005, 1.1094005}</string>
+						<string>{0.42163718, 1.2649109000000001}</string>
+						<string>{0, 1.3333333999999999}</string>
+						<string>{-0.42163718, 1.2649109000000001}</string>
+						<string>{-0.73960018000000005, 1.1094005}</string>
+						<string>{-1.1094002000000001, 0.73960048}</string>
+						<string>{-1.2649113000000001, 0.42163669999999998}</string>
+						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
+						<string>{-1.2649113000000001, -0.42163669999999998}</string>
+						<string>{-1.1094005, -0.73960018000000005}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.65098</string>
+								<key>g</key>
+								<string>0.65098</string>
+								<key>r</key>
+								<string>0.65098</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf1 x-application-\'85}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{300, 190}, {120, 30}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>89765</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.73960018000000005, -1.1094005}</string>
+						<string>{-0.42163690999999998, -1.2649111}</string>
+						<string>{0, -1.3333333999999999}</string>
+						<string>{0.42163718, -1.2649109000000001}</string>
+						<string>{0.73960048, -1.1094002000000001}</string>
+						<string>{1.1094005, -0.73960018000000005}</string>
+						<string>{1.2649113000000001, -0.42163669999999998}</string>
+						<string>{1.3333333999999999, 0}</string>
+						<string>{1.2649108, 0.42163773999999998}</string>
+						<string>{1.1094002000000001, 0.73960048}</string>
+						<string>{0.73960018000000005, 1.1094005}</string>
+						<string>{0.42163718, 1.2649109000000001}</string>
+						<string>{0, 1.3333333999999999}</string>
+						<string>{-0.42163718, 1.2649109000000001}</string>
+						<string>{-0.73960018000000005, 1.1094005}</string>
+						<string>{-1.1094002000000001, 0.73960048}</string>
+						<string>{-1.2649113000000001, 0.42163669999999998}</string>
+						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
+						<string>{-1.2649113000000001, -0.42163669999999998}</string>
+						<string>{-1.1094005, -0.73960018000000005}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.65098</string>
+								<key>g</key>
+								<string>0.65098</string>
+								<key>r</key>
+								<string>0.65098</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf1 geolocation}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{300, 150}, {120, 30}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>89764</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.73960018000000005, -1.1094005}</string>
+						<string>{-0.42163690999999998, -1.2649111}</string>
+						<string>{0, -1.3333333999999999}</string>
+						<string>{0.42163718, -1.2649109000000001}</string>
+						<string>{0.73960048, -1.1094002000000001}</string>
+						<string>{1.1094005, -0.73960018000000005}</string>
+						<string>{1.2649113000000001, -0.42163669999999998}</string>
+						<string>{1.3333333999999999, 0}</string>
+						<string>{1.2649108, 0.42163773999999998}</string>
+						<string>{1.1094002000000001, 0.73960048}</string>
+						<string>{0.73960018000000005, 1.1094005}</string>
+						<string>{0.42163718, 1.2649109000000001}</string>
+						<string>{0, 1.3333333999999999}</string>
+						<string>{-0.42163718, 1.2649109000000001}</string>
+						<string>{-0.73960018000000005, 1.1094005}</string>
+						<string>{-1.1094002000000001, 0.73960048}</string>
+						<string>{-1.2649113000000001, 0.42163669999999998}</string>
+						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
+						<string>{-1.2649113000000001, -0.42163669999999998}</string>
+						<string>{-1.1094005, -0.73960018000000005}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.65098</string>
+								<key>g</key>
+								<string>0.65098</string>
+								<key>r</key>
+								<string>0.65098</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf1 status}</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{300, 230}, {120, 30}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Font</key>
+						<string>OpenSans</string>
+						<key>Size</key>
+						<real>13</real>
+					</dict>
+					<key>ID</key>
+					<integer>89763</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.73960018000000005, -1.1094005}</string>
+						<string>{-0.42163690999999998, -1.2649111}</string>
+						<string>{0, -1.3333333999999999}</string>
+						<string>{0.42163718, -1.2649109000000001}</string>
+						<string>{0.73960048, -1.1094002000000001}</string>
+						<string>{1.1094005, -0.73960018000000005}</string>
+						<string>{1.2649113000000001, -0.42163669999999998}</string>
+						<string>{1.3333333999999999, 0}</string>
+						<string>{1.2649108, 0.42163773999999998}</string>
+						<string>{1.1094002000000001, 0.73960048}</string>
+						<string>{0.73960018000000005, 1.1094005}</string>
+						<string>{0.42163718, 1.2649109000000001}</string>
+						<string>{0, 1.3333333999999999}</string>
+						<string>{-0.42163718, 1.2649109000000001}</string>
+						<string>{-0.73960018000000005, 1.1094005}</string>
+						<string>{-1.1094002000000001, 0.73960048}</string>
+						<string>{-1.2649113000000001, 0.42163669999999998}</string>
+						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
+						<string>{-1.2649113000000001, -0.42163669999999998}</string>
+						<string>{-1.1094005, -0.73960018000000005}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.65098</string>
+								<key>g</key>
+								<string>0.65098</string>
+								<key>r</key>
+								<string>0.65098</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>CornerRadius</key>
+							<real>4</real>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Align</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 OpenSans;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\fs26 \cf1 posts}</string>
+					</dict>
+				</dict>
+				<dict>
 					<key>AllowConnections</key>
 					<string>NO</string>
 					<key>Bounds</key>
-					<string>{{20, 20}, {510, 40}}</string>
+					<string>{{20, 20}, {400, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15545,7 +15861,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -15555,334 +15871,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{380, 390}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89777</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 media post}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{380, 350}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89776</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 activity streams}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{380, 430}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89775</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 upvote / like}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{380, 310}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans-Bold</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89773</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094004, -0.73960035999999996}</string>
-						<string>{1.2649111, -0.42163690999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649109000000001, 0.42163748000000001}</string>
-						<string>{1.1094004, 0.73960035999999996}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1093999999999999, 0.73960066000000002}</string>
-						<string>{-1.2649113000000001, 0.42163640000000002}</string>
-						<string>{-1.3333333999999999, -3.1789145000000002e-07}</string>
-						<string>{-1.2649109000000001, -0.42163718}</string>
-						<string>{-1.1094006000000001, -0.73960000000000004}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.74902</string>
-								<key>g</key>
-								<string>0.682353</string>
-								<key>r</key>
-								<string>0.176471</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-							<key>Width</key>
-							<real>2</real>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 post types}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{20, 230}, {150, 30}}</string>
+					<string>{{20, 230}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -15962,7 +15951,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -15972,7 +15961,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 350}, {150, 30}}</string>
+					<string>{{20, 350}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16052,7 +16041,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16062,7 +16051,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 190}, {150, 30}}</string>
+					<string>{{20, 190}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16142,7 +16131,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16152,7 +16141,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 150}, {150, 30}}</string>
+					<string>{{20, 150}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16232,7 +16221,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16242,7 +16231,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 310}, {150, 30}}</string>
+					<string>{{20, 310}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16322,7 +16311,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16332,7 +16321,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 270}, {150, 30}}</string>
+					<string>{{20, 270}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16412,7 +16401,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16422,244 +16411,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{380, 190}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89765</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 geolocation}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{380, 150}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89764</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 status}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{380, 230}, {150, 30}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>ID</key>
-					<integer>89763</integer>
-					<key>Magnets</key>
-					<array>
-						<string>{-0.73960018000000005, -1.1094005}</string>
-						<string>{-0.42163690999999998, -1.2649111}</string>
-						<string>{0, -1.3333333999999999}</string>
-						<string>{0.42163718, -1.2649109000000001}</string>
-						<string>{0.73960048, -1.1094002000000001}</string>
-						<string>{1.1094005, -0.73960018000000005}</string>
-						<string>{1.2649113000000001, -0.42163669999999998}</string>
-						<string>{1.3333333999999999, 0}</string>
-						<string>{1.2649108, 0.42163773999999998}</string>
-						<string>{1.1094002000000001, 0.73960048}</string>
-						<string>{0.73960018000000005, 1.1094005}</string>
-						<string>{0.42163718, 1.2649109000000001}</string>
-						<string>{0, 1.3333333999999999}</string>
-						<string>{-0.42163718, 1.2649109000000001}</string>
-						<string>{-0.73960018000000005, 1.1094005}</string>
-						<string>{-1.1094002000000001, 0.73960048}</string>
-						<string>{-1.2649113000000001, 0.42163669999999998}</string>
-						<string>{-1.3333333999999999, -1.2715658000000001e-06}</string>
-						<string>{-1.2649113000000001, -0.42163669999999998}</string>
-						<string>{-1.1094005, -0.73960018000000005}</string>
-					</array>
-					<key>Shape</key>
-					<string>Rectangle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.65098</string>
-								<key>g</key>
-								<string>0.65098</string>
-								<key>r</key>
-								<string>0.65098</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-					</dict>
-					<key>Text</key>
-					<dict>
-						<key>Align</key>
-						<integer>0</integer>
-						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
-{\fonttbl\f0\fnil\fcharset0 OpenSans;}
-{\colortbl;\red255\green255\blue255;}
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-
-\f0\fs26 \cf1 posts}</string>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{200, 310}, {150, 30}}</string>
+					<string>{{160, 310}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16728,7 +16480,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16738,7 +16490,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{200, 270}, {150, 30}}</string>
+					<string>{{160, 270}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16807,7 +16559,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16817,7 +16569,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{200, 230}, {150, 30}}</string>
+					<string>{{160, 230}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16886,7 +16638,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16896,7 +16648,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{200, 190}, {150, 30}}</string>
+					<string>{{160, 190}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -16965,7 +16717,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -16975,7 +16727,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{200, 150}, {150, 30}}</string>
+					<string>{{160, 150}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -17044,7 +16796,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -17054,7 +16806,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{200, 110}, {150, 30}}</string>
+					<string>{{160, 110}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -17134,7 +16886,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -17144,7 +16896,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{380, 110}, {150, 30}}</string>
+					<string>{{300, 110}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -17224,7 +16976,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -17234,7 +16986,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{20, 110}, {150, 30}}</string>
+					<string>{{20, 110}, {120, 30}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -17314,7 +17066,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -17409,8 +17161,8 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{270, 60}</string>
-						<string>{270, 110}</string>
+						<string>{220, 50}</string>
+						<string>{220, 110}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -17476,8 +17228,8 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{450, 40}</string>
-						<string>{455, 110}</string>
+						<string>{320, 40}</string>
+						<string>{360, 110}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -17509,76 +17261,6 @@
 							<key>Width</key>
 							<real>2</real>
 						</dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>AllowConnections</key>
-					<string>NO</string>
-					<key>Class</key>
-					<string>LineGraphic</string>
-					<key>FontInfo</key>
-					<dict>
-						<key>Color</key>
-						<dict>
-							<key>w</key>
-							<string>0</string>
-						</dict>
-						<key>Font</key>
-						<string>OpenSans</string>
-						<key>Size</key>
-						<real>13</real>
-					</dict>
-					<key>Head</key>
-					<dict>
-						<key>ID</key>
-						<integer>89773</integer>
-					</dict>
-					<key>ID</key>
-					<integer>89774</integer>
-					<key>OrthogonalBarAutomatic</key>
-					<true/>
-					<key>OrthogonalBarPoint</key>
-					<string>{0, 0}</string>
-					<key>OrthogonalBarPosition</key>
-					<real>-1</real>
-					<key>Points</key>
-					<array>
-						<string>{455, 260}</string>
-						<string>{455, 310}</string>
-					</array>
-					<key>Style</key>
-					<dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>0.937255</string>
-								<key>g</key>
-								<string>0.913725</string>
-								<key>r</key>
-								<string>0.898039</string>
-							</dict>
-							<key>CornerRadius</key>
-							<real>4</real>
-							<key>HeadArrow</key>
-							<string>StickArrow</string>
-							<key>HeadScale</key>
-							<real>1.0000001192092896</real>
-							<key>Legacy</key>
-							<true/>
-							<key>LineType</key>
-							<integer>2</integer>
-							<key>TailArrow</key>
-							<string>0</string>
-							<key>Width</key>
-							<real>2</real>
-						</dict>
-					</dict>
-					<key>Tail</key>
-					<dict>
-						<key>ID</key>
-						<integer>89763</integer>
 					</dict>
 				</dict>
 			</array>
@@ -17654,7 +17336,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -17730,7 +17412,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -17868,7 +17550,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -17938,7 +17620,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -18019,7 +17701,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -18127,7 +17809,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18206,7 +17888,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18285,7 +17967,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18378,7 +18060,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -18468,7 +18150,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18558,7 +18240,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18637,7 +18319,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -18727,7 +18409,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18817,7 +18499,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18896,7 +18578,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -18975,7 +18657,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -19068,7 +18750,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19161,7 +18843,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19242,7 +18924,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1118.5600299835205, 782.8900146484375}}</string>
+				<string>{{0, 0}, {1118, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -19319,7 +19001,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19538,7 +19220,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19613,7 +19295,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19688,7 +19370,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19763,7 +19445,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19838,7 +19520,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19913,7 +19595,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -19972,7 +19654,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -20170,7 +19852,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -20607,7 +20289,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -20702,7 +20384,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -20779,7 +20461,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -20856,7 +20538,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -20933,7 +20615,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -21003,7 +20685,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -21597,7 +21279,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -21685,7 +21367,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -21838,7 +21520,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -21908,7 +21590,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -21972,7 +21654,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22042,7 +21724,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22106,7 +21788,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22170,7 +21852,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22234,7 +21916,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22298,7 +21980,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22362,7 +22044,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -22992,7 +22674,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23140,7 +22822,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -23224,7 +22906,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23290,7 +22972,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23356,7 +23038,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23439,7 +23121,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23511,7 +23193,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23583,7 +23265,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23653,7 +23335,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23719,7 +23401,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23789,7 +23471,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23855,7 +23537,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23921,7 +23603,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -23987,7 +23669,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -24053,7 +23735,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -24122,7 +23804,7 @@
 							<key>Text</key>
 							<dict>
 								<key>Text</key>
-								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -24188,7 +23870,7 @@
 								<key>Align</key>
 								<integer>0</integer>
 								<key>Text</key>
-								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24260,7 +23942,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24328,7 +24010,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24396,7 +24078,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red56\green67\blue76;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24479,7 +24161,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {559.28001499176025, 782.8900146484375}}</string>
+				<string>{{0, 0}, {559, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -24585,7 +24267,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24675,7 +24357,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24765,7 +24447,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24855,7 +24537,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -24945,7 +24627,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25035,7 +24717,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25123,7 +24805,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25211,7 +24893,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25299,7 +24981,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25387,7 +25069,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25475,7 +25157,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25565,7 +25247,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25655,7 +25337,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25745,7 +25427,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25830,7 +25512,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -25920,7 +25602,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26005,7 +25687,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26095,7 +25777,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26183,7 +25865,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26271,7 +25953,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26356,7 +26038,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26446,7 +26128,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26531,7 +26213,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26621,7 +26303,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26706,7 +26388,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26798,7 +26480,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26890,7 +26572,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -26991,7 +26673,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27074,7 +26756,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1118.5600299835205, 1565.780029296875}}</string>
+				<string>{{0, 0}, {1118, 1566}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -27146,7 +26828,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27250,7 +26932,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27354,7 +27036,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27458,7 +27140,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27562,7 +27244,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27666,7 +27348,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27770,7 +27452,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27874,7 +27556,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -27978,7 +27660,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28082,7 +27764,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28186,7 +27868,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28290,7 +27972,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28394,7 +28076,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28498,7 +28180,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28602,7 +28284,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28701,7 +28383,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28800,7 +28482,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28899,7 +28581,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -28998,7 +28680,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29097,7 +28779,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29196,7 +28878,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29295,7 +28977,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29394,7 +29076,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29493,7 +29175,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29641,7 +29323,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29739,7 +29421,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29840,7 +29522,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -29962,21 +29644,23 @@
 						hIQGTlNGb250HpSZJIQFWzM2Y10G
 						AAAAHAAAAP/+TwBwAGUAbgBTAGEA
 						bgBzAC0AQgBvAGwAZACEAWYehAFj
-						AKIBogCiAIaGlwIokoSYmQKSmZKa
-						kquShK2ZKIQFWzQwY10GAAAAHgAA
-						AP/+TwBwAGUAbgBTAGEAbgBzAC0A
-						TABpAGcAaAB0AAAAoRCiAKIBogCi
-						AIaGlwMBkoSYmQGShJaWDE5TQXR0
-						YWNobWVudIaShISEEE5TVGV4dEF0
-						dGFjaG1lbnQAlIQCY0AAhISEDU5T
-						RmlsZVdyYXBwZXIulJKEhIQNTlNN
-						dXRhYmxlRGF0YQCEhAZOU0RhdGEA
-						lJmBlEaECFsxODA2OGNdcnRmZAAA
-						AAADAAAABAAAAAIAAAAuLhMAAABf
-						X0BQcmVmZXJyZWROYW1lQF9fFwAA
-						AF9fQFVURjhQcmVmZXJyZWROYW1l
-						QF9fAQAAAC7dRQAAGgAAABoAAAAm
-						AAAAAQAAAAAAAIA6NgAAkw8AAAAA
+						AKIBogCiAIaGlwIokoSYmQKSmZKE
+						m5sAAISdmQySnpKgkqGSopKjkqSS
+						pZKmkqeSqJKpkqqGAIaSq5KErZko
+						hAVbNDBjXQYAAAAeAAAA//5PAHAA
+						ZQBuAFMAYQBuAHMALQBMAGkAZwBo
+						AHQAAAChEKIAogGiAKIAhoaXAwGS
+						hJiZAZKElpYMTlNBdHRhY2htZW50
+						hpKEhIQQTlNUZXh0QXR0YWNobWVu
+						dACUhAJjQACEhIQNTlNGaWxlV3Jh
+						cHBlci6UkoSEhA1OU011dGFibGVE
+						YXRhAISEBk5TRGF0YQCUmYGURoQI
+						WzE4MDY4Y11ydGZkAAAAAAMAAAAE
+						AAAAAgAAAC4uEwAAAF9fQFByZWZl
+						cnJlZE5hbWVAX18XAAAAX19AVVRG
+						OFByZWZlcnJlZE5hbWVAX18BAAAA
+						Lt1FAAAaAAAAGgAAACYAAAABAAAA
+						AAAAgDo2AACTDwAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -30166,673 +29850,672 @@
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-						AAAAAAAAAAAAAAAAAAAAACVQREYt
-						MS4zCiXE5fLl66fzoNDExgo0IDAg
-						b2JqCjw8IC9MZW5ndGggNSAwIFIg
-						L0ZpbHRlciAvRmxhdGVEZWNvZGUg
-						Pj4Kc3RyZWFtCngBpVJBTsMwELz7
-						FXN0Dmm9TtMm1wIHOIFkiQPiAFZQ
-						KyUNTZr/s+vEUFArBFXkjOUdzXrG
-						u8cD9siRr9DAloK1oBXMR9jE+iN2
-						MPxZsxBiV0FO5vdV56v3w/BSq27L
-						alkWWNkSZsYSC/gG89uGcN1yN+l3
-						QuSqJ/ieK71nAgVKSrAZSxD/FIus
-						HVIzM8ZYOA+yE8kipYJpC16OWzlH
-						LODe8ATdt0OX8IWhfZXgGe4ON06N
-						tyjNaJso2Kkhm2CcKwE3iJw/Wy/y
-						i70Tx3xk/divPefXJxIRQbcJp8+4
-						E7TQB46BK1bpbaS8jifQQ+R8RTQ9
-						FK1iRmXMiDchGy6pKaRP1q8p4ceA
-						0HKMSV73vyNChTy8BCWDtnbq3IwI
-						7dSMNO00It/tfwBvwbFHCmVuZHN0
-						cmVhbQplbmRvYmoKNSAwIG9iagoy
-						OTkKZW5kb2JqCjIgMCBvYmoKPDwg
-						L1R5cGUgL1BhZ2UgL1BhcmVudCAz
-						IDAgUiAvUmVzb3VyY2VzIDYgMCBS
-						IC9Db250ZW50cyA0IDAgUiAvTWVk
-						aWFCb3ggWzAgMCAyMDQgNTddCj4+
-						CmVuZG9iago2IDAgb2JqCjw8IC9Q
-						cm9jU2V0IFsgL1BERiAvVGV4dCAv
-						SW1hZ2VCIC9JbWFnZUMgL0ltYWdl
-						SSBdIC9Db2xvclNwYWNlIDw8IC9D
-						czEgOSAwIFIKPj4gL0ZvbnQgPDwg
-						L1RUMSAxMCAwIFIgPj4gL1hPYmpl
-						Y3QgPDwgL0ltMSA3IDAgUiA+PiA+
-						PgplbmRvYmoKNyAwIG9iago8PCAv
-						TGVuZ3RoIDggMCBSIC9UeXBlIC9Y
-						T2JqZWN0IC9TdWJ0eXBlIC9JbWFn
-						ZSAvV2lkdGggMjIgL0hlaWdodCAy
-						NCAvSW50ZXJwb2xhdGUKdHJ1ZSAv
-						Q29sb3JTcGFjZSAxMSAwIFIgL0lu
-						dGVudCAvUGVyY2VwdHVhbCAvU01h
-						c2sgMTIgMCBSIC9CaXRzUGVyQ29t
-						cG9uZW50CjggL0ZpbHRlciAvRmxh
-						dGVEZWNvZGUgPj4Kc3RyZWFtCngB
-						7ZBLCsAgDES9h+T+1+wiCA8eKcRA
-						Vy0iwzTziRE7/nNeYF19fMArg2WH
-						ZNKNf409Q4bY2iolVd2b/l2te5Ih
-						ZgqxZ8gQU0XsmWS6tz3nDunphsyq
-						ZqgitvbdYb7F3KFq6F28KRlia6uU
-						bn+nzB2qtt/wD7zHY50KZW5kc3Ry
-						ZWFtCmVuZG9iago4IDAgb2JqCjEy
-						MQplbmRvYmoKMTIgMCBvYmoKPDwg
-						L0xlbmd0aCAxMyAwIFIgL1R5cGUg
-						L1hPYmplY3QgL1N1YnR5cGUgL0lt
-						YWdlIC9XaWR0aCAyMiAvSGVpZ2h0
-						IDI0IC9Db2xvclNwYWNlCi9EZXZp
-						Y2VHcmF5IC9JbnRlcnBvbGF0ZSB0
-						cnVlIC9CaXRzUGVyQ29tcG9uZW50
-						IDggL0ZpbHRlciAvRmxhdGVEZWNv
-						ZGUgPj4Kc3RyZWFtCngB+/+fVoAB
-						A4BswhBkgIiCZBAugbBBJDZRdDNG
-						zYWECO5wQIQsIRYAGfoq5AplbmRz
-						dHJlYW0KZW5kb2JqCjEzIDAgb2Jq
-						CjQ1CmVuZG9iagoxNCAwIG9iago8
-						PCAvTGVuZ3RoIDE1IDAgUiAvTiAx
-						IC9BbHRlcm5hdGUgL0RldmljZUdy
-						YXkgL0ZpbHRlciAvRmxhdGVEZWNv
-						ZGUgPj4Kc3RyZWFtCngBhVVdaBxV
-						FD67Mzt5iUMRbUsrdfCvIaRhUq0m
-						FrXbTbq7Tdium402VarT2dnudCcz
-						453ZtAl9CoJvWhDEV0V8Ei2I0GrE
-						5MW+tFSoiRSLICi0WEEQ+iAKfmd2
-						sjsbkcxwZ7459zvnnvPdexiivmXD
-						9520RjTnhiJfyc4enz2h9X1HaVKp
-						n3AZZuBny+Upxq7nWvzuve6tU4ot
-						N/ZxrN65Lb8yNSswwVrB8GqBOUeU
-						0omUYdMXIVHf67CPng19xu8DP9Cs
-						VnLAnwCrsS8gPZi3XEvYppYXxoJW
-						Fl7ddpK5bjXPMba85pwW58rXHoz+
-						oDk9ifcgcj5XM8YZPwX8oWlMTAMP
-						Aa/74eFKm5NOt5oz2bY9PVQXR2Zi
-						+/FGq8B4mCi9tNiovgy8Dfiie6p0
-						LOavmEHuBPBjsN9tWEXeD41I2maH
-						xSowfCVdeBXmgyOdrFnjE8DPAi81
-						vUnOYSfwcjA/zXbmf7/YyJWAsZac
-						PmMcLQNvB77fcvLMRxx5wA/LHHMU
-						eMp1Srwu6pXftIKoxgHgT8NGtRDz
-						10NRZd9HYP+rbh8pAkOHzEMNUWA7
-						8skUfCc6T08DL4lWhWt/AviSISby
-						wIiZ+clyZ1hDYEWhl1IGWeTRKTxN
-						cukf1B6QTfMR8klgro5vh/JguBgC
-						wwHrNNCvFGKerewfUBM29mVGgGcZ
-						Q8T+GtXw1fazMcuII96OfMxN3Bzi
-						uLRIBnjtle/EPE/eIevykxgH5Sn5
-						OXlUHiNNfkE+JD8vj8M6Jh+MfAR8
-						FxC1WwGveAdR25HeoFZPPqvIOYSP
-						Qz+D40UZBsjgb0RoRsyEGhd2tQZ8
-						/723l8Rrtnn9nT8S6nBtzbjOrj4J
-						XzqWVDvSv7ZZ7cwvmduZNTxvZm4l
-						qtEyP2Zu4b7ZU5cXr2ajPhuZbyjL
-						2tvYVa+HvbEDm1lZVO5EezKHall9
-						3lFWn5VsAYd41mF1aV8y4pXzyzs7
-						vAXS1uRLr97ov3L+fzVhfVhnixKq
-						1N0Lu3z/5MespvVW6V6Jlob0i/pd
-						/SP9B/13fU3/AOg36V3pC+lr6bL0
-						pXSVNGlFWpW+kb6VPpO+wtfnsK5K
-						l5Fb8tS1T1nn9CDT9jk04xPG9fAp
-						DogVYDbXz9YNpc5grpspn+3NK7DO
-						3RPdWUs9rO5WH1XH1YfVx9UpdVA9
-						oB5Sd6j7MUbUgroXM7s7KnFPsdY2
-						3mW8N/rOptlIq/aOcFYNqCeQpYG7
-						mxf3qN2Jhjip+6AzR+tyeI12d9uI
-						osXd66FjDZpBxTadjbQL8O3gG7v5
-						H2/uSWSXegUny5b3yCNyMe7BrHwA
-						XTjZ04+j3KXKhDKuZElTBpUxZUQ5
-						yjiqlTtUU/ZidgzPiWT2iJ7g9CiC
-						v09oncN/iyjn+QvCPt0Itf26/oyW
-						xW/S0oquOTykGY6jRVOBJqzAEvNW
-						bZj4H8x+RH++GP1bU9uvmi0x37ZR
-						KnWN6F/6uod7CmVuZHN0cmVhbQpl
-						bmRvYmoKMTUgMCBvYmoKMTA4OApl
-						bmRvYmoKOSAwIG9iagpbIC9JQ0NC
-						YXNlZCAxNCAwIFIgXQplbmRvYmoK
-						MTYgMCBvYmoKPDwgL0xlbmd0aCAx
-						NyAwIFIgL04gMyAvQWx0ZXJuYXRl
-						IC9EZXZpY2VSR0IgL0ZpbHRlciAv
-						RmxhdGVEZWNvZGUgPj4Kc3RyZWFt
-						CngBrVl3PJXv+7+fMx3Osffee++R
-						vVf2THEc69jZRAopVLRUKFlJiWiQ
-						pMhIiUgSDZSKVBqKrN99ND6f1/f1
-						/f73O6/Xcz/v57qv+3qu9dzjOgDw
-						EcnR0eEoZgAiIuNinC1NhD29vIXx
-						LwAG8ABWoAv0yJTYaGNHRzvwP3/f
-						RwBC63ykQJP1P9n+ewdLQGAsBQDE
-						EXb7B8RSIiC+AgCGkRIdEwcAthPS
-						xRLjomn4HcTsMVBBiFdoOHgD46D2
-						gN3/Fxbf4HF1NgUApw0AHZFMjgkG
-						gNEM0oUTKMFQDmMA7GONDKBGwmFJ
-						EBtQQsiQxtsMeeQjIqJo+DXE0v7/
-						khP8L0wm+/+VSSYH/8W/bIEj4YvN
-						qLHR4eTkjYf/zyYiPB76a+MnAlti
-						SIyVM7yzQ7+VhEXZ0jAR4kuR/psd
-						IGaFuJUKLfqN+0PirdwgpvFPUGJN
-						oS8BJ8TfAshmthDzA4Cijw9zM/6N
-						JckxEG3wo0yocdauv7F7TJTzb/mo
-						0MjwzbT8gHJQqSGB1n/w4cBYcxdI
-						hzqgQoOoFtYQw1ihzqWEuHpADPVE
-						NSdQ3TdDzAhxZ2yYC00HmpyhlBBT
-						Gn2DJybemaazOKS/C4qxoNkIedDE
-						iFiINuSjRSnkjXdxQ7p6XIirFaTD
-						sWi7gEAzc4jhe9GegZFuv/VBh0TH
-						mdDk0PhTosM38hvqiT4cGG5Jo4tC
-						XBmb4PJnbHdcjCuNDv2GHgkl29Dy
-						FeqMno2Oc6T5hKbPIrADpsAMCIN4
-						ePmDKBAKqP1zTXPw6VePBSCDGBAM
-						AoHCb8qfER4bPZGwdQEp4AOIhDyx
-						f8eZbPQGggRIX/1L/TVWAQRt9CZs
-						jAgDb+AbIjC8GAOMHsYOtkbwUsVo
-						Y3T+jBNm+qMnzhxnhrPCWeBk/lAA
-						BWodDq8YQP0vNFvYFwiti4Ft5B8b
-						/pGHfYMdxE5hH2MnsE+BO3i9IeW3
-						pb7UjJg/GvyVbA8moLRfXgmEHosE
-						M394MJJQaw2MCUYf6g91x3BieIEC
-						Rh1aYowxhLZpQOof79G0jv+r2z++
-						/OP3P3w0rYX/ZeNvOqMso8ZvLfz/
-						WAUj+ccT/ynlnx4qCIBctv/Jid6H
-						vozuQbeje9Gt6CYgjL6Fbkb3oW/S
-						8G+dLTa8E/z3bc4bHg2DNlD/8Chf
-						UJ5RXvnz9NdWMqTQNKDFAOZ/XGBS
-						HMw/YBoVnRxDDQ6JEzaGs3CgsHUk
-						RVFeWFVZRR0A2pxO4wHgq/PGXI1w
-						DvxDo44AoNkA54DRf2jBMKdbpgAg
-						2P1Dk6iFKR8JwF0CJT4m4Zc8DO2G
-						BfSACX4ZPEAQiAFpaJMq0AR6wAiY
-						AxvgAFyBF9gGvR4CIqDWiSAV7AbZ
-						IA8UgGOgCJSCCnAOXASNoAm0gnbQ
-						De6Dh+AxGIe5MQ3eg3nwHSwjCIJH
-						SAgbwoMIIRKIHKKKaCMGiDlihzgj
-						XogfEoxEIvFIKpKJ5CGHkSKkDKlB
-						GpDrSDvSiwwiT5FJZAb5gvxEoVFE
-						FDtKACWJUkJpo4xRtihX1FZUMGo7
-						KgWVhTqIOoEqR9WirqHaUfdRj1ET
-						qPeoBTRAM6A50SJoBbQ22hTtgPZG
-						B6Fj0DvRuehCdDm6Dt0CY/0IPYGe
-						Qy9hcBg2jDBGAeanFcYNQ8Fsx+zE
-						7McUYc5hrmE6MY8wk5h5zBqWhOXH
-						ymF1sdZYT2wwNhGbjS3EnsVexXbB
-						b2ca+x2Hw3HipHBa8Nv0woXiduD2
-						407h6nG3cYO4V7gFPB7Pg5fD6+Md
-						8GR8HD4bfxJfi7+FH8JP4xfpGOiE
-						6FTpLOi86SLpMugK6c7TtdEN0b2l
-						WyYwEyQIugQHQgAhmZBPqCS0EAYI
-						04RlehZ6KXp9elf6UPrd9Cfo6+i7
-						6J/Rf2VgYBBl0GFwYqAy7GI4wXCJ
-						4S7DJMMSkZUoSzQl+hDjiQeJ1cTb
-						xKfEryQSSZJkRPImxZEOkmpId0gv
-						SIuMbIyKjNaMAYzpjMWM1xiHGD8y
-						EZgkmIyZtjGlMBUyXWYaYJpjJjBL
-						Mpsyk5l3MhczX2d+wrzAwsaiwuLA
-						EsGyn+U8Sy/LO1Y8qySrOWsAaxZr
-						Besd1ldsaDYxNlM2ClsmWyVbF9s0
-						O45dit2aPZQ9j/0iez/7PAcrhzqH
-						O0cSRzHHTY4JTjSnJKc1ZzhnPmcj
-						5wjnTy4BLmOuQK4crjquIa4f3Hzc
-						RtyB3Lnc9dyPuX/yCPOY84TxHOJp
-						4nnOi+GV5XXiTeQ9zdvFO8fHzqfH
-						R+HL5WvkG+NH8cvyO/Pv4K/g7+Nf
-						EBAUsBSIFjgpcEdgTpBT0EgwVPCo
-						YJvgjBCbkIEQVeio0C2hWWEOYWPh
-						cOETwp3C8yL8IlYi8SJlIv0iy6JS
-						om6iGaL1os/F6MW0xYLEjop1iM2L
-						C4nbi6eKXxAfkyBIaEuESByX6JH4
-						ISkl6SG5V7JJ8p0Ut5S1VIrUBaln
-						0iRpQ+nt0uXSwzI4GW2ZMJlTMg9l
-						UbIasiGyxbIDcig5TTmq3Cm5QXms
-						vI58pHy5/BMFooKxQoLCBYVJRU5F
-						O8UMxSbFj0riSt5Kh5R6lNaUNZTD
-						lSuVx1VYVWxUMlRaVL6oyqpSVItV
-						h9VIahZq6WrNap/V5dQD1U+rj2qw
-						adhr7NXo0FjV1NKM0azTnNES1/LT
-						KtF6os2u7ai9X/uuDlbHRCddp1Vn
-						SVdTN063UfeTnoJemN55vXebpDYF
-						bqrc9EpfVJ+sX6Y/YSBs4GdwxmDC
-						UMSQbFhuOGUkZhRgdNborbGMcahx
-						rfFHE2WTGJOrJj9MdU3TTG+boc0s
-						zXLN+s1Zzd3Mi8xfWIhaBFtcsJi3
-						1LDcYXnbCmtla3XI6om1gDXFusZ6
-						3kbLJs2m05Zo62JbZDtlJ2sXY9di
-						j7K3sT9i/2yzxObIzU0OwMHa4YjD
-						c0cpx+2ON5xwTo5OxU5vnFWcU517
-						XNhcfF3Ou3x3NXHNdx13k3aLd+tw
-						Z3L3ca9x/+Fh5nHYY8JTyTPN874X
-						rxfVq9kb7+3ufdZ7YYv5lmNbpn00
-						fLJ9RrZKbU3a2ruNd1v4tpu+TL5k
-						38t+WD8Pv/N+K2QHcjl5wd/av8R/
-						nmJKOU55H2AUcDRgJlA/8HDg2yD9
-						oMNB74L1g48Ez4QYhhSGzFFNqUXU
-						z6FWoaWhP8IcwqrD1sM9wusj6CL8
-						Iq5HskaGRXZGCUYlRQ1Gy0VnR09s
-						191+bPt8jG3M2Vgkdmtscxw73Dz3
-						xUvH74mfTDBIKE5YTHRPvJzEkhSZ
-						1Jcsm5yT/DbFIqVqB2YHZUdHqkjq
-						7tTJNOO0sp3ITv+dHeli6Vnp07ss
-						d53bTb87bPeDDOWMwxnfMj0yW7IE
-						snZlvdpjuedCNmN2TPaTvXp7S/dh
-						9lH39eeo5ZzMWcsNyL2Xp5xXmLey
-						n7L/3gGVAycOrB8MOtifr5l/ugBX
-						EFkwcsjw0LnDLIdTDr86Yn/k2lHh
-						o7lHvx3zPdZbqF5Yepz+ePzxiRN2
-						J5pPip8sOLlSFFL0uNikuL6EvySn
-						5MepgFNDp41O15UKlOaV/jxDPTNa
-						Zll2rVyyvLACV5FQ8abSvbKnSruq
-						5izv2byzq9WR1RPnnM911mjV1Jzn
-						P59/AXUh/sJMrU/tw4tmF5vrFOrK
-						6jnr8y6BS/GXZhv8GkYabRs7Lmtf
-						rrsicaXkKtvV3GvIteRr800hTRPN
-						Xs2D122ud7TotVy9oXijulWktfgm
-						x838Nvq2rLb1Wym3Fm5H355rD25/
-						1eHbMX7H885wp1Nnf5dt191ui+47
-						PcY9t+7q323t1e29fk/7XtN9zfvX
-						+jT6rj7QeHC1X7P/2oDWQPNDnYct
-						g5sG24YMh9ofmT3qHrYevv948+PB
-						EbeR0Sc+TyZGA0bfPQ1/+nksYWx5
-						fNcz7LPc58zPC1/wvyh/KfOyfkJz
-						4uak2WTflMvU+CvKq/evY1+vTGe9
-						Ib0pfCv0tuad6rvWGYuZh7NbZqff
-						R79fnsv+wPKh5KP0xyufjD71zXvO
-						T3+O+bz+Zf9Xnq/V39S/dSw4Lrz4
-						HvF9+UfuIs/iuSXtpZ6fHj/fLieu
-						4FdOrMqstqzZrj1bj1hfjybHkDf2
-						AmjYooKCAPhSDQDJCwC2hwDQM/46
-						c21wwC0yAnkgdkcUkfeoTnQsRgIz
-						iy3D+eJF8ON05YRQelX6FYYBYikp
-						jnEzkwwzjnmKpYv1LFsOexSHO6c5
-						lwd3BE827xm+Fv4hgTkhgrC4iLGo
-						n1iaeLHEdckxqZ8yfLIGcv7ymQo1
-						igNKX1W4VQ3VKOp5Gg2ag1ofdUi6
-						snoWm/z1dxoUGV4x6jd+a7Jmxm2u
-						aGFm6WEVZp1qc9D2tF2d/c3NfQ5j
-						jm+cvrkgrkQ3Lnd+DyFPMS8pb/kt
-						qj66W0232fq6+VHIUf47KQcCSgMb
-						grqCx0LmQ+nChMN1Ilwio6Jyo6u2
-						t8e8iF2O507QSHRN2p5ckFK/YyD1
-						007mdLVdbruTMkoy27PeZBP3qu3z
-						zsnIrcl7tH/loGS+Q0HyocrDD458
-						OsZUqHLc7UTSyZKi9uK3p0inNUp9
-						zmSWnS8frPhRxX/WuDrw3N6ac+d7
-						LryuXa/jrle+ZNng0xhzOefK6auX
-						rrU23Wnuvn6n5caNi61FN3e3UW4Z
-						3ea6Pdt+vWP3HctOQue9ruxu4+7l
-						nit3w3pFe8fuHbpv10fsG3xQ2O89
-						IDgw9bByMGhIemjm0fnh0Meyj9+P
-						XHgSNio/+uFp/dj2cfXxxWetz3e/
-						sHhJejk8UTS5bUp0aubV1dd7p33f
-						6L8Ve8c8g51Fvaef4/ug9XHLp73z
-						LZ+/fVX/lrTQ9gO/6LRU8vPNiuJq
-						/FrL+vpG/MWQSygvNAu6EbMFS4+9
-						iPOEu5p6OjKBm3CfPovBhIgl3iHt
-						YbRmYmQaZS5nCWfVYsOzPWfv4+jm
-						vM11k7uZ5zLvJb5a/mqBSsEKoQrh
-						cpEy0XKxSvFqiRrJi1IN0ldkWmTb
-						5brk7ykMKY4qPVd+ofJc9ZnamPoT
-						jceaj7QGtO/pdOm2693YdEX/okGl
-						YZFRvnGmSaJpqNlW880WRpYqVsLW
-						zDbAZt72mV2Xfe3mIw47HP2drJ2V
-						XXhcEdcZtyH3Gx5VnvleKd6BWxx8
-						Nm2V2sbmi/h+9Bsn9/o3UaoCjgRm
-						Be0OzgjJpGaGZoRlhmdEZEZmRmVE
-						Z2zPiMmIzYjbHb8rYVdielJ68s6U
-						tB2pqalpO3ampCfvSoLZkZ9ZldW6
-						Zzj7/T50Dm+uap7Vfr8DiQf351cW
-						tBx6ePjNkZVjLIVSx/VPOJ0MKkot
-						PlRSearl9EDpqzM/yokVIpWaVTZn
-						t1XHwAwpPl93ob12+OLbup+XiA2C
-						jUqXja84X6Vci23Kaj56vQrOYJ2t
-						j26+apu99fD2xfbcjuA7Zp3CnStd
-						o92Xew7epfaa3hO49/3+QF/1g/R+
-						9wGFh5iHY4MNQ9mPfIZVHmMfj480
-						PMkdpT61HVMdF3rG9pzpBdtLkQm9
-						Sb+pI6+Gp6Xf7H8HZnLei849+Jgz
-						7/RF+hvDwuKPT0uzyx9Wv27EXw50
-						IrbIKGoL6gM6DL2IycByY8txGrj7
-						cEe7SldMMCBM0O9lUGV4ScwjbSLN
-						MZ5icmZmYO5iOcjqy6bCjmEf5qji
-						TOKy5xbiXuC5x1vGl8TvICAtiAiO
-						CV0WzhcJFbUQExNbg/uoZslCqThp
-						RxlpmRXZQbkq+WQFe0URxc9K7cqH
-						VPxUFVWX1Drg/OCiya05rlWqTdYR
-						1ZnULdXbtolv0xP9IwYOhiTDIaMi
-						Y4qJvMlX0xtmWeZ2FuwW45YVcL5Q
-						tV6yuW27187BnhPuJ8odqI6Kjt+c
-						WpzTXcxd6V373Q65u3pweYx5nvby
-						95b2/rjlms+urTbbOLe9hvuALLKH
-						vzwFRRkLuBJYEBQRbBsiR2Wgfgh9
-						GHYlvDAiMdIzSjeaL3p1+8uY9tiK
-						uOx4aoJ9okoSZ9Jy8lTKvR2NqcVp
-						e3ZGp/vsst6tmSGWyZqFZH3e8yZ7
-						eu/Mvo85X3K/5/3cv3YQlY8rIBwi
-						HWY+wn6U6xhvoeBxkRPiJ6WKZIsV
-						SlROqZ/WKtU7Y1BmXG5bQancXVV6
-						tq167Nziec4L6rVOFyPqcuurL3U2
-						TDSuXOG6qnbNoSm0ec/1spbWGyOt
-						n9uItyRvG7Vv7dhx53hnXVd39/Oe
-						b71M95Tuu/XtedA2gHvoO9jzyHZ4
-						aqRkNHEs5dnZl4TJ2tfH3w6+j/+U
-						/81oqZYW/1+1N9qagNMEoMoQLghw
-						3XApB6CiFQAJbbh+VAHgSALAVQeg
-						XFMA8qIZIF4n/64fCKxP0sGaDg+Q
-						AGqw4uIOwkAGPEteBYPgE8KEqCCu
-						SAo8A95DFlB8KBNUKOoIqg01i+ZG
-						W6IT0TXoZxhmjAUmDZ7J5uE5LASe
-						vaZxErgQ3AXcJ7wGPg3fTcdM50NX
-						Q/eDYEUoIXyht6Yvp19l8GZoJnIT
-						U4gvSGakWkZOxt2Mn5h8mYaYLZhv
-						smiyNLAqstaxKbFdZtdh7+Cw5Rjl
-						DOZc5CrgluXu4vHnRWCWmvBN8+cK
-						KAuMCKYLSQs9Et4pIifyVHSfmI7Y
-						rPgpCSdJvGSbVIK0svScTI1ssJyU
-						3Kz8RYVYRR0llFKf8gmVAFU1NbTa
-						sPpZjRRNRy1JrTXtJzqNugf1wjbZ
-						6MsaEA0+Gj4yajY+Y5JjGmfmZ25v
-						YWppYKVjrW6jYqtsp2yvslnVQdNR
-						z8nY2drFxdXXLcI9zaPAs8qr1fvJ
-						loWtnNt0fSl+B8lt/l8CpAMpQWeC
-						X1IFQylhFyNA5JaoW9sVYqriZONv
-						JHol41LupBbsDN/lk7ElKzg7a19t
-						7vMD3Pnuh4qPDB1bPCFc5FCSfbqz
-						jK7Cqaq8+sd5l9rGeo6G1Muvrjk0
-						37ghc/PkbfqO1M6Fnp29633b+4cG
-						xR6RH+c/qX16ffzK8/KXuyZdXwm+
-						fvmm6J3DzPr72g+enzDzdV88v2EW
-						Gn6Ql9h/9q5krhlvzB8IrDkwwIqD
-						MFACxjD6EWAvrCK0gykEC2sDzrAO
-						UIM8QeFQKvBsn4dqQc2hhdCu6Dx0
-						J3oNo4tJxDRhFrF62HRsF46Ec8eV
-						w6jr4w/gJ+jU6XLoJgl6hJOEJfot
-						9LcZpBjyGX4SQ4ijJBtSG6MmYz2T
-						PNMFZgXmRhZdlk5WJ9ZJtlh2OvYy
-						Dj0Y7SR4wrzLncAjwTPKe4DPnG+N
-						/4ZAiqCe4JpQp/B+EXdRMdHPYnfE
-						CyXCJE2lBKR+Sj+VuSF7Wi5R3kFB
-						VhGv+E6pV7lO5ahqmhpV3UPDUlNH
-						S1FbUkdYl1+PdxOfvpCBhKGCkZax
-						mYmraZBZinm+RYHlUasT1qdtqm0b
-						7Nrs+zY/d/jshHXmd9FydXKLdi/w
-						aPQc8VrdIuXjtDV9W73vJJnD35ay
-						J+BW4HKwXkgq9VYYJtwu4ljkZLTy
-						9t0xj+Kk4Yo0nqSVXJiymOqTdidd
-						fteJDFxmYtb7bPLepzmuuYP7HQ8M
-						53sVTBymHtUvlDzBVoQuXjr1pfRT
-						2ZeKpbOYcxznZWvN6gIu7W28dOVl
-						E8t1qxtZN7tuM3S4dp7uftnLed/8
-						QchA2mDWo/THIU9Mn5LGep/Fv2B/
-						WT4pPlX8Gj8d9KbtHWnGZfbY+/4P
-						mI+an/zn93++9GX469cF1u8KPywX
-						yUs7fh5erlm5tTqyNrsRfxT8+lmB
-						CPz2bWAFLgOUw6rRHMKBGCPRSDky
-						Ams8hqh41EXUO7QkOhB9Dj2HUcOk
-						Yu5iObFB2Os4Rlwg7haeD58C95wG
-						dJUEEmEH4SM9hf4ZgyfDE+IW4hQp
-						grTCWMAkw9TNTGVhYbnJGsUmyTbJ
-						Xs4RzKnKucrVwZ3L48YrwbvI189f
-						I7BXkCrkIKwtIinKJUYUx0mgJbFS
-						9NLsMiKyanK28lSFHMWLSsPKK6qS
-						ak7qOzUuaD7VptPR0g3UO7apS3/B
-						UNLI0zjP5Lbpd3N5ixDL81YfbNRs
-						0+x6N3M7hDq2ObO7RLj2uIt7ZHhO
-						eptuqdpK2BblO0I28K8J4AzMDPoa
-						EkjtCRMJT4sYj9oUXRaDj42KG0+w
-						TmxJVkipSOVLK0xn23UkgyOzaI9o
-						du0+rZzuPPf9swd3FfAcajxifPRG
-						ocbxxpPKRZdLNE+1lpqeeVDuXTFT
-						lVJNOldxXu/CyMXYetZLlxs9Lq9d
-						Pdvk2LzacrF1Wxvrrd72jDubOr91
-						194Nv6fZhzzoHzg1SH2kNrwwUje6
-						dQwzXvJc8kXlBNdk4lTfa+5pxzeZ
-						b6ve3Zq5Pzvw/u7czQ9lH7M/ec5L
-						z3/73PAl8qvE14ffdiyIL9z87v59
-						/sfuRcLioSXepeKfrD9zl5Hl5OXp
-						FfuVq6sCq3tWZ9aM14rWvq7br5+l
-						xT82SE2VtnoAhGgCy48v1te/SgKA
-						PwzA6qH19eXy9fXVCnjYeAbA7fBf
-						/+fQmGn/E5X00FB3Z9Mu2v3fv/8D
-						zMrOFAplbmRzdHJlYW0KZW5kb2Jq
-						CjE3IDAgb2JqCjYyMTkKZW5kb2Jq
-						CjExIDAgb2JqClsgL0lDQ0Jhc2Vk
-						IDE2IDAgUiBdCmVuZG9iagozIDAg
-						b2JqCjw8IC9UeXBlIC9QYWdlcyAv
-						TWVkaWFCb3ggWzAgMCA2MTIgNzky
-						XSAvQ291bnQgMSAvS2lkcyBbIDIg
-						MCBSIF0gPj4KZW5kb2JqCjE4IDAg
-						b2JqCjw8IC9UeXBlIC9DYXRhbG9n
-						IC9QYWdlcyAzIDAgUiAvVmVyc2lv
-						biAvMS40ID4+CmVuZG9iagoxMCAw
-						IG9iago8PCAvVHlwZSAvRm9udCAv
-						U3VidHlwZSAvVHJ1ZVR5cGUgL0Jh
-						c2VGb250IC9KUlhaSVkrT3BlblNh
-						bnMtTGlnaHQgL0ZvbnREZXNjcmlw
-						dG9yCjE5IDAgUiAvRW5jb2Rpbmcg
-						L01hY1JvbWFuRW5jb2RpbmcgL0Zp
-						cnN0Q2hhciA5OCAvTGFzdENoYXIg
-						MTE3IC9XaWR0aHMgWyA1OTUKNDc1
-						IDAgNTQ5IDAgMCAwIDIyNiAwIDAg
-						MCA4ODMgNTkwIDU4NiAwIDAgMzg5
-						IDQ2NiAzMzUgNTkwIF0gPj4KZW5k
-						b2JqCjE5IDAgb2JqCjw8IC9UeXBl
-						IC9Gb250RGVzY3JpcHRvciAvRm9u
-						dE5hbWUgL0pSWFpJWStPcGVuU2Fu
-						cy1MaWdodCAvRmxhZ3MgMzIgL0Zv
-						bnRCQm94ClstNTIxIC0yNjkgMTE0
-						MCAxMDQ4XSAvSXRhbGljQW5nbGUg
-						MCAvQXNjZW50IDEwNjkgL0Rlc2Nl
-						bnQgLTI5MyAvQ2FwSGVpZ2h0Cjcx
-						NCAvU3RlbVYgMCAvWEhlaWdodCA2
-						MzIgL01heFdpZHRoIDExNDAgL0Zv
-						bnRGaWxlMiAyMCAwIFIgPj4KZW5k
-						b2JqCjIwIDAgb2JqCjw8IC9MZW5n
-						dGggMjEgMCBSIC9MZW5ndGgxIDQ2
-						MDQgL0ZpbHRlciAvRmxhdGVEZWNv
-						ZGUgPj4Kc3RyZWFtCngBnThrcBzF
-						mV/PzM4+pZlZ7UorL/LOaiTZLklI
-						1kg2Mo53TtKuJQtjPXZzM7Ixu3qx
-						BgyKLcAmSaE8OJx1FAIHVxQFF6jz
-						EeJLjl7jMzKpI3YMSaiKw4/EyfFI
-						ytRxwFXZSSUBE2Jrla9nVkYk9+ta
-						O939Pfr7vv4ePT2a3XfXFARgDngw
-						JvbmZsBu/gYcjIm7Z1UH5h7B8ej0
-						zC17HZg3ANzHb7n94LQD++cARC4/
-						lZt0YLiC44Y8IhyYdOLYkN87e8CB
-						fR/g2H77nRNlup+tW7U3d6CsH95C
-						WL0jt3fK4Vd+gePamTv3z5bhr+I4
-						NLNvqsxPTACyCYhDvdozOAAFqAYT
-						XMCBDG2wCzm74B3cL7H5Se3j//XG
-						9B9uljZ/CF6PvfTVntCbbPLq+4Mf
-						XD63+Lo35hlH0IsSnIZyPfOLzyIq
-						dvlc6aQ39jeaA8YpbzoVj42OLMVG
-						UmZsKPWVWLxfzaiEz8T6+cxqfim2
-						Y7sZu3H7SGx7aji2Rm/KNEkdsUa9
-						IVOrRzJunc+IyHPDth2xwW0HYttS
-						m2JVejDjwvUC0mI8kfgE/xzPiwMo
-						vj/15djW1CMxfyqa4jZ+P0U0vT5z
-						jR7NVOvhjEKkjKxLGUnaIXEx6T7p
-						W9JrkiBJD0pLEi9yBDJEh8ydcB88
-						B78DQQYyV01cZIF8s5gebW4eXHAv
-						jQxS79BOSg7RxlHWG8NjVDxEITO2
-						0ywS8g3r/vl56KkbpB2jJm2vswbp
-						JE7UumI19Fj79zc3794/e1cza7O7
-						EWKgDf1tF9mNmRSCGrjRdQL7u7Cv
-						LXu9PAgJCMPjAEsXGOKTvhRa+gMA
-						47/yyNL3Sw8unS99Z+mCcDNK+X81
-						JxdgDHbD38MI9jnYCRZkcf5ZeBn7
-						EcDsM7buHLPMTHp0ZHhox43bbxjc
-						NtC/NZXs6+35OyOx5TObr9/Ufd3G
-						DV3r29uubW1Zu6apsUGrj8ciIUWW
-						Kiv8Pq/HLboEHoPQolKSTVK+UVVS
-						OS2p5fpbW9RkJN/X2pLUUlmq5lSK
-						g9Ck9SMFUVqOqlmVNuGQW4HOUgM5
-						p/+K03A4jaucRFY3w2amQlPp2T5N
-						XSBjwybO5/s0S6UX7fl2ey402UAF
-						AvE4rrCtYtaqSZq6O19IZtFGUvT7
-						erXeKV9rCxR9fpz6cUbXajNFsnYL
-						sSfc2uSmIgeeCqYWd5rMTdKhYTPZ
-						F43HrdaWAVqpoSQkQa8tkoq91G2L
-						VPfgrigcVostpwpfX5BhPNscmNQm
-						c7tMyudwbYFPFgoPUKWZrtP66Lp7
-						34mgj6Zoi9aXpM1M6uDIVT2Dn6gk
-						1NUoa2rhQ8DtaBcv4D5WYHJljNgo
-						fwiMSLleSkbMOGvRFEalUEhpaqqQ
-						LeQWlubGNVXWCsVAoDCTRHfDkEkJ
-						4l88HKWpr1tUzubJJjTV3noKK6pq
-						eKdJucaUms+hM/CX0OLXRePKVR4U
-						8H+TAd2CzkEPx+PMDYcXDBhHgM4N
-						mw6swnj0GBhtzRblsoxyapkSzjDK
-						3DLl6vKshrEdHDULVGgcmNSS6PHD
-						OTo3jtl1KwuMJtPKS9G4Vggqancb
-						2oi8Kho9MLlHpa4mKrJVKxdgTrIl
-						BewwJJWXnOFiFBU0KUG1W0MxTE5S
-						S2bLv7vzEdSooqP7m51ESJvU6EOP
-						GblykiSL7W24IpfFgO1hcR02aZs2
-						Q0Naj5NFiGBmJfeMmvYSB5ukoV4K
-						2YnyKtqWxLWY+skCyzRmApOlDZsn
-						QV86X+xUo8/r0AlWH6JpdS9mWVOy
-						YE5O01g2Ool1N62a0Tg1LIywpZlT
-						Fks79NC686gOG24LcyVtDo5qg8Nj
-						JkY1btkURmDihMbkX4nRzKgjBhOQ
-						eho9qslFeQsZZUSoKZxoPZuxp+5G
-						Dz4yOtzGssTt2ayaJArL3GgGXacm
-						p/rKfAz+lFAE+Mbe/mVpIgNRTm9/
-						NI4lbrfWFg7JalkxLvcwp/YzGiPh
-						MYVkD+ZnL8M5voywpFdNbUqztLxK
-						jSGTuYi5x/Zy2Rm2z52oDKbNldAK
-						Z6GbII5k23NlZ9JU81UfMufSrTa8
-						7GvMmU+TB5bJasGjDY4WWCS0skBA
-						ywcosBQ2rlNw21j5rKA1PHtVGUva
-						LuhC0TBYMec3YTYWtIHJgjZqbra5
-						8Tz5YvRepjsIg2Qw3dPagkdbT1Ej
-						h4aLBjk0OmaelAHUQ2nzGEe43myP
-						VWxAmnlSxZeGjeUYliEZi8oAJmkE
-						AY/NHz1pAMzZVMFG2PDEAgEb5zAh
-						jsDEAufgZJuv2GQrMvC+MrEgOBRj
-						WYKAOI+Dm7NxFmtFYB41fC7DY3iN
-						AFfBRYtoNVqGmBfxvuMl8HyAVJBo
-						EVehjYheIHNFrxF1OOaQw7AcizM4
-						lFVnxsznA4DL7B4V9bCG6RLJY2Xg
-						+yapTrJE+YKVL2QtVmxQjaHBH6FE
-						24Jh0ragIWKA+rSpHurXehg+wfAJ
-						By8yvFvroaSa4PI5rLshSrBP7zTj
-						WJLqqlejBfkii5SFh0pB/p9W4Syc
-						Fs7ACf4s3CNMwj3kNXjWLcMJYQEf
-						CvfwdUh7EdLcv0Mt4o4CoI+du2UA
-						ROhAeBxCiGH3QR4f1gRnwHumCG57
-						7sEbow/89rwBDsIxIpIOUiBnOIG7
-						jnuA+wnPZHJwGhf78N7C47rVRsDF
-						4X2A93oE3k2gTW/TlSDp7lZ0RV/f
-						XhVX4hvxOc0PXHkhzx1cfMB14s/b
-						8sK7TM4JvO3cgHenMMRhixFTeV+t
-						JAUCvFbvC4pQAYEwVKcskMW6fkus
-						hkQzROwnoQRR/rISWw/pCCoyp9U3
-						rdHcGqoOud36hg019WI4HKrWOzZ0
-						ydyX3nnvj2/NvrjBe82WCTR1y3MH
-						Tz3zvReOHRfSpbdLF0q/L72RNY+I
-						odJBc1tmfNfYW4vKpV9+/C75FfPl
-						PUsX+PuFNFraZIQqed5TxddUi/6U
-						JcqgoInLxqFRNbjz9e2uelBk0Dtq
-						3E0aGsFs2BjGD47/Lf2JBH87/6Xo
-						fP4nP/vZyUfuy4dIE3GTStK63mz7
-						6P23Pu7apTPfMI2/RY0hiMJWY02t
-						N+L387xX4euuifj7LSkSi3B+PhIB
-						UQyjd2So/JQZ0B1pu3n3Tc1lg5xg
-						LBsVDIfj1cwraJLI14vueGcTt/di
-						6SMCr5/6zZXfc2d/cNP87bue+PyT
-						L8ncU0dCpAEtFEh36YN3h85fWNU8
-						trZOkF8785/n0E78piDrXGcxFyqg
-						0Qh6Ma0IkSqzARIQBU4iYUgkEmdv
-						YtFSdDtUcYwP36l3VIdDolZPaicm
-						PpeIaVosISTItdmOa1vx04vACbxV
-						T+P+66HfaFjl8UK9xxuSZcWr1PMN
-						WjSkRIISeJWwEIgEUtbqiAwJvVkB
-						PZLQ9eX8YKEo/wW717fHlU47GIqm
-						yCwoOOo1mCW6avdokCIKX5j79lNT
-						V/7tiYmRsNj6zCQhA0LX8/uOHeNe
-						/dbDC68sfoV7j1T9+M3FZ4XEo8PW
-						6ZsmX3ptsbtsr1CJ9gZhvREJeNDg
-						oDdYFQp4JUlIWZLsQ2vRF3oigTGB
-						T7KXJcsKw5hBcVVR+O8WHjrzHxPp
-						KvFWIpF93Okjj77ya1vr0dJ+ptHO
-						EKEbNQYgAmuNUIW7CsuxdpUPS8Yn
-						83LK4ldk5XI9EhmwSLgulptB4pSG
-						7RWhu1T67wffmCXc2+eXrjzzyvHj
-						r/z4+PEzXLx0qXSuQLjvEB9ZV/p5
-						6c/nL18+//afPirvmbuEFsjQYoQr
-						vF6fjwsqFXiCSL4wuFjlOjXL4nG1
-						XNe3k+WqWA4AN57cUdU3cPjYRNrn
-						7n1MSFferFw4znb78oEc5kIaa8FE
-						PRp0GlE/1AXBFawRGhv8dXw4vCpl
-						hWXe86ntgn08OOFHfSzP1nTZx0Bn
-						05prua7ODSsqs2Y1x5u/+ekbc0dO
-						PP3t+x/7l6/2nl2g/9z41Nfuf+Ig
-						/cd/6CXRh5/svW3kNmtkZsP1mdu2
-						3/uNnrEe88bMdKIrcztaV7t0gTvo
-						SuHZcL2xWgpUVXk4j08RaqorKwOS
-						NygFsVolF/RbrqvxAExLPdJWLk48
-						zNa3N7LzAUPTpWhdGzfqSjwcV0LV
-						5NzuVP/ub37t6ac7dJIonTb75KHI
-						4//KvbSp9VLp488uDn3xAFpwFM9R
-						Dr8yg9Bu1ATcbh9RFF+oqsLvCUr+
-						sJ1/ZdUJfUUkWOoRVMKORywTbY0m
-						stQjgcJDP3xhPB0Ub8VDcV5ILBpH
-						Hn3515x5+fQ/HSXz3I/sd4D9klia
-						hvL/U2zwky6A6cERHg8NF75D3MRD
-						vJg/fjDJOJkgU2QP2UvuIHeSfWQ/
-						cf5DQtB6540loidh24g5NmA175iZ
-						umM0d8f+1hv23JKfhb8APDRLpwpl
-						bmRzdHJlYW0KZW5kb2JqCjIxIDAg
-						b2JqCjMyMTkKZW5kb2JqCjIyIDAg
-						b2JqCihidWRkeWNsb3VkLmNvbS1k
-						aWFncmFtcy5ncmFmZmxlKQplbmRv
-						YmoKMjMgMCBvYmoKKE1hYyBPUyBY
-						IDEwLjkuMiBRdWFydHogUERGQ29u
-						dGV4dCkKZW5kb2JqCjI0IDAgb2Jq
-						CihTaW1vbiBUZW5uYW50KQplbmRv
-						YmoKMjUgMCBvYmoKKE9tbmlHcmFm
-						ZmxlIDYuMC41KQplbmRvYmoKMjYg
-						MCBvYmoKKEQ6MjAxNDA1MDYxMjI4
-						MzRaMDAnMDAnKQplbmRvYmoKMSAw
-						IG9iago8PCAvVGl0bGUgMjIgMCBS
-						IC9BdXRob3IgMjQgMCBSIC9Qcm9k
-						dWNlciAyMyAwIFIgL0NyZWF0b3Ig
-						MjUgMCBSIC9DcmVhdGlvbkRhdGUK
-						MjYgMCBSIC9Nb2REYXRlIDI2IDAg
-						UiA+PgplbmRvYmoKeHJlZgowIDI3
-						CjAwMDAwMDAwMDAgNjU1MzUgZiAK
-						MDAwMDAxMzA2NCAwMDAwMCBuIAow
-						MDAwMDAwNDE0IDAwMDAwIG4gCjAw
-						MDAwMDg5MDUgMDAwMDAgbiAKMDAw
-						MDAwMDAyMiAwMDAwMCBuIAowMDAw
-						MDAwMzk1IDAwMDAwIG4gCjAwMDAw
-						MDA1MTcgMDAwMDAgbiAKMDAwMDAw
-						MDY2NSAwMDAwMCBuIAowMDAwMDAx
-						MDAzIDAwMDAwIG4gCjAwMDAwMDI0
-						ODkgMDAwMDAgbiAKMDAwMDAwOTA1
-						MiAwMDAwMCBuIAowMDAwMDA4ODY4
-						IDAwMDAwIG4gCjAwMDAwMDEwMjIg
-						MDAwMDAgbiAKMDAwMDAwMTI1NyAw
-						MDAwMCBuIAowMDAwMDAxMjc2IDAw
-						MDAwIG4gCjAwMDAwMDI0NjggMDAw
-						MDAgbiAKMDAwMDAwMjUyNSAwMDAw
-						MCBuIAowMDAwMDA4ODQ3IDAwMDAw
-						IG4gCjAwMDAwMDg5ODggMDAwMDAg
-						biAKMDAwMDAwOTI5MSAwMDAwMCBu
-						IAowMDAwMDA5NTIyIDAwMDAwIG4g
-						CjAwMDAwMTI4MzEgMDAwMDAgbiAK
-						MDAwMDAxMjg1MiAwMDAwMCBuIAow
-						MDAwMDEyOTAyIDAwMDAwIG4gCjAw
-						MDAwMTI5NTQgMDAwMDAgbiAKMDAw
-						MDAxMjk4NiAwMDAwMCBuIAowMDAw
-						MDEzMDIyIDAwMDAwIG4gCnRyYWls
-						ZXIKPDwgL1NpemUgMjcgL1Jvb3Qg
-						MTggMCBSIC9JbmZvIDEgMCBSIC9J
-						RCBbIDw0MDM0MjdiYWE5MjA1ZTBm
-						ZDJjZTE4NDgzNDE1NDYwMj4KPDQw
+						AAAAAAAAAAAAJVBERi0xLjMKJcTl
+						8uXrp/Og0MTGCjQgMCBvYmoKPDwg
+						L0xlbmd0aCA1IDAgUiAvRmlsdGVy
+						IC9GbGF0ZURlY29kZSA+PgpzdHJl
+						YW0KeAGlUkFOwzAQvPsVc3QOab1O
+						0ybXAgc4gWSJA+IAVlArJQ1Nmv+z
+						68RQUCsEVeSM5R3Nesa7xwP2yJGv
+						0MCWgrWgFcxH2MT6I3Yw/FmzEGJX
+						QU7m91Xnq/fD8FKrbstqWRZY2RJm
+						xhIL+Abz24Zw3XI36XdC5Kon+J4r
+						vWcCBUpKsBlLEP8Ui6wdUjMzxlg4
+						D7ITySKlgmkLXo5bOUcs4N7wBN23
+						Q5fwhaF9leAZ7g43To23KM1omyjY
+						qSGbYJwrATeInD9bL/KLvRPHfGT9
+						2K8959cnEhFBtwmnz7gTtNAHjoEr
+						VultpLyOJ9BD5HxFND0UrWJGZcyI
+						NyEbLqkppE/Wrynhx4DQcoxJXve/
+						I0KFPLwEJYO2durcjAjt1Iw07TQi
+						3+1/AG/BsUcKZW5kc3RyZWFtCmVu
+						ZG9iago1IDAgb2JqCjI5OQplbmRv
+						YmoKMiAwIG9iago8PCAvVHlwZSAv
+						UGFnZSAvUGFyZW50IDMgMCBSIC9S
+						ZXNvdXJjZXMgNiAwIFIgL0NvbnRl
+						bnRzIDQgMCBSIC9NZWRpYUJveCBb
+						MCAwIDIwNCA1N10KPj4KZW5kb2Jq
+						CjYgMCBvYmoKPDwgL1Byb2NTZXQg
+						WyAvUERGIC9UZXh0IC9JbWFnZUIg
+						L0ltYWdlQyAvSW1hZ2VJIF0gL0Nv
+						bG9yU3BhY2UgPDwgL0NzMSA5IDAg
+						Ugo+PiAvRm9udCA8PCAvVFQxIDEw
+						IDAgUiA+PiAvWE9iamVjdCA8PCAv
+						SW0xIDcgMCBSID4+ID4+CmVuZG9i
+						ago3IDAgb2JqCjw8IC9MZW5ndGgg
+						OCAwIFIgL1R5cGUgL1hPYmplY3Qg
+						L1N1YnR5cGUgL0ltYWdlIC9XaWR0
+						aCAyMiAvSGVpZ2h0IDI0IC9JbnRl
+						cnBvbGF0ZQp0cnVlIC9Db2xvclNw
+						YWNlIDExIDAgUiAvSW50ZW50IC9Q
+						ZXJjZXB0dWFsIC9TTWFzayAxMiAw
+						IFIgL0JpdHNQZXJDb21wb25lbnQK
+						OCAvRmlsdGVyIC9GbGF0ZURlY29k
+						ZSA+PgpzdHJlYW0KeAHtkEsKwCAM
+						RL2H5P7X7CIIDx4pxEBXLSLDNPOJ
+						ETv+c15gXX18wCuDZYdk0o1/jT1D
+						htjaKiVV3Zv+Xa17kiFmCrFnyBBT
+						ReyZZLq3PecO6emGzKpmqCK29t1h
+						vsXcoWroXbwpGWJrq5Ruf6fMHaq2
+						3/APvMdjnQplbmRzdHJlYW0KZW5k
+						b2JqCjggMCBvYmoKMTIxCmVuZG9i
+						agoxMiAwIG9iago8PCAvTGVuZ3Ro
+						IDEzIDAgUiAvVHlwZSAvWE9iamVj
+						dCAvU3VidHlwZSAvSW1hZ2UgL1dp
+						ZHRoIDIyIC9IZWlnaHQgMjQgL0Nv
+						bG9yU3BhY2UKL0RldmljZUdyYXkg
+						L0ludGVycG9sYXRlIHRydWUgL0Jp
+						dHNQZXJDb21wb25lbnQgOCAvRmls
+						dGVyIC9GbGF0ZURlY29kZSA+Pgpz
+						dHJlYW0KeAH7/59WgAEDgGzCEGSA
+						iIJkEC6BsEEkNlF0M0bNhYQI7nBA
+						hCwhFgAZ+irkCmVuZHN0cmVhbQpl
+						bmRvYmoKMTMgMCBvYmoKNDUKZW5k
+						b2JqCjE0IDAgb2JqCjw8IC9MZW5n
+						dGggMTUgMCBSIC9OIDEgL0FsdGVy
+						bmF0ZSAvRGV2aWNlR3JheSAvRmls
+						dGVyIC9GbGF0ZURlY29kZSA+Pgpz
+						dHJlYW0KeAGFVV1oHFUUPrszO3mJ
+						QxFtSyt18K8hpGFSrSYWtdtNurtN
+						2K6bjTZVqtPZ2e50JzPjndm0CX0K
+						gm9aEMRXRXwSLYjQasTkxb60VKiJ
+						FIsgKLRYQRD6IAp+Z3ayOxuRzHBn
+						vjn3O+ee8917GKK+ZcP3nbRGNOeG
+						Il/Jzh6fPaH1fUdpUqmfcBlm4GfL
+						5SnGruda/O697q1Tii039nGs3rkt
+						vzI1KzDBWsHwaoE5R5TSiZRh0xch
+						Ud/rsI+eDX3G7wM/0KxWcsCfAKux
+						LyA9mLdcS9imlhfGglYWXt12krlu
+						Nc8xtrzmnBbnytcejP6gOT2J9yBy
+						Plczxhk/BfyhaUxMAw8Br/vh4Uqb
+						k063mjPZtj09VBdHZmL78UarwHiY
+						KL202Ki+DLwN+KJ7qnQs5q+YQe4E
+						8GOw321YRd4PjUjaZofFKjB8JV14
+						FeaDI52sWeMTwM8CLzW9Sc5hJ/By
+						MD/NduZ/v9jIlYCxlpw+YxwtA28H
+						vt9y8sxHHHnAD8sccxR4ynVKvC7q
+						ld+0gqjGAeBPw0a1EPPXQ1Fl30dg
+						/6tuHykCQ4fMQw1RYDvyyRR8JzpP
+						TwMviVaFa38C+JIhJvLAiJn5yXJn
+						WENgRaGXUgZZ5NEpPE1y6R/UHpBN
+						8xHySWCujm+H8mC4GALDAes00K8U
+						Yp6t7B9QEzb2ZUaAZxlDxP4a1fDV
+						9rMxy4gj3o58zE3cHOK4tEgGeO2V
+						78Q8T94h6/KTGAflKfk5eVQeI01+
+						QT4kPy+PwzomH4x8BHwXELVbAa94
+						B1Hbkd6gVk8+q8g5hI9DP4PjRRkG
+						yOBvRGhGzIQaF3a1Bnz/vbeXxGu2
+						ef2dPxLqcG3NuM6uPglfOpZUO9K/
+						tlntzC+Z25k1PG9mbiWq0TI/Zm7h
+						vtlTlxevZqM+G5lvKMva29hVr4e9
+						sQObWVlU7kR7ModqWX3eUVaflWwB
+						h3jWYXVpXzLilfPLOzu8BdLW5Euv
+						3ui/cv5/NWF9WGeLEqrU3Qu7fP/k
+						x6ym9VbpXomWhvSL+l39I/0H/Xd9
+						Tf8A6DfpXekL6WvpsvSldJU0aUVa
+						lb6RvpU+k77C1+ewrkqXkVvy1LVP
+						Wef0INP2OTTjE8b18CkOiBVgNtfP
+						1g2lzmCumymf7c0rsM7dE91ZSz2s
+						7lYfVcfVh9XH1Sl1UD2gHlJ3qPsx
+						RtSCuhczuzsqcU+x1jbeZbw3+s6m
+						2Uir9o5wVg2oJ5ClgbubF/eo3YmG
+						OKn7oDNH63J4jXZ324iixd3roWMN
+						mkHFNp2NtAvw7eAbu/kfb+5JZJd6
+						BSfLlvfII3Ix7sGsfABdONnTj6Pc
+						pcqEMq5kSVMGlTFlRDnKOKqVO1RT
+						9mJ2DM+JZPaInuD0KIK/T2idw3+L
+						KOf5C8I+3Qi1/br+jJbFb9LSiq45
+						PKQZjqNFU4EmrMAS81ZtmPgfzH5E
+						f74Y/VtT26+aLTHftlEqdY3oX/q6
+						h3sKZW5kc3RyZWFtCmVuZG9iagox
+						NSAwIG9iagoxMDg4CmVuZG9iago5
+						IDAgb2JqClsgL0lDQ0Jhc2VkIDE0
+						IDAgUiBdCmVuZG9iagoxNiAwIG9i
+						ago8PCAvTGVuZ3RoIDE3IDAgUiAv
+						TiAzIC9BbHRlcm5hdGUgL0Rldmlj
+						ZVJHQiAvRmlsdGVyIC9GbGF0ZURl
+						Y29kZSA+PgpzdHJlYW0KeAGtWXc8
+						le/7v58zHc6x995775G9V/ZMcRzr
+						2NlECilUtFQoWUmJaJCkyEiJSBIN
+						lIpUGoqs3300Pp/X9/X9/vc7r9dz
+						P+/nuq/7eq713OM6APARydHR4Shm
+						ACIi42KcLU2EPb28hfEvAAbwAFag
+						C/TIlNhoY0dHO/A/f99HAELrfKRA
+						k/U/2f57B0tAYCwFAMQRdvsHxFIi
+						IL4CAIaREh0TBwC2E9LFEuOiafgd
+						xOwxUEGIV2g4eAPjoPaA3f8XFt/g
+						cXU2BQCnDQAdkUyOCQaA0QzShRMo
+						wVAOYwDsY40MoEbCYUkQG1BCyJDG
+						2wx55CMiomj4NcTS/v+SE/wvTCb7
+						/5VJJgf/xb9sgSPhi82osdHh5OSN
+						h//PJiI8Hvpr4ycCW2JIjJUzvLND
+						v5WERdnSMBHiS5H+mx0gZoW4lQot
+						+o37Q+Kt3CCm8U9QYk2hLwEnxN8C
+						yGa2EPMDgKKPD3Mz/o0lyTEQbfCj
+						TKhx1q6/sXtMlPNv+ajQyPDNtPyA
+						clCpIYHWf/DhwFhzF0iHOqBCg6gW
+						1hDDWKHOpYS4ekAM9UQ1J1DdN0PM
+						CHFnbJgLTQeanKGUEFMafYMnJt6Z
+						prM4pL8LirGg2Qh50MSIWIg25KNF
+						KeSNd3FDunpciKsVpMOxaLuAQDNz
+						iOF70Z6BkW6/9UGHRMeZ0OTQ+FOi
+						wzfyG+qJPhwYbkmji0JcGZvg8mds
+						d1yMK40O/YYeCSXb0PIV6oyejY5z
+						pPmEps8isAOmwAwIg3h4+YMoEAqo
+						/XNNc/DpV48FIIMYEAwCgcJvyp8R
+						Hhs9kbB1ASngA4iEPLF/x5ls9AaC
+						BEhf/Uv9NVYBBG30JmyMCANv4Bsi
+						MLwYA4wexg62RvBSxWhjdP6ME2b6
+						oyfOHGeGs8JZ4GT+UAAFah0OrxhA
+						/S80W9gXCK2LgW3kHxv+kYd9gx3E
+						TmEfYyewT4E7eL0h5belvtSMmD8a
+						/JVsDyagtF9eCYQeiwQzf3gwklBr
+						DYwJRh/qD3XHcGJ4gQJGHVpijDGE
+						tmlA6h/v0bSO/6vbP7784/c/fDSt
+						hf9l4286oyyjxm8t/P9YBSP5xxP/
+						KeWfHioIgFy2/8mJ3oe+jO5Bt6N7
+						0a3oJiCMvoVuRvehb9Lwb50tNrwT
+						/PdtzhseDYM2UP/wKF9QnlFe+fP0
+						11YypNA0oMUA5n9cYFIczD9gGhWd
+						HEMNDokTNoazcKCwdSRFUV5YVVlF
+						HQDanE7jAeCr88ZcjXAO/EOjjgCg
+						2QDngNF/aMEwp1umACDY/UOTqIUp
+						HwnAXQIlPibhlzwM7YYF9IAJfhk8
+						QBCIAWlokyrQBHrACJgDG+AAXIEX
+						2Aa9HgIioNaJIBXsBtkgDxSAY6AI
+						lIIKcA5cBI2gCbSCdtAN7oOH4DEY
+						h7kxDd6DefAdLCMIgkdICBvCgwgh
+						EogcoopoIwaIOWKHOCNeiB8SjEQi
+						8UgqkonkIYeRIqQMqUEakOtIO9KL
+						DCJPkUlkBvmC/EShUUQUO0oAJYlS
+						QmmjjFG2KFfUVlQwajsqBZWFOog6
+						gSpH1aKuodpR91GPUROo96gFNEAz
+						oDnRImgFtDbaFO2A9kYHoWPQO9G5
+						6EJ0OboO3QJj/Qg9gZ5DL2FwGDaM
+						MEYB5qcVxg1DwWzH7MTsxxRhzmGu
+						YToxjzCTmHnMGpaE5cfKYXWx1lhP
+						bDA2EZuNLcSexV7FdsFvZxr7HYfD
+						ceKkcFrw2/TCheJ24PbjTuHqcbdx
+						g7hXuAU8Hs+Dl8Pr4x3wZHwcPht/
+						El+Lv4Ufwk/jF+kY6IToVOks6Lzp
+						Iuky6ArpztO10Q3RvaVbJjATJAi6
+						BAdCACGZkE+oJLQQBgjThGV6Fnop
+						en16V/pQ+t30J+jr6Lvon9F/ZWBg
+						EGXQYXBioDLsYjjBcInhLsMkwxKR
+						lShLNCX6EOOJB4nVxNvEp8SvJBJJ
+						kmRE8ibFkQ6Sakh3SC9Ii4xsjIqM
+						1owBjOmMxYzXGIcYPzIRmCSYjJm2
+						MaUwFTJdZhpgmmMmMEsymzKTmXcy
+						FzNfZ37CvMDCxqLC4sASwbKf5TxL
+						L8s7VjyrJKs5awBrFmsF6x3WV2xo
+						NjE2UzYKWyZbJVsX2zQ7jl2K3Zo9
+						lD2P/SJ7P/s8ByuHOoc7RxJHMcdN
+						jglONKckpzVnOGc+ZyPnCOdPLgEu
+						Y65ArhyuOq4hrh/cfNxG3IHcudz1
+						3I+5f/II85jzhPEc4mniec6L4ZXl
+						deJN5D3N28U7x8fOp8dH4cvla+Qb
+						40fxy/I78+/gr+Dv418QEBSwFIgW
+						OClwR2BOkFPQSDBU8Khgm+CMEJuQ
+						gRBV6KjQLaFZYQ5hY+Fw4RPCncLz
+						IvwiViLxImUi/SLLolKibqIZovWi
+						z8XoxbTFgsSOinWIzYsLiduLp4pf
+						EB+TIEhoS4RIHJfokfghKSXpIblX
+						sknynRS3lLVUitQFqWfSJGlD6e3S
+						5dLDMjgZbZkwmVMyD2VRshqyIbLF
+						sgNyKDlNOarcKblBeay8jnykfLn8
+						EwWigrFCgsIFhUlFTkU7xQzFJsWP
+						SuJK3kqHlHqU1pQ1lMOVK5XHVVhV
+						bFQyVFpUvqjKqlJUi1WH1UhqFmrp
+						as1qn9Xl1APVT6uParBp2Gvs1ejQ
+						WNXU0ozRrNOc0RLX8tMq0Xqiza7t
+						qL1f+64OVsdEJ12nVWdJV1M3TrdR
+						95Oegl6Y3nm9d5ukNgVuqtz0Sl9U
+						n6xfpj9hIGzgZ3DGYMJQxJBsWG44
+						ZSRmFGB01uitsYxxqHGt8UcTZZMY
+						k6smP0x1TdNMb5uhzSzNcs36zVnN
+						3cyLzF9YiFoEW1ywmLfUsNxhedsK
+						a2VrdcjqibWANcW6xnreRssmzabT
+						lmjrYltkO2Unaxdj12KPsrexP2L/
+						bLPE5sjNTQ7AwdrhiMNzRynH7Y43
+						nHBOjk7FTm+cVZxTnXtc2Fx8Xc67
+						fHc1cc13HXeTdot363Bncvdxr3H/
+						4WHmcdhjwlPJM83zvhevF9Wr2Rvv
+						7e591nthi/mWY1umfTR8sn1Gtkpt
+						Tdrau413W/i2m75MvmTfy35YPw+/
+						834rZAdyOXnB39q/xH+eYko5Tnkf
+						YBRwNGAmUD/wcODbIP2gw0HvgvWD
+						jwTPhBiGFIbMUU2pRdTPoVahpaE/
+						whzCqsPWwz3C6yPoIvwirkeyRoZF
+						dkYJRiVFDUbLRWdHT2zX3X5s+3yM
+						bczZWCR2a2xzHDvcPPfFS8fviZ9M
+						MEgoTlhMdE+8nMSSFJnUlyybnJP8
+						NsUipWoHZgdlR0eqSOru1Mk047Sy
+						nchO/50d6WLpWenTuyx3ndtNvzts
+						94MM5YzDGd8yPTJbsgSydmW92mO5
+						50I2Y3ZM9pO9entL92H2Uff156jl
+						nMxZyw3IvZennFeYt7Kfsv/eAZUD
+						Jw6sHww62J+vmX+6AFcQWTByyPDQ
+						ucMsh1MOvzpif+TaUeGjuUe/HfM9
+						1luoXlh6nP54/PGJE3Ynmk+Knyw4
+						uVIUUvS42KS4voS/JKfkx6mAU0On
+						jU7XlQqU5pX+PEM9M1pmWXatXLK8
+						sAJXkVDxptK9sqdKu6rmLO/ZvLOr
+						1ZHVE+ecz3XWaNXUnOc/n38BdSH+
+						wkytT+3Di2YXm+sU6srqOevzLoFL
+						8ZdmG/waRhptGzsua1+uuyJxpeQq
+						29Xca8i15GvzTSFNE81ezYPXba53
+						tOi1XL2heKO6VaS1+CbHzfw2+ras
+						tvVbKbcWbkffnmsPbn/V4dsxfsfz
+						znCnU2d/l23X3W6L7js9xj237urf
+						be3V7b1+T/te033N+9f6NPquPtB4
+						cLVfs//agNZA80Odhy2DmwbbhgyH
+						2h+ZPeoeth6+/3jz48ERt5HRJz5P
+						JkYDRt89DX/6eSxhbHl81zPss9zn
+						zM8LX/C/KH8p87J+QnPi5qTZZN+U
+						y9T4K8qr969jX69MZ70hvSl8K/S2
+						5p3qu9YZi5mHs1tmp99Hv1+ey/7A
+						8qHko/THK5+MPvXNe85Pf475vP5l
+						/1eer9Xf1L91LDguvPge8X35R+4i
+						z+K5Je2lnp8eP98uJ67gV06syqy2
+						rNmuPVuPWF+PJseQN/YCaNiigoIA
+						+FINAMkLALaHANAz/jpzbXDALTIC
+						eSB2RxSR96hOdCxGAjOLLcP54kXw
+						43TlhFB6VfoVhgFiKSmOcTOTDDOO
+						eYqli/UsWw57FIc7pzmXB3cETzbv
+						Gb4W/iGBOSGCsLiIsaifWJp4scR1
+						yTGpnzJ8sgZy/vKZCjWKA0pfVbhV
+						DdUo6nkaDZqDWh91SLqyehab/PV3
+						GhQZXjHqN35rsmbGba5oYWbpYRVm
+						nWpz0Pa0XZ39zc19DmOOb5y+uSCu
+						RDcud34PIU8xLylv+S2qPrpbTbfZ
+						+rr5UchR/jspBwJKAxuCuoLHQuZD
+						6cKEw3UiXCKjonKjq7a3x7yIXY7n
+						TtBIdE3anlyQUr9jIPXTTuZ0tV1u
+						u5MySjLbs95kE/eq7fPOycityXu0
+						f+WgZL5DQfKhysMPjnw6xlSoctzt
+						RNLJkqL24renSKc1Sn3OZJadLx+s
+						+FHFf9a4OvDc3ppz53suvK5dr+Ou
+						V75k2eDTGHM558rpq5eutTbdae6+
+						fqflxo2LrUU3d7dRbhnd5ro92369
+						Y/cdy05C572u7G7j7uWeK3fDekV7
+						x+4dum/XR+wbfFDY7z0gODD1sHIw
+						aEh6aObR+eHQx7KP349ceBI2Kj/6
+						4Wn92PZx9fHFZ63Pd7+weEl6OTxR
+						NLltSnRq5tXV13unfd/ovxV7xzyD
+						nUW9p5/j+6D1ccunvfMtn799Vf+W
+						tND2A7/otFTy882K4mr8Wsv6+kb8
+						xZBLKC80C7oRswVLj72I84S7mno6
+						MoGbcJ8+i8GEiCXeIe1htGZiZBpl
+						LmcJZ9Viw7M9Z+/j6Oa8zXWTu5nn
+						Mu8lvlr+aoFKwQqhCuFykTLRcrFK
+						8WqJGsmLUg3SV2RaZNvluuTvKQwp
+						jio9V36h8lz1mdqY+hONx5qPtAa0
+						7+l06bbr3dh0Rf+iQaVhkVG+caZJ
+						ommo2VbzzRZGlipWwtbMNsBm3vaZ
+						XZd97eYjDjsc/Z2snZVdeFwR1xm3
+						IfcbHlWe+V4p3oFbHHw2bZXaxuaL
+						+H70Gyf3+jdRqgKOBGYF7Q7OCMmk
+						ZoZmhGWGZ0RkRmZGZURnbM+IyYjN
+						iNsdvythV2J6UnryzpS0HampqWk7
+						dqakJ+9KgtmRn1mV1bpnOPv9PnQO
+						b65qntV+vwOJB/fnVxa0HHp4+M2R
+						lWMshVLH9U84nQwqSi0+VFJ5quX0
+						QOmrMz/KiRUilZpVNme3VcfADCk+
+						X3ehvXb44tu6n5eIDYKNSpeNrzhf
+						pVyLbcpqPnq9Cs5gna2Pbr5qm731
+						8PbF9tyO4DtmncKdK12j3Zd7Dt6l
+						9preE7j3/f5AX/WD9H73AYWHmIdj
+						gw1D2Y98hlUeYx+PjzQ8yR2lPrUd
+						Ux0Xesb2nOkF20uRCb1Jv6kjr4an
+						pd/sfwdmct6Lzj34mDPv9EX6G8PC
+						4o9PS7PLH1a/bsRfDnQitsgoagvq
+						AzoMvYjJwHJjy3EauPtwR7tKV0ww
+						IEzQ72VQZXhJzCNtIs0xnmJyZmZg
+						7mI5yOrLpsKOYR/mqOJM4rLnFuJe
+						4LnHW8aXxO8gIC2ICI4JXRbOFwkV
+						tRATE1uD+6hmyUKpOGlHGWmZFdlB
+						uSr5ZAV7RRHFz0rtyodU/FQVVZfU
+						OuD84KLJrTmuVapN1hHVmdQt1du2
+						iW/TE/0jBg6GJMMhoyJjiom8yVfT
+						G2ZZ5nYW7BbjlhVwvlC1XrK5bbvX
+						zsGeE+4nyh2ojoqO35xanNNdzF3p
+						XfvdDrm7enB5jHme9vL3lvb+uOWa
+						z66tNts4t72G+4Assoe/PAVFGQu4
+						ElgQFBFsGyJHZaB+CH0YdiW8MCIx
+						0jNKN5ovenX7y5j22Iq47Hhqgn2i
+						ShJn0nLyVMq9HY2pxWl7dkan++yy
+						3q2ZIZbJmoVkfd7zJnt678y+jzlf
+						cr/n/dy/dhCVjysgHCIdZj7CfpTr
+						GG+h4HGRE+InpYpkixVKVE6pn9Yq
+						1TtjUGZcbltBqdxdVXq2rXrs3OJ5
+						zgvqtU4XI+py66svdTZMNK5c4bqq
+						ds2hKbR5z/WyltYbI62f24i3JG8b
+						tW/t2HHneGddV3f3855vvUz3lO67
+						9e150DaAe+g72PPIdnhqpGQ0cSzl
+						2dmXhMna18ffDr6P/5T/zWiplhb/
+						X7U32pqA0wSgyhAuCHDdcCkHoKIV
+						AAltuH5UAeBIAsBVB6BcUwDyohkg
+						Xif/rh8IrE/SwZoOD5AAarDi4g7C
+						QAY8S14Fg+ATwoSoIK5ICjwD3kMW
+						UHwoE1Qo6giqDTWL5kZbohPRNehn
+						GGaMBSYNnsnm4TksBJ69pnESuBDc
+						BdwnvAY+Dd9Nx0znQ1dD94NgRSgh
+						fKG3pi+nX2XwZmgmchNTiC9IZqRa
+						Rk7G3YyfmHyZhpgtmG+yaLI0sCqy
+						1rEpsV1m12Hv4LDlGOUM5lzkKuCW
+						5e7i8edFYJaa8E3z5wooC4wIpgtJ
+						Cz0S3ikiJ/JUdJ+Yjtis+CkJJ0m8
+						ZJtUgrSy9JxMjWywnJTcrPxFhVhF
+						HSWUUp/yCZUAVTU1tNqw+lmNFE1H
+						LUmtNe0nOo26B/XCNtnoyxoQDT4a
+						PjJqNj5jkmMaZ+Znbm9hamlgpWOt
+						bqNiq2ynbK+yWdVB01HPydjZ2sXF
+						1dctwj3No8CzyqvV+8mWha2c23R9
+						KX4HyW3+XwKkAylBZ4JfUgVDKWEX
+						I0Dklqhb2xViquJk428keiXjUu6k
+						FuwM3+WTsSUrODtrX23u8wPc+e6H
+						io8MHVs8IVzkUJJ9urOMrsKpqrz6
+						x3mX2sZ6jobUy6+uOTTfuCFz8+Rt
+						+o7UzoWenb3rfdv7hwbFHpEf5z+p
+						fXp9/Mrz8pe7Jl1fCb5++aboncPM
+						+vvaD56fMPN1Xzy/YRYafpCX2H/2
+						rmSuGW/MHwisOTDAioMwUALGMPoR
+						YC+sIrSDKQQLawPOsA5QgzxB4VAq
+						8Gyfh2pBzaGF0K7oPHQneg2ji0nE
+						NGEWsXrYdGwXjoRzx5XDqOvjD+An
+						6NTpcugmCXqEk4Ql+i30txmkGPIZ
+						fhJDiKMkG1IboyZjPZM80wVmBeZG
+						Fl2WTlYn1km2WHY69jIOPRjtJHjC
+						vMudwCPBM8p7gM+cb43/hkCKoJ7g
+						mlCn8H4Rd1Ex0c9id8QLJcIkTaUE
+						pH5KP5W5IXtaLlHeQUFWEa/4TqlX
+						uU7lqGqaGlXdQ8NSU0dLUVtSR1iX
+						X493E5++kIGEoYKRlrGZiatpkFmK
+						eb5FgeVRqxPWp22qbRvs2uz7Nj93
+						+OyEdeZ30XJ1cot2L/Bo9BzxWt0i
+						5eO0NX1bve8kmcPflrIn4FbgcrBe
+						SCr1Vhgm3C7iWORktPL23TGP4qTh
+						ijSepJVcmLKY6pN2J11+14kMXGZi
+						1vts8t6nOa65g/sdDwznexVMHKYe
+						1S+UPMFWhC5eOvWl9FPZl4qls5hz
+						HOdla83qAi7tbbx05WUTy3WrG1k3
+						u24zdLh2nu5+2ct53/xByEDaYNaj
+						9MchT0yfksZ6n8W/YH9ZPik+Vfwa
+						Px30pu0dacZl9tj7/g+Yj5qf/Of3
+						f770Zfjr1wXW7wo/LBfJSzt+Hl6u
+						Wbm1OrI2uxF/FPz6WYEI/PZtYAUu
+						A5TDqtEcwoEYI9FIOTICazyGqHjU
+						RdQ7tCQ6EH0OPYdRw6Ri7mI5sUHY
+						6zhGXCDuFp4PnwL3nAZ0lQQSYQfh
+						Iz2F/hmDJ8MT4hbiFCmCtMJYwCTD
+						1M1MZWFhuckaxSbJNslezhHMqcq5
+						ytXBncvjxivBu8jXz18jsFeQKuQg
+						rC0iKcolRhTHSaAlsVL00uwyIrJq
+						crbyVIUcxYtKw8orqpJqTuo7NS5o
+						PtWm09HSDdQ7tqlLf8FQ0sjTOM/k
+						tul3c3mLEMvzVh9s1GzT7Ho3czuE
+						OrY5s7tEuPa4i3tkeE56m26p2krY
+						FuU7QjbwrwngDMwM+hoSSO0JEwlP
+						ixiP2hRdFoOPjYobT7BObElWSKlI
+						5UsrTGfbdSSDI7Noj2h27T6tnO48
+						9/2zB3cV8BxqPGJ89EahxvHGk8pF
+						l0s0T7WWmp55UO5dMVOVUk06V3Fe
+						78LIxdh61kuXGz0ur1092+TYvNpy
+						sXVbG+ut3vaMO5s6v3XX3g2/p9mH
+						POgfODVIfaQ2vDBSN7p1DDNe8lzy
+						ReUE12TiVN9r7mnHN5lvq97dmrk/
+						O/D+7tzND2Ufsz95zkvPf/vc8CXy
+						q8TXh992LIgv3Pzu/n3+x+5FwuKh
+						Jd6l4p+sP3OXkeXk5ekV+5WrqwKr
+						e1Zn1ozXita+rtuvn6XFPzZITZW2
+						egCEaALLjy/W179KAoA/DMDqofX1
+						5fL19dUKeNh4BsDt8F//59CYaf8T
+						lfTQUHdn0y7a/d+//wPMys4UCmVu
+						ZHN0cmVhbQplbmRvYmoKMTcgMCBv
+						YmoKNjIxOQplbmRvYmoKMTEgMCBv
+						YmoKWyAvSUNDQmFzZWQgMTYgMCBS
+						IF0KZW5kb2JqCjMgMCBvYmoKPDwg
+						L1R5cGUgL1BhZ2VzIC9NZWRpYUJv
+						eCBbMCAwIDYxMiA3OTJdIC9Db3Vu
+						dCAxIC9LaWRzIFsgMiAwIFIgXSA+
+						PgplbmRvYmoKMTggMCBvYmoKPDwg
+						L1R5cGUgL0NhdGFsb2cgL1BhZ2Vz
+						IDMgMCBSIC9WZXJzaW9uIC8xLjQg
+						Pj4KZW5kb2JqCjEwIDAgb2JqCjw8
+						IC9UeXBlIC9Gb250IC9TdWJ0eXBl
+						IC9UcnVlVHlwZSAvQmFzZUZvbnQg
+						L0pSWFpJWStPcGVuU2Fucy1MaWdo
+						dCAvRm9udERlc2NyaXB0b3IKMTkg
+						MCBSIC9FbmNvZGluZyAvTWFjUm9t
+						YW5FbmNvZGluZyAvRmlyc3RDaGFy
+						IDk4IC9MYXN0Q2hhciAxMTcgL1dp
+						ZHRocyBbIDU5NQo0NzUgMCA1NDkg
+						MCAwIDAgMjI2IDAgMCAwIDg4MyA1
+						OTAgNTg2IDAgMCAzODkgNDY2IDMz
+						NSA1OTAgXSA+PgplbmRvYmoKMTkg
+						MCBvYmoKPDwgL1R5cGUgL0ZvbnRE
+						ZXNjcmlwdG9yIC9Gb250TmFtZSAv
+						SlJYWklZK09wZW5TYW5zLUxpZ2h0
+						IC9GbGFncyAzMiAvRm9udEJCb3gK
+						Wy01MjEgLTI2OSAxMTQwIDEwNDhd
+						IC9JdGFsaWNBbmdsZSAwIC9Bc2Nl
+						bnQgMTA2OSAvRGVzY2VudCAtMjkz
+						IC9DYXBIZWlnaHQKNzE0IC9TdGVt
+						ViAwIC9YSGVpZ2h0IDYzMiAvTWF4
+						V2lkdGggMTE0MCAvRm9udEZpbGUy
+						IDIwIDAgUiA+PgplbmRvYmoKMjAg
+						MCBvYmoKPDwgL0xlbmd0aCAyMSAw
+						IFIgL0xlbmd0aDEgNDYwNCAvRmls
+						dGVyIC9GbGF0ZURlY29kZSA+Pgpz
+						dHJlYW0KeAGdOGtwHMWZX8/Mzj6l
+						mVntSisv8s5qJNkuSUjWSDYyjndO
+						0q4lC2M9dnMzsjG7erEGDIotwCZJ
+						oTw4nHUUAgdXFAUXqPMR4kuOXuMz
+						MqkjdgxJqIrDj8TJ8UjK1HHAVdlJ
+						JQETYmuVr2dWRiT361o73f09+vu+
+						/h49PZrdd9cUBGAOeDAm9uZmwG7+
+						BhyMibtnVQfmHsHx6PTMLXsdmDcA
+						3Mdvuf3gtAP75wBELj+Vm3RguILj
+						hjwiHJh04tiQ3zt7wIF9H+DYfvud
+						E2W6n61btTd3oKwf3kJYvSO3d8rh
+						V36B49qZO/fPluGv4jg0s2+qzE9M
+						ALIJiEO92jM4AAWoBhNcwIEMbbAL
+						ObvgHdwvsflJ7eP/9cb0H26WNn8I
+						Xo+99NWe0Jts8ur7gx9cPrf4ujfm
+						GUfQixKchnI984vPIip2+VzppDf2
+						N5oDxilvOhWPjY4sxUZSZmwo9ZVY
+						vF/NqITPxPr5zGp+KbZjuxm7cftI
+						bHtqOLZGb8o0SR2xRr0hU6tHMm6d
+						z4jIc8O2HbHBbQdi21KbYlV6MOPC
+						9QLSYjyR+AT/HM+LAyi+P/Xl2NbU
+						IzF/KpriNn4/RTS9PnONHs1U6+GM
+						QqSMrEsZSdohcTHpPulb0muSIEkP
+						SksSL3IEMkSHzJ1wHzwHvwNBBjJX
+						TVxkgXyzmB5tbh5ccC+NDFLv0E5K
+						DtHGUdYbw2NUPEQhM7bTLBLyDev+
+						+XnoqRukHaMmba+zBukkTtS6YjX0
+						WPv3Nzfv3j97VzNrs7sRYqAN/W0X
+						2Y2ZFIIauNF1Avu7sK8te708CAkI
+						w+MASxcY4pO+FFr6AwDjv/LI0vdL
+						Dy6dL31n6YJwM0r5fzUnF2AMdsPf
+						wwj2OdgJFmRx/ll4GfsRwOwztu4c
+						s8xMenRkeGjHjdtvGNw20L81lezr
+						7fk7I7HlM5uv39R93cYNXevb265t
+						bVm7pqmxQauPxyIhRZYqK/w+r8ct
+						ugQeg9CiUpJNUr5RVVI5Lanl+ltb
+						1GQk39faktRSWarmVIqD0KT1IwVR
+						Wo6qWZU24ZBbgc5SAzmn/4rTcDiN
+						q5xEVjfDZqZCU+nZPk1dIGPDJs7n
+						+zRLpRft+XZ7LjTZQAUC8TiusK1i
+						1qpJmro7X0hm0UZS9Pt6td4pX2sL
+						FH1+nPpxRtdqM0WydguxJ9za5KYi
+						B54KphZ3msxN0qFhM9kXjcet1pYB
+						WqmhJCRBry2Sir3UbYtU9+CuKBxW
+						iy2nCl9fkGE82xyY1CZzu0zK53Bt
+						gU8WCg9QpZmu0/rounvfiaCPpmiL
+						1pekzUzq4MhVPYOfqCTU1ShrauFD
+						wO1oFy/gPlZgcmWM2Ch/CIxIuV5K
+						Rsw4a9EURqVQSGlqqpAt5BaW5sY1
+						VdYKxUCgMJNEd8OQSQniXzwcpamv
+						W1TO5skmNNXeegorqmp4p0m5xpSa
+						z6Ez8JfQ4tdF48pVHhTwf5MB3YLO
+						QQ/H48wNhxcMGEeAzg2bDqzCePQY
+						GG3NFuWyjHJqmRLOMMrcMuXq8qyG
+						sR0cNQtUaByY1JLo8cM5OjeO2XUr
+						C4wm08pL0bhWCCpqdxvaiLwqGj0w
+						uUelriYqslUrF2BOsiUF7DAklZec
+						4WIUFTQpQbVbQzFMTlJLZsu/u/MR
+						1Kiio/ubnURIm9ToQ48ZuXKSJIvt
+						bbgil8WA7WFxHTZpmzZDQ1qPk0WI
+						YGYl94ya9hIHm6ShXgrZifIq2pbE
+						tZj6yQLLNGYCk6UNmydBXzpf7FSj
+						z+vQCVYfoml1L2ZZU7JgTk7TWDY6
+						iXU3rZrRODUsjLClmVMWSzv00Lrz
+						qA4bbgtzJW0OjmqDw2MmRjVu2RRG
+						YOKExuRfidHMqCMGE5B6Gj2qyUV5
+						CxllRKgpnGg9m7Gn7kYPPjI63May
+						xO3ZrJokCsvcaAZdpyan+sp8DP6U
+						UAT4xt7+ZWkiA1FOb380jiVut9YW
+						DslqWTEu9zCn9jMaI+ExhWQP5mcv
+						wzm+jLCkV01tSrO0vEqNIZO5iLnH
+						9nLZGbbPnagMps2V0ApnoZsgjmTb
+						c2Vn0lTzVR8y59KtNrzsa8yZT5MH
+						lslqwaMNjhZYJLSyQEDLByiwFDau
+						U3DbWPmsoDU8e1UZS9ou6ELRMFgx
+						5zdhNha0gcmCNmputrnxPPli9F6m
+						OwiDZDDd09qCR1tPUSOHhosGOTQ6
+						Zp6UAdRDafMYR7jebI9VbECaeVLF
+						l4aN5RiWIRmLygAmaQQBj80fPWkA
+						zNlUwUbY8MQCARvnMCGOwMQC5+Bk
+						m6/YZCsy8L4ysSA4FGNZgoA4j4Ob
+						s3EWa0VgHjV8LsNjeI0AV8FFi2g1
+						WoaYF/G+4yXwfIBUkGgRV6GNiF4g
+						c0WvEXU45pDDsByLMziUVWfGzOcD
+						gMvsHhX1sIbpEsljZeD7JqlOskT5
+						gpUvZC1WbFCNocEfoUTbgmHStqAh
+						YoD6tKke6td6GD7B8AkHLzK8W+uh
+						pJrg8jmsuyFKsE/vNONYkuqqV6MF
+						+SKLlIWHSkH+n1bhLJwWzsAJ/izc
+						I0zCPeQ1eNYtwwlhAR8K9/B1SHsR
+						0ty/Qy3ijgKgj527ZQBE6EB4HEKI
+						YfdBHh/WBGfAe6YIbnvuwRujD/z2
+						vAEOwjEikg5SIGc4gbuOe4D7Cc9k
+						cnAaF/vw3sLjutVGwMXhfYD3egTe
+						TaBNb9OVIOnuVnRFX99eFVfiG/E5
+						zQ9ceSHPHVx8wHXiz9vywrtMzgm8
+						7dyAd6cwxGGLEVN5X60kBQK8Vu8L
+						ilABgTBUpyyQxbp+S6yGRDNE7Ceh
+						BFH+shJbD+kIKjKn1Tet0dwaqg65
+						3fqGDTX1YjgcqtY7NnTJ3Jfeee+P
+						b82+uMF7zZYJNHXLcwdPPfO9F44d
+						F9Klt0sXSr8vvZE1j4ih0kFzW2Z8
+						19hbi8qlX378LvkV8+U9Sxf4+4U0
+						WtpkhCp53lPF11SL/pQlyqCgicvG
+						oVE1uPP17a56UGTQO2rcTRoawWzY
+						GMYPjv8t/YkEfzv/peh8/ic/+9nJ
+						R+7Lh0gTcZNK0rrebPvo/bc+7tql
+						M98wjb9FjSGIwlZjTa034vfzvFfh
+						666J+PstKRKLcH4+EgFRDKN3ZKj8
+						lBnQHWm7efdNzWWDnGAsGxUMh+PV
+						zCtoksjXi+54ZxO392LpIwKvn/rN
+						ld9zZ39w0/ztu574/JMvydxTR0Kk
+						AS0USHfpg3eHzl9Y1Ty2tk6QXzvz
+						n+fQTvymIOtcZzEXKqDRCHoxrQiR
+						KrMBEhAFTiJhSCQSZ29i0VJ0O1Rx
+						jA/fqXdUh0OiVk9qJyY+l4hpWiwh
+						JMi12Y5rW/HTi8AJvFVP4/7rod9o
+						WOXxQr3HG5JlxavU8w1aNKREghJ4
+						lbAQiARS1uqIDAm9WQE9ktD15fxg
+						oSj/BbvXt8eVTjsYiqbILCg46jWY
+						Jbpq92iQIgpfmPv2U1NX/u2JiZGw
+						2PrMJCEDQtfz+44d41791sMLryx+
+						hXuPVP34zcVnhcSjw9bpmyZfem2x
+						u2yvUIn2BmG9EQl40OCgN1gVCngl
+						SUhZkuxDa9EXeiKBMYFPspclywrD
+						mEFxVVH47xYeOvMfE+kq8VYikX3c
+						6SOPvvJrW+vR0n6m0c4QoRs1BiAC
+						a41QhbsKy7F2lQ9LxifzcsriV2Tl
+						cj0SGbBIuC6Wm0HilIbtFaG7VPrv
+						B9+YJdzb55euPPPK8eOv/Pj48TNc
+						vHSpdK5AuO8QH1lX+nnpz+cvXz7/
+						9p8+Ku+Zu4QWyNBihCu8Xp+PCyoV
+						eIJIvjC4WOU6NcvicbVc17eT5apY
+						DgA3ntxR1Tdw+NhE2ufufUxIV96s
+						XDjOdvvygRzmQhprwUQ9GnQaUT/U
+						BcEVrBEaG/x1fDi8KmWFZd7zqe2C
+						fTw44Ud9LM/WdNnHQGfTmmu5rs4N
+						KyqzZjXHm7/56RtzR048/e37H/uX
+						r/aeXaD/3PjU1+5/4iD9x3/oJdGH
+						n+y9beQ2a2Rmw/WZ27bf+42esR7z
+						xsx0oitzO1pXu3SBO+hK4dlwvbFa
+						ClRVeTiPTxFqqisrA5I3KAWxWiUX
+						9Fuuq/EATEs90lYuTjzM1rc3svMB
+						Q9OlaF0bN+pKPBxXQtXk3O5U/+5v
+						fu3ppzt0kiidNvvkocjj/8q9tKn1
+						Uunjzy4OffEAWnAUz1EOvzKD0G7U
+						BNxuH1EUX6iqwu8JSv6wnX9l1Ql9
+						RSRY6hFUwo5HLBNtjSay1COBwkM/
+						fGE8HRRvxUNxXkgsGkceffnXnHn5
+						9D8dJfPcj+x3gP2SWJqG8v9TbPCT
+						LoDpwREeDw0XvkPcxEO8mD9+MMk4
+						mSBTZA/ZS+4gd5J9ZD9x/kNC0Hrn
+						jSWiJ2HbiDk2YDXvmJm6YzR3x/7W
+						G/bckp+FvwA8NEunCmVuZHN0cmVh
+						bQplbmRvYmoKMjEgMCBvYmoKMzIx
+						OQplbmRvYmoKMjIgMCBvYmoKKGJ1
+						ZGR5Y2xvdWQuY29tLWRpYWdyYW1z
+						LmdyYWZmbGUpCmVuZG9iagoyMyAw
+						IG9iagooTWFjIE9TIFggMTAuOS4y
+						IFF1YXJ0eiBQREZDb250ZXh0KQpl
+						bmRvYmoKMjQgMCBvYmoKKFNpbW9u
+						IFRlbm5hbnQpCmVuZG9iagoyNSAw
+						IG9iagooT21uaUdyYWZmbGUgNi4w
+						LjUpCmVuZG9iagoyNiAwIG9iagoo
+						RDoyMDE0MDUwNjEyMjgzNFowMCcw
+						MCcpCmVuZG9iagoxIDAgb2JqCjw8
+						IC9UaXRsZSAyMiAwIFIgL0F1dGhv
+						ciAyNCAwIFIgL1Byb2R1Y2VyIDIz
+						IDAgUiAvQ3JlYXRvciAyNSAwIFIg
+						L0NyZWF0aW9uRGF0ZQoyNiAwIFIg
+						L01vZERhdGUgMjYgMCBSID4+CmVu
+						ZG9iagp4cmVmCjAgMjcKMDAwMDAw
+						MDAwMCA2NTUzNSBmIAowMDAwMDEz
+						MDY0IDAwMDAwIG4gCjAwMDAwMDA0
+						MTQgMDAwMDAgbiAKMDAwMDAwODkw
+						NSAwMDAwMCBuIAowMDAwMDAwMDIy
+						IDAwMDAwIG4gCjAwMDAwMDAzOTUg
+						MDAwMDAgbiAKMDAwMDAwMDUxNyAw
+						MDAwMCBuIAowMDAwMDAwNjY1IDAw
+						MDAwIG4gCjAwMDAwMDEwMDMgMDAw
+						MDAgbiAKMDAwMDAwMjQ4OSAwMDAw
+						MCBuIAowMDAwMDA5MDUyIDAwMDAw
+						IG4gCjAwMDAwMDg4NjggMDAwMDAg
+						biAKMDAwMDAwMTAyMiAwMDAwMCBu
+						IAowMDAwMDAxMjU3IDAwMDAwIG4g
+						CjAwMDAwMDEyNzYgMDAwMDAgbiAK
+						MDAwMDAwMjQ2OCAwMDAwMCBuIAow
+						MDAwMDAyNTI1IDAwMDAwIG4gCjAw
+						MDAwMDg4NDcgMDAwMDAgbiAKMDAw
+						MDAwODk4OCAwMDAwMCBuIAowMDAw
+						MDA5MjkxIDAwMDAwIG4gCjAwMDAw
+						MDk1MjIgMDAwMDAgbiAKMDAwMDAx
+						MjgzMSAwMDAwMCBuIAowMDAwMDEy
+						ODUyIDAwMDAwIG4gCjAwMDAwMTI5
+						MDIgMDAwMDAgbiAKMDAwMDAxMjk1
+						NCAwMDAwMCBuIAowMDAwMDEyOTg2
+						IDAwMDAwIG4gCjAwMDAwMTMwMjIg
+						MDAwMDAgbiAKdHJhaWxlcgo8PCAv
+						U2l6ZSAyNyAvUm9vdCAxOCAwIFIg
+						L0luZm8gMSAwIFIgL0lEIFsgPDQw
 						MzQyN2JhYTkyMDVlMGZkMmNlMTg0
-						ODM0MTU0NjAyPiBdID4+CnN0YXJ0
-						eHJlZgoxMzE4NAolJUVPRgoBAAAA
-						EgAAAFBhc3RlZCBHcmFwaGljLnBk
-						ZgEAAAASAAAAUGFzdGVkIEdyYXBo
-						aWMucGRmAQAAAB4AAAABAAAAAgAA
-						AC4uEAAAAAAAAAC2AQAAAgAAAAEA
-						AACGhoaGhg==
+						ODM0MTU0NjAyPgo8NDAzNDI3YmFh
+						OTIwNWUwZmQyY2UxODQ4MzQxNTQ2
+						MDI+IF0gPj4Kc3RhcnR4cmVmCjEz
+						MTg0CiUlRU9GCgEAAAASAAAAUGFz
+						dGVkIEdyYXBoaWMucGRmAQAAABIA
+						AABQYXN0ZWQgR3JhcGhpYy5wZGYB
+						AAAAHgAAAAEAAAACAAAALi4QAAAA
+						AAAAALYBAAACAAAAAQAAAIaGhoaG
 						</data>
 					</dict>
 					<key>TextPlacement</key>
@@ -30967,7 +30650,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -31068,14 +30751,15 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\b\fs60 \cf0 XMPP-FTW\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f1\b0\fs32 SDK to build apps on top of \
+\f1\b0\fs32 \cf0 SDK to build apps on top of \
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -31210,15 +30894,15 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
-\f0\b\fs60 \cf2 Buddycloud Server\
+\f0\b\fs60 \cf0 Buddycloud Server\
 \pard\pardeftab720\sl480\sa320
 
-\f1\b0\fs32 \cf2 A Buddycloud server written in Java. Source code\
+\f1\b0\fs32 \cf0 A Buddycloud server written in Java. Source code\
 }</string>
 					</dict>
 					<key>TextPlacement</key>
@@ -31304,7 +30988,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -31392,7 +31076,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -31480,7 +31164,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -31573,7 +31257,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -31710,7 +31394,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -31852,7 +31536,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;\red38\green38\blue38;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -31862,6 +31546,7 @@
 \f1\b0\fs32 \cf2 Realtime indexing and search for content.\
 \
 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 \cf3 \
 }</string>
 					</dict>
@@ -31997,7 +31682,7 @@
 						<key>Align</key>
 						<integer>0</integer>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf190
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
 {\fonttbl\f0\fnil\fcharset0 OpenSans;\f1\fnil\fcharset0 OpenSans-Light;}
 {\colortbl;\red255\green255\blue255;\red245\green250\blue255;\red38\green38\blue38;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
@@ -32089,7 +31774,7 @@ More text here\cf3 \
 		<key>BottomSlabHeight</key>
 		<real>399</real>
 		<key>CurrentSheet</key>
-		<integer>12</integer>
+		<integer>4</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
@@ -32099,13 +31784,13 @@ More text here\cf3 \
 		<key>ShowRuler</key>
 		<true/>
 		<key>Sidebar</key>
-		<false/>
+		<true/>
 		<key>SidebarWidth</key>
-		<integer>0</integer>
+		<integer>230</integer>
 		<key>SmallIcons</key>
 		<true/>
 		<key>VisibleRegion</key>
-		<string>{{7, 569}, {949, 591}}</string>
+		<string>{{-87, 0}, {733, 606}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>

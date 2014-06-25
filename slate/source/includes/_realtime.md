@@ -15,17 +15,15 @@ socket.send('xmpp.buddycloud.presence',
 ???  (does this ACK or just start sending events?)
 ```
 
-Your app can receive realtime upates for all Buddycloud events. These events include:
+Your app can receive realtime upates for all Buddycloud events. Events include:
 
 * new posts from followed channels
 * new posts from all public channels via the firehose
 * new follow requests
-* subscription updates (For example "you were approved as a moderator on dev-ops@example.com)
-
-When your users are not online, these events are spooled up in rhe user's inbox. 
+* subscription updates (e.g. "a moderator approved your follow request for `citizens-of-verona@verona.lit`")
 
 To begin receiving messages since the user was last online, and enable streaming of subsequent events, you should tell the server that the client is now online.
 
-??? Add bit about using MAM to query for subscription events since you were last online???
+To retrieve a history of events (for example since last online) use the [message archive management](#retrieve-message-history) API. 
 
-<aside>Buddycloud uses the ???Justin: GRIT specification??? from and [Fanout's](https://fanout.io) realtime content delivery network for scaling realtime event pushes. The [Fanout.io Documentation](https://fanout.io/docs/) has details on getting this setup.</aside>
+<aside>Buddycloud uses the [GRIP protocol](https://github.com/fanout/pushpin/blob/master/doc/grip-protocol.txt) for realtime event scaling. This works with the Fanout.io content delivery network. To set this up, get a Fanout account and configure the Buddycloud HTTP API component as described in the blog post "[Scaling Buddycloud with Fanout"](http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanout-io)".</aside>
