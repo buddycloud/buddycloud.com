@@ -21,11 +21,11 @@ Variable | Description
 ---------|------------
 `channelID`| (the JID-like part) we call it the `channelID` (not `channel-name`)
 `mediaID` | the id of a media object
-`buddycloudID`| user's log in / their jid (we nevr mention `jid`)
+`buddycloudID`| user's log in / their jid (we never mention `jid`)
 
 ##Examples
 
-Use examples from romeo and juliet. (not alice and bob)
+Use examples from Romeo and Juliet. (not alice and bob). If you didn't study at school, en.wikipedia.org/wiki/Characters_in_Romeo_and_Juliet 
 
 ## Table headings 
 
