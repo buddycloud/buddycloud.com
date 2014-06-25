@@ -21,11 +21,19 @@ socket.send(
 
 > The data variable will have the Buddycloud server address. For example `buddycloud.example.com`
 
-Usually mobile apps will hardcode the API. However if you are designing an application where users on multiple Buddycloud sites should log in, you need to be able to discover the API for each user's domain. For example `juliet@capulet.lit` will connect to `https://buddycloud.capulet.lit/api` and romeo@montague.lit use, `https://montague.lit/buddycloud/api`.
+API discovery takes care of finding the API endpoint to use for each domain running Buddycloud services. 
+ 
+Usually mobile apps will hardcode the API URL (e.g. `https://api.twitter.com/1.1/`) . However if your application is designed for users on multiple Buddycloud it's necessary to discover the API URL for each user's domain. 
 
-To find out the API for a domain,
+For example:
 
-- clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org`.  The results return an [IANA service record](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=buddycloud). 
+* `juliet@capulet.lit` connects to the Capulet Buddycloud API using `https://buddycloud.capulet.lit/api`.
+* `romeo@montague.lit` connects to the Montague Buddycloud API using `https://montague.lit/buddycloud/api`.
+
+To find the API for a users domain:
+
+- clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org.`.  
+- The results return an [IANA service record](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=buddycloud). 
 
 Parameter | Description        | Example
 ----------|--------------------|----------
