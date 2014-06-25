@@ -15,6 +15,11 @@ channel access: `public` and `private`
 
 - (not open, or closed)
 
+
+##Nodes
+Use _channel-nodes_ when referring to _pub-sub nodes_ or _nodes_ to give the developer context that these are part of a channel.
+
+
 ##Naming variables:
 
 Variable | Description
