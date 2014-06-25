@@ -40,3 +40,8 @@ Argument   | Required | Notes
 `username`   | `true`     | Must contain a domain element that matches the virtual host.
 `password`   | `true`     | The API is agnostic to password strength requirements.
 `email`      | `false`    | An Email address to receive push notifications and password resets.
+
+## Apps not clients
+
+* wrong: A client might want to just show the latest 10 posts per channel
+* right: An app might want to just show the latest 10 posts per channel
