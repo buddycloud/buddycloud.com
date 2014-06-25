@@ -19,6 +19,7 @@ curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
 
 >This will hang until a response is returned, such as:
 
+```json
 {
   "last": "1403624094454",
   "items": [
@@ -62,4 +63,4 @@ To begin receiving messages since the user was last online, and enable streaming
 
 To retrieve a history of events (for example since last online) use the [message archive management](#retrieve-message-history) API. 
 
-<aside>Buddycloud uses the [GRIP protocol](https://github.com/fanout/pushpin/blob/master/doc/grip-protocol.txt) for realtime event scaling. This works with the Fanout.io content delivery network. To set this up, get a Fanout account and configure the Buddycloud HTTP API component as described in the blog post "[Scaling Buddycloud with Fanout"](http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanout-io)".</aside>
+<aside>Buddycloud uses the [GRIP protocol](https://github.com/fanout/pushpin/blob/master/doc/grip-protocol.txt) for realtime event scaling. This works with the Fanout.io content delivery network. To set this up, get a Fanout account and configure the Buddycloud HTTP API component as described in the blog post on [scaling Buddycloud with Fanout](http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanout-io).</aside>

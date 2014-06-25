@@ -55,7 +55,7 @@ Users can create any number of topic channels. An error is returned if there is 
 <aside>At sign-up, each user has a personal channel automatically created for them. For example `user@example.com` will have a channel created called `user@example.com` auto-created. Remember, new topic channels are created in their own namespace (`user@topics.example.com`).</aside>
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/:topic-channel-name`
+`POST https://demo.buddycloud.org/api/{channelID}`
 
 
 ##Delete Channel
@@ -107,8 +107,8 @@ Channel metadata is always visible for both public and private channels.
 
 Argument            | Editable | Values | Description
 ------------------- | -------- | -------| -----------
-title               | true     | ???@lloyd: max length? | The channel's title.
-description         | true     | ???@lloyd: max length? | A short string describing the channel 
+title               | true     | up to 50 characters | The channel's title.
+description         | true     | up to 200 characters | A short string describing the channel 
 creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | When the channel was created
 access_model        | true    | `open`, `authorize` | Whether the channel is `open` for anyone to view or if followers should first be `authorize`d to view it.
 channel_type        | false   | `personal`, `topic` | Whether this is a users `personal` channel or a `topic` channel
@@ -117,4 +117,4 @@ default_affiliation | true | `publisher`, `follower` | The role new followers in
 A complete set of channel metadata is avaliable from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel-name/metadata/:node`
+`POST https://demo.buddycloud.org/api/{channelID}/metadata/{nodeID}`

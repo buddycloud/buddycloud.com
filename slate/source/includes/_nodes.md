@@ -13,11 +13,11 @@ These channel-nodes:
 - are described as the `juliet@capulet.lit` channel,
 - share a common set of followers,
 - share a common set of publishers,
-- share common metadata (e.g. _title_, _description_, _location_ fields)
+- share common metadata (e.g. `title`, `description` and `location` fields)
 
 ###Default Channel-Nodes
 
-Your application can use the default channel-nodes or define new channel-nodes with new content types. Each channel is preconfigured with the the default channel-nodes:
+Your application can use the default channel-nodes or define new channel-nodes with new content types. Creating a new channel automatically creates the following nodes:
 
 Name             | Personal Channel |Topic Channel | Description 
 -----------------|:---------------: |:------------:|----------------
@@ -41,9 +41,9 @@ public-key       | ✓                | ✗            | Public key for secure m
 ???
 ```
 
-It's recommended to create new nodes for new applications. `X-application-<your-application-name>` will avoid bumping into other developers' application namespaces.
+<aside>It's recommended to create new nodes for new applications. For example `x-application-<your-application-name>`.
 
-For example: A chess app would create an `x-application-ChessApp` channel-node.  Competing players could use this channel-node to keep state between two games.
+For example: A chess app would create an `x-application-ChessApp` channel-node. Competing players could use this channel-node to keep state between two games.</aside>
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`

@@ -6,7 +6,7 @@ New post is are automaticaly:
 
 * pushed to the channel's online followers
 * spooled up for the channel's offline followers
-* pushed to the server's firehose
+* pushed to the [firehose](#access-firehose)
 * archived and retrievable using the [fetch posts](#fetch-posts) method.
 * indexed by the [channel crawler](https://github.com/buddycloud/channel-directory)
 
@@ -48,7 +48,7 @@ Creating a post adds a new item to a channel's node.
 
 ???The server will timestamp the message/the client's timestamp will be respected?'
 
-<aside class="warning">You can define your own format for your own application nodes (for example `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated according to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
+<aside>You can define your own format for your own application nodes (e.g. `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated according to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
 
 ### HTTP Request
 
