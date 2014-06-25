@@ -44,7 +44,7 @@ Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_I
 ???
 ```
 
-Creating a post adds a new item to a channel's node. 
+Creating a post adds a new item to a channel-node.. 
 
 ???The server will timestamp the message/the client's timestamp will be respected?'
 
@@ -71,7 +71,10 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID
 
 Removes a single post from a node.
 
-The Buddycloud server will also issue a retraction message to the channel's subscribers.
+When a post is deleted,
+
+* the post is deleted from the channel-node's history,
+* a retraction message is sent to online users.
 
 <aside>Deleting a post that references a mediaID will not remove the media object from the media server. That should be done seperately using a [delete media](#delete-media) query.</aside>
 
@@ -118,10 +121,9 @@ Content-Type: application/json
 
 Retrieves one or more posts using [pagination](#pagination) ranges.
 
-The Buddycloud server will store all posts including post revocations (deleted posts).
+This is useful for retrieving just the posts from an individual node. Consider using the [sync posts](#sync-posts) call for requesing posts across all channels a user follows.
 
 ##Fetch Child Posts
-
 
 ```shell
 POST_ID=qux
@@ -166,7 +168,9 @@ Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.
 
 ## Fetch Parent Posts
 
-Often it's useful to quickly show the 20 most recent posts. However some of these posts may references a parent post outside of the client's cache. To retrieve a missing parent post, you can query for the post ID that matches the clients `replyTo`.
+Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps's cache. 
+
+To retrieve a missing parent post, you can query for the post ID referenced by the post's `replyTo`.
 
 ```shell
 ???
@@ -191,9 +195,11 @@ Often it's useful to quickly show the 20 most recent posts. However some of thes
 
 ````
 
-Sometimes it's useful to quickly retrieve a number of posts to draw a client screen. A client might want to just show the latest 10 posts per channel (older posts can be paged in as the users scrolls down). 
+An app might want to just show the latest 10 posts per channel (and query for older posts can be paged in as the users scrolls down). 
 
-The `sync` query is a "show me [???up to???] 10 posts per channel newer than [date of most recent post in client cache]. This avoids the problem of a very busy channel "drowning" other posts during a client synchronisation.
+The `sync` query returns [???up to???] `<x posts>` posts per channel newer than `<timestamp of most recent post in client cache>`. 
+
+This avoids the problem of a very busy channel "drowning" other posts during a client synchronisation.
 
 Paramenter | Required | Value      | Description
 -----------|----------|------------|------------
@@ -213,7 +219,7 @@ Paramenter | Required | Value      | Description
 ???
 ```
 
-Your users can give feedback to eachother by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
+Users can can give feedback on posts by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
 
 ##Access Firehose
 
@@ -226,8 +232,15 @@ lloyd??? I have no idea how to access this
 ???
 ```
 
-The `/firehose` contains a feed of all channel nodes that you are subscribed to that are cached locally.
+The `/firehose` contains a feed of all channel-nodes that you are subscribed to that are cached locally.
 
 The firehose node can also be queried for historical posts using [pagination](#pagination).
 
-The firehose will only show posts from public channels. If you are logged in you can also retrieve posts that you subscribe to from private channels.
+If unauthenticated, the firehose will show posts from public channels.
+
+If you are logged in you can also retrieve posts that you subscribe to from private channels.
+
+### HTTP Request
+
+`GET ???`
+
