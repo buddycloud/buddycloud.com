@@ -1,8 +1,42 @@
 #Realtime Events
 
 ```shell
-# Justin needs to tell us how to do this
+curl https://demo.buddycloud.org/api/notifications/posts
 ```
+
+> This will always return 0 items and the latest timestamp:
+
+{
+  "last": "1403624041808",
+  "items": []
+}
+
+> Then, make another request with the "since" query parameter set to the last known timestamp:
+
+```shell
+curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
+```
+
+>This will hang until a response is returned, such as:
+
+{
+  "last": "1403624094454",
+  "items": [
+    {
+      "id": "f27139a9-f398-4e81-be94-3d14c3b7a39e",
+      "source": "test@topics.buddycloud.org/posts",
+      "author": "justin@buddycloud.org",
+      "published": "2014-06-24T15:34:54.449Z",
+      "updated": "2014-06-24T15:34:54.449Z",
+      "content": "foo",
+      "media":null,
+      "replyTo":"d818f9b6-18ef-4b83-8a4e-e2d2ae7d18d5"
+    }
+  ]
+}
+```
+
+> Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
 
 ```javascript
 socket.send('xmpp.buddycloud.presence',
@@ -15,7 +49,9 @@ socket.send('xmpp.buddycloud.presence',
 ???  (does this ACK or just start sending events?)
 ```
 
-Your app can receive realtime upates for all Buddycloud events. Events include:
+Your app can receive realtime upates for all Buddycloud events. 
+
+Supported realtime events include:
 
 * new posts from followed channels
 * new posts from all public channels via the firehose
