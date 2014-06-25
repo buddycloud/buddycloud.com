@@ -25,7 +25,7 @@ Variable | Description
 
 ##Examples
 
-Use examples from Romeo and Juliet. (not alice and bob). If you didn't study at school, en.wikipedia.org/wiki/Characters_in_Romeo_and_Juliet 
+Use examples from Romeo and Juliet. (not alice and bob). If you didn't study at school, use the following [character list]([https://en.wikipedia.org/wiki/Characters_in_Romeo_and_Juliet)
 
 ## Table headings 
 
