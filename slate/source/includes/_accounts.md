@@ -77,7 +77,7 @@ curl https://demo.buddycloud.org/api/account/pw/change \
          }'
 ```
 
-```javascript```
+```javascript
 ???
 ```
 
