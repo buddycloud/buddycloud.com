@@ -8,7 +8,7 @@ Based on what channels a user follows, the recommendation service will then sugg
 
 It is also possible to query for similar channels to a channel. For example, querying for similar channels to football@example.com might return, worldcup@example.org and fifa-scandal@other-domain.com.
 
-<aside>Federated Buddycloud sites are crawled for a list of channels and followers. The crawler builds a social graph that can then be queried.</aside>
+<aside>Buddycloud enabled domains [that federate with other Buddycloud enabled domains] are reguarly crawled for a list of channels and followers. The crawler uses the list of followers to build a social graph that is then used for recommendation.</aside>
 
 
 ##Recommend Channels
