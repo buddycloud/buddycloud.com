@@ -74,5 +74,46 @@ To begin receiving messages your application should enable [realtime event](#rea
 
 ##Retrieve Message History
 
-???
 
+```javascript```
+socket.send(
+            'xmpp.mam.query'
+            {
+             /* "queryId": "query-id", */
+             /* "with": "juliet@calulet.lit", */
+             /* "start": "2013-10-01T12:00:00Z", */
+             /* "end": "2013-11-01T12:00:00Z", */
+             /* "rsm": ...RMS payload... */
+            },
+            function(error, data) { console.log(error, data) }
+        )
+```
+
+```json
+{
+            from: {
+                domain: 'capulet.lit',
+                user: 'juliet'
+            },
+            content: 'When he shall die,
+                      Take him and cut him out in little stars,
+                      And he will make the face of heaven so fine
+                      That all the world will be in love with night
+                      And pay no worship to the garish sun.',
+            format: 'plain',
+            mam: {
+                to: {
+                    domain: 'montague.lit',
+                    user: 'romeo',
+                    resource: 'balcony-phone-app'
+                },
+                id: '1234',
+                queryId: 'query-id'
+            },
+        }  
+```
+
+It's possible to request a message history. This can be between one user `"with": "juliet@calulet.lit"` or a spool of all archived messages. 
+
+
+       
