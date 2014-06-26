@@ -28,11 +28,12 @@ The [friend finder](https://github.com/buddycloud/buddycloud-friend-finder) is s
 Social Graph | Calculating
 -------------|--------------
 `email`      | `sha256(email:<email-address>)`
-`phone`      | `sha256(phone:<[MSISDN](http://en.wikipedia.org/wiki/MSISDN) format number>)`
+`phone`      | `sha256(phone:<MSISDN format number>)`
 `Twitter`    | `sha256(twitter:<Twitter username without the '@'>)`
 `Facebook`   | `sha256(facebook:<numeric-id>)`  ([retrieving the Facebook numeric-id](https://developers.facebook.com/tools/explorer/145634995501895/?method=GET&path=me%3Ffields%3Did%2Cname&version=v2.0))
 
-For example the phone number `+1 212 555 1212` would be calculated as `sha256(phone:12125551212)` and return a hash of `48efa7f270c05714225254fb71b0e8f691379177fc298547c74261faf0ef6d08`.
+###Calculating the hash
+For example, the phone number `+1 212 555 1212` would be rewritten to the [MSISDN](http://en.wikipedia.org/wiki/MSISDN) equivalent (no spaces, no leading `+`) and calculated as `sha256(phone:12125551212)` to return a hash of `48efa7f270c05714225254fb71b0e8f691379177fc298547c74261faf0ef6d08`.
 
 The `POST` requst should prefix the hash with `mine` and `others` to identify the hash source. Multiple `mine` hashes can be uploaded at the same time.
 
