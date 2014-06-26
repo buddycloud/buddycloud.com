@@ -1,13 +1,15 @@
 #Subscriptions
 
+The subscription list includes all the channels a user follows and their role in the channel. 
+
 Retrieving your users' channel subscription list will return
 
-* the channels (and nodes) that they follow
-* the channels (and nodes) they have asked (subscription state is `pending`) to follow (private channels require approval of the channel owner or channel moderators).
+* the channels (and channel-nodes) that they follow (`owner`, `moderator`, `publisher`, `member` )
+* the private channels (and channel-nodes) they have asked (subscription state of `pending`) to follow.
 
-Each item also contain the user's role (`owner`, `moderator`, `publisher`, `member` or `pending`) in that channel.
+### Subscription Privacy
 
-<aside class="warning">All subscription requests require authentication.</aside>
+Users can only request their own subscriptions.
 
 ##Fetch Subscriptions
 
@@ -52,11 +54,12 @@ curl https://demo.buddycloud.org/api/subscribed \
 ???
 ???
 ```
-Following behavior is dependent on the channel type.
+Following behavior is dependent on the channel type:
 
-Following an _open_ channel is automatically allowed.
+* Following an _open_ channel is automatically allowed.
+* Following a _private_ channel generates a `pending` subscription request
 
-Following a _private_ channel generates a `pending` subscription request
+Following a _private_ channel:
 
 * the user is added to the channel's `pending` subscription list
 * the channel's `owner` or a `moderator` receives a subscription request (immediately if they are online or queued up for when they come online)
@@ -88,8 +91,6 @@ curl https://demo.buddycloud.org/api/subscribed \
 Unfollowing a private channel removes the ability to read, upvote or delete posts. 
 
 Unfollowing a private channel will require re-requesting a subscription and re-approval of a moderator. 
-
-Unfollowing a channel will not remove that user's posts from the channel.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/subscribed`
