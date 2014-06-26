@@ -1,6 +1,6 @@
 #Media
 
-The media server helps you add media sharing to channels. Users can upload a file to a channel and this is then shared with the followers of that channel. Only users that follow this channel can access the media. 
+The media server enables media sharing in channels. Users can drag-n-drop files into a channel and the contents are then shared with *only* that channel's followers.
 
 Media can be any type of file, and any file size (Buddycloud site administrators usually set about 10GB as a maximum size.)
 
@@ -10,8 +10,8 @@ Media Metadata
 
 Parameter        | Required   | Description
 -----------------|------------|--------------------------------------------
-`height`           | server-set | Height of the uploaded image or video. This is calculated by the server and not `editable.
-`width`            | server-set | Width of the uploaded image or video. This is calculated by the server and not `editable.
+`height`           | server-set | Height of the uploaded image or video. This is calculated by the server and not user-editable.
+`width`            | server-set | Width of the uploaded image or video. This is calculated by the server and not user-editable.
 `author`           | server-set | the `BuddycloudID` of the uploader
 `shaChecksum`      | server-set | SHA1 file checksum
 `uploadedDate`     | server-set | when the media was uploaded
@@ -22,28 +22,9 @@ Parameter        | Required   | Description
 `title`            | optional   | a short title of the object
 `description`      | optional   | a longer form description of the object
 
-
-
 ###Special MediaIDs
- 
- 
-```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
-```
 
-```javascript```
-???
-???
-```
-
-```json
-???
-???
-```
-
-The media `id` of `avatar` is currently reserved and used for storing a channels avatar.
+The media `id` of `avatar` is currently reserved and used for storing a channels avatar. Uploading with the `avatar` `id` will replace the user's avatar.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
@@ -131,7 +112,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
 
 This request returns a media file.
 
-The request can also be used to return an image preview or small user avatar sized files.
+The request can also be used to return an image preview or small user avatar sized files by adding the `maxheight` and `maxwidth` parameter to the request.
 
 If the media object belongs to a public channel, you don't need an Authorization header. Notice that if you're building a web frontend, embedding public media from the media-server means just creating an ```<img>``` tag.
 
@@ -192,7 +173,7 @@ Content-Type: application/json
 ???
 ```
 
-Enables media file and metadata uploading and modification. 
+This call enables media and media-metadata uploading and modification.
 
 Posting new media will return the object `id` and metadata.
 
@@ -217,6 +198,8 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ???
 ```
+
+Removes media from the channel.
 
 Deleting media will remove it from the requested channel. This does not remove it from other channels where it has been reshared.
 
