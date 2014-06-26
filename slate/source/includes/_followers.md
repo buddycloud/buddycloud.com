@@ -4,8 +4,8 @@ Channel followers can have different roles.
 
 Role       | User sees      | Description
 -----------|----------------|-------------
-`owner`    |`owner`         |add and remove `moderator`s
-`moderator`|`moderator`     |approve new `followers` and delete posts
+`owner`    |`owner`         |add/remove moderators 
+`moderator`|`moderator`     |approve subscription requests & delete posts
 `publisher`|`follower+post` |create posts
 `member`   |`follower`      |only view posts
 `pending`  |`pending`       |nothing
@@ -41,7 +41,11 @@ Content-Type: application/json
 ???
 ```
 
-Retrieves a list of followers and their role in that channel.
+This request returns a list of channel followers and their role in the channel.
+
+Public channels | Private Channels
+----------------|------------------
+Return the list without authentication | requesting user must also be an `owner` `moderator` `publisher` or `member` of the channel
 
 ???we really need a way to query by role type - eg show me just the moderators of this channel???
 
@@ -110,7 +114,13 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/appr
 ???
 ```
 
-This allows you to approve or deny incoming subscription requests, by assigning states to these subscription requests. Possible states are: `subscribed`, in order to approve the request; or `none`, in order to deny it.
+This allows a channel's `owner` or `moderator` to approve or deny incoming subscription requests.
+
+Subscription State | Description
+-------------|--------------
+`pending`    | No action taken by `owner` or `moderator`.
+`subscribed` | Permission to follow channel granted. 
+`none`       | Permission to follow channel denied.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve`
@@ -132,7 +142,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
 ???
 ```
 
-This lets you promote (or demote) user subscriptions to `publisher`, `member` or even `moderator`. By setting a subscription to `outcast` you will be actively banning that user.
+This enables users to promote (or demote) user subscriptions to `publisher`, `member` or even `moderator`. By setting a subscription to `outcast`, the user is banned.
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node`
