@@ -4,7 +4,7 @@ Direct messages give you a quick way to send messages betwen users on your Buddy
  
 ##Post Message
 
-```javascript```
+```javascript
 socket.send(
   'xmpp.chat.receipt',
       {
@@ -16,7 +16,7 @@ socket.send(
 
 > Message delivery receipts are received via the `xmpp.chat.receipt` event
 
-```javascript```
+```javascript
 socket.on('xmpp.chat.receipt', function(data) {
   console.log(data);
             /*
@@ -44,7 +44,7 @@ This sends a message to another user. Messages will be stored for the user if th
 
 ##Receive Messages
 
-```javascript```
+```javascript
 socket.on('xmpp.chat.message', function(data) {
   console.log(data)
   })
@@ -75,7 +75,7 @@ To begin receiving messages your application should enable [realtime event](#rea
 ##Retrieve Message History
 
 
-```javascript```
+```javascript
 socket.send(
             'xmpp.mam.query'
             {
