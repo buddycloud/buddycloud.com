@@ -28,7 +28,7 @@ socket.on('xmpp.chat.receipt', function(data) {
         }
 ```
 
-```json
+```javascript
         socket.on('xmpp.chat.receipt', function(data) {
             console.log(data);
             /*
