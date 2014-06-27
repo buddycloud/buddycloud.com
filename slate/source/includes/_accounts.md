@@ -3,8 +3,8 @@
 Your app will need to authenticate users. Some methods used are
 
 * the user creates a `username` and `password`
-* using the phone's [telehone number](http://en.wikipedia.org/wiki/MSISDN) as a `username`
-* no user interaction (your application backend provides a blind `username` and `password` to connect with Buddyclodu services)
+* using the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as a `username`
+* no user interaction (your application backend provides a blind `username` and `password` to connect with Buddycloud services)
 
 ### Query Parameters
 

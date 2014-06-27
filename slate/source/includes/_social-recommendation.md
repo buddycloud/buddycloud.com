@@ -38,7 +38,7 @@ For example, the phone number `+1 212 555 1212` would be rewritten to the [MSISD
 The `POST` requst should prefix the hash with `mine` and `others` to identify the hash source. Multiple `mine` hashes can be uploaded at the same time.
 
 ###Privacy
-The [friend finder](http://github.com/buddycloud/buddycloud-friend-finder) service only ever uploads hashes of identifiers; never real `names`, `phone` numbers, `Twitter` or Facebook` identifiers.
+The [friend finder](https://github.com/buddycloud/buddycloud-friend-finder) service only ever uploads hashes of identifiers; never real `names`, `phone` numbers, `Twitter` or Facebook` identifiers.
 
 Always request your users permission before uploading any identifiers.
 
