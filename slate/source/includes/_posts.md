@@ -16,7 +16,7 @@ Different channel types have different post formats.
 
 Field       | Description | Set by | Example
 ------------|-------------|--------|---------
-`author`    | BuddycloudID| server | `juliet@capulet.lit`
+`author`    | `username`  | server | `juliet@capulet.lit`
 `content`   | [usually] Activity stream content | user   | `O Romeo, Romeo! wherefore art thou Romeo?` 
 `id`        | a unique post ID | server | `17163726-ea90-453e-ad25-455336a83fd4`
 `media`     | a list of media objects the post might refer to | user | `[{"id": "romeo-photo-id", "channel": "alice@capulet.lit"}]`

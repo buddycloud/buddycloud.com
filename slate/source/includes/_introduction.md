@@ -26,7 +26,7 @@ The Buddycloud API uses UTF-8 character encoding.
 Request headers should include a `Content-Type` of `application/json; charset=utf-8`.
 
 ###Authentication
-The Buddycloud API uses HTTP [basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). The `BuddycloudID` should also include the user's domain (`user@example.com`). **What is the BuddycloudID? Do you define it anywhere in the documentation?**
+The Buddycloud API uses HTTP [basic authentication](http://en.wikipedia.org/wiki/Basic_access_authentication). The `username` should also include the user's domain (`user@example.com`).
 
 ###External Authentication
 Buddycloud's backend enables you to authenticate your users against your own site by forwarding login requests to your own API. [Email](mailto:reach-a-developer@buddycloud.com) us to to have this feature enabled for your domain.

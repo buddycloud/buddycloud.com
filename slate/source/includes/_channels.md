@@ -1,23 +1,23 @@
 #Channels
 
 Users subscribe to channels, which work in conjunction with nodes. Channels aggregate nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on. Buddycloud divides channels into two categories: topic (as above) and personal (see example below).
+???needs rework???
+
 
 The personal channel `juliet@capulet.lit` contains nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. When `romeo@montague.lit` follows the channel `juliet@capulet.lit`, the app creates a subscription to all of the nodes under `juliet@capulet.lit`. 
 
 ![Channels and Nodes](/theme/static/img/diagrams/channel%20hierachy.png "Channels and Nodes")
-**typo in the above pathway: "hierarchy"**
-
 
 ### Personal Channels v. Topic Channels
 
 
 Trait       | _Personal_ Channel              | _Topic_ Channel
 ------------|---------------------------------|-----------------------
-BuddycloudID| e.g. `juliet@capulet.lit`       | e.g. `montague-family@topics.montague.org`
+channelID   | e.g. `juliet@capulet.lit`       | e.g. `montague-family@topics.montague.org`
 Purpose     | represents a real person        | represents a topic
 Namespace   | created in `<channelID>@example.com` |created in `<channelID>@topics.example.com`
-Channel ID  | named after a user's `BuddycloudID`| not tied to a user's `BuddycloudID`
-Owned By| owned by the matching `BuddycloudID`| can be owned by any user
+ChannelID   | named after a user's `username`| not tied to a user's `username`
+Owned By    | owned by the matching `username`| can be owned by any user
 Messaging   | can receive private chat messages| not applicable
 Location Sharing| geolocation optionally shared with followers| anyone can search for nearby channels
 
@@ -47,7 +47,7 @@ curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
 
 Users can create any number of topic channels. An error is returned if there is an existing channel with the same `ChannelID`.
 
-<aside>At sign-up, a personal channel is automatically created for each user. For example, `user@example.com` will automatically create a channel called `user@example.com`. Remember, new topic channels are created in their own namespace (`user@topics.example.com`).</aside>
+<aside>At sign-up, a personal channel is automatically created for each user. For example, `juliet@capulet.lit` signing up will trigger the server to automatically create a channel called `juliet@capulet.lit`. Remember, new topic channels are created in their own namespace (`channelID@topics.example.com`).</aside>
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/{channelID}`
@@ -102,6 +102,7 @@ Channel metadata is always visible for both public and private channels.
 
 Argument            | Editable | Values | Description
 ------------------- | -------- | -------| -----------
+channelID           | false    | ≤1023 bytes | e.g. `user@example.com` or `topic@topics.example.com`
 title               | true     | up to 50 characters | the channel's title
 description         | true     | up to 200 characters | a short string describing the channel 
 creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the channel was created

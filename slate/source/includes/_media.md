@@ -12,7 +12,7 @@ Parameter        | Required   | Description
 -----------------|------------|--------------------------------------------
 `height`           | server-set | Height of the uploaded image or video. This is calculated by the server and not user-editable.
 `width`            | server-set | Width of the uploaded image or video. This is calculated by the server and not user-editable.
-`author`           | server-set | the `BuddycloudID` of the uploader
+`author`           | server-set | the `username` of the uploader
 `shaChecksum`      | server-set | SHA1 file checksum
 `uploadedDate`     | server-set | when the media was uploaded
 `lastUpdatedDate`  | server-set | when the media was updated / re-uploaded

@@ -45,4 +45,4 @@ Parameter | Description        | Example
 
 The following API URL reflects the above response:  `https://demo.buddycloud.org:443/api-endpoint`.
 
-<aside>Run the API discvery only if you are building a single app for users on multiple Buddycloud sites logging in with their full BuddycloudIDs.</aside>
+<aside>Run the API discvery only if you are building a single app for users on multiple Buddycloud sites logging in with their full `username`.</aside>

@@ -3,14 +3,14 @@
 Your app will need to authenticate users. Some methods are
 
 * the user creates a `username` and `password`
-* using the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as a `username` **Does the user enter the phone number?**
+* your app uses the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as the `username`
 * no user interaction (your application backend provides a blind `username` and `password` to connect with Buddycloud services)
 
 ### Query Parameters
 
 Argument   | Required | Notes
 ---------- |:--------:|------------
-`username` | ✓        | always of form `user@example.com` **Is this an email address? If so, this would conflict with the note on email (below)...**
+`username` | ✓        | always of form `user@example.com`
 `password` | ✓        | any UTF-8 characters
 `email`    | ✗        | for password resets and (optional) push notifications
 

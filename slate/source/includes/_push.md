@@ -1,6 +1,6 @@
 #Push Notifications
 
-You can schedule certain message types to be pushed to your users. For example, a user can be notified when their BuddycloudID is mentiond in a channel (an _@mention in Twitter), or channels they participate in receive new posts.
+You can schedule certain message types to be pushed to your users. For example, a user can be notified when their `username` is mentiond in a channel (an _@mention in Twitter), or channels they participate in receive new posts.
 
 Push notifications can currently be sent through [GCM](http://developer.android.com/google/gcm/index.html) and email.
 
