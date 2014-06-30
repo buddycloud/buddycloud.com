@@ -1,18 +1,18 @@
 #Accounts
 
-Your app will need to authenticate users. Some methods used are
+Your app will need to authenticate users. Some methods are
 
 * the user creates a `username` and `password`
-* using the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as a `username`
+* using the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as a `username` **Does the user enter the phone number?**
 * no user interaction (your application backend provides a blind `username` and `password` to connect with Buddycloud services)
 
 ### Query Parameters
 
 Argument   | Required | Notes
 ---------- |:--------:|------------
-`username` | ✓        | always of form `user@example.com`
+`username` | ✓        | always of form `user@example.com` **Is this an email address? If so, this would conflict with the note on email (below)...**
 `password` | ✓        | any UTF-8 characters
-`email`    | ✗        | for password resets, optionally for push notifications
+`email`    | ✗        | for password resets and (optional) push notifications
 
 ##Create User
 
@@ -38,7 +38,7 @@ socket.send(
 )
 ```
 
-This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password reset and used for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").
+This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password reset and for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/account`
@@ -57,7 +57,7 @@ curl https://demo.buddycloud.org/api/account \
 
 Removes a user account. 
 
-<aside class="warning">Deleting a user will delete their account _not_ their channels. Your application should first delete their channel(s), then remove the user account.</aside>
+<aside class="warning">Deleting a user will delete their account, _not_ their channels. Your application should first delete their channel(s) then remove the user account.</aside>
 
 ### HTTP Request
 `DELETE https://demo.buddycloud.org/api/account`
