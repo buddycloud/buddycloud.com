@@ -1,4 +1,4 @@
-#API discovery
+#API Discovery
 
 ```shell
 # to resolve the API endpoint for buddycloud.org
@@ -19,18 +19,18 @@ socket.send(
 )
 ```
 
-> The data variable will have the Buddycloud server address. For example `buddycloud.example.com`
+> The data variable will have the Buddycloud server address, for example: `buddycloud.example.com`
 
-API discovery takes care of finding the API endpoint to use for each domain running Buddycloud services. 
+API discovery finds the API endpoint to use for each domain running Buddycloud services. 
  
-Usually mobile apps will hardcode the API URL (e.g. `https://api.twitter.com/1.1/`) . However if your application is designed for users on multiple Buddycloud it's necessary to discover the API URL for each user's domain. 
+Usually mobile apps will hardcode the API URL (e.g. `https://api.twitter.com/1.1/`) . However, if your application is designed for users on multiple Buddycloud sites, it's necessary to discover the API URL for each user's domain. 
 
 For example:
 
 * `juliet@capulet.lit` connects to the Capulet Buddycloud API using `https://buddycloud.capulet.lit/api`.
 * `romeo@montague.lit` connects to the Montague Buddycloud API using `https://montague.lit/buddycloud/api`.
 
-To find the API for a users domain:
+To find the API for a user's domain:
 
 - clients query for the `TXT` record of `_buddycloud-api._tcp.buddycloud.org.`.  
 - The results return an [IANA service record](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml?search=buddycloud). 
@@ -43,6 +43,6 @@ Parameter | Description        | Example
 `path`    | API prefix         | `path=/api-endpoint`
 `port`    | port to use        | `port=443`
 
-The above example would result in the using `https://buddycloud.example.com:443/api-endpoint` as the API.
+The following API URL reflects the above response:  `https://demo.buddycloud.org:443/api-endpoint`.
 
-<aside>You only need run the API discvery if you are building a single app that users on multiple Buddycloud sites will use. That is users logging in with their full BuddycloudIDs.</aside>
+<aside>Run the API discvery only if you are building a single app for users on multiple Buddycloud sites logging in with their full BuddycloudIDs.</aside>
