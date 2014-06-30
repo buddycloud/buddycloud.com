@@ -40,9 +40,14 @@ curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
-```javascript```
-???
-???
+```javascript
+socket.send(
+    'xmpp.buddycloud.create',
+    {
+        "node": "/user/balcony-speeches@topics.montague.lit/posts",
+    },
+    function(error, data) { console.log(error, data) }
+)
 ```
 
 Users can create any number of topic channels. An error is returned if there is an existing channel with the same `ChannelID`.
