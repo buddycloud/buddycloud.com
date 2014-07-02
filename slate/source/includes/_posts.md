@@ -121,9 +121,9 @@ Retrieves one or more posts using [pagination](#pagination) ranges.
 
 This is useful for retrieving just the posts from an individual node. Consider using the [sync posts](#sync-posts) call for requesing posts across all channels a user follows.
 
-Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps's cache. 
+<aside>Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps's cache. 
 
-To retrieve a missing parent post, you can query for the post ID referenced by the post's `replyTo`.
+To retrieve a missing parent post, you can query for the post ID referenced by the post's `replyTo`.</aside>
 
 
 ##Fetch Child Posts
