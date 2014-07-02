@@ -29,7 +29,7 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`
 
-###Media Metadata
+## Media Metadata
 
 ```shell
 curl https://demo.buddycloud.org/api/???? \
@@ -131,10 +131,6 @@ When both `maxheight` and `maxwidth` are requested the server will return a file
 ##Post Media
 
 ```shell
-@guilhermesgb: ???weird, the webclient seems to be using the POST {channelID}/content/posts endpoint (specifying the media attribute in the JSON payload) for posting media!!!
-
-But below is what the documentation says we should do:
-
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \

@@ -129,7 +129,6 @@ To retrieve a missing parent post, you can query for the post ID referenced by t
 ##Fetch Child Posts
 
 ```shell
-POST_ID=qux
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
      -X GET \
      -H "Accept: application/json"
