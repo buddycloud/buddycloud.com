@@ -41,6 +41,8 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
 ???
 ```
 
+This allows creation of application nodes.
+
 <aside>It's recommended to create new nodes for new applications. For example `x-application-<your-application-name>`.
 
 For example: A chess app would create an `x-application-ChessApp` channel-node. Competing players could use this channel-node to keep state between two games.</aside>
