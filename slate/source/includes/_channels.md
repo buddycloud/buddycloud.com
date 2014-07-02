@@ -61,14 +61,13 @@ Users can create any number of topic channels. An error is returned if there is 
 ##Delete Channel
 
 ```shell
-???@guilhermesgb: There's no way to delete a channel other than using the Delete Account endpoint (makes sense, as one should not exist without the other), so I don't know what should be here. Another problem is: we simply don't have an HTTP API endpoint for deleting specific nodes.
-
-???st: I guess we are missing this... :()
-
+curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
+     -X DELETE
+     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
-???
+???	
 ???
 ```
 
