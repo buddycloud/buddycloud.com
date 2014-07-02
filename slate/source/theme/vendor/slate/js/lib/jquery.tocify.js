@@ -1009,7 +1009,7 @@
 
             var self = this,
                 duration = self.options.smoothScroll || 0,
-                scrollTo = self.options.scrollTo;
+                scrollTo = self.options.scrollTo + 50;
 
             // Once all animations on the page are complete, this callback function will be called
             $("html, body").promise().done(function() {
