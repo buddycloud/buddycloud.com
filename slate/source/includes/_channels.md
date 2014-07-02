@@ -77,7 +77,7 @@ Removes a channel from the Buddycloud Server.
 
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`DELETE https://demo.buddycloud.org/api/{channelID}`
 
 ##Update Metadata
 

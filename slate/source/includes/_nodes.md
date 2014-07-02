@@ -31,7 +31,9 @@ public-key       | ✓                | ✗            | public key for secure m
 ##Create Channel-Node
 
 ```shell
-@guilhermesgb: There's no HTTP API endpoint for creating specific nodes.
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
+    -X POST \
+    -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
@@ -44,12 +46,15 @@ public-key       | ✓                | ✗            | public key for secure m
 For example: A chess app would create an `x-application-ChessApp` channel-node. Competing players could use this channel-node to keep state between two games.</aside>
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/{channelID}/{nodeID}`
 
 ##Delete Channel-Node
 
 ```shell
-@guilhermesgb: There's no HTTP API endpoint for creating specific nodes.
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
+    -X DELETE \
+    -u juliet@buddycloud.org:romeo-forever
+
 ```
 
 ```javascript```
@@ -60,4 +65,4 @@ For example: A chess app would create an `x-application-ChessApp` channel-node. 
 This will remove an application node but not the channel.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`DELETE https://demo.buddycloud.org/api/{channelID}/{nodeID}`
