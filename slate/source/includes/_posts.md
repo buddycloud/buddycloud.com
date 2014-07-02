@@ -57,8 +57,6 @@ Creating a post adds a new item to a channel-node..
 ##Delete Post
 
 ```shell
-@guilhermesgb: Maybe explain beforehand how to retrieve a POST_ID using the GET method?
-
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
      -X DELETE \
      -u juliet@buddycloud.org:romeo-forever 
@@ -80,7 +78,7 @@ When a post is deleted,
 
 ### HTTP Request
 
-`DELETE https://demo.buddycloud.org/api/{channelID}/content/{node-name}/{postID}`
+`DELETE https://demo.buddycloud.org/api/{channelID}/content/{nodeID}/{postID}`
 
 ##Fetch Posts
 
@@ -122,6 +120,11 @@ Content-Type: application/json
 Retrieves one or more posts using [pagination](#pagination) ranges.
 
 This is useful for retrieving just the posts from an individual node. Consider using the [sync posts](#sync-posts) call for requesing posts across all channels a user follows.
+
+Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps's cache. 
+
+To retrieve a missing parent post, you can query for the post ID referenced by the post's `replyTo`.
+
 
 ##Fetch Child Posts
 
@@ -166,26 +169,7 @@ Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}/replyto`
 
-## Fetch Parent Posts
-
-Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps's cache. 
-
-To retrieve a missing parent post, you can query for the post ID referenced by the post's `replyTo`.
-
-```shell
-???
-```
-
-```javascript
-
-````
-
-### HTTP Request
-`GET https://demo.buddycloud.org/api/{channelID}/content/posts`
-
-`GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}`
-
-###Sync Posts
+## Sync Posts
 
 ```shell
 ???
