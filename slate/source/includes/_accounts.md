@@ -12,7 +12,10 @@ Argument   | Required | Notes
 ---------- |:--------:|------------
 `username` | ✓        | always of form `user@example.com`
 `password` | ✓        | any UTF-8 characters
-`email`    | ✗        | for password resets and (optional) push notifications
+`email`    | ✗        | an email for password resets and (optional) push notifications
+
+### Username Domain
+A user with an email of `user@example.com` can also have a Buddycloud `username` of `username@example.com` by using the hosting service or running your own Buddycloud stack on the same domain.
 
 ##Create User
 

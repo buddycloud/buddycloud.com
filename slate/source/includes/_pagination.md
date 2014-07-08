@@ -14,7 +14,6 @@ Parameter | Description
 `max`     | The maximum number of returned entries
 `before`  | Get posts before this timestamp
 `after`   | Return only entries older than the entry with the specified ID
-`index`   | The element's position in the result set (for example: -----) **The description is confusing but I'm not sure how to re-word it**
 
 ## Response Attributes
 
