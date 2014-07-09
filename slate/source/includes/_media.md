@@ -6,7 +6,30 @@ Media can be any type of file, and any file size (Buddycloud site administrators
 
 <aside class="notice">Authentication is not required for requesting media from a public channel. Authentication is required for private channels.</aside>
 
-Media Metadata
+###Special MediaIDs
+
+The media `id` of `avatar` is currently reserved and used for storing a channels avatar. Uploading with the `avatar` `id` will replace the user's avatar.
+
+## Media Metadata
+
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+     -X POST \
+     -u juliet@buddycloud.org:romeo-forever \
+     -d '{ \
+            "filename": "A good name for that picture of Jules", \
+            "title": "A new title" \
+        }' 
+```
+
+```javascript```
+???
+???
+```
+
+Metadata upates must include the `id`. 
+
+The possible metadata parameters are:
 
 Parameter        | Required   | Description
 -----------------|------------|--------------------------------------------
@@ -16,38 +39,12 @@ Parameter        | Required   | Description
 `shaChecksum`      | server-set | SHA1 file checksum
 `uploadedDate`     | server-set | when the media was uploaded
 `lastUpdatedDate`  | server-set | when the media was updated / re-uploaded
-`mimeType`         | required   | The file mimetype (??? for example???)
+`mimeType`         | required   | The file mimetype (e.g. `image/jpeg`)
 `fileName`         | required   | The uploaded filename and extension.
 `entityId`         | required   | The channel where the media object was posted.
 `title`            | optional   | a short title of the object
 `description`      | optional   | a longer form description of the object
 
-###Special MediaIDs
-
-The media `id` of `avatar` is currently reserved and used for storing a channels avatar. Uploading with the `avatar` `id` will replace the user's avatar.
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
-
-## Media Metadata
-
-```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
-```
-
-```javascript```
-???
-???
-```
-
-```json
-???
-???
-```
-
-Metadata upates must include the `id`. 
 
 ### HTTP Request
 `POST https://demo.buddycloud.org/api/????`

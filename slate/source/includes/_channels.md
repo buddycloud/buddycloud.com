@@ -36,7 +36,7 @@ The channel [metadata](#update-metadata) for _public_ and _private_ channels is 
 
 ```shell
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-     -X POST
+     -X POST \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
@@ -62,7 +62,7 @@ Users can create any number of topic channels. An error is returned if there is 
 
 ```shell
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-     -X DELETE
+     -X DELETE \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
