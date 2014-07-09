@@ -19,9 +19,8 @@ Location         | no           | yes
 
 ##Search by Content
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/search?type=content&q=Romeo \
+     -x GET
 ```
 
 ```javascript```
@@ -29,15 +28,10 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-```json
-???
-???
-```
-
 New posts are crawled and should show up in search results after a few minutes. This will return public posts.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/search?type=content&q={queryKey}`
 
 ##Search by Author
 ```shell
@@ -65,9 +59,8 @@ Query for a specific user's posts.
 ##Search by Metadata
 
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/search?type=metadata&q=Romeo \
+     -x GET
 ```
 
 ```javascript```
@@ -75,15 +68,10 @@ curl https://demo.buddycloud.org/api/???? \
 ???
 ```
 
-```json
-???
-???
-```
-
 Query for channels by metadata.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/search?type=metadata?q={queryKey}`
 
 ##Search by Location
 
