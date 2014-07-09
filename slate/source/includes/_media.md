@@ -47,7 +47,7 @@ Parameter        | Required   | Description
 
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`POST https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`
 
 ##List Media
 
@@ -122,7 +122,9 @@ When both `maxheight` and `maxwidth` are requested the server will return a file
 
 ### HTTP Request
 `GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`
+
 `GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}?maxheight=:x&maxwidth=:x`
+
 `GET https://demo.buddycloud.org/api/{channelID}/avatar`
 
 ##Post Media
@@ -177,17 +179,12 @@ Updating existing media with the same `id` will overwrite the existing media con
 
 ##Delete Media
 ```shell
-curl https://demo.buddycloud.org/api/???? \
- --??? \
- --???
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+     -x DELETE \
+     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript```
-???
-???
-```
-
-```json
 ???
 ???
 ```
@@ -197,4 +194,4 @@ Removes media from the channel.
 Deleting media will remove it from the requested channel. This does not remove it from other channels where it has been reshared.
 
 ### HTTP Request
-`POST https://demo.buddycloud.org/api/????`
+`DELETE https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`
