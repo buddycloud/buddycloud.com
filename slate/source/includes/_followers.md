@@ -23,7 +23,9 @@ Users follow channels. You should never see a _topic_ channel with the metadata 
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
-     -X GET
+     -X GET \
+     -u romeo@buddycloud.org:juliet-forever \
+     -H "Content-Type: application/json"
 ```
 
 ```shell
@@ -57,7 +59,8 @@ Return the list without authentication | requesting user must also be an `owner`
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X GET \
-     -u romeo@buddycloud.org:juliet-forever
+     -u romeo@buddycloud.org:juliet-forever \
+     -H "Content-Type: application/json"
 ```
 
 ```shell
