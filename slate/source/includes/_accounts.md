@@ -55,12 +55,6 @@ curl https://demo.buddycloud.org/api/account \
 ```
 
 ```javascript
-???
-No event for deleting bc accounts was found.
-So I was trying to show how to delete the account nodes then the XMPP account.
-But there's no event for deleting nodes through XMPP-FTW either.
-???
-
 socket.send(
     'xmpp.register.unregister',
     {
