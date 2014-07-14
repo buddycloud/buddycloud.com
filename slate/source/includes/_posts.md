@@ -62,7 +62,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID
      -u juliet@buddycloud.org:romeo-forever 
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -112,7 +112,7 @@ Content-Type: application/json
 ]
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -192,7 +192,7 @@ Paramenter | Required | Value      | Description
 
 ##Upvote Post
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -210,7 +210,7 @@ Users can can give feedback on posts by upvoting/liking posts. Upvotes take a va
 lloyd??? I have no idea how to access this
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

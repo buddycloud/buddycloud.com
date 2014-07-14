@@ -66,7 +66,7 @@ curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
-```javascript```
+```javascript
 ???	
 ???
 ```
@@ -93,7 +93,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
          }'
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 ```
 
-```javascript```
+```javascript
 ???
 ```
 
@@ -50,7 +50,7 @@ curl https://demo.buddycloud.org/api/subscribed \
      -d '{ "romeo@buddycloud.org/posts": "publisher" }'
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -83,7 +83,7 @@ curl https://demo.buddycloud.org/api/subscribed \
          }'
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

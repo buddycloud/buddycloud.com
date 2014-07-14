@@ -36,7 +36,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
     -u juliet@buddycloud.org:romeo-forever
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -59,7 +59,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
 
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

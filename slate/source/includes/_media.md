@@ -22,7 +22,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
         }' 
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -75,7 +75,7 @@ Content-Type: application/json
 }}
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -102,7 +102,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
      -X GET
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -163,7 +163,7 @@ Content-Type: application/json
 }
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -184,7 +184,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

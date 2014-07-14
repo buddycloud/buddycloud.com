@@ -2,7 +2,6 @@
 
 ```shell
 curl https://demo.buddycloud.org/api/notifications/posts
-```
 
 > This will always return 0 items and the latest timestamp:
 
@@ -13,13 +12,10 @@ curl https://demo.buddycloud.org/api/notifications/posts
 
 > Then, make another request with the "since" query parameter set to the last known timestamp:
 
-```shell
 curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
-```
 
 >This will hang until a response is returned, such as:
 
-```json
 {
   "last": "1403624094454",
   "items": [
@@ -35,20 +31,16 @@ curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
     }
   ]
 }
-```
 
 > Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
+'''
 
-```javascript
-socket.send('xmpp.buddycloud.presence',
-            {}
-            )
-```
-> returns the following on success
-
-```json
-???  (does this ACK or just start sending events?)
-```
+'''javascript
+socket.send(
+    'xmpp.buddycloud.presence',
+    {}
+)
+'''
 
 Your app can receive realtime upates for all Buddycloud events, including:
 

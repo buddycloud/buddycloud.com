@@ -54,7 +54,7 @@ curl https://demo.buddycloud.org/api/account \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
-```javascript```
+```javascript
 ???
 No event for deleting bc accounts was found.
 So I was trying to show how to delete the account nodes then the XMPP account.
@@ -114,7 +114,7 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
      -d '{ "username": "juliet@buddycloud.org" }'
 ```
 
-```javascript```
+```javascript
 ??? There's no way for reseting a user password through XMPP-FTW ???"
 ```
 

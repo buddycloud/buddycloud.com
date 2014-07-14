@@ -23,7 +23,7 @@ curl https://demo.buddycloud.org/api/search?type=content&q=Romeo \
      -x GET
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -40,7 +40,7 @@ curl https://demo.buddycloud.org/api/???? \
  --???
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -63,7 +63,7 @@ curl https://demo.buddycloud.org/api/search?type=metadata&q=Romeo \
      -x GET
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -81,7 +81,7 @@ curl https://demo.buddycloud.org/api/???? \
  --???
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
