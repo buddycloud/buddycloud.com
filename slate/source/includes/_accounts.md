@@ -56,6 +56,17 @@ curl https://demo.buddycloud.org/api/account \
 
 ```javascript```
 ???
+No event for deleting bc accounts was found.
+So I was trying to show how to delete the account nodes then the XMPP account.
+But there's no event for deleting nodes through XMPP-FTW either.
+???
+
+socket.send(
+    'xmpp.register.unregister',
+    {
+        "to": "buddycloud.org"
+    }
+)
 ```
 
 Removes a user account. 
@@ -79,7 +90,14 @@ curl https://demo.buddycloud.org/api/account/pw/change \
 ```
 
 ```javascript
-???
+socket.send(
+    'xmpp.register.password',
+    {
+        "to": "buddycloud.org",
+        "username": "juliet",
+        "password": "new-password"
+    }
+)
 ```
 
 Changes the user's `password`.
@@ -97,7 +115,7 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
 ```
 
 ```javascript```
-???
+??? There's no way for reseting a user password through XMPP-FTW ???"
 ```
 
 This resets the user's password by sending a new password to the email address provided by the user during registration.

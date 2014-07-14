@@ -9,18 +9,6 @@ dig txt +short _buddycloud-api._tcp.buddycloud.org
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
 ```
 
-> This test tells us that client calls should be made against `https://buddycloud.example.com:443/api`
-
-```javascript
-socket.send(
-  'xmpp.buddycloud.discover',
-  {},
-  function(error, address) { console.log(error, address) }
-)
-```
-
-> The data variable will have the Buddycloud server address, for example: `buddycloud.example.com`
-
 API discovery finds the API endpoint to use for each domain running Buddycloud services. 
  
 Usually mobile apps will hardcode the API URL (e.g. `https://api.twitter.com/1.1/`) . However, if your application is designed for users on multiple Buddycloud sites, it's necessary to discover the API URL for each user's domain. 
