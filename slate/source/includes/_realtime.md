@@ -33,14 +33,14 @@ curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
 }
 
 > Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
-'''
+```
 
-'''javascript
+```javascript
 socket.send(
     'xmpp.buddycloud.presence',
     {}
 )
-'''
+```
 
 Your app can receive realtime upates for all Buddycloud events, including:
 
