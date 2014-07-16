@@ -10,9 +10,8 @@ slate: true
 title: Buddycloud API Reference
 
 language_tabs:
-  - shell : cURL
-  - javascript : Javascript
-  - plaintext : Sequence Diagram
+  - shell : REST API
+  - javascript : XMPP-FTW
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -20,7 +19,7 @@ toc_footers:
 includes:
   - introduction
   - pagination
-  - api-discovery
+  - discovery
   - accounts
   - realtime
   - channels
