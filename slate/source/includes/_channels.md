@@ -1,36 +1,9 @@
 #Channels
 
-Users subscribe to channels, which work in conjunction with nodes. Channels aggregate nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on. Buddycloud divides channels into two categories: topic (as above) and personal (see example below).
-???needs rework???
+Users subscribe to channels, which work in conjunction with nodes. Channels aggregate nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on.
 
-
-The personal channel `juliet@capulet.lit` contains nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. When `romeo@montague.lit` follows the channel `juliet@capulet.lit`, the app creates a subscription to all of the nodes under `juliet@capulet.lit`. 
 
 ![Channels and Nodes](/theme/static/img/diagrams/channel%20hierachy.png "Channels and Nodes")
-
-### Personal Channels v. Topic Channels
-
-
-Trait       | _Personal_ Channel              | _Topic_ Channel
-------------|---------------------------------|-----------------------
-channelID   | e.g. `juliet@capulet.lit`       | e.g. `montague-family@topics.montague.org`
-Purpose     | represents a real person        | represents a topic
-Namespace   | created in `<channelID>@example.com` |created in `<channelID>@topics.example.com`
-ChannelID   | named after a user's `username`| not tied to a user's `username`
-Owned By    | owned by the matching `username`| can be owned by any user
-Messaging   | can receive private chat messages| not applicable
-Location Sharing| geolocation optionally shared with followers| anyone can search for nearby channels
-
-### Channel Privacy Settings
-
-Channels may be private or public. Channel Privacy is controlled by the channel's `access_model `:
-
-               |Public Channel | Private Channel
----------------|---------------|-----------------
-access_model   |open           |authorize
-visibility     |anyone can view | requires a subscription request to view
-
-The channel [metadata](#update-metadata) for _public_ and _private_ channels is always publicly accessible.
 
 ##Create Channel
 
