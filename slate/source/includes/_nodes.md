@@ -12,16 +12,16 @@ Each of these nodes have:
 - a set of publishers;
 - metadata (e.g. `title`, `description` and `location` fields).
 
-### Personal Channels v. Topic Channels
+### Personal Nodes v. Topic Nodes
 
-Buddycloud divides channels into two categories: `topic` and `personal`.
+Buddycloud divides nodes into two categories: `topic` and `personal`.
 
-For example, the channel `juliet@capulet.lit` comprises personal nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. When `romeo@montague.lit` follows the channel `juliet@capulet.lit`, the app creates a subscription to all of the nodes under `juliet@capulet.lit`. 
+For example, the channel `juliet@capulet.lit` comprises personal nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. 
 
 
-Trait       | _Personal_ Channel              | _Topic_ Channel
+Trait       | _Personal_ Node              | _Topic_ Node
 ------------|---------------------------------|-----------------------
-channelID   | e.g. `juliet@capulet.lit`       | e.g. `montague-family@topics.montague.org`
+channelID   | e.g. `juliet@capulet.lit/{nodeID}`       | e.g. `montague-family@topics.montague.org/posts`
 Purpose     | represents a real person        | represents a topic
 Namespace   | created in `<channelID>@example.com` |created in `<channelID>@topics.example.com`
 ChannelID   | named after a user's `username`| not tied to a user's `username`
@@ -29,16 +29,16 @@ Owned By    | owned by the matching `username`| can be owned by any user
 Messaging   | can receive private chat messages| not applicable
 Location Sharing| geolocation optionally shared with followers| anyone can search for nearby channels
 
-### Channel Privacy Settings
+### Node Privacy Settings
 
-Channels may be private or public. Channel Privacy is controlled by the channel's `access_model `:
+Nodes may be private or public. Node Privacy is controlled by the node's `access_model `:
 
-               |Public Channel | Private Channel
+               |Public Node | Private Node
 ---------------|---------------|-----------------
 access_model   |open           |authorize
 visibility     |anyone can view | requires a subscription request to view
 
-The channel [metadata](#update-metadata) for _public_ and _private_ channels is always publicly accessible.
+The node [metadata](#update-metadata) for _public_ and _private_ node is always publicly accessible.
 
 ### Who creates the set of nodes for a channel?
 
@@ -58,14 +58,34 @@ public-key       | ✓                | ✗            | public key for secure m
 ```shell
 #POST https://demo.buddycloud.org/api/{channelID}/{nodeID}
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
     -X POST \
     -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript
-???
-???
+socket.send(
+    'xmpp.pubsub.create',
+    {
+        "to": "buddycloud.org",
+        "node": "/user/juliet@buddycloud.org/posts",
+        "options": [
+            {
+                "var": "buddycloud#channel_type",
+                "value": "personal"
+            },
+            {
+                "var": "pubsub#title",
+                "value": "Juliet's posts node"
+            },
+            {
+                "var": "pubsub#access_model",
+                "value": "open"
+            }
+        ]
+    },
+    function(error, data) { console.log(error, data) }
+)
 ```
 
 This allows creation of nodes.
@@ -75,15 +95,20 @@ This allows creation of nodes.
 ```shell
 #DELETE https://demo.buddycloud.org/api/{channelID}/{nodeID}
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/daily-diary \
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
     -X DELETE \
     -u juliet@buddycloud.org:romeo-forever
-
 ```
 
 ```javascript
-???
-???
+socket.send(
+    'xmpp.pubsub.delete',
+    {
+        "to": "buddycloud.org",
+        "node": "/user/juliet@buddycloud.org/posts"
+    },
+    function(error, data) { console.log(error, data) }
+)
 ```
 
 This will remove a node.

@@ -1,56 +1,9 @@
 #Channels
 
-Users subscribe to channels, which work in conjunction with nodes. Channels aggregate nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on.
+Users subscribe to channels, which work in conjunction with nodes. Channels are comprised of nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on. Remember that a Channel is just a concept - there can only be a Channel if there's at least one Node.
 
 
 ![Channels and Nodes](/theme/static/img/diagrams/channel%20hierachy.png "Channels and Nodes")
-
-##Create Channel
-
-```shell
-curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-     -X POST \
-     -u juliet@buddycloud.org:romeo-forever
-```
-
-```javascript
-socket.send(
-    'xmpp.buddycloud.create',
-    {
-        "node": "/user/balcony-speeches@topics.montague.lit/posts",
-    },
-    function(error, data) { console.log(error, data) }
-)
-```
-
-Users can create any number of topic channels. An error is returned if there is an existing channel with the same `ChannelID`.
-
-<aside>At sign-up, a personal channel is automatically created for each user. For example, `juliet@capulet.lit` signing up will trigger the server to automatically create a channel called `juliet@capulet.lit`. Remember, new topic channels are created in their own namespace (`channelID@topics.example.com`).</aside>
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/{channelID}`
-
-
-##Delete Channel
-
-```shell
-curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org \
-     -X DELETE \
-     -u juliet@buddycloud.org:romeo-forever
-```
-
-```javascript
-???	
-???
-```
-
-Removes a channel from the Buddycloud Server.
-
-<aside class="notice">???Add a bit about how events are sent out to subscribers on the local and remote servers???</aside>
-
-
-### HTTP Request
-`DELETE https://demo.buddycloud.org/api/{channelID}`
 
 ##Update Metadata
 
