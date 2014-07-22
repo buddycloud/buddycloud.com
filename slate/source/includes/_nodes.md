@@ -67,7 +67,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
 socket.send(
     'xmpp.pubsub.create',
     {
-        "to": "buddycloud.org",
+        "to": "pubsub.buddycloud.org",
         "node": "/user/juliet@buddycloud.org/posts",
         "options": [
             {
@@ -104,7 +104,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
 socket.send(
     'xmpp.pubsub.delete',
     {
-        "to": "buddycloud.org",
+        "to": "pubsub.buddycloud.org",
         "node": "/user/juliet@buddycloud.org/posts"
     },
     function(error, data) { console.log(error, data) }
@@ -130,8 +130,28 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
 ```
 
 ```javascript
-???
-???
+socket.send(
+    'xmpp.pubsub.config.set',
+    {
+        "to": "pubsub.buddycloud.org",
+        "node": "/user/juliet@buddycloud.org/posts",
+        "form": [
+            {
+                "var": "pubsub#title",
+                "value": "New Juliet's Posts Node Title"
+            },
+            {
+                "var": "pubsub#description",
+                "value": "Everything about Juliet"
+            },
+            {
+                "var": "buddycloud#default_affiliation",
+                "value": "publisher"
+            }
+        ]
+    },
+    function(error, data) { console.log(error, data) }
+)
 ```
 
 Metadata allows you to describe the node, set defaults and even add a location to the node so that it will show up in nearby queries.
