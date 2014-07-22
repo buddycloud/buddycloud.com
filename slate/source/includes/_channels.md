@@ -3,7 +3,7 @@
 Users subscribe to channels, which work in conjunction with nodes. Channels aggregate nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on.
 
 
-![Channels and Nodes](/theme/static/img/diagrams/channel%20hierachy.png "Channels and Nodes")
+![Channels and Nodes](/theme/img/diagrams/channel%20hierachy.png "Channels and Nodes")
 
 ##Create Channel
 
