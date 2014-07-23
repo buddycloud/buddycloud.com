@@ -1,9 +1,9 @@
-Title: Slate API
-url: slate-api
-save_as: slate-api.html
+Title: API
+url: api
+save_as: api.html
 order: 2
 table_of_contents: false
-show_in_top_menu: false
+show_in_top_menu: true
 slate: true
 
 ---
