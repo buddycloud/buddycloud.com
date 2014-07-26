@@ -13,6 +13,10 @@ Both methods can be used against:
 * the [hosting](https://hosting.buddycloud.com) service
 * or a [self-install](/install) of the Buddycloud stack
 
+<aside>Throughout most of this documentation, the *REST API* or *XMPP-FTW* calls will be displayed on the right column when the corresponding tabs are selected.
+
+But sometimes a given section in the document is specially focused on one of these alternatives - that will be explicitly indicated as a such case.</aside>
+
 ###Getting Help
 We really want this API to be useful to you. If you run into problems please [contact](/contact) us. [Documentation fixes](https://github.com/buddycloud/buddycloud.com/tree/master/slate/source/includes) and ideas for improvements are always welcome.
 
