@@ -13,7 +13,6 @@ toc_footers:
 includes:
   - introduction
   - pagination
-  - api-discovery
   - accounts
   - realtime
   - channels
