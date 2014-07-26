@@ -1,20 +1,25 @@
 #Realtime Events
 
 ```shell
-curl https://demo.buddycloud.org/api/notifications/posts
+#GET https://demo.buddycloud.org/api/notifications/posts
+#GET https;//demo.buddycloud.org/api/notifications/posts?since={lastKnownTimestamp}
 
-> This will always return 0 items and the latest timestamp:
+curl https://demo.buddycloud.org/api/notifications/posts \
+     -X GET
+
+#This will always return 0 items and the latest timestamp:
 
 {
   "last": "1403624041808",
   "items": []
 }
 
-> Then, make another request with the "since" query parameter set to the last known timestamp:
+#Then, make another request with the "since" query parameter set to the last known timestamp:
 
-curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
+curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454 \
+     -X GET
 
->This will hang until a response is returned, such as:
+#This will hang until a response is returned, such as:
 
 {
   "last": "1403624094454",
@@ -32,10 +37,12 @@ curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
   ]
 }
 
-> Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
+#Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.buddycloud.presence'
+
 socket.send(
     'xmpp.buddycloud.presence',
     {}

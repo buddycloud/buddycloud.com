@@ -43,6 +43,8 @@ The following API URL reflects the above response:  `https://demo.buddycloud.org
 ##XMPP-FTW Discovery
 
 ```plaintext
+#XMPP-FTW event 'xmpp.buddycloud.discover'
+
 socket.send(
     'xmpp.buddycloud.discover',
     {},

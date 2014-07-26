@@ -33,6 +33,8 @@ curl https://demo.buddycloud.org/api/account \
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.login'
+
 socket.send(
     'xmpp.login',
     {
@@ -56,6 +58,8 @@ curl https://demo.buddycloud.org/api/account \
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.register.unregister'
+
 socket.send(
     'xmpp.register.unregister',
     {
@@ -84,6 +88,8 @@ curl https://demo.buddycloud.org/api/account/pw/change \
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.register.password'
+
 socket.send(
     'xmpp.register.password',
     {
@@ -108,7 +114,7 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
 ```
 
 ```javascript
-Unsupported Method
+#Unsupported Method
 ```
 
 This resets the user's password by sending a new password to the email address provided by the user during registration.

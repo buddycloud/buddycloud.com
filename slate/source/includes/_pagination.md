@@ -1,11 +1,15 @@
 #Pagination
 
 ```shell
+#GET https://demo.buddycloud.org/api/{channelId}?{queryParameter}={value}
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org?max=10 \
      -X GET
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.buddycloud.retrieve'
+
 socket.send(
     'xmpp.buddycloud.retrieve',
     {
