@@ -22,15 +22,15 @@ Users follow channels. You should never see a _topic_ channel with the metadata 
 ##Fetch Followers
 
 ```shell
-#GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node
+#GET https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
      -H "Content-Type: application/json"
-```
 
-```shell
+#Response would be as follows:
+
 200 OK
 Content-Type: application/json
 
@@ -41,6 +41,21 @@ Content-Type: application/json
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -55,15 +70,15 @@ Return the list without authentication | requesting user must also be an `owner`
 ##Retrieve Pending Followers
 
 ```shell
-#GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve
+#GET https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}/approve
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
      -H "Content-Type: application/json"
-```
 
-```shell
+#Response would be as follows:
+
 200 OK
 Content-Type application/json
 
@@ -85,6 +100,31 @@ Content-Type application/json
 
 ```javascript
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 Retrieves the list of subscriptions of a node. Returns a list of objects containing the subscriber JID and the values of its subscription state (`subscribed` or `pending`).
@@ -92,7 +132,7 @@ Retrieves the list of subscriptions of a node. Returns a list of objects contain
 ##Authorise Pending Followers
 
 ```shell
-#POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve
+#POST https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}/approve
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X POST \
@@ -112,6 +152,22 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/appr
 
 ```javascript
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 This allows a channel's `owner` or `moderator` to approve or deny incoming subscription requests.
@@ -126,7 +182,7 @@ Subscription State | Description
 ##Alter Follower Roles
 
 ```shell
-#POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node
+#POST https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X POST \
@@ -135,9 +191,19 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -d '{ \
              "juliet@buddycloud.org": "member" \
          }'
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 

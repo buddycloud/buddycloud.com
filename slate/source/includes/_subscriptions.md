@@ -20,9 +20,9 @@ curl https://demo.buddycloud.org/api/subscribed \
      -X GET \
      -u juliet@buddycloud.org:romeo-forever \
      -H "Accept: application/json"
-```
 
-```shell
+#Response would be as follows:
+
 200 OK
 Content-Type: application/json
 
@@ -34,6 +34,22 @@ Content-Type: application/json
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -49,9 +65,22 @@ curl https://demo.buddycloud.org/api/subscribed \
      -u juliet@buddycloud.org:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ "romeo@buddycloud.org/posts": "publisher" }'
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 Following behavior is dependent on the channel type:
@@ -81,9 +110,19 @@ curl https://demo.buddycloud.org/api/subscribed \
      -d '{ \
              "romeo@buddycloud.org/posts": "none" \
          }'
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 

@@ -22,10 +22,20 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
             "filename": "A good name for that picture of Jules", \
             "title": "A new title" \
         }' 
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 Metadata upates must include the `id`. 
@@ -55,29 +65,57 @@ Parameter        | Required   | Description
 
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
      -X GET
-```
-```shell
+
+#Response would be as follows:
+
 200 OK
 Content-Type: application/json
 
-{{
-    "id": "lETuJi8rPE4IfQrygN8rVtGx3",
-    "fileName": "photo.jpg",
-    "author": "juliet@buddycloud.org",
-    "title": "Juliet's pic",
-    "mimeType": "image/jpeg",
-    "description": "Juliet's picture 1595/06/01",
-    "fileExtension": "jpg",
-    "shaChecksum": "bc46e5fac2f1cbb607c8b253a5af33181f161562",
-    "fileSize": "60892",
-    "height": "312",
-    "width": "312",
-    "entityId": "capulet@topics.buddycloud.org"
-}}
+[
+    {
+        "id": "lETuJi8rPE4IfQrygN8rVtGx3",
+        "fileName": "photo.jpg",
+        "author": "juliet@buddycloud.org",
+        "title": "Juliet's pic",
+        "mimeType": "image/jpeg",
+        "description": "Juliet's picture 1595/06/01",
+        "fileExtension": "jpg",
+        "shaChecksum": "bc46e5fac2f1cbb607c8b253a5af33181f161562",
+        "fileSize": "60892",
+        "height": "312",
+        "width": "312",
+        "entityId": "capulet@topics.buddycloud.org"
+    }
+]
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 This returns a list of all avaliable media objects in a channel.
@@ -108,6 +146,24 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 This request returns a media file.
@@ -139,9 +195,9 @@ curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
              "title": "Juliet's prom pic", \
              "description": "Juliet's beautiful prom pic!" \
          }'
-```
 
-```shell
+#Response would be as follows:
+
 201 Created
 Content-Type: application/json
 
@@ -163,6 +219,38 @@ Content-Type: application/json
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 This call enables media and media-metadata uploading and modification.
@@ -179,10 +267,24 @@ Updating existing media with the same `id` will overwrite the existing media con
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -x DELETE \
      -u juliet@buddycloud.org:romeo-forever
+
+
+
+
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 Removes media from the channel.

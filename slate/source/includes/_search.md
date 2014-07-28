@@ -20,9 +20,24 @@ Location         | no           | yes
 
 curl https://demo.buddycloud.org/api/search?type=content&q=Romeo \
      -x GET
+
+
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -31,9 +46,27 @@ New posts are crawled and should show up in search results after a few minutes. 
 ##Search by Author
 ```shell
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -47,9 +80,24 @@ Query for a specific user's posts.
 
 curl https://demo.buddycloud.org/api/search?type=metadata&q=Romeo \
      -x GET
+
+
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -59,10 +107,28 @@ Query for channels by metadata.
 
 ```shell
 
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 Query for channels by location. This search will return channels nearby to a latitude and longitude.

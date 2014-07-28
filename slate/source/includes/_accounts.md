@@ -55,6 +55,11 @@ This will create a new account for `username` and set their `password`. You can 
 curl https://demo.buddycloud.org/api/account \
      -X DELETE \
      -u juliet@buddycloud.org:romeo-forever
+
+
+
+
+
 ```
 
 ```javascript
@@ -66,6 +71,8 @@ socket.send(
         "to": "buddycloud.org"
     }
 )
+
+
 ```
 
 Removes a user account. 
@@ -111,10 +118,23 @@ curl https://demo.buddycloud.org/api/account/pw/reset \
      -X POST \
      -H "Content-Type: application/json" \
      -d '{ "username": "juliet@buddycloud.org" }'
+
+
+
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 This resets the user's password by sending a new password to the email address provided by the user during registration.

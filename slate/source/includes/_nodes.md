@@ -61,9 +61,30 @@ public-key       | ✓                | ✗            | public key for secure m
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
     -X POST \
     -u juliet@buddycloud.org:romeo-forever
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.pubsub.create'
+
 socket.send(
     'xmpp.pubsub.create',
     {
@@ -98,9 +119,15 @@ This allows creation of nodes.
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
     -X DELETE \
     -u juliet@buddycloud.org:romeo-forever
+
+
+
+
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.pubsub.delete'
+
 socket.send(
     'xmpp.pubsub.delete',
     {
@@ -127,9 +154,24 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
             "description": "Everything about Juliet", \
             "default_affiliation": "publisher" \
          }'
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
+#XMPP-FTW event 'xmpp.pubsub.config.set'
+
 socket.send(
     'xmpp.pubsub.config.set',
     {

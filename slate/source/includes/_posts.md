@@ -28,21 +28,32 @@ Field       | Description | Set by | Example
 ##Create Post
 
 ```shell
-POST https://demo.buddycloud.org/api/{channelID}/content/posts
+#POST https://demo.buddycloud.org/api/{channelID}/content/{nodeId}
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ "content": "O Romeo, Romeo, wherefore art thou Romeo?" }'
-```
 
-```shell
+#Response will be as follows:
+
 201 Created
 Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_ID
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -58,9 +69,23 @@ Creating a post adds a new item to a channel-node..
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
      -X DELETE \
      -u juliet@buddycloud.org:romeo-forever 
+
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -76,13 +101,14 @@ When a post is deleted,
 ##Fetch Posts
 
 ```shell
+#GET https://demo.buddycloud.org/api/{channelId}/content/{nodeId}
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
      -X GET \
      -H "Accept: application/json"
-     ???Guilherme - can you give an example using pagination please???
-```
 
-```shell
+#Response would be as follows:
+
 200 OK
 Content-Type: application/json
 
@@ -103,9 +129,109 @@ Content-Type: application/json
         "media": null
     }
 ]
+
+#But if you want to use pagination:
+#GET https://demo.buddycloud.org/api/{channelId}/content/{nodeId}?{queryParameter}={value}
+
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts?max=3 \
+     -X GET \
+     -H "Accept: application/json"
+
+#Then, response would be as follows:
+
+200 OK
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "id": "foo",
+            "author": "romeo@buddycloud.org",
+            "updated": "1595-06-01T12:00:00Z",
+            "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+            "media": null
+        },
+        ...
+        {
+            "id": "bar",
+            "author": "romeo@buddycloud.org",
+            "updated": "1591-06-04T12:00:00Z",
+            "content": "Thus with a kiss I die.",
+            "media": null
+        }
+    ],
+    "rsm": {
+        "count": "3",
+        "index": "0"
+    }
+}
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 Retrieves one or more posts using [pagination](#pagination) ranges.
@@ -120,14 +246,14 @@ To retrieve a missing parent post, you can query for the post ID referenced by t
 ##Fetch Child Posts
 
 ```shell
-#GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}/replyto
+#GET https://demo.buddycloud.org/api/{channelID}/content/{nodeId}/{postID}/replyto
 
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
      -X GET \
      -H "Accept: application/json"
-```
 
-```shell
+#Response will be as follows:
+
 200 OK
 Content-Type: application/json
 
@@ -154,6 +280,35 @@ Content-Type: application/json
 
 ```javascript
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
 Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
@@ -162,9 +317,27 @@ Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.
 
 ```shell
 
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
+
+
+
+
+
+
+
+
+
 
 ```
 
@@ -184,10 +357,28 @@ Paramenter | Required | Value      | Description
 
 ```shell
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 Users can can give feedback on posts by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
@@ -196,10 +387,28 @@ Users can can give feedback on posts by upvoting/liking posts. Upvotes take a va
 
 ```shell
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 ```javascript
 #Unsupported Method
+
+
+
+
+
+
+
+
+
 ```
 
 The `/firehose` contains a feed of all channel-nodes that you are subscribed to that are cached locally.
