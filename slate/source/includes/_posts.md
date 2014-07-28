@@ -28,6 +28,8 @@ Field       | Description | Set by | Example
 ##Create Post
 
 ```shell
+POST https://demo.buddycloud.org/api/{channelID}/content/posts
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -41,30 +43,25 @@ Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_I
 ```
 
 ```javascript
-???
+
 ```
 
 Creating a post adds a new item to a channel-node.. 
 
-???The server will timestamp the message/the client's timestamp will be respected?'
-
 <aside>You can define your own format for your own application nodes (e.g. `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated according to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
-
-### HTTP Request
-
-`POST https://demo.buddycloud.org/api/{channelID}/content/posts`
 
 ##Delete Post
 
 ```shell
+#DELETE https://demo.buddycloud.org/api/{channelID}/content/{nodeID}/{postID}
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
      -X DELETE \
      -u juliet@buddycloud.org:romeo-forever 
 ```
 
 ```javascript
-???
-???
+
 ```
 
 Removes a single post from a node.
@@ -75,10 +72,6 @@ When a post is deleted,
 * a retraction message is sent to online users.
 
 <aside>Deleting a post that references a mediaID will not remove the media object from the media server. That should be done seperately using a [delete media](#delete-media) query.</aside>
-
-### HTTP Request
-
-`DELETE https://demo.buddycloud.org/api/{channelID}/content/{nodeID}/{postID}`
 
 ##Fetch Posts
 
@@ -113,8 +106,6 @@ Content-Type: application/json
 ```
 
 ```javascript
-???
-???
 ```
 
 Retrieves one or more posts using [pagination](#pagination) ranges.
@@ -129,6 +120,8 @@ To retrieve a missing parent post, you can query for the post ID referenced by t
 ##Fetch Child Posts
 
 ```shell
+#GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}/replyto
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
      -X GET \
      -H "Accept: application/json"
@@ -161,22 +154,19 @@ Content-Type: application/json
 
 ```javascript
 
-````
+```
 
 Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.txt) to enable you to easily query for child posts.
-
-### HTTP Request
-`GET https://demo.buddycloud.org/api/{channelID}/content/posts/{postID}/replyto`
 
 ## Sync Posts
 
 ```shell
-???
+
 ```
 
 ```javascript
 
-````
+```
 
 An app might want to just show the latest 10 posts per channel (and query for older posts can be paged in as the users scrolls down). 
 
@@ -192,14 +182,12 @@ Paramenter | Required | Value      | Description
 
 ##Upvote Post
 
-```javascript
-???
-???
+```shell
+#Unsupported Method
 ```
 
-```json
-???
-???
+```javascript
+#Unsupported Method
 ```
 
 Users can can give feedback on posts by upvoting/liking posts. Upvotes take a value of 1 to 5. It's recommended that for a binary "like" you simply apply a value of 5.
@@ -207,12 +195,11 @@ Users can can give feedback on posts by upvoting/liking posts. Upvotes take a va
 ##Access Firehose
 
 ```shell
-lloyd??? I have no idea how to access this
+#Unsupported Method
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 The `/firehose` contains a feed of all channel-nodes that you are subscribed to that are cached locally.
@@ -222,8 +209,3 @@ The firehose node can also be queried for historical posts using [pagination](#p
 If unauthenticated, the firehose will show posts from public channels.
 
 If you are logged in you can also retrieve posts that you subscribe to from private channels.
-
-### HTTP Request
-
-`GET ???`
-

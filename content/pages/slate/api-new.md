@@ -27,12 +27,12 @@ includes:
   - posts
   - subscriptions
   - followers
-  - messaging
+#  - messaging
   - media
   - search
-  - push
-  - content-recommendation
-  - social-recommendation
+#  - push
+#  - content-recommendation
+#  - social-recommendation
 
 search: true
 ---

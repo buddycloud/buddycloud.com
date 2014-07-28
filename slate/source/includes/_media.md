@@ -13,6 +13,8 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 ## Media Metadata
 
 ```shell
+#POST https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -23,8 +25,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 Metadata upates must include the `id`. 
@@ -46,12 +47,12 @@ Parameter        | Required   | Description
 `description`      | optional   | a longer form description of the object
 
 
-### HTTP Request
-`POST https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`
 
 ##List Media
 
 ```shell
+#GET https://demo.buddycloud.org/api/{channelID}/media
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
      -X GET
 ```
@@ -76,35 +77,37 @@ Content-Type: application/json
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 This returns a list of all avaliable media objects in a channel.
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/{channelID}/media`
-
 ##Fetch Media
 
 ```shell
+#Get media:
+#GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -X GET
 
--OR- (get media preview)
+
+#Or get media preview:
+#GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}?maxheight=:x&maxwidth=:x
 
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
      -X GET
 
--OR- (get avatar)
+
+#Or get avatar:
+#GET https://demo.buddycloud.org/api/{channelID}/avatar
 
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
      -X GET
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 This request returns a media file.
@@ -120,16 +123,11 @@ Parameter        | Required   | Description
 
 When both `maxheight` and `maxwidth` are requested the server will return a file smaller than or equal to both parameters.
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`
-
-`GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}?maxheight=:x&maxwidth=:x`
-
-`GET https://demo.buddycloud.org/api/{channelID}/avatar`
-
 ##Post Media
 
 ```shell
+#POST https://demo.buddycloud.org/api/{channelID}/media
+
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -164,8 +162,7 @@ Content-Type: application/json
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 This call enables media and media-metadata uploading and modification.
@@ -174,24 +171,20 @@ Posting new media will return the object `id` and metadata.
 
 Updating existing media with the same `id` will overwrite the existing media content.
 
-### HTTP Request
-`POST https://demo.buddycloud.org/api/{channelID}/media`
 
 ##Delete Media
 ```shell
+#DELETE https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
+
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -x DELETE \
      -u juliet@buddycloud.org:romeo-forever
 ```
 
 ```javascript
-???
-???
+#Unsupported Method
 ```
 
 Removes media from the channel.
 
 Deleting media will remove it from the requested channel. This does not remove it from other channels where it has been reshared.
-
-### HTTP Request
-`DELETE https://demo.buddycloud.org/api/{channelID}/media/{mediaID}`

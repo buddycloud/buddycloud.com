@@ -14,6 +14,8 @@ Users can only request their own subscriptions.
 ##Fetch Subscriptions
 
 ```shell
+#GET https://demo.buddycloud.org/api/subscribed
+
 curl https://demo.buddycloud.org/api/subscribed \
      -X GET \
      -u juliet@buddycloud.org:romeo-forever \
@@ -32,17 +34,16 @@ Content-Type: application/json
 ```
 
 ```javascript
-???
+
 ```
 
 Returns the user's channel subscriptions as a JSON object. The object's keys are of the form `{channel}` `/` `{node}`, the values denote the subscription type (`owner`, `moderator`, `publisher`, `member` or `pending`).
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/subscribed`
-
 ##Follow Channel
 
 ```shell
+#POST https://demo.buddycloud.org/api/subscribed
+
 curl https://demo.buddycloud.org/api/subscribed \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -51,8 +52,7 @@ curl https://demo.buddycloud.org/api/subscribed \
 ```
 
 ```javascript
-???
-???
+
 ```
 Following behavior is dependent on the channel type:
 
@@ -68,12 +68,12 @@ Following a _private_ channel:
 
 <aside>The channel `owner` and `moderator` roles can adjust the `default_affiliation` is set in [#Update Metadata].</aside>
 
-### HTTP Request
-`POST https://demo.buddycloud.org/api/subscribed`
 
 ##Unfollow Channel
 
 ```shell
+POST https://demo.buddycloud.org/api/subscribed
+
 curl https://demo.buddycloud.org/api/subscribed \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -84,13 +84,9 @@ curl https://demo.buddycloud.org/api/subscribed \
 ```
 
 ```javascript
-???
-???
+
 ```
 
 Unfollowing a private channel removes the ability to read, upvote or delete posts. 
 
 Unfollowing a private channel will require re-requesting a subscription and re-approval of a moderator. 
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/subscribed`

@@ -22,6 +22,8 @@ Users follow channels. You should never see a _topic_ channel with the metadata 
 ##Fetch Followers
 
 ```shell
+#GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
@@ -39,8 +41,7 @@ Content-Type: application/json
 ```
 
 ```javascript
-???
-???
+
 ```
 
 This request returns a list of channel followers and their role in the channel.
@@ -51,12 +52,11 @@ Return the list without authentication | requesting user must also be an `owner`
 
 ???we really need a way to query by role type - eg show me just the moderators of this channel???
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node`
-
 ##Retrieve Pending Followers
 
 ```shell
+#GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
@@ -84,18 +84,16 @@ Content-Type application/json
 ```
 
 ```javascript
-???
-???
+
 ```
 
 Retrieves the list of subscriptions of a node. Returns a list of objects containing the subscriber JID and the values of its subscription state (`subscribed` or `pending`).
 
-### HTTP Request
-`GET https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve`
-
 ##Authorise Pending Followers
 
 ```shell
+#POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X POST \
      -u romeo@buddycloud.org:juliet-forever \
@@ -113,8 +111,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/appr
 ```
 
 ```javascript
-???
-???
+
 ```
 
 This allows a channel's `owner` or `moderator` to approve or deny incoming subscription requests.
@@ -125,12 +122,12 @@ Subscription State | Description
 `subscribed` | Permission to follow channel granted. 
 `none`       | Permission to follow channel denied.
 
-### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node/approve`
 
 ##Alter Follower Roles
 
 ```shell
+#POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node
+
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X POST \
      -u romeo@buddycloud.org:juliet-forever \
@@ -141,11 +138,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
 ```
 
 ```javascript
-???
-???
+
 ```
 
 This enables users to promote (or demote) user subscriptions to `publisher`, `member` or even `moderator`. By setting a subscription to `outcast`, the user is banned.
-
-### HTTP Request
-`POST https://demo.buddycloud.org/api/:channel-name/subscribers/:node`
