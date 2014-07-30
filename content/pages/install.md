@@ -200,7 +200,7 @@ buddycloud Server
 
 ~~~~ bash
 # install dependencies
-apt-get install postgresql postgresql-client postgresql-contrib openjdk-6-jre dbconfig-common
+apt-get install postgresql postgresql-client postgresql-contrib openjdk-7-jre dbconfig-common
 # Download package from http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-server-java/
 dpkg -i buddycloud-server-java*.deb
 ~~~~
