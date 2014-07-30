@@ -33,16 +33,16 @@ curl https://demo.buddycloud.org/api/account \
 ```
 
 ```javascript
-#XMPP-FTW event 'xmpp.login'
+#Unsupported Method
 
-socket.send(
-    'xmpp.login',
-    {
-        "jid": "juliet@buddycloud.org",
-        "password": "romeo-forever",
-        "register": true
-    }
-)
+
+
+
+
+
+
+
+
 ```
 
 This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password reset and for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").

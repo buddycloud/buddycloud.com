@@ -6,12 +6,15 @@ Whether using Buddycloud through the *REST API* or *XMPP-FTW*, you need to disco
 
 ```plaintext
 #In order to resolve the API endpoint for buddycloud.org, do:
-dig txt +short _buddycloud-api._tcp.buddycloud.org
-```
 
-```plaintext
+dig txt +short _buddycloud-api._tcp.buddycloud.org
+
 #You shall get a TXT record such as the following as response:
+
 "v=1.0" "host=demo.buddycloud.org" "protocol=https" "path=/api" "port=443"
+
+
+
 ```
 
 In general, mobile apps **not** running on top of Buddycloud will hardcode the API URL (e.g. `https://api.twitter.com/1.1/`). However, if your application is designed for users on multiple Buddycloud sites, it's necessary to discover the API URL for each user's domain. 
@@ -50,6 +53,9 @@ socket.send(
     {},
     function(error, data) { console.log(error, data) }
 )
+
+
+
 ```
 
 The same way we need to discover the *REST API*, we need to discover where the Buddycloud server lives in order to use it through *XMPP-FTW*. This procedure is rather simpler compared to the REST API discovery since it is implemented by XMPP-FTW internally.
