@@ -1,46 +1,54 @@
 <html>
 <head>
-<title>Get Started New</title>
+<title>Get Started</title>
 <meta name="url" content="get-started-new" />
-<meta name="show_in_top_menu" content="false" />
 <meta name="save_as" content="get-started-new.html" />
 <meta name="order" content="4" />
-<meta name="show_as_selected" content="get-started-new" />
+<meta name="show_as_selected" content="get-started" />
 <meta name="table_of_contents" content="false" />
 </head>
 <body>
+    
+  <p>
+    You can access Buddycloud in many ways. The following steps quickly introduce you on how to exchange posts in a channel node, which is the most basic thing you can do with Buddycloud.
+  </p>
+  <p>
+    This example uses Javascript but you can use our [RESTful API](/api) in order to build other apps such as mobile ones.
+  </p>
+
+  <h2>Register an account</h2>
+  <div class="bs-example">
     <p>
-    Buddycloud helps you add in-app messaging to your mobile and web apps.
-</p>
-
-      <div class="row clearfix">
-    <div class="col-md-4 column">
-      <h3>On your website</h3>
-      <p>Start adding messaging to your web application</p>
-      <p>
-        <a class="btn" href="/get-started-web">Web</a>
-      </p>
-    </div>
-    <div class="col-md-4  column">
-      <h3>In your mobile app</h3>
-      <p>
-        Add messaging, file sharing and push notifications to your mobile app.
-      </p>
-      <p>
-        <a class="btn" href="/get-started-mobile">Mobile</a>
-      </p>
-    </div>
+      The following code snippet issues a POST request to our REST API in order to create an account.
+    </p>
   </div>
-
-    <h2>Use Buddycloud with other services</h2>
-<p>Buddycloud has lots of thrid party integrations and <a href="/software-stack">Plugins</a> built by the Buddycloud community.</p>
-    <p>The XMPP-ftw project has a well tested set of <a href="https://xmpp-ftw.jit.su/manual/extensions/buddycloud">Buddycloud Extensions</a> that make it easy to add messaging to your javascript applications.
-        </p>
-    
-    <h2>Realtime CDN support</h2>
-    <p><a href="http://fanout.io">Fanout</a> is a realtime CDN that supports massively scaling <a href="http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanout-io">Buddycloud messaging scaling</a>.</p>
-    
-    <h2>Getting help</h2>
-        <p>The best place to get help is on the developer <a href="https://groups.google.com/forum/#!forum/buddycloud-dev">mailing list</a>.</p>
+  <div class="highlight">
+    <pre>
+      <code class="html">
+        $.ajax({
+            type: "POST",
+            url: "demo.buddycloud.org/api/account",
+            contentType: "application/json",
+            processData: true,
+            data: JSON.stringify({
+                username: "<span class='generated-username'></span>",
+                password: "my-secret-password",
+                email: "my-email@email.com"
+            }),
+            success: function(data){}
+        });
+      </code>
+    </pre>
+  </div>
+  <script language="javascript" type="text/javascript">
+      $(window.document).ready(function(data){
+          var uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
+              function(c){
+                  var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+                  return v.toString(16);
+          });
+          $(".generated_username").text(uuid + "@buddycloud.org")
+      });
+  </script>
 </body>
 </html>
