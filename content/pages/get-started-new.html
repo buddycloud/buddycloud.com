@@ -94,33 +94,37 @@
   <div class="highlight">
       <pre>
           <code class="html">
-        var socket = new Primus("websocket endpoint");
+        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
+          function() {
+            var socket = new Primus("https://demo.buddycloud.com");
 
-        socket.on('open', function() {
-          socket.send('xmpp.login',
-            {
-              jid: '<span class='generated-u'></span>',
-              password: '<span class='generated-p'></span>'
-            }
-          });
-        });
-
-        socket.on('xmpp.connection', function(data) {
-          socket.send('xmpp.buddycloud.discover'), {},
-            function(error, data) {
-              socket.send('xmpp.buddycloud.retrieve',
+            socket.on('open', function() {
+              socket.send('xmpp.login',
                 {
-                  node: '/user/get-started@demo.buddycloud.com/posts',
-                  rsm: { max: 10 }
-                },
-                function(error, posts) {
-                  /* handle display of existing posts */
-                  posts.reverse().forEach(function(post) {
-                    var author = post.entry.atom.author.name;
-                    var content = post.entry.atom.content.content;
-                    /* ...
-                       handle display of this post */
-                  });
+                  jid: '<span class='generated-u'></span>',
+                  password: '<span class='generated-p'></span>'
+                }
+              });
+            });
+
+            socket.on('xmpp.connection', function(data) {
+              socket.send('xmpp.buddycloud.discover', {},
+                function(error, data) {
+                  socket.send('xmpp.buddycloud.retrieve',
+                    {
+                      node: '/user/get-started@demo.buddycloud.com/posts',
+                      rsm: { max: 10 }
+                    },
+                    function(error, posts) {
+                      /* handle display of existing posts */
+                      posts.reverse().forEach(function(post)) {
+                        var author = post.entry.atom.author.name;
+                        var content = post.entry.atom.content.content;
+                        /* ...
+                           handle display of this post */
+                      }
+                    }
+                  );
                 }
               );
 
@@ -130,9 +134,9 @@
                 /* ...
                    handle display of this new incoming post */
               });
-            }
-          );
-        });
+            });
+          }
+        );
           </code>
       </pre>
   </div>
