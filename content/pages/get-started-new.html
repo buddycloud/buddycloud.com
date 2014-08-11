@@ -88,16 +88,16 @@
           var doRegister = function(){
               $.ajax({
                 type: "POST",
-                url: "https://demo.buddycloud.org/api/account",
+                url: "https://demo.buddycloud.com/api/account",
                 contentType: "application/json",
                 processData: true,
                 data: JSON.stringify({
-                  username: uuid + "@buddycloud.org",
+                  username: uuid + "@demo.buddycloud.com",
                   password: uuid + "_password",
                   email: "my-email@email.com"
                 }),
                 success: function(data){
-                  $("#register_output").text(uuid + "@buddycloud.org created!");
+                  $("#register_output").text(uuid + "@demo.buddycloud.com created!");
                   $("#register_output").show();
                 }
               });
@@ -111,7 +111,7 @@
                   var r = Math.random()*16&#124;0, v = c == 'x' ? r : (r&#38;0x3&#124;0x8);
                   return v.toString(16);
           });
-          $(".generated-username").text(uuid + "@buddycloud.org")
+          $(".generated-username").text(uuid + "@demo.buddycloud.com")
           $(".generated-password").text(uuid + "_password")
 
           register = register(uuid);
