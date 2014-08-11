@@ -41,8 +41,8 @@
         curl https://demo.buddycloud.org/api/account \
             -X POST \
             -d '{ \
-              "username": "<span class='generated-username'></span>", \
-              "password": "<span class='generated-password'></span>", \
+              "username": "<span class='generated-u'></span>", \
+              "password": "<span class='generated-p'></span>", \
               "email": "my-email@email.com" \
             }'
               </code>
@@ -64,12 +64,12 @@
             contentType: "application/json",
             processData: true,
             data: JSON.stringify({
-              username: "<span class='generated-username'></span>",
-              password: "<span class='generated-password'></span>",
+              username: "<span class='generated-u'></span>",
+              password: "<span class='generated-p'></span>",
               email: "my-email@email.com"
             }),
             success: function(data){
-              window.alert("<span class='generated-username'></span> created!");
+              window.alert("<span class='generated-u'></span> created!");
             }
         });
               </code>
@@ -83,6 +83,61 @@
       </span>
       <code id="register_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
+
+  <h2>Fetch posts</h2>
+  <span>Retrieve posts</span>
+  <div class="bs-example">
+      <p>
+          The following Javascript code snippet issues a POST request to our RESTful API in order to create an account.
+      </p>
+  </div>
+  <div class="highlight">
+      <pre>
+          <code class="html">
+        var socket = new Primus("websocket endpoint");
+
+        socket.on('open', function() {
+          socket.send('xmpp.login',
+            {
+              jid: '<span class='generated-u'></span>',
+              password: '<span class='generated-p'></span>'
+            }
+          });
+        });
+
+        socket.on('xmpp.connection', function(data) {
+          socket.send('xmpp.buddycloud.discover'), {},
+            function(error, data) {
+              socket.send('xmpp.buddycloud.retrieve',
+                {
+                  node: '/user/get-started@demo.buddycloud.com/posts',
+                  rsm: { max: 10 }
+                },
+                function(error, posts) {
+                  /* handle display of existing posts */
+                  posts.reverse().forEach(function(post) {
+                    var author = post.entry.atom.author.name;
+                    var content = post.entry.atom.content.content;
+                    /* ...
+                       handle display of this post */
+                  });
+                }
+              );
+
+              socket.on('xmpp.buddycloud.push.item', function(post) {
+                var author = post.entry.atom.author.name;
+                var content = post.entry.atom.content.content;
+                /* ...
+                   handle display of this new incoming post */
+              });
+            }
+          );
+        });
+          </code>
+      </pre>
+  </div>
+
+
   <script language="javascript" type="text/javascript">
       var register = function(uuid){
           var doRegister = function(){
@@ -111,8 +166,8 @@
                   var r = Math.random()*16&#124;0, v = c == 'x' ? r : (r&#38;0x3&#124;0x8);
                   return v.toString(16);
           });
-          $(".generated-username").text(uuid + "@demo.buddycloud.com")
-          $(".generated-password").text(uuid + "_password")
+          $(".generated-u").text(uuid + "@demo.buddycloud.com")
+          $(".generated-p").text(uuid + "_password")
 
           register = register(uuid);
       });
