@@ -18,6 +18,8 @@
   </p>
 
   <h2>Register an account</h2>
+  <span>As of now, you can only register new accounts through the <a href="https://demo.buddycloud.org/api">RESTful API</a>.</span>
+  <span>Use the <kbd>/account</kbd> endpoint for account creation.</span>
   <ul class="nav nav-tabs">
       <li class="active">
           <a data-toggle="tab" href="#register_curl">cURL</a>
@@ -30,7 +32,7 @@
       <div class="tab-pane fade in active" id="register_curl">
           <div class="bs-example">
             <p>
-              The following cURL command issues a POST request to our REST API in order to create an account.
+              The following cURL command issues a POST request to our RESTful API in order to create an account.
             </p>
           </div>
           <div class="highlight">
@@ -50,7 +52,7 @@
       <div class="tab-pane fade in" id="register_js">
           <div class="bs-example">
             <p>
-              The following Javascript code snippet issues a POST request to our REST API in order to create an account.
+              The following Javascript code snippet issues a POST request to our RESTful API in order to create an account.
             </p>
           </div>
           <div class="highlight">
@@ -75,7 +77,34 @@
           </div>
       </div>
   </div>
+  <div>
+      <span class="btn btn-primary" id="register_test" onclick="register();">
+          Try it yourself!
+      </span>
+      <code id="register_output" style="margin-left:10px; float:right; display:none;"></code>
+  </div>
   <script language="javascript" type="text/javascript">
+      var register = function(uuid){
+          var doRegister = function(){
+              $.ajax({
+                type: "POST",
+                url: "https://demo.buddycloud.org/api/account",
+                contentType: "application/json",
+                processData: true,
+                data: JSON.stringify({
+                  username: uuid + "@buddycloud.org",
+                  password: uuid + "_password",
+                  email: "my-email@email.com"
+                }),
+                success: function(data){
+                  $("#register_output").text(uuid + "@buddycloud.org created!");
+                  $("#register_output").show();
+                }
+              });
+          }
+          return doRegister
+      }
+
       $(window.document).ready(function(data){
           var uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
               function(c){
@@ -84,6 +113,8 @@
           });
           $(".generated-username").text(uuid + "@buddycloud.org")
           $(".generated-password").text(uuid + "_password")
+
+          register = register(uuid);
       });
   </script>
 </body>
