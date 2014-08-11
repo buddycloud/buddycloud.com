@@ -37,7 +37,7 @@
           </div>
           <div class="highlight">
             <pre>
-              <code class="html">
+              <code class="curl">
         curl https://demo.buddycloud.org/api/account \
             -X POST \
             -d '{ \
@@ -57,7 +57,7 @@
           </div>
           <div class="highlight">
             <pre>
-              <code class="html">
+              <code class="javascript">
         $.ajax({
             type: "POST",
             url: "https://demo.buddycloud.org/api/account",
@@ -92,7 +92,7 @@
   </div>
   <div class="highlight">
       <pre>
-          <code class="html">
+          <code class="javascript">
         $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
           function() {
             var socket = new Primus("https://demo.buddycloud.com");
@@ -126,13 +126,6 @@
                   );
                 }
               );
-
-              socket.on('xmpp.buddycloud.push.item', function(post) {
-                var author = post.entry.atom.author.name;
-                var content = post.entry.atom.content.content;
-                /* ...
-                   handle display of this new incoming post */
-              });
             });
           }
         );
