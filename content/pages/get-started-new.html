@@ -4,8 +4,9 @@
 <meta name="url" content="get-started-new" />
 <meta name="save_as" content="get-started-new.html" />
 <meta name="order" content="4" />
-<meta name="show_as_selected" content="get-started" />
-<meta name="table_of_contents" content="false" />
+<meta name="show_as_selected" content="get-started-new" />
+<meta name="show_in_top_menu" content="false" />
+<meta name="table_of_contents" content="true" />
 </head>
 <body>
     
@@ -17,37 +18,72 @@
   </p>
 
   <h2>Register an account</h2>
-  <div class="bs-example">
-    <p>
-      The following code snippet issues a POST request to our REST API in order to create an account.
-    </p>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code class="html">
+  <ul class="nav nav-tabs">
+      <li class="active">
+          <a data-toggle="tab" href="#register_curl">cURL</a>
+      </li>
+      <li>
+          <a data-toggle="tab" href="#register_js">Javascript</a>
+      </li>
+  </ul>
+  <div class="tab-content">
+      <div class="tab-pane fade in active" id="register_curl">
+          <div class="bs-example">
+            <p>
+              The following cURL command issues a POST request to our REST API in order to create an account.
+            </p>
+          </div>
+          <div class="highlight">
+            <pre>
+              <code class="html">
+        curl https://demo.buddycloud.org/api/account \
+            -X POST \
+            -d '{ \
+              "username": "<span class='generated-username'></span>", \
+              "password": "<span class='generated-password'></span>", \
+              "email": "my-email@email.com" \
+            }'
+              </code>
+            </pre>
+          </div>
+      </div>
+      <div class="tab-pane fade in" id="register_js">
+          <div class="bs-example">
+            <p>
+              The following Javascript code snippet issues a POST request to our REST API in order to create an account.
+            </p>
+          </div>
+          <div class="highlight">
+            <pre>
+              <code class="html">
         $.ajax({
             type: "POST",
-            url: "demo.buddycloud.org/api/account",
+            url: "https://demo.buddycloud.org/api/account",
             contentType: "application/json",
             processData: true,
             data: JSON.stringify({
-                username: "<span class='generated-username'></span>",
-                password: "my-secret-password",
-                email: "my-email@email.com"
+              username: "<span class='generated-username'></span>",
+              password: "<span class='generated-password'></span>",
+              email: "my-email@email.com"
             }),
-            success: function(data){}
+            success: function(data){
+              window.alert("<span class='generated-username'></span> created!");
+            }
         });
-      </code>
-    </pre>
+              </code>
+            </pre>
+          </div>
+      </div>
   </div>
   <script language="javascript" type="text/javascript">
       $(window.document).ready(function(data){
           var uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
               function(c){
-                  var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+                  var r = Math.random()*16&#124;0, v = c == 'x' ? r : (r&#38;0x3&#124;0x8);
                   return v.toString(16);
           });
-          $(".generated_username").text(uuid + "@buddycloud.org")
+          $(".generated-username").text(uuid + "@buddycloud.org")
+          $(".generated-password").text(uuid + "_password")
       });
   </script>
 </body>
