@@ -18,67 +18,36 @@
   </p>
 
   <h2>Register an account</h2>
-  <span>As of now, you can only register new accounts through the <a href="https://demo.buddycloud.org/api">RESTful API</a>.</span>
-  <span>Use the <kbd>/account</kbd> endpoint for account creation.</span>
-  <ul class="nav nav-tabs">
-      <li class="active">
-          <a data-toggle="tab" href="#register_curl">cURL</a>
-      </li>
-      <li>
-          <a data-toggle="tab" href="#register_js">Javascript</a>
-      </li>
-  </ul>
-  <div class="tab-content">
-      <div class="tab-pane fade in active" id="register_curl">
-          <div class="bs-example">
-            <p>
-              The following cURL command issues a POST request to our RESTful API in order to create an account.
-            </p>
-          </div>
-          <div class="highlight">
-            <pre>
-              <code class="curl">
-        curl https://demo.buddycloud.org/api/account \
-            -X POST \
-            -d '{ \
-              "username": "<span class='generated-u'></span>", \
-              "password": "<span class='generated-p'></span>", \
-              "email": "my-email@email.com" \
-            }'
-              </code>
-            </pre>
-          </div>
-      </div>
-      <div class="tab-pane fade in" id="register_js">
-          <div class="bs-example">
-            <p>
-              The following Javascript code snippet issues a POST request to our RESTful API in order to create an account.
-            </p>
-          </div>
-          <div class="highlight">
-            <pre>
-              <code class="javascript">
-        $.ajax({
-            type: "POST",
-            url: "https://demo.buddycloud.org/api/account",
-            contentType: "application/json",
-            processData: true,
-            data: JSON.stringify({
-              username: "<span class='generated-u'></span>",
-              password: "<span class='generated-p'></span>",
-              email: "my-email@email.com"
-            }),
-            success: function(data){
-              window.alert("<span class='generated-u'></span> created!");
-            }
-        });
-              </code>
-            </pre>
-          </div>
-      </div>
+  <div class="bs-example">
+      <p>
+          The following Javascript code snippet creates an account: <code><span class='generated-u'></span></code>.
+      </p>
+  </div>
+  <div class="highlight">
+      <pre>
+          <code class="javascript">
+        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
+          function() {
+            var socket = new Primus("https://demo.buddycloud.com");
+
+            socket.on('open', function() {
+              socket.send('xmpp.login',
+                {
+                  jid: '<span class='generated-u'></span>',
+                  password: '<span class='generated-p'></span>',
+                  register: 'true'
+                }
+              });
+            });
+          }
+        );
+
+
+          </code>
+      </pre>
   </div>
   <div>
-      <span class="btn btn-primary" id="register_test" onclick="register();">
+      <span class="btn btn-primary disabled" id="register_test" onclick="">
           Try it yourself!
       </span>
       <code id="register_output" style="margin-left:10px; float:right; display:none;"></code>
