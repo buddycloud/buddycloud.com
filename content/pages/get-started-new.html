@@ -17,7 +17,7 @@
     This example uses Javascript (better suited for web apps) but you can use our <a href="https://demo.buddycloud.org/api">RESTful API</a> in order to build other apps such as mobile ones.
   </p>
 
-  <h2>Register an account</h2>
+  <h2>Create a user</h2>
   <div class="bs-example">
       <p>
           The following Javascript code snippet creates an account: <code><span class='generated-u'></span></code>.
@@ -41,16 +41,14 @@
             });
           }
         );
-
-
           </code>
       </pre>
   </div>
   <div>
-      <span class="btn btn-primary disabled" id="register_test" onclick="">
+      <span class="btn btn-primary disabled" id="create_user_test" onclick="">
           Try it yourself!
       </span>
-      <code id="register_output" style="margin-left:10px; float:right; display:none;"></code>
+      <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
   <h2>Fetch posts</h2>
@@ -117,8 +115,8 @@
                   email: "my-email@email.com"
                 }),
                 success: function(data){
-                  $("#register_output").text(uuid + "@demo.buddycloud.com created!");
-                  $("#register_output").show();
+                  $("#create_user_output").text(uuid + "@demo.buddycloud.com created!");
+                  $("#create_user_output").show();
                 }
               });
           }
