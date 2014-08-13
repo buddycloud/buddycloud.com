@@ -26,26 +26,22 @@
   <div class="highlight">
       <pre>
           <code class="javascript">
-        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
-          function() {
-            var socket = new Primus("https://demo.buddycloud.com");
-
-            socket.on('open', function() {
-              socket.send('xmpp.login',
-                {
-                  jid: '<span class='generated-u'></span>',
-                  password: '<span class='generated-p'></span>',
-                  register: 'true'
-                }
-              });
+        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function() {
+          var socket = new Primus("https://demo.buddycloud.com");
+          socket.on('open', function() {
+            socket.send('xmpp.login',
+            {
+                jid: '<span class='generated-u'></span>',
+                password: '<span class='generated-p'></span>',
+                register: 'true'
             });
-          }
-        );
+          });
+        });
           </code>
       </pre>
   </div>
   <div>
-      <span class="btn btn-primary disabled" id="create_user_test" onclick="">
+      <span class="btn btn-primary" id="create_user_test" onclick="createUser();">
           Try it yourself!
       </span>
       <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
@@ -60,68 +56,160 @@
   <div class="highlight">
       <pre>
           <code class="javascript">
-        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
-          function() {
+        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function() {
+          var socket = new Primus("https://demo.buddycloud.com");
+          socket.on('open', function() {
+            socket.send('xmpp.login',
+            {
+              jid: '<span class='generated-u'></span>',
+              password: '<span class='generated-p'></span>'
+            });
+          });
+          socket.on('xmpp.connection', function(data) {
+            socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+              socket.send('xmpp.buddycloud.retrieve',
+              {
+                node: '/user/get-started@demo.buddycloud.com/posts',
+                rsm: { max: 10 }
+              },
+              function(error, posts) {
+                if (!error) {
+                  /* handle display of existing posts */
+                  posts.reverse().forEach(function(post) {
+                    var author = post.entry.atom.author.name;
+                    var content = post.entry.atom.content.content;
+                    /* ...
+                       handle display of this post */
+                  });
+                }
+              });
+            });
+          });
+        });
+          </code>
+      </pre>
+  </div>
+  <div>
+      <span class="btn btn-primary" id="fetch_posts_test" onclick="fetchPosts();">
+          Try it yourself!
+      </span>
+      <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
+  </div>
+
+
+
+  <script language="javascript" type="text/javascript">
+
+      $.ajaxSetup({
+        cache: true
+      });
+
+      var createUser = function(uuid){
+        var doCreateUser = function(){
+
+	  $("#create_user_output").text("Working...");
+          $("#create_user_test").removeAttr('onclick');
+          $("#create_user_test").addClass('disabled');
+
+          $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function() {
+
             var socket = new Primus("https://demo.buddycloud.com");
 
             socket.on('open', function() {
               socket.send('xmpp.login',
                 {
-                  jid: '<span class='generated-u'></span>',
-                  password: '<span class='generated-p'></span>'
-                }
-              });
-            });
-
-            socket.on('xmpp.connection', function(data) {
-              socket.send('xmpp.buddycloud.discover', {},
-                function(error, data) {
-                  socket.send('xmpp.buddycloud.retrieve',
-                    {
-                      node: '/user/get-started@demo.buddycloud.com/posts',
-                      rsm: { max: 10 }
-                    },
-                    function(error, posts) {
-                      /* handle display of existing posts */
-                      posts.reverse().forEach(function(post)) {
-                        var author = post.entry.atom.author.name;
-                        var content = post.entry.atom.content.content;
-                        /* ...
-                           handle display of this post */
-                      }
-                    }
-                  );
+                  jid: uuid + "@demo.buddycloud.com",
+                  password: uuid + "_password",
+                  register: true
                 }
               );
             });
-          }
-        );
-          </code>
-      </pre>
-  </div>
 
+            socket.on('xmpp.connection', function() {
+              $("#create_user_output").text(uuid + "@demo.buddycloud.com created!");
+              $("#create_user_output").show();
+              $("#create_user_test").attr('onclick', "createUser();");
+              $("#create_user_test").removeClass('disabled');
+            });
 
-  <script language="javascript" type="text/javascript">
-      var register = function(uuid){
-          var doRegister = function(){
-              $.ajax({
-                type: "POST",
-                url: "https://demo.buddycloud.com/api/account",
-                contentType: "application/json",
-                processData: true,
-                data: JSON.stringify({
-                  username: uuid + "@demo.buddycloud.com",
-                  password: uuid + "_password",
-                  email: "my-email@email.com"
-                }),
-                success: function(data){
-                  $("#create_user_output").text(uuid + "@demo.buddycloud.com created!");
-                  $("#create_user_output").show();
-                }
-              });
-          }
-          return doRegister
+            socket.on('xmpp.error', function(error) {
+              if (error.description.indexOf("XMPP authentication") != -1){
+                $("#create_user_output").text("Could not authenticate as " + uuid + "@demo.buddycloud.com!");
+              }
+              else {
+                $("#create_user_output").text("Error: " + error.description);
+              }
+              $("#create_user_output").show();
+              $("#create_user_test").attr('onclick', "createUser();");
+              $("#create_user_test").removeClass('disabled');
+            });
+          });
+        }
+        return doCreateUser
       }
+
+      var fetchPosts = function(uuid){
+        var doFetchPosts = function(){
+
+          $("#fetch_posts_output").text("Working...");
+          $("#fetch_posts_test").removeAttr('onclick');
+          $("#fetch_posts_test").addClass('disabled');
+
+          $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function(script) {
+            var socket = new Primus("https://demo.buddycloud.com");
+
+            socket.on('open', function() {
+              socket.send('xmpp.login',
+              {
+                jid: uuid + "@demo.buddycloud.com",
+                password: uuid + "_password"
+              });
+            });
+
+            socket.on('xmpp.connection', function() {
+              socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+                socket.send('xmpp.buddycloud.retrieve',
+                {
+                  node: '/user/get-started@demo.buddycloud.com/posts',
+                  rsm: { max: 10 }
+                },
+                function(error, posts) {
+                  if (!error) {
+                    $("#fetch_posts_output").text("Fetched posts from demo.buddycloud.com/posts!");
+                    /* handle display of existing posts */
+                    posts.reverse().forEach(function(post) {
+                      var author = post.entry.atom.author.name;
+                      var content = post.entry.atom.content.content;
+                      /* ...
+                         handle display of this post */
+                    });
+                  }
+                  else {
+                    $("#fetch_posts_output").text("Could not fetch from demo.buddycloud.com/posts: " + error.condition + "!");
+                  }
+                  $("#fetch_posts_output").show();
+                  $("#fetch_posts_test").attr('onclick', "fetchPosts();");
+                  $("#fetch_posts_test").removeClass('disabled');
+                });
+              });
+            });
+
+            socket.on('xmpp.error', function(error) {
+              if (error.description.indexOf("XMPP authentication") != -1){
+                $("#fetch_posts_output").text("Could not authenticate as " + uuid + "@demo.buddycloud.com!");
+              }
+              else {
+                $("#fetch_posts_output").text("Error: " + error.description);
+              }
+              $("#fetch_posts_output").show();
+              $("#fetch_posts_test").attr('onclick', "fetchPosts();");
+              $("#fetch_posts_test").removeClass('disabled');
+            });
+          });
+        }
+        return doFetchPosts
+      }
+
 
       $(window.document).ready(function(data){
           var uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
@@ -132,7 +220,8 @@
           $(".generated-u").text(uuid + "@demo.buddycloud.com")
           $(".generated-p").text(uuid + "_password")
 
-          register = register(uuid);
+          createUser = createUser(uuid);
+          fetchPosts = fetchPosts(uuid);
       });
   </script>
 </body>
