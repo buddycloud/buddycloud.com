@@ -95,6 +95,10 @@
       </span>
       <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
+  <div class="table-responsive" style="display:none;">
+      <table class="table table-striped" id="posts_table">
+      </table>
+  </div>
 
   <h2>Post something yourself</h2>
   <div class="bs-example">
@@ -143,7 +147,7 @@
                   var author = post.entry.atom.author.name;
                   var content = post.entry.atom.content.content;
                   /* ...
-                     handle display of this post */
+                     handle display of this post
                 }
             });
           });
@@ -157,7 +161,6 @@
       <code id="new_post_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
-
   <script language="javascript" type="text/javascript">
 
       $.ajaxSetup({
@@ -168,6 +171,8 @@
       var node = "/user/get-started@" + domain + "/posts";
       var url = "https://" + domain
       var script = url + "/scripts";
+
+      var node = "/user/guilherme@" + domain + "/posts";
 
       var createUser = function(uuid){
         var doCreateUser = function(){
@@ -180,12 +185,13 @@
 
             var socket = new Primus(url);
             var jid = uuid + "@" + domain;
+            var password = uuid + "_password";
 
             socket.on('open', function() {
               socket.send('xmpp.login',
                 {
                   jid: jid,
-                  password: uuid + "_password",
+                  password: password,
                   register: true
                 }
               );
@@ -225,23 +231,23 @@
 
             var socket = new Primus(url);
             var jid = uuid + "@" + domain;
+            var password = uuid + "_password";
 
             socket.on('open', function() {
               socket.send('xmpp.login',
               {
                 jid: jid,
-                password: uuid + "_password"
+                password: password
               });
             });
 
             socket.on('xmpp.connection', function() {
               socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                 if (error) {
-                    console.log(error);
-                    $("#fetch_posts_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
+/*                    $("#fetch_posts_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
                     $("#fetch_posts_output").show();
                     $("#fetch_posts_test").attr('onclick', "fetchPosts();");
-                    $("#fetch_posts_test").removeClass('disabled');
+                    $("#fetch_posts_test").removeClass('disabled');*/
                     console.error(error);
 //                    return;
                 }
@@ -253,12 +259,12 @@
                 function(error, posts) {
                   if (!error) {
                     $("#fetch_posts_output").text("Fetched posts from " + node + "!");
-                    /* handle display of existing posts */
+                    $("#posts_table").empty();
+                    $("#posts_table").show();
                     posts.reverse().forEach(function(post) {
                       var author = post.entry.atom.author.name;
                       var content = post.entry.atom.content.content;
-                      /* ...
-                         handle display of this post */
+                      $("#posts_table").append("<tr><th>" + author + "</th><td>" + content + "</td></tr>");
                     });
                   }
                   else {
@@ -298,22 +304,23 @@
 
             var socket = new Primus(url);
             var jid = uuid + "@" + domain;
+            var password = uuid + "_password";
 
             socket.on('open', function() {
               socket.send('xmpp.login',
               {
                 jid: jid,
-                password: uuid + "_password"
+                password: password
               });
             });
 
             socket.on('xmpp.connection', function() {
               socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                 if (error) {
-                    $("#new_post_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
+/*                    $("#new_post_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
                     $("#new_post_output").show();
                     $("#new_post_test").attr('onclick', "newPost();");
-                    $("#new_post_test").removeClass('disabled');
+                    $("#new_post_test").removeClass('disabled');*/
                     console.error(error);
 //                    return;
                 }
@@ -354,11 +361,11 @@
             });
 
             socket.on('xmpp.buddycloud.push.item', function(post) {
+                $("#posts_table").show();
                 if ( post.node === node ) {
                   var author = post.entry.atom.author.name;
                   var content = post.entry.atom.content.content;
-                  /* ...
-                     handle display of this post */
+                  $("#posts_table").append("<tr><th>" + author + "</th><td>" + content + "</td></tr>");
                 }
             });
 
@@ -385,9 +392,11 @@
                   var r = Math.random()*16&#124;0, v = c == 'x' ? r : (r&#38;0x3&#124;0x8);
                   return v.toString(16);
           });
+
           var jid = uuid + "@" + domain;
-          $(".generated-u").text(jid)
-          $(".generated-p").text(uuid + "_password")
+          var password = uuid + "_password";
+          $(".generated-u").text(jid);
+          $(".generated-p").text(password);
 
           createUser = createUser(uuid);
           fetchPosts = fetchPosts(uuid);
