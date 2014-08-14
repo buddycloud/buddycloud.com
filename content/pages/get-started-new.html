@@ -95,9 +95,14 @@
       </span>
       <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
-  <div class="table-responsive" style="display:none;">
-      <table class="table table-striped" id="posts_table">
-      </table>
+
+  <div id="posts_table_section" style="display:none">
+      <h3 style="text-align:center;">Posts found:</h3>
+      <div class="table-responsive" style="margin-top:30px;">
+          <table class="table table-striped">
+              <tbody id="posts_table"></tbody>
+          </table>
+      </div>
   </div>
 
   <h2>Post something yourself</h2>
@@ -258,7 +263,7 @@
                   if (!error) {
                     $("#fetch_posts_output").text("Fetched posts from " + node + "!");
                     $("#posts_table").empty();
-                    $("#posts_table").show();
+                    $("#posts_table_section").show();
                     posts.reverse().forEach(function(post) {
                       var author = post.entry.atom.author.name;
                       var content = post.entry.atom.content.content;
@@ -359,7 +364,7 @@
             });
 
             socket.on('xmpp.buddycloud.push.item', function(post) {
-                $("#posts_table").show();
+                $("#posts_table_section").show();
                 if ( post.node === node ) {
                   var author = post.entry.atom.author.name;
                   var content = post.entry.atom.content.content;
