@@ -33,7 +33,7 @@
             {
                 jid: '<span class='generated-u'></span>',
                 password: '<span class='generated-p'></span>',
-                register: 'true'
+                register: true
             });
           });
         });
@@ -247,12 +247,7 @@
             socket.on('xmpp.connection', function() {
               socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                 if (error) {
-/*                    $("#fetch_posts_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
-                    $("#fetch_posts_output").show();
-                    $("#fetch_posts_test").attr('onclick', "fetchPosts();");
-                    $("#fetch_posts_test").removeClass('disabled');*/
                     console.error(error);
-//                    return;
                 }
                 socket.send('xmpp.buddycloud.retrieve',
                 {
@@ -320,12 +315,7 @@
             socket.on('xmpp.connection', function() {
               socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
                 if (error) {
-/*                    $("#new_post_output").text("Could not discover the buddycloud server on " + domain + ": " + error + "!");
-                    $("#new_post_output").show();
-                    $("#new_post_test").attr('onclick', "newPost();");
-                    $("#new_post_test").removeClass('disabled');*/
                     console.error(error);
-//                    return;
                 }
                 socket.send('xmpp.buddycloud.subscribe',
                 {
