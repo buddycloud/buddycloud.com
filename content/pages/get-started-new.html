@@ -9,7 +9,6 @@
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
-    
   <p>
     You can access Buddycloud in many ways. The following steps quickly introduce you on how to exchange posts in a channel node, which is the most basic thing you can do with Buddycloud.
   </p>
@@ -17,81 +16,102 @@
     This example uses Javascript (better suited for web apps) but you can use our <a href="https://demo.buddycloud.org/api">RESTful API</a> in order to build other apps such as mobile ones.
   </p>
 
+  <h2>First of all, include primus.js</h2>
+  <div class="bs-example">
+      You will need to include this script otherwise none of the steps below will work.
+  </div>
+  <div class="highlight" style="padding-top: 15px;">
+          <div id="includes_editor" style="height: 15px; margin-bottom: 15px;"></div>
+  </div>
+  <textarea id="includes_editor_content" style="display:none">&lt;script src="https://demo.buddycloud.com/scripts/primus/primus.js" type="text/javascript"&gt;&lt;/script&gt;</textarea>
+
   <h2>Create a user</h2>
   <div class="bs-example">
       <p>
           The following Javascript code snippet creates an account: <code><span class='generated-u'></span></code>.
       </p>
+      <p>
+          <b>Edit this code snippet at will.</b>
+      </p>
   </div>
-  <div class="highlight">
-      <pre>
-          <code class="javascript">
-        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function() {
-          var socket = new Primus("https://demo.buddycloud.com");
-          socket.on('open', function() {
-            socket.send('xmpp.login',
-            {
-                jid: '<span class='generated-u'></span>',
-                password: '<span class='generated-p'></span>',
-                register: true
-            });
-          });
-        });
-          </code>
-      </pre>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="create_user_editor" style="height: 126px; margin-bottom: 15px;"></div>
   </div>
+  <div id="create_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
+socket.on('open', function() {
+    socket.send('xmpp.login',
+    {
+        jid: '<span class="generated-u"></span>',
+        password: '<span class="generated-p"></span>',
+        register: true
+    });
+});</div>
+
   <div>
       <span class="btn btn-primary" id="create_user_test" onclick="createUser();">
-          Try it yourself!
+          Run this code snippet!
       </span>
       <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
+
+  <h2>Connect, authenticate, discover</h2>
+  <div class="bs-example">
+      <p>
+          The following Javascript code snippet <b><i>is pretty important and required so that you can perform the further steps</i></b> described in the following sections in this document. This is how you connect to your Buddycloud domain, authenticate your user and then discover the Buddycloud server.
+      </p>
+      <p>
+          <b>Edit this code snippet at will.</b>
+      </p>
+  </div>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="auth_user_editor" style="height: 210px; margin-bottom: 15px;"></div>
+  </div>
+  <div id="auth_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
+socket.on('open', function() {
+    socket.send('xmpp.login',
+    {
+        jid: '<span class="generated-u"></span>',
+        password: '<span class="generated-p"></span>'
+    });
+});
+
+socket.on('xmpp.connection', function() {
+    socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+        /* ...
+           perform desired further steps */
+    });
+});</div>
 
   <h2>Fetch posts</h2>
   <div class="bs-example">
       <p>
           The following Javascript code snippet authenticates your account and retrieves posts from the <code>get-started@demo.buddycloud.com/posts</code> node.
       </p>
+      <p>
+          <b>Edit this code snippet at will.</b>
+      </p>
   </div>
-  <div class="highlight">
-      <pre>
-          <code class="javascript">
-        $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function() {
-          var socket = new Primus("https://demo.buddycloud.com");
-          socket.on('open', function() {
-            socket.send('xmpp.login',
-            {
-              jid: '<span class='generated-u'></span>',
-              password: '<span class='generated-p'></span>'
-            });
-          });
-          socket.on('xmpp.connection', function(data) {
-            socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-              socket.send('xmpp.buddycloud.retrieve',
-              {
-                node: '/user/get-started@demo.buddycloud.com/posts',
-                rsm: { max: 10 }
-              },
-              function(error, posts) {
-                if (!error) {
-                  /* handle display of existing posts */
-                  posts.reverse().forEach(function(post) {
-                    var author = post.entry.atom.author.name;
-                    var content = post.entry.atom.content.content;
-                    /* ...
-                       handle display of this post */
-                  });
-                }
-              });
-            });
-          });
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="fetch_posts_editor" style="height: 225px; margin-bottom: 15px;">socket.send('xmpp.buddycloud.retrieve',
+{
+    node: '/user/get-started@demo.buddycloud.com/posts',
+    rsm: { max: 10 }
+},
+function(error, posts) {
+    if (!error) {
+        /* handle display of existing posts */
+        posts.reverse().forEach(function(post) {
+            var author = post.entry.atom.author.name;
+            var content = post.entry.atom.content.content;
+            /* ...
+               handle display of this post */
         });
-          </code>
-      </pre>
+    }
+});</div>
   </div>
   <div>
       <span class="btn btn-primary" id="fetch_posts_test" onclick="fetchPosts();">
-          Try it yourself!
+          Run this code snippet!
       </span>
       <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
@@ -110,62 +130,50 @@
       <p>
           The following Javascript code snippet authenticates your account, subscribes your user to the <code>get-started@demo.buddycloud.com/posts</code> node and then creates a post on this node. Finally, it starts listening for incoming messages (and thus will receive the one you've just posted).
       </p>
+      <p>
+          <b>Edit this code snippet at will.</b>
+      </p>
   </div>
-  <div class="highlight">
-      <pre>
-          <code class="javascript">
-          $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js", function(script) {
-            var socket = new Primus("https://demo.buddycloud.com");
-            socket.on('open', function() {
-              socket.send('xmpp.login',
-              {
-                jid: '<span class='generated-u'></span>',
-                password: '<span class='generated-p'></span>'
-              });
-            });
-            socket.on('xmpp.connection', function() {
-              socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-                socket.send('xmpp.buddycloud.subscribe',
-                {
-                  node: '/user/get-started@demo.buddycloud.com/posts'
-                },
-                function(error, data) {
-                  socket.send('xmpp.buddycloud.publish',
-                  {
-                    node: '/user/get-started@demo.buddycloud.com/posts',
-                    content: {
-                      atom: {
-                        content: "Hello world!"
-                      }
-                    }
-                  },
-                  function(error, posts) {
-                    if (!error) {
-                      window.alert("Post created!");
-                    }
-                  });
-                });
-              });
-            });
-            socket.on('xmpp.buddycloud.push.item', function(post) {
-                if ( post.node === '/user/get-started@demo.buddycloud.com/posts' ) {
-                  var author = post.entry.atom.author.name;
-                  var content = post.entry.atom.content.content;
-                  /* ...
-                     handle display of this post
-                }
-            });
-          });
-          </code>
-      </pre>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="new_post_editor" style="height: 280px; margin-bottom: 15px;">socket.send('xmpp.buddycloud.subscribe',
+{
+    node: '/user/get-started@demo.buddycloud.com/posts'
+},
+function(error, data) {
+    socket.send('xmpp.buddycloud.publish',
+    {
+        node: '/user/get-started@demo.buddycloud.com/posts',
+        content: {
+            atom: {
+                content: "Hello world!"
+            }
+        }
+    },
+    function(error, posts) {
+        if (!error) {
+        /* ...
+           give successful post creation feedback */
+        }
+    });
+});
+
+socket.on('xmpp.buddycloud.push.item', function(post) {
+    if ( post.node === '/user/get-started@demo.buddycloud.com/posts' ) {
+        var author = post.entry.atom.author.name;
+        var content = post.entry.atom.content.content;
+        /* ...
+           handle display of this post */
+    }
+});</div>
   </div>
   <div>
       <span class="btn btn-primary" id="new_post_test" onclick="newPost();">
-          Try it yourself!
+          Run this code snippet!
       </span>
       <code id="new_post_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
+  <script src="theme/vendor/ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script language="javascript" type="text/javascript">
 
       $.ajaxSetup({
@@ -389,6 +397,29 @@
           var password = uuid + "_password";
           $(".generated-u").text(jid);
           $(".generated-p").text(password);
+
+          var ic_editor = ace.edit("includes_editor");
+          ic_editor.setTheme("ace/theme/terminal");
+          ic_editor.getSession().setValue($("#includes_editor_content").text());
+          ic_editor.setReadOnly(true);
+
+          var cu_editor = ace.edit("create_user_editor");
+          cu_editor.setTheme("ace/theme/terminal");
+          cu_editor.getSession().setMode("ace/mode/javascript");
+          cu_editor.getSession().setValue($("#create_user_editor_content").text());
+
+          var au_editor = ace.edit("auth_user_editor");
+          au_editor.setTheme("ace/theme/terminal");
+          au_editor.getSession().setMode("ace/mode/javascript");
+          au_editor.getSession().setValue($("#auth_user_editor_content").text());
+
+          var fp_editor = ace.edit("fetch_posts_editor");
+          fp_editor.setTheme("ace/theme/terminal");
+          fp_editor.getSession().setMode("ace/mode/javascript");
+
+          var np_editor = ace.edit("new_post_editor");
+          np_editor.setTheme("ace/theme/terminal");
+          np_editor.getSession().setMode("ace/mode/javascript");
 
           createUser = createUser(uuid);
           fetchPosts = fetchPosts(uuid);
