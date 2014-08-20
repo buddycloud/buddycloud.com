@@ -35,7 +35,7 @@
       </p>
   </div>
   <div class="highlight" style="padding-top: 15px;">
-      <div id="create_user_editor" style="height: 126px; margin-bottom: 15px;"></div>
+      <div id="create_user_editor" style="height: 201px; margin-bottom: 15px;"></div>
   </div>
   <div id="create_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
 socket.on('open', function() {
@@ -45,10 +45,14 @@ socket.on('open', function() {
         password: '<span class="generated-p"></span>',
         register: true
     });
+});
+
+socket.on('xmpp.connection', function() {
+    window.alert("User account created successfully!");
 });</div>
 
   <div>
-      <span class="btn btn-primary" id="create_user_test" onclick="createUser();">
+      <span class="btn btn-primary" id="create_user_test">
           Run this code snippet!
       </span>
       <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
@@ -77,10 +81,15 @@ socket.on('open', function() {
 
 socket.on('xmpp.connection', function() {
     socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-        /* ...
-           perform desired further steps */
+        window.alert("Authenticated as your user successfully!");
     });
 });</div>
+  <div>
+      <span class="btn btn-primary" id="auth_user_test">
+          Run this code snippet!
+      </span>
+      <code id="auth_user_output" style="margin-left:10px; float:right; display:none;"></code>
+  </div>
 
   <h2>Fetch posts</h2>
   <div class="bs-example">
@@ -100,29 +109,21 @@ socket.on('xmpp.connection', function() {
 function(error, posts) {
     if (!error) {
         /* handle display of existing posts */
+        output = "";
         posts.reverse().forEach(function(post) {
             var author = post.entry.atom.author.name;
             var content = post.entry.atom.content.content;
-            /* ...
-               handle display of this post */
+            output += "Author: " + author + "; Msg: " + content + "\n";
         });
+        window.alert("Fetched posts successfully!\n"+output);
     }
 });</div>
   </div>
   <div>
-      <span class="btn btn-primary" id="fetch_posts_test" onclick="fetchPosts();">
+      <span class="btn btn-primary" id="fetch_posts_test">
           Run this code snippet!
       </span>
       <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
-  </div>
-
-  <div id="posts_table_section" style="display:none">
-      <h3 style="text-align:center;">Posts found:</h3>
-      <div class="table-responsive" style="margin-top:30px;">
-          <table class="table table-striped">
-              <tbody id="posts_table"></tbody>
-          </table>
-      </div>
   </div>
 
   <h2>Post something yourself</h2>
@@ -151,8 +152,7 @@ function(error, data) {
     },
     function(error, posts) {
         if (!error) {
-        /* ...
-           give successful post creation feedback */
+            window.alert("Post created successfully!");
         }
     });
 });
@@ -161,13 +161,12 @@ socket.on('xmpp.buddycloud.push.item', function(post) {
     if ( post.node === '/user/get-started@demo.buddycloud.com/posts' ) {
         var author = post.entry.atom.author.name;
         var content = post.entry.atom.content.content;
-        /* ...
-           handle display of this post */
+        window.alert("You were notified of new post!\nAuthor: "+author+"; Msg: "+content);
     }
 });</div>
   </div>
   <div>
-      <span class="btn btn-primary" id="new_post_test" onclick="newPost();">
+      <span class="btn btn-primary" id="new_post_test">
           Run this code snippet!
       </span>
       <code id="new_post_output" style="margin-left:10px; float:right; display:none;"></code>
@@ -175,256 +174,89 @@ socket.on('xmpp.buddycloud.push.item', function(post) {
 
   <script src="theme/vendor/ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script language="javascript" type="text/javascript">
+$.ajaxSetup({
+    cache: true
+});
 
-      $.ajaxSetup({
-        cache: true
-      });
+var run = function(editor, out_id, btn_id, auth) {
 
-      var domain = "demo.buddycloud.com";
-      var node = "/user/get-started@" + domain + "/posts";
-      var url = "https://" + domain;
-      var script = url + "/scripts";
-
-      var createUser = function(uuid){
-        var doCreateUser = function(){
-
-	  $("#create_user_output").text("Working...");
-          $("#create_user_test").removeAttr('onclick');
-          $("#create_user_test").addClass('disabled');
-
-          $.getScript(script + "/primus/primus.js", function() {
-
-            var socket = new Primus(url);
-            var jid = uuid + "@" + domain;
-            var password = uuid + "_password";
-
-            socket.on('open', function() {
-              socket.send('xmpp.login',
-                {
-                  jid: jid,
-                  password: password,
-                  register: true
-                }
-              );
+    $(out_id).text("Working...");
+    $(btn_id).off('click');
+    $(btn_id).addClass("disabled");
+    $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
+        function() {
+        window.setTimeout(function() {
+            $(out_id).text("Done.");
+            $(btn_id).click(function() {
+                run(editor, out_id, btn_id);
             });
-
-            socket.on('xmpp.connection', function() {
-              $("#create_user_output").text(jid + " created!");
-              $("#create_user_output").show();
-              $("#create_user_test").attr('onclick', "createUser();");
-              $("#create_user_test").removeClass('disabled');
-            });
-
-            socket.on('xmpp.error', function(error) {
-              if (error.description.indexOf("XMPP authentication") != -1){
-                $("#create_user_output").text("Could not authenticate as " + jid + "!");
-              }
-              else {
-                $("#create_user_output").text("Error: " + error.description);
-              }
-              $("#create_user_output").show();
-              $("#create_user_test").attr('onclick', "createUser();");
-              $("#create_user_test").removeClass('disabled');
-            });
-          });
+            $(btn_id).removeClass("disabled");
+        }, 3000);
+        $(out_id).text("Executing your code...");
+        if ( auth == true ) {
+            code = "var socket = new Primus('https://demo.buddycloud.com');";
         }
-        return doCreateUser;
-      }
-
-      var fetchPosts = function(uuid){
-        var doFetchPosts = function(){
-
-          $("#fetch_posts_output").text("Working...");
-          $("#fetch_posts_test").removeAttr('onclick');
-          $("#fetch_posts_test").addClass('disabled');
-
-          $.getScript(script + "/primus/primus.js", function(script) {
-
-            var socket = new Primus(url);
-            var jid = uuid + "@" + domain;
-            var password = uuid + "_password";
-
-            socket.on('open', function() {
-              socket.send('xmpp.login',
-              {
-                jid: jid,
-                password: password
-              });
-            });
-
-            socket.on('xmpp.connection', function() {
-              socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-                if (error) {
-                    console.error(error);
-                }
-                socket.send('xmpp.buddycloud.retrieve',
-                {
-                  node: node,
-                  rsm: { max: 10 }
-                },
-                function(error, posts) {
-                  if (!error) {
-                    $("#fetch_posts_output").text("Fetched posts from " + node + "!");
-                    $("#posts_table").empty();
-                    $("#posts_table_section").show();
-                    posts.reverse().forEach(function(post) {
-                      var author = post.entry.atom.author.name;
-                      var content = post.entry.atom.content.content;
-                      $("#posts_table").append("<tr><th>" + author + "</th><td>" + content + "</td></tr>");
-                    });
-                  }
-                  else {
-                    $("#fetch_posts_output").text("Could not fetch from " + node + ": " + error.condition + "!");
-                  }
-                  $("#fetch_posts_output").show();
-                  $("#fetch_posts_test").attr('onclick', "fetchPosts();");
-                  $("#fetch_posts_test").removeClass('disabled');
-                });
-              });
-            });
-
-            socket.on('xmpp.error', function(error) {
-              if (error.description.indexOf("XMPP authentication") != -1){
-                $("#fetch_posts_output").text("Could not authenticate as " + jid + "!");
-              }
-              else {
-                $("#fetch_posts_output").text("Error: " + error.description);
-              }
-              $("#fetch_posts_output").show();
-              $("#fetch_posts_test").attr('onclick', "fetchPosts();");
-              $("#fetch_posts_test").removeClass('disabled');
-            });
-          });
+        else {
+            eval(editor.getValue());
         }
-        return doFetchPosts;
-      }
+    });
+    $(out_id).show();
+};
 
-      var newPost = function(uuid){
-        var doNewPost = function(){
+var ic_editor = ace.edit("includes_editor");
+ic_editor.setTheme("ace/theme/terminal");
+var cu_editor = ace.edit("create_user_editor");
+cu_editor.setTheme("ace/theme/terminal");
+var au_editor = ace.edit("auth_user_editor");
+au_editor.setTheme("ace/theme/terminal");
+var fp_editor = ace.edit("fetch_posts_editor");
+fp_editor.setTheme("ace/theme/terminal");
+var np_editor = ace.edit("new_post_editor");
+np_editor.setTheme("ace/theme/terminal");
 
-          $("#new_post_output").text("Working...");
-          $("#new_post_test").removeAttr('onclick');
-          $("#new_post_test").addClass('disabled');
+$(window.document).ready(function(data){
+var uuid = (function() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+               .toString(16)
+               .substring(1);
+  }
+  return function() {
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+           s4() + '-' + s4() + s4() + s4();
+  };
+})();
 
-          $.getScript(script + "/primus/primus.js", function() {
+    var jid = uuid() + "@demo.buddycloud.com";
+    var password = uuid() + "_password";
+    $(".generated-u").text(jid);
+    $(".generated-p").text(password);
 
-            var socket = new Primus(url);
-            var jid = uuid + "@" + domain;
-            var password = uuid + "_password";
+    ic_editor.getSession().setValue($("#includes_editor_content").text());
+    ic_editor.setReadOnly(true);
 
-            socket.on('open', function() {
-              socket.send('xmpp.login',
-              {
-                jid: jid,
-                password: password
-              });
-            });
+    cu_editor.getSession().setMode("ace/mode/javascript");
+    cu_editor.getSession().setValue($("#create_user_editor_content").text());
+    $("#create_user_test").click(function() {
+        run(cu_editor, "#create_user_output", "#create_user_test");
+    });
 
-            socket.on('xmpp.connection', function() {
-              socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-                if (error) {
-                    console.error(error);
-                }
-                socket.send('xmpp.buddycloud.subscribe',
-                {
-                  node: node
-                },
-                function(error, data) {
-                  if (error) {
-                    $("#new_post_output").text("Could not subscribe to " + node + ": " + error.condition + "!");
-                    $("#new_post_output").show();
-                    $("#new_post_test").attr('onclick', "newPost();");
-                    $("#new_post_test").removeClass('disabled');
-                    return;
-                  }
-                  socket.send('xmpp.buddycloud.publish',
-                  {
-                    node: node,
-                    content: {
-                      atom: {
-                        content: "Hello world!"
-                      }
-                    }
-                  },
-                  function(error, posts) {
-                    if (!error) {
-                      $("#new_post_output").text("Created post on " + node + "!");
-                    }
-                    else {
-                      $("#new_post_output").text("Could not post on " + node + ": " + error.condition + "!");
-                    }
-                    $("#new_post_output").show();
-                    $("#new_post_test").attr('onclick', "newPost();");
-                    $("#new_post_test").removeClass('disabled');
-                  });
-                });
-              });
-            });
+    au_editor.getSession().setMode("ace/mode/javascript");
+    au_editor.getSession().setValue($("#auth_user_editor_content").text());
+    $("#auth_user_test").click(function() {
+        run(au_editor, "#auth_user_output", "#auth_user_test");
+    });
 
-            socket.on('xmpp.buddycloud.push.item', function(post) {
-                $("#posts_table_section").show();
-                if ( post.node === node ) {
-                  var author = post.entry.atom.author.name;
-                  var content = post.entry.atom.content.content;
-                  $("#posts_table").append("<tr><th>" + author + "</th><td>" + content + "</td></tr>");
-                }
-            });
+    fp_editor.getSession().setMode("ace/mode/javascript");
+    $("#fetch_posts_test").click(function() {
+        run(fp_editor, "#fetch_posts_output", "#fetch_posts_test");
+    });
 
-            socket.on('xmpp.error', function(error) {
-              if (error.description.indexOf("XMPP authentication") != -1){
-                $("#new_post_output").text("Could not authenticate as " + jid + "!");
-              }
-              else {
-                $("#new_post_output").text("Error: " + error.description);
-              }
-              $("#new_post_output").show();
-              $("#new_post_test").attr('onclick', "newPost();");
-              $("#new_post_test").removeClass('disabled');
-            });
-          });
-        }
-        return doNewPost;
-      }
-
-      $(window.document).ready(function(data){
-          var uuid = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
-              function(c){
-                  var r = Math.random()*16&#124;0, v = c == 'x' ? r : (r&#38;0x3&#124;0x8);
-                  return v.toString(16);
-          });
-
-          var jid = uuid + "@" + domain;
-          var password = uuid + "_password";
-          $(".generated-u").text(jid);
-          $(".generated-p").text(password);
-
-          var ic_editor = ace.edit("includes_editor");
-          ic_editor.setTheme("ace/theme/terminal");
-          ic_editor.getSession().setValue($("#includes_editor_content").text());
-          ic_editor.setReadOnly(true);
-
-          var cu_editor = ace.edit("create_user_editor");
-          cu_editor.setTheme("ace/theme/terminal");
-          cu_editor.getSession().setMode("ace/mode/javascript");
-          cu_editor.getSession().setValue($("#create_user_editor_content").text());
-
-          var au_editor = ace.edit("auth_user_editor");
-          au_editor.setTheme("ace/theme/terminal");
-          au_editor.getSession().setMode("ace/mode/javascript");
-          au_editor.getSession().setValue($("#auth_user_editor_content").text());
-
-          var fp_editor = ace.edit("fetch_posts_editor");
-          fp_editor.setTheme("ace/theme/terminal");
-          fp_editor.getSession().setMode("ace/mode/javascript");
-
-          var np_editor = ace.edit("new_post_editor");
-          np_editor.setTheme("ace/theme/terminal");
-          np_editor.getSession().setMode("ace/mode/javascript");
-
-          createUser = createUser(uuid);
-          fetchPosts = fetchPosts(uuid);
-          newPost = newPost(uuid);
-      });
+    np_editor.getSession().setMode("ace/mode/javascript");
+    $("#new_post_test").click(function() {
+        run(np_editor, "#new_post_output", "#new_post_test");
+    });
+});
   </script>
 </body>
 </html>
