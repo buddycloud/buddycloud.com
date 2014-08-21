@@ -257,26 +257,22 @@ $(window.document).ready(function(data){
     /*$("#create_user_test").click(function() {
         run(cu_editor, "#create_user_output", "#create_user_test", false);
     }); not runnable for now */
-    cu_editor.setReadOnly(true); /*  not editable for now */
 
     au_editor.getSession().setMode("ace/mode/javascript");
     au_editor.getSession().setValue($("#auth_user_editor_content").text());
     /*$("#auth_user_test").click(function() {
         run(au_editor, "#auth_user_output", "#auth_user_test", false);
     }); not runnable for now */
-    au_editor.setReadOnly(true); /* not editable for now */
 
     fp_editor.getSession().setMode("ace/mode/javascript");
     /*$("#fetch_posts_test").click(function() {
         run(fp_editor, "#fetch_posts_output", "#fetch_posts_test", true);
     }); not runnable for now */
-    fp_editor.setReadOnly(true); /* not editable for now */
 
     np_editor.getSession().setMode("ace/mode/javascript");
     /*$("#new_post_test").click(function() {
         run(np_editor, "#new_post_output", "#new_post_test", true);
     });  not runnable for now */
-    np_editor.setReadOnly(true); /*  not editable for now */
 
 });
   </script>
