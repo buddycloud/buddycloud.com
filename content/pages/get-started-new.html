@@ -35,7 +35,7 @@
       </p>-->
   </div>
   <div class="highlight" style="padding-top: 15px;">
-      <div id="create_user_editor" style="height: 201px; margin-bottom: 15px;"></div>
+      <div id="create_user_editor" style="height: 186px; margin-bottom: 15px;"></div>
   </div>
   <div id="create_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
 socket.on('open', function() {
@@ -68,7 +68,7 @@ socket.on('xmpp.connection', function() {
       </p>-->
   </div>
   <div class="highlight" style="padding-top: 15px;">
-      <div id="auth_user_editor" style="height: 210px; margin-bottom: 15px;"></div>
+      <div id="auth_user_editor" style="height: 198px; margin-bottom: 15px;"></div>
   </div>
   <div id="auth_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
 socket.on('open', function() {
@@ -208,10 +208,10 @@ var run = function(editor, out_id, btn_id, auth) {
             code += editor.getValue();
             code += "    });";
             code += "});";
-            /*eval(code); ain't safe! */
+            /*eval(code); enable this once sandboxed */
         }
         else {
-            /*eval(editor.getValue());  ain't safe! */
+            /*eval(editor.getValue());  enable this once sandboxed */
         }
     });
     $(out_id).show();
