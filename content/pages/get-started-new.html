@@ -94,7 +94,7 @@ socket.on('xmpp.connection', function() {
   <h2>Fetch posts</h2>
   <div class="bs-example">
       <p>
-          The following Javascript code snippet authenticates your account and retrieves posts from the <code>get-started@demo.buddycloud.com/posts</code> node.
+          The following Javascript code snippet assumes you are already authenticated and also that you have already discovered the Buddycloud server. It retrieves posts from the <code>get-started@demo.buddycloud.com/posts</code> node.
       </p>
       <p>
           <b>Edit this code snippet at will.</b>
@@ -129,7 +129,7 @@ function(error, posts) {
   <h2>Post something yourself</h2>
   <div class="bs-example">
       <p>
-          The following Javascript code snippet authenticates your account, subscribes your user to the <code>get-started@demo.buddycloud.com/posts</code> node and then creates a post on this node. Finally, it starts listening for incoming messages (and thus will receive the one you've just posted).
+          The following Javascript code snippet assumes you are already authenticated and that you have already discovered the Buddycloud server. It subscribes your user to the <code>get-started@demo.buddycloud.com/posts</code> node and then creates a post on this node. Finally, it starts listening for incoming messages (and thus will receive the one you've just posted).
       </p>
       <p>
           <b>Edit this code snippet at will.</b>
@@ -188,13 +188,27 @@ var run = function(editor, out_id, btn_id, auth) {
         window.setTimeout(function() {
             $(out_id).text("Done.");
             $(btn_id).click(function() {
-                run(editor, out_id, btn_id);
+                run(editor, out_id, btn_id, auth);
             });
             $(btn_id).removeClass("disabled");
         }, 3000);
         $(out_id).text("Executing your code...");
         if ( auth == true ) {
-            code = "var socket = new Primus('https://demo.buddycloud.com');";
+            code =  "var socket = new Primus('https://demo.buddycloud.com');";
+            code += "socket.on('open', function() {";
+            code += "    socket.send('xmpp.login',";
+            code += "    {";
+            code += "        jid: '" + jid + "',";
+            code += "        password: '" + password + "'";
+            code += "    });";
+            code += "});";
+            code += "socket.on('xmpp.connection', function() {";
+            code += "    socket.send('xmpp.buddycloud.discover', {},";
+            code += "        function(error, data) {\n";
+            code += editor.getValue();
+            code += "    });";
+            code += "});";
+            eval(code);
         }
         else {
             eval(editor.getValue());
@@ -214,21 +228,24 @@ fp_editor.setTheme("ace/theme/terminal");
 var np_editor = ace.edit("new_post_editor");
 np_editor.setTheme("ace/theme/terminal");
 
+var jid;
+var password;
+
 $(window.document).ready(function(data){
-var uuid = (function() {
-    function s4() {
-        return Math.floor((1 + Math.random()) * 0x10000)
+    var uuid = (function() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
                .toString(16)
                .substring(1);
-  }
-  return function() {
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        }
+        return function() {
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
            s4() + '-' + s4() + s4() + s4();
-  };
-})();
+        };
+    })();
 
-    var jid = uuid() + "@demo.buddycloud.com";
-    var password = uuid() + "_password";
+    jid = uuid() + "@demo.buddycloud.com";
+    password = uuid() + "_password";
     $(".generated-u").text(jid);
     $(".generated-p").text(password);
 
@@ -238,23 +255,23 @@ var uuid = (function() {
     cu_editor.getSession().setMode("ace/mode/javascript");
     cu_editor.getSession().setValue($("#create_user_editor_content").text());
     $("#create_user_test").click(function() {
-        run(cu_editor, "#create_user_output", "#create_user_test");
+        run(cu_editor, "#create_user_output", "#create_user_test", false);
     });
 
     au_editor.getSession().setMode("ace/mode/javascript");
     au_editor.getSession().setValue($("#auth_user_editor_content").text());
     $("#auth_user_test").click(function() {
-        run(au_editor, "#auth_user_output", "#auth_user_test");
+        run(au_editor, "#auth_user_output", "#auth_user_test", false);
     });
 
     fp_editor.getSession().setMode("ace/mode/javascript");
     $("#fetch_posts_test").click(function() {
-        run(fp_editor, "#fetch_posts_output", "#fetch_posts_test");
+        run(fp_editor, "#fetch_posts_output", "#fetch_posts_test", true);
     });
 
     np_editor.getSession().setMode("ace/mode/javascript");
     $("#new_post_test").click(function() {
-        run(np_editor, "#new_post_output", "#new_post_test");
+        run(np_editor, "#new_post_output", "#new_post_test", true);
     });
 });
   </script>
