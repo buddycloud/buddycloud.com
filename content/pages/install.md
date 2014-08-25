@@ -45,10 +45,8 @@ buddycloud DNS
 This install will setup a buddycloud webclient at
 <http://buddycloud.EXAMPLE.COM>
 
-Log into your registrar or edit your DNS zone file (at Godaddy this is
-called the DNS Manager). In this example we use 1.2.3.4 as your server
-address. Creating a [TXT
-record](https://support.google.com/a/bin/topic.py?hl=en&topic=1409901).
+Log into your registrar or edit your DNS zone file. In this example we use 1.2.3.4 as your server
+address.
 
 ~~~~ {.text}
 
