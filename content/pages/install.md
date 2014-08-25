@@ -5,6 +5,11 @@ order: 1
 show_in_top_menu: false
 table_of_contents: true
 
+Docker?
+-------
+
+If you'd rather run this as a Docker instance, check out https://github.com/buddycloud/dockerfiles
+
 
 Install Requirements
 --------------------
@@ -13,7 +18,7 @@ Install Requirements
     hosting](http://hosting.buddycloud.com))
 -   a domain name (the instructions assume EXAMPLE.COM)
 -   the ability to edit your DNS
--   Ubuntu, 12.04 (LTS)
+-   Ubuntu, 14.04 (LTS)
 
 Getting help
 ------------
