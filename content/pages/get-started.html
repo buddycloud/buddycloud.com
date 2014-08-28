@@ -5,201 +5,276 @@
 <meta name="save_as" content="get-started.html" />
 <meta name="order" content="4" />
 <meta name="show_as_selected" content="get-started" />
+<meta name="show_in_top_menu" content="false" />
 <meta name="table_of_contents" content="true" />
 </head>
 <body>
-    
   <p>
-    You can access Buddycloud in many ways. This example uses <a
-      href="https://xmpp-ftw.jit.su/manual/extensions#buddycloud">XMPP-FTW</a>.
-    This page will show you how to do a few of the basic operations in Buddycloud.
-    XMPP-FTW is a great way to build realtime javascript apps. To Find out more
-    check the <a href="https://codepen.io/guilhermesgb/pen/lJfLg" target="_blank">Demo</a>.
+    You can access Buddycloud in many ways. The following steps quickly introduce you on how to exchange posts in a channel node, which is the most basic thing you can do with Buddycloud.
   </p>
   <p>
-    For other apps such as mobile clients, we recommend the <a href="/api">Buddycloud
-      REST API</a>.
+    This example uses Javascript (better suited for web apps) but you can use our <a href="https://demo.buddycloud.org/api">RESTful API</a> in order to build other apps such as mobile ones.
   </p>
 
-
-  <h1>Get Setup</h1>
+  <h2>First of all, include primus.js</h2>
   <div class="bs-example">
-    <p>Simply add the following to your pages:</p>
+      You will need to include this script otherwise none of the steps below will work.
   </div>
-  <div class="highlight">
-    <pre>
-<code class="html">&lt;script src='https://xmpp-ftw.jit.su/scripts/primus.js'&gt;&lt;/script&gt;
-</code>
-</pre>
+  <div class="highlight" style="padding-top: 15px;">
+          <div id="includes_editor" style="height: 15px; margin-bottom: 15px;"></div>
   </div>
+  <textarea id="includes_editor_content" style="display:none">&lt;script src="https://demo.buddycloud.com/scripts/primus/primus.js" type="text/javascript"&gt;&lt;/script&gt;</textarea>
+
+  <h2>Create a user</h2>
   <div class="bs-example">
-    <p>And call</p>
+      <p>
+          The following Javascript code snippet creates an account: <code><span class='generated-u'></span></code>.
+      </p>
+      <!--<p>
+          <b>Edit this code snippet at will.</b>
+      </p>-->
   </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket = new Primus('https://xmpp-ftw.jit.su')
-socket.on('open', function(data){
-  //Ready to go here
-})</code>
-      </pre>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="create_user_editor" style="height: 186px; margin-bottom: 15px;"></div>
+  </div>
+  <div id="create_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
+socket.on('open', function() {
+    socket.send('xmpp.login',
+    {
+        jid: '<span class="generated-u"></span>',
+        password: '<span class="generated-p"></span>',
+        register: true
+    });
+});
+
+socket.on('xmpp.connection', function() {
+    window.alert("User account created successfully!");
+});</div>
+
+  <div>
+      <!--<span class="btn btn-primary disabled" id="create_user_test">
+          Run this code snippet! (Coming soon?)
+      </span>-->
+      <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
-
-
-  <h1>Create a user</h1>
+  <h2>Connect, authenticate, discover</h2>
   <div class="bs-example">
-    <p>Log in as the user (create it if it doesn't exist)</p>
+      <p>
+          The following Javascript code snippet <b><i>is pretty important and required so that you can perform the further steps</i></b> described in the following sections in this document. This is how you connect to your Buddycloud domain, authenticate your user and then discover the Buddycloud server.
+      </p>
+      <!--<p>
+          <b>Edit this code snippet at will.</b>
+      </p>-->
   </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.login',
-  {
-    "jid": "romeo@buddycloud.org",
-    "password": "juliet-forever",
-    "register": true
-  }
-)</code>
-  </pre>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="auth_user_editor" style="height: 198px; margin-bottom: 15px;"></div>
   </div>
+  <div id="auth_user_editor_content" style="display:none">var socket = new Primus("https://demo.buddycloud.com");
+socket.on('open', function() {
+    socket.send('xmpp.login',
+    {
+        jid: '<span class="generated-u"></span>',
+        password: '<span class="generated-p"></span>'
+    });
+});
+
+socket.on('xmpp.connection', function() {
+    socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
+        window.alert("Authenticated as your user successfully!");
+    });
+});</div>
+  <div>
+      <!--<span class="btn btn-primary disabled" id="auth_user_test">
+          Run this code snippet! (Coming soon?)
+      </span>-->
+      <code id="auth_user_output" style="margin-left:10px; float:right; display:none;"></code>
+  </div>
+
+  <h2>Fetch posts</h2>
   <div class="bs-example">
-    <p>Now figure out where the buddycloud server for this domain is</p>
+      <p>
+          The following Javascript code snippet assumes you are already authenticated and also that you have already discovered the Buddycloud server. It retrieves posts from the <code>get-started@demo.buddycloud.com/posts</code> node.
+      </p>
+      <!--<p>
+          <b>Edit this code snippet at will.</b>
+      </p>-->
   </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.buddycloud.discover',
-  {},
-  function(error, address) { console.log(error, address) }
-)</code>
-    </pre>
-  </div>
-  <div class="bs-example">
-    <p>Finally create their Buddycloud account</p>
-  </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.buddycloud.register',
-  {},
-  function(error, data) { console.log(error, data) }
-)</code>
-    </pre>
-  </div>
-
-
-
-  <h1>Create a topic channel</h1>
-  <p>Topic channels have multiple users that can follow and post to them</p>
-  <h2>Create</h2>
-  <p>Topic channels are shared channels that others can post to.</p>
-  <div class="bs-example">
-    <p>This creates a channel that other users can post to.</p>
-  </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.buddycloud.create',
-  {
-    "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
-    "options": [
-      { var: 'pubsub#access_model', value: 'open' },
-      { var: 'buddycloud#channel_type', value: 'topic' }
-    ]
-  },
-  function(error, data) { console.log(error, data) }
-)</code>
-</pre>
-  </div>
-
-
-
-  <h2>Post content</h2>
-  <div class="bs-example">
-    <p>
-      This posts a message to the
-      <code>my-little-topic-channel</code>
-      .
-    </p>
-  </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.buddycloud.publish',
-  {
-    "node": "/user/my-little-topic-channel@topics.buddycloud.org/posts",
-    "content": {
-      "atom": {
-        "content": "Hello from a new developer!"
-      }
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="fetch_posts_editor" style="height: 225px; margin-bottom: 15px;">socket.send('xmpp.buddycloud.retrieve',
+{
+    node: '/user/get-started@demo.buddycloud.com/posts',
+    rsm: { max: 10 }
+},
+function(error, posts) {
+    if (!error) {
+        /* handle display of existing posts */
+        output = "";
+        posts.reverse().forEach(function(post) {
+            var author = post.entry.atom.author.name;
+            var content = post.entry.atom.content.content;
+            output += "Author: " + author + "; Msg: " + content + "\n";
+        });
+        window.alert("Fetched posts successfully!\n"+output);
     }
-  },
-  function(error, data) { console.log(error, data) }
-)</code>
-</pre>
+});</div>
   </div>
-  <p>
-    On success the
-    <code>data</code>
-    argument will include an object iwith property
-    <code>id</code>
-    containing the ID of the new post.
-  </p>
+  <div>
+      <!--<span class="btn btn-primary disabled" id="fetch_posts_test">
+          Run this code snippet! (Coming soon?)
+      </span>-->
+      <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
+  </div>
 
-
-
-  <h1>Fetch Posts</h1>
-  <p>Pre-populate your app with existing posts. New posts will arrive
-    automatically</p>
+  <h2>Post something yourself</h2>
   <div class="bs-example">
-    <p>
-      Fetch 10 new posts.
-      <code>rsm</code>
-      (<a href="https://xmpp-ftw.jit.su/manual/result-set-management">result
-        set management</a>) lets you page through results.
-    </p>
+      <p>
+          The following Javascript code snippet assumes you are already authenticated and that you have already discovered the Buddycloud server. It subscribes your user to the <code>get-started@demo.buddycloud.com/posts</code> node and then creates a post on this node. Finally, it starts listening for incoming messages (and thus will receive the one you've just posted).
+      </p>
+      <!--<p>
+          <b>Edit this code snippet at will.</b>
+      </p>-->
   </div>
-  <div class="highlight">
-    <pre>
-<code class="javascript">socket.send(
-  'xmpp.buddycloud.items.recent',
-  {
-    "to": "channels.buddycloud.org",
-    "max": 10,
-    "since": "1970-01-01 00:00:00"
-  },
-  function(error, data, rsm) { console.log(error, data, rsm) }
-)</code>
-</pre>
+  <div class="highlight" style="padding-top: 15px;">
+      <div id="new_post_editor" style="height: 280px; margin-bottom: 15px;">socket.send('xmpp.buddycloud.subscribe',
+{
+    node: '/user/get-started@demo.buddycloud.com/posts'
+},
+function(error, data) {
+    socket.send('xmpp.buddycloud.publish',
+    {
+        node: '/user/get-started@demo.buddycloud.com/posts',
+        content: {
+            atom: {
+                content: "Hello world!"
+            }
+        }
+    },
+    function(error, posts) {
+        if (!error) {
+            window.alert("Post created successfully!");
+        }
+    });
+});
+
+socket.on('xmpp.buddycloud.push.item', function(post) {
+    if ( post.node === '/user/get-started@demo.buddycloud.com/posts' ) {
+        var author = post.entry.atom.author.name;
+        var content = post.entry.atom.content.content;
+        window.alert("You were notified of new post!\nAuthor: "+author+"; Msg: "+content);
+    }
+});</div>
+  </div>
+  <div>
+      <!--<span class="btn btn-primary disabled" id="new_post_test">
+          Run this code snippet! (Coming soon?)
+      </span>-->
+      <code id="new_post_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
+  <script src="theme/vendor/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script language="javascript" type="text/javascript">
+$.ajaxSetup({
+    cache: true
+});
 
+var run = function(editor, out_id, btn_id, auth) {
 
-  <h1>Realtime events</h1>
-  <div class="bs-example">
-    <p>Tell the server that you are online and want to start receiving new
-      realtime events</p>
-  </div>
-  <div class="highlight">
-    <pre>
-      <code class="javascript">socket.send('xmpp.buddycloud.presence', {})</code>
-    </pre>
-  </div>
+    $(out_id).text("Working...");
+    $(btn_id).off('click');
+    $(btn_id).addClass("disabled");
+    $.getScript("https://demo.buddycloud.com/scripts/primus/primus.js",
+        function() {
+        window.setTimeout(function() {
+            $(out_id).text("Done.");
+            $(btn_id).click(function() {
+                run(editor, out_id, btn_id, auth);
+            });
+            $(btn_id).removeClass("disabled");
+        }, 3000);
+        $(out_id).text("Executing your code...");
+        if ( auth == true ) {
+            code =  "var socket = new Primus('https://demo.buddycloud.com');";
+            code += "socket.on('open', function() {";
+            code += "    socket.send('xmpp.login',";
+            code += "    {";
+            code += "        jid: '" + jid + "',";
+            code += "        password: '" + password + "'";
+            code += "    });";
+            code += "});";
+            code += "socket.on('xmpp.connection', function() {";
+            code += "    socket.send('xmpp.buddycloud.discover', {},";
+            code += "        function(error, data) {\n";
+            code += editor.getValue();
+            code += "    });";
+            code += "});";
+            /*eval(code); enable this once sandboxed */
+        }
+        else {
+            /*eval(editor.getValue());  enable this once sandboxed */
+        }
+    });
+    $(out_id).show();
+};
 
+var ic_editor = ace.edit("includes_editor");
+ic_editor.setTheme("ace/theme/terminal");
+var cu_editor = ace.edit("create_user_editor");
+cu_editor.setTheme("ace/theme/terminal");
+var au_editor = ace.edit("auth_user_editor");
+au_editor.setTheme("ace/theme/terminal");
+var fp_editor = ace.edit("fetch_posts_editor");
+fp_editor.setTheme("ace/theme/terminal");
+var np_editor = ace.edit("new_post_editor");
+np_editor.setTheme("ace/theme/terminal");
 
+var jid;
+var password;
 
-  <h1>Demo</h1>
-  <p>You can play with Buddycloud using XMPP-FTW.</p>
-  <p>
-     This Demo is a Simple Chat application built with Buddycloud.
-     You can cook your own app too by following <a href="http://buddycloud.com/cooking-with-buddycloud-chat-app">this recipe</a>!
-  </p>
-  <p>
-    <a class="btn btn-primary btn-lg" target="_blank" href="https://codepen.io/guilhermesgb/pen/lJfLg">Buddycloud Demo</a>
-  </p>
-  <!--
-  <h1>Status</h1>
-  <ul class="status"></ul>
-   -->
+$(window.document).ready(function(data){
+    var uuid = (function() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+               .toString(16)
+               .substring(1);
+        }
+        return function() {
+            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+           s4() + '-' + s4() + s4() + s4();
+        };
+    })();
+
+    jid = uuid() + "@demo.buddycloud.com";
+    password = uuid() + "_password";
+    $(".generated-u").text(jid);
+    $(".generated-p").text(password);
+
+    ic_editor.getSession().setValue($("#includes_editor_content").text());
+    ic_editor.setReadOnly(true);
+
+    cu_editor.getSession().setMode("ace/mode/javascript");
+    cu_editor.getSession().setValue($("#create_user_editor_content").text());
+    /*$("#create_user_test").click(function() {
+        run(cu_editor, "#create_user_output", "#create_user_test", false);
+    }); not runnable for now */
+
+    au_editor.getSession().setMode("ace/mode/javascript");
+    au_editor.getSession().setValue($("#auth_user_editor_content").text());
+    /*$("#auth_user_test").click(function() {
+        run(au_editor, "#auth_user_output", "#auth_user_test", false);
+    }); not runnable for now */
+
+    fp_editor.getSession().setMode("ace/mode/javascript");
+    /*$("#fetch_posts_test").click(function() {
+        run(fp_editor, "#fetch_posts_output", "#fetch_posts_test", true);
+    }); not runnable for now */
+
+    np_editor.getSession().setMode("ace/mode/javascript");
+    /*$("#new_post_test").click(function() {
+        run(np_editor, "#new_post_output", "#new_post_test", true);
+    });  not runnable for now */
+
+});
+  </script>
 </body>
 </html>
