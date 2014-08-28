@@ -14,6 +14,13 @@
   <link rel="stylesheet" href="theme/css/site.css" type="text/css" />
   {% block morestyles %} {% endblock %}
   {% include 'includes/ga.html' %}
+  <script src="theme/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
+<!--  <script src="theme/vendor/raphael/raphael-min.js"></script>
+  <script src="theme/vendor/underscore/underscore-min.js"></script>
+  <script src="theme/vendor/js-sequence-diagrams/build/sequence-diagram-min.js"></script>
+  <script src="theme/js/sequence-diagrams.js"></script>-->
 </head>
 <body class="{{ active_page }}">
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -80,18 +87,5 @@
   <noscript>
       <a href="https://www.olark.com/site/1860-190-10-1586/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a>
   </noscript>
-
-  <script src="theme/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
-  <script src="theme/vendor/raphael/raphael-min.js"></script>
-  <script src="theme/vendor/underscore/underscore-min.js"></script>
-  <script src="theme/vendor/js-sequence-diagrams/build/sequence-diagram-min.js"></script>
-  <script src="theme/js/sequence-diagrams.js"></script>
-  <script src="theme/vendor/isotope/isotope.pkgd.min.js"></script>
-  <script src="theme/vendor/isotope/cells-by-row.js"></script>
-  <script src="theme/vendor/mustache/jquery.mustache.js"></script>
-  <script src="theme/js/isotope-mustache.config.js"></script>
-  {% block morescripts %} {% endblock %}
 </body>
 </html>

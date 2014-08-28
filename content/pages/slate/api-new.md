@@ -1,18 +1,17 @@
-Title: Slate API
-url: slate-api
-save_as: slate-api.html
+Title: API
+url: api
+save_as: api.html
 order: 2
 table_of_contents: false
-show_in_top_menu: false
+show_in_top_menu: true
 slate: true
 
 ---
 title: Buddycloud API Reference
 
 language_tabs:
-  - shell : cURL
-  - javascript : Javascript
-  - plaintext : Sequence Diagram
+  - shell : REST API
+  - javascript : XMPP-FTW
 
 toc_footers:
   - <a href='#'>Sign Up for a Buddycloud developer hosting</a>
@@ -20,7 +19,7 @@ toc_footers:
 includes:
   - introduction
   - pagination
-  - api-discovery
+  - discovery
   - accounts
   - realtime
   - channels
@@ -28,12 +27,12 @@ includes:
   - posts
   - subscriptions
   - followers
-  - messaging
+#  - messaging
   - media
   - search
-  - push
-  - content-recommendation
-  - social-recommendation
+#  - push
+#  - content-recommendation
+#  - social-recommendation
 
 search: true
 ---

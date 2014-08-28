@@ -31,6 +31,7 @@ under the License.
 
     // scroll to the new location of the position
     $(window.location.hash).get(0).scrollIntoView(true);
+    window.scrollBy(0, -50);
   }
 
   // if a button is clicked, add the state to the history

@@ -763,7 +763,7 @@
             self.cachedAnchors = [];
             var anchors = $(self.options.context).find("div[data-unique]");
             anchors.each(function(idx) {
-                var distance = (($(this).next().length ? $(this).next() : $(this)).offset().top - self.options.highlightOffset);
+                var distance = (($(this).next().length ? $(this).next() : $(this)).offset().top - 50 - self.options.highlightOffset);
                 self.cachedHeights[idx] = distance;
             });
             self.cachedAnchors = anchors;

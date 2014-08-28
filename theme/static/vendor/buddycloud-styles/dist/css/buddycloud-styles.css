@@ -1922,12 +1922,16 @@ h1[id] {
 .bs-docs-sidebar.affix {
   top: 90px;
 }
-/* line 24, ../../src/sass/_docs.scss */
+/* line 23, ../../src/sass/_docs.scss */
+.bs-docs-sidebar .nav > li > a {
+  color: #333333;
+}
+/* line 25, ../../src/sass/_docs.scss */
 .bs-docs-sidebar .nav > li > a:hover, .bs-docs-sidebar .nav > li > a:focus {
   color: #2daebf;
   border-left-color: transparent;
 }
-/* line 33, ../../src/sass/_docs.scss */
+/* line 34, ../../src/sass/_docs.scss */
 .bs-docs-sidebar .nav > .active > a, .bs-docs-sidebar .nav > .active:hover > a, .bs-docs-sidebar .nav > .active:focus > a {
   color: #2daebf;
   border-left-color: transparent;

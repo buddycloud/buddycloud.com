@@ -1,25 +1,32 @@
 #Realtime Events
 
 ```shell
-curl https://demo.buddycloud.org/api/notifications/posts
-```
+#You will need to perform at least two HTTP requests
+# in order to get updates.
+#A mandatory one to get the latest timestamp:
 
-> This will always return 0 items and the latest timestamp:
+#GET https://demo.buddycloud.org/api/notifications/posts
 
+#Then, provide the latest known time stamp to
+# the same endpoint via the url parameter 'since':
+
+#GET https://demo.buddycloud.org/api/notifications/posts?since={timestamp}
+
+#For example:
+
+curl https://demo.buddycloud.org/api/notifications/posts \
+     -X GET
+
+#A response example would be as follows:
 {
   "last": "1403624041808",
   "items": []
 }
 
-> Then, make another request with the "since" query parameter set to the last known timestamp:
+curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454 \
+     -X GET
 
-```shell
-curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
-```
-
->This will hang until a response is returned, such as:
-
-```json
+#Response will be as follows:
 {
   "last": "1403624094454",
   "items": [
@@ -35,19 +42,92 @@ curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454
     }
   ]
 }
-```
 
-> Then continue to loop and call this endpoint, using the 'last' value of the previous request in each subsequent call.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
 
 ```javascript
-socket.send('xmpp.buddycloud.presence',
-            {}
-            )
-```
-> returns the following on success
+#First of all, you must send presence in order
+# to receive notifications:
 
-```json
-???  (does this ACK or just start sending events?)
+#XMPP-FTW event 'xmpp.buddycloud.presence'
+
+socket.send(
+    'xmpp.buddycloud.presence',
+    {}
+)
+
+#Then to get updates of specific events, there
+# are other events as well.
+
+#To listen for upcoming items:
+#XMPP-FTW event 'xmpp.buddycloud.push.item'
+
+socket.send(
+    'xmpp.buddycloud.push.item',
+    {}
+)
+
+#To be informed if an item was successfully deleted:
+#XMPP-FTW event 'xmpp.buddycloud.push.retract'
+
+socket.send(
+    'xmpp.buddycloud.push.retract',
+    {}
+)
+
+#To be informed if a node you follow had its configuration updated:
+#XMPP-FTW event 'xmpp.buddycloud.push.configuration'
+
+socket.send(
+    'xmpp.buddycloud.push.configuration',
+    {}
+)
+
+#To be informed of if a subscription change
+# occured in a node you're subscribed to:
+#XMPP-FTW event 'xmpp.buddycloud.push.subscription'
+
+socket.send(
+    'xmpp.buddycloud.push.subscription',
+    {}
+)
+
+#For affiliation changes:
+#XMPP-FTW event 'xmpp.buddycloud.push.affiliation'
+
+socket.send(
+    'xmpp.buddycloud.push.affiliation',
+    {}
+)
+
+#If you're a node onwer or moderator, listen for
+# subscription authorisation requests through:
+#XMPP-FTW event 'xmpp.buddycloud.push.authorisation'
+
+socket.send(
+    'xmpp.buddycloud.push.authorisation',
+    {}
+)
 ```
 
 Your app can receive realtime upates for all Buddycloud events, including:

@@ -1,3 +1,7 @@
+.navbar-inverse .navbar-brand:before {
+  background-image: url("../../buddycloud-styles/dist/img/logos/buddycloud_logo_mark_white.svg");
+}
+
 .api {
   padding-top: 50px;
 
@@ -11,10 +15,20 @@
 
 }
 
-
 .tocify-wrapper {
-  a:hover {
-    text-decoration: none;
+  a {
+    color: #333;
+    line-height: initial;
+
+    &:hover {
+      text-decoration: none;
+      color: #2DAEBF;
+    }
+  }
+
+  .tocify-item a {
+    padding-top: 4px;
+    padding-bottom: 4px;
   }
 
   .tocify-focus {
@@ -23,7 +37,18 @@
       color: #2DAEBF;
     }
   }
+
+  .tocify-subheader {
+    padding-bottom: 10px;
+
+    .tocify-item a {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
 }
+
+
 
 .content table tr:nth-child(even) > td,
 .content section table tr:nth-child(even) > td {

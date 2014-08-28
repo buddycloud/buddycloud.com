@@ -5,6 +5,11 @@ order: 1
 show_in_top_menu: false
 table_of_contents: true
 
+Docker?
+-------
+
+If you'd rather run this as a Docker instance, check out https://github.com/buddycloud/dockerfiles
+
 
 Install Requirements
 --------------------
@@ -13,7 +18,7 @@ Install Requirements
     hosting](http://hosting.buddycloud.com))
 -   a domain name (the instructions assume EXAMPLE.COM)
 -   the ability to edit your DNS
--   Ubuntu, 12.04 (LTS)
+-   Ubuntu, 14.04 (LTS)
 
 Getting help
 ------------
@@ -40,10 +45,8 @@ buddycloud DNS
 This install will setup a buddycloud webclient at
 <http://buddycloud.EXAMPLE.COM>
 
-Log into your registrar or edit your DNS zone file (at Godaddy this is
-called the DNS Manager). In this example we use 1.2.3.4 as your server
-address. Creating a [TXT
-record](https://support.google.com/a/bin/topic.py?hl=en&topic=1409901).
+Log into your registrar or edit your DNS zone file. In this example we use 1.2.3.4 as your server
+address.
 
 ~~~~ {.text}
 
@@ -81,7 +84,8 @@ Double check your firewall rules. They should look something like this:
 ~~~~ bash
 # inbound web, server to server and outbound server to server
 iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d <your server address> -p tcp --dport 80   -j ACCEPT 
-iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d <your server address> -p tcp --dport 443  -j ACCEPT 
+iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d <your server address> -p tcp --dport 443  -j ACCEPT
+iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d <your server address> -p tcp --dport 5222 -j ACCEPT
 iptables -A INPUT  -m state --state NEW -s 0.0.0.0/0 -d <your server address> -p tcp --dport 5269 -j ACCEPT
 iptables -A OUTPUT -m state --state NEW -s <your server address> -d 0.0.0.0/0 -p tcp --dport 5269 -j ACCEPT 
 ~~~~
@@ -200,7 +204,7 @@ buddycloud Server
 
 ~~~~ bash
 # install dependencies
-apt-get install postgresql postgresql-client postgresql-contrib openjdk-6-jre dbconfig-common
+apt-get install postgresql postgresql-client postgresql-contrib openjdk-7-jre dbconfig-common
 # Download package from http://downloads.buddycloud.com/packages/debian/nightly/buddycloud-server-java/
 dpkg -i buddycloud-server-java*.deb
 ~~~~

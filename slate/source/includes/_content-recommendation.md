@@ -19,7 +19,7 @@ curl https://demo.buddycloud.org/api/???? \
  --???
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -42,7 +42,7 @@ curl https://demo.buddycloud.org/api/???? \
  --???
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```
@@ -87,7 +87,7 @@ Content-Type: application/json
 }
 ```
 
-```javascript```
+```javascript
 ???
 ???
 ```

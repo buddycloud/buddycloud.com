@@ -21,6 +21,7 @@
 
   .nav {
     > li > a {
+      color: $dark-gray;
       &:hover, &:focus {
         color: $primary-color;
         border-left-color: transparent;
