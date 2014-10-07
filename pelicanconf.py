@@ -31,7 +31,7 @@ JINJA_FILTERS = {
 GOOGLE_ANALYTICS = "UA-1075750-9"
 
 SLATE_PAGES_DIR = 'pages/slate'
-PAGE_EXCLUDES = ('slate',)
+PAGE_EXCLUDES = ['slate',]
 
 PLUGINS = ['slate.pelican_plugin',]
 
