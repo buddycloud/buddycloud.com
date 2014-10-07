@@ -105,7 +105,7 @@ class SlateGenerator(PagesGenerator):
         slate_pages = False
 
         for f in self.generator.get_files(
-            self.generator.settings['SLATE_PAGES_DIR']):
+            self.generator.settings.get('SLATE_PAGES_DIR', "pages/slate")):
             try:
 
                 page = self.generator.readers.read_file(
