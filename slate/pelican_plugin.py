@@ -103,6 +103,7 @@ class SlateGenerator(PagesGenerator):
     def generate(self):
 
         slate_pages = False
+        help(self.generator.get_files)
         for f in self.generator.get_files(
             self.generator.settings['SLATE_PAGES_DIR']):
             try:
