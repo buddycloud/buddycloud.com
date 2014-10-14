@@ -31,17 +31,18 @@ class SlateReader(BaseReader):
             content = md.convert(text)
 
         metadata = {}
-        for name, value in md.Meta.items():
-            name = name.lower()
-            if name == "summary":
-                summary_values = "\n".join(value)
-                md.reset()
-                summary = md.convert(summary_values)
-                metadata[name] = self.process_metadata(name, summary)
-            elif len(value) > 1:
-                metadata[name] = self.process_metadata(name, value)
-            else:
-                metadata[name] = self.process_metadata(name, value[0])
+        if ( md.Meta.items() != None ):
+            for name, value in md.Meta.items():
+                name = name.lower()
+                if name == "summary":
+                    summary_values = "\n".join(value)
+                    md.reset()
+                    summary = md.convert(summary_values)
+                    metadata[name] = self.process_metadata(name, summary)
+                elif len(value) > 1:
+                    metadata[name] = self.process_metadata(name, value)
+                else:
+                    metadata[name] = self.process_metadata(name, value[0])
 
         return content, metadata
 
@@ -62,7 +63,10 @@ class SlateReader(BaseReader):
 
         if not ('slate' in metadata and metadata['slate'].lower() == 'true'):
             if ( bool(Markdown) ):
+                logger.warning("Performing markdown_read of " + source_path)
                 return self.markdown_read(source_path)
+
+        logger.warning("Performing slate_read of " + source_path)
 
         slate_content = codecs.open('slate/source/index.md', 'w')
         slate_content.write(content)
