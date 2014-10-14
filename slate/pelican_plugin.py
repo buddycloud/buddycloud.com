@@ -21,11 +21,13 @@ class SlateReader(BaseReader):
     def __init__(self, *args, **kwargs):
         super(SlateReader, self).__init__(*args, **kwargs)
         self.extensions = list(self.settings.get('MD_EXTENSIONS',[]))
+        print "Extensions found: ", self.extensions
         if 'meta' not in self.extensions:
             self.extensions.append('meta')
 
     def markdown_read(self, source_path):
 
+        print "Markdown library available?", Markdown
         md = Markdown(extensions=self.extensions)
         print "Markdown obj created"
         with pelican_open(source_path) as text:
