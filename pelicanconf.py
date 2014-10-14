@@ -16,7 +16,7 @@ STATIC_PATHS = [ 'img', 'CNAME' ]
 
 THEME = 'theme'
 
-MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_tabs', 'mdext.sequence_diagrams', 'mdext.fix_code_blocks' ]
+#MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.togglable_tabs', 'mdext.sequence_diagrams', 'mdext.fix_code_blocks' ]
 
 import os, sys
 sys.path.append(os.path.join(os.getcwd(), "jinjaext"))
