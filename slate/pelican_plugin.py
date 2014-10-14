@@ -20,23 +20,19 @@ class SlateReader(BaseReader):
 
     def __init__(self, *args, **kwargs):
         super(SlateReader, self).__init__(*args, **kwargs)
-        self.extensions = list(self.settings['MD_EXTENSIONS'])
+        self.extensions = list(self.settings.get('MD_EXTENSIONS',[]))
         if 'meta' not in self.extensions:
             self.extensions.append('meta')
 
     def markdown_read(self, source_path):
 
-        logger.warning("creating Markdown obj")
         md = Markdown(extensions=self.extensions)
-        print "obj created"
+        print "Markdown obj created"
         with pelican_open(source_path) as text:
-            logger.warning("text: " + text)
             content = md.convert(text)
 
         metadata = {}
-        print "iterating over: ", md.Meta.items()
         for name, value in md.Meta.items():
-            print "name: ", name, "value: ", value
             name = name.lower()
             if name == "summary":
                 summary_values = "\n".join(value)
