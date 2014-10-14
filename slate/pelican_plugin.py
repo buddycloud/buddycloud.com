@@ -26,8 +26,11 @@ class SlateReader(BaseReader):
 
     def markdown_read(self, source_path):
 
+        logger.warning("creating Markdown obj")
         md = Markdown(extensions=self.extensions)
+        print "obj created"
         with pelican_open(source_path) as text:
+            logger.warning("text: " + text)
             content = md.convert(text)
 
         metadata = {}
