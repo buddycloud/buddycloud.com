@@ -31,18 +31,19 @@ class SlateReader(BaseReader):
             content = md.convert(text)
 
         metadata = {}
-        if ( md.Meta.items() != None ):
-            for name, value in md.Meta.items():
-                name = name.lower()
-                if name == "summary":
-                    summary_values = "\n".join(value)
-                    md.reset()
-                    summary = md.convert(summary_values)
-                    metadata[name] = self.process_metadata(name, summary)
-                elif len(value) > 1:
-                    metadata[name] = self.process_metadata(name, value)
-                else:
-                    metadata[name] = self.process_metadata(name, value[0])
+        print "iterating over: ", md.Meta.items()
+        for name, value in md.Meta.items():
+            print "name: ", name, "value: ", value
+            name = name.lower()
+            if name == "summary":
+                summary_values = "\n".join(value)
+                md.reset()
+                summary = md.convert(summary_values)
+                metadata[name] = self.process_metadata(name, summary)
+            elif len(value) > 1:
+                metadata[name] = self.process_metadata(name, value)
+            else:
+                metadata[name] = self.process_metadata(name, value[0])
 
         return content, metadata
 
