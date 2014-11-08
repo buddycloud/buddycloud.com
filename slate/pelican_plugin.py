@@ -109,25 +109,31 @@ class SlateGenerator(PagesGenerator):
 
         for f in self.generator.get_files(
             self.generator.settings['SLATE_PAGES_DIR']):
-            try:
+            page = super(PagesGenerator, self.generator).get_cached_data(f, None)
+            if page is None:
+                try:
 
-                page = self.generator.readers.read_file(
-                    base_path = self.generator.path, path = f,
-                    content_class = SlatePage, context = self.generator.context)
+                    logger.warning("Slate generator now issuing a read of file at " + str(f) + ".")
+                    page = self.generator.readers.read_file(
+                        base_path = self.generator.path, path = f,
+                        content_class = SlatePage, context = self.generator.context)
 
-            except Exception as e:
-                logger.warning('Could not process {}\n{}'.format(f, e))
-                continue
-            else:
-
-                self.generator.add_source_path(page)
-
-                if page.status == "published":
-                    self.generator.pages.append(page)
-                    slate_pages = True
+                except Exception as e:
+                    logger.warning('Could not process {}\n{}'.format(f, e))
+                    self.generator._add_failed_source_path(f)
+                    continue
                 else:
-                    logger.warning("Unknown status %s for file %s," +
-                        " skipping it." % (repr(page.status), repr(f)))
+
+                    super(PagesGenerator, self.generator).cache_data(f, page)
+
+            self.generator.add_source_path(page)
+
+            if page.status == "published":
+                self.generator.pages.append(page)
+                slate_pages = True
+            else:
+                logger.warning("Unknown status %s for file %s," +
+                    " skipping it." % (repr(page.status), repr(f)))
 
         if ( slate_pages ):
             if ( os.path.exists("output/theme/vendor/slate") ):
@@ -137,6 +143,8 @@ class SlateGenerator(PagesGenerator):
 
         self.generator._update_context(('pages', ))
         self.generator.context['PAGES'] = self.generator.pages
+
+        super(PagesGenerator, self.generator).save_cache()
 
 def generate_slate_pages_too(pelican_object):
     slate_generator = SlateGenerator(pelican_object)
