@@ -1,6 +1,7 @@
 Title: API
 url: api
 save_as: api.html
+override_save_as: api.html
 order: 2
 table_of_contents: false
 show_in_top_menu: true
