@@ -1,6 +1,5 @@
 from xml.etree import ElementTree
 from string import punctuation
-from jinja2 import Markup
 
 class TableOfContents:
 
@@ -129,7 +128,7 @@ class TableOfContents:
 	def addTableOfContentsHooks(content, toc_info, active_page):
 
 		if ( toc_info == None ):
-			return Markup(content).unescape()
+			return content
 
 		try:
 			root = ElementTree.fromstring("<root>"+content+"</root>")
@@ -137,12 +136,12 @@ class TableOfContents:
 			print "Error while adding ToC hooks to content"
 			print "Could not parse page: %s" % active_page
 			print "The problem: " + str(e)
-			return Markup(content).unescape()
+			return content
 		except Exception as e:
 			print "Error while adding ToC hooks to content"
 			print "Something unexpected happened while parsing page: %s" % active_page
 			print "The problem: " + str(e)
-			return Markup(content).unescape()
+			return content
 
 		def process(element):
 
@@ -157,4 +156,4 @@ class TableOfContents:
 
 		content = ElementTree.tostring(root, method="html")
 		content = content.replace("<root>", "").replace("</root>", "")
-		return Markup(content).unescape()
+		return content

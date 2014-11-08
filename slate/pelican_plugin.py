@@ -21,15 +21,12 @@ class SlateReader(BaseReader):
     def __init__(self, *args, **kwargs):
         super(SlateReader, self).__init__(*args, **kwargs)
         self.extensions = list(self.settings.get('MD_EXTENSIONS',[]))
-        print "Extensions found: ", self.extensions
         if 'meta' not in self.extensions:
             self.extensions.append('meta')
 
     def markdown_read(self, source_path):
 
-        print "Markdown library available?", Markdown
         md = Markdown(extensions=self.extensions)
-        print "Markdown obj created"
         with pelican_open(source_path) as text:
             content = md.convert(text)
 
@@ -111,7 +108,7 @@ class SlateGenerator(PagesGenerator):
         slate_pages = False
 
         for f in self.generator.get_files(
-            self.generator.settings.get('SLATE_PAGES_DIR', "pages/slate")):
+            self.generator.settings['SLATE_PAGES_DIR']):
             try:
 
                 page = self.generator.readers.read_file(
