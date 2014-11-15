@@ -2,7 +2,7 @@ Title: API (old version)
 url: api-old
 save_as: api-old.html
 order: 2
-table_of_contents: true
+table_of_contents: false
 show_in_top_menu: false
 
 The HTTP API is implemented by the [buddycloud HTTP API

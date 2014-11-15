@@ -3,7 +3,7 @@ url: api
 save_as: api.html
 order: 2
 table_of_contents: false
-show_in_top_menu: true
+show_in_top_menu: false
 slate: true
 
 ---
