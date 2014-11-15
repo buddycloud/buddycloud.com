@@ -33,10 +33,17 @@
           <ul class="nav navbar-nav">
           {% for page in PAGES|sort(attribute='order') if not (page.show_in_top_menu == "false") %}
               <li {% if active_page == page.show_as_selected|default(page.slug) %}class="active"{% endif %} >
-                  <a href="{{ SITEURL }}/{{ page.url }}">
+                  <a href="{{ SITEURL }}/{{ page.url }}" {% if page.button_style == "grey" %}class="btn btn-default"{% endif %}>
                       {{ page.top_menu_name|default(page.title) }}
                   </a>
               </li>
+              {% if page.order == "4" %}
+              <li>
+                  <a href="https://hosting.buddycloud.com/login">
+                      Sign In
+                  </a>
+              </li>
+              {% endif %}
           {% endfor %}
           </ul>
       {% endif %}
