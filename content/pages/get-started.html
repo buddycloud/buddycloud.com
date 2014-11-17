@@ -12,11 +12,28 @@
   <p>
     You can access Buddycloud in many ways. The following steps quickly introduce you on how to exchange posts in a channel node, which is the most basic thing you can do with Buddycloud.
   </p>
-  <p>
+  <div class="row clearfix">
+    <div class="col-md-6 column">
+      <p>The full Buddycloud stack, designed to get you running quickly.
+      </p>
+      <p>
+        <a class="btn" href="/get-started">Free Hosting</a>
+      </p>
+    </div>
+    <div class="col-md-6  column">
+      <p>
+        Run your own Buddycloud stack on your own infrastructure.
+      </p>
+      <p>
+        <a class="btn" href="https://hosting.buddycloud.com">Install Buddycloud</a>
+      </p>
+    </div>
+  </div>
+  <h2>Demo messaging app</h2>
+    <p>
     This example uses Javascript (better suited for web apps) but you can use our <a href="https://demo.buddycloud.org/api">RESTful API</a> in order to build other apps such as mobile ones.
   </p>
-
-  <h2>First of all, include primus.js</h2>
+  <h3>Include primus.js</h3>
   <div class="bs-example">
       You will need to include this script otherwise none of the steps below will work.
   </div>
@@ -25,7 +42,7 @@
   </div>
   <textarea id="includes_editor_content" style="display:none">&lt;script src="https://demo.buddycloud.com/scripts/primus/primus.js" type="text/javascript"&gt;&lt;/script&gt;</textarea>
 
-  <h2>Create a user</h2>
+  <h3>Create a user</h3>
   <div class="bs-example">
       <p>
           The following Javascript code snippet creates an account: <code><span class='generated-u'></span></code>.
@@ -58,7 +75,7 @@ socket.on('xmpp.connection', function() {
       <code id="create_user_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
-  <h2>Connect, authenticate, discover</h2>
+  <h3>Connect, authenticate, discover</h3>
   <div class="bs-example">
       <p>
           The following Javascript code snippet <b><i>is pretty important and required so that you can perform the further steps</i></b> described in the following sections in this document. This is how you connect to your Buddycloud domain, authenticate your user and then discover the Buddycloud server.
@@ -91,7 +108,7 @@ socket.on('xmpp.connection', function() {
       <code id="auth_user_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
-  <h2>Fetch posts</h2>
+  <h3>Fetch posts</h3>
   <div class="bs-example">
       <p>
           The following Javascript code snippet assumes you are already authenticated and also that you have already discovered the Buddycloud server. It retrieves posts from the <code>get-started@demo.buddycloud.com/posts</code> node.
@@ -126,7 +143,7 @@ function(error, posts) {
       <code id="fetch_posts_output" style="margin-left:10px; float:right; display:none;"></code>
   </div>
 
-  <h2>Post something yourself</h2>
+  <h3>Post something yourself</h3>
   <div class="bs-example">
       <p>
           The following Javascript code snippet assumes you are already authenticated and that you have already discovered the Buddycloud server. It subscribes your user to the <code>get-started@demo.buddycloud.com/posts</code> node and then creates a post on this node. Finally, it starts listening for incoming messages (and thus will receive the one you've just posted).
