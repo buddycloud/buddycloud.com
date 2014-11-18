@@ -33,8 +33,14 @@
           <ul class="nav navbar-nav">
           {% for page in PAGES|sort(attribute='order') if not (page.show_in_top_menu == "false") %}
               <li {% if active_page == page.show_as_selected|default(page.slug) %}class="active"{% endif %} >
-                  <a href="{{ SITEURL }}/{{ page.url }}" {% if page.button_style == "grey" %}class="nav_bar_grey_btn"{% endif %}>
-                      {{ page.top_menu_name|default(page.title) }}
+                  <a href="{{ SITEURL }}/{{ page.url }}" {% if page.button_style == "grey" %}class="nav_bar_grey_lnk"{% endif %}>
+                      {% if page.button_style == "grey" %}
+                      <span class="nav_bar_grey_span">
+                      {% endif %}
+                          {{ page.top_menu_name|default(page.title) }}
+                      {% if page.button_style == "grey" %}
+                      </span>
+                      {% endif %}
                   </a>
               </li>
               {% if page.order == "4" %}

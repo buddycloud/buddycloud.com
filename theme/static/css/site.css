@@ -545,12 +545,18 @@ dd {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
 }
 
-.nav_bar_grey_btn {
+.nav_bar_grey_lnk > .nav_bar_grey_span {
   background-color: #E5E9EF;
+  border: 5px solid transparent; 
+  border-radius: 5px;
 }
 
-.active > .nav_bar_grey_btn,
-.nav_bar_grey_btn:hover {
+.active > .nav_bar_grey_lnk > .nav_bar_grey_span,
+.nav_bar_grey_lnk > .nav_bar_grey_span:hover {
   background-color: #E5E9EF !important;
+  color: #2DAEBF !important;
+}
+
+.nav_bar_grey_lnk:hover {
   color: #2DAEBF !important;
 }
