@@ -544,3 +544,13 @@ dd {
   background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
 }
+
+.nav_bar_grey_btn {
+  background-color: #E5E9EF;
+}
+
+.active > .nav_bar_grey_btn,
+.nav_bar_grey_btn:hover {
+  background-color: #E5E9EF !important;
+  color: #2DAEBF !important;
+}

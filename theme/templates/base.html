@@ -15,7 +15,7 @@
   {% block morestyles %} {% endblock %}
   {% include 'includes/ga.html' %}
 </head>
-<body class="{{ active_page }}">
+<body class="{{ active_page }}" style="overflow-y: scroll;">
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
       <div class="navbar-header" href="#">
@@ -33,7 +33,7 @@
           <ul class="nav navbar-nav">
           {% for page in PAGES|sort(attribute='order') if not (page.show_in_top_menu == "false") %}
               <li {% if active_page == page.show_as_selected|default(page.slug) %}class="active"{% endif %} >
-                  <a href="{{ SITEURL }}/{{ page.url }}" {% if page.button_style == "grey" %}class="btn btn-default"{% endif %}>
+                  <a href="{{ SITEURL }}/{{ page.url }}" {% if page.button_style == "grey" %}class="nav_bar_grey_btn"{% endif %}>
                       {{ page.top_menu_name|default(page.title) }}
                   </a>
               </li>
@@ -50,7 +50,7 @@
       </div>
   </div>
 </div>
-{% if active_page != "index" and active_page != "contact" %}
+{% if active_page != "index" %}
 <div class="container bs-docs-container">
   <div class="row">
       <div class="col-md-3 col-sm-3">
@@ -61,7 +61,7 @@
 {% endif %}
           {% block content %}
           {% endblock %}
-{% if active_page != "index" and active_page != "contact" %}
+{% if active_page != "index" %}
       </div>
   </div>
   <nav>
