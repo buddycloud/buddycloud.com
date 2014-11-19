@@ -33,6 +33,7 @@ class TableOfContents:
 			hook = hook_base + "_" + str(hook_id)
 			hook_id += 1
 
+                print "Attempting to add", hook, "-*- hook_id:", hook_id
 		TableOfContents.hooks_taken.append(hook)
 		return hook
 
@@ -46,7 +47,9 @@ class TableOfContents:
 		if hook[:hook.rfind("_")] in stub_hooks:
 
 			hook_at = stub_hooks.index(hook[:hook.rfind("_")])
+                        hook = TableOfContents.hooks_taken[hook_at]
 
+                print "Attempting to remove", hook, "-*- hook_at:", hook_at
 		TableOfContents.hooks_taken.remove(hook)
 		return hook
 
@@ -73,7 +76,8 @@ class TableOfContents:
 		def process(element):
 
 			if ( element.tag == 'h1'
-			  or element.tag == 'h2' ):
+			  or element.tag == 'h2'
+                          or element.tag == 'h3' ):
 				toc_info.append({
 					'tag' : element.tag,
 					'text' : element.text,
@@ -115,12 +119,23 @@ class TableOfContents:
 				elif ( toc_info[i]['tag'] == 'h2' ):
 					if ( last_tag == 'h1' ):
 						toc_html += "<ul class='nav'>"
+                                        elif ( last_tag == 'h2' ):
+                                                toc_html += "</li>"
+                                        elif ( last_tag == 'h3' ):
+                                                toc_html += "</ul>"
 					toc_html += "<li>"
 					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
-					toc_html += "</li>"
+                                elif ( toc_info[i]['tag'] == 'h3' ):
+                                        if ( last_tag == 'h2' ):
+                                                toc_html += "<ul class='nav'>"
+                                        toc_html += "<li>"
+					toc_html += a_html % (toc_info[i]['hook'], toc_info[i]['text'])
+                                        toc_html += "</li>"
 
 				last_tag = toc_info[i]['tag']
 
+                        if ( last_tag == 'h1' ):
+                                toc_html += "</li>"
 			toc_html += "</ul>"
 			return toc_html
 
@@ -146,7 +161,8 @@ class TableOfContents:
 		def process(element):
 
 			if ( element.tag == 'h1'
-			  or element.tag == 'h2' ):
+			  or element.tag == 'h2'
+                          or element.tag == 'h3' ):
 				element.attrib["id"] = TableOfContents.consume_existing_hook(element.text)
 
 			for child in element:
