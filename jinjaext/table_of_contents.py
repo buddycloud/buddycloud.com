@@ -33,7 +33,6 @@ class TableOfContents:
 			hook = hook_base + "_" + str(hook_id)
 			hook_id += 1
 
-                print "Attempting to add", hook, "-*- hook_id:", hook_id
 		TableOfContents.hooks_taken.append(hook)
 		return hook
 
@@ -49,7 +48,6 @@ class TableOfContents:
 			hook_at = stub_hooks.index(hook[:hook.rfind("_")])
                         hook = TableOfContents.hooks_taken[hook_at]
 
-                print "Attempting to remove", hook, "-*- hook_at:", hook_at
 		TableOfContents.hooks_taken.remove(hook)
 		return hook
 
@@ -75,9 +73,10 @@ class TableOfContents:
 
 		def process(element):
 
-			if ( element.tag == 'h1'
+			if ( ( element.tag == 'h1'
 			  or element.tag == 'h2'
-                          or element.tag == 'h3' ):
+                          or element.tag == 'h3' )
+                          and element.attrib.get("data-hidden-from-toc", "false") != "true" ):
 				toc_info.append({
 					'tag' : element.tag,
 					'text' : element.text,
@@ -160,9 +159,10 @@ class TableOfContents:
 
 		def process(element):
 
-			if ( element.tag == 'h1'
+			if ( ( element.tag == 'h1'
 			  or element.tag == 'h2'
-                          or element.tag == 'h3' ):
+                          or element.tag == 'h3' )
+                          and element.attrib.get("data-hidden-from-toc", "false") != "true" ):
 				element.attrib["id"] = TableOfContents.consume_existing_hook(element.text)
 
 			for child in element:
