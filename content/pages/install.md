@@ -5,10 +5,9 @@ order: 1
 show_in_top_menu: false
 table_of_contents: true
 
-Docker?
--------
+<h2 data-hidden-from-toc="true">Docker?</h2>
 
-If you'd rather run this as a Docker instance, check out https://github.com/buddycloud/dockerfiles
+If you'd rather run this as a Docker instance, check out <https://github.com/buddycloud/dockerfiles>
 
 
 Install Requirements
