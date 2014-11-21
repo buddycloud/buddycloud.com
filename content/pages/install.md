@@ -210,14 +210,14 @@ apt-get install postgresql postgresql-client postgresql-contrib openjdk-7-jre db
 dpkg -i buddycloud-server-java*.deb
 ~~~~
 
-### Configure server
+### Configure Server
 
 Edit `/etc/buddycloud-server-java/configuration.properties`.
 
 -   change EXAMPLE.COM to match your domain
 -   double check the database connection strings
 
-### Start server
+### Start Server
 
 ~~~~ bash
 /etc/init.d/buddycloud-server-java start
@@ -288,7 +288,7 @@ Edit `/etc/buddycloud-http-api/config.js` to use your domain.
 /etc/init.d/buddycloud-http-api start
 ~~~~
 
-### Add site to Apache
+### Add Site to Apache
 
 We recommend the usage of a HTTP server in order to make the API
 publicly available. As we are using Apache to serve the webclient, we
