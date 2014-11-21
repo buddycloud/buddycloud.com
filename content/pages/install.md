@@ -20,7 +20,7 @@ Install Requirements
 -   the ability to edit your DNS
 -   Ubuntu, 14.04 (LTS)
 
-Getting help
+Getting Help
 ------------
 
 Please ask if you get stuck
@@ -30,7 +30,7 @@ Please ask if you get stuck
 -   report an issue on github: <https://github.com/buddycloud>
 -   email us at: [reach-a-developer@buddycloud.com](mailto:reach-a-developer@buddycloud.com)
 
-buddycloud DNS
+Buddycloud DNS
 --------------
 
 <span style="color:green">Estimated time: **10 mins**</span>
@@ -196,7 +196,7 @@ tail -F /var/log/prosody/prosody.err \
         /var/log/prosody/prosody.log
 ~~~~
 
-buddycloud Server
+Buddycloud Server
 -----------------
 
 <span style="color:green">Estimated time: **5 mins**</span>
@@ -248,7 +248,7 @@ node
 # this means that your buddycloud server database schema been installed successfully.
 ~~~~
 
-buddycloud API Server
+Buddycloud API Server
 ---------------------
 
 <span style="color:green">Estimated time: **6 mins**</span>
@@ -323,7 +323,7 @@ node --version # The buddycloud API requires nodejs 0.8.*
 tail -F /var/log/buddycloud-http-api/buddycloud-http-api.log
 ~~~~
 
-buddycloud Webclient
+Buddycloud Webclient
 --------------------
 
 <span style="color:green">Estimated time: **5 mins**</span>
@@ -370,7 +370,7 @@ tail -F /var/log/apache2/EXAMPLE.COM-error.log \
         /var/log/apache2/api.EXAMPLE.COM-error.log
 ~~~~
 
-buddycloud Pusher
+Buddycloud Pusher
 -----------------
 
 <span style="color:green">Estimated time: **5 mins**</span>
@@ -458,7 +458,7 @@ gcm.api_key=
 tail -F /usr/share/buddycloud-pusher/logs/log
 ~~~~
 
-Final steps
+Final Steps
 -----------
 
 You are done!
@@ -466,7 +466,7 @@ You are done!
 Log-into your buddycloud node at <http://buddycloud.EXAMPLE.COM/> and
 follow your first channels.
 
-Sharing debug info
+Sharing Debug Info
 ------------------
 
 The following commands will generate a file called
