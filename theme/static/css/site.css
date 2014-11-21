@@ -173,6 +173,10 @@ dd {
 .index .contact .googleplus {
   background-image: url("../img/contact/googleplus.svg");
 }
+.index .contact .facebook {
+  background-image: url("../img/contact/facebook.svg");
+}
+
 /* line 1, ../../sass/pages/home/_friends.scss */
 .index .background-friends {
   background-color: #E5E9EF;
