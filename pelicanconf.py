@@ -10,15 +10,13 @@ TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
 
-TEMPLATE_PAGES = {}
-
 DIRECT_TEMPLATES = ['index']
 
 STATIC_PATHS = [ 'img', 'CNAME' ]
 
 THEME = 'theme'
 
-MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.fix_code_blocks' ]
+#MD_EXTENSIONS = [ 'codehilite(css_class=highlight)', 'extra', 'mdext.fix_code_blocks' ]
 
 import os, sys
 sys.path.append(os.path.join(os.getcwd(), "jinjaext"))
