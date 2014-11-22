@@ -1,7 +1,7 @@
 Title: Add chat to your app
 url: cooking-with-buddycloud-chat-app
 save_as: cooking-with-buddycloud-chat-app.html
-order: 1
+order: -1
 show_in_top_menu: false
 table_of_contents: true
 

@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 class SlateReader(BaseReader):
     enabled = True
-    file_extensions = ['md', 'markdown', 'mkd', 'mdown']
+    file_extensions = ['sl8', 'slate']#['md', 'markdown', 'mkd', 'mdown']
 
     def __init__(self, *args, **kwargs):
         super(SlateReader, self).__init__(*args, **kwargs)
