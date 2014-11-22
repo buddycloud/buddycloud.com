@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
 
+TEMPLATE_PAGES = {}
+
 DIRECT_TEMPLATES = ['index']
 
 STATIC_PATHS = [ 'img', 'CNAME' ]
