@@ -13,37 +13,14 @@ except ImportError:
 
 logger = logging.getLogger(__name__)
 
+SLATE_EXTENSIONS = ['sl8', 'slate']
 
 class SlateReader(BaseReader):
     enabled = True
-    file_extensions = ['sl8', 'slate']#['md', 'markdown', 'mkd', 'mdown']
+    file_extensions = SLATE_EXTENSIONS
 
     def __init__(self, *args, **kwargs):
         super(SlateReader, self).__init__(*args, **kwargs)
-        self.extensions = list(self.settings.get('MD_EXTENSIONS',[]))
-        if 'meta' not in self.extensions:
-            self.extensions.append('meta')
-
-    def markdown_read(self, source_path):
-
-        md = Markdown(extensions=self.extensions)
-        with pelican_open(source_path) as text:
-            content = md.convert(text)
-
-        metadata = {}
-        for name, value in md.Meta.items():
-            name = name.lower()
-            if name == "summary":
-                summary_values = "\n".join(value)
-                md.reset()
-                summary = md.convert(summary_values)
-                metadata[name] = self.process_metadata(name, summary)
-            elif len(value) > 1:
-                metadata[name] = self.process_metadata(name, value)
-            else:
-                metadata[name] = self.process_metadata(name, value[0])
-
-        return content, metadata
 
     def read(self, source_path):
 
@@ -59,11 +36,6 @@ class SlateReader(BaseReader):
 
         content = source.read()
         source.close()
-
-        if not ('slate' in metadata and metadata['slate'].lower() == 'true'):
-            if ( bool(Markdown) ):
-                logger.warning("Performing markdown_read of " + source_path)
-                return self.markdown_read(source_path)
 
         logger.warning("Performing slate_read of " + source_path)
 
@@ -112,6 +84,13 @@ class SlateGenerator(PagesGenerator):
             page = super(PagesGenerator, self.generator).get_cached_data(f, None)
             if page is None:
                 try:
+
+                    should_handle = False
+                    for suffix in SLATE_EXTENSIONS:
+                        should_handle = should_handle or str(f).endswith(suffix)
+
+                    if ( not should_handle ):
+                        continue
 
                     logger.warning("Slate generator now issuing a read of file at " + str(f) + ".")
                     page = self.generator.readers.read_file(

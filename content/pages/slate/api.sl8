@@ -4,7 +4,6 @@ save_as: api.html
 order: -1
 table_of_contents: false
 show_in_top_menu: false
-slate: true
 
 ---
 title: Buddycloud API Reference
