@@ -33194,7 +33194,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-11-25 16:19:39 +0000</string>
+	<string>2014-11-25 16:23:06 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -79775,7 +79775,7 @@
 			<key>RowSpacing</key>
 			<real>36</real>
 			<key>SheetTitle</key>
-			<string>on-premises </string>
+			<string>on-premises</string>
 			<key>UniqueID</key>
 			<integer>38</integer>
 			<key>VPages</key>
@@ -81846,7 +81846,7 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>36</integer>
+		<integer>38</integer>
 		<key>Expanded_Canvases</key>
 		<array>
 			<string>publish-subscribe</string>
@@ -82037,7 +82037,7 @@
 				<real>1</real>
 			</array>
 			<array>
-				<string>on-premises </string>
+				<string>on-premises</string>
 				<real>1.059999942779541</real>
 				<real>1.0600000000000001</real>
 			</array>
