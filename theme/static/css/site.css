@@ -570,3 +570,7 @@ dd {
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.h2, h1[id], h2 {
+  margin-bottom: 20px;
+}
