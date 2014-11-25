@@ -165,30 +165,5 @@ socket.on('xmpp.buddycloud.push.item', function(post) {
 });</code></pre>
   </div>
   </div>
-
-  <script src="theme/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
-  <script language="javascript" type="text/javascript">
-
-$(window.document).ready(function(data){
-    var uuid = (function() {
-        function s4() {
-            return Math.floor((1 + Math.random()) * 0x10000)
-               .toString(16)
-               .substring(1);
-        }
-        return function() {
-            return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-           s4() + '-' + s4() + s4() + s4();
-        };
-    })();
-
-    jid = uuid() + "@demo.buddycloud.com";
-    password = uuid() + "_password";
-    $(".generated-u").text(jid);
-    $(".generated-p").text(password);
-});
-  </script>
 </body>
 </html>
