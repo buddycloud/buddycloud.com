@@ -564,3 +564,8 @@ dd {
 .nav_bar_grey_lnk:hover {
   color: #2DAEBF !important;
 }
+
+.bs-docs-section {
+  padding-left: 15px;
+  padding-right: 15px;
+}
