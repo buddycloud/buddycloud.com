@@ -419,5 +419,5 @@ class Bootstrap_Markdown_Extension(Extension):
 		md.parser.blockprocessors.add('tabbed_nav',
 			TabbedNavBlockProcessor(), "_begin")
 
-def makeExtension(configs=None):
-	return Bootstrap_Markdown_Extension(configs=configs)
+def makeExtension(**kwargs):
+	return Bootstrap_Markdown_Extension(**kwargs)

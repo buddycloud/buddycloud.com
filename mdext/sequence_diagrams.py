@@ -54,5 +54,5 @@ class Bootstrap_Markdown_Extension(Extension):
 		md.parser.blockprocessors.add('sequence_diag',
 			SequenceDiagBlockProcessor(), "_begin")
 
-def makeExtension(configs=None):
-	return Bootstrap_Markdown_Extension(configs=configs)
+def makeExtension(**kwargs):
+	return Bootstrap_Markdown_Extension(**kwargs)
