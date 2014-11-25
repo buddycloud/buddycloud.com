@@ -19,5 +19,5 @@ class Bootstrap_Markdown_Extension(Extension):
 	def extendMarkdown(self, md, md_globals):
 		md.postprocessors.add('fix_code_blocks', FixCodeBlocksPost(), "_end")
 
-def makeExtension(configs=None):
-	return Bootstrap_Markdown_Extension(configs=configs)
+def makeExtension(**kwargs):
+	return Bootstrap_Markdown_Extension(**kwargs)
