@@ -1,10 +1,17 @@
-language: python
+language: ruby
+rvm:
+  - 1.9.3
 branches:
   only:
   - master
+before_install:
+- sudo apt-get install python-pip
 install:
 - sudo pip install pelican==3.5.0 ghp-import markdown
+- cd slate
+- bundle install
 script:
+- cd ..
 - make github
 env:
   global:
