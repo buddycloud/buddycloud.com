@@ -565,7 +565,8 @@ dd {
   color: #2DAEBF !important;
 }
 
-.bs-docs-section.bc-page-content {
-  padding-left: 15px;
-  padding-right: 15px;
+.bs-docs-section > .row,
+.bs-docs-section > section > .row {
+  margin-left: 0px;
+  margin-right: 0px;
 }
