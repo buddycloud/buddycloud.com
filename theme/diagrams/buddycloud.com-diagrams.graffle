@@ -33194,7 +33194,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-11-25 14:42:37 +0000</string>
+	<string>2014-11-25 15:21:02 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -68586,7 +68586,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{220, 248}, {162.40265932260627, 64}}</string>
+					<string>{{400, 190}, {182.40265932260627, 64}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -68611,15 +68611,6 @@
 					</dict>
 					<key>ID</key>
 					<integer>61</integer>
-					<key>Line</key>
-					<dict>
-						<key>ID</key>
-						<integer>89832</integer>
-						<key>Position</key>
-						<real>0.49957677966018321</real>
-						<key>RotationType</key>
-						<integer>0</integer>
-					</dict>
 					<key>Style</key>
 					<dict>
 						<key>fill</key>
@@ -68756,7 +68747,7 @@
 					<key>Points</key>
 					<array>
 						<string>{180, 280}</string>
-						<string>{410, 280}</string>
+						<string>{420, 280}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -68802,7 +68793,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{410, 260}, {150, 40}}</string>
+					<string>{{420, 260}, {150, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -72259,21 +72250,21 @@
 					<string>LineGraphic</string>
 					<key>ControlPoints</key>
 					<array>
-						<string>{60, 0}</string>
-						<string>{40, 0}</string>
-						<string>{-50, 10}</string>
-						<string>{70, -10}</string>
-						<string>{-70, -10}</string>
+						<string>{269.10997155829392, 1.5557183488151622}</string>
+						<string>{80, 0}</string>
+						<string>{-104.61538461538495, -3.0769230769222986}</string>
+						<string>{-30, -20}</string>
+						<string>{33.070588235294281, 17.917647058823178}</string>
 						<string>{0, 50}</string>
 					</array>
 					<key>ID</key>
 					<integer>89836</integer>
 					<key>Points</key>
 					<array>
-						<string>{130, 240}</string>
-						<string>{180, 190}</string>
-						<string>{200, 280}</string>
-						<string>{270, 180}</string>
+						<string>{120.43759310013968, 206.52080229995343}</string>
+						<string>{170, 190}</string>
+						<string>{290, 180}</string>
+						<string>{430, 180}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -72312,6 +72303,11 @@
 							<key>Width</key>
 							<real>2</real>
 						</dict>
+					</dict>
+					<key>Tail</key>
+					<dict>
+						<key>ID</key>
+						<integer>41282</integer>
 					</dict>
 				</dict>
 				<dict>
@@ -72406,8 +72402,8 @@
 					<integer>41290</integer>
 					<key>Points</key>
 					<array>
-						<string>{121.00000499999987, 159.99999773590571}</string>
-						<string>{258.99999500000047, 159.99999773590571}</string>
+						<string>{121.00000499998686, 160.00001554787619}</string>
+						<string>{418.99999500000996, 160.00001554787619}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -72449,7 +72445,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{260, 150}, {20, 20}}</string>
+					<string>{{420, 150}, {20, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -72527,7 +72523,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{100, 230}, {20, 20}}</string>
+					<string>{{100, 200}, {20, 20}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -83348,9 +83344,11 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>32</integer>
+		<integer>25</integer>
 		<key>Expanded_Canvases</key>
-		<array/>
+		<array>
+			<string>publish-subscribe</string>
+		</array>
 		<key>Frame</key>
 		<string>{{1, 28}, {1680, 999}}</string>
 		<key>ShowInfo</key>
@@ -83366,9 +83364,9 @@
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{-234.00000000000006, -44.000000000000014}, {1027.5510204081634, 871.42857142857133}}</string>
+		<string>{{-244.00000000000003, -53.000000000000014}, {1048.9583567793798, 888.54168652712099}}</string>
 		<key>Zoom</key>
-		<real>0.98000000000000009</real>
+		<real>0.95999997854232788</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
@@ -83523,8 +83521,8 @@
 			</array>
 			<array>
 				<string>24-7</string>
+				<real>0.98000001907348633</real>
 				<real>0.98000000000000009</real>
-				<real>1.1800000000000002</real>
 			</array>
 			<array>
 				<string>open-platform</string>
