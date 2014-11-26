@@ -574,3 +574,13 @@ dd {
 .h2, h2 {
   margin-bottom: 20px;
 }
+
+.bc-site-wide-search * {
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+  color: black;
+  font-weight: initial;
+  line-height: initial;
+  padding-bottom: 0px;
+}
