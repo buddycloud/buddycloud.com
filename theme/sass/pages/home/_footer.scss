@@ -15,7 +15,7 @@
   line-height: 2;
 }
 
-#contact a {
+#contact a:not(.gs-title) {
   color: #fff;
 }
 

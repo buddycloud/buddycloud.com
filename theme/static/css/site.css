@@ -121,7 +121,7 @@ dd {
   line-height: 2;
 }
 /* line 18, ../../sass/pages/home/_footer.scss */
-.index #contact a {
+.index #contact a:not(.gs-title) {
   color: #fff;
 }
 /* line 24, ../../sass/pages/home/_footer.scss */
