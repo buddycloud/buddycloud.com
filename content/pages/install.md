@@ -327,13 +327,8 @@ Buddycloud Webclient
 
 <span style="color:green">Estimated time: **5 mins**</span>
 
--   Alternative: [buddycloud Apache virtual host
-    setup](buddycloud Apache virtual host setup "wikilink")
 -   Alternative: [buddycloud nginx
-    setup](buddycloud nginx setup "wikilink")
--   Alternative: [buddycloud lighttpd
-    setup](buddycloud lighttpd setup "wikilink")
--   Alternative: [buddycloud SSL setup](buddycloud SSL setup "wikilink")
+    setup](https://github.com/buddycloud/dockerfiles/blob/master/buddycloud-stack/config/buddycloud-nginx-server-block)
 
 ### Install
 
