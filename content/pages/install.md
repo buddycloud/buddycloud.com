@@ -188,6 +188,8 @@ must pass as well:
 
 -   `xmpp_server_connection`
 
+Check your certificates are working correctly using the [XMPP security checker](https://xmpp.net).
+
 ### Debug
 
 ~~~~ bash
