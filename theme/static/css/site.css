@@ -584,3 +584,15 @@ dd {
   line-height: initial;
   padding-bottom: 0px;
 }
+
+.bc-site-wide-search input.gsc-search-button {
+  -webkit-transition: background-color 0.2s linear, border-color 0.2s linear;
+  -moz-transition: background-color 0.2s linear, border-color 0.2s linear;
+  -o-transition: background-color 0.2s linear, border-color 0.2s linear;
+  transition: background-color 0.2s linear, border-color 0.2s linear;
+}
+
+.bc-site-wide-search input.gsc-search-button:hover {
+  background-color: #333;
+  border-color: #333;
+}
