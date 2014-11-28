@@ -1,128 +1,92 @@
 <html>
 
 <head>
-    <title>Documentation</title>
-    <meta name="url" content="developers" />
-    <meta name="save_as" content="developers.html" />
-    <meta name="show_in_top_menu" content="true" />
-    <meta name="order" content="2" />
-    <meta name="top_menu_name" content="Documentation" />
-    <meta name="show_as_selected" content="documentation" />
-    <meta name="table_of_contents" content="true" />
+	<title>Documentation</title>
+	<meta name="url" content="developers" />
+	<meta name="save_as" content="developers.html" />
+	<meta name="show_in_top_menu" content="true" />
+	<meta name="order" content="2" />
+	<meta name="top_menu_name" content="Documentation" />
+	<meta name="show_as_selected" content="documentation" />
+	<meta name="table_of_contents" content="true" />
 </head>
 
 <body>
-        <div class="row clearfix">
-            <div class="col-md-3 column">
-            </div>
-            <div class="col-md-6 column">
-                <p class="text-center">An extensible and secure API that saves you time.
-                </p>
-                <div class="row">
-                    <div class="col-md-6 column">
-                        <a class="btn btn-block" href="/api">API</a>
-                    </div>
-                    <div class="col-md-6 column">
-                        <a class="btn btn-block" href="http://buddycloud.github.io/buddycloud-xep/">XEP</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 column">
-            </div>
-    </div>
-  <div class="row">
-    <h2>Hands On</h2>
-    <p>Build a quick application using Buddycloud.
-        <a class="btn" href="/get-started">Get Started</a>
-    </p>
-    <p>Or, check out the demo <a href="https://github.com/buddycloud/buddycloud-android">mobile app</a> or the demo <a href="https://github.com/buddycloud/webclient">web app</a> to see how Buddycloud works.</p>
-  </div>
-  <div class="row">
-    <h2>Publish-Subscribe Channels</h2>
-    <p>Buddycloud publishers <code>PUT</code>, <code>UPDATE</code> and <code>DELETE</code> content in Buddycloud channels. Changes are pushed out to all channel subscribers.</p>
-    <figure>
-        <img class="center-block" src="/theme/img/diagrams/publish-subscribe.png" alt="Buddycloud publish-subscribe." />
-    </figure>
-  </div>
-  <div class="row">
-    <h2>Channel Content Types</h2>
-    <p>Channel posts use the open <a href="http://www.odata.org/documentation/odata-version-3-0/atom-format/">ATOM</a> content format. These posts can be:
-        <ul>
-            <li>posts</li>
-            <li>comments on posts</li>
-            <li>upvotes/likes/+1s</li>
-            <li>media files</li>
-        </ul>
-        You can easily extend or add new post types to support different applications.</p>
-  </div>
-  <div class="row">
-    <h2>Buddycloud Channels</h2>
-    <p>A Buddycloud Channel is a collection of posts, followers, and publishers. Channels contain different node types.</p>
-    <p>A channel contains:
-        <ul>
-            <li>publisher(s)</li>
-            <li>followers</li>
-            <li>metadata</li>
-            <li>nodes</li>
-        </ul>
-    </p>
-    <figure>
-        <img class="center-block" src="/theme/img/diagrams/channel hierachy.png" alt="Buddycloud Channels" />
-    </figure>
-  </div>
-  <div class="row">
-    <h2>Channel Nodes</h2>
-    <p>Each channel is made up of multiple nodes. Nodes contain a specific set of content. For example, the <code>posts</code> node contains activity-stream data, and the <code>status</code> node contains your current mood.</p>
-    <p>Channel nodes share a common set of followers, publishers and metadata.</p>
-    <p>Each channel comes equipped with a set of default nodes:
-        <ul>
-            <li><code>posts</code>
-            </li>
-            <li><code>status</code>
-            </li>
-            <li><code>geoloc-past</code>
-            </li>
-            <li><code>geoloc</code>
-            </li>
-            <li><code>geoloc-future</code>
-            </li>
-            <li><code>public-key</code>
-            </li>
-        </ul>
-        Applications can easily create new nodes and content types. For example, a game might create a node <code>game-highscore</code> and update it for followers.
-    </p>
-    <figure>
-        <img class="center-block" src="/theme/img/diagrams/channels comprise application nodes.png" alt="Buddycloud channels are built up from application nodes" />
-    </figure>
-  </div>
-  <div class="row">
-    <h2>Distributed Design</h2>
-    <p>Buddycloud is a federated service: just like email flows from site to site, so too Buddycloud messages. In realtime.</p>
-    <p>We're really proud of Buddycloud's network transparency: Users on any Buddycloud site can contact users on any other site. Seamlessly.
-    </p>
-    <figure>
-        <img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png" alt="Site interconnectedness" />
-    </figure>
-  </div>
-  <div class="row">
-    <h2>Helper Services</h2>
-    <p>Buddycloud's design follows the <a href="http://en.wikipedia.org/wiki/Unix_philosophy">Unix philisophy</a>: each Buddycloud service does one thing (and does it well). Each service interoperates to extend the ecosystem:</p>
-    <ul>
-        <li><em><a href="/software#media">the media server</a></em>, enables sharing pictures, files, and videos with channel's followers</li>
-        <li>The <em>push notification service</em> informs a channel's followers, via mobile notifications and/or email about new content.
-        </li>
-        <li>The <em><a href="https://github.com/buddycloud/buddycloud-friend-finder">friend finder</a></em> service helps import social graphs from existing social networks.
-        </li>
-        <li>The <em><a href="https://github.com/buddycloud/channel-directory">content recommendations</a></em> engine that uses scalable machine learning to suggest similar content ("if you liked this content, perhaps you would also like ... If you like these channels, perhaps you would like these similar channels).
-        </li>
-    </ul>
-    <figure>
-        <img class="center-block" src="/theme/img/diagrams/full stack.png" alt="Buddycloud Components" />
-    </figure>
-    <p>Build a quick application using Buddycloud.
-        <a class="btn" href="/get-started">Get Started</a>
-    </p>
-  </div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+		</div>
+		<div class="col-md-6 column">
+			<p class="text-center">An extensible and secure API that saves you time.
+			</p>
+			<div class="row">
+				<div class="col-md-6 column">
+					<a class="btn btn-block" href="/api">API</a>
+				</div>
+				<div class="col-md-6 column">
+					<a class="btn btn-block" href="http://buddycloud.github.io/buddycloud-xep/">XEP</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 column">
+		</div>
+	</div>
+	<div class="row">
+		<h2>Hands On</h2>
+		<p>Build a quick application using Buddycloud.
+			<a class="btn" href="/get-started">Get Started</a>
+		</p>
+		<p>Or, check out the demo <a href="https://github.com/buddycloud/buddycloud-android">mobile app</a> or the demo <a href="https://github.com/buddycloud/webclient">web app</a> to see how Buddycloud works.</p>
+	</div>
+	<div>
+		<h2>How Buddycloud Works</h2>
+		<p>Three components that work together: Open SDK, open protocol and open-source server.</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works.png" alt="How Buddycloud works" />
+		</figure>
+		<p>You add a small SDK to your mobile or web app; your users communicate.</p>
+		<p>Web applications then communicate via a websocket with the Buddycloud Server. Mobile applications use the REST API (or XMPP).</p>
+		<p>You can think of the Buddycloud server as a very sociable publish-subscribe server. Users messages are fanned out to their followers. Both on the local Buddycloud site and remote buddycloud sites (remember Buddycloud federates?).</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/publish-subscribe.png" alt="publish subscribe diagram" />
+		</figure>
+		<h3>Federation</h3>
+		<p>Like Facebook has a wall, Twitter has a Feed, Buddycloud has channels. User's follow channels that can be another user (eg juliet@capulet.lit follows romeo@montague.lit) or topics (juliet@caputlet.lit follows fan-club@verona-fc.lit).</p>
+		<p>Your users can follow channels and chat with users on local and remote Buddycloud sites.</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/federated-channels.png" alt="Buddycloud Federates" />
+		</figure>
+		<h2>Roles</h2>
+		<p>Enable your users' conversation and disable spam. Your application can create users with different roles. Each channel can have an owner, moderator, Follower+post, Follower, Banned. The specifics of each role are defined in the Buddycloud-Protocol.</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-roles.png" alt="Buddycloud Roles" />
+		</figure>
+		<h2>Channel Nodes</h2>
+		<p>For maximum extensibility each Buddycloud channel is broken down furher into nodes. To keep your application data consistent, the each post to the Buddycloud server is validated by a content type plugin. For example the posts node MUST be activity-stream compatible. You can define your own content type - for example a x-application-myapp could validate that each new entry MUST be a valid Bitcoin address.</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-nodes.png" alt="Buddycloud Nodes" />
+		</figure>
+		<h2>Helper services</h2>
+		<figure>
+			<img class="right-block" src="" alt="Helper Services" />
+		</figure>
+		<p>Buddycloud comes equipped with a number of helper services.</p>
+		<p>You can easily extend your application logic by plugging in new helper services. They drop in as independent processes and can be programmed in your language of choice.</p>
+		<h3>Friend-Finder</h3>
+		<p>Friendly onboarding - The Friend-Finder connects your users to their existing friends inside Buddycloud using hashed identifiers. Your user uploads sha256(email:friend@gmail.com), sha(twitter:@benvolio) or sha(phone:+15551212) and the Friend-Finder returns the Buddycloud username associated with the hash. Quick, private, and friendly.</p>
+		<h3>Taste-Engine</h3>
+		<p>Buddycloud's Taste-Engine helps your users find similar users. If a user follows juliet@capulet.lit and nurse@capulet.lit perhaps they should also follow tybalt@caputlet.lit. The taste engine is powered by and continuously updated Apache-mahout taste-graph to always give your users great recommendations for new content.</p>
+		<h3>Media-Server</h3>
+		<p>Now your users can share files, pictures and really large video files with other users. The Media-Server is tightly integrated into the Buddycloud channels permissions structure to give your users seamless file sharing without needing to worry about permissions. The Media-Server also generates beautiful previews, scaled and cached on the fly to the exact size of your application screen.</p>
+		<h3>Pusher</h3>
+		<p>Push-to-pull: wake up your app with the Buddycloud-Pusher. The "Pusher" connects to GCM, APN, email and any other service you can adapt to use it and alerts your users to events that are happening: "Juliet liked Romeo's picture", "benvolio@montague.lit followed romeo@montague.lit".</p>
+	</div>
+	<div class="row">
+		</p>
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png" alt="Site interconnectedness" />
+		</figure>
+	</div>
 </body>
 
 </html>
+
