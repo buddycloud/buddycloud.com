@@ -56,15 +56,28 @@
 			<img class="center-block" src="/theme/img/diagrams/federated-channels.png" alt="Buddycloud Federates" />
 		</figure>
 		<h2>Roles</h2>
+<figure>
+  <img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-roles.png" alt="Buddycloud Roles" />
+</figure>
 		<p>Enable your users' conversation and disable spam. Your application can create users with different roles. Each channel can have an owner, moderator, Follower+post, Follower, Banned. The specifics of each role are defined in the Buddycloud-Protocol.</p>
-		<figure>
-			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-roles.png" alt="Buddycloud Roles" />
-		</figure>
+		
+		
 		<h2>Channel Nodes</h2>
-		<p>For maximum extensibility each Buddycloud channel is broken down furher into nodes. To keep your application data consistent, the each post to the Buddycloud server is validated by a content type plugin. For example the posts node MUST be activity-stream compatible. You can define your own content type - for example a x-application-myapp could validate that each new entry MUST be a valid Bitcoin address.</p>
+
 		<figure>
 			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-nodes.png" alt="Buddycloud Nodes" />
 		</figure>
+		
+		<p>For maximum extensibility each Buddycloud channel is broken down furher into nodes. To keep your application data consistent, the each post to the Buddycloud server is validated by a content type plugin. For example the posts node MUST be activity-stream compatible. You can define your own content type - for example a x-application-myapp could validate that each new entry MUST be a valid Bitcoin address.</p>
+
+		<h2>Channel Metadata</h2>
+
+		<figure>
+			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-metadata.png" alt="Buddycloud Nodes" />
+		</figure>
+		
+		<p>The channel juliet@capulet.lit can have a title "Juliet's channel", a description "Musings on life in Verona" and other metadat and privacy information. The full specification is contained in the <a href="http://xmpp.org/extensions/inbox/buddycloud-channels.html">Buddycloud protocol</a> document.</p>
+
 		<h2>Helper services</h2>
 		<figure>
 			<img class="right-block" src="" alt="Helper Services" />
