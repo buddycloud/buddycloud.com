@@ -33194,7 +33194,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-11-28 14:10:12 +0000</string>
+	<string>2014-11-28 15:14:26 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -50396,12 +50396,12 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\b\fs26 \cf1 capulet.example}</string>
+\f0\b\fs26 \cf1 capulet.lit}</string>
 					</dict>
 				</dict>
 				<dict>
@@ -50432,7 +50432,7 @@
 					<key>Points</key>
 					<array>
 						<string>{560, 100}</string>
-						<string>{600, 160}</string>
+						<string>{600, 40}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -50489,22 +50489,22 @@
 					<key>Head</key>
 					<dict>
 						<key>ID</key>
-						<integer>89862</integer>
+						<integer>89859</integer>
 						<key>Info</key>
-						<integer>8</integer>
+						<integer>18</integer>
 					</dict>
 					<key>ID</key>
 					<integer>89863</integer>
 					<key>OrthogonalBarAutomatic</key>
 					<true/>
 					<key>OrthogonalBarPoint</key>
-					<string>{0, 0}</string>
+					<string>{225, 70}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>7</real>
+					<real>2.1799995422363168</real>
 					<key>Points</key>
 					<array>
-						<string>{240, 100}</string>
 						<string>{210, 40}</string>
+						<string>{250, 100}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -50527,7 +50527,7 @@
 							<key>CornerRadius</key>
 							<real>4</real>
 							<key>HeadArrow</key>
-							<string>0</string>
+							<string>StickArrow</string>
 							<key>HeadScale</key>
 							<real>1.2000000476837158</real>
 							<key>Legacy</key>
@@ -50543,14 +50543,14 @@
 					<key>Tail</key>
 					<dict>
 						<key>ID</key>
-						<integer>89859</integer>
+						<integer>89862</integer>
 						<key>Info</key>
-						<integer>18</integer>
+						<integer>8</integer>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{10, 140}, {200, 40}}</string>
+					<string>{{50, 140}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50613,17 +50613,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 balthasar@montague.example}</string>
+\f0\fs26 \cf1 balthasar@montague.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{10, 80}, {200, 40}}</string>
+					<string>{{50, 80}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50686,17 +50686,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 benvolio@montague.example}</string>
+\f0\fs26 \cf1 benvolio@montague.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{600, 80}, {170, 40}}</string>
+					<string>{{600, 80}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50759,17 +50759,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 nurse@capulet.example}</string>
+\f0\fs26 \cf1 nurse@capulet.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{600, 20}, {170, 40}}</string>
+					<string>{{600, 140}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50832,17 +50832,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs26 \cf1 tybalt@capulet.example}</string>
+\f0\fs26 \cf1 tybalt@capulet.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{10, 20}, {200, 40}}</string>
+					<string>{{50, 20}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50905,17 +50905,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\b\fs26 \cf1 romeo@montague.example}</string>
+\f0\b\fs26 \cf1 romeo@montague.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{600, 140}, {170, 40}}</string>
+					<string>{{600, 20}, {160, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -50978,17 +50978,17 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\b\fs26 \cf1 juliet@capulet.example}</string>
+\f0\b\fs26 \cf1 juliet@capulet.lit}</string>
 					</dict>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{240, 80}, {140, 40}}</string>
+					<string>{{250, 80}, {140, 40}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -51035,12 +51035,12 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\b\fs26 \cf1 montague.example}</string>
+\f0\b\fs26 \cf1 montague.lit}</string>
 					</dict>
 				</dict>
 				<dict>
@@ -51070,7 +51070,7 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{240, 100}</string>
+						<string>{250, 100}</string>
 						<string>{210, 100}</string>
 					</array>
 					<key>Style</key>
@@ -51189,7 +51189,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{240, 140}, {310, 60}}</string>
+					<string>{{60, 200}, {670, 60}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -51231,12 +51231,12 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans-SemiboldItalic;}
 {\colortbl;\red255\green255\blue255;\red166\green166\blue166;\red45\green174\blue191;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\i\b\fs26 \cf2 Posts from \cf3 romeo@montague.example \cf2 are pushed to the \cf3 capulet.example \cf2 Buddycloud server.}</string>
+\f0\i\b\fs26 \cf2 Posts from \cf3 romeo@montague.lit \cf2 are pushed to the \cf3 capulet.lit \cf2 Buddycloud server.}</string>
 					</dict>
 					<key>TextPlacement</key>
 					<integer>0</integer>
@@ -51272,7 +51272,7 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{240, 100}</string>
+						<string>{250, 100}</string>
 						<string>{210, 100}</string>
 					</array>
 					<key>Style</key>
@@ -51341,10 +51341,10 @@
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>7</real>
+					<real>12</real>
 					<key>Points</key>
 					<array>
-						<string>{240, 100}</string>
+						<string>{250, 100}</string>
 						<string>{210, 160}</string>
 					</array>
 					<key>Style</key>
@@ -51487,7 +51487,7 @@
 					<key>Points</key>
 					<array>
 						<string>{560, 100}</string>
-						<string>{600, 40}</string>
+						<string>{600, 160}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -51552,7 +51552,7 @@
 					<integer>89857</integer>
 					<key>Points</key>
 					<array>
-						<string>{380, 100}</string>
+						<string>{390, 100}</string>
 						<string>{420, 100}</string>
 					</array>
 					<key>Style</key>
@@ -51581,8 +51581,6 @@
 							<real>1.2000000476837158</real>
 							<key>Legacy</key>
 							<true/>
-							<key>Pattern</key>
-							<integer>1</integer>
 							<key>TailArrow</key>
 							<string>0</string>
 							<key>Width</key>
@@ -51654,7 +51652,7 @@
 			<key>RowSpacing</key>
 			<real>36</real>
 			<key>SheetTitle</key>
-			<string>buddycloud uses channels</string>
+			<string>federated-channels</string>
 			<key>UniqueID</key>
 			<integer>4</integer>
 			<key>VPages</key>
@@ -51911,7 +51909,7 @@
 					<key>Text</key>
 					<dict>
 						<key>Text</key>
-						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf140
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
 {\fonttbl\f0\fnil\fcharset0 OpenSans;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
@@ -85952,11 +85950,9 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>47</integer>
+		<integer>8</integer>
 		<key>Expanded_Canvases</key>
-		<array>
-			<string>test-homepage</string>
-		</array>
+		<array/>
 		<key>Frame</key>
 		<string>{{1, 28}, {1680, 999}}</string>
 		<key>ShowInfo</key>
@@ -85972,7 +85968,7 @@
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{-289, -35}, {1137, 854}}</string>
+		<string>{{-9, -35}, {1137, 854}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
@@ -85993,7 +85989,7 @@
 				<real>1</real>
 			</array>
 			<array>
-				<string>buddycloud uses channels</string>
+				<string>federated-channels</string>
 				<real>1</real>
 				<real>1</real>
 			</array>
