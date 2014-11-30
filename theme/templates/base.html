@@ -136,6 +136,17 @@
   <script src="theme/vendor/mustache/jquery.mustache.js"></script>
   <script src="theme/js/isotope-mustache.config.js"></script>
   <script src="theme/js/get-started.js"></script>
+  <script src="theme/js/jquery.visible.min.js"></script>
+<script type="text/javascript">
+  $(window).scroll(function() {
+    if ( $(".background-contact").visible(true) ){
+      $("#full-toc").fadeOut(200, "linear");
+    }
+    else{
+      $("#full-toc").fadeIn(200, "linear");
+    }
+  });
+</script>
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
 f[z]=function(){
