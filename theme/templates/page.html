@@ -23,3 +23,9 @@
   {% endif %}
     </div>
 {% endblock %}
+
+{% block morescripts %}
+    {% if active_page == "documentation" %}
+        {% include "documentation.html" %}
+    {% endif %}
+{% endblock %}
