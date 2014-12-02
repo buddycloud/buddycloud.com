@@ -154,6 +154,15 @@
       $("#full-toc").fadeIn(200, "linear");
     }
   });
+  $("#fixed-toc").css("visibility", "hidden");
+  $(document).ready(function() {
+    window.setTimeout(function() {
+        $("#fixed-toc").addClass("bs-docs-sidebar");
+        $("#fixed-toc .nav").addClass("bs-docs-sidenav");
+        $("#fixed-toc").css("visibility", "visible").hide();
+        $("#fixed-toc").fadeIn(200, "linear");
+    }, 200);
+  });
 </script>
 {% block morescripts %} {% endblock %}
 <!-- begin olark code -->
