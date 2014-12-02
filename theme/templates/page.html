@@ -14,7 +14,10 @@
 {% endblock %}
 
 {% block content %}
+  {% if active_page != "pricing"
+     and active_page != "surevine-case-study" %}
     <h1 class="page-header main-title">{{ page.header | default(page.title) }}</h1>
+  {% endif %}
     <div class="bs-docs-section">
   {% if page.table_of_contents|default("false") == "true" %}
     {{ page.content|add_toc_hooks(toc_info, active_page) }}

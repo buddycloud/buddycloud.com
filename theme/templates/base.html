@@ -56,7 +56,9 @@
       </div>
   </div>
 </div>
-{% if active_page != "index" %}
+{% if active_page != "index"
+   and active_page != "pricing"
+   and active_page != "surevine-case-study" %}
 <div class="container bs-docs-container">
   <div class="row">
       <div class="col-md-3 col-sm-3">
@@ -67,14 +69,19 @@
 {% endif %}
           {% block content %}
           {% endblock %}
-{% if active_page != "index" %}
+{% if active_page != "index"
+   and active_page != "pricing"
+   and active_page != "surevine-case-study" %}
           <span class="pull-right">
               <a class="btn btn-default" role="button" href="javascript:window.scrollTo(0,0);">Back to Top</a>
           </span>
       </div>
   </div>
 </div>
+{% endif %}
+{% if active_page != "index" %}
 <div class="index">
+{% endif %}
 <div class="background-contact">
   <div class="container" id="contact">
     <div class="row">
@@ -121,9 +128,10 @@
       </div>
     </div>
   </div>
-</div>
+{% if active_page != "index" %}
 </div>
 {% endif %}
+</div>
   <script src="theme/vendor/jquery/dist/jquery.min.js"></script>
   <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>

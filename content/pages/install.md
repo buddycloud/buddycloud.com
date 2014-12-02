@@ -1,7 +1,7 @@
 Title: Install
 url: install
 save_as: install.html
-order: 1
+order: -1
 show_in_top_menu: false
 table_of_contents: true
 
