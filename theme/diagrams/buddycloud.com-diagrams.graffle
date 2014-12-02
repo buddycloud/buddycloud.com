@@ -33194,7 +33194,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-12-02 08:49:08 +0000</string>
+	<string>2014-12-02 10:50:51 +0000</string>
 	<key>Modifier</key>
 	<string>Simon Tennant</string>
 	<key>NotesVisible</key>
@@ -60764,7 +60764,7 @@
 					<key>Points</key>
 					<array>
 						<string>{270.00000000000006, 248.25383340445131}</string>
-						<string>{150, 247.25383369995569}</string>
+						<string>{150, 249.14541471162966}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -83367,7 +83367,7 @@
 			<key>RowSpacing</key>
 			<real>36</real>
 			<key>SheetTitle</key>
-			<string>how-buddycloud-works-metadata</string>
+			<string>how-buddycloud-works-roles</string>
 			<key>UniqueID</key>
 			<integer>50</integer>
 			<key>VPages</key>
@@ -85217,7 +85217,7 @@
 			<key>RowSpacing</key>
 			<real>36</real>
 			<key>SheetTitle</key>
-			<string>how-buddycloud-works-roles</string>
+			<string>how-buddycloud-works-metadata</string>
 			<key>UniqueID</key>
 			<integer>51</integer>
 			<key>VPages</key>
@@ -87083,7 +87083,7 @@
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>42</integer>
+		<integer>48</integer>
 		<key>Expanded_Canvases</key>
 		<array>
 			<string>test-homepage</string>
@@ -87097,15 +87097,15 @@
 		<key>Sidebar</key>
 		<true/>
 		<key>SidebarWidth</key>
-		<integer>230</integer>
+		<integer>357</integer>
 		<key>SmallIcons</key>
 		<true/>
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{-396, -41}, {1351.8868654297989, 866.03778259913156}}</string>
+		<string>{{-374, -68}, {1307, 919}}</string>
 		<key>Zoom</key>
-		<real>1.059999942779541</real>
+		<real>1</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
@@ -87334,12 +87334,12 @@
 				<real>1</real>
 			</array>
 			<array>
-				<string>how-buddycloud-works-metadata</string>
+				<string>how-buddycloud-works-roles</string>
 				<real>1</real>
 				<real>1</real>
 			</array>
 			<array>
-				<string>how-buddycloud-works-roles</string>
+				<string>how-buddycloud-works-metadata</string>
 				<real>1</real>
 				<real>1</real>
 			</array>
