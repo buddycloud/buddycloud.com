@@ -50,7 +50,7 @@
 			<img class="center-block" src="/theme/img/diagrams/publish-subscribe.png" alt="publish subscribe diagram" />
 		</figure>
 		<h3>Federation</h3>
-		<p>Like Facebook has a wall, Twitter has a Feed, Buddycloud has channels. User's follow channels that can be another user (eg juliet@capulet.lit follows romeo@montague.lit) or topics (juliet@caputlet.lit follows fan-club@verona-fc.lit).</p>
+		<p>Like Facebook has a wall, Twitter has a Feed, Buddycloud has channels. User's follow channels that can be another user (for example: <code>juliet@capulet.lit</code> follows <code>romeo@montague.lit</code>) or topics (<code>juliet@caputlet.lit</code> follows <code>fan-club@verona-fc.lit</code>).</p>
 		<p>Your users can follow channels and chat with users on local and remote Buddycloud sites.</p>
 		<figure>
 			<img class="center-block" src="/theme/img/diagrams/federated-channels.png" alt="Buddycloud Federates" />
@@ -59,7 +59,7 @@
 <figure>
   <img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-roles.png" alt="Buddycloud Roles" />
 </figure>
-		<p>Enable your users' conversation and disable spam. Your application can create users with different roles. Each channel can have an owner, moderator, Follower+post, Follower, Banned. The specifics of each role are defined in the Buddycloud-Protocol.</p>
+		<p>Enable your users' conversation and disable spam. Your application can create users with different roles. Each channel can have an <code>owner</code>, <code>moderator</code>, <code>follower+post</code>, <code>follower</code>, <code>banned</code>. The specifics of each role are defined in the Buddycloud-Protocol.</p>
 		
 		
 		<h3>Channel Nodes</h3>
@@ -68,7 +68,7 @@
 			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-nodes.png" alt="Buddycloud Nodes" />
 		</figure>
 		
-		<p>For maximum extensibility each Buddycloud channel is broken down furher into nodes. To keep your application data consistent, the each post to the Buddycloud server is validated by a content type plugin. For example the posts node MUST be activity-stream compatible. You can define your own content type - for example a x-application-myapp could validate that each new entry MUST be a valid Bitcoin address.</p>
+		<p>For maximum extensibility each Buddycloud channel is broken down furher into nodes. To keep your application data consistent, each post to the Buddycloud server is validated by a content type plugin. For example the <code>user@example.com/posts</code> node MUST be <a href="http://xmpp.org/extensions/inbox/buddycloud-channels.html#well-known-nodes">activity-stream formatted</a>. You can define your own content type - for example a <code>x-application-my-coin-app</code> could validate that each new entry MUST be a valid Bitcoin address.</p>
 
 		<h3>Channel Metadata</h3>
 
@@ -76,7 +76,7 @@
 			<img class="center-block" src="/theme/img/diagrams/how-buddycloud-works-metadata.png" alt="Buddycloud Nodes" />
 		</figure>
 		
-		<p>The channel juliet@capulet.lit can have a title "Juliet's channel", a description "Musings on life in Verona" and other metadat and privacy information. The full specification is contained in the <a href="http://xmpp.org/extensions/inbox/buddycloud-channels.html">Buddycloud protocol</a> document.</p>
+		<p>The channel <code>juliet@capulet.lit</code> can have a title <kbd>Juliet's channel</kbd>, a description <kbd>Musings on life in Verona</kbd> and other metadata and privacy information. The full specification is contained in the <a href="http://xmpp.org/extensions/inbox/buddycloud-channels.html">Buddycloud protocol</a> document.</p>
 
 		<h2>Helper services</h2>
 		<figure>
@@ -85,13 +85,13 @@
 		<p>Buddycloud comes equipped with a number of helper services.</p>
 		<p>You can easily extend your application logic by plugging in new helper services. They drop in as independent processes and can be programmed in your language of choice.</p>
 		<h3>Friend-Finder</h3>
-		<p>Friendly onboarding - The Friend-Finder connects your users to their existing friends inside Buddycloud using hashed identifiers. Your user uploads sha256(email:friend@gmail.com), sha(twitter:@benvolio) or sha(phone:+15551212) and the Friend-Finder returns the Buddycloud username associated with the hash. Quick, private, and friendly.</p>
+		<p>Friendly onboarding - The Friend-Finder connects your users to their existing friends inside Buddycloud using hashed identifiers. Your user uploads <code>sha256(email:friend@gmail.com)</code>, <code>sha(twitter:@benvolio)</code> or <code>sha(phone:+15551212)</code> and the Friend-Finder returns the Buddycloud username associated with the hash. Quick, private, and friendly.</p>
 		<h3>Taste-Engine</h3>
-		<p>Buddycloud's Taste-Engine helps your users find similar users. If a user follows juliet@capulet.lit and nurse@capulet.lit perhaps they should also follow tybalt@caputlet.lit. The taste engine is powered by and continuously updated Apache-mahout taste-graph to always give your users great recommendations for new content.</p>
+		<p>Buddycloud's Taste-Engine helps your users find similar users. If a user follows <code>juliet@capulet.lit</code> and <code>nurse@capulet.lit</code> perhaps they should also follow <code>tybalt@caputlet.lit</code>. The taste engine is powered by and continuously updated Apache-mahout taste-graph to always give your users great recommendations for new content.</p>
 		<h3>Media-Server</h3>
 		<p>Now your users can share files, pictures and really large video files with other users. The Media-Server is tightly integrated into the Buddycloud channels permissions structure to give your users seamless file sharing without needing to worry about permissions. The Media-Server also generates beautiful previews, scaled and cached on the fly to the exact size of your application screen.</p>
 		<h3>Pusher</h3>
-		<p>Push-to-pull: wake up your app with the Buddycloud-Pusher. The "Pusher" connects to GCM, APN, email and any other service you can adapt to use it and alerts your users to events that are happening: "Juliet liked Romeo's picture", "benvolio@montague.lit followed romeo@montague.lit".</p>
+		<p>Push-to-pull: wake up your app with the Buddycloud-Pusher. The Buddycloud-Pusher connects to GCM, APN, email and any other service you can adapt to use it and alerts your users to events that are happening: <code>Juliet liked Romeo's picture</code>, <code>benvolio@montague.lit followed romeo@montague.lit</code>.</p>
 	</div>
 
 <h2>Code Ecosystem</h2>
