@@ -7,7 +7,7 @@
 {% endif %}
 {% block table_of_contents %}
     {% if page.table_of_contents|default("false") == "true" %}
-    <div id="full-toc" class="bs-docs-sidebar hidden-print affix-top" role="complementary">
+    <div id="full-toc" class="bs-docs-sidebar hidden-print affix-top hidden-xs hidden-sm" role="complementary">
   {{ toc_info|create_toc }}
     </div>
     {% endif %}
