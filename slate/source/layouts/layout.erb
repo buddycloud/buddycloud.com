@@ -28,6 +28,9 @@ under the License.
     <link rel="shortcut icon" href="theme/vendor/buddycloud-styles/dist/img/icons/favicon.ico" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+    <link rel="stylesheet" href="theme/css/site.css" type="text/css" />
 
     <%= stylesheet_link_tag :print, media: :print %>
     <%= stylesheet_link_tag :screen, media: :screen %>
@@ -35,7 +38,7 @@ under the License.
 
   <body class="<%= page_classes %> api">
 
-    <style>
+    <!--<style>
       .nav_bar_grey_lnk > .nav_bar_grey_span {
         background-color: #E5E9EF;
         border: 5px solid transparent; 
@@ -51,7 +54,7 @@ under the License.
       .nav_bar_grey_lnk:hover {
         color: #2DAEBF !important;
       }
-    </style>
+    </style>-->
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -138,6 +141,8 @@ under the License.
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
     <%= javascript_include_tag  "all" %>
 
     <% if language_tabs %>
