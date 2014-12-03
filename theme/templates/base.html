@@ -174,8 +174,8 @@
   $(document).ready(function() {
     window.setTimeout(function() {
         scroll_if_anchor(window.location.hash);
-        $("body").on("click", "a[href^='#privacy_policy_'", scroll_if_anchor);
-        $("body").on("click", "a[href^='#terms_of_use_'", scroll_if_anchor);
+        $("body").on("click", "a[href^='#privacy_policy_']", scroll_if_anchor);
+        $("body").on("click", "a[href^='#terms_of_use_']", scroll_if_anchor);
     }, 1);
     window.setTimeout(function() {
         $("#fixed-toc").addClass("bs-docs-sidebar");
