@@ -149,9 +149,11 @@
   $(window).scroll(function() {
     if ( $(".background-contact").visible(true) ){
       $("#full-toc").fadeOut(200, "linear");
+      $("#habla_panel_div").fadeOut(200, "linear");
     }
     else{
       $("#full-toc").fadeIn(200, "linear");
+      $("#habla_panel_div").fadeIn(200, "linear");
     }
   });
   $("#fixed-toc").css("visibility", "hidden");
