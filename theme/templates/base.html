@@ -156,8 +156,26 @@
       $("#habla_panel_div").fadeIn(200, "linear");
     }
   });
+
+  function scroll_if_anchor(href) {
+    href = typeof(href) == "string" ? href : $(this).attr("href");
+    if (!href) return;
+    var fromTop = 65;
+    var $target = $(href);
+    if ( $target.length ) {
+      //$('html, body').animate({ scrollTop: $target.offset().top - fromTop });
+      window.scrollTo(0, $target.offset().top - fromTop);
+      if ( history && "pushState" in history ){
+        history.pushState({}, document.title, window.location.pathname + href);
+        return false;
+      }
+    }
+  }
   $("#fixed-toc").css("visibility", "hidden");
   $(document).ready(function() {
+    window.setTimeout(function() {
+        scroll_if_anchor(window.location.hash);
+    }, 1);
     window.setTimeout(function() {
         $("#fixed-toc").addClass("bs-docs-sidebar");
         $("#fixed-toc .nav").addClass("bs-docs-sidenav");
