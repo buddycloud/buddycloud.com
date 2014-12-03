@@ -108,8 +108,13 @@
         <ul class="list-unstyled">
           <li><a href="/contact">Contact</a></li>
           <li><a href="/faq">FAQ</a></li>
+          {% if active_page != "policies" %}
           <li><a href="/policies#terms_of_use_">Terms of service</a></li>
           <li><a href="/policies#privacy_policy_">Privacy Policy</a></li>
+          {% else %}
+          <li><a href="javascript:scroll_if_anchor('#terms_of_use_');">Terms of service</a></li>
+          <li><a href="javascript:scroll_if_anchor('#privacy_policy_');">Privacy Policy</a></li>
+          {% endif %}
         </ul>
       </div>
       <div class="col-md-4">
@@ -174,8 +179,6 @@
   $(document).ready(function() {
     window.setTimeout(function() {
         scroll_if_anchor(window.location.hash);
-        $("body").on("click", "a[href^='#privacy_policy_']", scroll_if_anchor);
-        $("body").on("click", "a[href^='#terms_of_use_']", scroll_if_anchor);
     }, 1);
     window.setTimeout(function() {
         $("#fixed-toc").addClass("bs-docs-sidebar");
