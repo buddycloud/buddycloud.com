@@ -611,3 +611,7 @@ dd {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
+
+.hbl_txt_wrapper > textarea#habla_offline_body_input {
+  height: 56px !important;
+}
