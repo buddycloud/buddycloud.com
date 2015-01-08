@@ -549,6 +549,25 @@ dd {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #e5e9ef 50%, #e5e9ef);
 }
 
+.navbar-right-padding {
+  margin-left: 80px;
+}
+
+.nav_bar_dark_grey_lnk > .nav_bar_dark_grey_span {
+  background-color: #0b535a;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  color: #E5E9EF !important;
+}
+
+.active > .nav_bar_dark_grey_lnk > .nav_bar_dark_grey_span {
+  color: #2DAEBF !important;
+}
+
+.nav_bar_dark_grey_lnk > .nav_bar_dark_grey_span:hover {
+  color: #2DAEBF !important;
+}
+
 .nav_bar_grey_lnk > .nav_bar_grey_span {
   background-color: #E5E9EF;
   border: 5px solid transparent; 
