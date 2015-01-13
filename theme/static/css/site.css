@@ -634,3 +634,8 @@ dd {
 .hbl_txt_wrapper > textarea#habla_offline_body_input {
   height: 56px !important;
 }
+
+body > .page-header.main-title {
+  margin-left: 100px;
+  margin-right: 100px;
+}
