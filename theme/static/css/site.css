@@ -639,3 +639,7 @@ body > .page-header.main-title {
   margin-left: 100px;
   margin-right: 100px;
 }
+
+ul>.list-group-item:before {
+  display: none;
+}
