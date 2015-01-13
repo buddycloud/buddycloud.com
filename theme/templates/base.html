@@ -66,9 +66,7 @@
       </div>
   </div>
 </div>
-{% if active_page != "index"
-   and active_page != "pricing"
-   and active_page != "surevine-case-study" %}
+{% if content_layout == "column" %}
 <div class="container bs-docs-container">
   <div class="row">
       <div class="col-md-3 col-sm-3">
@@ -79,9 +77,7 @@
 {% endif %}
           {% block content %}
           {% endblock %}
-{% if active_page != "index"
-   and active_page != "pricing"
-   and active_page != "surevine-case-study" %}
+{% if content_layout == "column" %}
           <span class="pull-right">
               <a class="btn btn-default" role="button" href="javascript:window.scrollTo(0,0);">Back to Top</a>
           </span>

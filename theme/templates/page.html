@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% set active_page = page.show_as_selected|default(page.slug) %}
+{% set content_layout = page.content_layout|default("column") %}
 {% block title %}{{ page.title }}{% endblock %}
 
 {% if page.table_of_contents|default("false") == "true" %}
@@ -14,8 +15,7 @@
 {% endblock %}
 
 {% block content %}
-  {% if active_page != "pricing"
-     and active_page != "surevine-case-study" %}
+  {% if page.show_page_header|default("true") != "false" %}
     <h1 class="page-header main-title">{{ page.header | default(page.title) }}</h1>
   {% endif %}
     <div class="bs-docs-section">
