@@ -68,7 +68,7 @@
     If you were to use your own Buddycloud domain now, to find the API endpoint of your domain, you'd go to your <a href="https://hosting.buddycloud.com/vhosts">hosting console</a>, then select your domain. Then the API endpoint for your domain would be listed among other endpoints.
   </p>
   <p>
-    But for this walkthrough you'll use the demo service, which means your app will talk to the demo service's API endpoint at <code>demo.buddycloud.com/api</code>.
+    But for this walkthrough you'll use the demo service, which means your app will talk to the demo service's API endpoint at <code>starter.buddycloud.com/api</code>.
   </p>
 
   <h3>Create a User</h3>
@@ -79,13 +79,14 @@
     The following API call creates this Buddycloud user account <code><span class='generated-u'></span></code>:
   </p>
   <div class="highlight">
-      <pre><code>curl https://demo.buddycloud.org/api/account \
+      <pre><code>curl https://starter.buddycloud.com/api/account \
     -X POST \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{ \
           "username": "<span class="generated-u"></span>", \
-          "password": "<span class="generated-p"></span>" \
+          "password": "<span class="generated-p"></span>", \
+          "email": "YOUR_EMAIL_HERE" \
     }'</code></pre>
   </div>
 
@@ -94,7 +95,7 @@
     You can check user credentials at any time simply by issuing the following API call:
   </p>
   <div class="highlight">
-      <pre><code>curl https://demo.buddycloud.org/api/ \
+      <pre><code>curl https://starter.buddycloud.com/api/ \
     -u <span class="generated-u"></span>:<span class="generated-p"></span> \
     -X GET \
     -H "Accept: application/json"</code></pre>
@@ -143,7 +144,7 @@
     That's why you'll need the following call to the Buddycloud REST API:
   </p>
   <div class="highlight">
-      <pre><code>curl https://demo.buddycloud.com/api/notification_metadata?type=gcm \
+      <pre><code>curl https://starter.buddycloud.com/api/notification_metadata?type=gcm \
     -u <span class="generated-u"></span>:<span class="generated-p"></span> \
     -X GET \
     -H "Accept: application/json"</code></pre>
@@ -169,7 +170,7 @@
     Use the following call to the REST API to do that:
   </p>
   <div class="highlight">
-    <pre><code>curl https://demo.buddycloud.com/api/notification_settings \
+    <pre><code>curl https://starter.buddycloud.com/api/notification_settings \
     -u <span class="generated-u"></span>:<span class="generated-p"></span> \
     -X POST \
     -H "Content-Type: application/json" \
