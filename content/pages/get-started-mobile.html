@@ -33,6 +33,14 @@
       <p>
         You can go ahead and implement these features into your app or simply simulate them through the console by issuing these HTTP calls via <kbd>curl</kbd>. <b>You MUST at least create a user to keep going</b>.
       </p>
+      <div class="alert alert-info" role="alert">
+        <p>
+          Please note that the REST API uses the <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic authentication</a> for passing user credentials.
+        </p>
+        <p>
+          Please make sure you perform <a href="http://en.wikipedia.org/wiki/Basic_access_authentication#Client_side">these operations</a> when using the HTTP client library of your choice to make API calls (the code snippets below don't do it but that's because <kbd>curl -u</kbd> is already doing it for us).
+        </p>
+      </div>
     </li>
     <li>
       <p>
@@ -50,16 +58,13 @@
   <h4 data-hidden-from-toc="true">Other flows</h4>
   <ul>
     <li>
-      Subscribing to nodes... (TBD)
+      <a href="javascript:scroll_if_anchor('#listening_for_incoming_posts_');">Listening for incoming posts to a node...</a>
     </li>
     <li>
-      Listening for incoming posts to a node... (TBD)
+      <a href="javascript:scroll_if_anchor('#fetching_old_posts_');">Fetching old posts from a node...</a>
     </li>
     <li>
-      Fetching old posts from a node... (TBD)
-    </li>
-    <li>
-      Creating new post to a node... (TBD)
+      <a href="javascript:scroll_if_anchor('#creating_a_new_post_');">Creating new post to a node...</a>
     </li>
   </ul>
 
@@ -193,17 +198,211 @@
         "postOnSubscribedChannel": "true"
 }</code></pre>
   </div>
-  <p>
+  <p id="event_keys">
     These are all the events supported by the Pusher:
   </p>
+  <table class="table table-condensed">
+    <tr>
+      <th>JSON payload event key</th>
+      <th>Default value if omitted</th>
+      <th>Associated Buddycloud GCM push notification event keys</th>
+    </tr>
+    <tr>
+      <td><code>postAfterMe</code></td>
+      <td><code>true</code></td>
+      <td><code>POST_AFTER_MY_POST</code></td>
+    </tr>
+    <tr>
+      <td><code>postMentionedMe</code></td>
+      <td><code>true</code></td>
+      <td><code>MENTION</code></td>
+    </tr>
+    <tr>
+      <td><code>postOnMyChannel</code></td>
+      <td><code>true</code></td>
+      <td><code>POST_ON_MY_CHANNEL</code></td>
+    </tr>
+    <tr>
+      <td><code>postOnSubscribedChannel</code></td>
+      <td><code>false</code></td>
+      <td><code>POST_ON_SUBSCRIBED_CHANNEL</code></td>
+    </tr>
+    <tr>
+      <td><code>followMyChannel</code></td>
+      <td><code>true</code></td>
+      <td>
+        <code>FOLLOW</code>,
+        <code>UNFOLLOW</code>
+      </td>
+    </tr>
+    <tr>
+      <td><code>followRequest</code></td>
+      <td><code>true</code></td>
+      <td>
+        <code>FOLLOW_REQUEST</code>,
+        <code>FOLLOW_REQUEST_APPROVED</code>,
+        <code>FOLLOW_REQUEST_DENIED</code>
+      </td>
+    </tr>
+  </table>
+
+  <h2>Exchanging posts</h2>
+  <p>
+    For the purposes of this walkthrough, you'll work with this specific node: <code>demo-node@starter.buddycloud.com/posts</code>.
+  </p>
+  <p>
+    You will subscribe to it, so that you receive updates when there are new posts to this node. Please have your Android app issue the following API call (or you can simply do it yourself manually via <kbd>curl</kbd>):
+  </p>
+  <div class="highlight">
+    <pre><code>curl https://starter.buddycloud.com/api/subscribed \
+    -u <span class="generated-u"></span>:<span class="generated-p"></span> \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{ \
+          "demo-node@starter.buddycloud.com/posts": "publisher" \
+    }'</code></pre>
+  </div>
+  <p>
+    Now the logged user <code><span class="generated-u"></span></code> is subscribed to the node <code>demo-node@starter.buddycloud.com/posts</code>, thus the logged user has permission to listen for incoming updates, fetch old posts to this node or even create new posts to this node.
+  </p>
+
+  <h3>Listening for incoming posts</h3>
+  <p>
+    By performing the steps so far in this guide, you have properly empowered your Android application to be able to receive Buddycloud updates regarding the current logged user.
+  </p>
+  <p>
+    Before proceeding, please read <a href="http://developer.android.com/google/gcm/client.html#sample-receive">this guide</a> on how to receive GCM push notifications in general, as the same principles obviously apply for receiving Buddycloud updates through GCM. You will need a <code>GCMIntentService</code> similar to the one in that sample code snippet provided in that guide.
+  </p>
+  <div class="alert alert-info">
+    You can also refer to the <a href="http://github.com/buddycloud/buddycloud-android">source code</a> of our ready-made Buddycloud Android client to get a better understanding! The complete <code>GCMIntentService</code> used by this project is located <a href="http://github.com/buddycloud/buddycloud-android/blob/master/src/com/buddycloud/GCMIntentService.java">here</a>.
+  </div>
+  <p>
+As you might recall, in previous steps in this walkthrough you've registered with the Pusher; while doing so you've indicated interest in receiving notifications for these particular events:
+    <ul>
+      <li>
+        When there are <b>new posts</b> to nodes the current logged <b>user is subscribed to</b>.
+      </li>
+      <li>
+        When the current logged <b>user is mentioned</b> by others' posts.
+      </li>
+    </ul>
+  </p>
+  <p>
+    That means your <code>GCMIntentService</code> will need to make sure it doesn't ignore incoming events with keys <code>POST_ON_SUBSCRIBED_CHANNEL</code> or <code>MENTION</code>.
+  </p>
+  <p>
+    The following code snippet shows how to make sure incoming push notifications are exactly the kind of Buddycloud updates you're listening for:
+  </p>
+  <div class="highlight">
+    <pre><code>@Override
+protected void onHandleIntent(Intent incomingPushNotif) {
+
+  String pushMessage = incomingPushNotif.getStringExtra("message");
+  String pushEvent = incomingPushNotif.getStringExtra("event");
+
+  if ( pushEvent.equals("POST_ON_SUBSCRIBED_CHANNEL") ) {
+
+    String author = incomingPushNotif.getStringExtra("AUTHOR_JID");
+    String channel = incomingPushNotif.getStringExtra("CHANNEL_JID");
+    String postedContent = incomingPushNotif.getStringExtra("CONTENT");
+
+    /*
+     * This means there is a new post to a node your user is subscribed to...
+     * Handle this event as you wish!
+     */
+
+  }
+  else if ( pushEvent.equals("MENTION") ) {
+
+    String author = incomingPushNotif.getStringExtra("AUTHOR_JID");
+    String channel = incomingPushNotif.getStringExtra("CHANNEL_JID");
+    String postedContent = incomingPushNotif.getStringExtra("CONTENT");
+
+    /*
+     * This means there is a new post in which your user is mentioned...
+     * Handle this event as you wish!
+     */
+
+  }
+
+}</code></pre>
+  </div>
+  <p>
+    All types of Buddycloud GCM push notification event keys are listed in <a href="javascript:scroll_if_anchor('#event_keys');">the third column of the table above</a>.
+  </p>
+
+  <h3>Fetching old posts</h3>
+  <p>
+    Your Android app can fetch as many old posts as you want, potentially through several separate REST API calls.
+  </p>
+  <p>
+    The following REST API call accepts several query parameters that control exactly which portions of old posts you desire to receive.
+  </p>
   <ul>
-    <li><code>postAfterMe</code> - default: <code>true</code></li>
-    <li><code>postMentionedMe</code> - default: <code>true</code></li>
-    <li><code>postOnMyChannel</code> - default: <code>true</code></li>
-    <li><code>postOnSubscribedChannel</code> - default: <code>false</code></li>
-    <li><code>followMyChannel</code> - default: <code>true</code></li>
-    <li><code>followRequest</code> - default: <code>true</code></li>
+    <li>
+      The <code>max</code> parameter specifies up to which amount of posts you want to get in each call.
+    </li>
+    <li>
+    The <code>after</code> parameter, when present, means you want to retrieve only posts older than the post of given ID.
+    </li>
   </ul>
+  <p>
+    For example, to fetch the last 10 posts you can do:
+  </p>
+  <div class="highlight">
+    <pre><code>curl https://starter.buddycloud.com/api/demo-node@starter.buddycloud.com/content/posts/threads?max=10 \
+    -u <span class="generated-u"></span>:<span class="generated-p"></span> \
+    -X GET \
+    -H "Accept: application/json"</code></pre>
+  </div>
+  <p>
+    And you will get posts in a JSON format like this:
+  </p>
+  <div class="highlight">
+    <pre><code>[
+  {
+    "id": "A_GIVEN_POST_ID",
+    "author": "<span class="generated-u"></span>",
+    "updated": "1595-06-01T12:00:00Z",
+    "content": "This is a random post.",
+    "media": null
+  },
+  ...
+  {
+    "id": "ANOTHER_GIVEN_POST_ID",
+    "author": "<span class="generated-u"></span>",
+    "updated": "1591-06-04T12:00:00Z",
+    "content": "This is an older random post.",
+    "media": null
+  }
+]</code></pre>
+  </div>
+  <p>
+    Then you can get posts older than the one of ID <code>ANOTHER_GIVEN_POST_ID</code> by issuing the following API call:
+  </p>
+  <div class="highlight">
+    <pre><code>curl https://starter.buddycloud.com/api/demo-node@starter.buddycloud.com/content/posts/threads?max=10&amp;after=ANOTHER_GIVEN_POST_ID \
+    -u <span class="generated-u"></span>:<span class="generated-p"></span> \
+    -X GET \
+    -H "Accept: application/json"</code></pre>
+  </div>
+
+  <h3>Creating a new post</h3>
+  <p>
+    Finally, the following REST API call shall be used whenever the user your Android application is working with wishes to create a new post to one of the nodes it is subscribed to (e.g. <code>demo-node@starter.buddycloud.com/posts</code>):
+  </p>
+  <div class="highlight">
+    <pre><code>curl https://starter.buddycloud.com/api/demo-node@starter.buddycloud.com/content/posts \
+    -u <span class="generated-u"></span>:<span class="generated-p"></span> \
+    -X POST \
+    -H "Accept: application/json" \
+    -H "Content-Type: application/json" \
+    -d '{ \
+          "content": "Yet another random post, the newest!" \
+    }'</code></pre>
+  </div>
+
 </div>
 </body>
 </html>
