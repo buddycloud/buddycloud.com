@@ -651,3 +651,9 @@ ul>.list-group-item:before {
 .navbar {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
 }
+
+.background-testimonials {
+  padding-top: 30px;
+  background-color: #C4C8CD;
+  font-weight: 500;
+}
