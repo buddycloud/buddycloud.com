@@ -45,7 +45,7 @@ curl https://demo.buddycloud.org/api/account \
 
 ```
 
-This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password reset and for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").
+This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password resets and for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").
 
 ##Delete User
 
