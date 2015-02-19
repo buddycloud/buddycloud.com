@@ -4,6 +4,8 @@
 > ### You can also try:
 > **[XMPP-FTW](https://xmpp-ftw.jit.su/manual/extensions/buddycloud/)**, which is better for realtime web application programming. Refer to [their docs](https://xmpp-ftw.jit.su/manual/extensions/buddycloud) for more information.
 
+###Buddycloud HTTP REST API
+
 Welcome to the Buddycloud REST API documentation.
 
 The listed REST API calls give you access to the entire Buddycloud stack. These API calls are designed to make it easy to add rich in-app messaging and social features to your web or mobile app.
