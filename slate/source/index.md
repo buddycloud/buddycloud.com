@@ -17,6 +17,7 @@ includes:
   - channels
   - nodes
   - posts
+#  - posts_more
   - subscriptions
   - followers
 #  - messaging
