@@ -1,23 +1,19 @@
 #Followers
 
-Channel followers can have different roles.
+Followers of the nodes in a channel have one of the following affiliations:
 
-Role       | User sees      | Description
+Affiliation | User sees      | Description
 -----------|----------------|-------------
 `owner`    |`owner`         |add/remove moderators 
 `moderator`|`moderator`     |approve subscription requests & delete posts
-`publisher`|`follower+post` |create posts
+`publisher`|`follower+post` |create new posts
 `member`   |`follower`      |only view posts
 `pending`  |`pending`       |nothing
-`outcast`  | `null`         |only visibile to the `owner` and `moderator` roles.
+`outcast`  | `null`         |only visibile to the `owner` and `moderator` affiliation.
 
-The `outcast` role is useful for dealing with abusive users. 
+The `outcast` affiliation is useful for dealing with abusive users. 
 
-Once a user is `outcast`, they can no longer post or generate subscripion requests to that channel. Only the channel's `owner` and `moderator`s can view users with the `outcast` role.
-
-<aside class="warning">
-Users follow channels. You should never see a _topic_ channel with the metadata `channeltype=topic` following a channel.
-</aside>
+<aside>Once a user is an `outcast`, they can no longer post or generate subscripion requests to that channel. Only the channel's `owner` and the channel's `moderator`s can view users the list of `outcast` users.</aside>
 
 ##Fetch Followers
 
@@ -59,13 +55,11 @@ Content-Type: application/json
 
 ```
 
-This request returns a list of channel followers and their role in the channel.
+This request returns a list of channel followers and their affiliation in the channel.
 
 Public channels | Private Channels
 ----------------|------------------
 Return the list without authentication | requesting user must also be an `owner` `moderator` `publisher` or `member` of the channel
-
-???we really need a way to query by role type - eg show me just the moderators of this channel???
 
 ##Retrieve Pending Followers
 
@@ -179,7 +173,7 @@ Subscription State | Description
 `none`       | Permission to follow channel denied.
 
 
-##Alter Follower Roles
+##Alter Follower Affiliations
 
 ```shell
 #POST https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}

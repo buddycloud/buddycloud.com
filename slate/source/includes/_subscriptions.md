@@ -2,8 +2,8 @@
 
 Retrieving a user's channel subscription list will return:
 
-* the nodes that they follow (`owner`, `moderator`, `publisher`, `member` )
-* the private channels (and channel-nodes) they have asked (subscription state of `pending`) to follow.
+* the nodes that they follow and their affiliation with that node (`owner`, `moderator`, `publisher`, `member`, `outcast`)
+* the nodes where they have a subscription state of `pending` (waiting to be approved).
 
 ### Subscription Privacy
 
@@ -93,8 +93,7 @@ Following a _private_ channel:
 * either the channels `owner` or any of the channels `moderator`s approves [or rejects] and the result is then sent back to the user trying to follow the channel ???how???
 * the user's subscription state is changed to `subscribed`, `publisher` (or `none` if rejected) depending on the channel's `default_affiliation`. 
 
-<aside>The channel `owner` and `moderator` roles can adjust the `default_affiliation` is set in [#Update Metadata].</aside>
-
+<aside>It is possible to set the default affiliation for new followers of a node. Users with either `owner` and `moderator` affiliation can adjust the `default_affiliation` by changing a node's [#Update metadata].</aside>
 
 ##Unfollow Channel
 
