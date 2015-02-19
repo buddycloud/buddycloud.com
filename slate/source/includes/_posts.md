@@ -1,8 +1,6 @@
 #Posts
 
-To create new content, your users post to a [channel-node](#channel-nodes).
-
-New post is are automaticaly:
+New posts to a node are automaticaly:
 
 * pushed to the channel's online followers
 * spooled up for the channel's offline followers
@@ -57,8 +55,6 @@ Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_I
 
 ```
 
-Creating a post adds a new item to a channel-node.. 
-
 <aside>You can define your own format for your own application nodes (e.g. `x-application-chessApp-move-history`). The [default channel nodes](#default-channel-nodes) have a pre-defined format and will reject posts that are not formated according to what the server expects. For example, the `posts` node expects to receive Activity stream events.</aside>
 
 ##Delete Post
@@ -89,7 +85,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID
 
 ```
 
-Removes a single post from a node.
+Removes a post from a node.
 
 When a post is deleted,
 
@@ -343,7 +339,7 @@ Buddycloud uses the [Atom threading extensions](http://www.ietf.org/rfc/rfc4685.
 
 An app might want to just show the latest 10 posts per channel (and query for older posts can be paged in as the users scrolls down). 
 
-The `sync` query returns [???up to???] `<x posts>` posts per channel newer than `<timestamp of most recent post in client cache>`. 
+The `sync` query returns [up to]`n` posts per channel newer than `<timestamp of most recent post in client cache>`. 
 
 This avoids the problem of a very busy channel "drowning" other posts during a client synchronisation.
 
