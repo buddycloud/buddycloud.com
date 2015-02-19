@@ -6,7 +6,7 @@ Your users will need to authenticate against the server with a username that loo
 
 Argument   | Required | Notes
 ---------- |:--------:|------------
-`username` | ✓        | always of form `user@example.com`
+`username` | ✓        | always of form `user@example.com`; ≤1023 bytes
 `password` | ✓        | any UTF-8 characters
 `email`    | ✓        | an email for password resets and optional push notifications
 
