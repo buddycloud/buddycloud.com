@@ -14,6 +14,9 @@ Argument   | Required | Notes
 
 > `POST` /api/account
 
+> ###Example
+> Creating the `juliet@buddycloud.org` account using `curl`:
+
 ```shell
 curl https://buddycloud.com/api/account \
      -X POST \
@@ -31,6 +34,9 @@ This will create a new account for `username` and set their `password` and `emai
 
 > `DELETE` /api/account
 
+> ###Example
+> Deleting the `juliet@buddycloud.org` account using `curl`:
+
 ```shell
 curl https://buddycloud.com/api/account \
      -X DELETE \
@@ -44,6 +50,9 @@ Removes a user account.
 ## Change Password
 
 > `POST` /api/account/pw/change
+
+> ###Example
+> Changing the `juliet@buddycloud.org`'s password using `curl`:
 
 ```shell 
 curl https://buddycloud.com/api/account/pw/change \
@@ -61,6 +70,9 @@ Changes the user's `password`.
 ##Reset Password
 
 > `POST` /api/account/pw/reset
+
+> ###Example
+> Resetting the `juliet@buddycloud.org`'s password using `curl`:
 
 ```shell 
 curl https://buddycloud.com/api/account/pw/reset \
