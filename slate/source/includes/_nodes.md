@@ -52,6 +52,9 @@ public-key       | ✓                | ✗            | public key for secure m
 
 > `POST` /api/`channelID`/`nodeID`
 
+> ###Example
+> Creating a node called `new-node` using `curl`:
+
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
     -X POST \
@@ -64,6 +67,9 @@ This allows creation of nodes.
 
 > `DELETE` /api/`channelID`/`nodeID`
 
+> ###Example
+> Deleting the node called `new-node` using `curl`:
+
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
     -X DELETE \
@@ -75,6 +81,9 @@ This will remove a node.
 ##Fetch Metadata
 
 > `GET` /api/`channelID`/metadata/`nodeID`
+
+> ###Example
+> Fetching the node `new-node`'s metadata using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
@@ -104,6 +113,9 @@ A complete set of node metadata is available from the [Buddycloud protocol speci
 ##Update Metadata
 
 > `POST` /api/`channelID`/metadata/`nodeID`
+
+> ###Example
+> Updating the node `new-node`'s metadata using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
