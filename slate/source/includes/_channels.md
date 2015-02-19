@@ -1,8 +1,9 @@
 #Channels
 
-Users subscribe to channels, which work in conjunction with nodes. Channels are comprised of nodes that share related content. Channels represent broader topics while nodes represent related subtopics. The broad topic (or channel) of dog ownership has the following related subtopics (or nodes): feeding schedule, exercise requirements, training methods, and so on.
+Channels are a group of publish-subscribe nodes. For example, the channel `juliet@capulet.lit` is an group of nodes owned by the user `juliet@capulet.lit`. Examples of such nodes that could be:
 
-Remember that a Channel is just a concept - there can only be a Channel if there's at least one Node.
-
+- `/user/juliet@capulet.lit/posts` node (the serialization of `juliet@capulet.lit`’s social activities)
+- `/user/juliet@capulet.lit/status` node (a text string describing `juliet@capulet.lit`’s mood)
+- `/user/juliet@capulet.lit/music-i-liked` node (a hypothetical activity stream of music `juliet@capulet.lit` likes)
 
 ![Channels and Nodes](http://buddycloud.com/theme/img/diagrams/channel%20hierachy.png "Channels and Nodes")
