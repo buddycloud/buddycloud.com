@@ -1,15 +1,13 @@
 #Subscriptions
 
-The subscription list includes all the channels a user follows and their role in the channel. 
-
 Retrieving a user's channel subscription list will return:
 
-* the channels (and channel-nodes) that they follow (`owner`, `moderator`, `publisher`, `member` )
+* the nodes that they follow (`owner`, `moderator`, `publisher`, `member` )
 * the private channels (and channel-nodes) they have asked (subscription state of `pending`) to follow.
 
 ### Subscription Privacy
 
-Users can only request their own subscriptions.
+Users can only request their own subscriptions and are unable to view other user's subscriptions.
 
 ##Fetch Subscriptions
 
