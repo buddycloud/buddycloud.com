@@ -1,15 +1,11 @@
 #Nodes
 
-Nodes are publish-subscribe streams of posts with the same content type. For example, the channel `juliet@capulet.lit` is an aggregation of nodes for each type of information that `juliet` wants to share. Examples of such nodes could be:
+Nodes are publish-subscribe streams of posts with the same content type. They are named
 
-- `juliet@capulet.lit/social` node (the serialization of `juliet@capulet.lit`'s social activities)
-- `juliet@capulet.lit/status` node (a text string describing `juliet@capulet.lit`'s mood)
-- `juliet@capulet.lit/music-i-liked` node (a hypothetical [activity stream](http://activitystrea.ms/specs/json/1.0/) of music `juliet@capulet.lit` likes)
+Each node has:
 
-Each of these nodes have:
-
-- a set of followers;
-- a set of publishers;
+- `publishers` who can post new content;
+- `followers` consumers of content;
 - metadata (e.g. `title`, `description` and `location` fields).
 
 ### Personal Nodes v. Topic Nodes
@@ -17,7 +13,6 @@ Each of these nodes have:
 Buddycloud divides nodes into two categories: `topic` and `personal`.
 
 For example, the channel `juliet@capulet.lit` comprises personal nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. 
-
 
 Trait       | _Personal_ Node              | _Topic_ Node
 ------------|---------------------------------|-----------------------
