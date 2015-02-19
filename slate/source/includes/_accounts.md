@@ -1,10 +1,6 @@
 #Accounts
 
-Your app will need to authenticate users. Some methods are
-
-* the user creates a `username` and `password`
-* your app uses the mobile [phone number](http://en.wikipedia.org/wiki/MSISDN) as the `username`
-* no user interaction (your application backend provides a blind `username` and `password` to connect with Buddycloud services)
+Your users will need to authenticate against the server with a username that looks like `user`@`domain`. For example `user@example.buddycloud.com`.
 
 ### Query Parameters
 
@@ -13,9 +9,6 @@ Argument   | Required | Notes
 `username` | ✓        | always of form `user@example.com`
 `password` | ✓        | any UTF-8 characters
 `email`    | ✓        | an email for password resets and optional push notifications
-
-### Username Domain
-A user with an email of `user@example.com` can also have a Buddycloud `username` of `username@example.com` by using the hosting service or running your own Buddycloud stack on the same domain.
 
 ##Create User
 
@@ -77,7 +70,7 @@ socket.send(
 
 Removes a user account. 
 
-<aside class="warning">Deleting a user will delete their account, _not_ their channels. Your application should first delete their channel(s) then remove the user account.</aside>
+<aside class="warning">Your application should first delete their channel(s) then remove the user account. Deleting a user will delete their account, _not_ their channels.</aside>
 
 ## Change Password
 
