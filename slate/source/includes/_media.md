@@ -16,7 +16,7 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 
 > ###Example
 
-> Updating the media of id `$MEDIA_ID`'s name and title:
+> Updating the media of id `$MEDIA_ID`'s name and title, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
@@ -91,7 +91,7 @@ This returns a list of all avaliable media objects in a channel.
 
 > ###Example
 
-> Retrieving the raw media of id `$MEDIA_ID`:
+> Retrieving the raw media of id `$MEDIA_ID`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
@@ -104,7 +104,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
 
 > ###Example
 
-> Retrieving a preview of the media of id `$MEDIA_ID`:
+> Retrieving a preview of the media of id `$MEDIA_ID`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
@@ -117,7 +117,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxhe
 
 > ###Example
 
-> Retrieving avatar of `juliet@buddycloud.org`:
+> Retrieving avatar of `juliet@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
@@ -143,7 +143,7 @@ When both `maxheight` and `maxwidth` are requested the server will return a file
 
 > ###Example
 
-> Posting new media to the `capulet@topics.buddycloud.org` channel:
+> Posting new media to the `capulet@topics.buddycloud.org` channel, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
@@ -193,7 +193,7 @@ Updating existing media with the same `id` will overwrite the existing media con
 
 > ###Example
 
-> Deleting media of id `$MEDIA_ID` from the `juliet@buddycloud.org` channel:
+> Deleting media of id `$MEDIA_ID` from the `juliet@buddycloud.org` channel, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
