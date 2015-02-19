@@ -1,6 +1,6 @@
 #Accounts
 
-Your users will need to authenticate against the server with a username that looks like `user`@`domain`. For example `user@example.buddycloud.com`.
+Your users will need to authenticate against the server with a username that looks like `username`@`domain`. For example `username@example.buddycloud.com`.
 
 ### Query Parameters
 
@@ -12,12 +12,12 @@ Argument   | Required | Notes
 
 ##Create User
 
-```shell
-#POST https://demo.buddycloud.org/api/account
+> `POST` /api/account
 
-curl https://demo.buddycloud.org/api/account \
+```shell
+curl https://buddycloud.com/api/account \
      -X POST \
-     -H "Content-Type: application/json" \
+     -H "Content-Type: application/json; charset=utf-8" \
      -d '{ \
             "username": "juliet@buddycloud.org", \
             "password": "romeo-forever", \
@@ -25,47 +25,16 @@ curl https://demo.buddycloud.org/api/account \
          }'
 ```
 
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
-```
-
-This will create a new account for `username` and set their `password`. You can optionally pass in an `email` for password resets and for alerts from the [push notification](#push-notifications) system (e.g. "Someone followed your channel").
+This will create a new account for `username` and set their `password` and `email`. The email is used for password resets and for optional alerts from the [push notification](#push-notifications) system.
 
 ##Delete User
 
-```shell
-#DELETE https://demo.buddycloud.org/api/account
+> `DELETE` /api/account
 
-curl https://demo.buddycloud.org/api/account \
+```shell
+curl https://buddycloud.com/api/account \
      -X DELETE \
      -u juliet@buddycloud.org:romeo-forever
-
-
-
-
-
-```
-
-```javascript
-#XMPP-FTW event 'xmpp.register.unregister'
-
-socket.send(
-    'xmpp.register.unregister',
-    {
-        "to": "buddycloud.org"
-    }
-)
-
-
 ```
 
 Removes a user account. 
@@ -74,60 +43,30 @@ Removes a user account.
 
 ## Change Password
 
-```shell 
-#POST https://demo.buddycloud.org/api/account/pw/change
+> `POST` /api/account/pw/change
 
-curl https://demo.buddycloud.org/api/account/pw/change \
+```shell 
+curl https://buddycloud.com/api/account/pw/change \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
-     -H "Content-Type: application/json" \
+     -H "Content-Type: application/json; charset=utf-8" \
      -d '{ \
             "username": "juliet@buddycloud.org", \
             "password": "new-password" \
          }'
 ```
 
-```javascript
-#XMPP-FTW event 'xmpp.register.password'
-
-socket.send(
-    'xmpp.register.password',
-    {
-        "to": "buddycloud.org",
-        "username": "juliet",
-        "password": "new-password"
-    }
-)
-```
-
 Changes the user's `password`.
 
 ##Reset Password
 
-```shell 
-#POST https://demo.buddycloud.org/api/account/pw/reset
+> `POST` /api/account/pw/reset
 
-curl https://demo.buddycloud.org/api/account/pw/reset \
+```shell 
+curl https://buddycloud.com/api/account/pw/reset \
      -X POST \
      -H "Content-Type: application/json" \
      -d '{ "username": "juliet@buddycloud.org" }'
-
-
-
-
 ```
 
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
-```
-
-This resets the user's password by sending a new password to the email address provided by the user during registration.
+This resets the user's `password` by sending a new password to the `email` address provided by the user during registration.

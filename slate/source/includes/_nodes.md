@@ -14,15 +14,15 @@ Buddycloud divides nodes into two categories: `topic` and `personal`.
 
 For example, the channel `juliet@capulet.lit` comprises personal nodes for each type of information that `juliet` wants to share, such as her social activities, reflections on her mood, and the media she comments on. 
 
-Trait       | _Personal_ Node              | _Topic_ Node
-------------|---------------------------------|-----------------------
-channelID   | e.g. `juliet@capulet.lit/{nodeID}`       | e.g. `montague-family@topics.montague.org/posts`
-Purpose     | represents a real person        | represents a topic
-Namespace   | created in `<channelID>@example.com` |created in `<channelID>@topics.example.com`
-ChannelID   | named after a user's `username`| not tied to a user's `username`
-Owned By    | owned by the matching `username`| can be owned by any user
-Messaging   | can receive private chat messages| not applicable
-Location Sharing| geolocation optionally shared with followers| anyone can search for nearby channels
+ _Personal_ Node              | _Topic_ Node
+---------------------------------|-----------------------
+ e.g. `juliet@capulet.lit/{nodeID}`       | e.g. `the-montagues@topics.montague.org/posts`
+ represents a real person        | represents a topic
+ `<channelID>@example.com` | `<channelID>@topics.example.com`
+ named after a user's `username`| not tied to a user's `username`
+ owned by the matching `username`| can be owned by any user
+ can receive private chat messages| not applicable
+ geolocation optionally shared with followers| anyone can search for nearby channels
 
 ### Node Privacy Settings
 
@@ -30,8 +30,8 @@ Nodes may be private or public. Node Privacy is controlled by the node's `access
 
                |Public Node | Private Node
 ---------------|---------------|-----------------
-access_model   |open           |authorize
-visibility     |anyone can view | requires a subscription request to view
+**access_model**   |open           |authorize
+**visibility**     |anyone can view | requires a subscription request to view
 
 The node [metadata](#update-metadata) for _public_ and _private_ node is always publicly accessible.
 
@@ -50,114 +50,37 @@ public-key       | ✓                | ✗            | public key for secure m
 
 ##Create Node
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelID}/{nodeID}
+> `POST` /api/`channelID`/`nodeID`
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
     -X POST \
     -u juliet@buddycloud.org:romeo-forever
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
-```javascript
-#XMPP-FTW event 'xmpp.pubsub.create'
-
-socket.send(
-    'xmpp.pubsub.create',
-    {
-        "to": "pubsub.buddycloud.org",
-        "node": "/user/juliet@buddycloud.org/posts",
-        "options": [
-            {
-                "var": "buddycloud#channel_type",
-                "value": "personal"
-            },
-            {
-                "var": "pubsub#title",
-                "value": "Juliet's posts node"
-            },
-            {
-                "var": "pubsub#access_model",
-                "value": "open"
-            }
-        ]
-    },
-    function(error, data) { console.log(error, data) }
-)
 ```
 
 This allows creation of nodes.
 
 ##Delete Node
 
-```shell
-#DELETE https://demo.buddycloud.org/api/{channelID}/{nodeID}
+> `DELETE` /api/`channelID`/`nodeID`
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/posts \
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
     -X DELETE \
     -u juliet@buddycloud.org:romeo-forever
-
-
-
-
-```
-
-```javascript
-#XMPP-FTW event 'xmpp.pubsub.delete'
-
-socket.send(
-    'xmpp.pubsub.delete',
-    {
-        "to": "pubsub.buddycloud.org",
-        "node": "/user/juliet@buddycloud.org/posts"
-    },
-    function(error, data) { console.log(error, data) }
-)
 ```
 
 This will remove a node.
 
 ##Fetch Metadata
 
-```shell
-#GET https://demo.buddycloud.org/api/{channelID}/metadata/{nodeID}
+> `GET` /api/`channelID`/metadata/`nodeID`
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
      -X GET \
      -u juliet@buddycloud.org:romeo-forever
 ```
-
-```javascript
-#XMPP-FTW event 'xmpp.pubsub.config.set'
-
-socket.send(
-    'xmpp.pubsub.config.get',
-    {
-        "to": "pubsub.buddycloud.org",
-        "node": "/user/juliet@buddycloud.org/posts",
-    },
-    function(error, data) { console.log(error, data) }
-)
-```
-
 
 Metadata allows you to describe the node, set defaults and even add a location to the node so that it will show up in nearby queries.
 
@@ -171,7 +94,7 @@ channelID           | false    | ≤1023 bytes | e.g. `user@example.com` or `top
 title               | true     | up to 50 characters | the node's title
 description         | true     | up to 200 characters | a short string describing the node 
 creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
-access_model        | true    | `open`, `authorize` | whether the node is `public` or `private` **changed description to match style guide**
+access_model        | true    | `open`, `authorize` | whether the node is `public` or `private`
 channel_type        | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
 default_affiliation | true | `publisher`, `follower` | the permissions a new subscriber is granted
 
@@ -180,45 +103,18 @@ A complete set of node metadata is available from the [Buddycloud protocol speci
 
 ##Update Metadata
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelID}/metadata/{nodeID}
+> `POST` /api/`channelID`/metadata/`nodeID`
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/posts \
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ \
-            "title": "New Juliet`s Posts Node Title", \
+            "title": "New Node Title", \
             "description": "Everything about Juliet", \
             "default_affiliation": "publisher" \
          }'
 ```
 
-```javascript
-#XMPP-FTW event 'xmpp.pubsub.config.set'
-
-socket.send(
-    'xmpp.pubsub.config.set',
-    {
-        "to": "pubsub.buddycloud.org",
-        "node": "/user/juliet@buddycloud.org/posts",
-        "form": [
-            {
-                "var": "pubsub#title",
-                "value": "New Juliet's Posts Node Title"
-            },
-            {
-                "var": "pubsub#description",
-                "value": "Everything about Juliet"
-            },
-            {
-                "var": "buddycloud#default_affiliation",
-                "value": "publisher"
-            }
-        ]
-    },
-    function(error, data) { console.log(error, data) }
-)
-```
-
-
+Use this endpoint to update a given node's metadata.
