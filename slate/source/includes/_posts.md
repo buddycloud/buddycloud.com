@@ -57,7 +57,7 @@ Use this endpoint to create new post to a given node.
 > `DELETE` /api/`channelID`/content/`nodeID`/`postID`
 
 > ###Example
-> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.org`:
+> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
@@ -79,7 +79,7 @@ When a post is deleted,
 > `GET` /api/`channelID`/content/`nodeID`
 
 > ###Example
-> Fetching the 20 most recent posts from a node:
+> Fetching the 20 most recent posts from a node, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
@@ -117,7 +117,7 @@ Content-Type: application/json
 > `GET` /api/`channelID`/content/`nodeID`?`param`=`val`&`param`=`val`...
 
 > ###Example
-> Fetching posts from a node using pagination:
+> Fetching posts from a node using pagination, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts?max=3 \
