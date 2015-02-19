@@ -9,50 +9,37 @@ Affiliation | User sees      | Description
 `publisher`|`follower+post` |create new posts
 `member`   |`follower`      |only view posts
 `pending`  |`pending`       |nothing
-`outcast`  | `null`         |only visibile to the `owner` and `moderator` affiliation.
+`outcast`  | `null`         |only visibile to the `owner` and `moderator` affiliation
 
 The `outcast` affiliation is useful for dealing with abusive users. 
 
-<aside>Once a user is an `outcast`, they can no longer post or generate subscripion requests to that channel. Only the channel's `owner` and the channel's `moderator`s can view users the list of `outcast` users.</aside>
+<aside>Once a user is an <kbd>outcast</kbd>, they can no longer post or generate subscripion requests to that channel. Only the channel's <kbd>owner</kbd> and the channel's <kbd>moderator</kbd>s can view users the list of <kbd>outcast</kbd> users.</aside>
 
 ##Fetch Followers
 
-```shell
-#GET https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}
+> `GET` /api/`channelID`/subscribers/`nodeID`
 
+> ###Example
+
+> Fetching followers of the `romeo@buddycloud.org/posts` node:
+
+```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
      -H "Content-Type: application/json"
+```
 
-#Response would be as follows:
+> Response would be as follows:
 
-200 OK
+```shell
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
     "romeo@buddycloud.org": "owner",
     "benvolio@buddycloud.org": "publisher"
 }
-```
-
-```javascript
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 
 This request returns a list of channel followers and their affiliation in the channel.
@@ -63,17 +50,23 @@ Return the list without authentication | requesting user must also be an `owner`
 
 ##Retrieve Pending Followers
 
-```shell
-#GET https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}/approve
+> `GET` /api/`channelID`/subscribers/`nodeID`/approve
 
+> ###Example
+
+> Retrieving pending subscriptions to the `romeo@buddycloud.org` node:
+
+```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X GET \
      -u romeo@buddycloud.org:juliet-forever \
      -H "Content-Type: application/json"
+```
 
-#Response would be as follows:
+> Response would be as follows:
 
-200 OK
+```shell
+HTTP/1.1 200 OK
 Content-Type application/json
 
 [
@@ -92,42 +85,17 @@ Content-Type application/json
 ]
 ```
 
-```javascript
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 Retrieves the list of subscriptions of a node. Returns a list of objects containing the subscriber JID and the values of its subscription state (`subscribed` or `pending`).
 
 ##Authorise Pending Followers
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}/approve
+> `POST` /api/`channelID`/subscribers/`nodeID`/approve
 
+> ###Example
+
+> Authorising subscription of `juliet@buddycloud.org` and denying to `tybalt@buddycloud.org`:
+
+```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
      -X POST \
      -u romeo@buddycloud.org:juliet-forever \
@@ -144,26 +112,6 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/appr
          ]'
 ```
 
-```javascript
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 This allows a channel's `owner` or `moderator` to approve or deny incoming subscription requests.
 
 Subscription State | Description
@@ -175,9 +123,13 @@ Subscription State | Description
 
 ##Alter Follower Affiliations
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelId}/subscribers/{nodeId}
+> `POST` /api/`channelID`/subscribers/`nodeID`
 
+> ###Example
+
+> Changing `juliet@buddycloud.org`'s subscription affiliation to `romeo@buddycloud.org/posts` to `member`:
+
+```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -X POST \
      -u romeo@buddycloud.org:juliet-forever \
@@ -185,20 +137,6 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
      -d '{ \
              "juliet@buddycloud.org": "member" \
          }'
-
-```
-
-```javascript
-
-
-
-
-
-
-
-
-
-
 ```
 
 This enables users to promote (or demote) user subscriptions to `publisher`, `member` or even `moderator`. By setting a subscription to `outcast`, the user is banned.

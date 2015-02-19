@@ -77,12 +77,14 @@ Following a _private_ channel:
 
 * the user is added to the channel's `pending` subscription list
 * the channel's `owner` or a `moderator` receives a subscription request (immediately if they are online or queued up for when they come online)
-* either the channels `owner` or any of the channels `moderator`s approves [or rejects] and the result is then sent back to the user trying to follow the channel via a push notification
+* either the channels `owner` or any of the channels `moderator`s approves (or rejects) and the result is then sent back to the user trying to follow the channel via a push notification
 * the user's subscription state is changed to `subscribed`, `publisher` (or `none` if rejected) depending on the channel's `default_affiliation` 
 
 <aside>It is possible to set the default affiliation for new followers of a node. Users with either <kbd>owner</kbd> and <kbd>moderator</kbd> affiliation can adjust the <kbd>default_affiliation</kbd> by changing a node's metadata.</aside>
 
 ##Unfollow Channel
+
+> ###Same endpoint as before, but passing 'none' in the payload
 
 > `POST` /api/subscribed
 

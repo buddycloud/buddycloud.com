@@ -12,9 +12,13 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 
 ## Media Metadata
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
+> `POST` /api/`channelID`/media/`mediaID`
 
+> ###Example
+
+> Updating the media of id `$MEDIA_ID`'s name and title:
+
+```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -22,20 +26,6 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
             "filename": "A good name for that picture of Jules", \
             "title": "A new title" \
         }' 
-
-```
-
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
 ```
 
 Metadata upates must include the `id`. 
@@ -60,15 +50,17 @@ Parameter        | Required   | Description
 
 ##List Media
 
-```shell
-#GET https://demo.buddycloud.org/api/{channelID}/media
+> `GET` /api/`channelID`/media
 
+```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
      -X GET
+```
 
-#Response would be as follows:
+> Response would be as follows:
 
-200 OK
+```shell
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 [
@@ -89,81 +81,47 @@ Content-Type: application/json
 ]
 ```
 
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 This returns a list of all avaliable media objects in a channel.
 
 ##Fetch Media
 
+> ###Get the raw media
+
+> `GET` /api/`channelID`/media/`mediaID`
+
+> ###Example
+
+> Retrieving the raw media of id `$MEDIA_ID`:
+
 ```shell
-#Get media:
-#GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
-
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
-     -X GET
-
-
-#Or get media preview:
-#GET https://demo.buddycloud.org/api/{channelID}/media/{mediaID}?maxheight=:x&maxwidth=:x
-
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
-     -X GET
-
-
-#Or get avatar:
-#GET https://demo.buddycloud.org/api/{channelID}/avatar
-
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
      -X GET
 ```
 
-```javascript
-#Unsupported Method
+> ###Get the media thumbnail preview
 
+> `GET` /api/`channelID`/media/`mediaID`?maxheight=`val`&maxwidth=`val`
 
+> ###Example
 
+> Retrieving a preview of the media of id `$MEDIA_ID`:
 
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
+     -X GET
+```
 
+> ###Get avatar
 
+> `GET` /api/`channelID`/avatar
 
+> ###Example
 
+> Retrieving avatar of `juliet@buddycloud.org`:
 
-
-
-
-
-
-
-
-
-
+```shell
+curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
+     -X GET
 ```
 
 This request returns a media file.
@@ -181,9 +139,13 @@ When both `maxheight` and `maxwidth` are requested the server will return a file
 
 ##Post Media
 
-```shell
-#POST https://demo.buddycloud.org/api/{channelID}/media
+> `POST` /api/`channelID`/media
 
+> ###Example
+
+> Posting new media to the `capulet@topics.buddycloud.org` channel:
+
+```shell
 curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
      -X POST \
      -u juliet@buddycloud.org:romeo-forever \
@@ -195,10 +157,12 @@ curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
              "title": "Juliet's prom pic", \
              "description": "Juliet's beautiful prom pic!" \
          }'
+```
 
-#Response would be as follows:
+> Response would be as follows:
 
-201 Created
+```shell
+HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
@@ -217,74 +181,24 @@ Content-Type: application/json
 }
 ```
 
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 This call enables media and media-metadata uploading and modification.
 
 Posting new media will return the object `id` and metadata.
 
 Updating existing media with the same `id` will overwrite the existing media content.
 
-
 ##Delete Media
-```shell
-#DELETE https://demo.buddycloud.org/api/{channelID}/media/{mediaID}
 
+> `DELETE` /api/`channelID`/media/`mediaID`
+
+> ###Example
+
+> Deleting media of id `$MEDIA_ID` from the `juliet@buddycloud.org` channel:
+
+```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
      -x DELETE \
      -u juliet@buddycloud.org:romeo-forever
-
-
-
-
-
-```
-
-```javascript
-#Unsupported Method
-
-
-
-
-
-
-
-
-
 ```
 
 Removes media from the channel.
