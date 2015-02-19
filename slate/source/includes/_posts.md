@@ -30,7 +30,7 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 > `POST` /api/`channelID`/content/`nodeID`
 
 > ###Example
-> Creating a new post to the `posts` node of `romeo@buddycloud.org`:
+> Creating a new post to the `posts` node of `romeo@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
