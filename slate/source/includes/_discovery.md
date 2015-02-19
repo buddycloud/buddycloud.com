@@ -54,5 +54,3 @@ socket.send(
 
 
 ```
-
-The same way we need to discover the *REST API*, we need to discover where the Buddycloud server lives in order to use it through *XMPP-FTW*. This procedure is rather simpler compared to the REST API discovery since it is implemented by XMPP-FTW internally.
