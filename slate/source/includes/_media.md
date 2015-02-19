@@ -1,8 +1,8 @@
 #Media
 
-The media server enables media sharing in channels. Users can drag-n-drop files into a channel and the contents are then shared with *only* that channel's followers.
+File's inherit the permissions of the channel they are shared with. For example sharing files onto a private channel will mean that *only* that channel's followers can download them.
 
-Media can be any type of file, and any file size (Buddycloud site administrators usually set about 10GB as a maximum size.)
+Media can be any type of file, and any file size (Buddycloud site administrators usually set about 1GB as a maximum size.)
 
 <aside class="notice">Authentication is not required for requesting media from a public channel. Authentication is required for private channels.</aside>
 
