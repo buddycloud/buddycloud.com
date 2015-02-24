@@ -127,7 +127,7 @@ For obvious reasons, this endpoint doesn't support pagination. The other endpoin
 > `GET` /api/`channelID`/content/`nodeID`/`postID`/replyTo
 
 > ###Example
-> Fetching child posts of post to node `juliet@buddycloud.com/posts` of id $POST_ID using `curl`:
+> Fetching child posts of post to node `juliet@buddycloud.com/posts` of id `$POST_ID` using `curl`:
 
 ```shell
 curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts/$POST_ID/replyTo \
@@ -282,7 +282,7 @@ This is useful for retrieving recent posts to an individual node.
 
 Often it's useful to quickly show, for example, the 20 most recent posts. However some of these posts may reference a parent post outside of you apps' cache.
 
-<aside>To retrieve a missing parent post, you can use the `POST_ID` referenced by the post's <kbd>replyTo</kbd> field in the endpoint for querying a particular post, in the section depicted above.</aside>
+<aside>To retrieve a missing parent post, you can use the <kbd>POST_ID</kbd> referenced by the post's <kbd>replyTo</kbd> field in the endpoint for querying a particular post, in the section depicted above.</aside>
 
 For another approach, please refer to the Fetch Recent Post Threads section depicted below.
 
