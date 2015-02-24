@@ -1,6 +1,6 @@
 #Nodes
 
-Nodes are publish-subscribe streams of posts with the same content type. They are named
+Nodes are publish-subscribe streams of posts with the same content type.
 
 Each node has:
 
