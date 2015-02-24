@@ -24,6 +24,22 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 `published` | the date when this post was created | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>2012-11-02T03:41:55.484Z</code></pre></div>
 `updated`   | the last time there was a reply in this thread or when the post was created | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>2012-11-02T03:41:55.484Z</code></pre></div>
 
+###Pagination
+
+Buddycloud uses [Result Set Management](http://xmpp.org/extensions/xep-0059.html) for pagination of results obtained by the different endpoints for fetching posts specified below. This is useful when:
+
+* building mobile applications and needing to limit the amount of data that the API sends back. 
+* your app needs to retrieve new messages since it was last online.
+
+###Query Parameters
+
+You will pass pagination parameters via the URL query part.
+
+Parameter | Description
+--------- |  -----------
+`max`     | The maximum number of returned entries
+`before`  | Get posts newer than entry with this `POST_ID`
+`after`   | Return only entries older than the entry with this `POST_ID`
 
 ##Create Post
 
@@ -33,7 +49,7 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 > Creating a new post to the `posts` node of `romeo@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts \
+curl https://buddycloud.com/api/romeo@buddycloud.com/content/posts \
      -X POST \
      -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
@@ -45,7 +61,7 @@ curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts \
 ```shell
 HTTP/1.1 201 Created
 
-Location: https://buddycloud.com/romeo@buddycloud.org/content/posts/$POST_ID
+Location: https://buddycloud.com/romeo@buddycloud.com/content/posts/$POST_ID
 ```
 
 Use this endpoint to create new post to a given node.
@@ -60,7 +76,7 @@ Use this endpoint to create new post to a given node.
 > Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts/$POST_ID \
+curl https://buddycloud.com/api/romeo@buddycloud.com/content/posts/$POST_ID \
      -X DELETE \
      -u juliet@buddycloud.com:romeo-forever 
 ```
@@ -74,15 +90,47 @@ When a post is deleted,
 
 <aside>Deleting a post that references a <kbd>mediaID</kbd> will not remove the media object from the media server. That should be done seperately using a delete media query.</aside>
 
-##Fetch Posts
+##Fetch Specific Post
 
-> `GET` /api/`channelID`/content/`nodeID`
+> `GET` /api/`channelID`/content/`nodeID`/`postID`
 
 > ###Example
-> Fetching the 20 most recent posts from a node, using `curl`:
+> Fetching specific post of id `$POST_ID` from the `juliet@buddycloud.com/posts` node, using `curl`:
 
 ```shell
-curl https://buddycloud.com/api/juliet@buddycloud.org/content/posts \
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts/$POST_ID \
+    -X GET \
+    -H "Accept: application/json"
+```
+
+> Response would be as follows:
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": "$POST_ID",
+    "author": "romeo@buddycloud.com",
+    "updated": "1595-06-01T12:00:00Z",
+    "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+    "media": null
+}
+```
+
+If you have interest in fetching a particular post whose `$POST_ID` is already known to you, you can use this endpoint for that matter.
+
+For obvious reasons, this endpoint doesn't support pagination. The other endpoints below potentially return multiple entries, with proper pagination support.
+
+##Fetch a Post's Child Posts
+
+> `GET` /api/`channelID`/content/`nodeID`/`postID`/replyTo
+
+> ###Example
+> Fetching child posts of post to node `juliet@buddycloud.com/posts` of id $POST_ID using `curl`:
+
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts/$POST_ID/replyTo \
      -X GET \
      -H "Accept: application/json"
 ```
@@ -95,18 +143,20 @@ Content-Type: application/json
 
 [
     {
-        "id": "foo",
+        "id": "$NEWEST_CHILD_POST_ID",
         "author": "romeo@buddycloud.com",
         "updated": "1595-06-01T12:00:00Z",
         "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+        "replyTo": "$POST_ID",
         "media": null
     },
     ...
     {
-        "id": "bar",
+        "id": "$OLDEST_CHILD_POST_ID",
         "author": "romeo@buddycloud.com",
         "updated": "1591-06-04T12:00:00Z",
         "content": "Thus with a kiss I die.",
+        "replyTo": "$POST_ID",
         "media": null
     }
 ]
@@ -114,13 +164,14 @@ Content-Type: application/json
 
 > ###Same endpoint using pagination
 
-> `GET` /api/`channelID`/content/`nodeID`?`param`=`val`&`param`=`val`...
+> `GET` /api/`channelID`/content/`nodeID`/`postID`/replyTo?
+> `param`=`val`&`param`=`val`...
 
 > ###Example
 > Fetching posts from a node using pagination, using `curl`:
 
 ```shell
-curl https://buddycloud.com/api/juliet@buddycloud.org/content/posts?max=3 \
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts?after=$NEWEST_POST_ID \
      -X GET \
      -H "Accept: application/json"
 ```
@@ -131,62 +182,167 @@ curl https://buddycloud.com/api/juliet@buddycloud.org/content/posts?max=3 \
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{
-    "items": [
-        {
-            "id": "foo",
-            "author": "romeo@buddycloud.com",
-            "updated": "1595-06-01T12:00:00Z",
-            "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
-            "media": null
-        },
-        ...
-        {
-            "id": "bar",
-            "author": "romeo@buddycloud.com",
-            "updated": "1591-06-04T12:00:00Z",
-            "content": "Thus with a kiss I die.",
-            "media": null
-        }
-    ],
-    "rsm": {
-        "count": "3",
-        "index": "0"
+[
+    [Post with id == "NEWEST_CHILD_POST_ID" omitted]
+    ...
+    {
+        "id": "$OLDEST_CHILD_POST_ID",
+        "author": "romeo@buddycloud.com",
+        "updated": "1591-06-04T12:00:00Z",
+        "content": "Thus with a kiss I die.",
+        "replyTo": "$POST_ID",
+        "media": null
     }
-}
+]
+```
+
+
+Retrieves one or more posts that are children of a given node specified by `$POST_ID` using pagination ranges.
+
+##Fetch Recent Posts
+
+> `GET` /api/`channelID`/content/`nodeID`
+
+> ###Example
+> Fetching the most recent posts from the `juliet@buddycloud.com/posts` node, using `curl`:
+
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts \
+     -X GET \
+     -H "Accept: application/json"
+```
+
+> Response would be as follows:
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "$NEWEST_POST_ID",
+        "author": "romeo@buddycloud.com",
+        "updated": "1595-06-01T12:00:00Z",
+        "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+        "media": null
+    },
+    ...
+    {
+        "id": "$OLDEST_POST_ID",
+        "author": "romeo@buddycloud.com",
+        "updated": "1591-06-04T12:00:00Z",
+        "content": "Thus with a kiss I die.",
+        "media": null
+    }
+]
+```
+
+> ###Same endpoint using pagination
+
+> `GET` /api/`channelID`/content/`nodeID`?
+> `param`=`val`&`param`=`val`...
+
+> ###Example
+> Fetching posts from a node using pagination, using `curl`:
+
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts?max=3 \
+     -X GET \
+     -H "Accept: application/json"
+```
+
+> Then, response would be as follows:
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "$NEWEST_POST_ID",
+        "author": "romeo@buddycloud.com",
+        "updated": "1595-06-01T12:00:00Z",
+        "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
+        "media": null
+    },
+    ...
+    {
+        "id": "$OLDEST_POST_ID",
+        "author": "romeo@buddycloud.com",
+        "updated": "1591-06-04T12:00:00Z",
+        "content": "Thus with a kiss I die.",
+        "media": null
+    }
+]
 ```
 
 Retrieves one or more posts using pagination ranges.
 
-This is useful for retrieving just the posts from an individual node.
+This is useful for retrieving recent posts to an individual node.
 
-<aside>Often it's useful to quickly show the 20 most recent posts. However some of these posts may reference a parent post outside of the apps' cache. 
+Often it's useful to quickly show, for example, the 20 most recent posts. However some of these posts may reference a parent post outside of you apps' cache.
 
-To retrieve a missing parent post, you can query for the post ID referenced by the post's <kbd>replyTo</kbd> field.</aside>
+<aside>To retrieve a missing parent post, you can use the `POST_ID` referenced by the post's <kbd>replyTo</kbd> field in the endpoint for querying a particular post, in the section depicted above.</aside>
 
-###Pagination
+For another approach, please refer to the Fetch Recent Post Threads section depicted below.
 
-Buddycloud uses [Result Set Management](http://xmpp.org/extensions/xep-0059.html) for pagination. This is useful when:
+##Fetch Recent Post Threads
 
-* building mobile applications and needing to limit the amount of data that the API sends back. 
-* your app needs to retrieve new messages since it was last online.
+> `GET` /api/`channelID`/content/`nodeID`/threads
 
-###Query Parameters
+> ###Example
+> Fetching the most recent post threads from the `juliet@buddycloud.com/posts` node, using `curl`:
 
-You will pass pagination parameters via the URL query part.
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/content/posts/threads \
+     -X GET \
+     -H "Accept: application/json"
+```
 
-Parameter | Description
---------- |  -----------
-`max`     | The maximum number of returned entries
-`before`  | Get posts before this timestamp
-`after`   | Return only entries older than the entry with the specified ID
+> Response would be as follows:
 
-###Response Attributes
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
 
-The following attributes are returned in a paged query response:
+[
+  {
+    "id": "$PARENT_POST_ID"
+    "updated": "2015-01-30T01:39:00.070Z",
+    "items": [
+        {
+            "id": "$OLDEST_CHILD_POST_ID",
+            "author": "romeo@buddycloud.com",
+            "updated": "1595-06-01T12:00:00Z",
+            "content": "First reply.",
+            "replyTo": "$PARENT_POST_ID"
+            "media": null
+        },
+        ...
+        [More Child Posts...]
+        ...
+        {
+            "id": "$NEWEST_CHILD_POST_ID",
+            "author": "romeo@buddycloud.com",
+            "updated": "1595-06-01T12:00:00Z",
+            "content": "Last thing ever said.",
+            "replyTo": "$PARENT_POST_ID"
+            "media": null
+        },
+        {
+            "id": "$PARENT_POST_ID",
+            "author": "romeo@buddycloud.com",
+            "updated": "1591-06-04T12:00:00Z",
+            "content": "First thing ever said.",
+            "media": null
+        }
+    ]
+  }
+  ...
+  [More Post Threads]
+]
+```
 
-Parameter | Description
---------- |  -----------
-`count`   | The total number of entries that the query would return
-`first`   | The ID of the first item in the page
-`last`    | The ID of the last item in the page
+Retrieves one or more post threads, that is, collections of chained posts, using pagination ranges (where `max` depicts the maximum number of threads expected in the response).
+
+<aside>Each thread response is comprised of metadata and a JSON array of posts with the <kbd>items</kbd> key. This array contains all child posts belonging to the thread, ordered from oldest child post to newest child post and then, the parent post, which is the root of the thread.</aside>

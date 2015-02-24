@@ -59,7 +59,7 @@ The values denote the subscription type:
 > `POST` /api/subscribed
 
 > ###Example
-> `juliet@buddycloud.com` is subscribing to `romeo@buddycloud.org/posts`, using `curl`:
+> `juliet@buddycloud.com` is subscribing to `romeo@buddycloud.com/posts`, using `curl`:
 
 ```shell
 curl https://buddycloud.com/api/subscribed \
@@ -91,7 +91,7 @@ Following a _private_ channel:
 
 > ###Example
 
-> `juliet@buddycloud.com` unfollows `romeo@buddycloud.org/posts`, using `curl`:
+> `juliet@buddycloud.com` unfollows `romeo@buddycloud.com/posts`, using `curl`:
 
 ```shell
 curl https://buddycloud.com/api/subscribed \

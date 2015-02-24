@@ -32,7 +32,7 @@ This will create a new account for `username` and set their `password` and `emai
 
 ##Check User Credentials
 
-> `GET` /
+> `GET` /api/
 
 > ###Example
 > Checking if `julet@buddycloud.com` matches with password `romeo-forever`, using `curl`:
