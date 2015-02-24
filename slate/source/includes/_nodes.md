@@ -95,21 +95,6 @@ Metadata allows you to describe the node, set defaults and even add a location t
 
 Node metadata is always visible for both public and private nodes.
 
-### Parameters
-
-Argument            | Editable | Values | Description
-------------------- | -------- | -------| -----------
-channelID           | false    | ≤1023 bytes | e.g. `user@example.com` or `topic@topics.example.com`
-title               | true     | up to 50 characters | the node's title
-description         | true     | up to 200 characters | a short string describing the node 
-creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
-access_model        | true    | `open`, `authorize` | whether the node is `public` or `private`
-channel_type        | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
-default_affiliation | true | `publisher`, `follower` | the permissions a new subscriber is granted
-
-A complete set of node metadata is available from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
-
-
 ##Update Metadata
 
 > `POST` /api/`channelID`/metadata/`nodeID`
@@ -130,3 +115,18 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
 ```
 
 Use this endpoint to update a given node's metadata.
+
+### Parameters
+
+Argument            | Editable | Values | Description
+------------------- | -------- | -------| -----------
+channelID           | false    | ≤1023 bytes | e.g. `user@example.com` or `topic@topics.example.com`
+title               | true     | up to 50 characters | the node's title
+description         | true     | up to 200 characters | a short string describing the node 
+creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
+access_model        | true    | `open`, `authorize` | whether the node is `public` or `private`
+channel_type        | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
+default_affiliation | true | `publisher`, `follower` | the permissions a new subscriber is granted
+
+A complete set of node metadata is available from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
+
