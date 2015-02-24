@@ -1,9 +1,9 @@
 #Pagination
 
 ```shell
-#GET https://demo.buddycloud.org/api/{channelId}?{queryParameter}={value}
+#GET https://buddycloud.com/api/{channelId}?{queryParameter}={value}
 
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org?max=10 \
+curl https://buddycloud.com/api/juliet@buddycloud.org?max=10 \
      -X GET
 ```
 
@@ -13,7 +13,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org?max=10 \
 socket.send(
     'xmpp.buddycloud.retrieve',
     {
-        node: '/user/juliet@buddycloud.org/posts',
+        node: '/user/juliet@buddycloud.com/posts',
         rsm: {
             max: 10
         },

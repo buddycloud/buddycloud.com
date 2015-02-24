@@ -30,12 +30,12 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 > `POST` /api/`channelID`/content/`nodeID`
 
 > ###Example
-> Creating a new post to the `posts` node of `romeo@buddycloud.org`, using `curl`:
+> Creating a new post to the `posts` node of `romeo@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
+curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ "content": "O Romeo, Romeo, wherefore art thou Romeo?" }'
 ```
@@ -45,7 +45,7 @@ curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
 ```shell
 HTTP/1.1 201 Created
 
-Location: https://demo.buddycloud.org/romeo@buddycloud.org/content/posts/$POST_ID
+Location: https://buddycloud.com/romeo@buddycloud.org/content/posts/$POST_ID
 ```
 
 Use this endpoint to create new post to a given node.
@@ -57,12 +57,12 @@ Use this endpoint to create new post to a given node.
 > `DELETE` /api/`channelID`/content/`nodeID`/`postID`
 
 > ###Example
-> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.org`, using `curl`:
+> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
+curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts/$POST_ID \
      -X DELETE \
-     -u juliet@buddycloud.org:romeo-forever 
+     -u juliet@buddycloud.com:romeo-forever 
 ```
 
 Removes a post from a node.
@@ -82,7 +82,7 @@ When a post is deleted,
 > Fetching the 20 most recent posts from a node, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
+curl https://buddycloud.com/api/juliet@buddycloud.org/content/posts \
      -X GET \
      -H "Accept: application/json"
 ```
@@ -96,7 +96,7 @@ Content-Type: application/json
 [
     {
         "id": "foo",
-        "author": "romeo@buddycloud.org",
+        "author": "romeo@buddycloud.com",
         "updated": "1595-06-01T12:00:00Z",
         "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
         "media": null
@@ -104,7 +104,7 @@ Content-Type: application/json
     ...
     {
         "id": "bar",
-        "author": "romeo@buddycloud.org",
+        "author": "romeo@buddycloud.com",
         "updated": "1591-06-04T12:00:00Z",
         "content": "Thus with a kiss I die.",
         "media": null
@@ -120,7 +120,7 @@ Content-Type: application/json
 > Fetching posts from a node using pagination, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts?max=3 \
+curl https://buddycloud.com/api/juliet@buddycloud.org/content/posts?max=3 \
      -X GET \
      -H "Accept: application/json"
 ```
@@ -135,7 +135,7 @@ Content-Type: application/json
     "items": [
         {
             "id": "foo",
-            "author": "romeo@buddycloud.org",
+            "author": "romeo@buddycloud.com",
             "updated": "1595-06-01T12:00:00Z",
             "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
             "media": null
@@ -143,7 +143,7 @@ Content-Type: application/json
         ...
         {
             "id": "bar",
-            "author": "romeo@buddycloud.org",
+            "author": "romeo@buddycloud.com",
             "updated": "1591-06-04T12:00:00Z",
             "content": "Thus with a kiss I die.",
             "media": null

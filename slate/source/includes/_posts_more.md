@@ -1,9 +1,9 @@
 ##Fetch Child Posts
 
 ```shell
-#GET https://demo.buddycloud.org/api/{channelID}/content/{nodeId}/{postID}/replyto
+#GET https://buddycloud.com/api/{channelID}/content/{nodeId}/{postID}/replyto
 
-curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
+curl https://buddycloud.com/api/romeo@buddycloud.org/content/posts/$POST_ID/replyto \
      -X GET \
      -H "Accept: application/json"
 
@@ -16,7 +16,7 @@ Content-Type: application/json
     {
         "id": "foo",
         "replyTo": "qux",
-        "author": "romeo@buddycloud.org",
+        "author": "romeo@buddycloud.com",
         "updated": "1595-06-01T12:00:00Z",
         "content": "But, soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
         "media": null
@@ -25,7 +25,7 @@ Content-Type: application/json
     {
         "id": "bar",
         "replyTo": "qux",
-        "author": "romeo@buddycloud.org",
+        "author": "romeo@buddycloud.com",
         "updated": "1591-06-04T12:00:00Z",
         "content": "Thus with a kiss I die.",
         "media": null

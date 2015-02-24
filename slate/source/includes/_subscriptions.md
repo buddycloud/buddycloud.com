@@ -19,12 +19,12 @@ Users can only request their own subscriptions and are unable to view other user
 > `GET` /api/subscribed
 
 > ###Example
-> Fetching subscriptions of `juliet@buddycloud.org`, using `curl`:
+> Fetching subscriptions of `juliet@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/subscribed \
+curl https://buddycloud.com/api/subscribed \
      -X GET \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Accept: application/json"
 ```
 
@@ -35,10 +35,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "juliet@buddycloud.org/posts": "owner",
-    "juliet@buddycloud.org/status": "owner",
-    "romeo@buddycloud.org/posts": "pending",
-    "capulet@topics.buddycloud.org/posts": "publisher"
+    "juliet@buddycloud.com/posts": "owner",
+    "juliet@buddycloud.com/status": "owner",
+    "romeo@buddycloud.com/posts": "pending",
+    "capulet@topics.buddycloud.com/posts": "publisher"
 }
 ```
 
@@ -59,14 +59,14 @@ The values denote the subscription type:
 > `POST` /api/subscribed
 
 > ###Example
-> `juliet@buddycloud.org` is subscribing to `romeo@buddycloud.org/posts`, using `curl`:
+> `juliet@buddycloud.com` is subscribing to `romeo@buddycloud.org/posts`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/subscribed \
+curl https://buddycloud.com/api/subscribed \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
-     -d '{ "romeo@buddycloud.org/posts": "publisher" }'
+     -d '{ "romeo@buddycloud.com/posts": "publisher" }'
 ```
 
 Following behavior is dependent on the channel type:
@@ -91,15 +91,15 @@ Following a _private_ channel:
 
 > ###Example
 
-> `juliet@buddycloud.org` unfollows `romeo@buddycloud.org/posts`, using `curl`:
+> `juliet@buddycloud.com` unfollows `romeo@buddycloud.org/posts`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/subscribed \
+curl https://buddycloud.com/api/subscribed \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ \
-             "romeo@buddycloud.org/posts": "none" \
+             "romeo@buddycloud.com/posts": "none" \
          }'
 ```
 

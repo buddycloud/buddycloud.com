@@ -19,9 +19,9 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 > Updating the media of id `$MEDIA_ID`'s name and title, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -d '{ \
             "filename": "A good name for that picture of Jules", \
             "title": "A new title" \
@@ -53,7 +53,7 @@ Parameter        | Required   | Description
 > `GET` /api/`channelID`/media
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media \
      -X GET
 ```
 
@@ -67,7 +67,7 @@ Content-Type: application/json
     {
         "id": "lETuJi8rPE4IfQrygN8rVtGx3",
         "fileName": "photo.jpg",
-        "author": "juliet@buddycloud.org",
+        "author": "juliet@buddycloud.com",
         "title": "Juliet's pic",
         "mimeType": "image/jpeg",
         "description": "Juliet's picture 1595/06/01",
@@ -76,7 +76,7 @@ Content-Type: application/json
         "fileSize": "60892",
         "height": "312",
         "width": "312",
-        "entityId": "capulet@topics.buddycloud.org"
+        "entityId": "capulet@topics.buddycloud.com"
     }
 ]
 ```
@@ -94,7 +94,7 @@ This returns a list of all avaliable media objects in a channel.
 > Retrieving the raw media of id `$MEDIA_ID`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
      -X GET
 ```
 
@@ -107,7 +107,7 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
 > Retrieving a preview of the media of id `$MEDIA_ID`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
      -X GET
 ```
 
@@ -117,10 +117,10 @@ curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID?maxhe
 
 > ###Example
 
-> Retrieving avatar of `juliet@buddycloud.org`, using `curl`:
+> Retrieving avatar of `juliet@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/avatar \
+curl https://buddycloud.com/api/juliet@buddycloud.com/avatar \
      -X GET
 ```
 
@@ -143,12 +143,12 @@ When both `maxheight` and `maxwidth` are requested the server will return a file
 
 > ###Example
 
-> Posting new media to the `capulet@topics.buddycloud.org` channel, using `curl`:
+> Posting new media to the `capulet@topics.buddycloud.com` channel, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/capulet@topics.buddycloud.org/media \
+curl https://buddycloud.com/api/capulet@topics.buddycloud.com/media \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ \
              "data": "media data in bytes", \
@@ -168,7 +168,7 @@ Content-Type: application/json
 {
     "id": "lETuJi8rPE4IfQrygN6rVtGx3",
     "fileName": "prom.png",
-    "author": "juliet@buddycloud.org",
+    "author": "juliet@buddycloud.com",
     "title": "Juliet's prom pic",
     "mimeType": "image/png",
     "description": "Juliet's beautiful prom pic!",
@@ -177,7 +177,7 @@ Content-Type: application/json
     "fileSize": 60892,
     "height": 312,
     "width": 312,
-    "entityId": "capulet@topics.buddycloud.org"
+    "entityId": "capulet@topics.buddycloud.com"
 }
 ```
 
@@ -193,12 +193,12 @@ Updating existing media with the same `id` will overwrite the existing media con
 
 > ###Example
 
-> Deleting media of id `$MEDIA_ID` from the `juliet@buddycloud.org` channel, using `curl`:
+> Deleting media of id `$MEDIA_ID` from the `juliet@buddycloud.com` channel, using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/media/$MEDIA_ID \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
      -x DELETE \
-     -u juliet@buddycloud.org:romeo-forever
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 Removes media from the channel.

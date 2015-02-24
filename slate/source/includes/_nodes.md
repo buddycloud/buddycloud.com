@@ -37,7 +37,7 @@ The node [metadata](#update-metadata) for _public_ and _private_ node is always 
 
 ### Who creates the set of nodes for a channel?
 
-Your application is responsible for creating the set of nodes it is going to use for a given channel. For example, the social application running at <https://demo.buddycloud.org> automatically creates the following nodes everytime a new channel is created:
+Your application is responsible for creating the set of nodes it is going to use for a given channel. For example, the social application running at <https://buddycloud.com> automatically creates the following nodes everytime a new channel is created:
 
 Name             | Personal Channel |Topic Channel | Description 
 -----------------|:---------------: |:------------:|----------------
@@ -56,9 +56,9 @@ public-key       | ✓                | ✗            | public key for secure m
 > Creating a node called `new-node` using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
+curl https://buddycloud.com/api/juliet@buddycloud.com/new-node \
     -X POST \
-    -u juliet@buddycloud.org:romeo-forever
+    -u juliet@buddycloud.com:romeo-forever
 ```
 
 This allows creation of nodes.
@@ -71,9 +71,9 @@ This allows creation of nodes.
 > Deleting the node called `new-node` using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/new-node \
+curl https://buddycloud.com/api/juliet@buddycloud.com/new-node \
     -X DELETE \
-    -u juliet@buddycloud.org:romeo-forever
+    -u juliet@buddycloud.com:romeo-forever
 ```
 
 This will remove a node.
@@ -86,9 +86,9 @@ This will remove a node.
 > Fetching the node `new-node`'s metadata using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
+curl https://buddycloud.com/api/juliet@buddycloud.com/metadata/new-node \
      -X GET \
-     -u juliet@buddycloud.org:romeo-forever
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 Metadata allows you to describe the node, set defaults and even add a location to the node so that it will show up in nearby queries.
@@ -103,9 +103,9 @@ Node metadata is always visible for both public and private nodes.
 > Updating the node `new-node`'s metadata using `curl`:
 
 ```shell
-curl https://demo.buddycloud.org/api/juliet@buddycloud.org/metadata/new-node \
+curl https://buddycloud.com/api/juliet@buddycloud.com/metadata/new-node \
      -X POST \
-     -u juliet@buddycloud.org:romeo-forever \
+     -u juliet@buddycloud.com:romeo-forever \
      -H "Content-Type: application/json" \
      -d '{ \
             "title": "New Node Title", \
