@@ -35,9 +35,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "juliet@buddycloud.org": "owner",
-    "romeo@buddycloud.org": "pending",
-    "capulet@topics.buddycloud.org": "publisher"
+    "juliet@buddycloud.org/posts": "owner",
+    "juliet@buddycloud.org/status": "owner",
+    "romeo@buddycloud.org/posts": "pending",
+    "capulet@topics.buddycloud.org/posts": "publisher"
 }
 ```
 
