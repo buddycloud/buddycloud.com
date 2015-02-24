@@ -19,7 +19,7 @@ Users can only request their own subscriptions and are unable to view other user
 > `GET` /api/subscribed
 
 > ###Example
-> Fetching subscriptions of `juliet@buddycloud.org`:
+> Fetching subscriptions of `juliet@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/subscribed \
@@ -59,7 +59,7 @@ The values denote the subscription type:
 > `POST` /api/subscribed
 
 > ###Example
-> `juliet@buddycloud.org` is subscribing to `romeo@buddycloud.org/posts`:
+> `juliet@buddycloud.org` is subscribing to `romeo@buddycloud.org/posts`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/subscribed \
@@ -91,7 +91,7 @@ Following a _private_ channel:
 
 > ###Example
 
-> `juliet@buddycloud.org` unfollows `romeo@buddycloud.org/posts`:
+> `juliet@buddycloud.org` unfollows `romeo@buddycloud.org/posts`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/subscribed \

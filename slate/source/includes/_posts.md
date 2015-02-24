@@ -19,7 +19,7 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 `author`    | the `username` of this post's author, set by the server  | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>juliet@capulet.lit</code></pre></div>
 `content`   | the post's content - usually this is activity stream event | user   | <div class="highlight"><pre style="position:absolute; right:0px;"><code>O Romeo, Romeo! Wherefore art thou Romeo?</code></pre></div>
 `id`        | the unique post ID assigned to this post by the server | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>17163726-ea90-453e-ad25-455336a83fd4</code></pre>
-`media`     | a list of media objects this post might refer to | user | <div class="highlight"><pre style="position:absolute; right:0px;"><code>[ { "id": "romeo-photo-id", "channel": "alice@capulet.lit" } ]</code></pre></div>
+`media`     | a list of media objects this post might refer to | user | <div class="highlight"><pre style="position:absolute; right:0px;"><code>[ { "id": "romeo-photo-id", "channel": "juliet@capulet.lit" } ]</code></pre></div>
 `replyTo`   | the parent post `id` if this post is a reply to another post | user | <div class="highlight"><pre style="position:absolute; right:0px;"><code>9b7724d0-7ef5-4331-8974-81754abb7ba0</code></pre></div>
 `published` | the date when this post was created | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>2012-11-02T03:41:55.484Z</code></pre></div>
 `updated`   | the last time there was a reply in this thread or when the post was created | server | <div class="highlight"><pre style="position:absolute; right:0px;"><code>2012-11-02T03:41:55.484Z</code></pre></div>
@@ -30,7 +30,7 @@ Field       | Description | Responsible | <div style="display:none;">Example</di
 > `POST` /api/`channelID`/content/`nodeID`
 
 > ###Example
-> Creating a new post to the `posts` node of `romeo@buddycloud.org`:
+> Creating a new post to the `posts` node of `romeo@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts \
@@ -57,7 +57,7 @@ Use this endpoint to create new post to a given node.
 > `DELETE` /api/`channelID`/content/`nodeID`/`postID`
 
 > ###Example
-> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.org`:
+> Deleting post of id `$POST_ID` from the `posts` node of `romeo@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/content/posts/$POST_ID \
@@ -79,7 +79,7 @@ When a post is deleted,
 > `GET` /api/`channelID`/content/`nodeID`
 
 > ###Example
-> Fetching the 20 most recent posts from a node:
+> Fetching the 20 most recent posts from a node, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts \
@@ -117,7 +117,7 @@ Content-Type: application/json
 > `GET` /api/`channelID`/content/`nodeID`?`param`=`val`&`param`=`val`...
 
 > ###Example
-> Fetching posts from a node using pagination:
+> Fetching posts from a node using pagination, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/juliet@buddycloud.org/content/posts?max=3 \

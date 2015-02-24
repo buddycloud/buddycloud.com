@@ -21,7 +21,7 @@ The `outcast` affiliation is useful for dealing with abusive users.
 
 > ###Example
 
-> Fetching followers of the `romeo@buddycloud.org/posts` node:
+> Fetching followers of the `romeo@buddycloud.org/posts` node, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
@@ -54,7 +54,7 @@ Return the list without authentication | requesting user must also be an `owner`
 
 > ###Example
 
-> Retrieving pending subscriptions to the `romeo@buddycloud.org` node:
+> Retrieving pending subscriptions to the `romeo@buddycloud.org` node, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
@@ -93,7 +93,7 @@ Retrieves the list of subscriptions of a node. Returns a list of objects contain
 
 > ###Example
 
-> Authorising subscription of `juliet@buddycloud.org` and denying to `tybalt@buddycloud.org`:
+> Authorising subscription of `juliet@buddycloud.org` and denying to `tybalt@buddycloud.org`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts/approve \
@@ -127,7 +127,7 @@ Subscription State | Description
 
 > ###Example
 
-> Changing `juliet@buddycloud.org`'s subscription affiliation to `romeo@buddycloud.org/posts` to `member`:
+> Changing `juliet@buddycloud.org`'s subscription affiliation to `romeo@buddycloud.org/posts` to `member`, using `curl`:
 
 ```shell
 curl https://demo.buddycloud.org/api/romeo@buddycloud.org/subscribers/posts \
