@@ -10,18 +10,16 @@ toc_footers:
 
 includes:
   - introduction
-#  - pagination
   - discovery
   - accounts
-#  - realtime
   - channels
   - nodes
   - posts
-#  - posts_more
   - subscriptions
   - followers
 #  - messaging
   - media
+  - realtime
 #  - search
 #  - push
 #  - content-recommendation

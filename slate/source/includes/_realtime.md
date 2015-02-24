@@ -1,144 +1,79 @@
-#Realtime Events
+#Realtime
+
+To get content updates in realtime directly through the REST API, your application can rely on long-polling an endpoint specifically designed with this goal in mind. The first section below depicts it in detail.
+
+But to make your application truly aware of all kinds of Buddycloud events, you'll need more.
+
+If you're building a mobile app, you can set it up so that it will listen for incoming push notifications when important events happen. The last sections below describe every step needed to make your app fully Buddycloud-powered.
+
+Otherwise, the recommended thing is to have your app use [XMPP-FTW](https://xmpp-ftw.jit.su/manual/extensions/buddycloud/). Please also refer to this guide with more on [how to get started](http://buddycloud.com/get-started-javascript).
+
+##New Post Updates
+
+> ###First, get the last known timestamp
+
+> `GET` /api/notifications/posts
+
+> ###Example
+
+> Asking for the last known timestamp, using `curl`:
 
 ```shell
-#You will need to perform at least two HTTP requests
-# in order to get updates.
-#A mandatory one to get the latest timestamp:
-
-#GET https://demo.buddycloud.org/api/notifications/posts
-
-#Then, provide the latest known time stamp to
-# the same endpoint via the url parameter 'since':
-
-#GET https://demo.buddycloud.org/api/notifications/posts?since={timestamp}
-
-#For example:
-
-curl https://demo.buddycloud.org/api/notifications/posts \
-     -X GET
-
-#A response example would be as follows:
-{
-  "last": "1403624041808",
-  "items": []
-}
-
-curl https://demo.buddycloud.org/api/notifications/posts?since=1403624094454 \
-     -X GET
-
-#Response will be as follows:
-{
-  "last": "1403624094454",
-  "items": [
-    {
-      "id": "f27139a9-f398-4e81-be94-3d14c3b7a39e",
-      "source": "test@topics.buddycloud.org/posts",
-      "author": "justin@buddycloud.org",
-      "published": "2014-06-24T15:34:54.449Z",
-      "updated": "2014-06-24T15:34:54.449Z",
-      "content": "foo",
-      "media":null,
-      "replyTo":"d818f9b6-18ef-4b83-8a4e-e2d2ae7d18d5"
-    }
-  ]
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+curl https://buddycloud.com/api/notifications/posts \
+    -X GET
 ```
 
-```javascript
-#First of all, you must send presence in order
-# to receive notifications:
+> Response would be as follows:
 
-#XMPP-FTW event 'xmpp.buddycloud.presence'
-
-socket.send(
-    'xmpp.buddycloud.presence',
-    {}
-)
-
-#Then to get updates of specific events, there
-# are other events as well.
-
-#To listen for upcoming items:
-#XMPP-FTW event 'xmpp.buddycloud.push.item'
-
-socket.send(
-    'xmpp.buddycloud.push.item',
-    {}
-)
-
-#To be informed if an item was successfully deleted:
-#XMPP-FTW event 'xmpp.buddycloud.push.retract'
-
-socket.send(
-    'xmpp.buddycloud.push.retract',
-    {}
-)
-
-#To be informed if a node you follow had its configuration updated:
-#XMPP-FTW event 'xmpp.buddycloud.push.configuration'
-
-socket.send(
-    'xmpp.buddycloud.push.configuration',
-    {}
-)
-
-#To be informed of if a subscription change
-# occured in a node you're subscribed to:
-#XMPP-FTW event 'xmpp.buddycloud.push.subscription'
-
-socket.send(
-    'xmpp.buddycloud.push.subscription',
-    {}
-)
-
-#For affiliation changes:
-#XMPP-FTW event 'xmpp.buddycloud.push.affiliation'
-
-socket.send(
-    'xmpp.buddycloud.push.affiliation',
-    {}
-)
-
-#If you're a node onwer or moderator, listen for
-# subscription authorisation requests through:
-#XMPP-FTW event 'xmpp.buddycloud.push.authorisation'
-
-socket.send(
-    'xmpp.buddycloud.push.authorisation',
-    {}
-)
+```shell
+{
+    "last": "$LAST_TIMESTAMP",
+    "items": []
+}
 ```
 
-Your app can receive realtime upates for all Buddycloud events, including:
+> ###Finally, start long polling
 
-* new posts from followed channels
-* new posts from all public channels via the firehose
-* new follow requests
-* subscription updates (e.g. "a moderator approved your follow request for `citizens-of-verona@verona.lit`")
+> `GET` /api/notifications/posts?since=`lastTT`
 
-Tell the server that a client is now online to send spooled messages and begin streaming subsequent events.
+> ###Example
 
-To retrieve a history of events (for example, since last online), use the [message archive management](#retrieve-message-history) API. 
+> Using the last known timestamp to start long polling:
 
-<aside>Buddycloud uses the [GRIP protocol](https://github.com/fanout/pushpin/blob/master/doc/grip-protocol.txt) for realtime event scaling. This works with the Fanout.io content delivery network. To set this up, get a Fanout account and configure the Buddycloud HTTP API component as described in the blog post on [scaling Buddycloud with Fanout](http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanout-io).</aside>
+```shell
+curl https://buddycloud.com/api/notifications/posts?since=$LAST_TIMESTAMP \
+    -X GET
+```
+
+> Once a new update arrives, response would be as follows:
+
+```shell
+{
+    "last": "$LAST_TIMESTAMP_UPDATED",
+    "items": [
+        {
+            "id": "$POST_ID",
+            "source": "juliet@buddycloud.com/posts"
+            "author": "e.g romeo@buddycloud.com"
+            "published": "2014-06-24T15:34:54.449Z",
+            "updated": "2014-06-24T15:34:54.449Z",
+            "content": "This the newest post in town",
+            "media": null,
+            "replyTo": "$PARENT_POST_ID"
+        }
+        ...
+        [Potentially more posts from this node or other nodes here]
+    ]
+```
+
+> Don't forget that the last known timestamp now is `$LAST_TIMESTAMP_UPDATED`!
+
+###Get New Post Updates By Long Polling
+
+Use this endpoint to start long polling for new posts updates.
+Multiple updates shall arrive at a time, for all nodes the user is subscribed to (the user your app is currently working with).
+
+Your application will need to provide the last known timestamp `lastTT` everytime it makes a new long polling request.
+On the right there are good examples of the intended flow of this process of getting new posts updates.
+
+A new posts update should arrive in the form of a JSON response comprised of all the new posts' contents alongside information about the nodes that the new post belong to, respectively (the `source` key of each post has this value).
