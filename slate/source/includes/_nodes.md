@@ -118,7 +118,7 @@ Use this endpoint to update a given node's metadata.
 
 ### Parameters
 
-Args            | Edit? | Values | Description
+Field            | Edit? | Values | Description
 ------------------- | -------- | -------| -----------
 `channelID`           | false    | ≤1023 bytes | `user@<domain>` or `topic@topics.<domain>`
 `title`               | true     | up to 50 characters | the node's title
