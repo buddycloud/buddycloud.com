@@ -4,7 +4,6 @@ New posts to a node are automaticaly:
 
 * pushed to the channel's online followers
 * spooled up for the channel's offline followers
-* pushed to the [firehose](#access-firehose)
 * archived and retrievable using the [fetch posts](#fetch-posts) method.
 * indexed by the [channel crawler](https://github.com/buddycloud/channel-directory)
 

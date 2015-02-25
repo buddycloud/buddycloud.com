@@ -41,12 +41,12 @@ Your application is responsible for creating the set of nodes it is going to use
 
 Name             | Personal Channel |Topic Channel | Description 
 -----------------|:---------------: |:------------:|----------------
-status           | ✓                | ✓            | a one-line status message 
-posts            | ✓                | ✓            | ATOM formatted activity stream 
-geoloc-previous  | ✓                | ✗            | where they were              
-geoloc-current   | ✓                | ✗            | where they are              
-geoloc-future    | ✓                | ✗            | where they will go next   
-public-key       | ✓                | ✗            | public key for secure messaging
+`status`           | ✓                | ✓            | a one-line status message 
+`posts`            | ✓                | ✓            | ATOM formatted activity stream 
+`geoloc-previous`  | ✓                | ✗            | where they were              
+`geoloc-current`   | ✓                | ✗            | where they are              
+`geoloc-future`    | ✓                | ✗            | where they will go next   
+`public-key`       | ✓                | ✗            | public key for secure messaging
 
 ##Create Node
 
@@ -118,15 +118,15 @@ Use this endpoint to update a given node's metadata.
 
 ### Parameters
 
-Argument            | Editable | Values | Description
+Args            | Edit? | Values | Description
 ------------------- | -------- | -------| -----------
-channelID           | false    | ≤1023 bytes | e.g. `user@example.com` or `topic@topics.example.com`
-title               | true     | up to 50 characters | the node's title
-description         | true     | up to 200 characters | a short string describing the node 
-creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
-access_model        | true    | `open`, `authorize` | whether the node is `public` or `private`
-channel_type       | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
-default_affiliation | true | `publisher`, `follower` | the permissions a new subscriber is granted
+`channelID`           | false    | ≤1023 bytes | `user@<domain>` or `topic@topics.<domain>`
+`title`               | true     | up to 50 characters | the node's title
+`description`         | true     | up to 200 characters | a short string describing the node 
+`creation_date`       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
+`access_model`        | true    | `open`, `authorize` | whether the node is `public` or `private`
+`channel_type`       | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
+`default_` `affiliation` | true | `publisher`, `follower` | the permissions a new subscriber is granted
 
 A complete set of node metadata is available from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 
 
