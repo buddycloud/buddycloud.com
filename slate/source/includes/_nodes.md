@@ -30,10 +30,10 @@ Nodes may be private or public. Node Privacy is controlled by the node's `access
 
                |Public Node | Private Node
 ---------------|---------------|-----------------
-**access_model**   |open           |authorize
+**access model**   |open           |authorize
 **visibility**     |anyone can view | requires a subscription request to view
 
-The node [metadata](#update-metadata) for _public_ and _private_ node is always publicly accessible.
+The node metadata for _public_ and _private_ nodes is always publicly accessible.
 
 ### Who creates the set of nodes for a channel?
 
@@ -125,7 +125,7 @@ title               | true     | up to 50 characters | the node's title
 description         | true     | up to 200 characters | a short string describing the node 
 creation_date       | false    | [RFC3399](https://tools.ietf.org/html/rfc3339) timestamp | when the node was created
 access_model        | true    | `open`, `authorize` | whether the node is `public` or `private`
-channel_type        | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
+channel_type       | false   | `personal`, `topic` | whether this is a `personal` node or a `topic` node
 default_affiliation | true | `publisher`, `follower` | the permissions a new subscriber is granted
 
 A complete set of node metadata is available from the [Buddycloud protocol specification](http://buddycloud.github.io/buddycloud-xep/#default-roles). 

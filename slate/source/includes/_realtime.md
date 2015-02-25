@@ -54,7 +54,7 @@ curl https://buddycloud.com/api/notifications/posts?since=$LAST_TIMESTAMP \
         {
             "id": "$POST_ID",
             "source": "juliet@buddycloud.com/posts"
-            "author": "e.g romeo@buddycloud.com"
+            "author": "romeo@buddycloud.com"
             "published": "2014-06-24T15:34:54.449Z",
             "updated": "2014-06-24T15:34:54.449Z",
             "content": "This the newest post in town",

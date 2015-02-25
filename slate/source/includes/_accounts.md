@@ -1,14 +1,6 @@
 #Accounts
 
-Your users will need to authenticate against the server with a username that looks like `username`@`domain`. For example `username@example.buddycloud.com`.
-
-### Query Parameters
-
-Argument   | Required | Notes
----------- |:--------:|------------
-`username` | ✓        | always of form `user@example.com`; ≤1023 bytes
-`password` | ✓        | ≤1023 bytes
-`email`    | ✓        | an email for password resets and optional push notifications
+Your users will need to authenticate against the server with a username that looks like `username@domain`. For example `username@example.buddycloud.com`.
 
 ##Create User
 
@@ -30,12 +22,20 @@ curl https://buddycloud.com/api/account \
 
 This will create a new account for `username` and set their `password` and `email`. The email is used for password resets and for optional alerts from the [push notification](#push-notifications) system.
 
+### Payload Parameters
+
+Argument   | Required | Notes
+---------- |:--------:|------------
+`username` | ✓        | always of form `user@example.com`; ≤1023 bytes
+`password` | ✓        | ≤1023 bytes
+`email`    | ✓        | an email for password resets and optional push notifications
+
 ##Check User Credentials
 
 > `GET` /api/
 
 > ###Example
-> Checking if `julet@buddycloud.com` matches with password `romeo-forever`, using `curl`:
+> Checking if `juliet@buddycloud.com` matches with password `romeo-forever`, using `curl`:
 
 ```shell
 curl https://buddycloud.com/api/ \

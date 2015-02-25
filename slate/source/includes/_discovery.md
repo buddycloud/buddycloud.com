@@ -10,7 +10,7 @@ Applications shall work with hardcoded API endpoints but, if need be, there's a 
 
 * `romeo@montague.lit` connects to the Montague Buddycloud API using `https://montague.lit/buddycloud/api`
 
-**Solution:** Buddycloud solves this by using a DNS lookup to discover the REST-API endpoint. 
+**Solution:** Buddycloud solves this by using a DNS lookup to discover the REST API endpoint. 
 
 > ###Example
 > In order to resolve the API endpoint for `buddycloud.com`, do:
@@ -48,4 +48,4 @@ Parameter | Description        | Example
 
 The following API endpoint reflects the above response:  `https://buddycloud.com:443/api-endpoint`.
 
-<aside>Run the API discvery procedure only if you are building an app for users on multiple Buddycloud sites logging in with their full <kbd>username@domainname</kbd>.</aside>
+<aside>Run the API discvery procedure only if you are building an app for users on multiple Buddycloud sites logging in with their full <kbd>username@domain</kbd>.</aside>
