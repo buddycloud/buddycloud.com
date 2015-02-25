@@ -80,8 +80,6 @@ A new posts update should arrive in the form of a JSON response comprised of all
 
 ##Push Notifications
 
-###Get Push Notifications By Registering With The Pusher Service
-
 > ###Get SENDER ID From The Pusher
 
 > `GET` /api/notification_metadata?type=gcm
@@ -125,6 +123,8 @@ curl https://buddycloud.com/api/notification_settings \
 ```
 
 > Alongside the `type` and `target` keys, you can specify specific events you want to monitor (or not). By default you'll monitor most events. More information about this [can be found here](http://buddycloud.com/get-started-mobile#event_keys).
+
+###Get Push Notifications By Registering With The Pusher Service
 
 There's some work you will have to do in your mobile application in order to enable it to receive Buddycloud updates via push notifications, sent by our Pusher service.
 It will need to become a Google Cloud Messaging client so that it's able to receive those updates.
