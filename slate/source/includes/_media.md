@@ -10,51 +10,14 @@ Media can be any type of file, and any file size (Buddycloud site administrators
 
 The media `id` of `avatar` is currently reserved and used for storing a channels avatar. Uploading with the `avatar` `id` will replace the user's avatar.
 
-## Media Metadata
-
-> `POST` /api/`channelID`/media/`mediaID`
-
-> ###Example
-
-> Updating the media of id `$MEDIA_ID`'s name and title, using `curl`:
-
-```shell
-curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
-     -X POST \
-     -u juliet@buddycloud.com:romeo-forever \
-     -d '{ \
-            "filename": "A good name for that picture of Jules", \
-            "title": "A new title" \
-        }' 
-```
-
-Metadata upates must include the `id`. 
-
-The possible metadata parameters are:
-
-Parameter        | Required   | Description
------------------|------------|--------------------------------------------
-`height`           | server-set | Height of the uploaded image or video. This is calculated by the server and not user-editable.
-`width`            | server-set | Width of the uploaded image or video. This is calculated by the server and not user-editable.
-`author`           | server-set | the `username` of the uploader
-`shaChecksum`      | server-set | SHA1 file checksum
-`uploadedDate`     | server-set | when the media was uploaded
-`lastUpdatedDate`  | server-set | when the media was updated / re-uploaded
-`mimeType`         | required   | The file mimetype (e.g. `image/jpeg`)
-`fileName`         | required   | The uploaded filename and extension.
-`entityId`         | required   | The channel where the media object was posted.
-`title`            | optional   | a short title of the object
-`description`      | optional   | a longer form description of the object
-
-
-
 ##List Media
 
 > `GET` /api/`channelID`/media
 
 ```shell
 curl https://buddycloud.com/api/juliet@buddycloud.com/media \
-     -X GET
+     -X GET \
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 > Response would be as follows:
@@ -95,7 +58,8 @@ This returns a list of all avaliable media objects in a channel.
 
 ```shell
 curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
-     -X GET
+     -X GET \
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 > ###Get the media thumbnail preview
@@ -108,7 +72,8 @@ curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
 
 ```shell
 curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID?maxheight=150&maxwidth=150 \
-     -X GET
+     -X GET \
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 > ###Get avatar
@@ -121,7 +86,8 @@ curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID?maxheight=
 
 ```shell
 curl https://buddycloud.com/api/juliet@buddycloud.com/avatar \
-     -X GET
+     -X GET \
+     -u juliet@buddycloud.com:romeo-forever
 ```
 
 This request returns a media file.
@@ -204,3 +170,79 @@ curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
 Removes media from the channel.
 
 Deleting media will remove it from the requested channel. This does not remove it from other channels where it has been reshared.
+
+## Fetch Media Metadata
+
+> `GET` /api/`channelID`/media/`mediaID`/metadata
+
+> ###Example
+
+> Fetching metadata of media of id `$MEDIA_ID`, using `curl`:
+
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID/metadata \
+     -X GET \
+     -u juliet@buddycloud.com:romeo-forever
+```
+
+> Response would be as follows:
+
+```shell
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": "lETuJi8rPE4IfQrygN8rVtGx3",
+        "fileName": "photo.jpg",
+        "author": "juliet@buddycloud.com",
+        "title": "Juliet's pic",
+        "mimeType": "image/jpeg",
+        "description": "Juliet's picture 1595/06/01",
+        "fileExtension": "jpg",
+        "shaChecksum": "bc46e5fac2f1cbb607c8b253a5af33181f161562",
+        "fileSize": "60892",
+        "height": "312",
+        "width": "312",
+        "entityId": "capulet@topics.buddycloud.com"
+    }
+]
+```
+
+Endpoint used to fetch a given media's metadata. 
+
+## Update Media Metadata
+
+> `PUT` /api/`channelID`/media/`mediaID`
+
+> ###Example
+
+> Updating the media of id `$MEDIA_ID`'s name and title, using `curl`:
+
+```shell
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID \
+     -X PUT \
+     -u juliet@buddycloud.com:romeo-forever \
+     -d '{ \
+            "filename": "A good name for that picture of Jules", \
+            "title": "A new title" \
+        }' 
+```
+
+Use this endpoint to update a give media's metadata.
+
+The possible metadata parameters are:
+
+Parameter        | Required   | Description
+-----------------|------------|--------------------------------------------
+`height`           | server-set | Height of the uploaded image or video. This is calculated by the server and not user-editable.
+`width`            | server-set | Width of the uploaded image or video. This is calculated by the server and not user-editable.
+`author`           | server-set | the `username` of the uploader
+`shaChecksum`      | server-set | SHA1 file checksum
+`uploadedDate`     | server-set | when the media was uploaded
+`lastUpdatedDate`  | server-set | when the media was updated / re-uploaded
+`mimeType`         | required   | The file mimetype (e.g. `image/jpeg`)
+`fileName`         | required   | The uploaded filename and extension.
+`entityId`         | required   | The channel where the media object was posted.
+`title`            | optional   | a short title of the object
+`description`      | optional   | a longer form description of the object
