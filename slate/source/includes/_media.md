@@ -15,7 +15,7 @@ The media `id` of `avatar` is currently reserved and used for storing a channels
 > `GET` /api/`channelID`/media
 
 ```shell
-curl https://buddycloud.com/api/juliet@buddycloud.com/media \
+curl https://buddycloud.com/api/juliet@buddycloud.com/mediaa \
      -X GET \
      -u juliet@buddycloud.com:romeo-forever
 ```
@@ -78,14 +78,14 @@ curl https://buddycloud.com/api/juliet@buddycloud.com/media/$MEDIA_ID?maxheight=
 
 > ###Get avatar
 
-> `GET` /api/`channelID`/avatar
+> `GET` /api/`channelID`/media/avatar
 
 > ###Example
 
 > Retrieving avatar of `juliet@buddycloud.com`, using `curl`:
 
 ```shell
-curl https://buddycloud.com/api/juliet@buddycloud.com/avatar \
+curl https://buddycloud.com/api/juliet@buddycloud.com/media/avatar \
      -X GET \
      -u juliet@buddycloud.com:romeo-forever
 ```
