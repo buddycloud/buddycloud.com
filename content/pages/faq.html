@@ -21,87 +21,60 @@
     <section>
         <h2>The Product and Service.</h2>
         <h3>What is Buddycloud?</h3>
-          <p>The Buddycloud stack helps developers add secure communication into their apps. This in-app communication builds 
-          community, which then builds a great product experience for the end user. Buddycloud supports developers with reliable 
-          tools and knowledgeable 'direct-from-the-developer' support.</p>
-        <h3>What can I build?</h3>
-          <p>Some apps that have been built include a console-based text messaging, end-to-end secure messaging, a location 
-          sharing platform and a social network.</p>
-        <h3>How is this different?</h3>
-          <p>Buddycloud is the only in-app messaging system that you can also run on-premesis.</p>
-          <p>Buddycloud believes in an open and free internet and works closely with causes and the standards community to 
-          defend our internet freedoms.</p>
-        <h3>How much does it cost?</h3>
-          <p>Buddycloud offers a free and paid hosting plan. Additionally you can run Buddycloud on your own hardware using the open source code.</p>
-        <h3>What makes Buddycloud secure?</h3>
-          <p>Secure systems are designed using a layered approach: like an onion, each layer protects inner layers. Buddycloud
-          takes the same approach with each layer of Buddycloud's design:</p>
-          <p>Unique hosting options: Medical and financial organisations (and the growing indie-hosting community) are 
-          supported with an <a href="https://hosting.buddycloud.com/login">on-premesis hosting</a> option. Buddycloud is the
-          only in-app messaging system runnable from behind the firewall. This unique approach helps organisations meet
-          stringent audit and data care requirements. And helps keep the internet as an end-to-end system.</p>
-          <p>End stay secure and avoid leaking data with simple privacy settings. And can optionally benefit from Buddycloud's
-          support for end-to-end secure messaging.</p>
-          <p>All the Buddycloud code is developed in an open and transparent manner making it much more difficult to hide
-          exploitable backdoors in the code.</p>
-          <p>The Buddycloud service is designed to run as modular components with defined edges. Users' data is 
-          compartmentalised and only available to the parts of the system that need it. This prevents data leaking to 
-          insecure modules.</p>
-          <p>Most of all we stand on the shoulders of the crypto giants using field-hardend crypto code and best practices
-          for securely transporting users' information.</p>
-        <h3>How reliable is Buddycloud?</h3>
-          <p>We understand the trust you are placing in Buddycloud to run your messaging stack: to support you, we've 
-          assembled a team with a strong background in building highly reliable systems for Investment banks and core 
-          infrastructure at AOL.</p>
+          <p>Buddycloud is an open source project that helps developers add chat, video and social features to their app 
+          without being locked into a proprietary solution. We do this by producing an open source messaging server and 
+          working with standards committees to ensure everything we do is open and free for others to use.</p>
+          <p>The Developer components of Buddycloud ship as the BC:Core product.</p>
+        <h3>How is Buddycloud different?</h3>
+          <p>Buddycloud is different:</p>
+          <ul class="list-unstyled">
+          <li>The ability to build services that interoperate with other sites using federation give you access to a much 
+          larger user community. Your users can find friends on other services and access Buddycloud content anywhere on 
+          the internet.</li>
+          <li>Unlike other messaging stacks, Buddycloud can also be run on-premises, giving you total control over how you
+          decide to integrate your messaging stack with external services (for example your user database).</li>
+          <li>Buddycloud's open design keeps you flexible: Instead of building a closed and proprietary system, we took the
+          best of open protocols and built on them. Then we  released this all as open source so you can innovate and avoid
+          service lock-in.</li>
+          </ul>
+        <h3>Who uses Buddycloud?</h3>
+          <p>A community of 500+ developers and many organisations are currently building products on Buddycloud. Corporate 
+          customers include Government departments, ISPs and Game developers.</p>
+        <h3>Is it a messaging app?</h3>
+          <p>Buddycloud is a service for developers to build their own apps. There are two demo apps:</p>
+          <ul class="list-unstyled">
+            <li><a href="https://buddycloud.org/">web demo</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.buddycloud">android demo</a></li>
+          </ul>
+          <p>The Buddycloud <a href="http://buddycloud.com/software-stack">software ecosystem pages</a> give a full list of 
+          applications.</p>
+        <h3>What benefit does Buddycloud add that I don&rsquo;t already have?</h3>
+          <p>BC:Core, a set of tools, libraries and services to build user-to-user, group and social messaging into your apps.
+          Check out all the <a href="https://buddycloud.com/products-developers">Buddycloud components</a> and use those that
+          your users need.</p>
+          <p>If you are a community, you can use BC:Communities and Channels to easily build a community in your existing 
+          site. <a href="http://buddycloud.com/contact">Get in contact with us</a> to know more about this Buddycloud product.</p>
         <h2>The Design and Technology.</h2>
         <h3>Which platforms are supported?</h3>
-          <p>Buddycloud has native support for <a href="https://github.com/buddycloud/buddycloud-android">Android</a> and
-          <a href="https://github.com/buddycloud/buddycloud-server-java">web/Javascript platforms.</a> 
-          The backend code runs on any unix-like system. Buddycloud uses Postgres for persistent data.</p>
+          <p>Buddycloud supports <a href="https://github.com/buddycloud/buddycloud-server-java">Web</a> and 
+          <a href="https://github.com/buddycloud/buddycloud-android">Mobile</a> application development with SDKs for the
+          main platforms.</p>
+          <p>The BC:Core components run on any unix-like system.</p>
+          <p>Buddycloud uses the Postgres database.</p>
+          <p>Buddycloud can be setup to authenticate against your existing user databases (external-auth).</p>
         <h3>How do users control privacy?</h3>
           <p>Users should always know what information is shared and with whom. We've designed Buddycloud to avoid privacy
           confusion and developed three ways to share:</p>
-          <p>A selected few trusted users: a private channel, for example - <a href="mailto:surprise-party@my-domain.com"> 
-          surprise-party@my-domain.com.</a></p>
-          <p>Just people on the local domain: a local channel: for example <a href="mailto:all-hands@company.com"> 
-          all-hands@company.com</a></p>
-          <p>Open to the world: an open channel: for example <a href="mailto:my-fans@ladygaga.com">my-fans@ladygaga.com</a></p>
-        <h3>How does a username look?</h3>
-          <p>Just like email: Buddycloud usernames describe the user and the site they are from - for example: 
-          <a href="mailto:username@example.com">juliet@capulet.com</a> (users can follow juliets social feed, message her and
-          get her pictures from the capulet.com server).</p>
-        <h3>Can I customize?</h3>
-          <p>Adding new system components and by inventing new content types mean you can extend Buddycloud to very specific
-          needs. For example, perhaps your application needs to share "Tasks" with team members. You can define a new content
-          type plugin that will validate new tasks. Buddycloud comes with ready made components that handle things like push
-          notifications, media storage, content search. To add new functionality, you simply add a new component to the mix.</p>
-        <h3>How do I scale Buddycloud?</h3>
-          <p>The founding team have worked on massively scaled systems and understand the challenges of designing systems for
-          rapid growth. User growth is supported by horizontally scaling components. Additionally 
-          <a href="https://github.com/buddycloud/buddycloud-http-api">Buddycloud's API</a> includes a plugin for Fanout's
-          realtime CDN to help you globally distribute your traffic.</p>
-        <h3>What is federation?</h3>
-          <p>A federated service means that your users can share messages and updates with users on any other Buddycloud site. 
-          This is similar to how a user on gmail.com can send emails to their friend on Yahoo.com: messages flow seamlessly 
-          between sites. And like email, it's nice when you can connect with users on remote sites: your Buddycloud site 
-          becomes part of something much-much bigger.</p>
-        <h2>Getting Involved.</h2>
-        <h3>How can I contribute to the open source project?</h3>
-          <p>The Buddycloud community contribute fixes to the open source code and help design future messaging products.</p>
-          <p>The best place to start is introducing yourself on buddycloud-dev. We love pull requests: each project gets 
-          tagged with "Help Wanted" (for example: <a href="https://github.com/buddycloud/buddycloud-server-java/labels/help%20wanted">
-          buddycloud-server</a>).</p>
-        <h3>How do I get started?</h3>
-          <p>Build a quick <a href="https://demo.buddycloud.org/">demo app.</a> If you still have difficulties or questions
-          about the process, please let us know and we will guide you along the process.</p>
-        <h3>How can I know more?</h3>
-          <p>Read more about Buddycloud on the <a href="http://blog.buddycloud.com/">blog</a>, signing-up to the 
-          <a href="http://buddycloud.us3.list-manage1.com/subscribe?u=baf68e82342b8fe72ac616d73&id=816069e98a">newsletter</a>
-          or follow us on <a href="https://twitter.com/buddycloud">Twitter</a>, <a 
-           href="https://www.facebook.com/and.the.future.is.buddycloud">Facebook</a> and <a 
-           href="https://plus.google.com/+Buddycloud/about">Google+</a>.
-           For everything else, you can reach a real <a href="mailto:reach-a-developer@buddycloud.com">
-           reach-a-developer@buddycloud.com</a> or <a href="http://buddycloud.com/contact">call us</a>.</p>
+          <p>A selected few trusted users: a private channel, for example <code>surprise-party@my-domain.com</code></p>
+          <p>Just people on the local domain: a local channel: for example <code>all-hands@company.com</code></p>
+          <p>Open to the world: an open channel: for example <code>my-fans@ladygaga.com</code></p>
+        <h3>How is Buddycloud licensed?</h3>
+          <p>All <a href="http://buddycloud.com/software">Buddycloud software</a>, is developed in a transparent way and 
+          released under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 licence</a></p>
+        <h3>Can’t find your answer?</h3>
+          <p>Please make a search for your term on our website (search bar at the bottom of the website).</p>
+          <p>If you still didn’t find the answer you were looking for, get the help you need from our 
+          <a href="https://buddycloud.com/contact">community</a> or from the Buddycloud team.</p>
     </section>
 </body>
 
