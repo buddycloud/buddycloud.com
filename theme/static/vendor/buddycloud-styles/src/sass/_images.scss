@@ -9,6 +9,7 @@
 
 figure {
   &.credits {
+    display: table;
     position: relative;
 
     img {
@@ -17,6 +18,8 @@ figure {
     }
 
     figcaption {
+      display: table-caption; 
+      caption-side: bottom;
       width: 100%;
       position: absolute;
       bottom: 0;
