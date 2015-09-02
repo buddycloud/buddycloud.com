@@ -29,15 +29,19 @@
       </div>
       <div class="row">
         <h3>Add user-to-user messaging to your app.</h3>
-        <p>Your users can send direct messages to each other. Even better, Buddycloud's federated design means that your users
-        can communicate with millions of other existing users that already run Buddycloud.</p>
+        <p>Your users can <a href="https://xmpp-ftw.jit.su/manual/core/#send-a-message">send direct messages to each other</a>. 
+        Even better, Buddycloud's federated design means that your users can communicate with millions of other existing users 
+        that already run Buddycloud.</p>
+        <figure>
+        <img class="center-block" src="/theme/img/diagrams/buddycloud uses channels.png" alt="user to user diagram">
+        </figure>
       </div>
       <div class="row">
         <h3>Some things are better in a group.</h3>
-        <p>Multi-user and group messaging is also fully supported. Your users can create public and private groups 
-        ("topic channels") to share group-messages, files videos and photos. Buddycloud includes rich moderation features 
-        so that your users have total control over who can post and who can follow private content which means you have a 
-        self-moderating community.</p>
+        <p><a href="http://buddycloud.com/api#create-post">Multi-user and group messaging</a> is also fully supported. Your 
+        users can create public and private groups ("topic channels") to share group-messages, files videos and photos. 
+        Buddycloud includes rich moderation features so that your users have total control over who can post and who can 
+        follow private content which means you have a self-moderating community.</p>
         <figure>
         <img class="center-block" src="/theme/img/isotope/channel.png" alt="channel screenshot">
         </figure>
@@ -85,10 +89,10 @@
         direction.</p>
       </div>
       <div class="row">
-        <h3>Push-to-pull the mobile friendliness.</h3>
         <figure>
         <img src="/theme/img/isotope/push-notification.png" alt="push notification screenshot" class="pull-right" style="padding-left:20px;">
         </figure>
+        <h3>Push-to-pull the mobile friendliness.</h3>
         <p>Create real-time mobile applications with instant battery-friendly updates. Buddycloud uses a push-to-pull content 
         update pattern: When your user is online (the application is running in the foreground), new content is automatically 
         streamed to them. When your user is offline (the application is suspended), the <a href="https://github.com/buddycloud/buddycloud-pusher">
@@ -116,13 +120,14 @@
         <p>The Buddycloud <a href="https://github.com/buddycloud/saltstack">automation tool</a> helps you set up a 
         secure-by-default service and tests your deployment for security problems. This enables you to develop secure 
         applications.</p>
-        <p>An additional set of non-Buddycloud tests will help you check your site to site encryption.</p>
+        <p>An additional set of <a href="https://xmpp.net/">non-Buddycloud tests</a> will help you check your site to site 
+        encryption.</p>
       </div>
       <div class="row">
         <h3>Simple to understand privacy for your users.</h3>
-        <p>Buddycloud channels give your users complete control over their privacy. Easy-to-understand privacy controls lets 
-        them know exactly what is shared with whom. The Buddycloud server ships with content plugins that enable you to easily 
-        support end to end encrypted messages.</p>
+        <p>Buddycloud channels give your users complete <a href="http://buddycloud.com/api#update-metadata">control over 
+        their privacy</a>. Easy-to-understand privacy controls lets them know exactly what is shared with whom. The 
+        Buddycloud server ships with content plugins that enable you to easily support end to end encrypted messages.</p>
         <figure>
         <img class="center-block" src="/theme/img/isotope/user-privacy.png" alt="user privacy screenshot">
         </figure>
@@ -173,24 +178,25 @@
         </figure>
         <p>Design your lean-mean messaging stack with just the components you need. The existing code is designed to be easily 
         extensible to suit your exact use case.</p>
-        <p>Buddycloud's microservice design means you can run the full BC:Core stack on your compute grid or a tailored stack 
-        on your Raspberry Pi.</p>
+        <p>Buddycloud's microservice design means you can run the <a href="https://github.com/buddycloud/buddycloud-vm">full 
+        BC:Core stack</a> on your compute grid or a tailored stack on your Raspberry Pi.</p>
         <p>Adding new components is as simple as dropping a new config-line into a file.</p>
       </div>
       <div class="row">
         <h3>We're open [protocol].</h3>
-        <p>The Open Buddycloud Protocol codifies how Buddycloud works. This helps other companies create compatible Buddycloud 
-        services. Choose the best provider and implementation for your project without being locked in.</p>
+        <p>The <a href="http://xmpp.org/extensions/inbox/buddycloud-channels.html">Open Buddycloud Protocol</a> codifies how 
+        Buddycloud works. This helps other companies create compatible Buddycloud services. Choose the best provider and 
+        implementation for your project without being locked in.</p>
       </div>
       <div class="row">
         <h3>Starting your community just got easier.</h3>
-        <figure>
-        <img src="/theme/img/diagrams/Community.png" alt="community diagram" class="pull-right" style="padding-left:20px;">
-        </figure>
         <p>BC:Hosted helps you manage your application users: importing existing users, adding and deleting users and 
         re-issuing passwords. It's also possible to use your existing user database.</p>
         <p>BC:Core simply sends an "is this user and password valid?" request to your current authentication and authorisation 
         service.</p>
+        <figure>
+        <img src="/theme/img/isotope/xmpp-summit.jpg" alt="buddycloud at xmpp summit photo" class="center-block">
+        </figure>
       </div>
       <div class="row">
         <h3>Analytics to help you improve.</h3>
@@ -224,7 +230,8 @@
         </figure>
         <p>Scale up your infrastructure to support millions of simultaneous users and manage peak events by simply adding 
         more servers. BC:Core components are designed to scale horizontally. And when you need even more power, Buddycloud's 
-        API server ships with support for Fanout's realtime CDN.</p>
+        API server ships <a href="http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanoutio">with support 
+        for Fanout's realtime CDN</a>.</p>
       </div>
     </section>
     <br>
@@ -243,6 +250,9 @@
         friends already using your application and alerts existing users when a known friend signs-up.</p>
         <blockquote>
           <p>"34 of your friends are already on CatBook. Add them here."</p>
+          <footer>
+            <cite>directory.buddycloud.org</cite>
+          </footer>
         </blockquote>
       </div>
       <div class="row">
@@ -252,6 +262,9 @@
         peers are already following leading to a richer application.</p>
         <blockquote>
           <p>"If you follow these channels, perhaps you would be interested in this channel."</p>
+          <footer>
+            <cite>directory.buddycloud.org</cite>
+          </footer>
         </blockquote>
       </div>
       <div class="row">
@@ -260,7 +273,12 @@
         popular, newest, and currently most active channels. These lists are generated from the number of posts and followers. 
         The directory provides data for your local channels (on your server) and from remote channels (on other Buddycloud 
         servers), all accessible from one API. Your users can always find fresh and interesting channels to participate in.</p>
-        <p>"Most popular Buddycloud channel today: <code>music@buddycloud.org</code>"</p>
+        <blockquote>
+          <p>"The most active Buddycloud channel today: <code>Franz@buddycloud.org</code>"</p>
+          <footer>
+            <cite>directory.buddycloud.org</cite>
+          </footer>
+        </blockquote>
         <figure>
           <img class="center-block" src="/theme/img/isotope/channel-directory.png" alt="channel directory screenshot" style="padding-top: 20px; padding-bottom: 20px;">
         </figure>
