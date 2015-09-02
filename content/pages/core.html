@@ -73,16 +73,16 @@
       <div class="row">
         <h3>Build apps with an intuitive API.</h3>
         <p>An easy to use <a href="https://github.com/buddycloud/buddycloud-http-api" target="_blank">REST API</a> presents 
-        all the Buddycloud Core components as restful objects that you can query or update. It's the quickest way to start 
+        all the BC:Core components as restful objects that you can query or update. It's the quickest way to start 
         developing on Buddycloud.</p>
         <p>Buddycloud also ships with a <a href="https://xmpp-ftw.jit.su/manual/extensions/buddycloud/" target="_blank">extensive 
-        realtime websocket API</a> that streams new events as they happen.</p>
+        real-time websocket API</a> that streams new events as they happen.</p>
         <p>Both APIs are open source. You can extend them to support unique use cases.</p>
       </div>
       <div class="row">
         <h3>One pattern to learn, everything is publish-subscribe.</h3>
-        <p>Whether it's posts in a channel or user to user messages, Buddycloud uses a publish-subscribe pattern for messaging.
-        Building on Pub-sub gives easy querying for message history, guaranteed message delivery and a decoupling of publishers
+        <p>Whether it's posts in a channel or user-to-user messages, Buddycloud uses a publish-subscribe pattern for messaging.
+        Building on Pub/Sub gives easy querying for message history, guaranteed message delivery and a decoupling of publishers
         and subscribers who don't need to both be online at the same time.  All this means you can use the same logic for your
         mobile and web applications.</p>
         <figure>
@@ -111,17 +111,21 @@
         <img src="/theme/img/isotope/push-notification.png" alt="push notification screenshot" class="pull-right" style="padding-left:20px;">
         </figure>
         <p>Create real-time mobile applications with instant battery-friendly updates. Buddycloud uses a push-to-pull content 
-        update pattern: When your user is online (the application is running in the foreground), new content is automatically 
-        streamed to them. When your user is offline (the application is suspended), the 
+        update pattern:</p>
+        <ul>
+        <li>When your user is online (the application is running in the foreground), new content is automatically 
+        streamed to them.</li>
+        <li>When your user is offline (the application is suspended), the 
         <a href="https://github.com/buddycloud/buddycloud-pusher" target="_blank">Buddycloud Pusher</a> will trigger a push 
-        notification to the mobile device and the application can trigger a background pull. When your user clicks on the 
-        push notification, the new content is already downloaded and waiting for them.</p>       
+        notification to the mobile device and the application can trigger a background pull.</li>
+        <li>When your user clicks on the push notification, the new content is already downloaded and waiting for them.</li>
+        </ul>
       </div>
       <div class="row">
         <h3>Even more cat pictures.</h3>
         <p>Wouldn't it be nice to have file sharing that just works? Buddycloud ships with integrated file sharing so that your 
         users can drag-and-drop files into their channel and they are securely shared with their followers. The Buddycloud 
-        <a href="https://github.com/buddycloud/buddycloud-server-java" target="_blank">media server</a> supports any file 
+        <a href="https://github.com/buddycloud/buddycloud-server-java" target="_blank">Media Server</a> supports any file 
         types including images and videos. Image sharing comes with thumbnail previews for images including a max-height or 
         max-width constraint for flexible embedding on different screen sizes.</p>
         <figure>
@@ -135,7 +139,7 @@
         </figure>
         <p>Buddycloud is built on a strong foundation of peer-reviewed client libraries, strong crypto, and a transparent 
         development process. Backdoor free and secure by design.</p>
-        <p>The Buddycloud <a href="https://github.com/buddycloud/saltstack" target="_blank">automation tool</a> helps you 
+        <p>The Buddycloud <a href="https://github.com/buddycloud/saltstack" target="_blank">orchestration tool</a> helps you 
         set up a secure-by-default service and tests your deployment for security problems. This enables you to develop 
         secure applications.</p>
         <p>An additional set of <a href="https://xmpp.net/" target="_blank">tests</a> help you check your 
@@ -169,7 +173,7 @@
         <figure>
         <img class="center-block" src="/theme/img/diagrams/federation.png" alt="federation diagram" style="padding-bottom:20px;">
         </figure>
-        <p>We take this for granted in email: <code>user1@gmail.com</code> can reach <code>user2@hotmail.com</code>. Now we've 
+        <p>We take this for granted in email: <i>user1@gmail.com</i> can reach <i>user2@hotmail.com</i>. Now we've 
         done the same for in-app messaging.</p>
         <blockquote>
           <p>"Think of Buddycloud as email 2.0"</p>
@@ -186,7 +190,7 @@
         </figure>
         <h3>Transparent and open source development.</h3>
         <p>Buddycloud is developed under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">
-          Apache 2.0 license</a>, and can be used for open and proprietary projects. As other developers submit their 
+          Apache 2.0 License</a>, and can be used for open and proprietary projects. As other developers submit their 
           improvements back to the Buddycloud project, we all benefit.</p>
       </div>
       <div class="row">
@@ -248,7 +252,7 @@
         <p>Scale up your infrastructure to support millions of simultaneous users and manage peak events by simply adding 
         more servers. BC:Core components are designed to scale horizontally. And when you need even more power, Buddycloud's 
         API server ships <a href="http://blog.buddycloud.com/post/59883382741/scaling-buddycloud-with-fanoutio" target="_blank">
-          with support for Fanout's realtime CDN</a>.</p>
+          with support for Fanout's real-time CDN</a>.</p>
         <figure>
         <img src="/theme/img/diagrams/scalable.png" alt="scalable-diagram" class="pull-right" style="padding-left:40px;">
         </figure>
@@ -280,9 +284,9 @@
       </div>
       <div class="row">
         <h3>If you like that, you might like this.</h3>
-        <p>The <a href="https://github.com/buddycloud/channel-directory" target="_blank">content discovery service</a> recommends channels 
+        <p>The <a href="https://github.com/buddycloud/channel-directory" target="_blank">Content Discovery service</a> recommends channels 
         based on a graph database of who follows what. Present your users with relevant content based on what they and their 
-        peers are already following leading to a richer application.</p>
+        peers are already following, leading to a richer application.</p>
         <figure>
           <img class="center-block" src="/theme/img/diagrams/taste-engine.png" alt="taste engine diagram" style="padding-top: 20px; padding-bottom: 20px;">
         </figure>        
