@@ -12,8 +12,7 @@ addons:
     - python-virtualenv
 before_install:
 - virtualenv venv
-- cd venv
-- source bin/activate
+- source venv/bin/activate
 install:
 - pip install pelican==3.5.0 ghp-import markdown
 - cd slate
