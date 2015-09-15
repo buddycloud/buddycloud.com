@@ -27,11 +27,14 @@
         <img alt="get-started-mobile-diagram" src="/theme/img/diagrams/get-started-mobile.png" class="center-block" style="padding-top: 20px; padding-bottom: 20px;">
       </figure>
             <div class="row">
-        <div class="col-md-6 column">
+        <div class="col-md-12 column">
           <a class="btn btn-block" href="https://play.google.com/store/apps/details?id=com.buddycloud&hl=en">Demo</a>
         </div>
-        <br class="hidden-md hidden-lg" />
-        <div class="col-md-6 column">
+        <br />
+        <div class="col-md-12 column">
+        </div>
+        <br />
+        <div class="col-md-12 column">
           <a class="btn btn-block" href="/get-started-mobile">Quickstart</a>
         </div>
       </div>
@@ -43,11 +46,14 @@
         <img alt="get-started-web-diagram" src="/theme/img/diagrams/get-started-web.png" class="center-block" style="padding-top: 20px; padding-bottom: 20px;">
       </figure>
             <div class="row">
-        <div class="col-md-6 column">
+        <div class="col-md-12 column">
           <a class="btn btn-block" href="https://buddycloud.org/">Demo</a>
         </div>
-        <br class="hidden-md hidden-lg" />
-        <div class="col-md-6 column">
+        <br />
+        <div class="col-md-12 column">
+        </div>
+        <br />
+        <div class="col-md-12 column">
           <a class="btn btn-block" href="/get-started-javascript">Quickstart</a>
         </div>
       </div>
@@ -67,7 +73,7 @@
         <dd>Background reading on how everything fits together.</dd>
         <dt><a href="http://buddycloud.com/software-stack">Code Ecosystem:</a></dt>
         <dd>Existing Buddycloud open source projects.</dd>
-        <dt><a href="http://buddycloud.com/faq" >FAQs:</dt>
+        <dt><a href="http://buddycloud.com/faq" >FAQs:</a></dt>
         <dd>Questions and answers about Buddycloud.</dd>
         <dt>Get help:</dt>
         <dd><a href="https://jappix.com/?r=seehaus@channels.buddycloud.com" target="_blank">Join chatroom.</a></dd>
@@ -88,12 +94,12 @@
     <p>To test BC againsts your own XMPP server without installing anything, just add the following DNS records:</p>
     <p>
       <pre>
-        <code>buddycloud.example.com CNAME hosted.buddycloud.org.</code>
-        <code>_buddycloud-server._tcp.example.com. PTR channels.buddycloud.org.</code>
+        <code>buddycloud.example.com.                    CNAME       hosted.buddycloud.org.</code>
+        <code>_buddycloud-server._tcp.example.com.       PTR         channels.buddycloud.org.</code>
         </pre>
     </p>
-    <p><code>buddycloud.example.com</code></p>
+    <p>Now visit <code>buddycloud.example.com</code></p>
     <h3>Test your site.</h3>
-    <p><a href="http://protocol.buddycloud.com/">protocol.buddycloud.com</a></p>
+    <p>The <a href="http://protocol.buddycloud.com/">Buddycloud Protocol Tester</a> remotely checks your Buddycloud site for configuration bugs.</p>
 </body>
 </html>
