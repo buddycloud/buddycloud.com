@@ -21,12 +21,13 @@
       <img class="center-block" src="/theme/img/diagrams/how-buddycloud-works.png" alt="How Buddycloud works" />
     </figure>
     <p>You add a small SDK to your mobile or web app; your users communicate.</p>
-    <p>Web applications then communicate via a websocket with the Buddycloud Server. Mobile applications use the REST API (or XMPP).</p>
+    <p>Web applications then communicate via a websocket with the Buddycloud Server. Mobile applications use the REST API 
+    (or XMPP).</p>
     <br>
-    <h2>Channel</h2>
+    <h3>Channel.</h3>
     <p>Each Buddycloud server will find, connect and share the data you choose with users on other Buddycloud servers.</p>
     <p>This approach has huge benefits, especially for industries that care about data privacy.</p>
-    <table class='table table-striped'>
+    <table class="table table-striped">
 		  <tr>
 			  <th></th>
 			  <th>Old Design (Twitter, Facebook, G+, App.net)</th>
@@ -78,7 +79,7 @@
 		  </tr>
 	  </table>
 	  <br>
-	  <h2>Channels are a bundle of nodes</h2>
+	  <h3>Channels are a bundle of nodes.</h3>
 	  <p>Each channel is made up of application nodes. When you follow a channel, for example, <code>user@example.com</code>
 		you are really following a collection of application nodes. (<code>user@example.com/posts</code>, 
 		<code>user@example.com/public-key</code>, <code>user@example.com/geolocation</code>, etc). Any updates to a node 
@@ -119,7 +120,7 @@
 		  </tr>
 	  </table>
 	  <br>
-	  <h2>Personal and Topic channels</h2>
+	  <h3>Personal and topic channels.</h3>
 	  <p>There are two different types of channels. Personal channels and Topic/Group/Application channels.</p>
 	  <table class="table table-striped">
 		  <tr>
@@ -144,7 +145,7 @@
 		  </tr>
 	  </table>
 	  <br>
-	  <h2>Channel privacy</h2>
+	  <h3>Channel privacy.</h3>
 	    <p>Each channel can have different privacy models</p>
 	    <table class="table table-striped">
 		    <tr>
@@ -169,7 +170,7 @@
 		    </tr>
 	    </table>
 	    <br>
-	    <h2>Channel Roles</h2>
+	    <h3>Channel roles.</h3>
 	    <p>Channel followers have have different roles. Most of the time you will not need them but roles can help keep the 
 	    social aspect flowing.</p>
 	    <table class="table table-striped">
@@ -201,39 +202,39 @@
 	  <p>Channel owners can set the default role for new followers. For example: new followers will inherit the follower+post 
 	  role.</p>
 	  <br>
-    <h2>Federation</h2>
-    <p>Like Facebook has a wall, Twitter has a Feed, Buddycloud has channels. User's follow channels that can be another user (for example: <code>juliet@capulet.lit</code> follows <code>romeo@montague.lit</code>) or topics (<code>juliet@caputlet.lit</code> follows <code>fan-club@verona-fc.lit</code>).</p>
+    <h3>Federation.</h3>
+    <p>Like Facebook has a wall, Twitter has a Feed, Buddycloud has channels. User's follow channels that can be another 
+    user (for example: <code>juliet@capulet.lit</code> follows <code>romeo@montague.lit</code>) or topics 
+    (<code>juliet@caputlet.lit</code> follows <code>fan-club@verona-fc.lit</code>).</p>
     <p>Your users can follow channels and chat with users on local and remote Buddycloud sites.</p>
     <figure>
       <img class="center-block" src="/theme/img/diagrams/federated-channels.png" alt="Buddycloud Federates" />
     </figure>
-    <h2>Authenticate against your existing database of users</h2>
-	<p>Buddycloud has a number of ways to authenticate against your existing
-		database of users.</p>
-	<table class="table table-striped">
-		<tr>
-			<th></th>
-			<th>How it works</th>
-			<th>Use case</th>
-		</tr>
-		<tr>
-			<td>Buddycloud user database</td>
-			<td>Use Buddycloud API for user authentication</td>
-			<td>Starting fresh with a new set of users</td>
-		</tr>
-		<tr>
-			<td>Parallel secret</td>
-			<td>Your application generates a secret to be used with the buddycloud
-				service</td>
-			<td>New user base or existing user database</td>
-		</tr>
-		<tr>
-			<td>Remote application call</td>
-			<td>Authenticate users according to a pre-existing application API (for
-				example https://your-app.com/auth)</td>
-			<td>New user base or existing user database</td>
-		</tr>
-	</table>
+    <br>
+    <h3>Authenticate against your existing database of users.</h3>
+	    <p>Buddycloud has a number of ways to authenticate against your existing database of users.</p>
+	    <table class="table table-striped">
+		    <tr>
+			    <th></th>
+			    <th>How it works</th>
+			    <th>Use case</th>
+		    </tr>
+		    <tr>
+			    <td>Buddycloud user database</td>
+			    <td>Use Buddycloud API for user authentication</td>
+			    <td>Starting fresh with a new set of users</td>
+		    </tr>
+		    <tr>
+			    <td>Parallel secret</td>
+			    <td>Your application generates a secret to be used with the buddycloud service</td>
+			    <td>New user base or existing user database</td>
+		    </tr>
+		    <tr>
+			    <td>Remote application call</td>
+			    <td>Authenticate users according to a pre-existing application API (for example https://your-app.com/auth)</td>
+			    <td>New user base or existing user database</td>
+		    </tr>
+	  </table>
 </div>
 </body>
 </html>
