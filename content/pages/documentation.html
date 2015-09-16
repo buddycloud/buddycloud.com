@@ -80,25 +80,40 @@
         <dd><a href="https://groups.google.com/forum/#!forum/buddycloud-dev" target="_blank">Developer mailing list.</a></dd>
       </dl>
   <h2>Run Buddycloud</h2>
-    <h3>On my laptop / On a virtual-machine.</h3>
-    <p>Download and run Buddycloud on your development server.</p>
-    <h3>In production.</h3>
-    <p>We've designed the Buddycloud stack to run the same bits in development as you run in production. 
-    So you always ship to production in a reliable manner. All Buddycloud code is deployable using Buddycloud's 
-    saltstack scripts.</p>
-    <h3>Please run it for me.</h3>
-    <p>We have a <a href="https://hosting.buddycloud.com">free hosting plan</a> to get you started. <a href="http://buddycloud.com/plans">Paid plans</a> to help you grow.</p>
-    <p>And <a href="http://buddycloud.com/services">support contracts</a> to help you run Buddycloud on-premises.</p>
+  <div style="display:table; width:100%;">
+   <div style="display:table-row;">
+    <div class="text-center" style="display:table-cell; width:33%; padding-right:25px;">
+      <h3>On my laptop / On a virtual-machine.</h3>
+      <p><a href="https://github.com/buddycloud/buddycloud-vm">Download and run Buddycloud</a> on your development 
+      server.</p>
+    </div>
+    <br class="hidden-md hidden-lg" />
+    <div class="text-center" style="display:table-cell; width:33%; padding-right:25px; padding-left:25px;">
+      <h3>In production.</h3>
+      <p>We've designed <a href="http://buddycloud.com/core">BC:Core</a> to run the same bits in development as you run in 
+    production. So you always ship to production in a reliable manner. All Buddycloud code is deployable using 
+    <a href="https://github.com/buddycloud/saltstack">Buddycloud's saltstack scripts</a>.</p>
+    </div>
+    <br class="hidden-md hidden-lg" />
+    <div class="text-center" style="display:table-cell; width:33%; padding-left:25px;">
+      <h3>Please run it for me.</h3>
+      <p>We have a <a href="https://hosting.buddycloud.com">free hosting plan</a> to get you started. <a href="http://buddycloud.com/plans">Paid plans</a> to help you grow.</p>
+      <p>And <a href="http://buddycloud.com/services">support contracts</a> to help you run Buddycloud on-premises.</p>
+    </div>
+   </div>
+  </div>
+  <br />
     <h3>Advanced: I already have an XMPP server.</h3>
     <p><a href="http://buddycloud.com/core">BC:Core</a> components treat the XMPP server as a pure message router and will work with any XMPP server.</p>
     <p>To test Buddycloud againsts your own XMPP server without installing anything, just add the following DNS records:</p>
     <p>
-      <pre>
-        <code>buddycloud.example.com.                          CNAME             hosted.buddycloud.org.</code>
-        <code>_buddycloud-server._tcp.example.com.             PTR               channels.buddycloud.org.</code>
-        </pre>
+    <div class="highlight">
+      <pre>        
+        <code class="hljs bash">buddycloud.example.com.                          CNAME             hosted.buddycloud.org.
+        _buddycloud-server._tcp.example.com.             PTR               channels.buddycloud.org.</code></pre></div>
     </p>
     <p>Now visit <code>buddycloud.example.com</code></p>
+    <br />
     <h3>Test your site.</h3>
     <p>The <a href="http://protocol.buddycloud.com/">Buddycloud Protocol Tester</a> remotely checks your Buddycloud site for configuration bugs.</p>
 </body>
