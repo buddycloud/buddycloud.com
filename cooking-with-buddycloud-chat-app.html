@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<head>
+  <title>Add chat to your app</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="shortcut icon" href="/theme/vendor/buddycloud-styles/dist/img/icons/favicon.ico" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300i-transtalic,400italic,600italic,700italic,300,400,600,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,700,900,600,500,200" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/theme/vendor/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/vendor/buddycloud-styles/dist/css/buddycloud-styles.min.css" type="text/css" />
+  <link rel="stylesheet" href="/theme/css/site.css" type="text/css" />
+ 		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-1075750-9', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+</head>
+<body class="add-chat-to-your-app" style="overflow-y: scroll;">
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+      <div class="navbar-header" href="#">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">buddycloud</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li  >
+                  <a href="http://buddycloud.com/enterprise" >
+                          Enterprise
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/developers" >
+                          Developers
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/features" >
+                          Features
+                  </a>
+              </li>
+              <li  >
+                  <a href="http://buddycloud.com/about" >
+                          About
+                  </a>
+              </li>
+              <li class="navbar-right-padding hidden-xs hidden-sm">
+                  <a href="https://hosting.buddycloud.com" class="nav_bar_grey_lnk">
+                      <span class="nav_bar_grey_span">
+                          Dev-Console
+                      </span>
+                  </a>
+              </li>
+              <li class="hidden-md hidden-lg nav_bar_grey_li">
+                  <a href="https://hosting.buddycloud.com" class="nav_bar_grey_lnk">
+                      <span class="nav_bar_grey_span">
+                          Dev-Console
+                      </span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+<div class="container bs-docs-container">
+  <div class="row">
+      <div class="col-md-3 col-sm-3">
+    <div id="full-toc" class="bs-docs-sidebar hidden-print affix-top hidden-xs hidden-sm" role="complementary">
+  <ul class='nav bs-docs-sidenav'><li class='active'><a href='#aim_' data-scroll data-url>Aim</a></li><li><a href='#ingredients_' data-scroll data-url>Ingredients</a></li><li><a href='#getting_help_' data-scroll data-url>Getting help</a></li><li><a href='#method_' data-scroll data-url>Method</a></li><li><a href='#any_questions_' data-scroll data-url>Any Questions?</a></ul>
+    </div>
+      </div>
+      <div class="col-md-9 col-sm-9" role="main" style="overflow-x:auto; padding-bottom: 10px;">
+    <h1 class="page-header main-title">Add chat to your app</h1>
+    <div class="bs-docs-section">
+    <h2 id="aim_">Aim</h2>
+<p>Add chat to a web app in <span style="color:#2DAEBF;"><strong>10 minutes</strong></span></p>
+<p>Difficulty: <span style="color:#2DAEBF;"><strong>Easy</strong></span></p>
+<p><a href="http://codepen.io/guilhermesgb/pen/lJfLg/">Chat client demo</a></p>
+<h2 id="ingredients_">Ingredients</h2>
+<ul>
+<li><a href="https://github.com/buddycloud/skeleton-project.git">Project Skeleton</a></li>
+<li><a href="http://nodejs.org/download/">Node and NPM</a></li>
+<li>Your favourite text editor</li>
+</ul>
+<h2 id="getting_help_">Getting help</h2>
+<ul>
+<li>Email: <a href="mailto:reach-a-developer@buddycloud.com">reach-a-developer@buddycloud.com</a></li>
+<li>Twitter: <a href="https://twitter.com/buddycloud">@buddycloud</a></li>
+</ul>
+<h2 id="method_">Method</h2>
+<ul>
+<li>The chat client uses <a href="http://primus.io">Primus</a> for messaging over a websocket (with fallback to long polling)</li>
+<li>The <a href="https://xmpp-ftw.jit.su">XMPP-FTW</a> service takes JSON from the browser and turns it into XMPP messages</li>
+<li>XMPP messages are offloaded to the XMPP server for realtime delivery</li>
+</ul>
+<div class="highlight"><pre><code>  +---------+  HTML/IMG/JS/CSS  +----------+
+  | User /  | &lt;---------------+ | xmpp-ftw | (codepen demo is using: "https://xmpp-ftw.buddycloud.com")
+  | Browser |      websocket    | server   |
+  +---------+ &lt;---------------&gt; +----------+
+                                    ^
+                                    | socket
+                                    |
+                                    v
+                                +--------+   component   +------------+
+                                |  XMPP  |   connection  | buddycloud |
+                                | server |&lt;-------------&gt;| server     |
+                                +--------+               +------------+
+                                    ^
+                                    |
+                                    v
+                               +----------+
+                               | External |
+                               |   XMPP   |
+                               |  server  |
+                               +----------+
+</code></pre></div>
+
+
+<p>Let's get setup with a skeleton project.</p>
+<div class="highlight"><pre><code>git clone https://github.com/buddycloud/skeleton-project.git
+</code></pre></div>
+
+
+<p>Then we get all the npm modules installed and start npm</p>
+<div class="highlight"><pre><code><span class="nb">cd </span>skeleton-project
+npm i .    <span class="c"># installs dependencies</span>
+npm start  <span class="c"># starts npm listening on http://127.0.0.1:3000</span>
+</code></pre></div>
+
+
+<p>Now let's start cooking!</p>
+<p>Chatting works as follows:</p>
+<ul>
+<li>we create a <i>channel</i> and post messages into the channel</li>
+<li>Other users connect and retrieve message history from when they were last online</li>
+<li>Other users are then automatically notified of new messages</li>
+<li>Users can post back to the channel</li>
+</ul>
+<p>First up, let's register a user by issuing a POST request to the HTTP API /account endpoint:</p>
+<div class="highlight"><pre><code><span class="kd">var</span> <span class="nx">apiLocation</span> <span class="o">=</span> <span class="s2">"https://demo.buddycloud.org/api"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">domain</span> <span class="o">=</span> <span class="s2">"@buddycloud.org"</span><span class="p">;</span>
+<span class="nx">_registerUser</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">jid</span> <span class="o">=</span> <span class="nx">username</span> <span class="o">+</span> <span class="nx">domain</span><span class="p">;</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">"POST"</span><span class="p">,</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="nx">apiLocation</span> <span class="o">+</span> <span class="s2">"/account"</span><span class="p">,</span>
+        <span class="nx">contentType</span><span class="o">:</span> <span class="s2">"application/json"</span><span class="p">,</span>
+        <span class="nx">processData</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+                <span class="nx">username</span><span class="o">:</span> <span class="nx">jid</span><span class="p">,</span>
+                <span class="nx">password</span><span class="o">:</span> <span class="nx">password</span><span class="p">,</span>
+                <span class="nx">email</span><span class="o">:</span> <span class="s2">"email@email.com"</span>
+        <span class="p">}),</span>
+        <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="nx">jid</span> <span class="o">+</span> <span class="s2">" registered successfully!"</span><span class="p">);</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">"#toggleRegistrationForm"</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+        <span class="p">},</span>
+        <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+                 <span class="nx">type</span><span class="o">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+                 <span class="nx">url</span><span class="o">:</span> <span class="nx">apiLocation</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nx">jid</span> <span class="o">+</span> <span class="s2">"/metadata/posts"</span><span class="p">,</span>
+                 <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="nx">jid</span> <span class="o">+</span> <span class="s2">" already exists!"</span><span class="p">);</span>
+                 <span class="p">},</span>
+                 <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">"Problem trying to register user!"</span><span class="p">);</span>
+                 <span class="p">}</span>
+            <span class="p">});</span> 
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div>
+
+
+<p>If the call fails, we are issuing another call to the API to check whether the username is already taken. </p>
+<p>Once we have a registered users, we need to go-online (which tells the server to start sending us events).</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">login</span><span class="p">(</span><span class="nx">jid</span><span class="p">,</span> <span class="nx">password</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span>
+        <span class="s1">'xmpp.login'</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="nx">jid</span><span class="o">:</span> <span class="nx">jid</span><span class="p">,</span>
+            <span class="nx">password</span><span class="o">:</span> <span class="nx">password</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'xmpp.connection'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Connected as'</span><span class="p">,</span> <span class="nx">data</span><span class="p">.</span><span class="nx">jid</span><span class="p">);</span>
+    <span class="nx">discoverBuddycloudServer</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+
+
+<p>As you have seen above, once connected you must discover the Buddycloud server:</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">discoverBuddycloudServer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span>
+        <span class="s1">'xmpp.buddycloud.discover'</span><span class="p">,</span>
+        <span class="p">{},</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Discovered Buddycloud server at'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+            <span class="nx">createNode</span><span class="p">();</span>
+            <span class="nx">getNodeItems</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Now we will create our channel for sharing chat messages: it will be <code>chat-room@topics.buddycloud.org</code>:</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">createNode</span><span class="p">(){</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'xmpp.buddycloud.create'</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="nx">node</span> <span class="o">:</span> <span class="s2">"/user/chat-room@topics.buddycloud.org/chat"</span><span class="p">,</span>
+        <span class="nx">options</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span> <span class="s2">"var"</span><span class="o">:</span> <span class="s2">"buddycloud#channel_type"</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:</span> <span class="s2">"topic"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">"var"</span><span class="o">:</span> <span class="s2">"pubsub#title"</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:</span> <span class="s2">"Chat Topic Channel"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">"var"</span><span class="o">:</span> <span class="s2">"pubsub#access_model"</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:</span> <span class="s2">"open"</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">"var"</span><span class="o">:</span> <span class="s2">"buddycloud#default_affiliation"</span><span class="p">,</span> <span class="nx">value</span> <span class="o">:</span> <span class="s2">"publisher"</span> <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'xmpp.buddycloud.create response arrived'</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">error</span><span class="p">){</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Created Chat Room node'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="s2">"cancel"</span> <span class="o">===</span> <span class="nx">error</span><span class="p">.</span><span class="nx">type</span> <span class="o">&amp;&amp;</span>
+            <span class="s2">"conflict"</span> <span class="o">===</span> <span class="nx">error</span><span class="p">.</span><span class="nx">condition</span><span class="p">){</span>
+                <span class="nx">subscribeToNode</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="nx">getNewMessagesNotification</span><span class="p">();</span>
+        <span class="nx">sendPresenceToBuddycloudServer</span><span class="p">();</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>As you may have noticed, if the node already exists, we'll at least make sure the user is subscribed to it (in a best effort approach):</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">subscribeToNode</span><span class="p">(){</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="s2">"/user/chat-room@topics.buddycloud.org/chat"</span><span class="p">;</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span>
+        <span class="s1">'xmpp.buddycloud.subscribe'</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">"node"</span><span class="o">:</span> <span class="nx">node</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="k">return</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Subscribed to Chat Room node"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Then specify that you want to listen for incoming messages:</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">getNewMessagesNotification</span><span class="p">(){</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'xmpp.buddycloud.push.item'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="s2">"/user/chat-room@topics.buddycloud.org/chat"</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">node</span> <span class="o">===</span> <span class="nx">data</span><span class="p">.</span><span class="nx">node</span> <span class="p">){</span> <span class="c1">//Notifications of messages on other nodes may arrive as well</span>
+            <span class="nx">handleItem</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>And you must send presence to the buddycloud server to inform it you're online:</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">sendPresenceToBuddycloudServer</span><span class="p">(){</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">'xmpp.buddycloud.presence'</span><span class="p">,</span> <span class="p">{});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Tell the client that, when it connects, it should pull down the last messages since the local-storage last-time-connected (for now simply picking the last 6 items):</p>
+<div class="highlight"><pre><code><span class="kd">var</span> <span class="nx">getNodeItems</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">itemId</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">node</span><span class="o">:</span> <span class="nx">node</span><span class="p">,</span>
+        <span class="nx">rsm</span><span class="o">:</span> <span class="p">{</span> <span class="nx">max</span><span class="o">:</span><span class="mi">6</span> <span class="p">}</span> 
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">itemId</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//specify itemId if you want to retrieve a specific item by id</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">itemId</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span>
+        <span class="s1">'xmpp.buddycloud.retrieve'</span><span class="p">,</span>
+        <span class="nx">data</span><span class="p">,</span>
+        <span class="nx">handleItems</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>Now, you can try sending a message to the chat room:</p>
+<div class="highlight"><pre><code><span class="kd">function</span> <span class="nx">sendMessage</span><span class="p">(</span><span class="nx">message</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="s2">"/user/chat-room@topics.buddycloud.org/chat"</span><span class="p">;</span>
+    <span class="nx">socket</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span>
+        <span class="s1">'xmpp.buddycloud.publish'</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">"node"</span><span class="o">:</span> <span class="nx">node</span><span class="p">,</span>
+            <span class="s2">"content"</span><span class="o">:</span> <span class="p">{</span>
+                <span class="s2">"atom"</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="s2">"content"</span><span class="o">:</span> <span class="nx">message</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Message sent."</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<p>And that's it!</p>
+<p>Hope you had fun cooking with buddycloud.</p>
+<p>Working demo in <a href="http://codepen.io/guilhermesgb/pen/lJfLg/">codepen.io</a>, feel free to take a look at it if need be.</p>
+<p>We also view the source code of this Simple Chat recipe <a href="https://github.com/guilhermesgb/chat-recipe">here</a>!</p>
+<h2 id="any_questions_">Any Questions?</h2>
+<p>Want to contribute to this <a href="https://github.com/buddycloud/buddycloud.com/blob/master/content/pages/cooking-with-buddycloud-chat-app.md">page</a>?</p>
+<p>For any questions or concerns, please contact us at <a href="mailto:reach-a-developer@buddycloud.com">reach-a-developer@buddycloud.com</a> or at Twitter: <a href="https://twitter.com/buddycloud">@buddycloud</a>!</p>
+<p>Happy cooking!</p>
+    </div>
+          <span class="pull-right">
+              <a class="btn btn-default" role="button" href="javascript:window.scrollTo(0,0);">Back to Top</a>
+          </span>
+      </div>
+  </div>
+</div>
+<div class="index">
+<div class="background-contact">
+  <div class="container" id="contact">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Secure messaging for apps</h3>
+        <em>"Tools, libraries and services for secure cloud &amp; on-premise user and group messaging. Saves time. Scales up. Supports you."</em>
+        <div class='bc-site-wide-search'>
+          <script>
+            (function() {
+              var cx = '007745197397510624379:xxwsybqrabw';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+        </div>
+        </div>
+      <div class="col-md-2">
+        <h3>Buddycloud</h3>
+        <ul class="list-unstyled">
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/policies#terms_of_use_">Your Privacy</a></li>
+          <li><a href="https://drive.google.com/a/buddycloud.com/folderview?id=0B3pmaTwgy6P8ZVZRNkdtU3dMRTA&usp=sharing#">Press Kit</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3>Products</h3>
+        <ul class="list-unstyled">
+          <li><a href="https://hosting.buddycloud.com/login">Dev-Console</a></li>
+          <li><a href="/enterprise">Enterprise</a></li>
+          <li><a href="/developers">Developers</a></li>
+          <li><a href="https://buddycloud.org/">Web Demo</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.buddycloud&hl=en">Android Demo</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3>Services</h3>
+        <ul class="list-unstyled">
+          <li><a href="/try-buddycloud">Try Buddycloud</a></li>
+          <li><a href="/services#consulting_">Consulting</a></li>
+          <li><a href="/services#development_support_">Development Support</a></li>
+          <li><a href="/services#training_">Training</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3>Community</h3>
+        <ul class="list-unstyled">
+          <li><a href="http://blog.buddycloud.com">Blog</a></li>
+          <li><a href="https://github.com/buddycloud">GitHub</a></li>
+          <li><a href="https://www.facebook.com/and.the.future.is.buddycloud">Facebook</a></li>
+          <li><a href="https://twitter.com/buddycloud">Twitter</a></li>
+          <li><a href="https://groups.google.com/d/forum/buddycloud-dev">Developer Mailing List</a></li>
+          <li><a href="https://jappix.com/?r=seehaus@channels.buddycloud.com">Developer Chatroom</a></li>
+          <li><a href="http://eepurl.com/79Q3P">Newsletter</a></li>
+          <li><a href="https://github.com/buddycloud/buddycloud.com">Website fix?</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  <script src="/theme/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="/theme/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/theme/vendor/buddycloud-styles/dist/js/buddycloud-styles.min.js"></script>
+  <script src="/theme/vendor/raphael/raphael-min.js"></script>
+  <script src="/theme/vendor/underscore/underscore-min.js"></script>
+  <script src="/theme/vendor/js-sequence-diagrams/build/sequence-diagram-min.js"></script>
+  <script src="/theme/js/sequence-diagrams.js"></script>
+  <script src="/theme/vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="/theme/vendor/isotope/cells-by-row.js"></script>
+  <script src="/theme/vendor/mustache/jquery.mustache.js"></script>
+  <script src="/theme/js/isotope-mustache.config.js"></script>
+  <script src="/theme/js/get-started.js"></script>
+  <script src="/theme/js/jquery.visible.min.js"></script>
+<script type="text/javascript">
+  $(window).scroll(function() {
+    if ( $(".background-contact").visible(true) ){
+      $("#full-toc").fadeOut(200, "linear");
+      $("#habla_panel_div").fadeOut(200, "linear");
+    }
+    else{
+      $("#full-toc").fadeIn(200, "linear");
+      $("#habla_panel_div").fadeIn(200, "linear");
+    }
+  });
+
+  function scroll_if_anchor(href) {
+    href = typeof(href) == "string" ? href : $(this).attr("href");
+    if (!href) return;
+    var fromTop = 65;
+    var $target = $(href);
+    if ( $target.length ) {
+      window.scrollTo(0, $target.offset().top - fromTop);
+      if ( history && "pushState" in history ){
+        history.pushState({}, document.title, window.location.pathname + href);
+        return false;
+      }
+    }
+  }
+  $("#fixed-toc").css("visibility", "hidden");
+  $(document).ready(function() {
+    window.setTimeout(function() {
+        scroll_if_anchor(window.location.hash);
+    }, 1);
+    window.setTimeout(function() {
+        $("#fixed-toc").addClass("bs-docs-sidebar");
+        $("#fixed-toc .nav").addClass("bs-docs-sidenav");
+        $("#fixed-toc").css("visibility", "visible").hide();
+        $("#fixed-toc").fadeIn(200, "linear");
+    }, 200);
+  });
+</script>
+</body>
+</html>
