@@ -2,7 +2,7 @@
 
 > In general, the **REST API** is optimised for mobile app development.
 > ### You can also try:
-> **[XMPP-FTW](https://xmpp-ftw.jit.su/manual/extensions/buddycloud/)**, which is better for realtime web application programming. Refer to [their docs](https://xmpp-ftw.jit.su/manual/extensions/buddycloud) for more information.
+> **[XMPP-FTW](http://docs.xmpp-ftw.org/manual/extensions/buddycloud/)**, which is better for realtime web application programming. Refer to [their docs](http://docs.xmpp-ftw.org/manual/extensions/buddycloud) for more information.
 
 ###Buddycloud HTTP REST API
 
