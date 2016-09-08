@@ -6,7 +6,7 @@ But to make your application truly aware of all kinds of Buddycloud events, you'
 
 If you're building a mobile app, you can set it up so that it will listen for incoming push notifications when important events happen. The last sections below describe every step needed to make your app fully Buddycloud-powered.
 
-Otherwise, the recommended thing is to have your app use [XMPP-FTW](https://xmpp-ftw.jit.su/manual/extensions/buddycloud/). Please also refer to this guide with more on [how to get started](http://buddycloud.com/get-started-javascript).
+Otherwise, the recommended thing is to have your app use [XMPP-FTW](http://docs.xmpp-ftw.org/manual/extensions/buddycloud/). Please also refer to this guide with more on [how to get started](http://buddycloud.com/get-started-javascript).
 
 ##New Post Updates
 
