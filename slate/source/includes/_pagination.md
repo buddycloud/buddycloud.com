@@ -27,7 +27,7 @@ Buddycloud uses [Result Set Management](http://xmpp.org/extensions/xep-0059.html
 * building mobile applications and needing to limit the amount of data that the API sends back. 
 * your app needs to retrieve new messages since it was last online.
  
-When using the *REST API*, you will pass pagination parameters via the URL query part, while *XMPP-FTW* requires an `rsm` JSON object as part of the outgoing data, as described in <https://xmpp-ftw.jit.su/manual/result-set-management/>.
+When using the *REST API*, you will pass pagination parameters via the URL query part, while *XMPP-FTW* requires an `rsm` JSON object as part of the outgoing data, as described in <http://docs.xmpp-ftw.org/manual/result-set-management/>.
 
 ## Query Parameters
 
