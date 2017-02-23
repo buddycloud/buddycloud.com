@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/buddycloud/buddycloud.com.png?branch=master)](https://travis-ci.org/buddycloud/buddycloud.com)
 
 ### Requirements
-
+ 
 * Pelican 3.3
 * ghp-import
 * Markdown 2.3.1
